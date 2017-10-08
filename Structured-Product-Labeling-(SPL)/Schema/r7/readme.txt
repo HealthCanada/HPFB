@@ -1,0 +1,1 @@
+The release 7 schema (both zipped and exploded) is located in this folder.

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/HealthCanada/Structured-Content-Information/master/Controlled-Vocabularies/Style-Sheets/current/HC_GeneriCode_Codelist.xsl"?>
+<gc:CodeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+	<Annotation>
+		<Description>
+			<html:p>This file is a Health Canada maintained code list, encoded in OASIS genericode format</html:p>
+			<html:p>The values are a subset of HL7 vocabulary, Telecom Use and Telecom Capabilities must be used together.</html:p>
+		</Description>
+		<AppInfo>
+			<html:p>Authored by HC on Feb 2017.</html:p>
+		</AppInfo>
+	</Annotation>
+	<Identification>
+		<ShortName>hc-2.16.840.1.113883.3.989.5.1.4.1.21</ShortName>
+		<LongName xml:lang="Eng">HC Class Code</LongName>
+		<LongName xml:lang="Fra">SC ???</LongName>
+		<Version>1</Version>
+		<CanonicalUri>na</CanonicalUri>
+		<CanonicalVersionUri>2.16.840.1.113883.3.989.5.1.4.1.21</CanonicalVersionUri>
+		<LocationUri>https://raw.githubusercontent.com/HealthCanada/Structured-Content-Information/master/Controlled-Vocabularies/Content/XML/hc-2.16.840.1.113883.3.989.5.1.4.1.21.gc.xml</LocationUri>
+		<Agency>
+			<ShortName>HC</ShortName>
+			<LongName xml:lang="Eng">Health Canada</LongName>
+			<LongName xml:lang="Fra">Santé Canada</LongName>
+		</Agency>
+	</Identification>
+	<ColumnSet>
+		<Column Use="required" Id="code">
+			<ShortName>string-code</ShortName>
+			<Data Type="string"/>
+		</Column>
+		<Column Use="required" Id="name-eng">
+			<ShortName>Name English</ShortName>
+			<Data Type="string"/>
+		</Column>
+		<Column Use="required" Id="name-fra">
+			<ShortName>Name French</ShortName>
+			<Data Type="string"/>
+		</Column>
+		<Column Use="required" Id="desc-eng">
+			<ShortName>Description English</ShortName>
+			<Data Type="string"/>
+		</Column>
+		<Column Use="required" Id="desc-fra">
+			<ShortName>Description French</ShortName>
+			<Data Type="string"/>
+		</Column>
+		<Column Use="required" Id="status">
+			<ShortName>Term Status</ShortName>
+			<Data Type="string"/>
+		</Column>
+		<Column Use="required" Id="ord">
+			<ShortName>Ordinality</ShortName>
+			<Data Type="int"/>
+		</Column>
+		<Column Use="required" Id="xref">
+			<ShortName>Cross Reference ID</ShortName>
+			<Data Type="string"/>
+		</Column>
+		<Column Use="required" Id="mod-date">
+			<ShortName>Term Modification Time Stamp</ShortName>
+			<Data Type="date"/>
+		</Column>
+	</ColumnSet>
+	<SimpleCodeList>
+		<Row><Value ColumnRef="code"><SimpleValue>12</SimpleValue></Value><Value ColumnRef="name-eng"><SimpleValue>DIN</SimpleValue></Value><Value ColumnRef="name-fra"><SimpleValue>The basis of strength is the active ingredient.</SimpleValue></Value><Value ColumnRef="desc-eng"><SimpleValue>???</SimpleValue></Value><Value ColumnRef="desc-fra"><SimpleValue>???</SimpleValue></Value><Value ColumnRef="status"><SimpleValue>Approved</SimpleValue></Value><Value ColumnRef="ord"><SimpleValue>1</SimpleValue></Value><Value ColumnRef="xref"><SimpleValue>na</SimpleValue></Value><Value ColumnRef="mod-date"><SimpleValue>February 17, 2017</SimpleValue></Value></Row>
+		<Row><Value ColumnRef="code"><SimpleValue>123333</SimpleValue></Value><Value ColumnRef="name-eng"><SimpleValue>The basis of strength is the active moiety.</SimpleValue></Value><Value ColumnRef="name-fra"><SimpleValue>The basis of strength is the active moiety.</SimpleValue></Value><Value ColumnRef="desc-eng"><SimpleValue>???</SimpleValue></Value><Value ColumnRef="desc-fra"><SimpleValue>???</SimpleValue></Value><Value ColumnRef="status"><SimpleValue>Approved</SimpleValue></Value><Value ColumnRef="ord"><SimpleValue>1</SimpleValue></Value><Value ColumnRef="xref"><SimpleValue>na</SimpleValue></Value><Value ColumnRef="mod-date"><SimpleValue>February 17, 2017</SimpleValue></Value></Row>
+		<Row><Value ColumnRef="code"><SimpleValue>ACTIR</SimpleValue></Value><Value ColumnRef="name-eng"><SimpleValue>The basis of strength is the reference drug</SimpleValue></Value><Value ColumnRef="name-fra"><SimpleValue>The basis of strength is the reference drug</SimpleValue></Value><Value ColumnRef="desc-eng"><SimpleValue>???</SimpleValue></Value><Value ColumnRef="desc-fra"><SimpleValue>???</SimpleValue></Value><Value ColumnRef="status"><SimpleValue>Approved</SimpleValue></Value><Value ColumnRef="ord"><SimpleValue>1</SimpleValue></Value><Value ColumnRef="xref"><SimpleValue>na</SimpleValue></Value><Value ColumnRef="mod-date"><SimpleValue>February 17, 2017</SimpleValue></Value></Row>
+		<Row><Value ColumnRef="code"><SimpleValue>IACT</SimpleValue></Value><Value ColumnRef="name-eng"><SimpleValue>The basis of strength is the inactive ingredient.</SimpleValue></Value><Value ColumnRef="name-fra"><SimpleValue>The basis of strength is the inactive ingredient.</SimpleValue></Value><Value ColumnRef="desc-eng"><SimpleValue>???</SimpleValue></Value><Value ColumnRef="desc-fra"><SimpleValue>???</SimpleValue></Value><Value ColumnRef="status"><SimpleValue>Approved</SimpleValue></Value><Value ColumnRef="ord"><SimpleValue>1</SimpleValue></Value><Value ColumnRef="xref"><SimpleValue>na</SimpleValue></Value><Value ColumnRef="mod-date"><SimpleValue>February 17, 2017</SimpleValue></Value></Row>
+		<Row><Value ColumnRef="code"><SimpleValue>ADJV</SimpleValue></Value><Value ColumnRef="name-eng"><SimpleValue>The basis of strength is the adjuvant.</SimpleValue></Value><Value ColumnRef="name-fra"><SimpleValue>The basis of strength is the adjuvant.</SimpleValue></Value><Value ColumnRef="desc-eng"><SimpleValue>???</SimpleValue></Value><Value ColumnRef="desc-fra"><SimpleValue>???</SimpleValue></Value><Value ColumnRef="status"><SimpleValue>Approved</SimpleValue></Value><Value ColumnRef="ord"><SimpleValue>1</SimpleValue></Value><Value ColumnRef="xref"><SimpleValue>na</SimpleValue></Value><Value ColumnRef="mod-date"><SimpleValue>February 17, 2017</SimpleValue></Value></Row>
+		<Row><Value ColumnRef="code"><SimpleValue>CNTM</SimpleValue></Value><Value ColumnRef="name-eng"><SimpleValue>The basis of strength is the possible or lack of content</SimpleValue></Value><Value ColumnRef="name-fra"><SimpleValue>The basis of strength is the possible or lack of content</SimpleValue></Value><Value ColumnRef="desc-eng"><SimpleValue>???</SimpleValue></Value><Value ColumnRef="desc-fra"><SimpleValue>???</SimpleValue></Value><Value ColumnRef="status"><SimpleValue>Approved</SimpleValue></Value><Value ColumnRef="ord"><SimpleValue>1</SimpleValue></Value><Value ColumnRef="xref"><SimpleValue>na</SimpleValue></Value><Value ColumnRef="mod-date"><SimpleValue>February 17, 2017</SimpleValue></Value></Row>
+	</SimpleCodeList>
+</gc:CodeList>
