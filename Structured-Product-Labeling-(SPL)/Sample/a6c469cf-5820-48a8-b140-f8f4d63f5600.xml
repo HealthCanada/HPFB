@@ -88,37 +88,14 @@
           <subject>
             <manufacturedProduct>
               <manufacturedProduct >
-
                 <code code="12" codeSystem="2.16.840.1.113883.2.20.6.42" displayName="DIN"/>
                 <name>Brand Name</name>
-
                 <formCode code="2" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Aerosol"/>
                 <asEntityWithGeneric>
                   <genericMedicine>
                     <name>(Proper/Generic name)&#169;&#8482;&#174;</name>
                   </genericMedicine>
                 </asEntityWithGeneric>
-                
-                <ingredient classCode="CNTM">
-                  <!-- This denotes that it MAY contain an ingredeint as the quantity is omited-->
-                  <ingredientSubstance>
-                    <code code="9B1B8HD56911" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-105972"/>
-                    
-                    <name>A-105972</name>
-                  </ingredientSubstance>
-                  
-                </ingredient>
-                <ingredient classCode="CNTM">
-                  <!-- This denotes that it does not contain an ingredeint as the numerator is 0-->
-                  <quantity>
-                    <numerator value="0" unit="mg"/>
-                    <denominator value="1" unit="1"/>
-                  </quantity>
-                  <ingredientSubstance>
-                    <code code="44E44Z56KO" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-151892"/>
-                    <name>A-151892</name>
-                  </ingredientSubstance>
-                </ingredient>
                 <ingredient classCode="IACT">
                   <!-- This denotes that the active ingredient is already used in another approved product and is used as a compound product -->
                   <quantity>
@@ -207,20 +184,8 @@
               </subjectOf>
               <subjectOf>
                 <characteristic>
-                  <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.2.20.6.23"/>
+                  <code code="4" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Color"/>
                   <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="white" xsi:type="CE"/>
-                </characteristic>
-              </subjectOf>
-              <subjectOf>
-                <characteristic>
-                  <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.2.20.6.23"/>
-                  <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="white" xsi:type="CE"/>
-                </characteristic>
-              </subjectOf>
-              <subjectOf>
-                <characteristic>
-                  <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.2.20.6.23"/>
-                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="white" xsi:type="CE"/>
                 </characteristic>
               </subjectOf>
               <subjectOf>
