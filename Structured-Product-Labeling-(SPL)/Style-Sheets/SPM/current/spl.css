@@ -21,6 +21,8 @@ FIXME: All the combinations of styleCode attributes need to
 be represented
 */
 
+
+
 @media screen {
 .spl {
 	font-family: "Times New Roman", Times, serif;
@@ -106,6 +108,7 @@ be represented
 	font-weight: bold;
 	margin-bottom: 0ex;
 	text-align: left;
+	color: black;
 }
 
 .spl div.Section h1 {	
@@ -130,6 +133,7 @@ be represented
 	margin-bottom: 0ex;
 	text-align: left;
 	font-family:"Times New Roman", Times, serif;
+	color:black;
 }
 
 .spl h3 {	
@@ -139,6 +143,7 @@ be represented
 	margin-top: 2.2ex;
 	margin-bottom: 0ex;
 	text-align: left;
+	color: black;
 }
 
 .spl h4 {	
@@ -149,6 +154,7 @@ be represented
 	margin-bottom: 0ex;
 	text-align: left;
 	font-style: italic;
+	color: black;
 }
 
 .spl div.Warning h1 {
@@ -840,4 +846,3 @@ be represented
 .spl .Nobold {	
 	font-weight: normal;
 }
-
