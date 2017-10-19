@@ -32,7 +32,7 @@ Revision: $Id: spl-common.xsl,v 2.0 2006/08/18 04:11:00 sbsuggs Exp $
 <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:v3="urn:hl7-org:v3" exclude-result-prefixes="v3 xsl">
 	<xsl:import href="spl-common.hpfb.xsl"/>
 	<!-- Where to find JavaScript resources -->
-	<xsl:param name="resourcesdir">https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current//</xsl:param>
+	<xsl:param name="resourcesdir">https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/</xsl:param>
 	<!-- Whether to show the clickable XML, set to "/.." instead of "1" to turn off -->
 	<xsl:param name="show-subjects-xml" select="/.."/>
 	<!-- Whether to show the data elements in special tables etc., set to "/.." instead of "1" to turn off -->
