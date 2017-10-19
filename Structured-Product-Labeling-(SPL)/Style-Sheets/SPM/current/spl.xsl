@@ -23,17 +23,22 @@ Revision: $Id: spl.xsl,v 1.52 2005/08/26 05:59:26 gschadow Exp $
 Revision: $Id: spl-common.xsl,v 2.0 2006/08/18 04:11:00 sbsuggs Exp $
 
 -->
-<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:v3="urn:hl7-org:v3" exclude-result-prefixes="v3 xsl">
-	<xsl:import href="spl-common.xsl"/>
+
+<!-- HPFB Changes:
+	1.	changed the resource locations to the HPFB instances. 
+
+-->
+
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:v3="urn:hl7-org:v3" exclude-result-prefixes="v3 xsl">
+	<xsl:import href="spl-common.hpfb.xsl"/>
 	<!-- Where to find JavaScript resources -->
-	<xsl:param name="resourcesdir">http://www.accessdata.fda.gov/spl/stylesheet/</xsl:param>
+	<xsl:param name="resourcesdir">https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current//</xsl:param>
 	<!-- Whether to show the clickable XML, set to "/.." instead of "1" to turn off -->
 	<xsl:param name="show-subjects-xml" select="/.."/>
 	<!-- Whether to show the data elements in special tables etc., set to "/.." instead of "1" to turn off -->
 	<xsl:param name="show-data" select="1"/>
 	<!-- This is the CSS link put into the output -->
-	<xsl:param name="css">http://www.accessdata.fda.gov/spl/stylesheet/spl.css</xsl:param>
+	<xsl:param name="css">https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/spl.css</xsl:param>
 	<!-- Whether to show section numbers, set to 1 to enable and "/.." to turn off-->
 	<xsl:param name="show-section-numbers" select="/.."/>
 	<!-- Whether to process mixins -->

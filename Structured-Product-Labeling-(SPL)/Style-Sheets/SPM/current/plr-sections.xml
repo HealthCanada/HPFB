@@ -113,7 +113,8 @@
 	<section code="34069-5" number="16">
 		<title>HOW SUPPLIED/STORAGE AND HANDLING</title>
 	</section>
-	<section code="44425-7" numbered="yes">> <title>STORAGE AND HANDLING</title>
+	<section code="44425-7" numbered="yes">>
+		<title>STORAGE AND HANDLING</title>
 	</section>
 	<section code="43683-2" highlightfrontmatter="3">
 		<title>RECENT MAJOR CHANGES</title>
@@ -126,8 +127,7 @@
 		<section code="42231-1" displayName="SPL MEDGUIDE SECTION" patsec="1" numbered="yes">
 			<title>Medication Guide<!-- keep case exactly as is! --></title>
 		</section>
-		<section code="42230-3" displayName="SPL PATIENT PACKAGE INSERT SECTION" patsec="1"
-			numbered="yes">
+		<section code="42230-3" displayName="SPL PATIENT PACKAGE INSERT SECTION" patsec="1" numbered="yes">
 			<title>FDA-approved patient labeling<!-- keep case exactly as is! --></title>
 		</section>
 	</section>
@@ -151,5 +151,5 @@
 		     remove it and test what it breaks, it should never have been added
 		     this was done by the previous contractor. -->
 		<title>HUMAN PRESCRIPTION DRUG LABEL WITH HIGHLIGHTS</title>
-	</section>
+	</section>	
 </root>

@@ -15,8 +15,6 @@ XSL:templates available in THIS file.
 DONE: Rednering Data, Tables, Numbering, Table of Documents
 
 LAST THING WORKED ON: Section numbering, should be completed
-
-
 ****************************
 
 The contents of this file are subject to the Health Level-7 Public
@@ -41,6 +39,12 @@ TODO: footnote styleCode Footnote, Endnote not yet obeyed
 TODO: Implementation guide needs to define linkHtml styleCodes.
 -->
 <!-- Health Canada Change added xmlns:gc-->
+
+<!-- HPFB Changes:
+Created a HPFB Variant as there are simply to many small changes 
+to try to maintain a single code base, the main reason for this is that the 
+labels are not extracted but inline in the code 
+-->
 <xsl:transform version="1.0"
 							 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 							 xmlns:v3="urn:hl7-org:v3"
@@ -149,7 +153,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 	<xsl:variable name="indicationSection1" select="/v3:document/v3:component/v3:structuredBody/v3:component/v3:section/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct/v3:instanceOfKind/v3:productInstance/v3:ingredient/v3:subjectOf"/>
 	<xsl:variable name="indicationSection2" select="/v3:document/v3:component/v3:structuredBody/v3:component/v3:section/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct"/>
 	<!--  Health Canada Change Code title external lookup, added the two lines below -->
-	<xsl:variable name="codeLookup" select="document('https://raw.githubusercontent.com/HealthCanada/Structured-Content-Information/master/Controlled-Vocabularies/Content/XML/hc-2.16.840.1.113883.3.989.5.1.4.1.39.gc.xml')"/>
+	<xsl:variable name="codeLookup" select="document('https://raw.githubusercontent.com/HealthCanada/HPFB/master/Controlled-Vocabularies/Content/hpfb-2.16.840.1.113883.2.20.6.36.gc.xml')"/>
 	<xsl:variable name="doctype" select="/v3:document/v3:code/@code" />
 	<!-- Process mixins if they exist -->
 	<xsl:template match="/" priority="1">
@@ -295,7 +299,8 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 
 				<xsl:if test="boolean($show-data)">
 					<div class="DataElementsTable">
-						<!--<xsl:call-template name="PLRIndications"/>
+						<!-- HPFB: pbx: re-enabled the Product Data aspect --> 
+							<xsl:call-template name="PLRIndications"/>
 
 						<xsl:if test="//v3:*[self::v3:ingredientSubstance[starts-with(../@classCode,'ACTI')] or self::v3:identifiedSubstance[not($root/v3:document/v3:code/@code = '64124-1')]]">
 							<xsl:call-template name="PharmacologicalClass"/>
@@ -307,7 +312,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 						<xsl:apply-templates mode="subjects" select="v3:author/v3:assignedEntity/v3:representedOrganization"/>
 						<xsl:apply-templates mode="subjects" select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization"/>
 						<xsl:apply-templates mode="subjects" select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization"/>
-					-->
+					<!-- End of comment-->
 					</div>
 				</xsl:if>
 				<xsl:apply-templates select="v3:relatedDocument[/v3:document/v3:code[@code = 'X9999-4']][@typeCode = 'RPLC']"/>
@@ -1695,31 +1700,25 @@ token.
 				</xsl:when>
 				<!-- Health Canada  Heading level 3,4,5 you concatenate the parent prefix with the prefix -->
 				<xsl:when test="$heading='3'">
-					<a href="#{$code}">
 					<h3 id="{$code}h" style="padding-left:4.5em;margin-top:1.3ex;font-size:1.3em;">
 						<xsl:value-of select="concat($parentPrefix,'.')" />
 						<xsl:value-of select="concat($prefix,' ')" />
 						<xsl:value-of select="v3:title" />
 					</h3>
-				</a>
 				</xsl:when>
 				<xsl:when test="$heading='4'">
-					<a href="#{$code}">
 					<h4 id="{$code}h" style="padding-left:6em;margin-top:1ex;font-size:1.2em;">
 						<xsl:value-of select="concat($parentPrefix,'.')" />
 						<xsl:value-of select="concat($prefix,' ')" />
 						<xsl:value-of select="v3:title" />
 					</h4>
-				</a>
 				</xsl:when>
 				<xsl:when test="$heading='5'">
-					<a href="#{$code}">
 					<h4 id="{$code}h" style="padding-left:7.5em;margin-top:0.8ex;margin-bottom:0.8ex;font-size:1.1em;">
 						<xsl:value-of select="concat($parentPrefix,'.')" />
 						<xsl:value-of select="concat($prefix,' ')" />
 						<xsl:value-of select="v3:title" />
 					</h4>
-				</a>
 				</xsl:when>
 				<xsl:otherwise>
 					Error: <xsl:value-of select="$code" />/<xsl:value-of select="$heading" />
@@ -3173,26 +3172,47 @@ token.
 			</tr>
 			<tr class="formTableRowAlt">
 				<xsl:call-template name="color">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLCOLOR']"/>
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='1']"/>
 				</xsl:call-template>
 				<xsl:call-template name="score">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLSCORE']"/>
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='5']"/>
+				</xsl:call-template>
+			</tr>
+			<tr class="formTableRowAlt">
+				<xsl:call-template name="image">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='2']"/>
+				</xsl:call-template>
+				<xsl:call-template name="production_amount">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='6']"/>
 				</xsl:call-template>
 			</tr>
 			<tr class="formTableRow">
 				<xsl:call-template name="shape">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLSHAPE']"/>
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='3']"/>
 				</xsl:call-template>
 				<xsl:call-template name="size">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLSIZE']"/>
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='11']"/>
 				</xsl:call-template>
 			</tr>
 			<tr class="formTableRowAlt">
 				<xsl:call-template name="flavor">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLFLAVOR']"/>
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='4']"/>
 				</xsl:call-template>
-				<xsl:call-template name="imprintCode">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLIMPRINT']"/>
+				<xsl:call-template name="imprint">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='12']"/>
+				</xsl:call-template>
+			</tr>
+			<tr class="formTableRowAlt">
+				<xsl:call-template name="pharmaceutical_standard">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='13']"/>
+				</xsl:call-template>
+				<xsl:call-template name="scheduling_symbol">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='14']"/>
+				</xsl:call-template>
+			</tr>
+			<tr class="formTableRowAlt">
+				<xsl:call-template name="therapeutic_class">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='15']"/>
 				</xsl:call-template>
 			</tr>
 			<tr class="formTableRow">
@@ -3300,7 +3320,7 @@ token.
 </xsl:template>
 
 
-<!-- display the imprint characteristic color -->
+<!-- display the characteristic color -->
 <xsl:template name="color">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Color</td>
@@ -3313,7 +3333,20 @@ token.
 		<xsl:if test="not($path/v3:value)">&#160;&#160;&#160;&#160;</xsl:if>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic score -->
+	<!-- display the characteristic production amount -->
+	<xsl:template name="production_amount">
+		<xsl:param name="path" select="."/>
+		<td class="formLabel">Production Amount</td>
+		<td class="formItem">
+			<xsl:for-each select="$path/v3:value">
+				<xsl:if test="position() > 1">,&#160;</xsl:if>
+				<xsl:value-of select="./@displayName"/>
+				<xsl:if test="normalize-space(./v3:originalText)"> (<xsl:value-of select="./v3:originalText"/>) </xsl:if>
+			</xsl:for-each>
+			<xsl:if test="not($path/v3:value)">&#160;&#160;&#160;&#160;</xsl:if>
+		</td>
+	</xsl:template>
+<!-- display the characteristic score -->
 <xsl:template name="score">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Score</td>
@@ -3326,7 +3359,7 @@ token.
 		</xsl:choose>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic shape -->
+<!-- display the characteristic shape -->
 <xsl:template name="shape">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Shape</td>
@@ -3335,7 +3368,7 @@ token.
 		<xsl:if test="normalize-space($path/v3:value/v3:originalText)"> (<xsl:value-of select="$path/v3:value/v3:originalText"/>) </xsl:if>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic flavor -->
+<!-- display the characteristic flavor -->
 <xsl:template name="flavor">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Flavor</td>
@@ -3347,15 +3380,48 @@ token.
 		</xsl:for-each>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic code -->
-<xsl:template name="imprintCode">
+	<xsl:template name="pharmaceutical_standard">
+		<xsl:param name="path" select="."/>
+		<td class="formLabel">Pharmaceutical Standard</td>
+		<td class="formItem">
+			<xsl:for-each select="$path/v3:value">
+				<xsl:if test="position() > 1">,&#160;</xsl:if>
+				<xsl:value-of select="./@displayName"/>
+				<xsl:if test="normalize-space(./v3:originalText)"> (<xsl:value-of select="./v3:originalText"/>) </xsl:if>
+			</xsl:for-each>
+		</td>
+	</xsl:template>
+	<xsl:template name="scheduling_symbol">
+		<xsl:param name="path" select="."/>
+		<td class="formLabel">Scheduling Symbol</td>
+		<td class="formItem">
+			<xsl:for-each select="$path/v3:value">
+				<xsl:if test="position() > 1">,&#160;</xsl:if>
+				<xsl:value-of select="./@displayName"/>
+				<xsl:if test="normalize-space(./v3:originalText)"> (<xsl:value-of select="./v3:originalText"/>) </xsl:if>
+			</xsl:for-each>
+		</td>
+	</xsl:template>
+	<xsl:template name="therapeutic_class">
+		<xsl:param name="path" select="."/>
+		<td class="formLabel">Therapeutic Class</td>
+		<td class="formItem">
+			<xsl:for-each select="$path/v3:value">
+				<xsl:if test="position() > 1">,&#160;</xsl:if>
+				<xsl:value-of select="./@displayName"/>
+				<xsl:if test="normalize-space(./v3:originalText)"> (<xsl:value-of select="./v3:originalText"/>) </xsl:if>
+			</xsl:for-each>
+		</td>
+	</xsl:template>
+	<!-- display the characteristic imprint -->
+<xsl:template name="imprint">
 	<xsl:param name="path" select="."/>
-	<td class="formLabel">Imprint Code</td>
+	<td class="formLabel">Imprint</td>
 	<td class="formItem">
 		<xsl:value-of select="$path[v3:value/@xsi:type='ST']"/>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic size -->
+<!-- display the characteristic size -->
 <xsl:template name="size">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Size</td>
@@ -3364,7 +3430,7 @@ token.
 		<xsl:value-of select="$path/v3:value/@unit"/>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic symbol -->
+<!-- display the characteristic symbol -->
 <xsl:template name="symbol">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Symbol</td>
@@ -3372,7 +3438,7 @@ token.
 		<xsl:value-of select="$path/v3:value/@value"/>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic coating -->
+<!-- display the characteristic coating -->
 <xsl:template name="coating">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Coating</td>
@@ -3383,7 +3449,7 @@ token.
 <xsl:template name="image">
 	<xsl:param name="path" select="."/>
 	<xsl:if test="string-length($path/v3:value/v3:reference/@value) > 0">
-		<img alt="Image of Product" style="width:100%;" src="{$path/v3:value/v3:reference/@value}"/>
+		<img alt="Image of Product" style="width:20%;" src="{$path/v3:value/v3:reference/@value}"/>
 	</xsl:if>
 </xsl:template>
 
@@ -3696,7 +3762,7 @@ token.
 	<xsl:if test="(count(./v3:name)>0)">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
 			<tr>
-				<td colspan="4" class="formHeadingReg"><span class="formHeadingTitle" >Labeler -&#160;</span><xsl:value-of select="./v3:name"/>
+				<td colspan="4" class="formHeadingReg"><span class="formHeadingTitle" >DIN Owner -&#160;</span><xsl:value-of select="./v3:name"/>
 					<xsl:choose>
 						<xsl:when test="./v3:id[@root='1.3.6.1.4.1.519.1']/@extension">
 							(<xsl:value-of select="./v3:id[@root='1.3.6.1.4.1.519.1']/@extension"/>)
@@ -3790,23 +3856,29 @@ token.
 	<xsl:if test="./v3:name">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
 			<tr>
-				<td colspan="4" class="formHeadingReg">
+				<td colspan="5" class="formHeadingReg">
 					<span class="formHeadingTitle" >
 						<xsl:choose>
+							<!-- replace with HPFB codes -->
 							<xsl:when test="/v3:document/v3:code/@code[. = '72090-4' or . = '71743-9' or . = '75030-7']">Facility</xsl:when>
 							<xsl:when test="/v3:document/v3:code/@code[. = '51726-8' or . = '72871-7']">Labeler Detail</xsl:when>
-							<xsl:otherwise>Establishment</xsl:otherwise>
+							<xsl:otherwise>Other Party</xsl:otherwise>
 						</xsl:choose>
 					</span>
 				</td>
 			</tr>
 			<tr>
+				<th scope="col" class="formTitle">Role</th>
 				<th scope="col" class="formTitle">Name</th>
 				<th scope="col" class="formTitle">Address</th>
 				<th scope="col" class="formTitle">ID/FEI</th>
 				<th scope="col" class="formTitle">Business Operations</th>
 			</tr>
 			<tr class="formTableRowAlt">
+				<td class="formItem">
+					<!-- replace with the label for the role -->
+					<xsl:value-of select="./v3:name"/>
+				</td>
 				<td class="formItem">
 					<xsl:value-of select="./v3:name"/>
 				</td>

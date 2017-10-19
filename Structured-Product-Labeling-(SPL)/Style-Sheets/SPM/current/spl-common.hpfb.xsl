@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE html>
 <!--
+**************************
+@Health Canada:
+Jeffrey: This XSL should be able to render all text for the 2004/2016 templates.
+We did not receive test files other than the 2004 Standard so I cannot confirm it
+it will work 100% without any bugs. From the test files that we did receive,
+ALL data from the XMLs are displayed as they are ordered, with all tables
+and attributes preserved as well.
+
+The main rendering is done at line 185, which renders the XML tags according to the
+XSL:templates available in THIS file.
+
+DONE: Rednering Data, Tables, Numbering, Table of Documents
+
+LAST THING WORKED ON: Section numbering, should be completed
+****************************
+
 The contents of this file are subject to the Health Level-7 Public
 License Version 1.0 (the "License"); you may not use this file
 except in compliance with the License. You may obtain a copy of the
@@ -21,14 +38,22 @@ Contributor(s): Steven Gitterman, Brian Keller, Brian Suggs
 TODO: footnote styleCode Footnote, Endnote not yet obeyed
 TODO: Implementation guide needs to define linkHtml styleCodes.
 -->
-<xsl:transform version="1.0" 
-							 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-							 xmlns:v3="urn:hl7-org:v3" 
-							 xmlns:v="http://validator.pragmaticdata.com/result" 
-							 xmlns:str="http://exslt.org/strings" 
-							 xmlns:exsl="http://exslt.org/common" 
-							 xmlns:msxsl="urn:schemas-microsoft-com:xslt" 
-							 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<!-- Health Canada Change added xmlns:gc-->
+
+<!-- HPFB Changes:
+Created a HPFB Variant as there are simply to many small changes 
+to try to maintain a single code base, the main reason for this is that the 
+labels are not extracted but inline in the code 
+-->
+<xsl:transform version="1.0"
+							 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+							 xmlns:v3="urn:hl7-org:v3"
+							 xmlns:v="http://validator.pragmaticdata.com/result"
+							 xmlns:str="http://exslt.org/strings"
+							 xmlns:exsl="http://exslt.org/common"
+							 xmlns:msxsl="urn:schemas-microsoft-com:xslt"
+							 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							 xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
 							 exclude-result-prefixes="exsl msxsl v3 xsl xsi str v">
 	<xsl:import href="xml-verbatim.xsl"/>
 	<xsl:import href="mixin.xsl"/>
@@ -127,8 +152,12 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 	</xsl:variable>
 	<xsl:variable name="indicationSection1" select="/v3:document/v3:component/v3:structuredBody/v3:component/v3:section/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct/v3:instanceOfKind/v3:productInstance/v3:ingredient/v3:subjectOf"/>
 	<xsl:variable name="indicationSection2" select="/v3:document/v3:component/v3:structuredBody/v3:component/v3:section/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct"/>
+	<!--  Health Canada Change Code title external lookup, added the two lines below -->
+	<xsl:variable name="codeLookup" select="document('https://raw.githubusercontent.com/HealthCanada/HPFB/master/Controlled-Vocabularies/Content/hpfb-2.16.840.1.113883.2.20.6.36.gc.xml')"/>
+	<xsl:variable name="doctype" select="/v3:document/v3:code/@code" />
 	<!-- Process mixins if they exist -->
 	<xsl:template match="/" priority="1">
+
 		<xsl:choose>
 			<xsl:when test="boolean($process-mixins) and *[v3:relatedDocument[@typeCode='APND' and v3:relatedDocument[v3:id/@root or v3:setId/@root]]]">
 				<xsl:variable name="mixinRtf">
@@ -148,155 +177,38 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 				</xsl:choose>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:if test="not(/v3:document/v3:code/@code = '77289-7|user-profile')">	
-					<xsl:if test="not(/v3:document/v3:code/@code = 'XXXXX-2')">	
+				<xsl:if test="not(/v3:document/v3:code/@code = '77289-7|user-profile')">
+					<xsl:if test="not(/v3:document/v3:code/@code = 'XXXXX-2')">
 						<xsl:apply-templates select="*"/>
 					</xsl:if>
 					<xsl:if test="/v3:document/v3:code/@code = 'XXXXX-2'">
 						<xsl:apply-templates mode="EPA" select="/v3:document"/>
 					</xsl:if>
 				</xsl:if>
-				<xsl:if test="/v3:document/v3:code/@code = '77289-7'">				    
+				<xsl:if test="/v3:document/v3:code/@code = '77289-7'">
 					<xsl:apply-templates mode="form3911" select="/v3:document"/>
 				</xsl:if>
 				 <xsl:apply-templates mode="user-management" select="/v3:document[v3:code/@code = 'user-profile']"/>
-				 		
+
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
 
-	<!-- MAIN MODE based on the deep null-transform -->
-	<xsl:template match="/|@*|node()">
-		<xsl:apply-templates select="@*|node()"/>
-	</xsl:template>
-	<!-- GS: the document title should not be processed in normal mode. 
-			 This is really should be revisited when the top-level template gets refactored. --> 
-	<xsl:template match="/v3:document/v3:title" priority="1"/>
-	<xsl:template mode="user-management" match="/v3:document">
-		<html>
-			<head>
-				<meta name="documentId" content="{/v3:document/v3:id/@root}"/>
-				<meta name="documentSetId" content="{/v3:document/v3:setId/@root}"/>
-				<meta name="documentVersionNumber" content="{/v3:document/v3:versionNumber/@value}"/>
-				<meta name="documentEffectiveTime" content="{/v3:document/v3:effectiveTime/@value}"/>
-				<title><!-- GS: this isn't right because the title can have markup -->
-					<xsl:value-of select="v3:title"/>
-				</title>
-				<link rel="stylesheet" type="text/css" href="{$css}"/>
-			</head>
-			<body>
-				<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
-					<tr>
-						<td colspan="6" class="formHeadingReg">
-							<span class="formHeadingTitle" >
-								<h2>User Information</h2>
-							</span>
-						</td>				
-					</tr>
-					<tr>
-						<th scope="col" class="formTitle">Name</th>
-						<th scope="col" class="formTitle">User ID</th>
-						<th scope="col" class="formTitle">Email Address</th>
-						<th scope="col" class="formTitle">Telephone Number</th>
-						<th scope="col" class="formTitle">Center</th>
-						<th scope="col" class="formTitle">Status</th>
-					</tr>
-					<tr class="formTableRowAlt">
-						<td class="formItem">
-							<xsl:value-of select="v3:author/v3:assignedEntity/v3:assignedPerson/v3:name"/>
-						</td>
-						<td class="formItem">
-							<xsl:if test="v3:author/v3:assignedEntity/v3:id[@root = '1.3.6.1.4.1.32366.1.3.1.1']">
-								<xsl:value-of select="v3:author/v3:assignedEntity/v3:id/@extension"/>
-							</xsl:if>
-						</td>
-						<td class="formItem">
-							<xsl:value-of select="substring-after(v3:author/v3:assignedEntity/v3:telecom/@value[starts-with(.,'mailto:')][1],'mailto:')"/>
-						</td>
-						<td class="formItem">
-							<xsl:value-of select="substring-after(v3:author/v3:assignedEntity/v3:telecom/@value[starts-with(.,'tel:')][1],'tel:')"/>
-						</td>
-						<td class="formItem">
-							<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:id/@extension"/>
-						</td>
-						<td class="formItem">
-							<xsl:value-of select="v3:author/v3:assignedEntity/v3:statusCode/@code"/>
-						</td>
-					</tr>
-				</table>
-				<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
-					<tr>
-						<td colspan="3" class="formHeadingReg">
-							<span class="formHeadingTitle" >
-								<h2>Special Privileges</h2>
-							</span>
-						</td>
-					</tr>
-					<tr>
-						<th scope="col" class="formTitle">Special Privilege</th>
-						<th scope="col" class="formTitle">Action by Approver</th>
-						<th scope="col" class="formTitle">Action by DBA</th>
-					</tr>
-					
-					<xsl:for-each select="v3:author/v3:assignedEntity/v3:performance/v3:actDefinition">
-						<tr class="formTableRowAlt">
-							<td class="formItem">
-								<xsl:value-of select="v3:code/@code"/>
-							</td>
+	<!-- Health Canada rendering the whole XML doc MAIN MODE based on the deep null-transform -->
+	<xsl:template match="@*|node()">
 
-							<td class="formItem">
-								<xsl:for-each select="v3:subjectOf/v3:approval/v3:subjectOf/v3:action">
-									<xsl:value-of select="v3:code/@code"/>
-									(<b>Effective Time: </b> <xsl:value-of select="v3:effectiveTime/@value"/>,
-									<b>Comment: </b> <xsl:value-of select="v3:text"/>)
-									<br/>
-									<xsl:if test="position()!=last()"> <hr/> </xsl:if>
-								</xsl:for-each>
-							</td>
-							
-							<td class="formItem">
-								<xsl:for-each select="v3:subjectOf/v3:approval/v3:subjectOf/v3:action/v3:subjectOf/v3:action">
-									<xsl:value-of select="v3:code/@code"/>
-									(<b>Effective Time: </b> <xsl:value-of select="v3:effectiveTime/@value"/>,
-									<b>Comment: </b> <xsl:value-of select="v3:text"/>)
-									<br/>
-									<xsl:if test="position()!=last()"> <hr/> </xsl:if>
-								</xsl:for-each>
-							</td>
-					
-						</tr>
-					</xsl:for-each>
-				</table>
-				<xsl:if test="/v3:document/v3:verifier">
-					<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
-						<tr>
-							<td colspan="3" class="formHeadingReg">
-								<span class="formHeadingTitle" >
-									<h2>Verifier Information</h2>
-								</span>
-							</td>
-						</tr>
-						<tr>
-							<th scope="col" class="formTitle">Verifier's Name</th>
-							<th scope="col" class="formTitle">Center</th>
-							<th scope="col" class="formTitle">Verified on(Date)</th>
-						</tr>
-						<tr class="formTableRowAlt">
-							<td class="formItem">
-								<xsl:value-of select="v3:verifier/v3:assignedEntity/v3:name"/>
-							</td>
-							<td class="formItem">
-								<xsl:value-of select="v3:verifier/v3:assignedEntity/v3:representedOrganization/v3:id/@extension"/>
-							</td>
-							<td class="formItem">
-								<xsl:value-of select="v3:verifier/v3:time/@value"/>
-							</td>
-						</tr>
-					</table>
-				</xsl:if>
-			</body>
-		</html>
+			<xsl:apply-templates select="*"/>
+
 	</xsl:template>
+
+
+
+
+
+	<!-- GS: the document title should not be processed in normal mode.
+			 This is really should be revisited when the top-level template gets refactored. -->
+	<xsl:template match="/v3:document/v3:title" priority="1"/>
+
 	<xsl:template mode="form3911" match="/v3:document">
 		<!-- GS: this template needs thorough refactoring -->
 		<html>
@@ -310,359 +222,9 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 				</title>
 				<link rel="stylesheet" type="text/css" href="{$css}"/>
 			</head>
-			<body>
-				<table cellpadding="0" class="tableContentAlign3911">
-					<tr>
-						<td style="text-align:left; font-family: Century Gothic,sans-serif;">
-							<h2>DEPARTMENT OF HEALTH AND HUMAN SERVICES</h2>Food and Drug Administration
-						</td>
-						<td style="color: black;padding-left: 5px;text-align:right; font-family: Century Gothic,sans-serif;">
-							<p>Form Approved: OMB No.xxxx-xxxx<br/>
-							   Expiration Date: Xxxxxxx xx, 201x<br/>
-							   See PRA Statement on page 2.</p>
-						</td>
-					</tr>
-					<tr>
-						<td style="font-family: Century Gothic,sans-serif;">
-							<h1>DRUG NOTIFICATION</h1>
-							Refer to instruction sheet (Form FDA 3911 Supplemental) for more information.
-						</td>
-					</tr>
-					<tr>
-						<table cellpadding="0" class="tableContentAlign3911">
-							<hr size="4" noshade="noshade"/>
-							<tr>
-								<td class="header3911" >
-									<text>1. Type of Report (Select one):</text>
-								</td>
-								<td class="data3911" style="text-align:left;" >
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '1. Type of Report (Select one):']/v3:text"/>
-								</td>			                
-							</tr>
-							<tr>
-								<td class="header3911">
-									<text>2. Incident Number(Provide this number, assigned by FDA, if you selected Follow-up Notification or Request for Termination above; see instruction.)</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '2. Incident Number (Provide this number, assigned by FDA, if you selected Follow-up Notification or Request for Termination above; see instruction.)']/v3:text"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911">
-									<text>3. Date of Initial Notification(mm/dd/yyyy)</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '3. Date of Initial Notification(mm/dd/yyyy)']/v3:text"/>
-								</td>
-							</tr> 
-							<tr>
-								<td class="header3911">
-									<text>4. Date Illegitimate Product Was Determined by Company(mm/dd/yyyy)</text>
-								</td>	 
-								<td class="data3911">
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct/v3:instanceOfKind/v3:productInstance/v3:ingredient/v3:subjectOf/v3:productEvent[v3:code/@code]/v3:effectiveTime/@value"/>
-								</td>
-							</tr>						
-							<tr>
-								<td class="header3911">
-									<text>5. Classification of Notification(Select from list)</text>
-								</td>
-								<td class="data3911">
-									<xsl:choose>
-										<xsl:when test="function-available('exsl:node-set')">
-											<xsl:if test="$indicationSection1/v3:productEvent/v3:code/@code = exsl:node-set($drugNotificationList)/code/@code">
-												<xsl:value-of select="$indicationSection1/v3:productEvent/v3:code/@displayName"/>
-											</xsl:if>
-										</xsl:when>
-										<xsl:when test="function-available('msxsl:node-set')">
-											<xsl:if test="$indicationSection1/v3:productEvent/v3:code/@code = msxsl:node-set($drugNotificationList)/code/@code">
-												<xsl:value-of select="$indicationSection1/v3:productEvent/v3:code/@displayName"/>
-											</xsl:if>
-										</xsl:when>
-										<xsl:otherwise>
-											<!-- XSLT 2 would be thus: xsl:apply-templates select="$mixinRtf/*"/ -->
-											<xsl:message terminate="yes">required function node-set is not available, this XSLT processor cannot handle the transform</xsl:message>
-										</xsl:otherwise>
-									</xsl:choose>
 
-								</td>			                
-							</tr>							
-						</table>					 				 
-						<hr size="4" noshade="noshade"/>
-						<p style="font-weight: bold;font-size: 12pt; font-family: Century Gothic,sans-serif;">Description of Illegitimate Product</p>
-						<table cellpadding="0" class="tableContentAlign3911">
-							<hr size="3" noshade="noshade"/>
-							<tr>
-								<td class="header3911">
-									<text>6. Name of Product as It appears on the label</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct/v3:name"/>
-								</td>
-							</tr>						
-							<tr>
-								<td class="header3911">
-									<text>7. Primary Ingredients (if known)</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '7. Primary Ingredients (if known)']/v3:text"/>
-								</td>
-							</tr>												
-							<tr>
-								<td class="header3911">
-									<text>8. Drug Use(Select from list)</text>
-								</td>
-								<td class="data3911">
-									<xsl:choose>
-										<xsl:when test="function-available('exsl:node-set')">
-											<xsl:if test="$indicationSection2/v3:instanceOfKind/v3:productInstance/v3:ingredient/v3:ingredientProductInstance/v3:asInstanceOfKind/v3:kindOfMaterialKind/v3:code/@code = exsl:node-set($drugUseList)/code/@code">
-												<xsl:value-of select="$indicationSection2/v3:instanceOfKind/v3:productInstance/v3:ingredient/v3:ingredientProductInstance/v3:asInstanceOfKind/v3:kindOfMaterialKind/v3:name"/>
-											</xsl:if>
-										</xsl:when>
-										<xsl:when test="function-available('msxsl:node-set')">
-											<xsl:if test="$indicationSection2/v3:instanceOfKind/v3:productInstance/v3:ingredient/v3:ingredientProductInstance/v3:asInstanceOfKind/v3:kindOfMaterialKind/v3:code/@code = msxsl:node-set($drugUseList)/code/@code">
-												<xsl:value-of select="$indicationSection2/v3:instanceOfKind/v3:productInstance/v3:ingredient/v3:ingredientProductInstance/v3:asInstanceOfKind/v3:kindOfMaterialKind/v3:name"/>
-											</xsl:if>
-										</xsl:when>
-										<xsl:otherwise>
-											<!-- XSLT 2 would be thus: xsl:apply-templates select="$mixinRtf/*"/ -->
-											<xsl:message terminate="yes">required function node-set is not available, this XSLT processor cannot handle the transform</xsl:message>
-										</xsl:otherwise>
-									</xsl:choose>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911">
-									<text>9. Drug Description (Select from list)</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '9. Drug Description (Select from list)']/v3:text"/>
-								</td>			                
-							</tr>
-							<tr>
-								<td class="header3911">
-									<text>10. Strength of Drug</text>
-								</td>
-								<td class="data3911" >
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '10. Strength of Drug']/v3:text"/>
-								</td>
-							</tr>						
-							<tr>
-								<td class="header3911">
-									<text>11. Dosage Form (Select from list)</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '11. Dosage Form (Select from list)']/v3:text"/>
-								</td>
-							</tr>						
-							<tr>
-								<td class="header3911">
-									<text>12. Quantity of Drug (Number and Unit)</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '12. Quantity of Drug (Number and Unit)']/v3:text"/>
-								</td>
-							</tr>						
-							<tr>
-								<td class="header3911">
-									<text>13. NDC Number(if applicable)</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct/v3:code/@code"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911">
-									<text>14. Serial Number (if applicable)</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '14. Serial Number (if applicable)']/v3:text"/>
-								</td>
-							</tr>						
-							<tr>
-								<td class="header3911">
-									<text>15. Lot Number(s)</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '15. Lot Number(s)']/v3:text"/>
-								</td>
-							</tr>						
-							<tr>
-								<td class="header3911">
-									<text>16. Expiration Date(s)</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '16. Expiration Date(s)']/v3:text"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911">
-									<text>17. For Notification: Description of Event/Issue</text>
-									<br/>
-									<span style="width: 940px; height: 50px; border:0px; background-color:#E8E8E8; padding-top: 2px; padding-bottom: 2px; font-family: Century Gothic,sans-serif;">
-										<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '17. For Notification: Description of Event/Issue']/v3:text"/>
-									</span>
-								</td>
-							</tr>						
-							<tr>
-								<td class="header3911">
-									<text>18. For Request for Termination of Notification: Description of why notification is no longer necessary</text>
-									<br/>
-									<span class="data3911">
-										<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '18. For Request for Termination of Notification: Description of why notification is no longer necessary']/v3:text"/>
-									</span>  
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911">
-									<text>19. If you have submitted the information to FDA through an alternative mechanism, check all that apply</text>
-									<br/>
-									<span class="data3911">
-										<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = '19. If you have submitted the information to FDA through an alternative mechanism, check all that apply']/v3:text"/>
-										<xsl:if test="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = 'Other']/v3:text[v3:paragraph/text()]">
-											<xsl:text>- </xsl:text>
-											<xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section[v3:title = 'Other']/v3:text"/>
-										</xsl:if>
-									</span>
-								</td>
-							</tr>	
-						</table>					 					 					 
-						<hr size="4" noshade="noshade"/>
-						<p style="font-weight: bold;font-size: 12pt; font-family: Century Gothic,sans-serif;">Company/Facility Information</p>
-						<hr size="3" noshade="noshade"/>
-						<table cellpadding="0" class="tableContentAlign3911">
-							<tr style="font-family: Century Gothic,sans-serif;">
-								<td>
-									<text>20. Company Name &amp; Address Fields</text>
-								</td>
-								<td></td>	
-							</tr>
-							<tr>
-								<td class="header3911" style="padding-left:25px">
-									<text>Name</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:name"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911" style="padding-left:25px">
-									<text>Address 1(Street address, P.O. box, etc.)</text>
-								</td>
-								<td class="data3911" >
-									<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:addr/v3:streetAddressLine[1]"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911" style="padding-left:25px">
-									<text>Address 2(Apartment, suite, unit, building, floor, etc.)</text>
-								</td>
-								<td class="data3911" >
-									<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:addr/v3:streetAddressLine[2]"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911" style="padding-left:25px">
-									<text>City</text>
-								</td>
-								<td class="data3911" >
-									<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:addr/v3:city"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911" style="padding-left:25px">
-									<text>State/Province/Region</text>
-								</td>
-								<td class="data3911" >
-									<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:addr/v3:state"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911" style="padding-left:25px">
-									<text>Country</text>
-								</td>
-								<td class="data3911" >
-									<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:addr/v3:country"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911" style="padding-left:25px">
-									<text>ZIP or Postal Code</text>
-								</td>
-								<td class="data3911" >
-									<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:addr/v3:postalCode"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911">
-									<text>21. Company Category(Select from list)</text>
-								</td>
-								<td class="data3911" >
-									<xsl:choose>
-										<xsl:when test="function-available('exsl:node-set')">
-											<xsl:if test="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:performance/v3:actDefinition/v3:code/@code = exsl:node-set($companyCategoryList)/code/@code">
-												<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:performance/v3:actDefinition/v3:code/@displayName"/>
-											</xsl:if>
-										</xsl:when>
-										<xsl:when test="function-available('msxsl:node-set')">
-											<xsl:if test="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:performance/v3:actDefinition/v3:code/@code = msxsl:node-set($companyCategoryList)/code/@code">
-												<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:performance/v3:actDefinition/v3:code/@displayName"/>
-											</xsl:if>
-										</xsl:when>
-										<xsl:otherwise>
-											<!-- XSLT 2 would be thus: xsl:apply-templates select="$mixinRtf/*"/ -->
-											<xsl:message terminate="yes">required function node-set is not available, this XSLT processor cannot handle the transform</xsl:message>
-										</xsl:otherwise>
-									</xsl:choose>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911">
-									<text>22. Unique Facility Identifier(of company name #19)</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:id/@extension"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911">23. Contact Information (Note: For the telephone, you may enter the</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td class="header3911" style="padding-left:25px">number of contact person or of the company named in #20)</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td class="header3911" style="padding-left:25px">
-									<text>Name</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:contactParty/v3:contactPerson"/>
-								</td>
-							</tr>						
-							<tr>
-								<td class="header3911" style="padding-left:25px">
-									<text>Telephone Number(Include area code)</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="substring-after(v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:contactParty/v3:telecom[starts-with(@value,'tel:')][1]/@value,'tel:')"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="header3911" style="padding-left:25px">
-									<text>Email Address</text>
-								</td>
-								<td class="data3911">
-									<xsl:value-of select="substring-after(v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:contactParty/v3:telecom[starts-with(@value,'mailto:')][1]/@value,'mailto:')"/>
-								</td>
-							</tr>
-						</table>
-						<hr size="4" noshade="noshade"/>
-					</tr>
-				</table>	  
-			</body>
 		</html>
-	</xsl:template>	
+	</xsl:template>
 	<xsl:template match="/v3:document">
 		<!-- GS: this template needs thorough refactoring -->
 		<html>
@@ -692,12 +254,12 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 							<xsl:when test="function-available('exsl:node-set')">
 								<xsl:apply-templates mode="twocolumn" select="exsl:node-set($highlightsRtf)">
 									<xsl:with-param name="class">Highlights</xsl:with-param>
-								</xsl:apply-templates>	
+								</xsl:apply-templates>
 							</xsl:when>
 							<xsl:when test="function-available('msxsl:node-set')">
 								<xsl:apply-templates mode="twocolumn" select="msxsl:node-set($highlightsRtf)">
 									<xsl:with-param name="class">Highlights</xsl:with-param>
-								</xsl:apply-templates>	
+								</xsl:apply-templates>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:message terminate="yes">required function node-set is not available, this XSLT processor cannot handle the transform</xsl:message>
@@ -724,7 +286,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 						</xsl:choose>
 					</xsl:when>
 					<xsl:otherwise>
-						<h1><xsl:apply-templates mode="mixed" select="v3:title"/></h1>
+						<h1 id="H1ID"><xsl:apply-templates mode="mixed" select="v3:title"/></h1>
 					</xsl:otherwise>
 				</xsl:choose>
 
@@ -736,9 +298,10 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 				</div>
 
 				<xsl:if test="boolean($show-data)">
-					<div class="DataElementsTables">
-						<xsl:call-template name="PLRIndications"/>
-						<!--xsl:call-template name="PLRInteractions"/-->
+					<div class="DataElementsTable">
+						<!-- HPFB: pbx: re-enabled the Product Data aspect --> 
+							<xsl:call-template name="PLRIndications"/>
+
 						<xsl:if test="//v3:*[self::v3:ingredientSubstance[starts-with(../@classCode,'ACTI')] or self::v3:identifiedSubstance[not($root/v3:document/v3:code/@code = '64124-1')]]">
 							<xsl:call-template name="PharmacologicalClass"/>
 						</xsl:if>
@@ -749,6 +312,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 						<xsl:apply-templates mode="subjects" select="v3:author/v3:assignedEntity/v3:representedOrganization"/>
 						<xsl:apply-templates mode="subjects" select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization"/>
 						<xsl:apply-templates mode="subjects" select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization"/>
+					<!-- End of comment-->
 					</div>
 				</xsl:if>
 				<xsl:apply-templates select="v3:relatedDocument[/v3:document/v3:code[@code = 'X9999-4']][@typeCode = 'RPLC']"/>
@@ -757,7 +321,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 					<xsl:text>&#160;</xsl:text>
 					<xsl:call-template name="distributorName"/>
 				</p>
-				
+
 				<xsl:if test="boolean($show-subjects-xml)">
 					<hr/>
 					<div class="Subject" onclick="xmlVerbatimClick(event);" ondblclick="xmlVerbatimDblClick(event);">
@@ -798,7 +362,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 							<tr>
 								<td>
 									<table width="100%" cellpadding="5" cellspacing="0" class="formTablePetite">
-										
+
 										<tr>
 											<td colspan="2" class="formHeadingTitle">
 												<xsl:text>Environmental Residue Observation - </xsl:text>
@@ -846,21 +410,21 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 					<xsl:value-of select="v3:value/v3:high/@value"/>
 				</td>
 				<td class="formItem">
-					<xsl:value-of select="v3:subjectOf/v3:approval/v3:code/@displayName"/> 
+					<xsl:value-of select="v3:subjectOf/v3:approval/v3:code/@displayName"/>
 				</td>
 				<td class="formItem">
-					<xsl:value-of select="v3:subjectOf/v3:approval/v3:effectiveTime/v3:high/@value"/> 			
+					<xsl:value-of select="v3:subjectOf/v3:approval/v3:effectiveTime/v3:high/@value"/>
 				</td>
 				<td class="formItem">
-					<xsl:value-of select="v3:subjectOf/v3:approval/v3:text"/> 			
+					<xsl:value-of select="v3:subjectOf/v3:approval/v3:text"/>
 				</td>
-			</tr>		
+			</tr>
 	</xsl:template>
 	<xsl:template mode="twoColumn" match="v3:analyte">
 		<tr>
-			<xsl:if test="position() = 1">	
+			<xsl:if test="position() = 1">
 				<td class="formTitle" colspan="2">Substance Measured</td>
-			</xsl:if>	
+			</xsl:if>
 		</tr>
 		<tr>
 			<xsl:attribute name="class">
@@ -919,7 +483,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 									<xsl:for-each select="v3:asSpecializedKind/v3:generalizedMaterialKind/v3:code[@codeSystem='2.16.840.1.113883.6.303']">
 										<xsl:value-of select="@displayName"/>
 										<xsl:if test="position()!=last()"> , </xsl:if>
-									</xsl:for-each>	
+									</xsl:for-each>
 								</td>
 							</tr>
 							<tr>
@@ -941,7 +505,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 							</tr>
 							<tr class="formTableRowAlt">
 								<td class="formItem">
-									<xsl:value-of select="v3:asContent/v3:containerPackagedProduct/v3:formCode/@displayName"/>	
+									<xsl:value-of select="v3:asContent/v3:containerPackagedProduct/v3:formCode/@displayName"/>
 								</td>
 							</tr>
 						</table>
@@ -980,8 +544,8 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 									<td class="formItem"><xsl:value-of select="v3:ingredientSubstance/v3:name"/>
 										(<xsl:value-of select="v3:ingredientSubstance/v3:code/@code"/>)
 									</td>
-								</tr>	
-							</xsl:for-each>	
+								</tr>
+							</xsl:for-each>
 						</table>
 					</td>
 				</tr>
@@ -998,8 +562,8 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 								<tr>
 									<td class="formItem"><xsl:value-of select="v3:code/@displayName"/></td>
 									<td class="formItem"><xsl:value-of select="v3:code/v3:originalText"/></td>
-								</tr>	
-							</xsl:for-each>			
+								</tr>
+							</xsl:for-each>
 						</table>
 					</td>
 				</tr>
@@ -1135,7 +699,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 								</tbody>
 							</table>
 						</td>
-					</tr>				
+					</tr>
 					<tr class="formTableRowAlt">
 						<td class="formItem">
 							<table class="formTablePetite" cellSpacing="0" cellPadding="3" width="100%">
@@ -1155,7 +719,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 								</tbody>
 							</table>
 						</td>
-					</tr>				
+					</tr>
 				</tbody>
 			</table>
 		</xsl:if>
@@ -1197,9 +761,9 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 							<xsl:call-template name="get-ucum-unit-text">
 								<xsl:with-param name="ucum" select="v3:requirement/v3:effectiveTime/v3:period|v3:monitoringObservation/v3:effectiveTime/v3:period"/>
 							</xsl:call-template>
-							<xsl:text> </xsl:text>							
+							<xsl:text> </xsl:text>
 						</xsl:if>
-						<xsl:text>during</xsl:text>	
+						<xsl:text>during</xsl:text>
 						<xsl:if test="v3:pauseQuantity/@value">,
 							<xsl:text> </xsl:text>
 							<xsl:value-of select="v3:pauseQuantity/@value"/>
@@ -1207,7 +771,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 							<xsl:call-template name="get-ucum-unit-text">
 								<xsl:with-param name="ucum" select="v3:pauseQuantity" />
 							</xsl:call-template>
-							<xsl:text> after start of </xsl:text>							
+							<xsl:text> after start of </xsl:text>
 						</xsl:if>
 					</xsl:when>
 					<xsl:when test="number(v3:sequenceNumber/@value) > number(ancestor::v3:componentOf[1]/v3:sequenceNumber/@value)">
@@ -1215,7 +779,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 						<xsl:text> </xsl:text>
 						<xsl:call-template name="get-ucum-unit-text">
 							<xsl:with-param name="ucum" select="v3:pauseQuantity" />
-						</xsl:call-template>	
+						</xsl:call-template>
 						<xsl:text> </xsl:text>
 						<xsl:text>after</xsl:text>
 					</xsl:when>
@@ -1246,9 +810,9 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 					<a>
 						<xsl:attribute name="href">
 							<xsl:value-of select="$referencedValue"/>
-						</xsl:attribute>	
+						</xsl:attribute>
 						<xsl:attribute name="title">
-							<xsl:for-each select="/v3:document//v3:content[@ID]">	
+							<xsl:for-each select="/v3:document//v3:content[@ID]">
 								<xsl:variable name="contentId" select="@ID"/>
 								<xsl:variable name="contentID" select="concat('#',$contentId)"/>
 								<xsl:if test=" $contentID = $referencedValue ">
@@ -1264,9 +828,9 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 					<a>
 						<xsl:attribute name="href">
 							<xsl:value-of select="$referencedValue"/>
-						</xsl:attribute>	
+						</xsl:attribute>
 						<xsl:attribute name="title">
-							<xsl:for-each select="/v3:document//v3:content[@ID]">	
+							<xsl:for-each select="/v3:document//v3:content[@ID]">
 								<xsl:variable name="contentId" select="@ID"/>
 								<xsl:variable name="contentID" select="concat('#',$contentId)"/>
 								<xsl:if test=" $contentID = $referencedValue ">
@@ -1343,7 +907,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
-		</xsl:choose> 
+		</xsl:choose>
 	</xsl:template>
 	<!-- REMS templates end -->
 	<!-- helper templates -->
@@ -1460,7 +1024,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 			 if 42231-1 is subsection of 34076-0 add "and Medication Guide"
 			 if 42231-1 is not there but patient package insert add "and FDA-approved patient labeling"
 			 just make reference to any of these 3 sub-sections - any $standardSection/*[@patsec]
-			 it should not labeled as section "17" if it isn't 17 
+			 it should not labeled as section "17" if it isn't 17
 	-->
 	<xsl:template mode="highlights" match="/|@*|node()">
 		<xsl:apply-templates mode="highlights" select="@*|node()"/>
@@ -1501,7 +1065,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 		</xsl:for-each>
 		<xsl:apply-templates mode="highlights" select="$body/*"/>
 		<xsl:call-template name="patientLabelReference"/>
-		<xsl:call-template name="flushDocumentTitleFootnotes"/>		
+		<xsl:call-template name="flushDocumentTitleFootnotes"/>
 		<xsl:call-template name="effectiveDateHighlights"/>
 		<xsl:for-each select="$pullDownSections">
 			<xsl:sort select="@highlightbackmatter"/>
@@ -1521,7 +1085,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 				<xsl:call-template name="processPatientLabelReference">
 					<xsl:with-param name="patsecs" select="$patsecs1" />
 					<xsl:with-param name="std-patsecs" select="$std-patsecs" />
-				</xsl:call-template>	 
+				</xsl:call-template>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:call-template name="processPatientLabelReference">
@@ -1537,8 +1101,8 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 		<xsl:if test="$patsecs">
 			<p class="HighlightsSeeReference">
 				<xsl:text>See </xsl:text>
-				<!-- XXX: this hard reference to section 17 is not always right, 
-						 but we got pushback on our attempt to use the actual reference, 
+				<!-- XXX: this hard reference to section 17 is not always right,
+						 but we got pushback on our attempt to use the actual reference,
 						 hence I am moving it back to hard coded "17" for now. -->
 				<xsl:text>17</xsl:text>
 				<!-- xsl:for-each select="$patsecs">
@@ -1574,7 +1138,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 						</xsl:choose>
 						<xsl:value-of select="$std-patsecs[@code = current()/v3:code/@code]/v3:title"/>
 					</xsl:if>
-				</xsl:for-each>	
+				</xsl:for-each>
 				<xsl:text>.</xsl:text>
 			</p>
 		</xsl:if>
@@ -1584,7 +1148,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 			<xsl:variable name="recent-contentOfLabeling-effectiveDate">
 				<xsl:call-template name="recent-effectiveDate">
 					<xsl:with-param name="effectiveDateSequence" select="/v3:document/v3:component/v3:structuredBody/v3:component[not(preceding-sibling::v3:component/v3:section/v3:code/@code = $maxSection17/@code) and not(v3:section/v3:code/@code = '48780-1')]/v3:section/v3:effectiveTime/@value"/>
-				</xsl:call-template>				 
+				</xsl:call-template>
 			</xsl:variable>
 			<p class="HighlightsRevision">
 				<xsl:text>Revised: </xsl:text>
@@ -1732,7 +1296,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 					</td>
 					<td width="50%" align="left" valign="top">
 						<div>
-							<h1 class="Colspan">FULL PRESCRIBING INFORMATION: CONTENTS<!-- do not allow a space here 
+							<h1 class="Colspan">FULL PRESCRIBING INFORMATION: CONTENTS<!-- do not allow a space here
             --><a href="#footnote-content" name="footnote-reference-content">*</a></h1>
 							<xsl:apply-templates mode="index" select="@*|node()" />
 							<dl class="Footnote">
@@ -1769,7 +1333,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 					</xsl:apply-templates>
 				</a>
 			</xsl:element>
-		</xsl:if>	
+		</xsl:if>
 		<xsl:apply-templates mode="index" select="@*|node()"/>
 	</xsl:template>
 
@@ -1787,8 +1351,8 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 	</xsl:template>
 
 	<!-- styleCode processing: styleCode can be a list of tokens that
-			 are being combined into a single css class attribute. To 
-			 come to a normalized combination we sort the tokens. 
+			 are being combined into a single css class attribute. To
+			 come to a normalized combination we sort the tokens.
 
 Step 1: combine the attribute supplied codes and additional
 codes in a single token list.
@@ -1896,6 +1460,7 @@ token.
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
+
 	<!-- DOCUMENT MODEL -->
 
 	<xsl:template mode="title" match="/|@*|node()"/>
@@ -1909,121 +1474,23 @@ token.
 				<xsl:if test="/v3:document/v3:code/@code = 'user-profile'">
 					<xsl:text>User Profile</xsl:text>
 				</xsl:if>
-				<!-- Jason Addition -->
-				<h1 style="font-size:2em; text-align:center;"> PRODUCT MONOGRAPH </h1>
-				<br />
-				<h2 style="font-size:1.5em; text-align:center;"> INCLUDING PATIENT MEDICATION INFORMATION </h2>
-				<br />
-				<br />
-				<p style="font-size:1.5em; text-align:center;"> &lt; <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='60']/v3:section/v3:title" /> &gt; <b style="font-size:1.7em;">&lt; <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct/v3:code/@code='12']/v3:section/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct/v3:name[1]" /> &gt;</b> </p>
-				<br />
-				<p style="font-size:1.5em; text-align:center;"> &lt; <xsl:value-of select="v3:component/v3:structuredBody/v3:component/v3:section/v3:component[v3:section/v3:code/@code='300-10-10']/v3:section/v3:title" /> &gt; </p>
-				<br />
-				<p style="font-size:1.5em; text-align:center;"> &lt; Dosage Form(s) and Strength(s) &gt; </p>
-				<br />
-				<p style="font-size:1.5em; text-align:center;"> &lt; <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='110']/v3:section/v3:title" /> &gt; </p>
-				<br />
-				<p style="font-size:1.5em; text-align:center;"> &lt; <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='120']/v3:section/v3:title" /> &gt; </p>
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<p style="font-size:1.5em; text-align:left; "> &lt; <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='130']/v3:section/v3:title" /> &gt; <span style="font-size:1em; float:right;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='150']/v3:section/v3:title" /> </span> </p>
-				<p style="font-size:1.5em; text-align:left; "> &lt; <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='140']/v3:section/v3:title" /> &gt; <span style="font-size:1em; float:right;"> &lt;MON DD, YYYY&gt; </span> </p>
-				<p style="font-size:1.5em; text-align:left; "> <span style="visibility:hidden;">.</span> <span style="font-size:1em; float:right;"> or </span> </p>
-				<p style="font-size:1.5em; text-align:left; "> <span style="visibility:hidden;">.</span> <span style="font-size:1em; float:right;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='160']/v3:section/v3:title" /> </span> </p>
-				<p style="font-size:1.5em; text-align:left; "> <span style="visibility:hidden;">.</span> <span style="font-size:1em; float:right;"> &lt;MON DD, YYYY&gt; </span> </p>
-				<br />
-				<p style="font-size:1.5em; text-align:left; "> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='170']/v3:section/v3:title" /> &lt;control number&gt; [optional]</p>
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<p style="font-size:1.5em; text-align:center; text-decoration:underline; font-weight:bold;"> Table of Contents </p>
-				<br />
-				<p style="font-size:1.5em; text-align:center;"> [To update, right-click anywhere in the Table of Contents and select "Update Field", "Update entire table", click OK.] </p>
-				<br />
-				<br />
-				<br />
-				<p style="font-size:1.25em; text-align:left; text-transform:uppercase; font-weight:bold;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='20']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='180']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='190']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='200']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='210']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='220']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='230']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='240']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='250']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='260']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='270']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='280']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='290']/v3:section/v3:title" /> </p>
 
-				<p style="font-size:1.25em; text-align:left; text-transform:uppercase; font-weight:bold;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='30']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='300']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='310']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='320']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='330']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='340']/v3:section/v3:title" /> </p>
-				<p style="font-size:1.em; text-align:left; text-transform:uppercase; padding-left:5em;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='350']/v3:section/v3:title" /> </p>
 
-				<p style="font-size:1.25em; text-align:left; text-transform:uppercase; font-weight:bold;"> <xsl:value-of select="v3:component/v3:structuredBody/v3:component[v3:section/v3:code/@code='40']/v3:section/v3:title" /> </p>
-				<br />
-				<br />
-				<br />
-				<!-- End Jason Addition -->
-				<xsl:apply-templates select="./title/@*"/>
-				<!-- loop through all of the subject elements -->			
-				<xsl:for-each select=".//v3:subject[v3:manufacturedProduct[v3:manufacturedProduct|v3:manufacturedMedicine]]">
-					<xsl:variable name="prevProductHeaderString">
-						<xsl:for-each select="preceding::v3:manufacturedProduct/*[self::v3:manufacturedProduct or self::v3:manufacturedMedicine]">
-							<xsl:call-template name="headerString">
-								<xsl:with-param name="curProduct" select="." />
-							</xsl:call-template>
-						</xsl:for-each>
-					</xsl:variable>
-					<xsl:variable name="curProductHeaderString"><xsl:call-template name="headerString"><xsl:with-param name="curProduct" select="v3:manufacturedProduct/*[self::v3:manufacturedProduct or self::v3:manufacturedMedicine]" /></xsl:call-template></xsl:variable>
-					<xsl:choose>
-						<xsl:when test="position() > 1 and contains($prevProductHeaderString, $curProductHeaderString)">
+				<!-- Health Canada Added these 3 lines to render the ToC-->
+				<span class='formHeadingTitle'>
+					<xsl:apply-templates select="v3:component" mode="tableOfContents" />
+				</span>
 
-						</xsl:when>
-						<!-- otherwise display all the information for this subject -->
-						<xsl:otherwise>
-							<xsl:if test="position() > 1">
-								<br/>
-							</xsl:if>
-							<xsl:for-each select="v3:manufacturedProduct/*[self::v3:manufacturedProduct or self::v3:manufacturedMedicine]">
-								<strong>
-									<xsl:call-template name="regMedNames"/>
+				<!--<xsl:for-each select="v3:component/v3:structuredBody">
+					<xsl:apply-templates select="v3:component[v3:section/v3:code/@code='20'] | v3:component[v3:section/v3:code/@code='20']/following-sibling::v3:component"/>
 
-								</strong>
-							</xsl:for-each>
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:for-each>	 
-				<xsl:for-each select="(v3:author/v3:assignedEntity/v3:representedOrganization/v3:name)[1]">
-					<br/>
-					<xsl:value-of select="."/>
-				</xsl:for-each>
-				<br />
-				<!-- Jason Addition -->
-				<xsl:call-template name="IDRootAndExtension">
-					<xsl:with-param name="root" select="(v3:author/v3:assignedEntity/v3:representedOrganization/v3:id/@root)[2]" />
-					<xsl:with-param name="extension" select="(v3:author/v3:assignedEntity/v3:representedOrganization/v3:id/@extension)[2]" />
-				</xsl:call-template>
-				<!-- End Jason Addition -->
-				<br />
-				<xsl:apply-templates select="v3:relatedDocument[@typeCode = 'DRIV' or @typeCode = 'RPLC' and not(v3:relatedDocument/v3:setId/@root = preceding-sibling::v3:relatedDocument/v3:relatedDocument/v3:setId/@root)]/v3:relatedDocument/v3:setId/@root"/>
-			</p>
-		
+					<xsl:apply-templates select="."/>
+				</xsl:for-each>-->
+
+
+
+				</p>
+
 			<xsl:variable name="marketingCategories" select="//v3:manufacturedProduct/v3:subjectOf/v3:approval/v3:code"/>
 			<xsl:for-each select="$disclaimers/document[code/@code = $root/v3:document/v3:code/@code]/disclaimer[code/@code = $marketingCategories/@code]/text">
 				<p class="disclaimer">Disclaimer: <xsl:copy-of select="node()"/></p>
@@ -2032,7 +1499,6 @@ token.
 				<xsl:value-of select="/v3:document/v3:code/@displayName"/>
 				<br/>
 			</xsl:if>
-			<p>----------</p>
 			<xsl:if test="/v3:document/v3:code/@code = 'X9999-4'">
 				<xsl:variable name="REMSdate" select="/v3:document/v3:effectiveTime/@value"/>
 				<b>
@@ -2043,17 +1509,18 @@ token.
 		</div>
 	</xsl:template>
 
-	<xsl:template match="v3:relatedDocument[not(/v3:document/v3:code/@code = 'X9999-4')][@typeCode = 'DRIV' or @typeCode = 'RPLC']/v3:relatedDocument/v3:setId/@root[string-length(.) = 36]"> 
+	<xsl:template match="v3:relatedDocument[not(/v3:document/v3:code/@code = 'X9999-4')][@typeCode = 'DRIV' or @typeCode = 'RPLC']/v3:relatedDocument/v3:setId/@root[string-length(.) = 36]">
 		<xsl:text>Reference Label Set Id: </xsl:text>
 		<a href="{concat('../', ., '.view')}"><xsl:value-of select="."/></a>
-		<br/> 
+		<br/>
 	</xsl:template>
-	
-	<xsl:template match="v3:relatedDocument[@typeCode = 'XFRM']/v3:relatedDocument/v3:id/@extension"> 
+
+	<xsl:template match="v3:relatedDocument[@typeCode = 'XFRM']/v3:relatedDocument/v3:id/@extension">
 		<xsl:text>Docket Number: </xsl:text>
 			<xsl:value-of select="."/>
-		<br/> 
+		<br/>
 	</xsl:template>
+
 
 	<xsl:template name="headerString">
 		<xsl:param name="curProduct">.</xsl:param>
@@ -2067,13 +1534,13 @@ token.
 				<xsl:for-each select="$curProduct/*[self::v3:ingredient[starts-with(@classCode, 'ACTI')] or self::v3:activeIngredient]">
 					<xsl:call-template name="string-lowercase">
 						<xsl:with-param name="text" select="(v3:ingredientSubstance|v3:activeIngredientSubstance)/v3:name"/>
-					</xsl:call-template> 
+					</xsl:call-template>
 				</xsl:for-each>
 			</xsl:otherwise>
-		</xsl:choose>		
+		</xsl:choose>
 	</xsl:template>
-	
-	<!-- Jason Addition -->
+
+	<!-- Health Canada Add Jason Addition - Was added by last student before, not sure if this is used -->
 	<xsl:template name="IDRootAndExtension">
 		<xsl:param name="root" />
 		<xsl:param name="extension" />
@@ -2084,98 +1551,41 @@ token.
 		</xsl:choose>
 	</xsl:template>
 	<!-- End Jason Addition -->
-	
-	<xsl:template name="regMedNames">	
-		<xsl:variable name="medName">
-			<xsl:call-template name="string-uppercase">
-				<xsl:with-param name="text">
-					<xsl:copy><xsl:apply-templates mode="specialCus" select="./v3:name" /></xsl:copy>
-				</xsl:with-param>
-			</xsl:call-template>
-		</xsl:variable>
-		<xsl:value-of select="$medName"/>
-		<xsl:if test="./v3:name/v3:suffix">&#160;</xsl:if>
-		<xsl:call-template name="string-uppercase">
-			<xsl:with-param name="text"
-											select="./v3:name/v3:suffix"/>
-		</xsl:call-template> 
-		<xsl:text>- </xsl:text>
-		<xsl:choose>
-		    <xsl:when test="v3:asEntityWithGeneric/v3:genericMedicine/v3:name">
-				<xsl:call-template name="string-lowercase">
-				  <xsl:with-param name="text" select="./v3:asEntityWithGeneric/v3:genericMedicine/v3:name|v3:asSpecializedKind/v3:generalizedMaterialKind/v3:code[@codeSystem = '2.16.840.1.113883.6.276' or @codeSystem = '2.16.840.1.113883.6.303']/@displayName"/>
-				 </xsl:call-template>
-			</xsl:when>
-			<xsl:when test="v3:ingredient[starts-with(@classCode, 'ACTI')]|v3:activeIngredient">
-				<xsl:for-each select="v3:ingredient[starts-with(@classCode, 'ACTI')]|v3:activeIngredient">
-					<xsl:choose>
-						<xsl:when test="position() > 1 and  position() = last()">
-							<xsl:text> and </xsl:text>
-						</xsl:when>
-						<xsl:when test="position() > 1">
-							<xsl:text>, </xsl:text>
-						</xsl:when>
-					</xsl:choose>
-					<xsl:call-template name="string-lowercase">
-						<xsl:with-param name="text" select="*[self::v3:ingredientSubstance or self::v3:activeIngredientSubstance]/v3:name"/>
-					</xsl:call-template> 
-				</xsl:for-each>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:variable name="genMedName">
-					<xsl:call-template name="string-uppercase">
-						<xsl:with-param name="text" select="./v3:asEntityWithGeneric/v3:genericMedicine/v3:name|v3:asSpecializedKind/v3:generalizedMaterialKind/v3:code[@codeSystem = '2.16.840.1.113883.6.276' or @codeSystem = '2.16.840.1.113883.6.303']/@displayName"/>
-					</xsl:call-template>
-				</xsl:variable>
-				<xsl:choose>
-					<xsl:when test="$medName != $genMedName">
-						<xsl:call-template name="string-lowercase">
-							<xsl:with-param name="text"
-															select="$genMedName"
-															/>
-						</xsl:call-template> 
-					</xsl:when>
-					<xsl:otherwise>&#160;</xsl:otherwise>
-				</xsl:choose>&#160;
-			</xsl:otherwise>
-		</xsl:choose>&#160;<xsl:if test="not(v3:part)">
-			<xsl:call-template name="string-lowercase">
-				<xsl:with-param name="text"
-												select="./v3:formCode/@displayName"/>
-			</xsl:call-template>
-			<xsl:text>&#160;</xsl:text>
-		</xsl:if>
-	</xsl:template>
-	
-	<xsl:template mode="specialCus" match="v3:name">
-		<xsl:value-of select="text()"/>
-	</xsl:template>	
+<!-- possibly delete -->
 
-	<xsl:template name="titleNumerator">
-		<xsl:for-each
-				select="./v3:activeIngredient[(./v3:quantity/v3:numerator/@unit or ./v3:quantity/v3:denominator/@unit) and (./v3:quantity/v3:numerator/@unit != '' or ./v3:quantity/v3:denominator/@unit != '') and (./v3:quantity/v3:numerator/@unit != '1' or ./v3:quantity/v3:denominator/@unit != '1')]">
-			<xsl:if test="position() = 1">&#160;</xsl:if>
-			<xsl:if test="position() > 1">&#160;/&#160;</xsl:if>
-			<xsl:value-of select="./v3:quantity/v3:numerator/@value"/>
-			<xsl:if test="./v3:quantity/v3:numerator/@unit">&#160;<xsl:value-of select="./v3:quantity/v3:numerator/@unit"/></xsl:if>
-			<xsl:if test="./v3:quantity/v3:denominator/@unit != '' and ./v3:quantity/v3:denominator/@unit != '1'">
-				<xsl:text>&#160;per&#160;</xsl:text>
-				<xsl:value-of select="./v3:quantity/v3:denominator/@value"/>
-				<xsl:text>&#160;</xsl:text>
-				<xsl:value-of select="./v3:quantity/v3:denominator/@unit"/>
-			</xsl:if>
-		</xsl:for-each>
-	</xsl:template>
-	<xsl:template name="consumedIn">
-		<xsl:for-each select="../v3:consumedIn">
-			<span class="titleCase">
-				<xsl:call-template name="string-lowercase">
-					<xsl:with-param name="text" select="./v3:substanceAdministration/v3:routeCode/@displayName"/>
-				</xsl:call-template>
-			</span>
-			<xsl:call-template name="printSeperator"/>
-		</xsl:for-each>
-	</xsl:template>
+
+<xsl:template mode="specialCus" match="v3:name">
+	<xsl:value-of select="text()"/>
+</xsl:template>
+
+<xsl:template name="titleNumerator">
+	<xsl:for-each
+			select="./v3:activeIngredient[(./v3:quantity/v3:numerator/@unit or ./v3:quantity/v3:denominator/@unit) and (./v3:quantity/v3:numerator/@unit != '' or ./v3:quantity/v3:denominator/@unit != '') and (./v3:quantity/v3:numerator/@unit != '1' or ./v3:quantity/v3:denominator/@unit != '1')]">
+		<xsl:if test="position() = 1">&#160;</xsl:if>
+		<xsl:if test="position() > 1">&#160;/&#160;</xsl:if>
+		<xsl:value-of select="./v3:quantity/v3:numerator/@value"/>
+		<xsl:if test="./v3:quantity/v3:numerator/@unit">&#160;<xsl:value-of select="./v3:quantity/v3:numerator/@unit"/></xsl:if>
+		<xsl:if test="./v3:quantity/v3:denominator/@unit != '' and ./v3:quantity/v3:denominator/@unit != '1'">
+			<xsl:text>&#160;per&#160;</xsl:text>
+			<xsl:value-of select="./v3:quantity/v3:denominator/@value"/>
+			<xsl:text>&#160;</xsl:text>
+			<xsl:value-of select="./v3:quantity/v3:denominator/@unit"/>
+		</xsl:if>
+	</xsl:for-each>
+</xsl:template>
+<xsl:template name="consumedIn">
+	<xsl:for-each select="../v3:consumedIn">
+		<span class="titleCase">
+			<xsl:call-template name="string-lowercase">
+				<xsl:with-param name="text" select="./v3:substanceAdministration/v3:routeCode/@displayName"/>
+			</xsl:call-template>
+		</span>
+		<xsl:call-template name="printSeperator"/>
+	</xsl:for-each>
+</xsl:template>
+
+
+
 
 	<!-- FOOTNOTES -->
 	<xsl:param name="footnoteMarks" select="'*&#8224;&#8225;&#167;&#182;#&#0222;&#0223;&#0224;&#0232;&#0240;&#0248;&#0253;&#0163;&#0165;&#0338;&#0339;&#0393;&#0065;&#0066;&#0067;&#0068;&#0069;&#0070;&#0071;&#0072;&#0073;&#0074;&#0075;&#0076;&#0077;&#0078;&#0079;&#0080;&#0081;&#0082;&#0083;&#0084;&#0085;&#0086;&#0087;&#0088;&#0089;&#0090;'"/>
@@ -2203,31 +1613,8 @@ token.
 	</xsl:template>
 	<!-- changed by Brian Suggs 11-16-05.  Added the [name(..) != 'text']  -->
 	<!-- PCR 601 Not displaying foonote mark inside a  table of content -->
-	<xsl:template match="v3:footnote[name(..) != 'text']">
-		<xsl:param name="isTableOfContent2"/>
-		<xsl:if test="$isTableOfContent2!='yes'">
-			<xsl:variable name="mark">
-				<xsl:call-template name="footnoteMark"/>
-			</xsl:variable>
-			<xsl:variable name="globalnumber" select="count(preceding::v3:footnote)+1"/>
-			<a name="footnote-reference-{$globalnumber}" href="#footnote-{$globalnumber}" class="Sup">
-				<xsl:value-of select="$mark"/>
-			</a>
-		</xsl:if>
-	</xsl:template>
-	<xsl:template match="v3:footnoteRef">
-		<xsl:variable name="ref" select="@IDREF"/>
-		<xsl:variable name="target" select="//v3:footnote[@ID=$ref]"/>
-		<xsl:variable name="mark">
-			<xsl:call-template name="footnoteMark">
-				<xsl:with-param name="target" select="$target"/>
-			</xsl:call-template>
-		</xsl:variable>
-		<xsl:variable name="globalnumber" select="count($target/preceding::v3:footnote)+1"/>
-		<a href="#footnote-{$globalnumber}" class="Sup">
-			<xsl:value-of select="$mark"/>
-		</a>
-	</xsl:template>
+
+
 	<xsl:template name="flushSectionTitleFootnotes">
 		<xsl:variable name="footnotes" select="./v3:title/v3:footnote[not(ancestor::v3:table)]"/>
 		<xsl:if test="$footnotes">
@@ -2256,114 +1643,114 @@ token.
 			</dl>
 		</xsl:if>
 	</xsl:template>
-	<xsl:template mode="footnote" match="/|node()">
-		<xsl:apply-templates mode="footnote" select="node()"/>
-	</xsl:template>
-	<xsl:template mode="footnote" match="v3:footnote">
-		<xsl:variable name="mark">
-			<xsl:call-template name="footnoteMark"/>
-		</xsl:variable>
-		<xsl:variable name="globalnumber" select="count(preceding::v3:footnote)+1"/>
-		<dt>
-			<a name="footnote-{$globalnumber}" href="#footnote-reference-{$globalnumber}">
-				<xsl:value-of select="$mark"/>
-			</a>
-		</dt>
-		<dd>
-			<xsl:apply-templates mode="mixed" select="node()"/>
-		</dd>
-	</xsl:template>
-	<xsl:template mode="footnote" match="v3:section|v3:table"/>
 
-	<!-- CROSS REFERENCE linkHtml -->
-	<xsl:template name="reference" mode="mixed" match="v3:linkHtml[@href]">
-		<xsl:param name="current" select="current()"/>
-		<xsl:param name="href" select="$current/@href"/>
-		<xsl:param name="target" select="//*[@ID=substring-after($href,'#')]"/>
-		<xsl:param name="styleCode" select="$current/@styleCode"/>
-		<xsl:variable name="targetTable" select="$target/self::v3:table"/>
-		<xsl:choose>
-			<xsl:when test="$targetTable and self::v3:linkHtml and $current/node()">
-				<a href="#{$targetTable/@ID}">
-					<xsl:apply-templates mode="mixed" select="$current/node()"/>
-				</a>
-			</xsl:when>
-			<!-- see PCR 793, we don't generate anchor anymore, we just use what's in the spl -->
-			<xsl:otherwise>
-				<xsl:variable name="sectionNumberSequence">
-					<xsl:apply-templates mode="sectionNumber" select="$target/ancestor-or-self::v3:section"/>
-				</xsl:variable>
-				<xsl:variable name="nhref">
-					<xsl:choose>
-						<xsl:when test="starts-with( $href, '#')">							
-							<xsl:value-of select="$href"/>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:choose>
-								<xsl:when test="contains(@href, 'http')">
-									<xsl:value-of select="@href"/>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="concat('http://',@href)"/>
-								</xsl:otherwise>
-							</xsl:choose>
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:variable>
-				<!-- XXX: can we match the style of the headings? -->
-				<a href="{$nhref}">
-					<xsl:if test="contains($styleCode,'MainTitle') and $target/ancestor-or-self::v3:section[last()]/v3:title">
-						<xsl:value-of select="$target/ancestor-or-self::v3:section[last()]/v3:title"/>
-					</xsl:if>
-					<xsl:if test="contains($styleCode,'SubTitle') and $target/v3:title">
-						<xsl:if test="contains($styleCode,'MainTitle') and $target/ancestor-or-self::v3:section[last()]/v3:title">
-							<xsl:text>: </xsl:text>
-						</xsl:if>
-						<xsl:value-of select="$target/v3:title"/>
-					</xsl:if>
-					<xsl:if test="contains($styleCode,'Number') and $target/ancestor-or-self::v3:section[last()]/v3:title">
-						<xsl:text> (</xsl:text>
-						<xsl:value-of select="substring($sectionNumberSequence,2)"/>
-						<xsl:text>)</xsl:text>
-					</xsl:if>
-					<xsl:if test="self::v3:linkHtml">
-						<xsl:apply-templates mode="mixed" select="$current/node()"/>
-					</xsl:if>
-				</a>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template>
-
-	<!-- SECTION NUMBER MODE -->
-	<!-- Special mode to construct a section number. Apply to a sequence of sections on the ancestor-or-self axis. -->
-	<!-- Shallow null-transform for anything but sections. -->
-	<xsl:template mode="sectionNumber" match="/|@*|node()"/>
-	<xsl:template mode="sectionNumber" match="v3:section">
-		<!-- Using Standard Section Numbers can be confusing if the sections are mixed standard/non-stancard
-				 Example: 8.1 / 8.3 / 8.4 / 8.5 standard, then 8.6 non-standard, because 8.2 was missing, now 8.6 gets numbered as 8.5 
-
-         xsl:param name="standardSection"
-							 select="$standardSections//v3:section[@code=current()/v3:code/descendant-or-self::*[(self::v3:code or self::v3:translation) and @codeSystem='2.16.840.1.113883.6.1']/@code]"/>
-		<xsl:variable name="standardSectionNumber" select="$standardSection/@number"/>
-		<xsl:choose>
-			<xsl:when test="$standardSectionNumber">
-				<xsl:value-of select="concat('.',$standardSectionNumber)"/>
-			</xsl:when>
-			<xsl:otherwise -->
-		<!-- but when not using standard section numbers, we will count main sections wrong. We shall not count boxed WARNING and Recent Major Changes. -->
-		<xsl:value-of select="concat('.',count(parent::v3:component/preceding-sibling::v3:component[v3:section[not(v3:code[@code=$unnumberedSectionCodes])]])+1)"/>
-		<!-- /xsl:otherwise>
-		</xsl:choose -->
-	</xsl:template> 
 	<xsl:variable name="unnumberedSectionCodes" select="$standardSections//v3:section[not(number(@number) > 0) and not(@numbered='yes')]/@code"/>
 
 	<!-- SECTION MODEL -->
+	<!-- Health Canada New addition template Table of Contents - Connor Vacheresse $toctemp-->
+	<xsl:template match="v3:section" mode="tableOfContents">
+		<!-- Health Canada Import previous prefix level -->
+		<xsl:param name="parentPrefix" select="''" />
+		<xsl:variable name="code" select="v3:code/@code" />
+		<xsl:variable name="validCode" select="'2.16.840.1.113883.3.989.5.1.4.1.8'" />
+		<!-- Health Canada Lookup whether CODE is included in Table of Contents and find Heading level -->
+		<xsl:variable name="included" select="$codeLookup/gc:CodeList/SimpleCodeList/Row/Value[@ColumnRef='code' and SimpleValue=$code]/../Value[@ColumnRef=concat($doctype,'-toc')]/SimpleValue" />
+		<xsl:variable name="heading" select="$codeLookup/gc:CodeList/SimpleCodeList/Row/Value[@ColumnRef='code' and SimpleValue=$code]/../Value[@ColumnRef=concat($doctype,'-level')]/SimpleValue" />
+		<!-- Determine most right prefix. -->
+		<xsl:variable name="prefix">
+			<xsl:choose>
+				<!-- Health Canada Heading level 2 nesting can change based on the structure of the XML document. You also have to
+					 count the number of siblings in the other sections and then add them. (For example the third element
+					 in part #2 needs to also count the number of elements that are in part #1. -->
+				<xsl:when test="$heading='2'">
+					<xsl:choose>
+						<xsl:when test="name(../parent::node())='structuredBody'">
+							<xsl:value-of select="1 + count(../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) - count($root/v3:document/v3:component/v3:structuredBody/v3:component[v3:section/v3:code[@code=20]]/preceding-sibling::*) - count(../preceding-sibling::v3:component[v3:section/v3:code[@code='30' or @code='40' or @code='480']])" />
+						</xsl:when>
+						<xsl:when test="name(../parent::node())='section'">
+							<xsl:value-of select="1 + count(../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + count(../../../preceding-sibling::v3:component[v3:section/v3:code[@code='20' or @code='30' or @code='40']]/v3:section/child::v3:component[v3:section/v3:code[@codeSystem=$validCode]])" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="count(../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + 1" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:when>
+				<!-- Health Canada  Heading level 3,4,5 are properly nested and resets for each H2 element.
+					 You can simply count the sibling elements to determine the prefix. -->
+				<xsl:when test="$heading='3' or $heading='4' or $heading='5'">
+					<xsl:value-of select="count(../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + 1" />
+				</xsl:when>
+			</xsl:choose>
+		</xsl:variable>
+		<!-- Health Canada Draw the Heading element only if it should be included in TOC -->
+		<xsl:if test="$included='T'">
+			<xsl:choose>
+				<!-- Health Canada Heading level 1 (part1,2,3) doesn't have a prefix -->
+				<xsl:when test="$heading='1'">
+					<a href="#{$code}"><h1 id="{$code}h" style="text-transform:uppercase; font-size:1.5em;">
+						<xsl:value-of select="v3:title" />
+					</h1></a>
+				</xsl:when>
+				<!-- Health Canada Heading level 2 doesn't havent any parent prefix -->
+				<xsl:when test="$heading='2'">
+					<a href="#{$code}"><h2 id="{$code}h" style="text-transform:uppercase;padding-left:2em;margin-top:1.5ex;font-size:1.4em;">
+						<xsl:value-of select="concat($prefix,'. ')" />
+						<xsl:value-of select="v3:title" />
+					</h2></a>
+				</xsl:when>
+				<!-- Health Canada  Heading level 3,4,5 you concatenate the parent prefix with the prefix -->
+				<xsl:when test="$heading='3'">
+					<h3 id="{$code}h" style="padding-left:4.5em;margin-top:1.3ex;font-size:1.3em;">
+						<xsl:value-of select="concat($parentPrefix,'.')" />
+						<xsl:value-of select="concat($prefix,' ')" />
+						<xsl:value-of select="v3:title" />
+					</h3>
+				</xsl:when>
+				<xsl:when test="$heading='4'">
+					<h4 id="{$code}h" style="padding-left:6em;margin-top:1ex;font-size:1.2em;">
+						<xsl:value-of select="concat($parentPrefix,'.')" />
+						<xsl:value-of select="concat($prefix,' ')" />
+						<xsl:value-of select="v3:title" />
+					</h4>
+				</xsl:when>
+				<xsl:when test="$heading='5'">
+					<h4 id="{$code}h" style="padding-left:7.5em;margin-top:0.8ex;margin-bottom:0.8ex;font-size:1.1em;">
+						<xsl:value-of select="concat($parentPrefix,'.')" />
+						<xsl:value-of select="concat($prefix,' ')" />
+						<xsl:value-of select="v3:title" />
+					</h4>
+				</xsl:when>
+				<xsl:otherwise>
+					Error: <xsl:value-of select="$code" />/<xsl:value-of select="$heading" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:if>
+		<!--Health Canada Call the template for the subsequent sections -->
+		<xsl:apply-templates select="v3:component/v3:section" mode="tableOfContents">
+			<xsl:with-param name="parentPrefix">
+				<!--Health Canada  Send the rendered prefix down to nested elements. -->
+				<xsl:choose>
+					<xsl:when test="$heading='1' or $heading='2'">
+						<xsl:value-of select="$prefix" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="concat($parentPrefix,'.',$prefix)" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:with-param>
+		</xsl:apply-templates>
+	</xsl:template>
+<!-- Health Canada Change-->
 	<xsl:template match="v3:section">
 		<xsl:param name="standardSection" select="$standardSections//v3:section[@code=current()/v3:code/descendant-or-self::*[(self::v3:code or self::v3:translation) and @codeSystem='2.16.840.1.113883.6.1']/@code]"/>
 		<xsl:param name="sectionLevel" select="count(ancestor-or-self::v3:section)"/>
 		<xsl:variable name="sectionNumberSequence">
 			<xsl:apply-templates mode="sectionNumber" select="ancestor-or-self::v3:section"/>
 		</xsl:variable>
+		<xsl:variable name="code" select="v3:code/@code" />
+		<!-- Health Canada Added new var, line below-->
+		<xsl:variable name="heading" select="$codeLookup/gc:CodeList/SimpleCodeList/Row/Value[@ColumnRef='code' and SimpleValue=$code]/../Value[@ColumnRef=concat($doctype,'-level')]/SimpleValue" />
+
 		<xsl:if test="not(v3:code/@code = '48780-1')">
 			<div class="Section">
 				<xsl:for-each select="v3:code">
@@ -2373,13 +1760,16 @@ token.
 					<xsl:with-param name="styleCode" select="@styleCode"/>
 					<xsl:with-param name="additionalStyleCode" select="'Section'"/>
 				</xsl:call-template>
-				<xsl:for-each select="@ID">
+				<!-- Health Canada Changed the below line to get code of section for anchors-->
+				<xsl:for-each select="v3:code/@code">
 					<a name="{.}"/>
 				</xsl:for-each>
-				<a name="section-{substring($sectionNumberSequence,2)}"/>
+				<!-- Health Canada commented this bottom section out to reduce clutter when rendering (inspect element on browser)-->
+				<!--<a name="section-{substring($sectionNumberSequence,2)}"/>-->
 				<p/>
+
 				<xsl:apply-templates select="v3:title">
-					<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
+					<xsl:with-param name="sectionLevel" select="$heading"/>
 					<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
 				</xsl:apply-templates>
 				<xsl:if test="boolean($show-data)">
@@ -2393,10 +1783,11 @@ token.
 	<xsl:template match="v3:section[v3:code[descendant-or-self::*[self::v3:code or self::v3:translation][@codeSystem='2.16.840.1.113883.6.1' and @code='34066-1']]]" priority="2">
 		<!-- boxed warning -->
 		<xsl:param name="standardSection" select="$standardSections//v3:section[@code=current()/v3:code/descendant-or-self::*[(self::v3:code or self::v3:translation) and @codeSystem='2.16.840.1.113883.6.1']/@code]"/>
-		<xsl:param name="sectionLevel" select="count(ancestor-or-self::v3:section)"/>		
+		<xsl:param name="sectionLevel" select="count(ancestor-or-self::v3:section)"/>
 		<xsl:variable name="sectionNumberSequence">
 			<xsl:apply-templates mode="sectionNumber" select="ancestor-or-self::v3:section"/>
 		</xsl:variable>
+
 		<div>
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
@@ -2412,19 +1803,97 @@ token.
 				<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
 				<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
 			</xsl:apply-templates>
+
 			<xsl:apply-templates select="@*|node()[not(self::v3:title)]"/>
 		</div>
 	</xsl:template>
 	<xsl:template match="v3:section[v3:code[descendant-or-self::*[(self::v3:code or self::v3:translation) and @codeSystem='2.16.840.1.113883.6.1' and @code='43683-2']]]" priority="2">
 		<!-- don't display the Recent Major Change section within the FPI -->
 	</xsl:template>
+	<!-- Health Canada Change -->
 	<xsl:template match="v3:title">
 		<xsl:param name="sectionLevel" select="count(ancestor::v3:section)"/>
 		<xsl:param name="sectionNumber" select="/.."/>
-		<xsl:element name="h{$sectionLevel}">
+
+		<xsl:variable name="code" select="../v3:code/@code" />
+		<xsl:variable name="validCode" select="'2.16.840.1.113883.3.989.5.1.4.1.8'" />
+		<xsl:variable name="tocObject" select="$codeLookup/gc:CodeList/SimpleCodeList/Row/Value[@ColumnRef='code' and SimpleValue=$code]/../Value[@ColumnRef=concat($doctype,'-toc')]/SimpleValue" />
+		<!-- Health Canada Change Draw H3,H4,H5 elements as H3 because they are too small otherwise -->
+		<xsl:variable name="eleSize"><xsl:choose><xsl:when test="$sectionLevel > 3"><xsl:value-of select="'3'" /></xsl:when><xsl:otherwise><xsl:value-of select="$sectionLevel" /></xsl:otherwise></xsl:choose>
+		</xsl:variable>
+		<xsl:for-each select=".">
+		</xsl:for-each>
+		<!-- Health Canada Changed variable name to eleSize-->
+		<xsl:element name="h{$eleSize}">
+			<xsl:if test="$eleSize = '1'">
+				<xsl:attribute name="style">font-size:1.5em;</xsl:attribute>
+			</xsl:if>
+			<xsl:if test="$eleSize = '2'">
+				<xsl:attribute name="style">font-size:1.3em;</xsl:attribute>
+			</xsl:if>
+			<xsl:if test="$eleSize = '3'">
+				<xsl:attribute name="style">font-size:1.2em;</xsl:attribute>
+			</xsl:if>
 			<xsl:if test="$root/v3:document[v3:code/@code = '3565717']">
 				<xsl:attribute name="style">display: inline;</xsl:attribute>
 			</xsl:if>
+			<!-- Health Canada Change-->
+			<!--This code generates the prefix that matches what is shown in the Table of Contents -->
+			<xsl:if test="$tocObject = 'T' and not($sectionLevel ='1')">
+				<xsl:if test="$sectionLevel = 2">
+				<!--Health Canada Have to draw 2 -->
+					<xsl:choose>
+						<xsl:when test="name(../../parent::node())='structuredBody'">
+							<xsl:value-of select="1 + count(../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) - count($root/v3:document/v3:component/v3:structuredBody/v3:component[v3:section/v3:code[@code=20]]/preceding-sibling::*) - count(../../preceding-sibling::v3:component[v3:section/v3:code[@code='30' or @code='40' or @code='480']])" />
+						</xsl:when>
+						<xsl:when test="name(../../parent::node())='section'">
+							<xsl:value-of select="1 + count(../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + count(../../../../preceding-sibling::v3:component[v3:section/v3:code[@code='20' or @code='30' or @code='40']]/v3:section/child::v3:component[v3:section/v3:code[@codeSystem=$validCode]])" />
+						</xsl:when>
+					</xsl:choose>
+					<xsl:value-of select="'.'" />
+				</xsl:if>
+				<xsl:if test="$sectionLevel = 3" >
+				<!--Health Canada Have to draw 2,3 -->
+					<xsl:choose>
+						<xsl:when test="name(../../../../parent::node())='structuredBody'">
+							<xsl:value-of select="1 + count(../../../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) - count($root/v3:document/v3:component/v3:structuredBody/v3:component[v3:section/v3:code[@code=20]]/preceding-sibling::*) - count(../../../../preceding-sibling::v3:component[v3:section/v3:code[@code='30' or @code='40' or @code='480']])" />
+						</xsl:when>
+						<xsl:when test="name(../../../../parent::node())='section'">
+							<xsl:value-of select="1 + count(../../../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + count(../../../../../../preceding-sibling::v3:component[v3:section/v3:code[@code='20' or @code='30' or @code='40']]/v3:section/child::v3:component[v3:section/v3:code[@codeSystem=$validCode]])" />
+						</xsl:when>
+					</xsl:choose>
+					<xsl:value-of select="concat('.',count(../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + 1)" />
+				</xsl:if>
+				<xsl:if test="$sectionLevel = 4" >
+				<!--Health Canada Have to draw 2,3,4 -->
+					<xsl:choose>
+						<xsl:when test="name(../../../../../../parent::node())='structuredBody'">
+							<xsl:value-of select="1 + count(../../../../../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) - count($root/v3:document/v3:component/v3:structuredBody/v3:component[v3:section/v3:code[@code=20]]/preceding-sibling::*) - count(../../../../../../preceding-sibling::v3:component[v3:section/v3:code[@code='30' or @code='40' or @code='480']])" />
+						</xsl:when>
+						<xsl:when test="name(../../../../../../parent::node())='section'">
+							<xsl:value-of select="1 + count(../../../../../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + count(../../../../../../../../preceding-sibling::v3:component[v3:section/v3:code[@code='20' or @code='30' or @code='40']]/v3:section/child::v3:component[v3:section/v3:code[@codeSystem=$validCode]])" />
+						</xsl:when>
+					</xsl:choose>
+					<xsl:value-of select="concat('.',count(../../../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + 1)" />
+					<xsl:value-of select="concat('.',count(../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + 1)" />
+				</xsl:if>
+				<xsl:if test="$sectionLevel = 5" >
+				<!--Health Canada Have to draw 2,3,4,5 -->
+					<xsl:choose>
+						<xsl:when test="name(../../../../../../../../parent::node())='structuredBody'">
+							<xsl:value-of select="1 + count(../../../../../../../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) - count($root/v3:document/v3:component/v3:structuredBody/v3:component[v3:section/v3:code[@code=20]]/preceding-sibling::*) - count(../../../../../../../../preceding-sibling::v3:component[v3:section/v3:code[@code='30' or @code='40' or @code='480']])" />
+						</xsl:when>
+						<xsl:when test="name(../../../../../../../../parent::node())='section'">
+							<xsl:value-of select="1 + count(../../../../../../../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + count(../../../../../../../../../../preceding-sibling::v3:component[v3:section/v3:code[@code='20' or @code='30' or @code='40']]/v3:section/child::v3:component[v3:section/v3:code[@codeSystem=$validCode]])" />
+						</xsl:when>
+					</xsl:choose>
+					<xsl:value-of select="concat('.',count(../../../../../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + 1)" />
+					<xsl:value-of select="concat('.',count(../../../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + 1)" />
+					<xsl:value-of select="concat('.',count(../../preceding-sibling::v3:component[v3:section/v3:code[@codeSystem=$validCode]]) + 1)" />
+				</xsl:if>
+				 <xsl:value-of select="' '" />
+			</xsl:if>
+
 			<xsl:apply-templates select="@*"/>
 			<xsl:if test="boolean($show-section-numbers) and $sectionNumber">
 				<span class="SectionNumber">
@@ -2433,7 +1902,7 @@ token.
 			</xsl:if>
 			<xsl:call-template name="additionalStyleAttr"/>
 			<xsl:apply-templates mode="mixed" select="node()"/>
-		</xsl:element>	
+		</xsl:element>
 	</xsl:template>
 	<xsl:template match="v3:text[not(parent::v3:observationMedia)]">
 		<xsl:apply-templates select="@*"/>
@@ -2448,9 +1917,26 @@ token.
 	<!-- DISPLAY SUBJECT STRUCTURED INFORMATION -->
 	<xsl:template match="v3:excerpt|v3:subjectOf"/>
 
+	<xsl:template match="v3:text[not(parent::v3:observationMedia)]">
+
+<!-- Health Canada Change added font size attribute below-->
+	<text style="font-size:1.1em;">
+	<xsl:apply-templates select="@*"/>
+	<xsl:apply-templates mode="mixed" select="node()"/>
+	<xsl:apply-templates mode="rems" select="../v3:subject2[v3:substanceAdministration/v3:componentOf/v3:protocol]"/>
+	<xsl:call-template name="flushfootnotes">
+		<xsl:with-param name="isTableOfContent" select="'no'"/>
+	</xsl:call-template>
+</text>
+
+
+	</xsl:template>
+
+<!-- Health Canada Change-->
 	<!-- PARAGRAPH MODEL -->
 	<xsl:template match="v3:paragraph">
-		<p>
+		<!-- Health Canada Change added font size attribute below-->
+		<p style="font-size:1.1em;">
 			<xsl:if test="$root/v3:document[v3:code/@code = '3565717']">
 				<xsl:attribute name="style">display: inline;</xsl:attribute>
 			</xsl:if>
@@ -2462,7 +1948,7 @@ token.
 					</xsl:if>
 				</xsl:with-param>
 			</xsl:call-template>
-			<xsl:call-template name="additionalStyleAttr"/> 
+			<xsl:call-template name="additionalStyleAttr"/>
 			<xsl:apply-templates select="@*[not(local-name(.)='styleCode')]"/>
 			<!-- see note anchoring and PCR 793 -->
 			<!-- GS: moved this to after the styleCode and othe attribute handling -->
@@ -2472,16 +1958,6 @@ token.
 			<xsl:apply-templates select="v3:caption"/>
 			<xsl:apply-templates mode="mixed" select="node()[not(self::v3:caption)]"/>
 		</p>
-	</xsl:template>
-	<xsl:template match="v3:paragraph/v3:caption">
-		<span>
-			<xsl:call-template name="styleCodeAttr">
-				<xsl:with-param name="styleCode" select="@styleCode"/>
-				<xsl:with-param name="additionalStyleCode" select="'ParagraphCaption'"/>
-			</xsl:call-template>
-			<xsl:apply-templates select="@*[not(local-name(.)='styleCode')]"/>
-			<xsl:apply-templates mode="mixed" select="node()"/>
-		</span>
 	</xsl:template>
 	<!-- the old poor man's footnote -->
 	<xsl:template match="v3:paragraph[contains(@styleCode,'Footnote') and v3:caption]">
@@ -2515,11 +1991,12 @@ token.
 		</ol>
 	</xsl:template>
 	<xsl:template match="v3:list/v3:item[not(parent::v3:list/v3:item/v3:caption)]">
-		<li>
+		<!-- Health Canada added font size attribute -->
+		<li style="font-size:1.1em;">
 			<xsl:apply-templates select="@*"/>
 			<xsl:call-template name="additionalStyleAttr"/>
 			<xsl:apply-templates mode="mixed" select="node()"/>
-		</li> 
+		</li>
 	</xsl:template>
 	<!-- lists with custom captions -->
 	<xsl:template match="v3:list[v3:item/v3:caption]">
@@ -2553,12 +2030,14 @@ token.
 		</p>
 	</xsl:template>
 	<!-- TABLE MODEL -->
+	<!-- Health Canada Change-->
 	<xsl:template match="v3:table">
 		<!-- see note anchoring and PCR 793 -->
 		<xsl:if test="@ID">
 			<a name="{@ID}"/>
 		</xsl:if>
-		<table>
+		<!-- Health Canada Change added attributes for tables-->
+		<table width="100%" border="1" style="border:solid 2px;">
 			<xsl:apply-templates select="@*|node()"/>
 		</table>
 	</xsl:template>
@@ -2596,7 +2075,7 @@ token.
 					<tr>
 						<td colspan="{$allspan}" align="left">
 							<dl class="Footnote">
-								<xsl:apply-templates mode="footnote" select="ancestor::v3:table[1]/node()"/>				
+								<xsl:apply-templates mode="footnote" select="ancestor::v3:table[1]/node()"/>
 							</dl>
 						</td>
 					</tr>
@@ -2633,7 +2112,7 @@ token.
 		<xsl:copy-of select="."/>
 	</xsl:template>
 	<xsl:template match="v3:tr">
-		<tr>
+		<tr style="border-collapse: collapse;">
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode">
@@ -2693,7 +2172,8 @@ token.
 
 		<xsl:param name="associatedCol" select="(ancestor::v3:table/v3:colgroup/v3:col|ancestor::v3:table/v3:col)[$position]"/>
 		<xsl:param name="associatedColgroup" select="$associatedCol/parent::v3:colgroup"/>
-		<td>
+		<!-- Health Canada Change added attributes for td-->
+		<td style="padding:5px; border: solid 1px;">
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode">
@@ -2730,7 +2210,7 @@ token.
 	<xsl:template match="v3:col/@span|v3:col/@width|v3:col/@align|v3:col/@char|v3:col/@charoff|v3:col/@valign">
 		<xsl:copy-of select="."/>
 	</xsl:template>
-	<!-- MIXED MODE: where text is rendered as is, even if nested 
+	<!-- MIXED MODE: where text is rendered as is, even if nested
 			 inside elements that we do not understand  -->
 	<!-- based on the deep null-transform -->
 	<xsl:template mode="mixed" match="@*|node()">
@@ -2745,7 +2225,7 @@ token.
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCodeSequence" select="@emphasis|@revised"/>
 			</xsl:call-template>
-			<xsl:call-template name="additionalStyleAttr"/> 
+			<xsl:call-template name="additionalStyleAttr"/>
 			<xsl:apply-templates select="@*[not(local-name(.)='styleCode')]"/>
 			<!-- see note anchoring and PCR 793 -->
 			<!-- GS: moved this till after styleCode and other attribute handling -->
@@ -2755,7 +2235,7 @@ token.
 						<xsl:apply-templates mode="mixed" select="node()"/>
 					</xsl:if>
 					<xsl:if test="@ID">
-						<xsl:variable name="id" select="@ID"/>	
+						<xsl:variable name="id" select="@ID"/>
 						<xsl:variable name="contentID" select="concat('#',$id)"/>
 						<xsl:variable name="link" select="/v3:document//v3:subject/v3:manufacturedProduct/v3:subjectOf/v3:document[v3:title/v3:reference/@value = $contentID]/v3:text/v3:reference/@value"/>
 						<xsl:if test="$link">
@@ -2763,12 +2243,12 @@ token.
 								<xsl:attribute name="href">
 									<xsl:value-of select="$link"/>
 								</xsl:attribute>
-								<xsl:apply-templates mode="mixed" select="node()"/>		
+								<xsl:apply-templates mode="mixed" select="node()"/>
 							</a>
 						</xsl:if>
 						<xsl:if test="not($link)">
 							<a name="{@ID}"/>
-							<xsl:apply-templates mode="mixed" select="node()"/>	
+							<xsl:apply-templates mode="mixed" select="node()"/>
 						</xsl:if>
 					</xsl:if>
 				</xsl:when>
@@ -2778,7 +2258,7 @@ token.
 					</xsl:if>
 					<xsl:apply-templates mode="mixed" select="node()"/>
 				</xsl:otherwise>
-			</xsl:choose>	
+			</xsl:choose>
 		</span>
 	</xsl:template>
 	<xsl:template mode="mixed" match="v3:content[@emphasis='yes']" priority="1">
@@ -2869,7 +2349,7 @@ token.
 						<xsl:apply-templates select="@*"/>
 					</img>
 				</xsl:when>
-			</xsl:choose>			
+			</xsl:choose>
 			<xsl:apply-templates select="v3:caption"/>
 		</div>
 	</xsl:template>
@@ -2877,7 +2357,7 @@ token.
 		<p>
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
-				<xsl:with-param name="additionalStyleCode" 
+				<xsl:with-param name="additionalStyleCode"
 												select="'MultiMediaCaption'"/>
 			</xsl:call-template>
 			<xsl:apply-templates select="@*[not(local-name(.)='styleCode')]"/>
@@ -2983,8 +2463,7 @@ token.
 			<xsl:variable name="revisionTimeCandidates" select="v3:effectiveTime|v3:availabilityTime"/>
 			<xsl:variable name="revisionTime" select="$revisionTimeCandidates[@value != ''][last()]"/>
 			<xsl:if test="$revisionTime">
-				<xsl:text>Revised: </xsl:text>
-				<!-- changed by Brian Suggs 08-18-06. The effective date will now only display the month and year in the following format MM/YYYY (e.g. 08/2006). Code changed per PCR 528 -->
+				<!--<xsl:text>Revised: </xsl:text>
 				<xsl:apply-templates mode="data" select="$revisionTime">
 					<xsl:with-param name="displayMonth">true</xsl:with-param>
 					<xsl:with-param name="displayDay">false</xsl:with-param>
@@ -3024,13 +2503,13 @@ token.
 							<xsl:value-of select="."/>
 						</div>
 					</xsl:for-each>
-				</div>
+				</div>-->
 			</xsl:if>
 		</div>
 	</xsl:template>
 	<xsl:template name="distributorName">
-		<div class="DistributorName">				
-			<xsl:if test="v3:author/v3:assignedEntity/v3:representedOrganization/v3:name != ''">					
+		<div class="DistributorName">
+			<xsl:if test="v3:author/v3:assignedEntity/v3:representedOrganization/v3:name != ''">
 				<xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:name"/>
 			</xsl:if>
 		</div>
@@ -3068,7 +2547,7 @@ token.
 						</tr>
 					</xsl:if>
 					<xsl:call-template name="piMedNames"/>
-					
+
 					<xsl:if test="$root/v3:document/v3:code/@code = '64124-1' and v3:asNamedEntity">
 						<tr>
 							<td>
@@ -3076,7 +2555,7 @@ token.
 									<xsl:apply-templates mode="substance" select="v3:asNamedEntity"/>
 								</table>
 							</td>
-						</tr>	
+						</tr>
 					</xsl:if>
 					<xsl:if test="$root/v3:document/v3:code/@code = '64124-1'">
 						<tr>
@@ -3091,7 +2570,7 @@ token.
 									<xsl:apply-templates mode="substance" select="../v3:interactsIn/v3:interaction"/>
 								</table>
 							</td>
-						</tr>	
+						</tr>
 					</xsl:if>
 					<xsl:if test="$root/v3:document/v3:code/@code = '64124-1' and ../v3:subjectOf/v3:document">
 						<tr>
@@ -3103,7 +2582,7 @@ token.
 									</tr>
 								</table>
 							</td>
-						</tr>	
+						</tr>
 					</xsl:if>
 					<xsl:if test="$root/v3:document/v3:code/@code = '64124-1' and ../v3:subjectOf/v3:characteristic">
 						<tr>
@@ -3112,7 +2591,7 @@ token.
 									<xsl:apply-templates mode="substance" select="../v3:subjectOf/v3:characteristic"/>
 								</table>
 							</td>
-						</tr>	
+						</tr>
 					</xsl:if>
 					<xsl:apply-templates mode="substance" select="v3:moiety"/>
 					<!--Linkage Table-->
@@ -3124,13 +2603,13 @@ token.
 										<td colspan="4" class="formHeadingTitle">Molecular Bond Types</td>
 									</tr>
 									<xsl:apply-templates mode="substance" select="v3:moiety/v3:partMoiety/v3:bond[v3:distalMoiety/v3:id/@extension]"></xsl:apply-templates>
-								</table>	
+								</table>
 							</td>
 						</tr>
 					</xsl:if>
-					
+
 						<xsl:call-template name="ProductInfoBasic"/>
-					
+
 					<!-- Note: there could be a better way to avoid calling this for substances-->
 					<xsl:if test="not($root/v3:document/v3:code/@code = '64124-1')">
 						<xsl:choose>
@@ -3145,7 +2624,7 @@ token.
 						</xsl:choose>
 					</xsl:if>
 					<tr>
-						<td>						
+						<td>
 							<xsl:call-template name="image">
 								<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLIMAGE']"/>
 							</xsl:call-template>
@@ -3160,12 +2639,12 @@ token.
 						<tr>
 							<td>
 								<xsl:variable name="currCode" select="v3:code/@code"></xsl:variable>
-								<xsl:for-each select="ancestor::v3:section[1]/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct[v3:asEquivalentEntity/v3:definingMaterialKind/v3:code/@code = $currCode]">      
+								<xsl:for-each select="ancestor::v3:section[1]/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct[v3:asEquivalentEntity/v3:definingMaterialKind/v3:code/@code = $currCode]">
 									<xsl:call-template name="equivalentProductInfo"></xsl:call-template>
 								</xsl:for-each>
 							</td>
 						</tr>
-					</xsl:if>	
+					</xsl:if>
 					<!-- FIXME: there seem to be so many different places where the instanceOfKind, that looks somuch like copy&paste and makes maintenance difficult -->
 					<xsl:if test="v3:instanceOfKind">
 						<tr>
@@ -3176,7 +2655,7 @@ token.
 							</td>
 						</tr>
 					</xsl:if>
-					
+
 				</tbody>
 			</table>
 			<xsl:if test="$root/v3:document/v3:code/@code = '58476-3' and ../v3:subjectOf/v3:characteristic">
@@ -3184,7 +2663,8 @@ token.
 					<tr>
 						<td colspan="3"><span style="font-size: 125%;font-weight: bold;">Supplement Facts</span></td>
 					</tr>
-					<tr style="border-bottom:2px solid">	
+					<!-- Health Canada Added attribute below for tables -->
+					<tr style="border-bottom:2px solid">
 						<xsl:variable name="char" select="../v3:subjectOf/v3:characteristic/v3:value"/>
 						<td style="font-size: 100%;font-weight: bold;"><span style=" float: left;">
 							Serving Size : <xsl:value-of select="$char[../v3:code/@code = '101.9(b)/1']/v3:translation/@value|$char[../v3:code/@code = '101.9(b)/2']/v3:translation/@value"/><xsl:text> </xsl:text><xsl:value-of select="$char[../v3:code/@code = '101.9(b)/1']/v3:translation/@displayName|$char[../v3:code/@code = '101.9(b)/2']/v3:translation/@displayName"/></span>
@@ -3201,7 +2681,7 @@ token.
 					</tr>
 					<xsl:for-each select="../v3:subjectOf/v3:characteristic[not(v3:code/@code = '101.9(b)/1') and not(v3:code/@code = '101.9(b)/2') and not(v3:code/@code = '101.9(b)(8)')]">
 						<xsl:variable name="def" select="$CHARACTERISTICS/*/*/v3:characteristic[v3:code[@code = current()/v3:code/@code and @codeSystem = current()/v3:code/@codeSystem]][1]"/>
-						<tr>	
+						<tr>
 							<td>
 								<xsl:variable name="name" select="($def/v3:code/@displayName|$def/v3:code/@p:displayName)[1]" xmlns:p="http://pragmaticdata.com/xforms"/>
 								<xsl:value-of select="$name"/>
@@ -3209,7 +2689,7 @@ token.
 							<td style="text-align:center;">
 								<xsl:value-of select="v3:value/@value"/><xsl:text> </xsl:text>
 								<xsl:value-of select="v3:value/@unit"/>
-							</td>	
+							</td>
 							<td style="text-align:center;">
 								<xsl:if test="$def/v3:value/@unit = v3:value/@unit and number($def/v3:value/@value) > 0 and number(v3:value/@value) > 0">
 									<xsl:value-of select="round(number(v3:value/@value) * 100 div number($def/v3:value/@value))"/>
@@ -3260,7 +2740,7 @@ token.
 		</tr>
 	</xsl:template>
 
-	<!-- XXX: named templates, really not a good idea, but we can't fix the mess all at once 
+	<!-- XXX: named templates, really not a good idea, but we can't fix the mess all at once
 			 These used to be sometimes incompletely defined modes with templates matching everything, leading to default template messes.
 			 Now they are all named templates that are to be invoked in exactly one context.
 			 Usually any of these templates are to be invoked in the product entity context, that way we avoid so many navigation choices
@@ -3278,20 +2758,20 @@ token.
 			<xsl:call-template name="string-uppercase">
 				<xsl:with-param name="text" select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name|v3:asSpecializedKind/v3:generalizedMaterialKind/v3:code[@codeSystem = '2.16.840.1.113883.6.276'  or @codeSystem = '2.16.840.1.113883.6.303']/@displayName"/>
 			</xsl:call-template>
-		</xsl:variable>		
+		</xsl:variable>
 
 		<tr>
 			<td class="contentTableTitle">
 				<strong>
-					<xsl:value-of select="$medName"/>&#160;		
+					<xsl:value-of select="$medName"/>&#160;
 					<xsl:call-template name="string-uppercase">
 						<xsl:with-param name="text" select="v3:name/v3:suffix"/>
-					</xsl:call-template>	
+					</xsl:call-template>
 				</strong>
 				<xsl:apply-templates mode="substance" select="v3:code[@codeSystem = '2.16.840.1.113883.4.9']/@code"/>
 				<xsl:if test="not($root/v3:document/v3:code/@code = '73815-3')">
 					<br/>
-				</xsl:if>	
+				</xsl:if>
 				<span class="contentTableReg">
 					<xsl:call-template name="string-lowercase">
 						<xsl:with-param name="text" select="$genMedName"/>
@@ -3320,7 +2800,7 @@ token.
 					<tr>
 						<td colspan="4" class="formHeadingTitle">Product Information</td>
 					</tr>
-					<tr class="formTableRowAlt">							
+					<tr class="formTableRowAlt">
 						<xsl:if test="not(../../v3:part)">
 							<td class="formLabel">Product Type</td>
 							<td class="formItem">
@@ -3367,26 +2847,26 @@ token.
 							</xsl:if>
 							<xsl:if test="../v3:subjectOf/v3:policy/v3:code/@displayName">
 								<td width="30%" class="formLabel">DEA Schedule</td>
-								<td class="formItem">	
+								<td class="formItem">
 									<xsl:value-of select="../v3:subjectOf/v3:policy/v3:code/@displayName"/>&#160;&#160;&#160;&#160;
 								</td>
-							</xsl:if>	
+							</xsl:if>
 						</tr>
 					</xsl:if>
 					<xsl:if test="/v3:document/v3:code/@code = '75031-5' and ../../v3:section[not(v3:subject/v3:manufacturedProduct)]">
 						<tr class="formTableRow">
 							<td class="formLabel">Product</td>
 							<td class="formItem">
-								<xsl:value-of select="v3:paragraph"/>	
+								<xsl:value-of select="v3:paragraph"/>
 							</td>
 						</tr>
 					</xsl:if>
 					<xsl:if test="../../../v3:effectiveTime[v3:low/@value or v3:high/@value]  or  ../v3:effectiveTime[v3:low/@value and v3:high/@value]">
 						<tr class="formTableRowAlt">
 							<td class="formLabel">Reporting Period</td>
-							<td class="formItem">	
-								<xsl:variable name="range" select="ancestor::v3:section[1]/v3:effectiveTime"/>	
-								<xsl:value-of select="$range/v3:low/@value"/>	
+							<td class="formItem">
+								<xsl:variable name="range" select="ancestor::v3:section[1]/v3:effectiveTime"/>
+								<xsl:value-of select="$range/v3:low/@value"/>
 								<xsl:text>-</xsl:text>
 								<xsl:value-of select="$range/v3:high/@value"/>
 							</td>
@@ -3400,7 +2880,7 @@ token.
 			</td>
 		</tr>
 	</xsl:template>
-	<xsl:template name="ProductInfoIng">		
+	<xsl:template name="ProductInfoIng">
 		<xsl:if test="v3:ingredient[starts-with(@classCode,'ACTI')]|v3:activeIngredient">
 			<tr>
 				<td>
@@ -3454,7 +2934,7 @@ token.
 				</td>
 			</tr>
 		</xsl:if>
-	</xsl:template>	
+	</xsl:template>
 
 	<xsl:template mode="subjects" match="v3:part/v3:partProduct|v3:part/v3:partMedicine">
 		<!-- only display the outer part packaging once -->
@@ -3571,7 +3051,7 @@ token.
 					</xsl:for-each>
 					<td class="formItem">
 						<xsl:value-of select="v3:quantity/v3:numerator/@value"/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:numerator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:numerator/@unit"/></xsl:if>
-						<xsl:if test="(v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@value)!='1') 
+						<xsl:if test="(v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@value)!='1')
 													or (v3:quantity/v3:denominator/@unit and normalize-space(v3:quantity/v3:denominator/@unit)!='1')"> &#160;in&#160;<xsl:value-of select="v3:quantity/v3:denominator/@value"
 													/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/>
 							</xsl:if></xsl:if>
@@ -3594,7 +3074,7 @@ token.
 				<tr>
 					<td colspan="2" class="formItem" align="center">No Inactive Ingredients Found</td>
 				</tr>
-			</xsl:if>			
+			</xsl:if>
 			<xsl:for-each select="v3:ingredient[@classCode='IACT']|v3:inactiveIngredient">
 				<tr>
 					<xsl:attribute name="class">
@@ -3692,26 +3172,47 @@ token.
 			</tr>
 			<tr class="formTableRowAlt">
 				<xsl:call-template name="color">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLCOLOR']"/>
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='1']"/>
 				</xsl:call-template>
 				<xsl:call-template name="score">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLSCORE']"/>
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='5']"/>
+				</xsl:call-template>
+			</tr>
+			<tr class="formTableRowAlt">
+				<xsl:call-template name="image">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='2']"/>
+				</xsl:call-template>
+				<xsl:call-template name="production_amount">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='6']"/>
 				</xsl:call-template>
 			</tr>
 			<tr class="formTableRow">
 				<xsl:call-template name="shape">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLSHAPE']"/>
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='3']"/>
 				</xsl:call-template>
 				<xsl:call-template name="size">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLSIZE']"/>
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='11']"/>
 				</xsl:call-template>
 			</tr>
 			<tr class="formTableRowAlt">
 				<xsl:call-template name="flavor">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLFLAVOR']"/>
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='4']"/>
 				</xsl:call-template>
-				<xsl:call-template name="imprintCode">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLIMPRINT']"/>
+				<xsl:call-template name="imprint">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='12']"/>
+				</xsl:call-template>
+			</tr>
+			<tr class="formTableRowAlt">
+				<xsl:call-template name="pharmaceutical_standard">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='13']"/>
+				</xsl:call-template>
+				<xsl:call-template name="scheduling_symbol">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='14']"/>
+				</xsl:call-template>
+			</tr>
+			<tr class="formTableRowAlt">
+				<xsl:call-template name="therapeutic_class">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='15']"/>
 				</xsl:call-template>
 			</tr>
 			<tr class="formTableRow">
@@ -3735,7 +3236,7 @@ token.
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 			<tr>
 				<td colspan="4" class="formHeadingTitle">Product Characteristics</td>
-			</tr>	
+			</tr>
 			<xsl:apply-templates mode="characteristics" select="../v3:subjectOf/v3:characteristic">
 				<xsl:sort select="count($CHARACTERISTICS/*/*/v3:characteristic[v3:code[@code = current()/v3:code/@code and @codeSystem = current()/v3:code/@codeSystem]][1]/preceding::*)"/>
 			</xsl:apply-templates>
@@ -3819,7 +3320,7 @@ token.
 </xsl:template>
 
 
-<!-- display the imprint characteristic color -->
+<!-- display the characteristic color -->
 <xsl:template name="color">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Color</td>
@@ -3832,7 +3333,20 @@ token.
 		<xsl:if test="not($path/v3:value)">&#160;&#160;&#160;&#160;</xsl:if>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic score -->
+	<!-- display the characteristic production amount -->
+	<xsl:template name="production_amount">
+		<xsl:param name="path" select="."/>
+		<td class="formLabel">Production Amount</td>
+		<td class="formItem">
+			<xsl:for-each select="$path/v3:value">
+				<xsl:if test="position() > 1">,&#160;</xsl:if>
+				<xsl:value-of select="./@displayName"/>
+				<xsl:if test="normalize-space(./v3:originalText)"> (<xsl:value-of select="./v3:originalText"/>) </xsl:if>
+			</xsl:for-each>
+			<xsl:if test="not($path/v3:value)">&#160;&#160;&#160;&#160;</xsl:if>
+		</td>
+	</xsl:template>
+<!-- display the characteristic score -->
 <xsl:template name="score">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Score</td>
@@ -3845,7 +3359,7 @@ token.
 		</xsl:choose>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic shape -->
+<!-- display the characteristic shape -->
 <xsl:template name="shape">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Shape</td>
@@ -3854,11 +3368,11 @@ token.
 		<xsl:if test="normalize-space($path/v3:value/v3:originalText)"> (<xsl:value-of select="$path/v3:value/v3:originalText"/>) </xsl:if>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic flavor -->
+<!-- display the characteristic flavor -->
 <xsl:template name="flavor">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Flavor</td>
-	<td class="formItem">			
+	<td class="formItem">
 		<xsl:for-each select="$path/v3:value">
 			<xsl:if test="position() > 1">,&#160;</xsl:if>
 			<xsl:value-of select="./@displayName"/>
@@ -3866,15 +3380,48 @@ token.
 		</xsl:for-each>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic code -->
-<xsl:template name="imprintCode">
+	<xsl:template name="pharmaceutical_standard">
+		<xsl:param name="path" select="."/>
+		<td class="formLabel">Pharmaceutical Standard</td>
+		<td class="formItem">
+			<xsl:for-each select="$path/v3:value">
+				<xsl:if test="position() > 1">,&#160;</xsl:if>
+				<xsl:value-of select="./@displayName"/>
+				<xsl:if test="normalize-space(./v3:originalText)"> (<xsl:value-of select="./v3:originalText"/>) </xsl:if>
+			</xsl:for-each>
+		</td>
+	</xsl:template>
+	<xsl:template name="scheduling_symbol">
+		<xsl:param name="path" select="."/>
+		<td class="formLabel">Scheduling Symbol</td>
+		<td class="formItem">
+			<xsl:for-each select="$path/v3:value">
+				<xsl:if test="position() > 1">,&#160;</xsl:if>
+				<xsl:value-of select="./@displayName"/>
+				<xsl:if test="normalize-space(./v3:originalText)"> (<xsl:value-of select="./v3:originalText"/>) </xsl:if>
+			</xsl:for-each>
+		</td>
+	</xsl:template>
+	<xsl:template name="therapeutic_class">
+		<xsl:param name="path" select="."/>
+		<td class="formLabel">Therapeutic Class</td>
+		<td class="formItem">
+			<xsl:for-each select="$path/v3:value">
+				<xsl:if test="position() > 1">,&#160;</xsl:if>
+				<xsl:value-of select="./@displayName"/>
+				<xsl:if test="normalize-space(./v3:originalText)"> (<xsl:value-of select="./v3:originalText"/>) </xsl:if>
+			</xsl:for-each>
+		</td>
+	</xsl:template>
+	<!-- display the characteristic imprint -->
+<xsl:template name="imprint">
 	<xsl:param name="path" select="."/>
-	<td class="formLabel">Imprint Code</td>
+	<td class="formLabel">Imprint</td>
 	<td class="formItem">
 		<xsl:value-of select="$path[v3:value/@xsi:type='ST']"/>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic size -->
+<!-- display the characteristic size -->
 <xsl:template name="size">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Size</td>
@@ -3883,7 +3430,7 @@ token.
 		<xsl:value-of select="$path/v3:value/@unit"/>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic symbol -->
+<!-- display the characteristic symbol -->
 <xsl:template name="symbol">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Symbol</td>
@@ -3891,18 +3438,18 @@ token.
 		<xsl:value-of select="$path/v3:value/@value"/>
 	</td>
 </xsl:template>
-<!-- display the imprint characteristic coating -->
+<!-- display the characteristic coating -->
 <xsl:template name="coating">
 	<xsl:param name="path" select="."/>
 	<td class="formLabel">Coating</td>
 	<td class="formItem">
 		<xsl:value-of select="$path/v3:value/@value"/>
 	</td>
-</xsl:template>	
+</xsl:template>
 <xsl:template name="image">
 	<xsl:param name="path" select="."/>
 	<xsl:if test="string-length($path/v3:value/v3:reference/@value) > 0">
-		<img alt="Image of Product" style="width:100%;" src="{$path/v3:value/v3:reference/@value}"/>
+		<img alt="Image of Product" style="width:20%;" src="{$path/v3:value/v3:reference/@value}"/>
 	</xsl:if>
 </xsl:template>
 
@@ -3940,17 +3487,17 @@ token.
 				<td width="5" class="formItem">
 					<strong>Part <xsl:value-of select="position()"/></strong>
 				</td>
-				<td class="formItem">	
+				<td class="formItem">
 					<xsl:if test="*[self::v3:partProduct or self::v3:partMedicine]/v3:asContent/v3:quantity/v3:numerator/@value">
 						<xsl:value-of select="round(v3:quantity/v3:numerator/@value div *[self::v3:partProduct or self::v3:partMedicine]/v3:asContent/v3:quantity/v3:numerator/@value)"/>
 						<xsl:text> </xsl:text>
 						<xsl:value-of select="*[self::v3:partProduct or self::partMedicine]/v3:asContent/*[self::v3:containerPackagedProduct or self::v3:containerPackagedMedicine]/v3:formCode/@displayName"/>
-					</xsl:if>							
+					</xsl:if>
 					<xsl:text> </xsl:text>
-				</td>							
+				</td>
 				<td class="formItem">
 					<xsl:value-of select="v3:quantity/v3:numerator/@value"/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:numerator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:numerator/@unit"/></xsl:if>
-					<xsl:if test="(v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@value)!='1') 
+					<xsl:if test="(v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@value)!='1')
 													or (v3:quantity/v3:denominator/@unit and normalize-space(v3:quantity/v3:denominator/@unit)!='1')"> &#160;in&#160;<xsl:value-of select="v3:quantity/v3:denominator/@value"
 													/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/>
 						</xsl:if></xsl:if>
@@ -4010,7 +3557,7 @@ token.
 							<xsl:value-of select="."/>
 							<xsl:text>:</xsl:text>
 						</xsl:for-each>
-					</xsl:if>	
+					</xsl:if>
 					<xsl:value-of select="."/>
 				</xsl:for-each>
 			</td>
@@ -4046,17 +3593,17 @@ token.
 							<xsl:text> = </xsl:text>
 							<xsl:value-of select="(v3:value[not(../v3:code/@code = 'SPLCMBPRDTP')]/@code|v3:value/@value)[1]"/>
 						</xsl:otherwise>
-					</xsl:choose>						
+					</xsl:choose>
 				</xsl:for-each>
 			</td>
-			<td class="formItem">						
+			<td class="formItem">
 				<xsl:call-template name="string-to-date">
 					<xsl:with-param name="text">
 						<xsl:value-of select="../v3:subjectOf/v3:marketingAct/v3:effectiveTime/v3:low/@value"/>
 					</xsl:with-param>
 				</xsl:call-template>
 			</td>
-			<td class="formItem">					
+			<td class="formItem">
 				<xsl:call-template name="string-to-date">
 					<xsl:with-param name="text">
 						<xsl:value-of select="../v3:subjectOf/v3:marketingAct/v3:effectiveTime/v3:high/@value"/>
@@ -4136,7 +3683,7 @@ token.
 			<xsl:value-of select="$quantity/@unit[not(. = '1')]"/>
 			<xsl:if test="string(number($dosesPerContainer)) != 'NaN'">
 				<xsl:text> (</xsl:text>
-				<xsl:value-of select="$dosesPerContainer"/> 
+				<xsl:value-of select="$dosesPerContainer"/>
 				<xsl:text>)</xsl:text>
 			</xsl:if>
 		</td>
@@ -4146,7 +3693,7 @@ token.
 			<xsl:value-of select="$qty"/>
 			<xsl:if test="string(number(number($qty) * $dosesPerContainer)) != 'NaN'">
 				<xsl:text> (</xsl:text>
-				<xsl:value-of select="number($qty) * $dosesPerContainer"/> 
+				<xsl:value-of select="number($qty) * $dosesPerContainer"/>
 				<xsl:text>)</xsl:text>
 			</xsl:if>
 		</td>
@@ -4160,7 +3707,7 @@ token.
 				<xsl:if test="string(number(number($qty1) * $dosesPerContainer)) != 'NaN'">
 					<xsl:text> (</xsl:text>
 					<xsl:value-of select="number($qty1) * $dosesPerContainer"/>
-					<xsl:text>)</xsl:text> 
+					<xsl:text>)</xsl:text>
 				</xsl:if>
 			</xsl:if>
 		</td>
@@ -4190,14 +3737,14 @@ token.
 					<xsl:value-of select="../v3:subjectOf/v3:approval/v3:id/@extension"/>
 				</td>
 				<xsl:if test="not($root/v3:document/v3:code/@code = '73815-3')">
-					<td class="formItem">						
+					<td class="formItem">
 						<xsl:call-template name="string-to-date">
 							<xsl:with-param name="text">
 								<xsl:value-of select="../v3:subjectOf/v3:marketingAct/v3:effectiveTime/v3:low/@value"/>
 							</xsl:with-param>
 						</xsl:call-template>
 					</td>
-					<td class="formItem">					
+					<td class="formItem">
 						<xsl:call-template name="string-to-date">
 							<xsl:with-param name="text">
 								<xsl:value-of select="../v3:subjectOf/v3:marketingAct/v3:effectiveTime/v3:high/@value"/>
@@ -4208,14 +3755,14 @@ token.
 			</tr>
 		</table>
 	</xsl:if>
-</xsl:template>	
+</xsl:template>
 
 
-<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization">	
+<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization">
 	<xsl:if test="(count(./v3:name)>0)">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
 			<tr>
-				<td colspan="4" class="formHeadingReg"><span class="formHeadingTitle" >Labeler -&#160;</span><xsl:value-of select="./v3:name"/> 
+				<td colspan="4" class="formHeadingReg"><span class="formHeadingTitle" >DIN Owner -&#160;</span><xsl:value-of select="./v3:name"/>
 					<xsl:choose>
 						<xsl:when test="./v3:id[@root='1.3.6.1.4.1.519.1']/@extension">
 							(<xsl:value-of select="./v3:id[@root='1.3.6.1.4.1.519.1']/@extension"/>)
@@ -4230,7 +3777,7 @@ token.
 						<xsl:choose>
 							<xsl:when test="./v3:id[@root='2.16.840.1.113883.6.69']/@extension">
 								<xsl:value-of select="./v3:id[@root='2.16.840.1.113883.6.69']/@extension"/>
-							</xsl:when>						
+							</xsl:when>
 							<xsl:when  test="./v3:assignedEntity/v3:assignedOrganization/v3:id[@root='2.16.840.1.113883.6.69']/@extension">
 								<xsl:value-of select="./v3:assignedEntity/v3:assignedOrganization/v3:id[@root='2.16.840.1.113883.6.69']/@extension"/>
 							</xsl:when>
@@ -4242,7 +3789,7 @@ token.
 						<xsl:choose>
 							<xsl:when test="./v3:id[not(@root='1.3.6.1.4.1.519.1')]/@extension">
 								<xsl:value-of select="./v3:id[not(@root='1.3.6.1.4.1.519.1')]/@extension"/>
-							</xsl:when>						
+							</xsl:when>
 							<xsl:when  test="./v3:assignedEntity/v3:assignedOrganization/v3:id[not(@root='1.3.6.1.4.1.519.1')]/@extension">
 								<xsl:value-of select="./v3:assignedEntity/v3:assignedOrganization/v3:id[not(@root='1.3.6.1.4.1.519.1')]/@extension"/>
 							</xsl:when>
@@ -4254,7 +3801,7 @@ token.
 			<xsl:call-template name="data-contactParty"/>
 		</table>
 	</xsl:if>
-</xsl:template>	
+</xsl:template>
 <xsl:template name="data-contactParty">
 	<xsl:for-each select="v3:contactParty">
 		<xsl:if test="position() = 1">
@@ -4269,7 +3816,7 @@ token.
 			<td class="formItem">
 				<xsl:value-of select="v3:contactPerson/v3:name"/>
 			</td>
-			<td class="formItem">		
+			<td class="formItem">
 				<xsl:apply-templates mode="format" select="v3:addr"/>
 			</td>
 			<td class="formItem">
@@ -4287,7 +3834,7 @@ token.
 	</xsl:for-each>
 </xsl:template>
 
-<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization">	
+<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization">
 	<xsl:if test="./v3:name">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
 			<tr>
@@ -4303,23 +3850,25 @@ token.
 			<xsl:call-template name="data-contactParty"/>
 		</table>
 	</xsl:if>
-</xsl:template>	
+</xsl:template>
 
-<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization">	
+<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization">
 	<xsl:if test="./v3:name">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
 			<tr>
-				<td colspan="4" class="formHeadingReg">
+				<td colspan="5" class="formHeadingReg">
 					<span class="formHeadingTitle" >
 						<xsl:choose>
+							<!-- replace with HPFB codes -->
 							<xsl:when test="/v3:document/v3:code/@code[. = '72090-4' or . = '71743-9' or . = '75030-7']">Facility</xsl:when>
 							<xsl:when test="/v3:document/v3:code/@code[. = '51726-8' or . = '72871-7']">Labeler Detail</xsl:when>
-							<xsl:otherwise>Establishment</xsl:otherwise>
+							<xsl:otherwise>Other Party</xsl:otherwise>
 						</xsl:choose>
 					</span>
-				</td>				
+				</td>
 			</tr>
 			<tr>
+				<th scope="col" class="formTitle">Role</th>
 				<th scope="col" class="formTitle">Name</th>
 				<th scope="col" class="formTitle">Address</th>
 				<th scope="col" class="formTitle">ID/FEI</th>
@@ -4327,10 +3876,14 @@ token.
 			</tr>
 			<tr class="formTableRowAlt">
 				<td class="formItem">
+					<!-- replace with the label for the role -->
 					<xsl:value-of select="./v3:name"/>
 				</td>
-				<td class="formItem">	
-					<xsl:apply-templates mode="format" select="./v3:addr"/>	
+				<td class="formItem">
+					<xsl:value-of select="./v3:name"/>
+				</td>
+				<td class="formItem">
+					<xsl:apply-templates mode="format" select="./v3:addr"/>
 				</td>
 				<!-- root = "1.3.6.1.4.1.519.1" -->
 				<td class="formItem">
@@ -4342,7 +3895,7 @@ token.
 						<xsl:value-of select="@displayName"/>
 						<xsl:if test="/v3:document[v3:code/@code = '75030-7'] and ../v3:subjectOf/v3:approval">
 							<xsl:text> - </xsl:text>
-						</xsl:if>	
+						</xsl:if>
 						<xsl:variable name="itemCodes" select="../../../v3:performance/v3:actDefinition[v3:code/@code = $code]/v3:product/v3:manufacturedProduct/v3:manufacturedMaterialKind/v3:code/@code"/>
 						<xsl:if test="$itemCodes">
 							<xsl:text>(</xsl:text>
@@ -4362,7 +3915,7 @@ token.
 								<xsl:value-of select="concat('Number: ', ../v3:id/@extension, ', ')"/>
 								<xsl:value-of select="concat('State: ', ../descendant::v3:territory/v3:code/@code, ', ')"/>
 								<xsl:value-of select="concat('Status: ', ../v3:statusCode/@code)"/>
-								<xsl:text>) </xsl:text> 
+								<xsl:text>) </xsl:text>
 							</xsl:if>
 							<xsl:for-each select="../v3:subjectOf/v3:action/v3:code[@code]">
 								<xsl:if test="position()!=last()">, </xsl:if>
@@ -4377,10 +3930,10 @@ token.
 								</xsl:if>
 								<xsl:for-each select="../v3:subjectOf/v3:document/v3:text[@mediaType]/v3:reference">
 									<xsl:value-of select="@value" />
-									<xsl:if test="position()!=last()">, </xsl:if>								
+									<xsl:if test="position()!=last()">, </xsl:if>
 								</xsl:for-each>
-								<xsl:text>)</xsl:text>	
-								<xsl:if test="position()!=last()">, </xsl:if>								
+								<xsl:text>)</xsl:text>
+								<xsl:if test="position()!=last()">, </xsl:if>
 							</xsl:for-each>
 							<xsl:if test="position()!=last()">, </xsl:if>
 						</xsl:for-each>
@@ -4407,7 +3960,7 @@ token.
 							<xsl:text>)</xsl:text>
 						</xsl:for-each>
 					</td>
-					<td class="formItem">		
+					<td class="formItem">
 						<xsl:apply-templates mode="format" select="v3:addr"/>
 					</td>
 					<td class="formItem">
@@ -4424,7 +3977,7 @@ token.
 				</tr>
 			</xsl:for-each>
 			<!-- 53617 changed to 73599 -->
-			<xsl:for-each select="./v3:assignedEntity[v3:performance/v3:actDefinition/v3:code/@code='C73599']/v3:assignedOrganization">	
+			<xsl:for-each select="./v3:assignedEntity[v3:performance/v3:actDefinition/v3:code/@code='C73599']/v3:assignedOrganization">
 				<xsl:if test="position() = 1">
 					<tr>
 						<th scope="col" class="formTitle">Importer (ID)</th>
@@ -4442,7 +3995,7 @@ token.
 							<xsl:text>)</xsl:text>
 						</xsl:for-each>
 					</td>
-					<td class="formItem">		
+					<td class="formItem">
 						<xsl:apply-templates mode="format" select="v3:addr"/>
 					</td>
 					<td class="formItem">
@@ -4460,7 +4013,7 @@ token.
 			</xsl:for-each>
 		</table>
 	</xsl:if>
-</xsl:template>	
+</xsl:template>
 
 
 <!-- Start PLR Information templates
@@ -4591,7 +4144,7 @@ token.
 													<!-- apply all limitation of use templates for issues within this subject -->
 													<!-- now apply all limitation of use templates for issues that are NOT within any indication section or subsection -->
 													<!-- PCR 593 Since the limitation of use can have multiple ancestors called section, we process all children limitations of the current context.
-																 and then all other limitations with specified named ancestors. All possible ancestors other than indication section are used in the predicate.  
+																 and then all other limitations with specified named ancestors. All possible ancestors other than indication section are used in the predicate.
 																 Also made a call to a named template in a loop rather than a matched template-->
 													<xsl:for-each select="./v3:substanceAdministration/v3:subjectOf/v3:issue">
 														<xsl:call-template name="displayLimitationsOfUse"> </xsl:call-template>
@@ -4795,13 +4348,13 @@ token.
 			<td>&#160;</td>
 		</xsl:if>
 		<td class="formItem">
-			<xsl:value-of select="v3:code/@displayName"/>		 
+			<xsl:value-of select="v3:code/@displayName"/>
 		</td>
 		<td class="formItem">
-			<xsl:value-of select="v3:subject/v3:observationCriterion/v3:code/@displayName"/>		 
+			<xsl:value-of select="v3:subject/v3:observationCriterion/v3:code/@displayName"/>
 		</td>
 		<td class="formItem">
-			<xsl:value-of select="v3:subject/v3:observationCriterion/v3:value/@displayName"/>		 
+			<xsl:value-of select="v3:subject/v3:observationCriterion/v3:value/@displayName"/>
 		</td>
 		<td class="formItem">
 			<xsl:variable name="sectionNumberSequence">
@@ -4860,4 +4413,5 @@ token.
 		</table>
 	</xsl:if>
 </xsl:template>
+
 </xsl:transform>

@@ -18,63 +18,24 @@ Regenstrief Institute, Inc. All Rights Reserved.
 Revision: $Id: xml-verbatim.css,v 1.1 2005/08/10 20:04:42 sbsuggs Exp $
 */
 
-.xml-verbatim-default{
-    color: #333333;
-    background-color: rgba(255, 255, 255, 0);
-    font-family: sans-serif;
-    cursor: pointer;
-}
-.xml-verbatim-element-name{
-    color: #990000
-}
-.xml-verbatim-element-nsprefix{
-    color: #666600
-}
-.xml-verbatim-attr-name{
-    color: #660000
-}
-.xml-verbatim-attr-content{
-    color: #000099;
-    font-weight: bold
-}
-.xml-verbatim-ns-name{
-    color: #666600
-}
-.xml-verbatim-ns-uri{
-    color: #330099
-}
-.xml-verbatim-text{
-    color: #000000;
-    font-weight: bold
-}
-.xml-verbatim-comment{
-    color: #006600;
-    font-style: italic
-}
-.xml-verbatim-pi-name{
-    color: #006600;
-    font-style: italic
-}
-.xml-verbatim-pi-content{
-    color: #006666;
-    font-style: italic
-}
-.xml-verbatim-element{
-}
-.xml-verbatim-element-head{
-    margin-left: 3em;
-    text-indent: -3em;
-}
-.xml-verbatim-element-head-ellips{
-    display: inline;
-    color: #006600;
-    font-style: italic
-}
-.xml-verbatim-element-body{
-    display: none;
-}
-.xml-verbatim-element-content{
-    margin-left: 1em;
-}
-.xml-verbatim-element-tail{
-}
+.xml-verbatim-default          { color: #333333; 
+			         background-color: rgba(255,255,255,0); 
+				 font-family: sans-serif;
+				 cursor: pointer; }
+.xml-verbatim-element-name     { color: #990000 }
+.xml-verbatim-element-nsprefix { color: #666600 }
+.xml-verbatim-attr-name        { color: #660000 }
+.xml-verbatim-attr-content     { color: #000099; font-weight: bold }
+.xml-verbatim-ns-name          { color: #666600 }
+.xml-verbatim-ns-uri           { color: #330099 }
+.xml-verbatim-text             { color: #000000; font-weight: bold }
+.xml-verbatim-comment          { color: #006600; font-style: italic }
+.xml-verbatim-pi-name          { color: #006600; font-style: italic }
+.xml-verbatim-pi-content       { color: #006666; font-style: italic }
+.xml-verbatim-element	       { }
+.xml-verbatim-element-head     { margin-left: 3em; 
+			         text-indent: -3em;  }
+.xml-verbatim-element-head-ellips { display: inline; color: #006600; font-style: italic }
+.xml-verbatim-element-body     { display: none; }
+.xml-verbatim-element-content  { margin-left: 1em; }
+.xml-verbatim-element-tail     { }
