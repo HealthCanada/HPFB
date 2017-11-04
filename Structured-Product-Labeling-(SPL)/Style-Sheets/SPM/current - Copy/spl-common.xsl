@@ -152,59 +152,9 @@ labels are not extracted but inline in the code
 	</xsl:variable>
 	<xsl:variable name="indicationSection1" select="/v3:document/v3:component/v3:structuredBody/v3:component/v3:section/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct/v3:instanceOfKind/v3:productInstance/v3:ingredient/v3:subjectOf"/>
 	<xsl:variable name="indicationSection2" select="/v3:document/v3:component/v3:structuredBody/v3:component/v3:section/v3:subject/v3:manufacturedProduct/v3:manufacturedProduct"/>
-	<!--  HPFB: Change added all variables below -->
-	<xsl:variable name="scheduling-symbol-oid" select="'2.16.840.1.113883.2.20.6.2'"/>
-	<xsl:variable name="dosage-form-oid" select="'2.16.840.1.113883.2.20.6.3'"/>
-	<xsl:variable name="telecom-use-oid" select="'2.16.840.1.113883.2.20.6.4'"/>
-	<xsl:variable name="pharmaceutical-standard-oid" select="'2.16.840.1.113883.2.20.6.5'"/>
-	<xsl:variable name="therapeutic-class-oid" select="'2.16.840.1.113883.2.20.6.6'"/>
-	<xsl:variable name="route-of-administration-oid" select="'2.16.840.1.113883.2.20.6.7'"/>
-	<xsl:variable name="section-id-oid" select="'2.16.840.1.113883.2.20.6.8'"/>
-	<xsl:variable name="template-id-oid" select="'2.16.840.1.113883.2.20.6.9'"/>
-	<xsl:variable name="document-id-oid" select="'2.16.840.1.113883.2.20.6.10'"/>
-	<xsl:variable name="marketing-category-oid" select="'2.16.840.1.113883.2.20.6.11'"/>
-	<xsl:variable name="equivalence-codes-oid" select="'2.16.840.1.113883.2.20.6.12'"/>
-	<xsl:variable name="identifier-type-oid" select="'2.16.840.1.113883.2.20.6.13'"/>
-	<xsl:variable name="ingredient-id-oid" select="'2.16.840.1.113883.2.20.6.14'"/>
-	<xsl:variable name="units-of-measure-oid" select="'2.16.840.1.113883.2.20.6.15'"/>
-	<xsl:variable name="form-code-oid" select="'2.16.840.1.113883.2.20.6.16'"/>
-	<xsl:variable name="country-code-oid" select="'2.16.840.1.113883.2.20.6.17'"/>
-	<xsl:variable name="marketing-status-oid" select="'2.16.840.1.113883.2.20.6.18'"/>
-	<xsl:variable name="telecom-capability-oid" select="'2.16.840.1.113883.2.20.6.19'"/>
-	<xsl:variable name="product-item-code-oid" select="'2.16.840.1.113883.2.20.6.20'"/>
-	<xsl:variable name="information-disclosure-oid" select="'2.16.840.1.113883.2.20.6.21'"/>
-	<xsl:variable name="schedule-oid" select="'2.16.840.1.113883.2.20.6.22'"/>
-	<xsl:variable name="product-characteristics-oid" select="'2.16.840.1.113883.2.20.6.23'"/>
-	<xsl:variable name="color-oid" select="'2.16.840.1.113883.2.20.6.24'"/>
-	<xsl:variable name="shape-oid" select="'2.16.840.1.113883.2.20.6.25'"/>
-	<xsl:variable name="flavor-oid" select="'2.16.840.1.113883.2.20.6.26'"/>
-	<xsl:variable name="product-classification-oid" select="'2.16.840.1.113883.2.20.6.27'"/>
-	<xsl:variable name="submission-tracking-system-oid" select="'2.16.840.1.113883.2.20.6.28'"/>
-	<xsl:variable name="language-code-oid" select="'2.16.840.1.113883.2.20.6.29'"/>
-	<xsl:variable name="combination-product-type-oid" select="'2.16.840.1.113883.2.20.6.30'"/>
-	<xsl:variable name="company-id-oid" select="'2.16.840.1.113883.2.20.6.31'"/>
-	<xsl:variable name="pack-type-oid" select="'2.16.840.1.113883.2.20.6.32'"/>
-	<xsl:variable name="organization-role-oid" select="'2.16.840.1.113883.2.20.6.33'"/>
-	<xsl:variable name="product-source-oid" select="'2.16.840.1.113883.2.20.6.34'"/>
-	<xsl:variable name="derived-source-oid" select="'2.16.840.1.113883.2.20.6.35'"/>
-	<xsl:variable name="structure-aspects-oid" select="'2.16.840.1.113883.2.20.6.36'"/>
-	<xsl:variable name="term-status-oid" select="'2.16.840.1.113883.2.20.6.37'"/>
-	<xsl:variable name="units-of-presentation-oid" select="'2.16.840.1.113883.2.20.6.38'"/>
-	<xsl:variable name="ingredient-role-oid" select="'2.16.840.1.113883.2.20.6.39'"/>
-	<xsl:variable name="notice-type-oid" select="'2.16.840.1.113883.2.20.6.40'"/>
-	<xsl:variable name="related-documents-oid" select="'2.16.840.1.113883.2.20.6.41'"/>
-	<xsl:variable name="din-oid" select="'2.16.840.1.113883.2.20.6.42'"/>
+	<!--  Health Canada Change Code title external lookup, added the two lines below -->
+	<xsl:variable name="codeLookup" select="document('https://raw.githubusercontent.com/HealthCanada/HPFB/master/Controlled-Vocabularies/Content/hpfb-2.16.840.1.113883.2.20.6.36.gc.xml')"/>
 	<xsl:variable name="doctype" select="/v3:document/v3:code/@code" />
-	<xsl:variable name="oid_loc" select="'https://raw.githubusercontent.com/HealthCanada/HPFB/master/Controlled-Vocabularies/Content/'"/>
-	<xsl:variable name="file-prefix" select="'hpfb-'"/>
-	<xsl:variable name="file-suffix" select="'.gc.xml'"/>
-	<xsl:variable name="codeLookup" select="document(concat($oid_loc,$file-prefix,$structure-aspects-oid,$file-suffix))"/>
-	
-	<!-- pbx: for testng hard code language to eng, later read from docuemnt and convert to lowercase -->
-	<xsl:variable name="doc_language" select="'eng'"/>
-	<xsl:variable name="display_language" select="concat('name-',$doc_language)"/>
-	
-	
 	<!-- Process mixins if they exist -->
 	<xsl:template match="/" priority="1">
 
@@ -1531,6 +1481,11 @@ token.
 					<xsl:apply-templates select="v3:component" mode="tableOfContents" />
 				</span>
 
+				<!--<xsl:for-each select="v3:component/v3:structuredBody">
+					<xsl:apply-templates select="v3:component[v3:section/v3:code/@code='20'] | v3:component[v3:section/v3:code/@code='20']/following-sibling::v3:component"/>
+
+					<xsl:apply-templates select="."/>
+				</xsl:for-each>-->
 
 
 
@@ -1590,7 +1545,7 @@ token.
 		<xsl:param name="root" />
 		<xsl:param name="extension" />
 		<xsl:choose>
-			<xsl:when test="($root=$organization-role-oid) and ($extension='1')">
+			<xsl:when test="($root='2.16.840.1.113883.3.989.5.1.4.1.35') and ($extension='1')">
 				<xsl:text>DIN OWNER</xsl:text>
 			</xsl:when>
 		</xsl:choose>
@@ -1697,7 +1652,7 @@ token.
 		<!-- Health Canada Import previous prefix level -->
 		<xsl:param name="parentPrefix" select="''" />
 		<xsl:variable name="code" select="v3:code/@code" />
-		<xsl:variable name="validCode" select="$section-id-oid" />
+		<xsl:variable name="validCode" select="'2.16.840.1.113883.3.989.5.1.4.1.8'" />
 		<!-- Health Canada Lookup whether CODE is included in Table of Contents and find Heading level -->
 		<xsl:variable name="included" select="$codeLookup/gc:CodeList/SimpleCodeList/Row/Value[@ColumnRef='code' and SimpleValue=$code]/../Value[@ColumnRef=concat($doctype,'-toc')]/SimpleValue" />
 		<xsl:variable name="heading" select="$codeLookup/gc:CodeList/SimpleCodeList/Row/Value[@ColumnRef='code' and SimpleValue=$code]/../Value[@ColumnRef=concat($doctype,'-level')]/SimpleValue" />
@@ -1745,25 +1700,25 @@ token.
 				</xsl:when>
 				<!-- Health Canada  Heading level 3,4,5 you concatenate the parent prefix with the prefix -->
 				<xsl:when test="$heading='3'">
-					<a href="#{$code}"><h3 id="{$code}h" style="padding-left:4.5em;margin-top:1.3ex;font-size:1.3em;">
+					<h3 id="{$code}h" style="padding-left:4.5em;margin-top:1.3ex;font-size:1.3em;">
 						<xsl:value-of select="concat($parentPrefix,'.')" />
 						<xsl:value-of select="concat($prefix,' ')" />
 						<xsl:value-of select="v3:title" />
-					</h3></a>
+					</h3>
 				</xsl:when>
 				<xsl:when test="$heading='4'">
-					<a href="#{$code}"><h4 id="{$code}h" style="padding-left:6em;margin-top:1ex;font-size:1.2em;">
+					<h4 id="{$code}h" style="padding-left:6em;margin-top:1ex;font-size:1.2em;">
 						<xsl:value-of select="concat($parentPrefix,'.')" />
 						<xsl:value-of select="concat($prefix,' ')" />
 						<xsl:value-of select="v3:title" />
-					</h4></a>
+					</h4>
 				</xsl:when>
 				<xsl:when test="$heading='5'">
-					<a href="#{$code}"><h5 id="{$code}h" style="padding-left:7.5em;margin-top:0.8ex;margin-bottom:0.8ex;font-size:1.1em;">
+					<h4 id="{$code}h" style="padding-left:7.5em;margin-top:0.8ex;margin-bottom:0.8ex;font-size:1.1em;">
 						<xsl:value-of select="concat($parentPrefix,'.')" />
 						<xsl:value-of select="concat($prefix,' ')" />
 						<xsl:value-of select="v3:title" />
-					</h5></a>
+					</h4>
 				</xsl:when>
 				<xsl:otherwise>
 					Error: <xsl:value-of select="$code" />/<xsl:value-of select="$heading" />
@@ -1861,7 +1816,7 @@ token.
 		<xsl:param name="sectionNumber" select="/.."/>
 
 		<xsl:variable name="code" select="../v3:code/@code" />
-		<xsl:variable name="validCode" select="$section-id-oid" />
+		<xsl:variable name="validCode" select="'2.16.840.1.113883.3.989.5.1.4.1.8'" />
 		<xsl:variable name="tocObject" select="$codeLookup/gc:CodeList/SimpleCodeList/Row/Value[@ColumnRef='code' and SimpleValue=$code]/../Value[@ColumnRef=concat($doctype,'-toc')]/SimpleValue" />
 		<!-- Health Canada Change Draw H3,H4,H5 elements as H3 because they are too small otherwise -->
 		<xsl:variable name="eleSize"><xsl:choose><xsl:when test="$sectionLevel > 3"><xsl:value-of select="'3'" /></xsl:when><xsl:otherwise><xsl:value-of select="$sectionLevel" /></xsl:otherwise></xsl:choose>
@@ -2671,7 +2626,7 @@ token.
 					<tr>
 						<td>
 							<xsl:call-template name="image">
-								<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='2']"/>
+								<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLIMAGE']"/>
 							</xsl:call-template>
 						</td>
 					</tr>
@@ -3016,7 +2971,7 @@ token.
 		<tr>
 			<td>
 				<xsl:call-template name="image">
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='2']"/>
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLIMAGE']"/>
 				</xsl:call-template>
 			</td>
 		</tr>
@@ -3922,15 +3877,7 @@ token.
 			<tr class="formTableRowAlt">
 				<td class="formItem">
 					<!-- replace with the label for the role -->
-					<!-- 
-					value="(document(concat($oid_loc,$file-prefix,$organization-role-oid,$file-suffix)))/gc:CodeList/SimpleCodeList/Row/Value[@ColumnRef='code']/SimpleValue"/>
-					<sch:let name="code-oid-display-name" value="((document(concat($oid_loc,$file-prefix,$din-oid,$file-suffix)))/gc:CodeList/SimpleCodeList/Row[./Value[@ColumnRef='code']/SimpleValue=$code-code]/Value[@ColumnRef=$display_language]/SimpleValue)"/>  
-            
-					 -->
-					<xsl:variable name="role_id" select="./v3:id[@root=$organization-role-oid]/@extension"/>
-					<xsl:variable name="role_name" select="(document(concat($oid_loc,$file-prefix,$organization-role-oid,$file-suffix)))/gc:CodeList/SimpleCodeList/Row[./Value[@ColumnRef='code']/SimpleValue=$role_id]/Value[@ColumnRef=$display_language]/SimpleValue"/>
-					
-					<xsl:value-of select="$role_name"/>
+					<xsl:value-of select="./v3:name"/>
 				</td>
 				<td class="formItem">
 					<xsl:value-of select="./v3:name"/>
