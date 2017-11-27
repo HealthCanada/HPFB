@@ -7,7 +7,7 @@
       <html:p>The values are a subset of HL7 vocabulary, Telecom Use and Telecom Capabilities must be used together.</html:p>
     </Description>
     <AppInfo>
-      <html:p>Authored by HC on Feb 2017.</html:p>
+      <html:p>Authored by HPFB on Nov 2017.</html:p>
     </AppInfo>
   </Annotation>
   <Identification>
