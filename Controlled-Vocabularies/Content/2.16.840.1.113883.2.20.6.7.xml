@@ -1,0 +1,3320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="https://github.com/HealthCanada/HPFB/raw/master/Controlled-Vocabularies/Style-Sheets/current/HC_GeneriCode_Codelist.xsl"?>
+<gc:CodeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:html="http://www.w3.org/1999/xhtml">
+  <Annotation />
+  <Identification>
+    <ShortName>2.16.840.1.113883.2.20.6.7</ShortName>
+    <LongName>Route of Administration</LongName>
+    <Version>1</Version>
+    <CanonicalUri>tbd</CanonicalUri>
+    <CanonicalVersionUri>tbd</CanonicalVersionUri>
+    <LocationUri>tbd</LocationUri>
+    <Agency>
+      <ShortName>HPFB</ShortName>
+      <LongName>Health Products and Food Branch</LongName>
+    </Agency>
+  </Identification>
+  <ColumnSet>
+    <Column Use="required" Id="code">
+      <ShortName>ID</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="name-eng">
+      <ShortName>Name English</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="name-fra">
+      <ShortName>Name French</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="desc-eng">
+      <ShortName>Description English</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="desc-fra">
+      <ShortName>Description French</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="status">
+      <ShortName>Term Status</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="ord">
+      <ShortName>Ordinality</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Use="optional" Id="xref">
+      <ShortName>Cross Reference ID</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="optional" Id="other-identifer">
+      <ShortName>Other Identifer</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="optional" Id="catagory">
+      <ShortName>Category</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="mod-date">
+      <ShortName>Term Modification Time Stamp</ShortName>
+      <Data Type="dateTime" />
+    </Column>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Block/Infiltration</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Bloc/Infiltration</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intra-Articular</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intra-articulaire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>100</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intraintestinal (Upper)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intraintestinale (supérieur)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>104</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Topical (Household)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Topique (Maison)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>105</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Topical (Commercial)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Topique (Milieu commercial)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>106</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Topical (Food Premises)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Topique (Lieux de transformation alimentaire)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>107</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Topical (Hospital/Hc Facilities)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Topique (Hôpitaux, établissements de soins de santé)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>108</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Nasogastric</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Nasogastrique</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>109</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Submucosal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Sous-muqueuse</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intra-Amniotic</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intra-amniotique</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>110</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Nerve Block</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Block Nerveux</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>111</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Infiltration</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Infiltration</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intra-Arterial</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intra-artérielle</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intrabursal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intrabursique</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intracardiac</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intracardiaque</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intracranial</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intracrâniale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intracavitary</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intracavitaire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intracutaneous</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intracutanée</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intradermal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intradermique</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Disinfectant (Barn)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Désinfectant (Ferme)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intralesional</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intralésionnelle</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intramuscular</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intramusculaire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intramammary</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intramammaire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intrabranchial</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intrabranchiale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intradiscal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intradiscale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Inhalation</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Inhalation</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Buccal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Buccale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Disinfectant (Medical Instruments)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Désinfectant (Instruments médicaux)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intrathecal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intrathécale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intraocular</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intraoculaire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intraperitoneal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intrapéritonéale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intrapleural</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intrapleurale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intrapulmonary</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intrapulmonaire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Irrigation</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Irrigation</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intraruminal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intraruminale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Instillation</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Instillation</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intracaudal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intracaudale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intraspinal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intrarachidienne</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intrasynovial</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intrasynoviale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intrathoracic</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intrathoracique</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intubing</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Tubage</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intratracheal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intratrachéale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intravesicular</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intravésiculaire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intrauterine</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intra-utérine</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intravenous</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intraveineuse</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Dental</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Dentaire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intraventricular</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intraventriculaire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Laboratory Test</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Test de laboratoire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Miscellaneous</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Divers</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Nasal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Nasale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Nil</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Néant</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Ophthalmic</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Ophtalmique</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Oral</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Orale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Otic</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Otique</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Periosteal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Périostique</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Parenteral (Unspecified)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Parentérale (non spécifiée)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Dialysis</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Dialyse</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Retrobulbar</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Rétrobulbaire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Refer (See Dosage Form)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Renvoie à la forme posologique</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Rectal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Rectale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Soft Tissue Injection</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Injection dans les tissus mous</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Subarachnoidal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Sous-arachnoÏdienne</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Subcutaneous</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Sous-cutanée</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>66</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Sublingual</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Sublinguale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Surgical</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Chirurgicale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>68</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Teat Dilator</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Dilatateur de trayon</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Teat-Dip</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Bain de trayon</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Epidural</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Épidurale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Topical</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Topique</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>71</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Transdermal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Transdermique</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>72</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Urethral</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Urétrale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>73</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Udder Wash</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Nettoyage du pis</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>74</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Vaginal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Vaginale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>75</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intracoronary</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intracoronarienne</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>76</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Cystography</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Cystography</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>77</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Arthography</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Arthographie</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Disinfectant (Food Premises)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Désinfectant (Lieux de transformation alimetaire)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>80</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intravitreal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intravitreuse</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>82</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intraganglional</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intraganglionnaire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>83</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Implant</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Implant</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>84</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intracavernosal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intracaverneuse</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>85</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Percutaneous</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Percutanée</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>87</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Disinfectant (Contact Lens)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Désinfectant (Lentilles cornéennes)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>88</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intratendinous</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intratendineuse</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>89</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Subgingival</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Sous-gingivale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Disinfectant (Hospital/Hc Facilities)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Désinfectant (Hôpitaux, établissements de soins de santé)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>90</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Extracorporeal</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Extracorporelle</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>92</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>0-Unassigned</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>0-Non attribuée</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>93</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Disinfectant (Domestic)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Désinfectant (Usage domestique)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>94</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Disinfectant (Institutional/Industrial)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Désinfectant (Institutions/Industries)</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>95</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intracervical</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intracervicale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>96</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intravesical</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intravésicale</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>97</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Intravascular</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>Intravasculaire</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-10-04 11:54:28 AM</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>
