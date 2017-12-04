@@ -139,7 +139,7 @@
         <SimpleValue>Targeted (CDSA IV)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Ciblés (LRCDAS IV)</SimpleValue>
+        <SimpleValue>CiblÃ©s (LRCDAS IV)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -174,7 +174,7 @@
         <SimpleValue>Prescription Recommended</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Prescription (recommandé)</SimpleValue>
+        <SimpleValue>Prescription (recommandÃ©)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -244,7 +244,7 @@
         <SimpleValue>CDSA Recommended</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>LRCDAS (recommandé)</SimpleValue>
+        <SimpleValue>LRCDAS (recommandÃ©)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -314,7 +314,7 @@
         <SimpleValue>Ethical</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Spécialité médicale</SimpleValue>
+        <SimpleValue>SpÃ©cialitÃ© mÃ©dicale</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -454,7 +454,7 @@
         <SimpleValue>Narcotic (CDSA I)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Stupéfiant (LRCDAS I)</SimpleValue>
+        <SimpleValue>StupÃ©fiant (LRCDAS I)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -489,7 +489,7 @@
         <SimpleValue>Narcotic (CDSA II)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Stupéfiant (LRCDAS II)</SimpleValue>
+        <SimpleValue>StupÃ©fiant (LRCDAS II)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>

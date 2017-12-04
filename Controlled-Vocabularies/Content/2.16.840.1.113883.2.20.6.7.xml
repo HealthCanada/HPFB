@@ -139,7 +139,7 @@
         <SimpleValue>Intraintestinal (Upper)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Intraintestinale (supÈrieur)</SimpleValue>
+        <SimpleValue>Intraintestinale (sup√©rieur)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -279,7 +279,7 @@
         <SimpleValue>Topical (Hospital/Hc Facilities)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Topique (HÙpitaux, Ètablissements de soins de santÈ)</SimpleValue>
+        <SimpleValue>Topique (H√¥pitaux, √©tablissements de soins de sant√©)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -489,7 +489,7 @@
         <SimpleValue>Intra-Arterial</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Intra-artÈrielle</SimpleValue>
+        <SimpleValue>Intra-art√©rielle</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -594,7 +594,7 @@
         <SimpleValue>Intracranial</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Intracr‚niale</SimpleValue>
+        <SimpleValue>Intracr√¢niale</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -664,7 +664,7 @@
         <SimpleValue>Intracutaneous</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>IntracutanÈe</SimpleValue>
+        <SimpleValue>Intracutan√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -734,7 +734,7 @@
         <SimpleValue>Disinfectant (Barn)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>DÈsinfectant (Ferme)</SimpleValue>
+        <SimpleValue>D√©sinfectant (Ferme)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -769,7 +769,7 @@
         <SimpleValue>Intralesional</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>IntralÈsionnelle</SimpleValue>
+        <SimpleValue>Intral√©sionnelle</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1014,7 +1014,7 @@
         <SimpleValue>Disinfectant (Medical Instruments)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>DÈsinfectant (Instruments mÈdicaux)</SimpleValue>
+        <SimpleValue>D√©sinfectant (Instruments m√©dicaux)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1049,7 +1049,7 @@
         <SimpleValue>Intrathecal</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>IntrathÈcale</SimpleValue>
+        <SimpleValue>Intrath√©cale</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1119,7 +1119,7 @@
         <SimpleValue>Intraperitoneal</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>IntrapÈritonÈale</SimpleValue>
+        <SimpleValue>Intrap√©riton√©ale</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1504,7 +1504,7 @@
         <SimpleValue>Intratracheal</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>IntratrachÈale</SimpleValue>
+        <SimpleValue>Intratrach√©ale</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1539,7 +1539,7 @@
         <SimpleValue>Intravesicular</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>IntravÈsiculaire</SimpleValue>
+        <SimpleValue>Intrav√©siculaire</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1574,7 +1574,7 @@
         <SimpleValue>Intrauterine</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Intra-utÈrine</SimpleValue>
+        <SimpleValue>Intra-ut√©rine</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1819,7 +1819,7 @@
         <SimpleValue>Nil</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>NÈant</SimpleValue>
+        <SimpleValue>N√©ant</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1959,7 +1959,7 @@
         <SimpleValue>Periosteal</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>PÈriostique</SimpleValue>
+        <SimpleValue>P√©riostique</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1994,7 +1994,7 @@
         <SimpleValue>Parenteral (Unspecified)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ParentÈrale (non spÈcifiÈe)</SimpleValue>
+        <SimpleValue>Parent√©rale (non sp√©cifi√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2064,7 +2064,7 @@
         <SimpleValue>Retrobulbar</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>RÈtrobulbaire</SimpleValue>
+        <SimpleValue>R√©trobulbaire</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2099,7 +2099,7 @@
         <SimpleValue>Refer (See Dosage Form)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Renvoie ‡ la forme posologique</SimpleValue>
+        <SimpleValue>Renvoie √† la forme posologique</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2204,7 +2204,7 @@
         <SimpleValue>Subarachnoidal</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Sous-arachnoœdienne</SimpleValue>
+        <SimpleValue>Sous-arachno√èdienne</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2239,7 +2239,7 @@
         <SimpleValue>Subcutaneous</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Sous-cutanÈe</SimpleValue>
+        <SimpleValue>Sous-cutan√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2414,7 +2414,7 @@
         <SimpleValue>Epidural</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>…pidurale</SimpleValue>
+        <SimpleValue>√âpidurale</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2519,7 +2519,7 @@
         <SimpleValue>Urethral</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>UrÈtrale</SimpleValue>
+        <SimpleValue>Ur√©trale</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2729,7 +2729,7 @@
         <SimpleValue>Disinfectant (Food Premises)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>DÈsinfectant (Lieux de transformation alimetaire)</SimpleValue>
+        <SimpleValue>D√©sinfectant (Lieux de transformation alimetaire)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2904,7 +2904,7 @@
         <SimpleValue>Percutaneous</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>PercutanÈe</SimpleValue>
+        <SimpleValue>Percutan√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2939,7 +2939,7 @@
         <SimpleValue>Disinfectant (Contact Lens)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>DÈsinfectant (Lentilles cornÈennes)</SimpleValue>
+        <SimpleValue>D√©sinfectant (Lentilles corn√©ennes)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3044,7 +3044,7 @@
         <SimpleValue>Disinfectant (Hospital/Hc Facilities)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>DÈsinfectant (HÙpitaux, Ètablissements de soins de santÈ)</SimpleValue>
+        <SimpleValue>D√©sinfectant (H√¥pitaux, √©tablissements de soins de sant√©)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3114,7 +3114,7 @@
         <SimpleValue>0-Unassigned</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>0-Non attribuÈe</SimpleValue>
+        <SimpleValue>0-Non attribu√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3149,7 +3149,7 @@
         <SimpleValue>Disinfectant (Domestic)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>DÈsinfectant (Usage domestique)</SimpleValue>
+        <SimpleValue>D√©sinfectant (Usage domestique)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3184,7 +3184,7 @@
         <SimpleValue>Disinfectant (Institutional/Industrial)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>DÈsinfectant (Institutions/Industries)</SimpleValue>
+        <SimpleValue>D√©sinfectant (Institutions/Industries)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3254,7 +3254,7 @@
         <SimpleValue>Intravesical</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>IntravÈsicale</SimpleValue>
+        <SimpleValue>Intrav√©sicale</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>

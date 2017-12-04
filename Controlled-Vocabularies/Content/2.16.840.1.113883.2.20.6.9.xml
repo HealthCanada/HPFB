@@ -66,10 +66,10 @@
         <SimpleValue>1</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>2004 Product Monograph Template – Standard</SimpleValue>
+        <SimpleValue>2004 Product Monograph Template â€“ Standard</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>2004 Product Monograph Template – Standard</SimpleValue>
+        <SimpleValue>2004 Product Monograph Template â€“ Standard</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -136,10 +136,10 @@
         <SimpleValue>2</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>2004 Product Monograph Template – NOCC</SimpleValue>
+        <SimpleValue>2004 Product Monograph Template â€“ NOCC</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>2004 Product Monograph Template – NOCC</SimpleValue>
+        <SimpleValue>2004 Product Monograph Template â€“ NOCC</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -276,10 +276,10 @@
         <SimpleValue>6</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>2016 Product Monograph Template – Standard</SimpleValue>
+        <SimpleValue>2016 Product Monograph Template â€“ Standard</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>2016 Product Monograph Template – Standard</SimpleValue>
+        <SimpleValue>2016 Product Monograph Template â€“ Standard</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -311,10 +311,10 @@
         <SimpleValue>7</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>2016 Product Monograph Template – NOCC</SimpleValue>
+        <SimpleValue>2016 Product Monograph Template â€“ NOCC</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>2016 Product Monograph Template – NOCC</SimpleValue>
+        <SimpleValue>2016 Product Monograph Template â€“ NOCC</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>

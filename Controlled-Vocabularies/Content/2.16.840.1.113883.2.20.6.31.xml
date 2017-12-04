@@ -1081,7 +1081,7 @@
         <SimpleValue>10478</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>PLUS 9021-7993 QUÉBEC INC.</SimpleValue>
+        <SimpleValue>PLUS 9021-7993 QUÃ‰BEC INC.</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
         <SimpleValue></SimpleValue>
@@ -18231,7 +18231,7 @@
         <SimpleValue>3631</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>AIR PRODUCTS CANADA LTD/LTÉE.</SimpleValue>
+        <SimpleValue>AIR PRODUCTS CANADA LTD/LTÃ‰E.</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
         <SimpleValue></SimpleValue>
@@ -18581,7 +18581,7 @@
         <SimpleValue>3722</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>PARALL LTÉE</SimpleValue>
+        <SimpleValue>PARALL LTÃ‰E</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
         <SimpleValue></SimpleValue>
@@ -19106,7 +19106,7 @@
         <SimpleValue>3849</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>LES INDUSTRIES COBOL LTÉE</SimpleValue>
+        <SimpleValue>LES INDUSTRIES COBOL LTÃ‰E</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
         <SimpleValue></SimpleValue>
@@ -22361,7 +22361,7 @@
         <SimpleValue>4524</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>LES PRODUITS SANITAIRES LÉPINE INC.</SimpleValue>
+        <SimpleValue>LES PRODUITS SANITAIRES LÃ‰PINE INC.</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
         <SimpleValue></SimpleValue>
@@ -23131,7 +23131,7 @@
         <SimpleValue>4718</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>HERBAGES NATURBEC LTÉE.</SimpleValue>
+        <SimpleValue>HERBAGES NATURBEC LTÃ‰E.</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
         <SimpleValue></SimpleValue>
@@ -32826,7 +32826,7 @@
         <SimpleValue>9989</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>LABORATOIRES DERMATOLOGIQUES AVÈNE</SimpleValue>
+        <SimpleValue>LABORATOIRES DERMATOLOGIQUES AVÃˆNE</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
         <SimpleValue></SimpleValue>

@@ -104,7 +104,7 @@
         <SimpleValue>French</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>français</SimpleValue>
+        <SimpleValue>franÃ§ais</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>

@@ -104,7 +104,7 @@
         <SimpleValue>United States of America</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Etats-Unis d'Amérique</SimpleValue>
+        <SimpleValue>Etats-Unis d'AmÃ©rique</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>

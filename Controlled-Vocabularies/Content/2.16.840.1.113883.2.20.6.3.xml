@@ -69,7 +69,7 @@
         <SimpleValue>Metered-Dose Aerosol</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>AÈrosol ‡ dose mesurÈe</SimpleValue>
+        <SimpleValue>A√©rosol √† dose mesur√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -139,7 +139,7 @@
         <SimpleValue>Bar (Chewable)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Tablette (‡ m‚cher)</SimpleValue>
+        <SimpleValue>Tablette (√† m√¢cher)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -209,7 +209,7 @@
         <SimpleValue>Ring (Slow-Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Anneau (‡ libÈration lente)</SimpleValue>
+        <SimpleValue>Anneau (√† lib√©ration lente)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -279,7 +279,7 @@
         <SimpleValue>Capsule (Controlled-Delivery)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Capsule (‡ libÈration contrÙlÈe)</SimpleValue>
+        <SimpleValue>Capsule (√† lib√©ration contr√¥l√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -314,7 +314,7 @@
         <SimpleValue>Suppository (Sustained-Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Suppositoire (‡ libÈration prolongÈe)</SimpleValue>
+        <SimpleValue>Suppositoire (√† lib√©ration prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -349,7 +349,7 @@
         <SimpleValue>Tablet (Delayed-Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ (‡ libÈration retardÈe)</SimpleValue>
+        <SimpleValue>Comprim√© (√† lib√©ration retard√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -524,7 +524,7 @@
         <SimpleValue>Metered-Dose Pump</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Pompe ‡ dose mesurÈe</SimpleValue>
+        <SimpleValue>Pompe √† dose mesur√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -559,7 +559,7 @@
         <SimpleValue>Powder For Suspension, Sustained-Release</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Poudre pour suspension, ‡ libÈration prolongÈe</SimpleValue>
+        <SimpleValue>Poudre pour suspension, √† lib√©ration prolong√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -734,7 +734,7 @@
         <SimpleValue>Gel (Controlled-Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Gel (‡ libÈration prolongÈe)</SimpleValue>
+        <SimpleValue>Gel (√† lib√©ration prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -874,7 +874,7 @@
         <SimpleValue>Insert (Extended-Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Insert (¿ libÈration prolongÈe)</SimpleValue>
+        <SimpleValue>Insert (√Ä lib√©ration prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -909,7 +909,7 @@
         <SimpleValue>Tablet (Orally Disintegrating)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ (‡ dÈsintÈgration orale)</SimpleValue>
+        <SimpleValue>Comprim√© (√† d√©sint√©gration orale)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -944,7 +944,7 @@
         <SimpleValue>0-Unassigned</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>0-Non attribuÈe</SimpleValue>
+        <SimpleValue>0-Non attribu√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1049,7 +1049,7 @@
         <SimpleValue>Piece (Chewable)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Morceau (‡ m‚cher)</SimpleValue>
+        <SimpleValue>Morceau (√† m√¢cher)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1084,7 +1084,7 @@
         <SimpleValue>Capsule (Delayed Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Capsule (‡ libÈration retardÈe)</SimpleValue>
+        <SimpleValue>Capsule (√† lib√©ration retard√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1119,7 +1119,7 @@
         <SimpleValue>Tablet (Combined Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ (‡ action combinÈe)</SimpleValue>
+        <SimpleValue>Comprim√© (√† action combin√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1154,7 +1154,7 @@
         <SimpleValue>Capsule (Enteric-Coated)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Capsule (entÈrosoluble)</SimpleValue>
+        <SimpleValue>Capsule (ent√©rosoluble)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1189,7 +1189,7 @@
         <SimpleValue>Capsule (Extended Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Capsule (‡ libÈration prolongÈe)</SimpleValue>
+        <SimpleValue>Capsule (√† lib√©ration prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1259,7 +1259,7 @@
         <SimpleValue>Suspension (Extended-Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Suspension (‡ libÈration prolongÈe)</SimpleValue>
+        <SimpleValue>Suspension (√† lib√©ration prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1329,7 +1329,7 @@
         <SimpleValue>Granules For Suspension, Delayed Release</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Granules pour suspension, ‡ libÈration retardÈe</SimpleValue>
+        <SimpleValue>Granules pour suspension, √† lib√©ration retard√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1364,7 +1364,7 @@
         <SimpleValue>Tablet (Immediate Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ (‡ libÈration immÈdiate)</SimpleValue>
+        <SimpleValue>Comprim√© (√† lib√©ration imm√©diate)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1399,7 +1399,7 @@
         <SimpleValue>Tablet (Chewable)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ (‡ m‚cher)</SimpleValue>
+        <SimpleValue>Comprim√© (√† m√¢cher)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1434,7 +1434,7 @@
         <SimpleValue>Powder (Extended Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Poudre (‡ libÈration prolongÈe)</SimpleValue>
+        <SimpleValue>Poudre (√† lib√©ration prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1469,7 +1469,7 @@
         <SimpleValue>Powder (Metered Dose)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Poudre (‡ dose mesurÈe)</SimpleValue>
+        <SimpleValue>Poudre (√† dose mesur√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1504,7 +1504,7 @@
         <SimpleValue>Vaginal Tablet</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ vaginal</SimpleValue>
+        <SimpleValue>Comprim√© vaginal</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1539,7 +1539,7 @@
         <SimpleValue>Solution (Extended Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Solution (‡ libÈration prolongÈe)</SimpleValue>
+        <SimpleValue>Solution (√† lib√©ration prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1574,7 +1574,7 @@
         <SimpleValue>Tablet For Suspension</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ pour suspension</SimpleValue>
+        <SimpleValue>Comprim√© pour suspension</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1644,7 +1644,7 @@
         <SimpleValue>Spray, Metered Dose</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>PulvÈrisation, ‡ dose mesurÈe</SimpleValue>
+        <SimpleValue>Pulv√©risation, √† dose mesur√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1679,7 +1679,7 @@
         <SimpleValue>Tablet (Delayed And Extended Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ (‡ libÈration retardÈe et prolongÈe)</SimpleValue>
+        <SimpleValue>Comprim√© (√† lib√©ration retard√©e et prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1714,7 +1714,7 @@
         <SimpleValue>Powder (Enteric-Coated)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Poudre (entÈrosoluble)</SimpleValue>
+        <SimpleValue>Poudre (ent√©rosoluble)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1749,7 +1749,7 @@
         <SimpleValue>Patch (Extended Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Timbre (‡ libÈration prolongÈe)</SimpleValue>
+        <SimpleValue>Timbre (√† lib√©ration prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1784,7 +1784,7 @@
         <SimpleValue>Capsule (Immediate Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Capsule (‡ libÈration immÈdiate)</SimpleValue>
+        <SimpleValue>Capsule (√† lib√©ration imm√©diate)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1819,7 +1819,7 @@
         <SimpleValue>Aerosol, Metered Dose</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>AÈrosol, dose mesurÈe</SimpleValue>
+        <SimpleValue>A√©rosol, dose mesur√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1889,7 +1889,7 @@
         <SimpleValue>Spray, Bag-On-Valve</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>PulvÈrisation, sac-sur-valve</SimpleValue>
+        <SimpleValue>Pulv√©risation, sac-sur-valve</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1924,7 +1924,7 @@
         <SimpleValue>Vaginal Tablet, Effervescent</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ vaginal, effervescent</SimpleValue>
+        <SimpleValue>Comprim√© vaginal, effervescent</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -1959,7 +1959,7 @@
         <SimpleValue>Aerosol, Foam</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>AÈrosol, mousse</SimpleValue>
+        <SimpleValue>A√©rosol, mousse</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2064,7 +2064,7 @@
         <SimpleValue>Granules For Suspension,Extended Release</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Granules pour suspension, ‡ libÈration prolongÈe</SimpleValue>
+        <SimpleValue>Granules pour suspension, √† lib√©ration prolong√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2099,7 +2099,7 @@
         <SimpleValue>Tablet (Enteric-Coated)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ (entÈrosoluble)</SimpleValue>
+        <SimpleValue>Comprim√© (ent√©rosoluble)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2134,7 +2134,7 @@
         <SimpleValue>Tablet (Immediate And Delayed-Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ (‡ libÈration immÈdiate et retardÈe)</SimpleValue>
+        <SimpleValue>Comprim√© (√† lib√©ration imm√©diate et retard√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2169,7 +2169,7 @@
         <SimpleValue>Capsule (Immediate And Extended Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Capsule (‡ libÈration immÈdiate et prolongÈe)</SimpleValue>
+        <SimpleValue>Capsule (√† lib√©ration imm√©diate et prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2204,7 +2204,7 @@
         <SimpleValue>Capsule (Immediate And Delayed Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Capsule (‡ libÈration immÈdiate et retardÈe)</SimpleValue>
+        <SimpleValue>Capsule (√† lib√©ration imm√©diate et retard√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2239,7 +2239,7 @@
         <SimpleValue>Tablet (Immediate And Extended Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ(‡ libÈration immÈdiate et prolongÈe)</SimpleValue>
+        <SimpleValue>Comprim√©(√† lib√©ration imm√©diate et prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2344,7 +2344,7 @@
         <SimpleValue>Elixir</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>…lixir</SimpleValue>
+        <SimpleValue>√âlixir</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2379,7 +2379,7 @@
         <SimpleValue>Emulsion</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>…mulsion</SimpleValue>
+        <SimpleValue>√âmulsion</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2414,7 +2414,7 @@
         <SimpleValue>Aerosol</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>AÈrosol</SimpleValue>
+        <SimpleValue>A√©rosol</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2554,7 +2554,7 @@
         <SimpleValue>Tablet (Effervescent)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ (effervescent)</SimpleValue>
+        <SimpleValue>Comprim√© (effervescent)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -2589,7 +2589,7 @@
         <SimpleValue>Drug Premix</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>PrÈmÈlange mÈdicamenteux</SimpleValue>
+        <SimpleValue>Pr√©m√©lange m√©dicamenteux</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3289,7 +3289,7 @@
         <SimpleValue>Plaster</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Empl‚tre</SimpleValue>
+        <SimpleValue>Empl√¢tre</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3359,7 +3359,7 @@
         <SimpleValue>Paste</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>P‚te</SimpleValue>
+        <SimpleValue>P√¢te</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3639,7 +3639,7 @@
         <SimpleValue>Sponge</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>…ponge</SimpleValue>
+        <SimpleValue>√âponge</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3674,7 +3674,7 @@
         <SimpleValue>Capsule (Sustained-Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Capsule (‡ libÈration prolongÈe</SimpleValue>
+        <SimpleValue>Capsule (√† lib√©ration prolong√©e</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3709,7 +3709,7 @@
         <SimpleValue>Disc (Extended-Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Disque (‡ libÈration prolongÈe)</SimpleValue>
+        <SimpleValue>Disque (√† lib√©ration prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3744,7 +3744,7 @@
         <SimpleValue>Syrup (Extended-Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Sirop (‡ libÈration prolongÈe)</SimpleValue>
+        <SimpleValue>Sirop (√† lib√©ration prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3814,7 +3814,7 @@
         <SimpleValue>Tablet (Extended-Release)</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ (‡ libÈration prolongÈe)</SimpleValue>
+        <SimpleValue>Comprim√© (√† lib√©ration prolong√©e)</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -3849,7 +3849,7 @@
         <SimpleValue>Stick</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>B‚ton</SimpleValue>
+        <SimpleValue>B√¢ton</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -4059,7 +4059,7 @@
         <SimpleValue>Tablet</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>ComprimÈ</SimpleValue>
+        <SimpleValue>Comprim√©</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -4164,7 +4164,7 @@
         <SimpleValue>Cream</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>CrËme</SimpleValue>
+        <SimpleValue>Cr√®me</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -4234,7 +4234,7 @@
         <SimpleValue>Toothpaste</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>P‚te dentifrice</SimpleValue>
+        <SimpleValue>P√¢te dentifrice</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
@@ -4339,7 +4339,7 @@
         <SimpleValue>Spray</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>PulvÈrisation</SimpleValue>
+        <SimpleValue>Pulv√©risation</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
