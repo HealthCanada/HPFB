@@ -14,13 +14,13 @@ xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
 </AppInfo>
 </Annotation>
 <Identification>
-<ShortName>hc-2.16.840.1.113883.3.989.5.1.4.1.39</ShortName>
+    <ShortName>2.16.840.1.113883.2.20.6.36</ShortName>
 <LongName xml:lang="Eng">HC 0:n</LongName>
 <LongName xml:lang="Fra">SC 0:n</LongName>
 <Version>1</Version>
 <CanonicalUri>na</CanonicalUri>
-<CanonicalVersionUri>2.16.840.1.113883.3.989.5.1.4.1.39</CanonicalVersionUri>
-<LocationUri>https://raw.githubusercontent.com/HealthCanada/Structured-Content-Information/master/Controlled-Vocabularies/Content/XML/hc-2.16.840.1.113883.3.989.5.1.4.1.39.gc.xml</LocationUri>
+    <CanonicalVersionUri>2.16.840.1.113883.2.20.6.36</CanonicalVersionUri>
+    <LocationUri>https://raw.githubusercontent.com/HealthCanada/Structured-Content-Information/master/Controlled-Vocabularies/Content/XML/2.16.840.1.113883.2.20.6.36.xml</LocationUri>
 <Agency>
 <ShortName>HC</ShortName>
 <LongName xml:lang="Eng">Health Canada</LongName>
