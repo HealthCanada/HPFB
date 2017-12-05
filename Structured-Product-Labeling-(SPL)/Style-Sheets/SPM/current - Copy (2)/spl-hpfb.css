@@ -202,7 +202,7 @@ be represented
 }
 
 .spl h1.toc {	
-        text-indent: 0em;
+    text-indent: 0em;
 	margin-top: 0ex;
 	margin-bottom: 0ex;
 	text-align: left;
@@ -846,7 +846,6 @@ be represented
 .spl .Nobold {	
 	font-weight: normal;
 }
-
 .spl .titlePage {
 	margin:0 auto;
 	text-align:center;
@@ -857,8 +856,8 @@ be represented
 	font-weight:bold;
 	margin-top:35px;
 }
-.spl .titlePage .productName {
-	font-size:1.2em;
+.spl .titlePage .include {
+	font-size:1em;
 	font-weight:bold;
 	margin-top:35px;
 }
@@ -895,12 +894,6 @@ be represented
 .spl .titlePage .rightColunm .date{
 	width:100%;
 }
-.spl .titlePage .rightColunm .date .label{
-	width:50%;
-}
-.spl .titlePage .rightColunm .date .value{
-	width:50%;
-}
 .spl .titlePage .submissionNumber {
 	clear:both;
 	font-size:1em;
@@ -915,4 +908,23 @@ be represented
 	font-size:1em;
 	margin-top:35px;
 }
-
+.spl .titlePage table tr .borderCellLeft {
+    border: 1px solid black;
+    text-align: left;
+}
+.spl .titlePage table tr .borderCellRight {
+    border: 1px solid black;
+    text-align: right;
+}
+.widthFull {
+    width:99%;
+}
+.widthHalf {
+    width:49%;
+}
+.verticalTop {
+ vertical-align: top;
+}
+.minSpace {
+ min-height: 30px;
+}
