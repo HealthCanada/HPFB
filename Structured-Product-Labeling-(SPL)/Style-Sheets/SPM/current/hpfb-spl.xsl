@@ -40,9 +40,9 @@ Revision: $Id: spl-common.xsl,v 2.0 2006/08/18 04:11:00 sbsuggs Exp $
 	<xsl:param name="show-section-numbers" select="/.."/>
 	<!-- Whether to process mixins -->
 	<xsl:param name="process-mixins" select="true()"/>
-	<xsl:param name="core-base-url" select="/.." />
+	<xsl:param name="core-base-url" select="'https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/'"/>
 	<!-- This is the CSS link put into the output -->
-	<xsl:param name="css" select="concat($core-base-url, 'spl-hpfb-core.css')" />
+	<xsl:param name="css" select="concat($core-base-url, 'hpfb-spl-core.css')" />
 	<!-- Where to find JavaScript resources -->
 	<xsl:param name="resourcesdir" select="$core-base-url" />
 	<xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
