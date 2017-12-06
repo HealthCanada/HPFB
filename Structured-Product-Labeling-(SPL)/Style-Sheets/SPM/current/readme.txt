@@ -1,1 +1,0 @@
-The current release (both zipped and exploded) is located in this folder.
