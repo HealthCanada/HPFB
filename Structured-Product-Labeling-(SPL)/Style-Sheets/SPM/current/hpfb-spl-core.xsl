@@ -57,12 +57,12 @@ https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/St
 							 exclude-result-prefixes="exsl msxsl v3 xsl xsi str">
 	<xsl:param name="show-data" select="1"/>
 	<xsl:param name="root" select="/"/>
-	<xsl:param name="core-base-url" select="/.."/>
-	<xsl:param name="css" select="concat($core-base-url,'spl-hpfb.css')"/>
+	<xsl:param name="core-base-url" select="'https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/'"/>
+	<xsl:param name="css" select="concat($core-base-url,'hpfb-spl-core.css')"/>
 	<xsl:param name="show-section-numbers" select="/.."/>
-	<xsl:param name="resourcesdir" select="/.." />
+	<xsl:param name="resourcesdir" select="'https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/'"/>
 
-	<xsl:param name="vocabulary" select="document('hpfb-labels.xml')"/>
+	<xsl:param name="vocabulary" select="document('hpfb-spl-labels.xml')"/>
 
 	<xsl:output method="html" version="1.0" encoding="UTF-8" indent="no" doctype-public="-"/>
 	<xsl:strip-space elements="*"/>
@@ -514,7 +514,7 @@ https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/St
 		</div>
 	</xsl:template>
 	<xsl:template name="include-custom-items">
-		<script src="{$resourcesdir}spl.js" type="application/javascript" charset="utf-8">/* */</script>
+		<script src="{$resourcesdir}hpfb-spl.js" type="application/javascript" charset="utf-8">/* */</script>
 	</xsl:template>
 <!-- Start PLR Information templates
 			 1. product code
