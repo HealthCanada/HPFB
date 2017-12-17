@@ -1,30 +1,37 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/spl.xsl"?>
-<?xml-stylesheet type="text/css" href="https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/spl.css"?>
-<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Schema/current/SPL.xsd">
-<typeId assigningAuthorityName="Health Products and Food Branch"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/hpfb-spl.xsl"?>
+<?xml-stylesheet type="text/css" href="https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/hpfb-spl-core.css"?>
+
+
+
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:hl7-org:v3 https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Schema/current/SPL.xsd">
+  <typeId assigningAuthorityName="Health Products and Food Branch"/>
   <templateId extension="1" root="2.16.840.1.113883.2.20.6.9"/>
-  <id root="a6c469cf-5820-48a8-b140-f8f4d63f5600"/>
+  <templateId extension="308" root="2.16.840.1.113883.2.20.6.11"/>
+  <id root="bb6c469cf-5820-48a8-b140-f8f4d63f5700"/>
   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.10" displayName="Product Monograph"/>
-  <title>2004 Product Monograph Template - Standard for ???</title>
-  <effectiveTime value="20160629"/>
+  <title>2004 Product Monograph Template  - Standard for a ???</title>
+  <effectiveTime value="20170629235959">
+    <originalText description="Date of Initial Approval">20100629</originalText>
+  </effectiveTime>
   <languageCode code="ENG" codeSystem="2.16.840.1.113883.2.20.6.29" displayName="English"/>
   <setId root="8b3949c2-ed8d-4e1e-a743-cb415ecc8aa1"/>
-  <versionNumber value="1"/>
+  <versionNumber value="1" description="Draft"/>
   <author>
     <time/>
     <assignedEntity>
       <representedOrganization>
         <id root="2.16.840.1.113883.2.20.6.31" extension="Test Company ID: 1"/>
         <id root="2.16.840.1.113883.2.20.6.33" extension="1"/>
-        <name>Test Company ID: 1</name>
+        <name>Test Company ID: 111</name>
         <contactParty>
           <addr>
             <streetAddressLine>12 Applewood Ave</streetAddressLine>
             <city>Ottawa</city>
             <state>Ontario</state>
             <postalCode>K1S 0B5</postalCode>
-            <country codeSystem="2.16.840.1.113883.2.20.6.17" code="CAN"/>
+            <country codeSystem="2.16.840.1.113883.2.20.6.17" code="1" displayName="Canada"/>
           </addr>
           <telecom value="tel:+1-613-239-9919"/>
           <telecom value="mailto:a@b.com"/>
@@ -46,7 +53,7 @@
                   <city>Ottawa</city>
                   <state>Ontario</state>
                   <postalCode>K1S 0B3</postalCode>
-                  <country codeSystem="2.16.840.1.113883.2.20.6.17" code="CAN"/>
+                  <country codeSystem="2.16.840.1.113883.2.20.6.17" code="1" displayName="Canada"/>
                 </addr>
 
               </assignedOrganization>
@@ -67,7 +74,7 @@
                   <city>Ottawa</city>
                   <state>Ontario</state>
                   <postalCode>K1S 0C3</postalCode>
-                  <country codeSystem="2.16.840.1.113883.2.20.6.17" code="CAN"/>
+                  <country codeSystem="2.16.840.1.113883.2.20.6.17" code="1" displayName="Canada"/>
                 </addr>
               </assignedOrganization>
             </assignedEntity>
@@ -84,18 +91,338 @@
           <code code="48780-1" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="SPL product data elements section"/>
           <title/>
           <text/>
-          <effectiveTime value="20160629"/>
+          <effectiveTime>
+            <low value="20170629235959-0600"/>
+            <high value="20170629235959-0600"/>
+          </effectiveTime>
+          <subject>           
+            <manufacturedProduct>
+              <id root="bdeefc11-4315-41e3-8c56-83e8bf4f770c"/>
+              <manufacturedProduct>
+                <code code="12" codeSystem="2.16.840.1.113883.2.20.6.42" displayName="DIN A"/>
+                <name>Brand Name for product 1</name>
+
+                <formCode code="2" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Aerosol"/>
+                <asSpecializedKind>
+                  <generalizedMaterialKind>
+                    <code></code>
+                  </generalizedMaterialKind>
+                </asSpecializedKind>
+                <asEntityWithGeneric>
+                  <genericMedicine>
+                    <name> Product 1(Proper/Generic name)&#169;&#8482;&#174;</name>
+                  </genericMedicine>
+                </asEntityWithGeneric>
+                <asEquivalentEntity>
+                  <definingMaterialKind>                  
+                    <code/>
+                  </definingMaterialKind>
+                </asEquivalentEntity>
+
+                <ingredient classCode="CNTM">
+                  <!-- This denotes that it MAY contain an ingredeint as the quantity is omited-->
+                  <ingredientSubstance>
+                    <code code="9B1B8HD56911" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-105972"/>
+
+                    <name>A-105972</name>
+                  </ingredientSubstance>
+
+                </ingredient>
+                <ingredient classCode="CNTM">
+                  <!-- This denotes that it does not contain an ingredeint as the numerator is 0-->
+                  <quantity>
+                    <numerator value="0" unit="mg"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="44E44Z56KO" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-151892"/>
+                    <name>A-151892</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <!-- This denotes that the active ingredient is already used in another approved product and is used as a compound product -->
+                  <quantity>
+                    <numerator value="12" unit="mg"/>
+                    <denominator value="100" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="88888-333" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="MIDAZOLAM HYDROCHLORIDE"/>
+                    <name>MIDAZOLAM HYDROCHLORIDE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <!-- This denotes that the ingredient is inactive -->
+                  <quantity>
+                    <numerator value="1" unit="1"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="P70V90DFSK" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-160621"/>
+                    <name>A-160621</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIM">
+                  <!--This denotes that the moiety is the basis of strength  -->
+                  <confidentialityCode/>
+                  <quantity>
+                    <numerator unit="1"/>
+                    <denominator unit="1"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="9B1B8HD569" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-105972"/>
+                    <name>A-105972</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="zz" codeSystem="2.16.840.1.113883.2.20.6.14"/>
+                        <name/>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIB">
+                  <!-- This denotes that the Basis of Strength for the Active ingredient is the active ingredient -->
+                  <quantity>
+                    <numerator value="12" unit="1"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="44E44Z56KO" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-151892"/>
+                    <name>A-151892</name>
+                  </ingredientSubstance>
+
+                </ingredient>
+                <asContent>
+                  <quantity>
+                    <numerator value="1" unit="1"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+                    <code code="1234" codeSystem="2.16.840.1.113883.2.20.6.20"/>
+                    <formCode code="C43233" displayName="PACKAGE" codeSystem="2.16.840.1.113883.2.20.6.32"/>
+                    <asManufacturedProduct>
+                      <subjectOf>
+                        <approval>
+                          <id extension="NDS123456" root="2.16.840.1.113883.2.20.6.42"/>
+                          <code code="308" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="NDS"/>
+                          <author>
+                            <territorialAuthority>
+                              <territory>
+                                <code code="1" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                              </territory>
+                            </territorialAuthority>
+                          </author>
+                        </approval>
+                      </subjectOf>
+                    </asManufacturedProduct>
+                  </containerPackagedProduct>
+                  <subjectOf>
+                    <approval/>
+                  </subjectOf>
+                </asContent>
+              </manufacturedProduct>
+              <subjectOf>
+                <marketingAct>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="test"/>
+                  <statusCode code="active"/>
+                  <effectiveTime>
+                    <low value="20160606"/>
+                    <high value="20160101"/>
+                  </effectiveTime>
+                </marketingAct>
+              </subjectOf>
+              <subjectOf>
+                <approval>
+                  <code code="308" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="NDS"/>
+                  <effectiveTime>
+                    <low value="12341212"/>
+                    <high value="12341212"/>
+                  </effectiveTime>
+                  <author>
+                    <territorialAuthority>
+                      <territory>
+                        <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.27"/>
+                      </territory>
+                    </territorialAuthority>
+                  </author>
+                </approval>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Color"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="white" xsi:type="CE">
+                    <originalText>more off white</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Color"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="white" xsi:type="CE">
+                    <originalText>more fluffy</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Color"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="white" xsi:type="CE">
+                    <originalText>more dreamy</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Image"/>
+                  <value xsi:type="ED" mediaType="image/jpeg">
+                    <reference value="red-pill-2.jpg"/>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Shape"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="capsule" xsi:type="CE">
+                    <originalText>capsule like</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="4" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Flavor"/>
+                  <value code="C73391" codeSystem="2.16.840.1.113883.2.20.6.26" displayName="grape" xsi:type="CE">
+                    <originalText>wild grape</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="5" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Score"/>
+                  <value value="1" xsi:type="INT"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="6" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Production Amount"/>
+                  <value xsi:type="INT" value="10000"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="7" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Combination Product"/>
+                  <value code="C102835" codeSystem="2.16.840.1.113883.2.20.6.30" xsi:type="CV"
+                    displayName="Type 2: Prefilled Drug Delivery Device/System"/>
+                </characteristic>
+              </subjectOf>
+
+              <subjectOf>
+                <characteristic>
+                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Size"/>
+                  <value unit="mm" value="18" xsi:type="PQ"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="12" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Imprint"/>
+                  <value xsi:type="ST">05</value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="13" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Pharmaceutical Standard"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="BP" xsi:type="CE"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="13" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Pharmaceutical Standard"/>
+                  <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP" xsi:type="CE"/>
+                </characteristic>
+              </subjectOf>
+
+              <subjectOf>
+                <characteristic>
+                  <code code="14" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Scheduling Symbol"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Pr" xsi:type="CE"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="14" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Scheduling Symbol"/>
+                  <value code="2" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="N" xsi:type="CE"/>
+                </characteristic>
+              </subjectOf>
+
+              <subjectOf>
+                <characteristic>
+                  <code code="15" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Therapeutic Class"/>
+                  <value code=" A01AA51" codeSystem="2.16.840.1.113883.2.20.6.6" displayName=" Sodium Fluoride, Combinations" xsi:type="CE"
+                  />
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="15" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Therapeutic Class"/>
+                  <value code=" A03CA02" codeSystem="2.16.840.1.113883.2.20.6.6" displayName=" Clidinium And Psycholeptics" xsi:type="CE"/>
+                </characteristic>
+              </subjectOf>
+
+              <consumedIn>
+                <substanceAdministration>
+                  <routeCode code="12" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Intra-Arterial"/>
+                  
+                </substanceAdministration>
+              </consumedIn>
+              <consumedIn>
+                <substanceAdministration>
+                  <routeCode code="14" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Intracardiac"/>
+                </substanceAdministration>
+              </consumedIn>
+              <consumedIn>
+                <substanceAdministration>
+                  <routeCode code="14" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Intracardiac"/>
+                </substanceAdministration>
+              </consumedIn>
+            </manufacturedProduct>
+          </subject>
           <subject>
             <manufacturedProduct>
-              <manufacturedProduct >
-                <code code="12" codeSystem="2.16.840.1.113883.2.20.6.42" displayName="DIN"/>
-                <name>Brand Name</name>
+              <manufacturedProduct>
+
+                <code code="13" codeSystem="2.16.840.1.113883.2.20.6.42" displayName="DIN C"/>
+                <name>Brand Name for product 2</name>
+
                 <formCode code="2" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Aerosol"/>
                 <asEntityWithGeneric>
                   <genericMedicine>
-                    <name>(Proper/Generic name)&#169;&#8482;&#174;</name>
+                    <name> Product 2 (Proper/Generic name)&#169;&#8482;&#174;</name>
                   </genericMedicine>
                 </asEntityWithGeneric>
+                <asEquivalentEntity>
+                  <definingMaterialKind>
+                    <code/>
+                  </definingMaterialKind>
+                </asEquivalentEntity>
+
+                <ingredient classCode="CNTM">
+                  <!-- This denotes that it MAY contain an ingredeint as the quantity is omited-->
+                  <ingredientSubstance>
+                    <code code="9B1B8HD56911" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-105972"/>
+
+                    <name>A-105972</name>
+                  </ingredientSubstance>
+
+                </ingredient>
+                <ingredient classCode="CNTM">
+                  <!-- This denotes that it does not contain an ingredeint as the numerator is 0-->
+                  <quantity>
+                    <numerator value="0" unit="mg"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="44E44Z56KO" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-151892"/>
+                    <name>A-151892</name>
+                  </ingredientSubstance>
+                </ingredient>
                 <ingredient classCode="IACT">
                   <!-- This denotes that the active ingredient is already used in another approved product and is used as a compound product -->
                   <quantity>
@@ -120,9 +447,9 @@
                 </ingredient>
                 <ingredient classCode="ACTIM">
                   <!--This denotes that the moiety is the basis of strength  -->
-                  <confidentialityCode></confidentialityCode>
+                  <confidentialityCode/>
                   <quantity>
-                    <numerator  unit="1"/>
+                    <numerator unit="1"/>
                     <denominator unit="1"/>
                   </quantity>
                   <ingredientSubstance>
@@ -146,7 +473,7 @@
                     <code code="44E44Z56KO" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-151892"/>
                     <name>A-151892</name>
                   </ingredientSubstance>
-                  
+
                 </ingredient>
                 <asContent>
                   <quantity>
@@ -154,15 +481,22 @@
                     <denominator value="1" unit="1"/>
                   </quantity>
                   <containerPackagedProduct>
-                    <code code="1234" codeSystem="2.16.840.1.113883.2.20.6.28"/>
-                    <formCode code="C43233" displayName="PACKAGE" codeSystem="2.16.840.1.113883.2.20.6.26"/>
+                    <code code="1234" codeSystem="2.16.840.1.113883.2.20.6.20"/>
+                    <formCode code="C43233" displayName="PACKAGE" codeSystem="2.16.840.1.113883.2.20.6.32"/>
+                    <asManufacturedProduct>
+                      <subjectOf>
+                        <approval/>
+                      </subjectOf>
+                    </asManufacturedProduct>
                   </containerPackagedProduct>
+                  <subjectOf>
+                    <approval/>
+                  </subjectOf>
                 </asContent>
-                
               </manufacturedProduct>
               <subjectOf>
                 <marketingAct>
-                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.18"/>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="TBD"/>
                   <statusCode code="active"/>
                   <effectiveTime>
                     <low value="20160606"/>
@@ -171,12 +505,15 @@
               </subjectOf>
               <subjectOf>
                 <approval>
-                  <id extension="MY PM ID" root="2.16.840.1.113883.2.20.6.28"/>
-                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="NDS"/>
+                  <code code="308" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="NDS"/>
+                  <effectiveTime>
+                    <low value="12341212"/>
+                    <high value="12341212"/>
+                  </effectiveTime>
                   <author>
                     <territorialAuthority>
                       <territory>
-                        <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.27"/>
+                        <code code="1" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
                       </territory>
                     </territorialAuthority>
                   </author>
@@ -184,16 +521,119 @@
               </subjectOf>
               <subjectOf>
                 <characteristic>
-                  <code code="4" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Color"/>
-                  <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="white" xsi:type="CE"/>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Color"/>
+                  <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="white" xsi:type="CE">
+                    <originalText>more creamy</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+
+              <subjectOf>
+                <characteristic>
+                  <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Shape"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="capsule" xsi:type="CE">
+                    <originalText>capsule like</originalText>
+                  </value>
                 </characteristic>
               </subjectOf>
               <subjectOf>
-                <policy classCode="ORGPOL">
-                  <code code="6" codeSystem="2.16.840.1.113883.2.20.6.22" displayName="Prescription"/>
-                </policy>
+                <characteristic>
+                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Size"/>
+                  <value unit="mm" value="18" xsi:type="PQ"/>
+                </characteristic>
               </subjectOf>
-              
+              <subjectOf>
+                <characteristic>
+                  <code code="5" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Score"/>
+                  <value value="1" xsi:type="INT"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="12" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Imprint"/>
+                  <value xsi:type="ST">05</value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="4" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Flavor"/>
+                  <value code="C73391" codeSystem="2.16.840.1.113883.2.20.6.26" displayName="grape" xsi:type="CE">
+                    <originalText>wild grape</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Image"/>
+                  <value xsi:type="ED" mediaType="image/jpeg">
+                    <reference value="red-pill-2.jpg"/>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="7" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Combination Product"/>
+                  <value code="C102835" codeSystem="2.16.840.1.113883.2.20.6.30" xsi:type="CV"
+                    displayName="Type 2: Prefilled Drug Delivery Device/System"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="6" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Production Amount"/>
+                  <value xsi:type="INT" value="10000"/>
+                </characteristic>
+              </subjectOf>
+
+              <subjectOf>
+                <characteristic>
+                  <code code="13" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Pharmaceutical Standard"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="BP" xsi:type="CE"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="13" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Pharmaceutical Standard"/>
+                  <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP" xsi:type="CE"/>
+                </characteristic>
+              </subjectOf>
+
+              <subjectOf>
+                <characteristic>
+                  <code code="14" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Scheduling Symbol"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Pr" xsi:type="CE"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="14" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Scheduling Symbol"/>
+                  <value code="2" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="N" xsi:type="CE"/>
+                </characteristic>
+              </subjectOf>
+
+              <subjectOf>
+                <characteristic>
+                  <code code="15" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Therapeutic Class"/>
+                  <value code=" A01AA51" codeSystem="2.16.840.1.113883.2.20.6.6" displayName=" Sodium Fluoride, Combinations" xsi:type="CE"
+                  />
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="15" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Therapeutic Class"/>
+                  <value code=" A03CA02" codeSystem="2.16.840.1.113883.2.20.6.6" displayName=" Clidinium And Psycholeptics" xsi:type="CE"/>
+                </characteristic>
+              </subjectOf>
+
+              <consumedIn>
+                <substanceAdministration>
+                  <routeCode code="12" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Intra-Arterial"/>
+                </substanceAdministration>
+              </consumedIn>
+              <consumedIn>
+                <substanceAdministration>
+                  <routeCode code="14" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Intracardiac"/>
+                </substanceAdministration>
+              </consumedIn>
               <consumedIn>
                 <substanceAdministration>
                   <routeCode code="14" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Intracardiac"/>
@@ -209,84 +649,6 @@
           <code code="450" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Title Page"/>
           <effectiveTime value="20160629"/>
           <component>
-            <section ID="Ld8d30d86-e343-48f4-9cec-524834b3403b">
-              <id root="eed00b53-cdb2-4aa6-9e82-88b7d793b208"/>
-              <code code="60" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Scheduling Symbol"/>
-              <title>Scheduling Symbol</title>
-              <effectiveTime value="20160629"/>
-              <component>
-                <section ID="L79d35375-0da3-429d-b858-bba36a4252e7">
-                  <id root="a67b4df8-26d6-42b5-bb29-9920553bbbb6"/>
-                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Pr"/>
-                  <effectiveTime value="20160629"/>
-                </section>
-              </component>
-            </section>
-          </component>
-          <component>
-            <section ID="Ld8d30d86-e343-48f4-9cec-534834b3803b">
-              <id root="eed00b53-cdb2-4aa6-9e82-88b7d793b208"/>
-              <code code="60" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Scheduling Symbol"/>
-              <title>Scheduling Symbol</title>
-              <effectiveTime value="20160629"/>
-              <component>
-                <section ID="L79d35375-0da3-429d-b858-bba46a4252e7">
-                  <id root="a67b4df8-26d6-42b5-bb29-9920553bbbb6"/>
-                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Pr"/>
-                  <effectiveTime value="20160629"/>
-                </section>
-              </component>
-            </section>
-          </component>
-          <component>
-            <section ID="L53f9cb9c-0cba-4e25-a782-8ec4c7b4c91f">
-              <id root="ab53ab75-7f18-4dd4-aa5b-6d5c03322759"/>
-              <code code="110" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Pharmaceutical Standard"/>
-              <title>Pharmaceutical Standard</title>
-              <effectiveTime value="20160728"/>
-              <component>
-                <section ID="L79d35375-0da3-429d-b858-bbd36a4252e7">
-                  <id root="a67b4df8-26d6-42b5-bb29-9920553bbbb6"/>
-                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="BP"/>
-                  <effectiveTime value="20160629"/>
-                </section>
-              </component>
-            </section>
-          </component>
-          <component>
-            <section ID="L11683f96-4f1e-412d-8a75-aa33c44c7090">
-              <id root="ff987816-850e-4d27-a595-a7b152e021a9"/>
-              <code code="120" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Therapeutic Classification"/>
-              <title>Therapeutic Classification</title>
-              <effectiveTime value="20160728"/>
-              <component>
-                <section ID="L79d35375-0da3-429d-b958-bba36a4252e7">
-                  <id root="a67b4df8-26d6-42b5-bb29-9920553bbbb6"/>
-                  <code code="A01AB03" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="Chlorhexidine"/>
-                  <effectiveTime value="20160629"/>
-                </section>
-              </component>
-            </section>
-          </component>
-          <component>
-            <section ID="L98681d8d-4f72-4d0c-8472-9f6b70e87e39">
-              <id root="cf623bb7-10bf-4e92-92f3-873c023617c0"/>
-              <code code="150" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Date of Preparation"/>
-              <title>Date of Preparation</title>
-              <text>12 Jan 2017</text>
-              <effectiveTime value="20160728"/>
-            </section>
-          </component>
-          <component>
-            <section ID="Le0ec2cc0-bd00-4597-af13-b1aedac0f7eb">
-              <id root="3bc9aa10-da31-47c5-9ec1-4d97a55a5fdf"/>
-              <code code="160" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Date of Revision"/>
-              <title>Date of Revision</title>
-              <text>14 Jan 2017</text>
-              <effectiveTime value="20160728"/>
-            </section>
-          </component>
-          <component>
             <section ID="L732eb9ef-0549-4826-9a1e-e7bbaa23849b">
               <id root="c998576c-41f8-45e9-a6bb-f0f5c5616a51"/>
               <code code="170" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Submission Control Number"/>
@@ -300,11 +662,15 @@
               <id root="c7391c3d-5f03-45de-a1c4-928b23f37d6a"/>
               <code code="440" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Footnote"/>
               <title>Footnote</title>
-              <text>a list <list styleCode="1">
-                  <item>a</item>
-                  <item>b</item>
-                  <item>c</item>
+              <text>a list <list listType="ordered" styleCode="LittleAlpha"> 
                   <item>aa</item>
+                  <item>bb</item>
+                  <item>cc</item>
+                  <item>dd</item>
+                <item><caption>&#160;</caption><content styleCode="underline">Groceries</content></item>
+                <item><caption>+ </caption>Milk</item>
+                <item><caption>- </caption>Eggs</item>
+                <item><caption>* </caption>Cheese</item>
                 </list>
               </text>
               <effectiveTime value="20160802"/>
@@ -315,32 +681,9 @@
               <id root="c7391c3d-5f03-45de-a1c4-928b23f37d6a"/>
               <code code="520" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Table Of Contents"/>
               <title>Table Of Contents</title>
-              <text>Table Of Contents<list styleCode="1">
-                  <item>Section 1</item>
-                  <item>Part 1</item>
-                  <item>Part 2</item>
-                  <item>Part 3</item>
-                </list>
-              </text>
               <effectiveTime value="20160802"/>
             </section>
           </component>
-          <component>
-            <section ID="Lddde57f5-cc38-4f5b-8055-c1d4578ce354">
-              <id root="c7391c3d-5f03-45de-a1c4-928b23f37d6a"/>
-              <code code="520" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Table Of Contents"/>
-              <title>Table Of Contents</title>
-              <text>Table Of Contents<list styleCode="1">
-                <item>Section 1</item>
-                <item>Part 1</item>
-                <item>Part 2</item>
-                <item>Part 3</item>
-              </list>
-              </text>
-              <effectiveTime value="20160802"/>
-            </section>
-            </component>
-
         </section>
       </component>
       <component>
@@ -379,8 +722,8 @@
                         <paragraph>Oral</paragraph>
                       </td>
                       <td valign="top">
-                        <paragraph>Tablet <br/> Efavirenz 600 mg/</paragraph>
-                        <paragraph>Emtricitabine 200 mg/Tenofovir Disoproxil Fumarate 300 mg</paragraph>
+                        <paragraph>Tablet <br/> Something 600 mg/</paragraph>
+                        <paragraph>Emtricitabine 200 mg/Tenofovir Dopamine Fumarate 300 mg</paragraph>
                       </td>
                       <td valign="top">
                         <paragraph>None</paragraph>
@@ -855,8 +1198,8 @@
                 <section ID="L467c3135-bc95-477c-8730-85181254e3c2">
                   <id root="80c888cd-11af-447b-a646-ccb77cd15e1b"/>
                   <code code="240-30" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Missed Dose"/>
-                  <title>Missed Dose</title>
-                  <text>some text</text>
+                  <title ID="aa">Missed Dose</title>
+                  <text>some<linkHtml  title="test"  href="aa"></linkHtml> text</text>
                   <effectiveTime value="20160728"/>
                 </section>
               </component>
@@ -1101,65 +1444,66 @@
                   <title>Drug Substance</title>
                   <text>some text</text>
                   <effectiveTime value="20160802"/>
-              <component>
-                <section ID="L32875272-8229-4c12-919e-827854ddd78a">
-                  <id root="0134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-                  <code code="300-10-10" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Proper name"/>
-                  <title>Proper name</title>
-                  <text>some text</text>
-                  <effectiveTime value="20160802"/>
-                </section>
-              </component>
-              <component>
-                <section ID="L42875272-8229-4c12-919e-827854ddd78a">
-                  <id root="0134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-                  <code code="300-10-20" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Chemical name"/>
-                  <title>Chemical name</title>
-                  <text>some text</text>
-                  <effectiveTime value="20160802"/>
-                </section>
-              </component>
-              <component>
-                <section ID="L42875272-8229-4c12-919e-827954ddd78a">
-                  <id root="0134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-                  <code code="300-10-30" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Molecular formula and molecular mass"/>
-                  <title>Molecular formula and molecular mass</title>
-                  <text>
-                    <paragraph><renderMultiMedia referencedObject="L7927268d-5176-4ab0-b46e-46b6a6a26bb4"/></paragraph>
-                    <paragraph>C<sub>17</sub>H<sub>17</sub>NCl<sub>2</sub>HCl</paragraph>
-                    <paragraph>342.7</paragraph>
-                  </text>
-                  <effectiveTime value="20160802"/>
                   <component>
-                    <observationMedia ID="L7927268d-5176-4ab0-b46e-46b6a6a26bb4">
-                      <text>Chemistry is Fun</text>
-                      <value xsi:type="ED" mediaType="image/jpeg">
-                        <reference value="chem.jpg"/>
-                      </value>
-                    </observationMedia>
+                    <section ID="L32875272-8229-4c12-919e-827854ddd78a">
+                      <id root="0134d52c-f9d4-4698-a082-84b29ee3d95a"/>
+                      <code code="300-10-10" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Proper name"/>
+                      <title>Proper name</title>
+                      <text>some text</text>
+                      <effectiveTime value="20160802"/>
+                    </section>
+                  </component>
+                  <component>
+                    <section ID="L42875272-8229-4c12-919e-827854ddd78a">
+                      <id root="0134d52c-f9d4-4698-a082-84b29ee3d95a"/>
+                      <code code="300-10-20" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Chemical name"/>
+                      <title>Chemical name</title>
+                      <text>some text</text>
+                      <effectiveTime value="20160802"/>
+                    </section>
+                  </component>
+                  <component>
+                    <section ID="L42875272-8229-4c12-919e-827954ddd78a">
+                      <id root="0134d52c-f9d4-4698-a082-84b29ee3d95a"/>
+                      <code code="300-10-30" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Molecular formula and molecular mass"/>
+                      <title>Molecular formula and molecular mass</title>
+                      <text>
+                        <paragraph><renderMultiMedia referencedObject="L7927268d-5176-4ab0-b46e-46b6a6a26bb4"/></paragraph>
+                        <paragraph>C<sub>17</sub>H<sub>17</sub>NCl<sub>2</sub>HCl</paragraph>
+                        <paragraph>342.7</paragraph>
+                      </text>
+                      <effectiveTime value="20160802"/>
+                      <component>
+                        <observationMedia ID="L7927268d-5176-4ab0-b46e-46b6a6a26bb4">
+                          <text>Chemistry is Fun</text>
+                          <value xsi:type="ED" mediaType="image/jpeg">
+                            <reference value="chem.jpg"/>
+                          </value>
+                        </observationMedia>
+                      </component>
+                    </section>
+                  </component>
+                  <component>
+                    <section ID="L42875272-8229-4c12-a19e-827954ddd78a">
+                      <id root="0134d52c-f9d4-4698-a082-84b29ee3d95a"/>
+                      <code code="300-10-40" codeSystem="2.16.840.1.113883.2.20.6.8"
+                        displayName="Structural formula, including relative and absolute stereochemistry"/>
+                      <title>Structural formula, including relative and absolute stereochemistry</title>
+                      <text>some text</text>
+                      <effectiveTime value="20160802"/>
+                    </section>
+                  </component>
+                  <component>
+                    <section ID="L42a75272-8229-4c12-a19e-827954ddd78a">
+                      <id root="0134d52c-f9d4-4698-a082-84b29ee3d95a"/>
+                      <code code="300-10-50" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Physicochemical properties"/>
+                      <title>Physicochemical properties</title>
+                      <text>some text</text>
+                      <effectiveTime value="20160802"/>
+                    </section>
                   </component>
                 </section>
               </component>
-              <component>
-                <section ID="L42875272-8229-4c12-a19e-827954ddd78a">
-                  <id root="0134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-                  <code code="300-10-40" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Structural formula, including relative and absolute stereochemistry"/>
-                  <title>Structural formula, including relative and absolute stereochemistry</title>
-                  <text>some text</text>
-                  <effectiveTime value="20160802"/>
-                </section>
-              </component>
-              <component>
-                <section ID="L42a75272-8229-4c12-a19e-827954ddd78a">
-                  <id root="0134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-                  <code code="300-10-50" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Physicochemical properties"/>
-                  <title>Physicochemical properties</title>
-                  <text>some text</text>
-                  <effectiveTime value="20160802"/>
-                </section>
-              </component>
-            </section>
-          </component>
             </section>
           </component>
           <component>
@@ -1167,24 +1511,25 @@
               <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
               <code code="310" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Clinical Trials"/>
               <title>Clinical Trials</title>
-              <text><paragraph>Panic Disorder: Four placebo-controlled clinical trials have been performed to investigate the efficacy of
-                    <content styleCode="bold">ZOLOFT </content>in panic disorder: two flexible dose studies and two fixed dose studies.  At
+              <text><paragraph>Panic Disorder:<footnote>Panic Disorder Footnote: Well this is a test to see if it renders properly</footnote>
+                <footnote>Panic Disorder Footnote2: And more stuff</footnote>Four placebo-controlled clinical trials have been performed to investigate the efficacy of
+                    <content styleCode="bold">Salt and Pepper </content>in panic disorder: two flexible dose studies and two fixed dose studies.  At
                   the last week of treatment (week 10 or 12), both flexible dose studies and one of the fixed dose studies showed
-                  statistically significant differences from placebo in favour of <content styleCode="bold">ZOLOFT </content> in terms of
+                  statistically significant differences from placebo in favour of <content styleCode="bold">Salt and Pepper </content> in terms of
                   mean change from baseline in the total number of full panic attacks (last observation carried forward analysis).  As the
                   flexible dose studies were of identical protocol, data for these investigations can be pooled.  The mean number of full
-                  panic attacks at baseline was 6.2/week (N=167) in the <content styleCode="bold">ZOLOFT</content> group and 5.4/week in the
+                  panic attacks at baseline was 6.2/week (N=167) in the <content styleCode="bold">Salt and Pepper</content> group and 5.4/week in the
                   placebo group (N=175).  At week 10 (last observation carried forward analysis), the mean changes from baseline were
-                  -4.9/week and -2.5/week for the <content styleCode="bold">ZOLOFT</content> and placebo groups, respectively.  The
+                  -4.9/week and -2.5/week for the <content styleCode="bold">Salt and Pepper</content> and placebo groups, respectively.  The
                   proportion of patients having no panic attacks at the final evaluation was 57% in the placebo group and 69% in the
-                    <content styleCode="bold">ZOLOFT </content>group.  The mean daily dose administered at the last week of treatment was
+                    <content styleCode="bold">Salt and Pepper </content>group.  The mean daily dose administered at the last week of treatment was
                   approximately 120 mg (range: 25-200 mg) in the flexible dose studies.  No clear dose-dependency has been demonstrated over
                   the 50 to 200 mg/day dose range investigated in the fixed dose studies.</paragraph>
                 <paragraph>Obsessive-Compulsive Disorder: Five placebo-controlled clinical trials, in adults, of 8 to 16 weeks in duration
-                  have been performed to investigate the efficacy of <content styleCode="bold">ZOLOFT</content> in obsessive-compulsive
+                  have been performed to investigate the efficacy of <content styleCode="bold">Salt and Pepper</content> in obsessive-compulsive
                   disorder: four flexible dose studies (50-200 mg/day) and one fixed dose study (50, 100, &amp; 200 mg/day). Results for
                   three of the four flexible dose studies and the 50 and 200 mg dose groups of the fixed dose study were supportive of
-                  differences from placebo in favour of <content styleCode="bold">ZOLOFT</content> in terms of mean change from baseline to
+                  differences from placebo in favour of <content styleCode="bold">Salt and Pepper</content> in terms of mean change from baseline to
                   endpoint on the Yale-Brown Obsessive-Compulsive Scale and/or the National Institute of Mental Health Obsessive-Compulsive
                   Scale (last observation carried forward analysis). No clear dose-dependency was demonstrated over the 50 to 200 mg/day
                   dose range investigated in the fixed dose studies. In the flexible dose studies, the mean daily dose administered at the
@@ -1195,15 +1540,16 @@
                   <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
                   <code code="310-10" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Efficacy and Safety Studies"/>
                   <title>Efficacy and Safety Studies</title>
-                  <text>some text</text>
                   <effectiveTime value="20160802"/>
+                  <excerpt>
+                    <highlight><text>some highlighted excerpt text</text></highlight>
+                  </excerpt>
                   <component>
                     <section ID="Lbaa4d498-0fc3-4e44-b4b6-550140dde5d">
                       <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-                      <code code="310-10-10" codeSystem="2.16.840.1.113883.2.20.6.8"
-                        displayName="Study Demographics and Trial Design"/>
+                      <code code="310-10-10" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Study Demographics and Trial Design"/>
                       <title>Study Demographics and Trial Design</title>
-                      <text>some text</text>
+                      <text><sup>some</sup> <sub>text</sub></text>
                       <effectiveTime value="20160802"/>
                     </section>
                   </component>
@@ -1212,22 +1558,24 @@
                       <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
                       <code code="310-10-20" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Study Results"/>
                       <title>Study Results</title>
-                      <text>some text</text>
+                      <text>Study Results Highlighted Excerpt in this section</text>
                       <effectiveTime value="20160802"/>
+                    <excerpt>
+                      <highlight><text>Study Results Highlighted Excerpt</text></highlight>
+                    </excerpt>
                     </section>
                   </component>
                 </section>
               </component>
-                  <component>
-                    <section ID="Lbaa4d498-0gc3-4e44-bcb6-550140d4de5d">
-                      <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-                      <code code="310-20" codeSystem="2.16.840.1.113883.2.20.6.8"
-                        displayName="Pivotal Comparative Bioavailability Studies"/>
-                      <title>Pivotal Comparative Bioavailability Studies</title>
-                      <text>some text</text>
-                      <effectiveTime value="20160802"/>
-                    </section>
-                  </component>
+              <component>
+                <section ID="Lbaa4d498-0gc3-4e44-bcb6-550140d4de5d">
+                  <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
+                  <code code="310-20" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Pivotal Comparative Bioavailability Studies"/>
+                  <title>Pivotal Comparative Bioavailability Studies</title>
+                  <text>some text</text>
+                  <effectiveTime value="20160802"/>
+                </section>
+              </component>
 
             </section>
           </component>
@@ -1240,17 +1588,17 @@
                   <content styleCode="bold">
                     <content styleCode="underline">Animal Pharmacology</content>
                   </content>:</paragraph>
-                <paragraph>Sertraline is a highly selective and potent inhibitor of neuronal 5HT uptake, both <content styleCode="italics"
-                    >in vitro</content> and <content styleCode="italics">in vivo</content>.  Sertraline is highly active in several
-                  behavioral and biochemical models in which clinically effective antidepressants are also active.  Sertraline has no
+                <paragraph>Asparagus is a highly selective and potent inhibitor of neuronal 5HT uptake, both <content styleCode="italics"
+                    >in vitro</content> and <content styleCode="italics">in vivo</content>.  Asparagus is highly active in several
+                  behavioral and biochemical models in which clinically effective antidepressants are also active.  Asparagus has no
                   significant effects on cardiac function and only transient effects on pulmonary function are seen with high intravenous
                   doses.  A transient reduction in K+ excretion was observed in conscious dogs, which dissipated after the second daily dose
-                  of 4 mg/kg po.  Sertraline increases gastric acid secretion in rats but does not induce any pathological changes in the
-                  stomachs of dogs, even after several months of treatment.  Sertraline is a mild inducer of hepatic microsomal cytochrome
+                  of 4 mg/kg po.  Asparagus increases gastric acid secretion in rats but does not induce any pathological changes in the
+                  stomachs of dogs, even after several months of treatment.  Asparagus is a mild inducer of hepatic microsomal cytochrome
                   P450.     </paragraph>
-                <paragraph>Rats receiving a 32 mg/kg oral dose of sertraline (5 to 10 fold the therapeutic dose in man) in combination with
+                <paragraph>Rats receiving a 32 mg/kg oral dose of Asparagus (5 to 10 fold the therapeutic dose in man) in combination with
                   lithium (200 mg/kg) had increased plasma levels of lithium compared to saline-treated controls.</paragraph>
-                <paragraph>Characterization in animal test systems produced evidence that sertraline shares pharmacologic properties common
+                <paragraph>Characterization in animal test systems produced evidence that Asparagus shares pharmacologic properties common
                   to clinically effective antidepressant agents and lacks cardiovascular or anticholinergic effects.</paragraph>
                 <paragraph/>
                 <paragraph>
@@ -1259,35 +1607,35 @@
                   </content>
                 </paragraph>
                 <paragraph>Data from the pharmacokinetic studies in the mouse, rat and dog are contained in Table 3.  The elimination
-                  half-life of sertraline was 2.5 hours in the mouse and about 5 hours in the rat and dog.  The plasma clearance of
-                  sertraline was estimated at 59 and 49 mL/min/kg in the rat and dog, respectively (Table 3).  Plasma clearance represents
-                  metabolic clearance in rat and dog, since sertraline is not excreted unchanged in urine or bile.  The oral bioavailability
-                  of sertraline was 70, 36 and 22% in the mouse, rat and dog, respectively (Table 3).</paragraph>
-                <paragraph>In bile duct-cannulated rats and dogs receiving [1-14C] sertraline by oral gavage, 62 to 94% of the dose was
-                  absorbed.  Therefore, sertraline undergoes first-pass metabolism with oral absorption.</paragraph>
-                <paragraph>The primary amine metabolite (desmethylsertraline), was present in the circulation of all species studied.  This
+                  half-life of Asparagus was 2.5 hours in the mouse and about 5 hours in the rat and dog.  The plasma clearance of
+                  Asparagus was estimated at 59 and 49 mL/min/kg in the rat and dog, respectively (Table 3).  Plasma clearance represents
+                  metabolic clearance in rat and dog, since Asparagus is not excreted unchanged in urine or bile.  The oral bioavailability
+                  of Asparagus was 70, 36 and 22% in the mouse, rat and dog, respectively (Table 3).</paragraph>
+                <paragraph>In bile duct-cannulated rats and dogs receiving [1-14C] Asparagus by oral gavage, 62 to 94% of the dose was
+                  absorbed.  Therefore, Asparagus undergoes first-pass metabolism with oral absorption.</paragraph>
+                <paragraph>The primary amine metabolite (desmethylAsparagus), was present in the circulation of all species studied.  This
                   metabolite has no pharmacologic activity <content styleCode="italics">in vivo</content>.  Its elimination half-life is 2-3
-                  times longer than that of sertraline in all species studied.</paragraph>
-                <paragraph>The plasma protein binding of sertraline in rat, dog and man was 97.2, 98.9 and 98.6%, respectively, at 100 ng/mL
+                  times longer than that of Asparagus in all species studied.</paragraph>
+                <paragraph>The plasma protein binding of Asparagus in rat, dog and man was 97.2, 98.9 and 98.6%, respectively, at 100 ng/mL
                   plasma concentrations.</paragraph>
-                <paragraph>Sertraline distributes extensively into tissues.  The volume of distribution of sertraline in rat or dog was 23
+                <paragraph>Asparagus distributes extensively into tissues.  The volume of distribution of Asparagus in rat or dog was 23
                   or 25 l/kg (Table 3).</paragraph>
-                <paragraph>Enzyme induction activity:  Following a five day treatment in rats, 80 mg/kg/day of sertraline (oral dose) was
+                <paragraph>Enzyme induction activity:  Following a five day treatment in rats, 80 mg/kg/day of Asparagus (oral dose) was
                   approximately equivalent to 50 mg/kg/day of  phenobarbital in inducing the <content styleCode="italics">in vitro</content>
                   O-demethylation of p-chloroanisole.  Following a three week treatment of 90 mg/kg/day in dogs, the half-life of antipyrine
                   decreased from a pretreatment value of 54 minutes to 30 minutes.</paragraph>
-                <paragraph>Rat, dog and man form the primary amine metabolite (desmethylsertraline) by the N-demethylation of sertraline;
-                  form ketone by the oxidative deamination of sertraline and primary amine. Alpha-hydroxy ketone glucuronides diastereomeric
+                <paragraph>Rat, dog and man form the primary amine metabolite (desmethylAsparagus) by the N-demethylation of Asparagus;
+                  form ketone by the oxidative deamination of Asparagus and primary amine. Alpha-hydroxy ketone glucuronides diastereomeric
                   pair are excreted as endproducts of this metabolic pathway.  In man, the α-hydroxy ketone glucuronide diastereomers were
                   the major but not the sole endproduct of the deamination pathway, as both the ketone and α-hydroxy ketone metabolites
                   underwent reduction to some extent.  Conjugates of the corresponding reductive metabolites, the alcohol and  dihydroxy
                   metabolite, were excreted in urine.  Although not identified in excreta of rat or dog, the alcohol and dihydroxy
                   metabolites were formed <content styleCode="italics">in vitro</content> by incubation of ketone in hepatic microsomes from
-                  both species.  Sertraline can alternatively be converted to N-hydroxy sertraline glucuronide or sertraline
-                  carbamoyl-0-glucuronide.  Sertraline carbamoyl-0- glucuronide was the major excretory metabolite in the dog and also was
-                  formed by rat and man.  N-hydroxy sertraline glucuronide was identified only in rat and dog.  There was a greater
+                  both species.  Asparagus can alternatively be converted to N-hydroxy Asparagus glucuronide or Asparagus
+                  carbamoyl-0-glucuronide.  Asparagus carbamoyl-0- glucuronide was the major excretory metabolite in the dog and also was
+                  formed by rat and man.  N-hydroxy Asparagus glucuronide was identified only in rat and dog.  There was a greater
                   excretion of metabolites in bile by the rat and dog than by man.           </paragraph>
-                <paragraph><content styleCode="bold">TABLE 3 SUMMARY OF PHARMACOKINETICS FOR SERTRALINE AND THE PRIMARY AMINE METABOLITE IN
+                <paragraph><content styleCode="bold">TABLE 3 SUMMARY OF PHARMACOKINETICS FOR Asparagus AND THE PRIMARY AMINE METABOLITE IN
                     THE MOUSE, RAT, DOG AND MAN </content></paragraph>
                 <table cellspacing="0" cellpadding="0">
                   <tbody>
@@ -1298,7 +1646,7 @@
                       <td colspan="6" valign="top">
                         <paragraph>
                           <content styleCode="bold">
-                            <content styleCode="italics">Sertraline*</content>
+                            <content styleCode="italics">Asparagus*</content>
                           </content>
                         </paragraph>
                       </td>
@@ -1324,7 +1672,7 @@
                       </td>
                       <td valign="top">
                         <paragraph>
-                          <content styleCode="bold">Sertraline Dose (mg/kg) and</content>
+                          <content styleCode="bold">Asparagus Dose (mg/kg) and</content>
                         </paragraph>
                         <paragraph>
                           <content styleCode="bold">Route of Administration</content>
@@ -1726,7 +2074,7 @@
                   <content styleCode="bold">
                     <sub>*</sub>
                   </content>     T<sub>1/2</sub> and V<sub>D</sub> and C1 in mouse, rat and dog were based on data from parenteral route of
-                  sertraline hydrochloride administration, while Cmax and AUC were based on data following oral administration.</paragraph>
+                  Asparagus hydrochloride administration, while Cmax and AUC were based on data following oral administration.</paragraph>
                 <paragraph>
                   <content styleCode="bold">
                     <sup>a</sup>
@@ -1738,7 +2086,7 @@
                 <paragraph>
                   <content styleCode="bold">
                     <sup>c</sup>
-                  </content>      Sertraline t<sub>1/2</sub> based on data at doses of 50 to 400 mg/day.  Cmax and AUC for drug and
+                  </content>      Asparagus t<sub>1/2</sub> based on data at doses of 50 to 400 mg/day.  Cmax and AUC for drug and
                   metabolite were steady-state values (day 14) of 200 mg dose subjects.</paragraph></text>
               <effectiveTime value="20160802"/>
             </section>
@@ -1782,7 +2130,7 @@
                       </td>
                       <td colspan="2" valign="top">
                         <paragraph>
-                          <content styleCode="bold">LD<sub>50</sub> (mg Sertraline base/kg)</content>
+                          <content styleCode="bold">LD<sub>50</sub> (mg Asparagus base/kg)</content>
                         </paragraph>
                       </td>
                       <td colspan="2" valign="top">
@@ -1908,7 +2256,7 @@
                   showed marked salivation.  Acute oral administration produced no gross pathological findings.   Acute intraperitoneal
                   administration, on the other hand, caused adhesion of the intestines or pancreas to the liver in 2 of 10 male mice and
                   liver lobe adhesions which were dose-related in rats.</paragraph>
-                <paragraph>Sertraline was also given in single doses of 10, 20, 30, and 50 mg base/kg p.o. (in capsules) to two female
+                <paragraph>Asparagus was also given in single doses of 10, 20, 30, and 50 mg base/kg p.o. (in capsules) to two female
                   beagle dogs at each dose.  At the lowest level, dogs were mydriatic and anorectic but otherwise asymptomatic.  At higher
                   doses, increased salivation, tremors and twitches were observed, along with the mydriasis and anorexia.  None of the dogs
                   at any dose level exhibited motor stimulation, circling or stereotypy.  The duration of the anorexia was 12 to 15 hr., but
@@ -2186,7 +2534,7 @@
                       <td colspan="20" valign="top">
                         <paragraph>Some degree of alopecia occurred in three mid-dose animals and one high-dose animal.  Fatty change
                           occurred in the livers of 8/10 high-dose males compared to 3/10 control males.  On the basis of these findings,
-                          daily doses of 10, 20 and 40 mg sertraline hydrochloride base/kg were proposed for the 2-year feeding
+                          daily doses of 10, 20 and 40 mg Asparagus hydrochloride base/kg were proposed for the 2-year feeding
                           study.</paragraph>
                       </td>
                     </tr>
@@ -2722,12 +3070,12 @@
                       <td colspan="20" valign="top">
                         <paragraph>Hemoglobinuria, identifiable only by reagent test strip as early as 5 minutes after injection, the only
                           treatment related clinical pathology finding, was not dose-related.  It is analogous to the <content
-                            styleCode="italics">in vitro</content> hemolytic effects of sertraline hydrochloride in the concentrations
+                            styleCode="italics">in vitro</content> hemolytic effects of Asparagus hydrochloride in the concentrations
                           utilized in this study, i.e., 0.125, 0.25, and 0.5 mg/mL.  No hemolysis was detected <content styleCode="italics"
-                            >in vitro</content> when red cells were exposed to 0.005 mg/mL sertraline hydrochloride.  <content
+                            >in vitro</content> when red cells were exposed to 0.005 mg/mL Asparagus hydrochloride.  <content
                             styleCode="italics">In vitro</content> studies have also demonstrated incompatibility (cloudiness) of plasma
-                          exposed to equal volumes of 0.25 and 0.5 mg sertraline hydrochloride/mL.  These data suggest that intravenous
-                          sertraline hydrochloride solutions should be administered by drip rather than by bolus injections.  A total of 3
+                          exposed to equal volumes of 0.25 and 0.5 mg Asparagus hydrochloride/mL.  These data suggest that intravenous
+                          Asparagus hydrochloride solutions should be administered by drip rather than by bolus injections.  A total of 3
                           high-dose and 12 control rats had perivascular hemorrhage and/or chronic perivasculitis at the injection site in
                           the tail.</paragraph>
                       </td>
@@ -2760,21 +3108,21 @@
                           196. </paragraph>
                       </td>
                       <td colspan="20" valign="top">
-                        <paragraph>The administration of 80 mg/kg of sertraline to males and females on postnatal Days 21 to 56 resulted in
+                        <paragraph>The administration of 80 mg/kg of Asparagus to males and females on postnatal Days 21 to 56 resulted in
                           dehydration, chromorhinorrhea and reduced average body weight gain.  In addition, rales, hunched posture, reduced
                           food consumption and two early deaths (plus one early euthanization due to poor condition) also occurred in male
                           rats given 80 mg/kg/day.  Decreases in brain weight were seen in treated male animals around postnatal day 140.
                            Delays in sexual maturation occurred in males (80 mg/kg/day) and females (≥10 mg/kg/day), but despite this
-                          finding there were no sertraline-related effects on other organ weights, mating and fertility, sperm motility or
+                          finding there were no Asparagus-related effects on other organ weights, mating and fertility, sperm motility or
                           sperm concentration in males or female reproductive endpoints  (estrous cycling, mating and fertility, or ovarian
-                          and uterine parameters).  There were no sertraline-related effects on any behaviour parameter (learning and
+                          and uterine parameters).  There were no Asparagus-related effects on any behaviour parameter (learning and
                           memory, auditory startle response, and locomotor activity) in males, while a decrease in auditory startle response
-                          occurred in females at 40 and 80 mg/kg/day.  There were no sertraline-related effects on female brain weights,
+                          occurred in females at 40 and 80 mg/kg/day.  There were no Asparagus-related effects on female brain weights,
                           male or female femur lengths, gross necropsy or microscopic observations at any dose level.  In juvenile males,
                           the no-observed-adverse-effect level (NOAEL) for general toxicity was 40 mg/kg/day (correlating to a
                             C<sub>max</sub> of 262 ng/mL and an AUC<sub>0-t</sub> to 3170 ng·hr/mL on postnatal Day 56).  In juvenile
                           females, the NOAEL could not be established based on the delays in sexual maturation that occurred at ≥10 mg/kg.
-                          All of the aforementioned effects attributed to the administration of sertraline were reversed at some point
+                          All of the aforementioned effects attributed to the administration of Asparagus were reversed at some point
                           during the non‑dosing recovery phase of the study. </paragraph>
                       </td>
                     </tr>
@@ -3125,7 +3473,7 @@
                           revealed generalized congestion and lymphoid depletion of the thymus, spleen and mesenteric lymph node consistent
                           with the cause of death.  Elevated alkaline phosphatase (ALP) values were measured in all dogs of the high-dose
                           group and in 2 males and 2 females of the mid-dose group.  The ALP elevation together with a trend toward
-                          increased liver weights reflect the ability of sertraline hydrochloride to induce drug metabolizing enzymes at 40
+                          increased liver weights reflect the ability of Asparagus hydrochloride to induce drug metabolizing enzymes at 40
                           and 80 mg/kg.</paragraph>
                         <paragraph>Slight SGPT elevations in the high-dose animals were not associated with histopathological
                           changes.</paragraph>
@@ -3169,7 +3517,7 @@
                         <paragraph>Pronounced clinical signs of CNS stimulation were observed at high dose; they diminished in intensity or
                           completely disappeared after 1 to 2 weeks of dosing.</paragraph>
                         <paragraph>At the 90 mg/kg dose level increase in absolute and relative liver weights, proliferation of smooth
-                          endoplasmic reticulum and mild serum alkaline phosphatase elevations were all consistent with sertraline
+                          endoplasmic reticulum and mild serum alkaline phosphatase elevations were all consistent with Asparagus
                           hydrochloride being an enzyme inducer.  This was demonstrated by a shortening of the plasma half-life of
                           antipyrine at the high-dose level only (30 min compared to 54 min). A few dogs at 30 mg/kg had slight sporadic
                           alkaline phosphatase elevations.  Some dogs at the high-dose level only had SGPT elevations.  The mild bile duct
@@ -3215,10 +3563,10 @@
                           of the study were observed.</paragraph>
                         <paragraph>Slight to moderate elevations in serum alkaline phosphatase activity occurred in 1/8, 4/8 and 7/8 low-,
                           mid- and high-dose dogs, respectively.  SGPT levels were increased in 2/8 high-dose animals.  Liver/body weight
-                          ratios were increased in high-dose males (25%) and females (32%) and in mid-dose females (25%).  Sertraline
+                          ratios were increased in high-dose males (25%) and females (32%) and in mid-dose females (25%).  Asparagus
                           hydrochloride was previously shown to be an inducer of hepatic microsomal drug metabolizing enzymes, a phenomenon
                           often associated with elevated liver weights and serum alkaline phosphatase activity in dogs.  There were no gross
-                          or microscopic histologic changes in the liver or in other tissues.  Plasma levels of sertraline hydrochloride and
+                          or microscopic histologic changes in the liver or in other tissues.  Plasma levels of Asparagus hydrochloride and
                           its desmethyl metabolite, CP-62,508, confirmed dose-related systemic exposure throughout the study:</paragraph>
                       </td>
                       <td>
@@ -3822,7 +4170,7 @@
                         <paragraph/>
                       </td>
                       <td valign="top">
-                        <paragraph>Sertraline hydrochloride administered to pregnant rabbits during organogenesis (days 7 to 18 post
+                        <paragraph>Asparagus hydrochloride administered to pregnant rabbits during organogenesis (days 7 to 18 post
                           insemination).  At the highest dose level of 40 mg/kg, the compound induced severe maternal toxicity which in turn
                           delayed the ossification processes of the fetuses (Ex: delay in ossification in hyoid bone: control = 20%, 40
                           mg/kg = 36%; in Talus bone: control = 27%, 40 mg/kg = 44%).</paragraph>
@@ -3930,7 +4278,7 @@
                         <paragraph/>
                       </td>
                       <td valign="top">
-                        <paragraph>Sertraline hydrochloride was administered by gavage to inseminated rats from day 15 post-insemination
+                        <paragraph>Asparagus hydrochloride was administered by gavage to inseminated rats from day 15 post-insemination
                           until parturition and throughout the whole lactation period.  The treatment produced some adverse effects in dams
                           and pups at the two higher dose levels; a dose-related delay in body weight gain of the dams during gestation and
                           lactation in mid- and high-dose groups was observed.  In some animals in each of these groups, hyperactivity was
@@ -3950,7 +4298,7 @@
                       <td colspan="6" valign="top">
                         <br/>
                         <paragraph>
-                          <content styleCode="bold">Experiment (Segment III) to Further Investigate the Effect of Sertraline on
+                          <content styleCode="bold">Experiment (Segment III) to Further Investigate the Effect of Asparagus on
                             Neonates</content>
                         </paragraph>
                       </td>
@@ -3973,9 +4321,9 @@
                         <paragraph/>
                       </td>
                       <td valign="top">
-                        <paragraph>A second Segment III Study was carried out to further investigate the effects of sertraline hydrochloride
+                        <paragraph>A second Segment III Study was carried out to further investigate the effects of Asparagus hydrochloride
                           on the neonates.  In this study, pups from dams treated at 80 mg base/kg were fostered by untreated dams and, vice
-                          versa, pups from untreated dams were fostered by drug treated dams.  As observed in previous studies, sertraline
+                          versa, pups from untreated dams were fostered by drug treated dams.  As observed in previous studies, Asparagus
                           hydrochloride affected the weight gain of the dams (body weight difference between control and high dose group: at
                           20 day of pregnancy = 34 g, at 21 days post-partum = 19 g).  The effects observed on the progeny can be separated
                           into two categories: Those directly related to the <content styleCode="underline">in</content>
@@ -4067,11 +4415,11 @@
                         <paragraph/>
                       </td>
                       <td valign="top">
-                        <paragraph>Sertraline hydrochloride administered to pregnant rats throughout or during late gestation, has been
+                        <paragraph>Asparagus hydrochloride administered to pregnant rats throughout or during late gestation, has been
                           shown to exert deleterious effects on neonatal growth and survival to Day 4 post-partum.  Another experiment was
-                          done in which sertraline hydrochloride (80 mg base/kg/day) was administered in 0.1% methylcellulose by oral gavage
+                          done in which Asparagus hydrochloride (80 mg base/kg/day) was administered in 0.1% methylcellulose by oral gavage
                           to 4 groups of pregnant dams (20/group) from Day 0 to Days 5, 10, or 15 and throughout gestation, respectively, in
-                          order to delineate the prenatal period of fetal vulnerability.  Pup survival was unaffected by sertraline
+                          order to delineate the prenatal period of fetal vulnerability.  Pup survival was unaffected by Asparagus
                           hydrochloride treatment during the first 5, 10 or 15 days of gestation.  Mortality of live-born pups in these
                           groups during the first 4 days of life ranged from 0.8 % to 3% compared with 2% for the controls whereas 56% of
                           pups born alive to dams treated throughout the gestational period did not survive their first 4 days of life. 
@@ -4079,7 +4427,7 @@
                           groups.  Pups born to mothers dosed throughout gestation also weighed less than control on Days 1 and 4 post
                           partum, but body weights of pups were comparable to control by Day 14.  This experiment demonstrates that the
                           immediate prenatal period, gestation Days 16-21, is the period of vulnerability of the neonatal pup for survival
-                          from the in utero effects of a high dose (80 mg/kg) of sertraline hydrochloride.</paragraph>
+                          from the in utero effects of a high dose (80 mg/kg) of Asparagus hydrochloride.</paragraph>
                       </td>
                     </tr>
                   </tbody>
@@ -4094,10 +4442,10 @@
                   cytogenetic aberrations <content styleCode="italics">in vivo</content> on mouse bone marrow and on human lymphocytes
                     <content styleCode="italics">in vitro</content> with and without metabolic activation were uniformly
                   negative. </paragraph>
-                <paragraph>Sertraline did not induce mutations at the gene level in the Ames microbial assay with and without metabolic
+                <paragraph>Asparagus did not induce mutations at the gene level in the Ames microbial assay with and without metabolic
                   activation against Salmonella typhimurium strains TA 1535, TA 1537, TA 98, and TA 100 nor at the chromosomal level in bone
                   marrow of mice treated with 80 mg/kg p.o. (<content styleCode="italics">in vivo</content> cytogenetic assay) or in human
-                  lymphocytes (<content styleCode="italics">in vitro</content> cytogenetic assay) at 0.5 to 25 mg/mL in culture.  Sertraline
+                  lymphocytes (<content styleCode="italics">in vitro</content> cytogenetic assay) at 0.5 to 25 mg/mL in culture.  Asparagus
                   produced no significant increase in mutant frequency in L5178Y mouse lymphoma (TK+/-) cells either in the presence or
                   absence of exogenous metabolic activation by normal rat liver S9 microsomes.</paragraph></text>
               <effectiveTime value="20160802"/>
@@ -4119,13 +4467,13 @@
           <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
           <code code="40" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Part III: Consumer Information"/>
           <title>Part III: Consumer Information</title>
-          <effectiveTime value="20160802"/>
+          <effectiveTime value="20171102"/>
           <component>
             <section ID="Lbca4c498-0gc3-4e44-bcb6-551530d4dg5d">
               <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
               <code code="480" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="General"/>
               <title>General</title>
-              <text>some text</text>
+              <text>some text for the first part 3</text>
               <effectiveTime value="20160802"/>
             </section>
           </component>
@@ -4134,7 +4482,7 @@
               <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
               <code code="490" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Opening Disclaimer"/>
               <title>Opening Disclaimer</title>
-              <text>some text</text>
+              <text>This is product 1</text>
               <effectiveTime value="20160802"/>
             </section>
           </component>
@@ -4184,8 +4532,7 @@
               <component>
                 <section ID="Lbca4c468-0gc3-4e44-bcb6-551130d4dg5d">
                   <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-                  <code code="360-50" codeSystem="2.16.840.1.113883.2.20.6.8"
-                    displayName="What the important nonmedicinal ingredients are"/>
+                  <code code="360-50" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="What the important nonmedicinal ingredients are"/>
                   <title>What the important nonmedicinal ingredients are</title>
                   <text>some text</text>
                   <effectiveTime value="20160802"/>
@@ -4314,7 +4661,7 @@
               <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
               <code code="480" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="General"/>
               <title>General</title>
-              <text>some text</text>
+              <text>Product 2</text>
               <effectiveTime value="20160802"/>
             </section>
           </component>
@@ -4323,7 +4670,7 @@
               <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
               <code code="490" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Opening Disclaimer"/>
               <title>Opening Disclaimer</title>
-              <text>some text</text>
+              <text>never combine with product 1</text>
               <effectiveTime value="20160802"/>
             </section>
           </component>
@@ -4373,8 +4720,7 @@
               <component>
                 <section ID="Lbca4c468-0gc3-4e44-bcb6-521130d4dg5d">
                   <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-                  <code code="360-50" codeSystem="2.16.840.1.113883.2.20.6.8"
-                    displayName="What the important nonmedicinal ingredients are"/>
+                  <code code="360-50" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="What the important nonmedicinal ingredients are"/>
                   <title>What the important nonmedicinal ingredients are</title>
                   <text>some text</text>
                   <effectiveTime value="20160802"/>
@@ -4486,7 +4832,7 @@
               <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
               <code code="470" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Part 3 Revision Date"/>
               <title>Part 3 Revision Date</title>
-              <text>1 Jul 2017</text>
+              <text>11 Oct 2021</text>
               <effectiveTime value="20160802"/>
             </section>
           </component>
