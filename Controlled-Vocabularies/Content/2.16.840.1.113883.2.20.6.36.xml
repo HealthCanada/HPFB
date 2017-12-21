@@ -4992,7 +4992,7 @@
         <SimpleValue>True</SimpleValue>
       </Value>
       <Value ColumnRef="level">
-        <SimpleValue>1</SimpleValue>
+        <SimpleValue>2</SimpleValue>
       </Value>
       <Value ColumnRef="sequence">
         <SimpleValue>8</SimpleValue>
