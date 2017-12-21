@@ -79,7 +79,7 @@
         <SimpleValue>Product Monograph</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Product Monograph</SimpleValue>
+        <SimpleValue>Monographie du Produit</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>

@@ -1199,7 +1199,7 @@
         <SimpleValue>Including Patient Medication Information</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Including Patient Medication Information</SimpleValue>
+        <SimpleValue>Y Compris les Informations sur les Médicaments pour les Patients</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
