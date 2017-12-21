@@ -1,0 +1,495 @@
+<?xml-stylesheet type="text/xsl" href="https://github.com/HealthCanada/HPFB/raw/master/Controlled-Vocabularies/Style-Sheets/current/HC_GeneriCode_Codelist.xsl"?>
+<gc:CodeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:html="http://www.w3.org/1999/xhtml">
+  <Annotation>
+    <Description>
+      <html:p>This file is a Health Canada maintained code list, encoded in OASIS genericode format.</html:p>
+      <html:p>The values are a subset of HL7 vocabulary, Telecom Use and Telecom Capabilities must be used together.</html:p>
+    </Description>
+    <AppInfo>
+      <html:p>Authored by HC on Feb 2017.</html:p>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>2.16.840.1.113883.2.20.6.14</ShortName>
+    <LongName>Ingredient Identifier</LongName>
+    <Version>1</Version>
+    <CanonicalUri>tbd</CanonicalUri>
+    <CanonicalVersionUri>tbd</CanonicalVersionUri>
+    <LocationUri>tbd</LocationUri>
+    <Agency>
+      <ShortName>HPFB</ShortName>
+      <LongName>Health Products and Food Branch</LongName>
+      <ContactPersonTelephone>tel</ContactPersonTelephone>
+      <ContactPersonEmail>person</ContactPersonEmail>
+      <ContactPersonName>email</ContactPersonName>
+    </Agency>
+  </Identification>
+  <ColumnSet>
+    <Column Use="required" Id="code">
+      <ShortName>ID</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="name-eng">
+      <ShortName>Name English</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="name-fra">
+      <ShortName>Name French</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="desc-eng">
+      <ShortName>Description English</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="desc-fra">
+      <ShortName>Description French</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="status">
+      <ShortName>Term Status</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="ord">
+      <ShortName>Ordinality</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Use="optional" Id="xref">
+      <ShortName>Cross Reference ID</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="optional" Id="other-identifer">
+      <ShortName>Other Identifer</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="optional" Id="catagory">
+      <ShortName>Category</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="mod-date">
+      <ShortName>Term Modification Time Stamp</ShortName>
+      <Data Type="dateTime" />
+    </Column>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15FIX9V2JP</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>TITANIUM DIOXIDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-07 3:36:09 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1DI56QDM62</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>LECITHIN, SOYBEAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-07 3:36:09 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1P9D0Z171K</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>BUTYLATED HYDROXYTOLUENE</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-07 3:36:09 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3WJQ0SDW1A</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>POLYETHYLENE GLYCOLS</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-07 3:36:09 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>532B59J990</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>POLYVINYL ALCOHOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-07 3:36:09 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5856J3G2A2</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>SODIUM STARCH GLYCOLATE TYPE A POTATO</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-07 3:36:09 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70097M6I30</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>MAGNESIUM STEARATE</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-07 3:36:09 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7SEV7J4R1U</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>TALC</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-07 3:36:09 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>O8232NY3SJ</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>STARCH, CORN</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-07 3:36:09 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>OP1R32D61U</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>CELLULOSE, MICROCRYSTALLINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-07 3:36:09 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>RFW2ET671P</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>HYDROXYPROPYL CELLULOSE (TYPE H)</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-07 3:36:09 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>Z5N076G8YQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>FIDAXOMICIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-07 3:36:09 PM</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>
