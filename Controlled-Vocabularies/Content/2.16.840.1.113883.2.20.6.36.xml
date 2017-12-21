@@ -103,6 +103,9 @@
       <Value ColumnRef="include_in_toc">
         <SimpleValue>False</SimpleValue>
       </Value>
+      <Value ColumnRef="heading_level">
+        <SimpleValue>2</SimpleValue>
+      </Value>
       <Value ColumnRef="sequence">
         <SimpleValue>5</SimpleValue>
       </Value>
@@ -146,6 +149,9 @@
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
+      </Value>
+      <Value ColumnRef="heading_level">
+        <SimpleValue>1</SimpleValue>
       </Value>
       <Value ColumnRef="sequence">
         <SimpleValue>1</SimpleValue>
