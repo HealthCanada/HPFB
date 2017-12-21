@@ -92,19 +92,19 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>100</SimpleValue>
+        <SimpleValue>440</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>Strength(s)</SimpleValue>
+        <SimpleValue>Footnote</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>1:n</SimpleValue>
+        <SimpleValue>0:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>False</SimpleValue>
       </Value>
       <Value ColumnRef="sequence">
-        <SimpleValue>0</SimpleValue>
+        <SimpleValue>5</SimpleValue>
       </Value>
       <Value ColumnRef="fixed_title">
         <SimpleValue>True</SimpleValue>
@@ -113,7 +113,7 @@
         <SimpleValue>True</SimpleValue>
       </Value>
       <Value ColumnRef="derived">
-        <SimpleValue>True</SimpleValue>
+        <SimpleValue>False</SimpleValue>
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>Section Heading</SimpleValue>
@@ -136,19 +136,19 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>100</SimpleValue>
+        <SimpleValue>20</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>Strength(s)</SimpleValue>
+        <SimpleValue>Part I: Health Professional Information</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>1:n</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
-        <SimpleValue>False</SimpleValue>
+        <SimpleValue>True</SimpleValue>
       </Value>
       <Value ColumnRef="sequence">
-        <SimpleValue>0</SimpleValue>
+        <SimpleValue>1</SimpleValue>
       </Value>
       <Value ColumnRef="fixed_title">
         <SimpleValue>True</SimpleValue>
@@ -157,7 +157,7 @@
         <SimpleValue>True</SimpleValue>
       </Value>
       <Value ColumnRef="derived">
-        <SimpleValue>True</SimpleValue>
+        <SimpleValue>False</SimpleValue>
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>Section Heading</SimpleValue>
