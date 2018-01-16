@@ -29,8 +29,8 @@ be represented
 	font-size: 12pt;	
 	background-color: rgba(255,255,255,0);
 	color: #000000;
-	margin-left: 1em;
-	margin-right: 1em;
+	margin-left: 9em;
+	margin-right: 9em;
 }
 }
 							
@@ -55,6 +55,9 @@ be represented
 	
 	.spl .bars {
 	     display:none;
+	}
+	.spl .pagebreak { 
+		page-break-before: always; 
 	}
 
 }
@@ -944,16 +947,16 @@ be represented
 
 .spl .WatermarkTextStyle
 {
+	display:none;
 	position:relative;
-	bottom: -200px;
-	right:-100px;
     color:red;
     font-size:120px;
-    text-overflow:clip;
-    transform:rotate(300deg);
-    -webkit-transform:rotate(300deg);
+    overflow: hidden;
+    text-align:center;
+	font-stretch: expanded;
+	white-space: nowrap;
 }
-.spl .pagebreak { page-break-before: always; }
+
 .spl .bold {
     font-weight: bold;
 }
