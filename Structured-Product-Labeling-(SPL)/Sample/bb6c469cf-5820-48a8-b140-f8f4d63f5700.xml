@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- use prod -->
+<!-- 
 <?xml-stylesheet type="text/xsl" href="https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/hpfb-spl.xsl"?>
 <?xml-stylesheet type="text/css" href="https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/hpfb-spl-core.css"?>
+ -->
+<!-- use dev -->
 
+<?xml-stylesheet type="text/xsl" href="https://rawgit.com/IanYangCa/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/dev/hpfb-spl.xsl"?>
+<?xml-stylesheet type="text/css" href="https://rawgit.com/IanYangCa/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/dev/hpfb-spl-core.css"?>
+
+<!-- test local -->
+<!--  
+<?xml-stylesheet type="text/xsl" href="file:..\..\..\..\..\SPL\Style-Sheet\SPM\current\spl-hpfb.xsl"?>
+<?xml-stylesheet type="text/css" href="file:..\..\..\..\..\SPL\Style-Sheet\SPM\current\spl-hpfb.css"?>
+-->
+<!--  
+<?xml-stylesheet type="text/xsl" href="file:..\..\..\..\..\SPL\Style-Sheet\SPM\IMSD\6Dec2017-3\hpfb-spl.xsl"?>
+<?xml-stylesheet type="text/css" href="file:..\..\..\..\..\SPL\Style-Sheet\SPM\IMSD\6Dec2017-3\hpfb-spl.css"?>
+-->
 
 
 <document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -12,12 +28,14 @@
   <id root="bb6c469cf-5820-48a8-b140-f8f4d63f5700"/>
   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.10" displayName="Product Monograph"/>
   <title>2004 Product Monograph Template  - Standard for a ???</title>
-  <effectiveTime value="20170629235959">
-    <originalText description="Date of Initial Approval">20100629</originalText>
+  <effectiveTime value="20270629235959">
+    <originalText description="Date of Initial Approval">20200629</originalText>
   </effectiveTime>
   <languageCode code="ENG" codeSystem="2.16.840.1.113883.2.20.6.29" displayName="English"/>
   <setId root="8b3949c2-ed8d-4e1e-a743-cb415ecc8aa1"/>
+  
   <versionNumber value="1" description="Draft"/>
+  
   <author>
     <time/>
     <assignedEntity>
@@ -33,11 +51,12 @@
             <postalCode>K1S 0B5</postalCode>
             <country codeSystem="2.16.840.1.113883.2.20.6.17" code="1" displayName="Canada"/>
           </addr>
-          <telecom value="tel:+1-613-239-9919"/>
+          <telecom value="tel:+1-613-239-9919" capabilities="" use="" />
           <telecom value="mailto:a@b.com"/>
           <contactPerson>
             <name>Doe, John</name>
           </contactPerson>
+
         </contactParty>
         <assignedEntity>
           <assignedOrganization>
@@ -55,7 +74,9 @@
                   <postalCode>K1S 0B3</postalCode>
                   <country codeSystem="2.16.840.1.113883.2.20.6.17" code="1" displayName="Canada"/>
                 </addr>
-
+                <assignedEntity>
+                  <assignedOrganization></assignedOrganization>
+                </assignedEntity>
               </assignedOrganization>
             </assignedEntity>
           </assignedOrganization>
@@ -76,6 +97,7 @@
                   <postalCode>K1S 0C3</postalCode>
                   <country codeSystem="2.16.840.1.113883.2.20.6.17" code="1" displayName="Canada"/>
                 </addr>
+                
               </assignedOrganization>
             </assignedEntity>
           </assignedOrganization>
@@ -91,42 +113,43 @@
           <code code="48780-1" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="SPL product data elements section"/>
           <title/>
           <text/>
+          
           <effectiveTime>
             <low value="20170629235959-0600"/>
             <high value="20170629235959-0600"/>
           </effectiveTime>
-          <subject>           
+          <subject>
             <manufacturedProduct>
-              <id root="bdeefc11-4315-41e3-8c56-83e8bf4f770c"/>
               <manufacturedProduct>
-                <code code="12" codeSystem="2.16.840.1.113883.2.20.6.42" displayName="DIN A"/>
+                <code code="13" codeSystem="2.16.840.1.113883.2.20.6.42" displayName="DIN A"/>
                 <name>Brand Name for product 1</name>
-
                 <formCode code="2" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Aerosol"/>
-                <asSpecializedKind>
-                  <generalizedMaterialKind>
-                    <code></code>
-                  </generalizedMaterialKind>
-                </asSpecializedKind>
-                <asEntityWithGeneric>
+                <asIdentifiedEntity classCode="IDENT">
+                  <id/>
+                  <code></code>
+                </asIdentifiedEntity>
+                                <asEntityWithGeneric>
                   <genericMedicine>
-                    <name> Product 1(Proper/Generic name)&#169;&#8482;&#174;</name>
+                    <name> Product 2 (Proper/Generic name)&#169;&#8482;&#174;</name>
                   </genericMedicine>
                 </asEntityWithGeneric>
                 <asEquivalentEntity>
-                  <definingMaterialKind>                  
+                  <definingMaterialKind>
                     <code/>
                   </definingMaterialKind>
                 </asEquivalentEntity>
-
                 <ingredient classCode="CNTM">
                   <!-- This denotes that it MAY contain an ingredeint as the quantity is omited-->
                   <ingredientSubstance>
                     <code code="9B1B8HD56911" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-105972"/>
-
                     <name>A-105972</name>
+                    <asEquivalentSubstance>
+                      <definingSubstance >
+                        <code ></code>
+                        <name></name>
+                      </definingSubstance>
+                    </asEquivalentSubstance>
                   </ingredientSubstance>
-
                 </ingredient>
                 <ingredient classCode="CNTM">
                   <!-- This denotes that it does not contain an ingredeint as the numerator is 0-->
@@ -137,13 +160,18 @@
                   <ingredientSubstance>
                     <code code="44E44Z56KO" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-151892"/>
                     <name>A-151892</name>
+                    <asEquivalentSubstance>
+                      <definingSubstance>
+                        <name></name>
+                      </definingSubstance>
+                    </asEquivalentSubstance>
                   </ingredientSubstance>
                 </ingredient>
                 <ingredient classCode="IACT">
                   <!-- This denotes that the active ingredient is already used in another approved product and is used as a compound product -->
                   <quantity>
                     <numerator value="12" unit="mg"/>
-                    <denominator value="100" unit="mL"/>
+                    <denominator value="1" unit="mL"/>
                   </quantity>
                   <ingredientSubstance>
                     <code code="88888-333" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="MIDAZOLAM HYDROCHLORIDE"/>
@@ -189,7 +217,7 @@
                     <code code="44E44Z56KO" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="A-151892"/>
                     <name>A-151892</name>
                   </ingredientSubstance>
-
+                  
                 </ingredient>
                 <asContent>
                   <quantity>
@@ -201,46 +229,79 @@
                     <formCode code="C43233" displayName="PACKAGE" codeSystem="2.16.840.1.113883.2.20.6.32"/>
                     <asManufacturedProduct>
                       <subjectOf>
-                        <approval>
-                          <id extension="NDS123456" root="2.16.840.1.113883.2.20.6.42"/>
-                          <code code="308" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="NDS"/>
-                          <author>
-                            <territorialAuthority>
-                              <territory>
-                                <code code="1" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
-                              </territory>
-                            </territorialAuthority>
-                          </author>
-                        </approval>
+                      <approval>
+                        <id extension="2.16.840.1.113883.2.20.6.42" root="a"/>
+                        <code></code>
+                        
+                        <author>
+                          <territorialAuthority> <territory>
+                            <code ></code>
+                          </territory>
+                          </territorialAuthority>
+                          
+                        </author>
+                        
+                      </approval>
+                        
                       </subjectOf>
+
                     </asManufacturedProduct>
+
                   </containerPackagedProduct>
                   <subjectOf>
                     <approval/>
                   </subjectOf>
                 </asContent>
+                <part>
+                  <partProduct>
+                    
+                    <part>
+                      <quantity>
+                        <numerator></numerator>
+                        <denominator></denominator>
+                      </quantity>
+                      <partProduct>
+                        <asNamedEntity>
+                          <name></name>
+                          
+                        </asNamedEntity>
+                        <asContent>
+                          <quantity>
+                            <numerator></numerator>
+                            <denominator></denominator>
+                          </quantity>
+                          <containerPackagedProduct></containerPackagedProduct>
+                        </asContent>
+                      </partProduct>
+                    </part>
+                  </partProduct>
+                </part>
               </manufacturedProduct>
+              
               <subjectOf>
                 <marketingAct>
-                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="test"/>
+                  <code code="10" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="TBD"/>
                   <statusCode code="active"/>
                   <effectiveTime>
                     <low value="20160606"/>
-                    <high value="20160101"/>
+                    <high value="20200808"/>
                   </effectiveTime>
                 </marketingAct>
               </subjectOf>
               <subjectOf>
                 <approval>
                   <code code="308" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="NDS"/>
+                  
                   <effectiveTime>
                     <low value="12341212"/>
                     <high value="12341212"/>
                   </effectiveTime>
+                  
                   <author>
                     <territorialAuthority>
                       <territory>
-                        <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.27"/>
+                        <code code="1" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                        
                       </territory>
                     </territorialAuthority>
                   </author>
@@ -249,41 +310,37 @@
               <subjectOf>
                 <characteristic>
                   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Color"/>
-                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="white" xsi:type="CE">
-                    <originalText>more off white</originalText>
+                  
+                  <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="white" xsi:type="CE">
+                    <originalText>more creamy</originalText>
                   </value>
                 </characteristic>
               </subjectOf>
-              <subjectOf>
-                <characteristic>
-                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Color"/>
-                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="white" xsi:type="CE">
-                    <originalText>more fluffy</originalText>
-                  </value>
-                </characteristic>
-              </subjectOf>
-              <subjectOf>
-                <characteristic>
-                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Color"/>
-                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="white" xsi:type="CE">
-                    <originalText>more dreamy</originalText>
-                  </value>
-                </characteristic>
-              </subjectOf>
-              <subjectOf>
-                <characteristic>
-                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Image"/>
-                  <value xsi:type="ED" mediaType="image/jpeg">
-                    <reference value="red-pill-2.jpg"/>
-                  </value>
-                </characteristic>
-              </subjectOf>
+              
               <subjectOf>
                 <characteristic>
                   <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Shape"/>
                   <value code="1" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="capsule" xsi:type="CE">
                     <originalText>capsule like</originalText>
                   </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Size"/>
+                  <value unit="mm" value="18" xsi:type="PQ"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="5" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Score"/>
+                  <value value="1" xsi:type="INT"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="12" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Imprint"/>
+                  <value xsi:type="ST" value="05"/>
                 </characteristic>
               </subjectOf>
               <subjectOf>
@@ -296,14 +353,11 @@
               </subjectOf>
               <subjectOf>
                 <characteristic>
-                  <code code="5" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Score"/>
-                  <value value="1" xsi:type="INT"/>
-                </characteristic>
-              </subjectOf>
-              <subjectOf>
-                <characteristic>
-                  <code code="6" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Production Amount"/>
-                  <value xsi:type="INT" value="10000"/>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Image"/>
+                  <value xsi:type="ED" mediaType="image/jpeg">
+                    <reference value="red-pill-2.jpg"/>
+                    
+                  </value>
                 </characteristic>
               </subjectOf>
               <subjectOf>
@@ -313,19 +367,13 @@
                     displayName="Type 2: Prefilled Drug Delivery Device/System"/>
                 </characteristic>
               </subjectOf>
-
               <subjectOf>
                 <characteristic>
-                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Size"/>
-                  <value unit="mm" value="18" xsi:type="PQ"/>
+                  <code code="6" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Production Amount"/>
+                  <value xsi:type="INT" value="10000"/>
                 </characteristic>
               </subjectOf>
-              <subjectOf>
-                <characteristic>
-                  <code code="12" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Imprint"/>
-                  <value xsi:type="ST">05</value>
-                </characteristic>
-              </subjectOf>
+              
               <subjectOf>
                 <characteristic>
                   <code code="13" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Pharmaceutical Standard"/>
@@ -338,7 +386,7 @@
                   <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP" xsi:type="CE"/>
                 </characteristic>
               </subjectOf>
-
+              
               <subjectOf>
                 <characteristic>
                   <code code="14" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Scheduling Symbol"/>
@@ -351,7 +399,7 @@
                   <value code="2" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="N" xsi:type="CE"/>
                 </characteristic>
               </subjectOf>
-
+              
               <subjectOf>
                 <characteristic>
                   <code code="15" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Therapeutic Class"/>
@@ -365,11 +413,10 @@
                   <value code=" A03CA02" codeSystem="2.16.840.1.113883.2.20.6.6" displayName=" Clidinium And Psycholeptics" xsi:type="CE"/>
                 </characteristic>
               </subjectOf>
-
+              
               <consumedIn>
                 <substanceAdministration>
                   <routeCode code="12" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Intra-Arterial"/>
-                  
                 </substanceAdministration>
               </consumedIn>
               <consumedIn>
@@ -551,7 +598,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="12" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="Imprint"/>
-                  <value xsi:type="ST">05</value>
+                  <value xsi:type="ST" value="05:Ab:04"/>
                 </characteristic>
               </subjectOf>
               <subjectOf>
@@ -646,7 +693,7 @@
       <component>
         <section ID="Ld8d30d86-e343-48f4-9cec-524834b3803b">
           <id root="eed00b53-cdb2-4aa6-9e82-88b7d793b208"/>
-          <code code="450" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Title Page"/>
+          <code code="10" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Title Page"/>
           <effectiveTime value="20160629"/>
           <component>
             <section ID="L732eb9ef-0549-4826-9a1e-e7bbaa23849b">
@@ -662,15 +709,16 @@
               <id root="c7391c3d-5f03-45de-a1c4-928b23f37d6a"/>
               <code code="440" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Footnote"/>
               <title>Footnote</title>
-              <text>a list <list listType="ordered" styleCode="LittleAlpha"> 
+              <text>
+              An ordered list <list listType="ordered" styleCode="Arabic"> 
                   <item>aa</item>
                   <item>bb</item>
                   <item>cc</item>
                   <item>dd</item>
-                <item><caption>&#160;</caption><content styleCode="underline">Groceries</content></item>
-                <item><caption>+ </caption>Milk</item>
-                <item><caption>- </caption>Eggs</item>
-                <item><caption>* </caption>Cheese</item>
+                  <item><caption>&#160;</caption><content styleCode="underline">Groceries</content></item>
+                  <item><caption>+ </caption>Milk</item>
+                  <item><caption>- </caption>Eggs</item>
+                  <item><caption>* </caption>Cheese</item>
                 </list>
               </text>
               <effectiveTime value="20160802"/>
@@ -698,6 +746,10 @@
               <code code="180" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Summary Product Information"/>
               <title>Summary Product Information</title>
               <text>
+                <content styleCode="xmChange">
+                  This is an example of text that is a recent major change
+                </content>
+                This is an example of changed text that is not considered a recent major change
                 <table border="3" cellspacing="3" cellpadding="5" frame="border" summary="summ">
                   <tbody>
                     <tr>
@@ -1511,7 +1563,7 @@
               <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
               <code code="310" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Clinical Trials"/>
               <title>Clinical Trials</title>
-              <text><paragraph>Panic Disorder:<footnote>Panic Disorder Footnote: Well this is a test to see if it renders properly</footnote>
+              <text><paragraph>Panic Disorder:<footnote>Well this is a test to see if it renders properly</footnote>
                 <footnote>Panic Disorder Footnote2: And more stuff</footnote>Four placebo-controlled clinical trials have been performed to investigate the efficacy of
                     <content styleCode="bold">Salt and Pepper </content>in panic disorder: two flexible dose studies and two fixed dose studies.  At
                   the last week of treatment (week 10 or 12), both flexible dose studies and one of the fixed dose studies showed
@@ -4653,6 +4705,7 @@
       <component>
         <section ID="Lbca4c498-0gc3-4e44-bcb6-551130x4de5d">
           <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
+          
           <code code="40" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Part III: Consumer Information"/>
           <title>Part III: Consumer Information</title>
           <effectiveTime value="20160802"/>
