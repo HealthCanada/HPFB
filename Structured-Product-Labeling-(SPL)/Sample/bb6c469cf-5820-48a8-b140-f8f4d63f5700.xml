@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- use prod -->
-<!-- 
 <?xml-stylesheet type="text/xsl" href="https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/hpfb-spl.xsl"?>
 <?xml-stylesheet type="text/css" href="https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/hpfb-spl-core.css"?>
- -->
-<!-- use dev -->
-
-<?xml-stylesheet type="text/xsl" href="https://rawgit.com/IanYangCa/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/dev/hpfb-spl.xsl"?>
-<?xml-stylesheet type="text/css" href="https://rawgit.com/IanYangCa/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/dev/hpfb-spl-core.css"?>
-
-<!-- test local -->
-<!--  
-<?xml-stylesheet type="text/xsl" href="file:..\..\..\..\..\SPL\Style-Sheet\SPM\current\spl-hpfb.xsl"?>
-<?xml-stylesheet type="text/css" href="file:..\..\..\..\..\SPL\Style-Sheet\SPM\current\spl-hpfb.css"?>
--->
-<!--  
-<?xml-stylesheet type="text/xsl" href="file:..\..\..\..\..\SPL\Style-Sheet\SPM\IMSD\6Dec2017-3\hpfb-spl.xsl"?>
-<?xml-stylesheet type="text/css" href="file:..\..\..\..\..\SPL\Style-Sheet\SPM\IMSD\6Dec2017-3\hpfb-spl.css"?>
--->
-
-
 <document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="urn:hl7-org:v3 https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Schema/current/SPL.xsd">
   <typeId assigningAuthorityName="Health Products and Food Branch"/>
