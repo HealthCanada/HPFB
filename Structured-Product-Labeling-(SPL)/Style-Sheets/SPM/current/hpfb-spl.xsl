@@ -41,9 +41,8 @@ Revision: $Id: spl-common.xsl,v 2.0 2006/08/18 04:11:00 sbsuggs Exp $
 	<xsl:param name="process-mixins" select="true()"/>
 	<!-- "/.." means the value come from parent or caller parameter -->
 	<xsl:param name="oids-base-url" select="'https://raw.githubusercontent.com/HealthCanada/HPFB/master/Controlled-Vocabularies/Content/'" />
-
 	<!-- Where to find JavaScript and CSS resources -->
-	<xsl:param name="resourcesdir" select="'https://rawgit.com/IanYangCa/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/dev/'" />
+	<xsl:param name="resourcesdir" select="'https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/'" />
 	<xsl:param name="css" select="concat($resourcesdir, 'hpfb-spl-core.css')" />
 	<!-- is there any reason we render HTML 1.0?  -->
 	<xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
