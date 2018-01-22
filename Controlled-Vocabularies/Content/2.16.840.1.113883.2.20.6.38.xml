@@ -2,12 +2,9 @@
 <gc:CodeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:html="http://www.w3.org/1999/xhtml">
   <Annotation>
     <Description>
-      <html:p>This file is a Health Canada maintained code list, encoded in OASIS genericode format.</html:p>
-      <html:p>The values are a subset of HL7 vocabulary, Telecom Use and Telecom Capabilities must be used together.</html:p>
+      <html:p>This is a Health Products and Food Branch (HPFB) maintained code list, encoded in OASIS genericode format.</html:p>
     </Description>
-    <AppInfo>
-      <html:p>Authored by HC on Feb 2017.</html:p>
-    </AppInfo>
+    <AppInfo />
   </Annotation>
   <Identification>
     <ShortName>2.16.840.1.113883.2.20.6.38</ShortName>
@@ -58,11 +55,15 @@
       <Data Type="string" />
     </Column>
     <Column Use="optional" Id="other-identifer">
-      <ShortName>Other Identifer</ShortName>
+      <ShortName>Other Identifier</ShortName>
       <Data Type="string" />
     </Column>
     <Column Use="optional" Id="catagory">
       <ShortName>Category</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="source">
+      <ShortName>Source</ShortName>
       <Data Type="string" />
     </Column>
     <Column Use="required" Id="mod-date">
@@ -102,6 +103,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -136,6 +140,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -172,6 +179,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -206,6 +216,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -242,6 +255,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -276,6 +292,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -312,6 +331,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -346,6 +368,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -382,6 +407,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -416,6 +444,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -452,6 +483,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -486,6 +520,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -522,6 +559,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -556,6 +596,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -592,6 +635,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -626,6 +672,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -662,6 +711,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -696,6 +748,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -732,6 +787,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -766,6 +824,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -802,6 +863,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -836,6 +900,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -872,6 +939,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -906,6 +976,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -942,6 +1015,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -976,6 +1052,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1012,6 +1091,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1046,6 +1128,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1082,6 +1167,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1116,6 +1204,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1152,6 +1243,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1186,6 +1280,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1222,6 +1319,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1256,6 +1356,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1292,6 +1395,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1326,6 +1432,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1362,6 +1471,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1396,6 +1508,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1432,6 +1547,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1466,6 +1584,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1502,6 +1623,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1536,6 +1660,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1572,6 +1699,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1606,6 +1736,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1642,6 +1775,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1676,6 +1812,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1712,6 +1851,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1746,6 +1888,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1782,6 +1927,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1816,6 +1964,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1852,6 +2003,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1886,6 +2040,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1922,6 +2079,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -1956,6 +2116,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -1992,6 +2155,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -2026,6 +2192,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -2062,6 +2231,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -2096,6 +2268,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -2132,6 +2307,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -2166,6 +2344,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -2202,6 +2383,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -2236,6 +2420,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -2272,6 +2459,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -2306,6 +2496,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -2342,6 +2535,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -2376,6 +2572,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -2412,6 +2611,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -2446,6 +2648,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -2482,6 +2687,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -2516,6 +2724,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -2552,6 +2763,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -2586,6 +2800,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -2622,6 +2839,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -2656,6 +2876,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
@@ -2692,6 +2915,9 @@
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
       </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>
       </Value>
@@ -2726,6 +2952,9 @@
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>hpfb</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
         <SimpleValue>2017-11-29 2:44:53 PM</SimpleValue>

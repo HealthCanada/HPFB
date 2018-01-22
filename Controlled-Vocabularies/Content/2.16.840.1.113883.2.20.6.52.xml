@@ -1,14 +1,9 @@
 <?xml-stylesheet type="text/xsl" href="https://github.com/HealthCanada/HPFB/raw/master/Controlled-Vocabularies/Style-Sheets/current/HC_GeneriCode_Codelist.xsl"?>
 <gc:CodeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:html="http://www.w3.org/1999/xhtml">
-  <Annotation>
-    <Description>
-      <html:p>This is a Health Products and Food Branch (HPFB) maintained code list, encoded in OASIS genericode format.</html:p>
-    </Description>
-    <AppInfo />
-  </Annotation>
+  <Annotation>Missing static content information</Annotation>
   <Identification>
-    <ShortName>2.16.840.1.113883.2.20.6.33</ShortName>
-    <LongName>Organization Role</LongName>
+    <ShortName>2.16.840.1.113883.2.20.6.52</ShortName>
+    <LongName>Media Type</LongName>
     <Version>1</Version>
     <CanonicalUri>tbd</CanonicalUri>
     <CanonicalVersionUri>tbd</CanonicalVersionUri>
@@ -77,13 +72,13 @@
         <SimpleValue>1</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>DIN Owner</SimpleValue>
+        <SimpleValue>JPEG</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>DIN Owner</SimpleValue>
+        <SimpleValue>JPEG</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
-        <SimpleValue></SimpleValue>
+        <SimpleValue>JPEG</SimpleValue>
       </Value>
       <Value ColumnRef="desc-fra">
         <SimpleValue></SimpleValue>
@@ -107,7 +102,7 @@
         <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
-        <SimpleValue>2017-09-28 8:40:00 AM</SimpleValue>
+        <SimpleValue>2018-01-05 11:11:09 AM</SimpleValue>
       </Value>
     </Row>
     <Row>
@@ -115,13 +110,13 @@
         <SimpleValue>2</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>Agent</SimpleValue>
+        <SimpleValue>JFIF</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Agent</SimpleValue>
+        <SimpleValue>JFIF</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
-        <SimpleValue></SimpleValue>
+        <SimpleValue>JFIF</SimpleValue>
       </Value>
       <Value ColumnRef="desc-fra">
         <SimpleValue></SimpleValue>
@@ -145,7 +140,7 @@
         <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
-        <SimpleValue>2017-09-28 8:40:00 AM</SimpleValue>
+        <SimpleValue>2018-01-05 11:11:09 AM</SimpleValue>
       </Value>
     </Row>
     <Row>
@@ -153,13 +148,13 @@
         <SimpleValue>3</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>Importer</SimpleValue>
+        <SimpleValue>PDF/A-1</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Importer</SimpleValue>
+        <SimpleValue>PDF/A-1</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
-        <SimpleValue></SimpleValue>
+        <SimpleValue>PDF/A-1</SimpleValue>
       </Value>
       <Value ColumnRef="desc-fra">
         <SimpleValue></SimpleValue>
@@ -183,7 +178,7 @@
         <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
-        <SimpleValue>2017-09-28 8:40:00 AM</SimpleValue>
+        <SimpleValue>2018-01-05 11:11:09 AM</SimpleValue>
       </Value>
     </Row>
     <Row>
@@ -191,13 +186,13 @@
         <SimpleValue>4</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>Distributor</SimpleValue>
+        <SimpleValue>PDF/A-2</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Distributor</SimpleValue>
+        <SimpleValue>PDF/A-2</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
-        <SimpleValue></SimpleValue>
+        <SimpleValue>PDF/A-2</SimpleValue>
       </Value>
       <Value ColumnRef="desc-fra">
         <SimpleValue></SimpleValue>
@@ -221,7 +216,7 @@
         <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
-        <SimpleValue>2017-09-28 8:40:00 AM</SimpleValue>
+        <SimpleValue>2018-01-05 11:11:09 AM</SimpleValue>
       </Value>
     </Row>
     <Row>
@@ -229,13 +224,13 @@
         <SimpleValue>5</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>Previous DIN Owner</SimpleValue>
+        <SimpleValue>XML</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Previous DIN Owner</SimpleValue>
+        <SimpleValue>XML</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
-        <SimpleValue></SimpleValue>
+        <SimpleValue>XML</SimpleValue>
       </Value>
       <Value ColumnRef="desc-fra">
         <SimpleValue></SimpleValue>
@@ -259,7 +254,7 @@
         <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
-        <SimpleValue>2017-09-28 8:40:00 AM</SimpleValue>
+        <SimpleValue>2018-01-05 11:11:09 AM</SimpleValue>
       </Value>
     </Row>
   </SimpleCodeList>

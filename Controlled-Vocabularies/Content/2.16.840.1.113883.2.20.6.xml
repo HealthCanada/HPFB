@@ -17,9 +17,12 @@
     </Agency>
   </Identification>
   <ColumnSet>
-    <Column>Missing column set information</Column>
+    <Column Use="required" Id="source">
+      <ShortName>Source</ShortName>
+      <Data Type="string" />
+    </Column>
   </ColumnSet>
   <SimpleCodeList>
-    <Value>Missing simple code list information</Value>
+    <Value>Missing simple code list information from terms</Value>
   </SimpleCodeList>
 </gc:CodeList>

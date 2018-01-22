@@ -7,8 +7,8 @@
     <AppInfo />
   </Annotation>
   <Identification>
-    <ShortName>2.16.840.1.113883.2.20.6.33</ShortName>
-    <LongName>Organization Role</LongName>
+    <ShortName>2.16.840.1.113883.2.20.6.51</ShortName>
+    <LongName>Telecom Type</LongName>
     <Version>1</Version>
     <CanonicalUri>tbd</CanonicalUri>
     <CanonicalVersionUri>tbd</CanonicalVersionUri>
@@ -77,13 +77,13 @@
         <SimpleValue>1</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>DIN Owner</SimpleValue>
+        <SimpleValue>mailto</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>DIN Owner</SimpleValue>
+        <SimpleValue>mailto</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
-        <SimpleValue></SimpleValue>
+        <SimpleValue>Email Address</SimpleValue>
       </Value>
       <Value ColumnRef="desc-fra">
         <SimpleValue></SimpleValue>
@@ -107,7 +107,7 @@
         <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
-        <SimpleValue>2017-09-28 8:40:00 AM</SimpleValue>
+        <SimpleValue>2018-01-05 11:11:09 AM</SimpleValue>
       </Value>
     </Row>
     <Row>
@@ -115,13 +115,13 @@
         <SimpleValue>2</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>Agent</SimpleValue>
+        <SimpleValue>tel</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Agent</SimpleValue>
+        <SimpleValue>tel</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
-        <SimpleValue></SimpleValue>
+        <SimpleValue>Regular Telephone</SimpleValue>
       </Value>
       <Value ColumnRef="desc-fra">
         <SimpleValue></SimpleValue>
@@ -145,7 +145,7 @@
         <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
-        <SimpleValue>2017-09-28 8:40:00 AM</SimpleValue>
+        <SimpleValue>2018-01-05 11:11:09 AM</SimpleValue>
       </Value>
     </Row>
     <Row>
@@ -153,13 +153,13 @@
         <SimpleValue>3</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>Importer</SimpleValue>
+        <SimpleValue>fax</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Importer</SimpleValue>
+        <SimpleValue>fax</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
-        <SimpleValue></SimpleValue>
+        <SimpleValue>Fax Number</SimpleValue>
       </Value>
       <Value ColumnRef="desc-fra">
         <SimpleValue></SimpleValue>
@@ -183,7 +183,7 @@
         <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
-        <SimpleValue>2017-09-28 8:40:00 AM</SimpleValue>
+        <SimpleValue>2018-01-05 11:11:09 AM</SimpleValue>
       </Value>
     </Row>
     <Row>
@@ -191,13 +191,13 @@
         <SimpleValue>4</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>Distributor</SimpleValue>
+        <SimpleValue>cel</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
-        <SimpleValue>Distributor</SimpleValue>
+        <SimpleValue>cel</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
-        <SimpleValue></SimpleValue>
+        <SimpleValue>Cellular Number</SimpleValue>
       </Value>
       <Value ColumnRef="desc-fra">
         <SimpleValue></SimpleValue>
@@ -221,45 +221,7 @@
         <SimpleValue>HPFB</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
-        <SimpleValue>2017-09-28 8:40:00 AM</SimpleValue>
-      </Value>
-    </Row>
-    <Row>
-      <Value ColumnRef="code">
-        <SimpleValue>5</SimpleValue>
-      </Value>
-      <Value ColumnRef="name-eng">
-        <SimpleValue>Previous DIN Owner</SimpleValue>
-      </Value>
-      <Value ColumnRef="name-fra">
-        <SimpleValue>Previous DIN Owner</SimpleValue>
-      </Value>
-      <Value ColumnRef="desc-eng">
-        <SimpleValue></SimpleValue>
-      </Value>
-      <Value ColumnRef="desc-fra">
-        <SimpleValue></SimpleValue>
-      </Value>
-      <Value ColumnRef="status">
-        <SimpleValue>1</SimpleValue>
-      </Value>
-      <Value ColumnRef="ord">
-        <SimpleValue>1</SimpleValue>
-      </Value>
-      <Value ColumnRef="xref">
-        <SimpleValue>na</SimpleValue>
-      </Value>
-      <Value ColumnRef="other-identifer">
-        <SimpleValue></SimpleValue>
-      </Value>
-      <Value ColumnRef="catagory">
-        <SimpleValue></SimpleValue>
-      </Value>
-      <Value ColumnRef="source">
-        <SimpleValue>HPFB</SimpleValue>
-      </Value>
-      <Value ColumnRef="mod-date">
-        <SimpleValue>2017-09-28 8:40:00 AM</SimpleValue>
+        <SimpleValue>2018-01-05 11:11:09 AM</SimpleValue>
       </Value>
     </Row>
   </SimpleCodeList>
