@@ -2736,7 +2736,8 @@ Contributor(s): Steven Gitterman, Brian Keller, Brian Suggs, Ian Yang
 		</xsl:if>
 		<xsl:if test="not($value)">Error: code missing:(<xsl:value-of select="$code"/> in <xsl:value-of select="$section-id-oid"/>)</xsl:if>
 	</xsl:template>
-</xsl:transform><!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.
+</xsl:transform>
+<!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.
 
 <metaInformation>
 	<scenarios>
