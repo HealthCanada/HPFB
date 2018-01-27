@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- use prod -->
+
 <?xml-stylesheet type="text/xsl" href="https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/hpfb-spl.xsl"?>
 <?xml-stylesheet type="text/css" href="https://rawgit.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/current/hpfb-spl-core.css"?>
+
+<!-- use dev -->
+<!-- 
+<?xml-stylesheet type="text/xsl" href="https://rawgit.com/IanYangCa/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/dev.2/hpfb-spl.xsl"?>
+<?xml-stylesheet type="text/css" href="https://rawgit.com/IanYangCa/HPFB/master/Structured-Product-Labeling-(SPL)/Style-Sheets/SPM/dev.2/hpfb-spl-core.css"?>
+ -->
+
+<!-- test local -->
+<!--  
+<?xml-stylesheet type="text/xsl" href="file:..\..\..\..\..\SPL\Style-Sheet\SPM\current\spl-hpfb.xsl"?>
+<?xml-stylesheet type="text/css" href="file:..\..\..\..\..\SPL\Style-Sheet\SPM\current\spl-hpfb.css"?>
+-->
+<!--  
+<?xml-stylesheet type="text/xsl" href="file:..\..\..\..\..\SPL\Style-Sheet\SPM\IMSD\6Dec2017-3\hpfb-spl.xsl"?>
+<?xml-stylesheet type="text/css" href="file:..\..\..\..\..\SPL\Style-Sheet\SPM\IMSD\6Dec2017-3\hpfb-spl.css"?>
+-->
+
+
 <document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="urn:hl7-org:v3 https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Schema/current/SPL.xsd">
   <typeId assigningAuthorityName="Health Products and Food Branch"/>
@@ -8,7 +28,11 @@
   <templateId extension="308" root="2.16.840.1.113883.2.20.6.11"/>
   <id root="bb6c469cf-5820-48a8-b140-f8f4d63f5700"/>
   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.10" displayName="Product Monograph"/>
-  <title>2004 Product Monograph Template  - Standard for a ???</title>
+  <title>
+    "Scheduling Symbol" "Brand Name"
+      "Proper name"
+      "Dosage Form(s), Strength(s) and Route(s) of Administration" "Pharmaceutical Standard, "Pharmaceutical Standard, "Pharmaceutical Standard" "Therapeutic Classification"
+  </title>
   <effectiveTime value="20270629235959">
     <originalText description="Date of Initial Approval">20200629</originalText>
   </effectiveTime>
@@ -690,17 +714,9 @@
               <id root="c7391c3d-5f03-45de-a1c4-928b23f37d6a"/>
               <code code="440" codeSystem="2.16.840.1.113883.2.20.6.8" displayName="Footnote"/>
               <title>Footnote</title>
+              
               <text>
-              An ordered list <list listType="ordered" styleCode="Arabic"> 
-                  <item>aa</item>
-                  <item>bb</item>
-                  <item>cc</item>
-                  <item>dd</item>
-                  <item><caption>&#160;</caption><content styleCode="underline">Groceries</content></item>
-                  <item><caption>+ </caption>Milk</item>
-                  <item><caption>- </caption>Eggs</item>
-                  <item><caption>* </caption>Cheese</item>
-                </list>
+                Brand Name for product 1 is a registered &#174; trademark of Test Company ID: 111
               </text>
               <effectiveTime value="20160802"/>
             </section>
