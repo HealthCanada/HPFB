@@ -1,1 +1,0 @@
-Genericode files for the HPFB OID's are directly hosted from this structure. At this time only the OID's that are directly used by the PM (Document Type 1) and Templates 1-10 are included, a link to the OID Catalog will replace the genericode files once the tool is ready for production use.
