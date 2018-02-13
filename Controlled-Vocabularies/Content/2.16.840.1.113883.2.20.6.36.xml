@@ -5122,13 +5122,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>190-10-01</SimpleValue>
+        <SimpleValue>190-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>Patient Subsets</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -5404,13 +5404,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>210-100</SimpleValue>
+        <SimpleValue>210-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>Hepatic/Biliary/Pancreatic</SimpleValue>
+        <SimpleValue>General</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>00:01:00</SimpleValue>
+        <SimpleValue>0:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -5419,7 +5419,7 @@
         <SimpleValue>3</SimpleValue>
       </Value>
       <Value ColumnRef="sequence">
-        <SimpleValue>34</SimpleValue>
+        <SimpleValue>20</SimpleValue>
       </Value>
       <Value ColumnRef="fixed_title">
         <SimpleValue>True</SimpleValue>
@@ -5451,10 +5451,10 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>210-10-01</SimpleValue>
+        <SimpleValue>210-100</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>General</SimpleValue>
+        <SimpleValue>Hepatic/Biliary/Pancreatic</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
         <SimpleValue>00:01:00</SimpleValue>
@@ -5466,7 +5466,7 @@
         <SimpleValue>3</SimpleValue>
       </Value>
       <Value ColumnRef="sequence">
-        <SimpleValue>20</SimpleValue>
+        <SimpleValue>34</SimpleValue>
       </Value>
       <Value ColumnRef="fixed_title">
         <SimpleValue>True</SimpleValue>
@@ -7237,13 +7237,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>220-100</SimpleValue>
+        <SimpleValue>220-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>Clinical Trial Adverse Reactions (Pediatrics)</SimpleValue>
+        <SimpleValue>Adverse Drug Reaction (ADR) Overview</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>00:01:00</SimpleValue>
+        <SimpleValue>0:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -7252,7 +7252,7 @@
         <SimpleValue>3</SimpleValue>
       </Value>
       <Value ColumnRef="sequence">
-        <SimpleValue>67</SimpleValue>
+        <SimpleValue>58</SimpleValue>
       </Value>
       <Value ColumnRef="fixed_title">
         <SimpleValue>True</SimpleValue>
@@ -7284,10 +7284,10 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>220-10-01</SimpleValue>
+        <SimpleValue>220-100</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>Adverse Drug Reaction (ADR) Overview</SimpleValue>
+        <SimpleValue>Clinical Trial Adverse Reactions (Pediatrics)</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
         <SimpleValue>00:01:00</SimpleValue>
@@ -7299,7 +7299,7 @@
         <SimpleValue>3</SimpleValue>
       </Value>
       <Value ColumnRef="sequence">
-        <SimpleValue>58</SimpleValue>
+        <SimpleValue>67</SimpleValue>
       </Value>
       <Value ColumnRef="fixed_title">
         <SimpleValue>True</SimpleValue>
@@ -7895,13 +7895,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>230-10-01</SimpleValue>
+        <SimpleValue>230-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>Drug-Drug Interactions</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>00:01:00</SimpleValue>
+        <SimpleValue>0:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -8318,13 +8318,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>240-10-01</SimpleValue>
+        <SimpleValue>240-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>Dosing Considerations</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -8929,13 +8929,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>260-10-01</SimpleValue>
+        <SimpleValue>260-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>Mechanism of Action</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -10010,7 +10010,7 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>300-10-01</SimpleValue>
+        <SimpleValue>300-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>Drug Substance</SimpleValue>
@@ -10433,13 +10433,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>310-10-01</SimpleValue>
+        <SimpleValue>310-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>Efficacy and Safety Studies</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>00:01:00</SimpleValue>
+        <SimpleValue>0:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -10903,13 +10903,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>360-100</SimpleValue>
+        <SimpleValue>360-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>&amp;gt;Brand name&amp;lt; comes in the following dosage forms:</SimpleValue>
+        <SimpleValue>What the medication is used for</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -10918,7 +10918,7 @@
         <SimpleValue>3</SimpleValue>
       </Value>
       <Value ColumnRef="sequence">
-        <SimpleValue>140</SimpleValue>
+        <SimpleValue>131</SimpleValue>
       </Value>
       <Value ColumnRef="fixed_title">
         <SimpleValue>True</SimpleValue>
@@ -10950,10 +10950,10 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>360-10-01</SimpleValue>
+        <SimpleValue>360-100</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
-        <SimpleValue>What the medication is used for</SimpleValue>
+        <SimpleValue>&amp;gt;Brand name&amp;lt; comes in the following dosage forms:</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
         <SimpleValue>01:01:00</SimpleValue>
@@ -10965,7 +10965,7 @@
         <SimpleValue>3</SimpleValue>
       </Value>
       <Value ColumnRef="sequence">
-        <SimpleValue>131</SimpleValue>
+        <SimpleValue>140</SimpleValue>
       </Value>
       <Value ColumnRef="fixed_title">
         <SimpleValue>True</SimpleValue>
@@ -11467,13 +11467,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>370-10-01</SimpleValue>
+        <SimpleValue>370-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>To help avoid side effects and ensure proper use, talk to your healthcare professional before you take &amp;gt;Brand name&amp;lt;</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>00:01:00</SimpleValue>
+        <SimpleValue>0:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -11655,13 +11655,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>390-10-01</SimpleValue>
+        <SimpleValue>390-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>Usual dose</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -12031,13 +12031,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>430-10-01</SimpleValue>
+        <SimpleValue>430-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>If you want more information about &amp;gt;Brand name&amp;lt;:</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -12225,7 +12225,7 @@
         <SimpleValue>SPL product data elements section</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>False</SimpleValue>
@@ -12460,7 +12460,7 @@
         <SimpleValue>2.3.S.1 General Information</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -12930,7 +12930,7 @@
         <SimpleValue>2.3.S.2.1 Manufacturer(s) (name, manufacturer)</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -13400,7 +13400,7 @@
         <SimpleValue>2.3.S.7.1 Stability Summary and Conclusions</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -14778,7 +14778,7 @@
         <SimpleValue>True</SimpleValue>
       </Value>
       <Value ColumnRef="included">
-        <SimpleValue>False</SimpleValue>
+        <SimpleValue>True</SimpleValue>
       </Value>
       <Value ColumnRef="derived">
         <SimpleValue>False</SimpleValue>
@@ -14825,7 +14825,7 @@
         <SimpleValue>True</SimpleValue>
       </Value>
       <Value ColumnRef="included">
-        <SimpleValue>False</SimpleValue>
+        <SimpleValue>True</SimpleValue>
       </Value>
       <Value ColumnRef="derived">
         <SimpleValue>False</SimpleValue>
@@ -14872,7 +14872,7 @@
         <SimpleValue>True</SimpleValue>
       </Value>
       <Value ColumnRef="included">
-        <SimpleValue>False</SimpleValue>
+        <SimpleValue>True</SimpleValue>
       </Value>
       <Value ColumnRef="derived">
         <SimpleValue>False</SimpleValue>
@@ -15086,13 +15086,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>550-10-01</SimpleValue>
+        <SimpleValue>550-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>Physical Characteristics</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -15556,13 +15556,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>610-10-01</SimpleValue>
+        <SimpleValue>610-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>Tell your healthcare professional about all the medicines you take, including any drugs, vitamins, minerals, natural supplements or alternative medicines.</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>00:01:00</SimpleValue>
+        <SimpleValue>0:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -15697,13 +15697,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>620-10-01</SimpleValue>
+        <SimpleValue>620-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>How to take &amp;gt;Brand name&amp;lt;:</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
@@ -15932,13 +15932,13 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
-        <SimpleValue>630-10-01</SimpleValue>
+        <SimpleValue>630-10</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>What are possible side effects from using &amp;gt;Brand name&amp;lt;?</SimpleValue>
       </Value>
       <Value ColumnRef="cardinality">
-        <SimpleValue>01:01:00</SimpleValue>
+        <SimpleValue>1:1</SimpleValue>
       </Value>
       <Value ColumnRef="include_in_toc">
         <SimpleValue>True</SimpleValue>
