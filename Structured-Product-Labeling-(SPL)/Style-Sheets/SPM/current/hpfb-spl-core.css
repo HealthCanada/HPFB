@@ -21,18 +21,26 @@ FIXME: All the combinations of styleCode attributes need to
 be represented
 */
 
-
-
-@media screen {
+/* @media screen { */
+body {
+	background-color: #eff0f1;
+	margin:10px 0 0 0;
+}
 .spl {
 	font-family: "Times New Roman", Times, serif;
 	font-size: 12pt;	
 	background-color: rgba(255,255,255,0);
 	color: #000000;
-	padding-left: 5em;
-	padding-right: 5em;
+	padding-left: 3px;
+	padding-right: 3px;
 }
-}
+/* } */
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
 							
 @media print {
 	* {
@@ -134,7 +142,13 @@ be represented
 	color:grey;
 }
 
-.leftColumn h1 a:hover {
+.leftColumn h1,
+.leftColumn h2,
+.leftColumn h3,
+.leftColumn h4,
+.leftColumn h5,
+.leftColumn h6
+ a:hover {
 	color:grey;
 }
 
@@ -151,10 +165,13 @@ be represented
 	margin-bottom: 0ex;
 	text-align: left;
 }
-
+.spl div.Section {	
+/* 	margin-left:4ex; */
+/* 	margin-right:4ex; */
+}
 .spl div.Section h1 {	
 	text-indent: 0em;
-	font-size: 100%;
+	font-size: 1.1em;
 	font-weight: bold;
 	margin-top:4ex;
 	margin-bottom: 0ex;
@@ -162,13 +179,9 @@ be represented
 	font-family:"Times New Roman", Times, serif;
 }
 
-.spl div.Warning h1 {
-	margin-top: 0ex;
-}
-
 .spl h2 {	
 	text-indent: 0em;
-	font-size: 100%;
+	font-size: 1em;
 	font-weight: bold;
 	margin-top: 2.2ex;
 	margin-bottom: 0ex;
@@ -178,7 +191,7 @@ be represented
 
 .spl h3 {	
 	text-indent: 0em;
-	font-size: 100%;
+	font-size: 0.9em;
 	font-weight: normal;
 	margin-top: 2.2ex;
 	margin-bottom: 0ex;
@@ -187,7 +200,7 @@ be represented
 
 .spl h4 {	
 	text-indent: 0em;
-	font-size: 100%;
+	font-size: 0.8em;
 	font-weight: normal;
 	margin-top: 2.2ex;
 	margin-bottom: 0ex;
@@ -921,21 +934,34 @@ be represented
 	margin:0 auto;
 	width:80%;
 }
+.contentBody {
+	width:100%;
+}
 .leftColumn {
-	border:1px solid black;
+	border-right: 12px solid lightgrey;
+	background-color:white;
+	display:inline;
 	float:left;
-	height:100%;
 	width:25%;
 	overflow: auto;
+	white-space:nowrap;
 }
-
+.leftColumn h1 {
+	font-size: 0.9em !important;
+}
+.leftColumn h2 {
+	font-size: 0.8em !important;
+}
+.leftColumn h3,
+.leftColumn h4,
+.leftColumn h5 {
+	font-size: 0.7em !important;
+}
 .rightColumn {
-	border:1px solid black;
-	float:right;
+	background-color:white;
+	float:left;
 	height:100%;
-	padding-left:1px !important;
-	padding-right:0px !important;
-	width:74%;
+	width:70%;
 	overflow: auto;
 }
 
@@ -1001,7 +1027,10 @@ be represented
 .spl .bold {
     font-weight: bold;
 }
-
+.spl div.DataElementsTable{
+	margin-left:4ex;
+	margin-right:4ex;
+}
 .expand {
   height: 0px;
   overflow: hidden;
@@ -1015,17 +1044,73 @@ be represented
   content: "-";
 }
 .pageHeader {
-    border: 1px solid black;
-    background-color:#eff0f1;
-	font-size: 1em;
+    display:inline-block;
+	font-size: 0.9em;
 	font-weight:bold;
-	width:100%;
+	width:99.8%;
 }
 .pageHeader .pageTitle {
+	height:25px;
 	text-align: center;
-	padding-left:3px;
-	padding-right:3px;
+	padding-left:5px;
+	padding-right:5px;
+	overflow:auto;
+	white-space:nowrap;
+	width: 100%;
 }
+.pageHeader #pageHeaderTitle{
+	text-align: center;
+	padding-left:10px;
+	padding-right:5px;
+	overflow:auto;
+	white-space:nowrap;
+}
+.pageHeader #approvedRevisionDateLabel {
+	display: inline-block;
+	font-size: 80%;
+	text-align: left;
+	padding-left:3px;
+	padding-right:1px;
+	white-space:nowrap;
+}
+.pageHeader #approvedRevisionDateValue {
+	font-size: 80%;
+	text-align: left;
+	padding-left:1px;
+	padding-right:5px;
+	white-space:nowrap;
+}
+.pageHeader #headerBrandName {
+	font-size: 80%;
+	text-align: left;
+	padding-left:5px;
+	padding-right:1px;
+	white-space:nowrap;
+}
+.pageHeader #pageHeaderTitle {
+	font-size: 80%;
+	text-align: left;
+	overflow:auto;
+	padding-left:1px;
+	padding-right:5px;
+	white-space:nowrap;
+}
+.pageHeader table {
+	border-spacing: 0;
+	width: 100%;
+}
+::-webkit-scrollbar{
+	width:15px;
+   	height: 15px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0 LIGHTGREY; 
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background-color: lightgrey;
+}
+
 .pageHeader .marketStatus {
 	float:left;
 	padding-left:3px;
@@ -1033,12 +1118,75 @@ be represented
 	min-width: 33%;
 }
 .pageHeader .approveDate {
+}
+.pageHeader .leftApproveDate {
+	border: 1px solid black;
+	float:left;
+	font-size: 80%;
+	height:25px;
 	text-align: center;
-	width: 100%;
+	padding-left:5px;
+	padding-right:5px;
+	width: 120px;
 }
 .pageHeader .revisionDate {
-	float:right;
-	padding-right:3px;
-	text-align: right;
-	width: 33%;
+	padding-top:3px;
+}
+.triangle-left {
+	display:none !important;
+	width: 0;
+	height: 0;
+	border-top: 12px solid transparent;
+	border-right: 12px solid red;
+	border-bottom: 12px solid transparent;
+	z-index:3;
+}
+.triangle-right {
+	display:none !important;
+	width: 0;
+	height: 0;
+	border-top: 12px solid transparent;
+	border-left: 12px solid red;
+	border-bottom: 12px solid transparent;
+	z-index:3;
+}
+@media screen and (min-width: 300px) and (max-width: 580px) {
+	.leftColumn {
+	    width:100%;
+		z-index: 2 !important;
+	}
+	.rightColumn::-webkit-scrollbar {
+		width:3px;
+	}
+	.spl {
+		margin-left: 1px !important;
+		margin-right:1px !important;
+		padding-left: 1px !important;
+		padding-right: 1px !important;
+	}
+	.spl div.Section {
+		margin-left:1px;
+		margin-right:1px;
+	}
+	.pageHeader .pageTitle {
+		font-size: 60% !important;
+	}
+	::-webkit-scrollbar{
+		width:3px;
+	   	height: 3px;
+	}
+	.pageHeader .approveDate {
+		clear:both;
+		float:left !important;
+		font-size: 60% !important;
+		text-align:left !important;
+		white-space:nowrap !important;
+	}
+	.pageHeader .revisionDate {
+		clear:both;
+		float:left !important;
+		font-size: 60% !important;
+		text-align:left !important;
+		white-space:nowrap !important;
+	}
 }
