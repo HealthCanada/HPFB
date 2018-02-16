@@ -6204,6 +6204,100 @@
         <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
       </Value>
       <Value ColumnRef="code">
+        <SimpleValue>10140</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Administrative Summary</SimpleValue>
+      </Value>
+      <Value ColumnRef="cardinality">
+        <SimpleValue>0:n</SimpleValue>
+      </Value>
+      <Value ColumnRef="include_in_toc">
+        <SimpleValue>False</SimpleValue>
+      </Value>
+      <Value ColumnRef="level">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="sequence">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="fixed_title">
+        <SimpleValue>True</SimpleValue>
+      </Value>
+      <Value ColumnRef="included">
+        <SimpleValue>True</SimpleValue>
+      </Value>
+      <Value ColumnRef="derived">
+        <SimpleValue>True</SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>Rendering Label</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>Rendering Label</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-21 10:11:00 AM</SimpleValue>
+      </Value>
+      <Value ColumnRef="agency_short_name">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="oid">
+        <SimpleValue>2.16.840.1.113883.2.20.6.36</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="source_oid">
+        <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
+      </Value>
+      <Value ColumnRef="code">
+        <SimpleValue>10141</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Health Canada use only</SimpleValue>
+      </Value>
+      <Value ColumnRef="cardinality">
+        <SimpleValue>0:n</SimpleValue>
+      </Value>
+      <Value ColumnRef="include_in_toc">
+        <SimpleValue>False</SimpleValue>
+      </Value>
+      <Value ColumnRef="level">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="sequence">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="fixed_title">
+        <SimpleValue>True</SimpleValue>
+      </Value>
+      <Value ColumnRef="included">
+        <SimpleValue>True</SimpleValue>
+      </Value>
+      <Value ColumnRef="derived">
+        <SimpleValue>True</SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>Rendering Label</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>Rendering Label</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-12-21 10:11:00 AM</SimpleValue>
+      </Value>
+      <Value ColumnRef="agency_short_name">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="oid">
+        <SimpleValue>2.16.840.1.113883.2.20.6.36</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="source_oid">
+        <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
+      </Value>
+      <Value ColumnRef="code">
         <SimpleValue>110</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
@@ -14021,7 +14115,7 @@
         <SimpleValue>1</SimpleValue>
       </Value>
       <Value ColumnRef="sequence">
-        <SimpleValue>1</SimpleValue>
+        <SimpleValue>2</SimpleValue>
       </Value>
       <Value ColumnRef="fixed_title">
         <SimpleValue>True</SimpleValue>
@@ -16607,6 +16701,53 @@
       </Value>
       <Value ColumnRef="sequence">
         <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="fixed_title">
+        <SimpleValue>True</SimpleValue>
+      </Value>
+      <Value ColumnRef="included">
+        <SimpleValue>True</SimpleValue>
+      </Value>
+      <Value ColumnRef="derived">
+        <SimpleValue>False</SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>Section Heading</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>document|3|*</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-02-10 11:56:00 AM</SimpleValue>
+      </Value>
+      <Value ColumnRef="agency_short_name">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="oid">
+        <SimpleValue>2.16.840.1.113883.2.20.6.36</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="source_oid">
+        <SimpleValue>2.16.840.1.113883.2.20.6.8</SimpleValue>
+      </Value>
+      <Value ColumnRef="code">
+        <SimpleValue>5056</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>CPID Overview</SimpleValue>
+      </Value>
+      <Value ColumnRef="cardinality">
+        <SimpleValue>1:1</SimpleValue>
+      </Value>
+      <Value ColumnRef="include_in_toc">
+        <SimpleValue>True</SimpleValue>
+      </Value>
+      <Value ColumnRef="level">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="sequence">
+        <SimpleValue>1</SimpleValue>
       </Value>
       <Value ColumnRef="fixed_title">
         <SimpleValue>True</SimpleValue>

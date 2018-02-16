@@ -5053,6 +5053,82 @@
     </Row>
     <Row>
       <Value ColumnRef="code">
+        <SimpleValue>10140</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Administrative Summary</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-19 2:57:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10141</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Health Canada use only</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-19 2:57:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
         <SimpleValue>130</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
@@ -12964,6 +13040,44 @@
       </Value>
       <Value ColumnRef="name-fra">
         <SimpleValue>2.3.P.8.3.a Bracketing and matrixing design for commitment and/or continuing (i.e., ongoing) batches, if applicable:</SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-02-07 11:23:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5056</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>CPID Overview</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue>CPID Overview</SimpleValue>
       </Value>
       <Value ColumnRef="desc-eng">
         <SimpleValue></SimpleValue>
