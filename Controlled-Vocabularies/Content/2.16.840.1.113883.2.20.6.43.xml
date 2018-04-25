@@ -1,0 +1,2294 @@
+<?xml-stylesheet type="text/xsl" href="https://github.com/HealthCanada/HPFB/raw/master/Controlled-Vocabularies/Style-Sheets/current/HC_GeneriCode_Codelist.xsl"?>
+<gc:CodeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:html="http://www.w3.org/1999/xhtml">
+  <Annotation>
+    <Description>
+      <html:p>This is a Health Products and Food Branch (HPFB) maintained code list, encoded in OASIS genericode format.</html:p>
+    </Description>
+    <AppInfo />
+  </Annotation>
+  <Identification>
+    <ShortName>2.16.840.1.113883.2.20.6.43</ShortName>
+    <LongName>Context of Use</LongName>
+    <Version>1</Version>
+    <CanonicalUri>tbd</CanonicalUri>
+    <CanonicalVersionUri>tbd</CanonicalVersionUri>
+    <LocationUri>tbd</LocationUri>
+    <Agency>
+      <ShortName>HPFB</ShortName>
+      <LongName>Health Products and Food Branch</LongName>
+      <ContactPersonTelephone>tel</ContactPersonTelephone>
+      <ContactPersonEmail>person</ContactPersonEmail>
+      <ContactPersonName>email</ContactPersonName>
+    </Agency>
+  </Identification>
+  <ColumnSet>
+    <Column Use="required" Id="code">
+      <ShortName>ID</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="name-eng">
+      <ShortName>Name English</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="name-fra">
+      <ShortName>Name French</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="desc-eng">
+      <ShortName>Description English</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="desc-fra">
+      <ShortName>Description French</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="status">
+      <ShortName>Term Status</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="ord">
+      <ShortName>Ordinality</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Use="optional" Id="xref">
+      <ShortName>Cross Reference ID</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="optional" Id="other-identifer">
+      <ShortName>Other Identifier</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="optional" Id="catagory">
+      <ShortName>Category</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="source">
+      <ShortName>Source</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="optional" Id="context">
+      <ShortName>context</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="mod-date">
+      <ShortName>Term Modification Time Stamp</ShortName>
+      <Data Type="dateTime" />
+    </Column>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.0.1</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-0-1-cover-letter</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.0.2</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-0-2-life-cycle-management-table</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.0.3</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-0-3-copy-of-health-canada-issued-correspondence</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.0.4</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-0-4-health-canada-solicited-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.0.5</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-0-5-meeting-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.0.6</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-0-6-request-for-reconsideration-documentation</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.0.7</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-0-7-general-note-to-reviewer</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.1</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-1-application-forms</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.2</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-2-fee-forms</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.3</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-3-certification-and-attestation-forms</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.4</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-4-intellectual-property-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.4.1</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-4-1-patent-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.4.2</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-4-2-data-protection-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.5</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-5-compliance-and-site-Information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.5.1</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-5-1-clinical-trial-site-information-form</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.5.2</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-5-2-establishment-licensing</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.5.3</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-5-3-good-clinical-practices</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.5.4</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-5-4-good-laboratory-practices</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.5.5</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-5-5-good-manufacturing-practices</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.5.6</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-5-6-good-pharmacovigilance-practices</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.5.7</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-5-7-other-compliance-and-site-information-documents</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.6</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-6-authorization-for-sharing-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.7</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-7-international-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.8</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-8-post-authorization-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.2.9</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-2-9-other-administrative-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.25</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-25 hc to industry correspondence</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-11-29 3:38:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-product-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3.1</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-1-product-monograph</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3.2</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-2-inner-and-outer-labels</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3.3</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-3-non-canadian-labelling</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3.4</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-4-investigators-brochure</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3.5</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-5-reference-product-labelling</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3.6</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-6-certified-product-information-document</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3.7</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-7-look-alike-sound-alike-assessment</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3.8</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-8-pharmacovigilance-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3.8.1</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-8-1-pharmacovigilance-plan</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3.8.2</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-8-2-risk-management-plan</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3.8.3</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-8-3-risk-communications</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.3.8.4</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-3-8-4-other-pharmacovigilance-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.4</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-4-health-canada-summaries</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.4.1</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-4-1-pseat-cta</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.4.2</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-4-2-comprehensive-summary-bioequivalence</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.4.3</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-4-3-multidisciplinary-tabular-summaries</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.5</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-5-environmental-assessment-statement</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.6</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-6-regional-clinical-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.6.1</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-6-1-comparative-bioavailability-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.6.2</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-6-2-company-core-data-sheets</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.6.3</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-6-3-priority-review-requests</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.6.4</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-6-4-notice-of-compliance-with-conditions</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.7</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-7-clinical-trial-information</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.7.1</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-7-1-study-protocol</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-01-31 5:25:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.7.2</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-7-2-informed-consent-forms</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-11-29 3:38:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.7.3</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-7-3-canadian-research-ethics-board-refusals</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-11-29 3:38:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>ca_1.7.4</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>m1-7-4-information-on-prior-related-applications</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-11-29 3:38:00 PM</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>
