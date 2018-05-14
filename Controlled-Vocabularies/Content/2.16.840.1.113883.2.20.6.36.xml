@@ -6557,7 +6557,7 @@
         <SimpleValue>True</SimpleValue>
       </Value>
       <Value ColumnRef="derived">
-        <SimpleValue>False</SimpleValue>
+        <SimpleValue>True</SimpleValue>
       </Value>
       <Value ColumnRef="catagory">
         <SimpleValue>Section Heading</SimpleValue>

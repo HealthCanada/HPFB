@@ -33780,6 +33780,47 @@
     </Row>
     <Row>
       <Value ColumnRef="code">
+        <SimpleValue>780297904</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Gilead Sciences, LLC</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue>na</SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2017-09-27 12:59:00 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
         <SimpleValue>7841</SimpleValue>
       </Value>
       <Value ColumnRef="name-eng">
@@ -38458,47 +38499,6 @@
       </Value>
       <Value ColumnRef="name-eng">
         <SimpleValue>LABORATOIRES DERMATOLOGIQUES AVÈNE</SimpleValue>
-      </Value>
-      <Value ColumnRef="name-fra">
-        <SimpleValue></SimpleValue>
-      </Value>
-      <Value ColumnRef="desc-eng">
-        <SimpleValue></SimpleValue>
-      </Value>
-      <Value ColumnRef="desc-fra">
-        <SimpleValue></SimpleValue>
-      </Value>
-      <Value ColumnRef="status">
-        <SimpleValue>1</SimpleValue>
-      </Value>
-      <Value ColumnRef="ord">
-        <SimpleValue>1</SimpleValue>
-      </Value>
-      <Value ColumnRef="xref">
-        <SimpleValue>na</SimpleValue>
-      </Value>
-      <Value ColumnRef="other-identifer">
-        <SimpleValue></SimpleValue>
-      </Value>
-      <Value ColumnRef="catagory">
-        <SimpleValue>term</SimpleValue>
-      </Value>
-      <Value ColumnRef="source">
-        <SimpleValue>HPFB</SimpleValue>
-      </Value>
-      <Value ColumnRef="context">
-        <SimpleValue>term</SimpleValue>
-      </Value>
-      <Value ColumnRef="mod-date">
-        <SimpleValue>2017-09-27 12:59:00 PM</SimpleValue>
-      </Value>
-    </Row>
-    <Row>
-      <Value ColumnRef="code">
-        <SimpleValue>780297904</SimpleValue>
-      </Value>
-      <Value ColumnRef="name-eng">
-        <SimpleValue>Gilead Sciences, LLC</SimpleValue>
       </Value>
       <Value ColumnRef="name-fra">
         <SimpleValue></SimpleValue>

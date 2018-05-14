@@ -88,19 +88,19 @@
         <SimpleValue></SimpleValue>
       </Value>
       <Value ColumnRef="status">
-        <SimpleValue>1</SimpleValue>
+        <SimpleValue></SimpleValue>
       </Value>
       <Value ColumnRef="ord">
-        <SimpleValue>1</SimpleValue>
+        <SimpleValue></SimpleValue>
       </Value>
       <Value ColumnRef="xref">
-        <SimpleValue>na</SimpleValue>
+        <SimpleValue></SimpleValue>
       </Value>
       <Value ColumnRef="other-identifer">
         <SimpleValue></SimpleValue>
       </Value>
       <Value ColumnRef="catagory">
-        <SimpleValue>term</SimpleValue>
+        <SimpleValue></SimpleValue>
       </Value>
       <Value ColumnRef="source">
         <SimpleValue>HPFB</SimpleValue>
@@ -109,7 +109,89 @@
         <SimpleValue>term</SimpleValue>
       </Value>
       <Value ColumnRef="mod-date">
-        <SimpleValue>2017-09-28 8:38:00 AM</SimpleValue>
+        <SimpleValue>2018-04-23 3:37:02 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Biologic</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-04-23 3:37:02 PM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-eng">
+        <SimpleValue>Device</SimpleValue>
+      </Value>
+      <Value ColumnRef="name-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-eng">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="desc-fra">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="ord">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="xref">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="other-identifer">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="catagory">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="context">
+        <SimpleValue>term</SimpleValue>
+      </Value>
+      <Value ColumnRef="mod-date">
+        <SimpleValue>2018-04-23 3:37:02 PM</SimpleValue>
       </Value>
     </Row>
   </SimpleCodeList>
