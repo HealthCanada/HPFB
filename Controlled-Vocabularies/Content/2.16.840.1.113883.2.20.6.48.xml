@@ -1,0 +1,72 @@
+<?xml-stylesheet type="text/xsl" href="https://github.com/HealthCanada/HPFB/raw/master/Controlled-Vocabularies/Style-Sheets/current/HC_GeneriCode_Codelist.xsl"?>
+<gc:CodeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:html="http://www.w3.org/1999/xhtml">
+  <Annotation>Missing static content information</Annotation>
+  <Identification>
+    <ShortName>2.16.840.1.113883.2.20.6.48</ShortName>
+    <LongName>DocuBridge Identifier</LongName>
+    <Version>1</Version>
+    <CanonicalUri>tbd</CanonicalUri>
+    <CanonicalVersionUri>tbd</CanonicalVersionUri>
+    <LocationUri>tbd</LocationUri>
+    <Agency>
+      <ShortName>HPFB</ShortName>
+      <LongName>Health Products and Food Branch</LongName>
+      <ContactPersonTelephone>tel</ContactPersonTelephone>
+      <ContactPersonEmail>person</ContactPersonEmail>
+      <ContactPersonName>email</ContactPersonName>
+    </Agency>
+  </Identification>
+  <ColumnSet>
+    <Column Use="required" Id="code">
+      <ShortName>ID</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="name-eng">
+      <ShortName>Name English</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="name-fra">
+      <ShortName>Name French</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="desc-eng">
+      <ShortName>Description English</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="desc-fra">
+      <ShortName>Description French</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="status">
+      <ShortName>Term Status</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="ord">
+      <ShortName>Ordinality</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Use="optional" Id="xref">
+      <ShortName>Cross Reference ID</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="optional" Id="catagory">
+      <ShortName>Category</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="source">
+      <ShortName>Source</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="optional" Id="context">
+      <ShortName>context</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Use="required" Id="mod-date">
+      <ShortName>Term Modification Time Stamp</ShortName>
+      <Data Type="dateTime" />
+    </Column>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Value>Missing simple code list information from terms</Value>
+  </SimpleCodeList>
+</gc:CodeList>
