@@ -40,6 +40,7 @@ Contributor(s): Steven Gitterman, Brian Keller, Brian Suggs, Ian Yang
 	<xsl:variable name="marketing-category-oid" select="'2.16.840.1.113883.2.20.6.11'"/>
 	<xsl:variable name="ingredient-id-oid" select="'2.16.840.1.113883.2.20.6.14'"/>
 	<xsl:variable name="marketing-status-oid" select="'2.16.840.1.113883.2.20.6.18'"/>
+	<xsl:variable name="organization-oid" select="'2.16.840.1.113883.2.20.6.31'"/>
 	<xsl:variable name="organization-role-oid" select="'2.16.840.1.113883.2.20.6.33'"/>
 	<xsl:variable name="pharmaceutical-standard-oid" select="'2.16.840.1.113883.2.20.6.5'"/>
 	<xsl:variable name="product-characteristics-oid" select="'2.16.840.1.113883.2.20.6.23'"/>
@@ -61,13 +62,17 @@ Contributor(s): Steven Gitterman, Brian Keller, Brian Suggs, Ian Yang
 	<xsl:variable name="vocabulary" select="document(concat($oids-base-url,$section-id-oid,$file-suffix))"/>
 	<xsl:variable name="documentTypes" select="document(concat($oids-base-url,$document-id-oid,$file-suffix))"/>
 	<xsl:variable name="characteristics" select="document(concat($oids-base-url,$product-characteristics-oid,$file-suffix))"/>
-
+	<xsl:variable name="jqueryUrl" select="'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/'"/>
+	<xsl:variable name="jqueryUiUrl" select="'https://code.jquery.com/ui/1.12.1/'"/>
+	
 	<xsl:template name="include-custom-items">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script src="{$resourcesdir}jqxcore.js" type="text/javascript" charset="utf-8">/* */</script>
-		<script src="{$resourcesdir}jqxsplitter_spm.js" type="text/javascript" charset="utf-8">/* */</script>
-		<script src="{$resourcesdir}hpfb-spm.js" type="text/javascript" charset="utf-8">/* */</script>
+		<script src="{$jqueryUrl}jquery.min.js" type="text/javascript">/*  */</script>
+		<script type="text/javascript">/*  */</script>
+		<script src="{$jqueryUiUrl}jquery-ui.js" type="text/javascript">/*  */</script>
+		<script type="text/javascript">/*  */</script>
+		<script src="{$resourcesdir}jqxcore.js" type="text/javascript">/*  */</script>
+		<script src="{$resourcesdir}jqxsplitter_spm.js" type="text/javascript">/*  */</script>
+		<script src="{$resourcesdir}hpfb-spm.js" type="text/javascript">/*  */</script>
 	</xsl:template>
 	<xsl:template match="/v3:document/v3:title" priority="1"/>
 
@@ -116,7 +121,15 @@ Contributor(s): Steven Gitterman, Brian Keller, Brian Suggs, Ian Yang
 				<xsl:when test="$heading='1'">
 					<h1 id="{$sectionID}h">
 						<a href="#{$sectionID}">
-							<xsl:value-of select="v3:title"/>
+							<xsl:call-template name="hpfb-title-resolve"><xsl:with-param name="code" select="$code"/><xsl:with-param name="title" select="v3:title"/></xsl:call-template>
+							<xsl:if test="v3:templateId[@root='2.16.840.1.113883.2.20.6.55']">
+								&#160;(<xsl:call-template name="hpfb-label"><xsl:with-param name="codeSystem" select="'2.16.840.1.113883.2.20.6.55'"/><xsl:with-param name="code" select="v3:templateId[@root='2.16.840.1.113883.2.20.6.55']/@extension"/></xsl:call-template>
+								(<xsl:value-of select="v3:templateId[@root='2.16.840.1.113883.2.20.6.55']/@extension"/>))
+							</xsl:if>
+							<xsl:if test="v3:templateId[@root='2.16.840.1.113883.2.20.6.56']">
+								&#160;(<xsl:call-template name="hpfb-label"><xsl:with-param name="codeSystem" select="'2.16.840.1.113883.2.20.6.56'"/><xsl:with-param name="code" select="v3:templateId[@root='2.16.840.1.113883.2.20.6.56']/@extension"/></xsl:call-template>
+								(<xsl:value-of select="v3:templateId[@root='2.16.840.1.113883.2.20.6.56']/@extension"/>))
+							</xsl:if>
 						</a>
 					</h1>
 				</xsl:when>
@@ -125,7 +138,7 @@ Contributor(s): Steven Gitterman, Brian Keller, Brian Suggs, Ian Yang
 					<h2 id="{$sectionID}h" style="padding-left:2em;margin-top:1.5ex;">
 						<a href="#{$sectionID}">
 							<xsl:value-of select="concat($prefix,'. ')"/>
-							<xsl:value-of select="v3:title"/>
+							<xsl:call-template name="hpfb-title-resolve"><xsl:with-param name="code" select="$code"/><xsl:with-param name="title" select="v3:title"/></xsl:call-template>
 						</a>
 					</h2>
 				</xsl:when>
@@ -134,7 +147,7 @@ Contributor(s): Steven Gitterman, Brian Keller, Brian Suggs, Ian Yang
 						<a href="#{$sectionID}">
 							<xsl:value-of select="concat($parentPrefix,'.')"/>
 							<xsl:value-of select="concat($prefix,' ')"/>
-							<xsl:value-of select="v3:title"/>
+							<xsl:call-template name="hpfb-title-resolve"><xsl:with-param name="code" select="$code"/><xsl:with-param name="title" select="v3:title"/></xsl:call-template>
 						</a>
 					</h3>
 				</xsl:when>
@@ -143,7 +156,7 @@ Contributor(s): Steven Gitterman, Brian Keller, Brian Suggs, Ian Yang
 						<a href="#{$sectionID}">
 							<xsl:value-of select="concat($parentPrefix,'.')"/>
 							<xsl:value-of select="concat($prefix,' ')"/>
-							<xsl:value-of select="v3:title"/>
+							<xsl:call-template name="hpfb-title-resolve"><xsl:with-param name="code" select="$code"/><xsl:with-param name="title" select="v3:title"/></xsl:call-template>
 						</a>
 					</h4>
 				</xsl:when>
@@ -152,7 +165,7 @@ Contributor(s): Steven Gitterman, Brian Keller, Brian Suggs, Ian Yang
 						<a href="#{$sectionID}">
 							<xsl:value-of select="concat($parentPrefix,'.')"/>
 							<xsl:value-of select="concat($prefix,' ')"/>
-							<xsl:value-of select="v3:title"/>
+							<xsl:call-template name="hpfb-title-resolve"><xsl:with-param name="code" select="$code"/><xsl:with-param name="title" select="v3:title"/></xsl:call-template>
 						</a>
 					</h5>
 				</xsl:when>
@@ -223,6 +236,7 @@ Contributor(s): Steven Gitterman, Brian Keller, Brian Suggs, Ian Yang
 				<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
 				<link rel="stylesheet" type="text/css" href="{$resourcesdir}jqx.base.css"/>
 				<link rel="stylesheet" type="text/css" href="{$css}"/>
+		<script src="{$jqueryUrl}jquery.min.js" type="text/javascript">/*  */</script>
 				<xsl:call-template name="include-custom-items"/>
 			</head>
 			<body onload="setWatermarkBorder();twoColumnsDisplay();">
@@ -931,22 +945,6 @@ Contributor(s): Steven Gitterman, Brian Keller, Brian Suggs, Ian Yang
 			</table>
 		</div>
 	</xsl:template>
-	<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization">
-		<xsl:if test="./v3:name">
-			<xsl:call-template name="data-contactParty-new"><xsl:with-param name="orgRole" select="'2'"/></xsl:call-template>
-		</xsl:if>
-	</xsl:template>
-	<!-- DIN info -->
-	<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization">
-		<xsl:if test="(count(./v3:name)&gt;0)">
-			<xsl:call-template name="data-contactParty-new"><xsl:with-param name="orgRole" select="'0'"/></xsl:call-template>
-		</xsl:if>
-	</xsl:template>
-	<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization">
-		<xsl:if test="./v3:name">
-			<xsl:call-template name="data-contactParty-new"><xsl:with-param name="orgRole" select="'1'"/></xsl:call-template>
-		</xsl:if>
-	</xsl:template>
 	<xsl:template match="v3:text[not(parent::v3:observationMedia)]">
 		<!-- Health Canada Change added font size attribute below-->
 		<text style="font-size:0.8em;">
@@ -970,7 +968,7 @@ Contributor(s): Steven Gitterman, Brian Keller, Brian Suggs, Ian Yang
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="no" externalpreview="yes" url="file:///e:/12.xml" htmlbaseurl="" outputurl="file:///c:/SPM/test/test5.html" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth=""
+		<scenario default="yes" name="Scenario1" userelativepaths="no" externalpreview="yes" url="file:///c:/SPM/test/4.xml" htmlbaseurl="" outputurl="file:///c:/SPM/test/test6.html" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth=""
 		          profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
 		          customvalidator="">
 			<parameterValue name="oids-base-url" value="'https://raw.githubusercontent.com/HealthCanada/HPFB/master/Controlled-Vocabularies/Content/'"/>

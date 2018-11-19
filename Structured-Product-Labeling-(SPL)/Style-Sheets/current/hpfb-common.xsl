@@ -9,6 +9,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" 
 	exclude-result-prefixes="exsl msxsl v3 xsl xsi str">
+	<xsl:variable name="smallcase" select="'abcdefghijklmnopqrstuvwxyz'"/>
+	<xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
 	<xsl:template match="/" priority="1">
 		<xsl:apply-templates select="*"/>
 	</xsl:template>
@@ -114,7 +116,7 @@
 		<table class="contentTablePetite" cellspacing="0" width="100%">
 		<tbody>
 			<tr>
-				<td colspan="3" class="formHeadingReg">
+				<td colspan="4" class="formHeadingReg">
 					<xsl:value-of select="./v3:actDefinition/v3:product/v3:manufacturedProduct/v3:manufacturedMaterialKind/v3:code/@displayName"/>
 				</td>
 			</tr>
@@ -123,6 +125,12 @@
 					<xsl:call-template name="hpfb-title">
 						<xsl:with-param name="code" select="'10051'"/>
 						<!-- name -->
+					</xsl:call-template>
+				</td>
+				<td class="formTitle">
+					<xsl:call-template name="hpfb-title">
+						<xsl:with-param name="code" select="'10027'"/>
+						<!-- Org ID -->
 					</xsl:call-template>
 				</td>
 				<td class="formTitle">
@@ -143,6 +151,9 @@
 					<xsl:value-of select="../v3:assignedOrganization/v3:name"/>
 				</td>
 				<td class="formItem">
+					<xsl:value-of select="../v3:assignedOrganization/v3:id[@root=$organization-oid]/@extension"/>
+				</td>
+				<td class="formItem">
 					<xsl:apply-templates mode="format" select="../v3:assignedOrganization/v3:addr"/>
 				</td>
 				<td>
@@ -150,7 +161,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td colspan="3" class="formHeadingReg">footer???
+				<td colspan="4" class="formHeadingReg">footer???
 				</td>
 			</tr>
 		</tbody>
@@ -255,7 +266,7 @@
 								</td>
 								<td class="formItem" colspan="3">
 									<xsl:for-each select="../v3:consumedIn/*[self::v3:substanceAdministration or self::v3:substanceAdministration1]/v3:routeCode">
-										<xsl:value-of select="@displayName"/>;&#160;&#160;
+										<xsl:call-template name="hpfb-label"><xsl:with-param name="code" select="./@code"/><xsl:with-param name="codeSystem" select="./@codeSystem"/></xsl:call-template>;&#160;&#160;
 									</xsl:for-each>
 								</td>
 							</xsl:if>
@@ -364,15 +375,13 @@
 	</xsl:template>
 	<xsl:template name="MarketingInfo">
 		<xsl:if test="../v3:subjectOf/v3:approval|../v3:subjectOf/v3:marketingAct">
-			<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
+			<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 				<tr>
-					<td colspan="4" class="formHeadingReg">
-						<span class="formHeadingTitle">
-							<xsl:call-template name="hpfb-title">
-								<xsl:with-param name="code" select="'10047'"/>
-								<!-- marketingInformation -->
-							</xsl:call-template>
-						</span>
+					<td colspan="4" class="formHeadingTitle">
+						<xsl:call-template name="hpfb-title">
+							<xsl:with-param name="code" select="'10047'"/>
+							<!-- marketingInformation -->
+						</xsl:call-template>
 					</td>
 				</tr>
 				<tr>
@@ -474,7 +483,7 @@
 	<xsl:template name="ActiveIngredients">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 			<tr>
-				<td colspan="3" class="formHeadingTitle">
+				<td colspan="4" class="formHeadingTitle">
 					<xsl:call-template name="hpfb-title">
 						<xsl:with-param name="code" select="'10001'"/>
 						<!-- activeIngredientActiveMoiety -->
@@ -500,6 +509,12 @@
 						<!-- strength -->
 					</xsl:call-template>
 				</th>
+				<th class="formTitle" scope="col">
+					<xsl:call-template name="hpfb-title">
+						<xsl:with-param name="code" select="'10128'"/>
+						<!-- MF# or CEP# -->
+					</xsl:call-template>
+				</th>
 			</tr>
 			<xsl:if test="not(v3:ingredient[starts-with(@classCode, 'ACTI')]|v3:activeIngredient)">
 				<tr>
@@ -519,29 +534,24 @@
 							<xsl:otherwise>formTableRowAlt</xsl:otherwise>
 						</xsl:choose>
 					</xsl:attribute>
-					<xsl:for-each select="(v3:ingredientSubstance|v3:activeIngredientSubstance)[1]">
+					<xsl:for-each select="(v3:ingredientSubstance|v3:activeIngredientSubstance)">
 						<td class="formItem">
-							<strong>
-								<xsl:value-of select="v3:code/@displayName"/>
-							</strong>
-							<xsl:text> (</xsl:text>
-							<xsl:for-each select="v3:code/@code">
+							<xsl:value-of select="v3:name"/>
+							(<xsl:for-each select="v3:code/@code">
 								<xsl:call-template name="hpfb-title">
 									<xsl:with-param name="code" select="'10093'"/>
 									<!-- ID -->
 								</xsl:call-template>:
 								<xsl:value-of select="."/>
-								<xsl:if test="position()!=last()">
+								<xsl:if test="position()!=last()">&#160;
 									<xsl:call-template name="hpfb-title">
 										<xsl:with-param name="code" select="'10005'"/>
 										<!-- and -->
-									</xsl:call-template>
+									</xsl:call-template>&#160;
 								</xsl:if>
-							</xsl:for-each>
-							<xsl:text>) </xsl:text>
-							<xsl:if test="normalize-space(v3:activeMoiety/v3:activeMoiety/v3:name)">
-								<xsl:text> (</xsl:text>
-								<xsl:for-each select="v3:activeMoiety/v3:activeMoiety/v3:name">
+							</xsl:for-each>)
+							<xsl:if test="../@classCode != 'ACTIR' and normalize-space(v3:activeMoiety/v3:activeMoiety/v3:name)">
+								(<xsl:for-each select="v3:activeMoiety/v3:activeMoiety/v3:name">
 									<xsl:value-of select="."/>
 									<xsl:text> - </xsl:text>
 									<xsl:call-template name="hpfb-title">
@@ -550,8 +560,19 @@
 									</xsl:call-template>:
 									<xsl:value-of select="../v3:code/@code"/>
 									<xsl:if test="position()!=last()">,</xsl:if>
-								</xsl:for-each>
-								<xsl:text>) </xsl:text>
+								</xsl:for-each>)
+							</xsl:if>
+							<xsl:if test="../@classCode = 'ACTIR' and normalize-space(v3:asEquivalentSubstance/v3:definingSubstance/v3:name)">
+								(<xsl:for-each select="v3:asEquivalentSubstance/v3:definingSubstance/v3:name">
+									<xsl:value-of select="."/>
+									<xsl:text> - </xsl:text>
+									<xsl:call-template name="hpfb-title">
+										<xsl:with-param name="code" select="'10093'"/>
+										<!-- UNII -->
+									</xsl:call-template>:
+									<xsl:value-of select="../v3:code/@code"/>
+									<xsl:if test="position()!=last()">,</xsl:if>
+								</xsl:for-each>)
 							</xsl:if>
 							<xsl:for-each select="../v3:subjectOf/v3:substanceSpecification/v3:code[@codeSystem = '2.16.840.1.113883.6.69' or @codeSystem = '2.16.840.1.113883.3.6277']/@code">(
 								<xsl:call-template name="hpfb-title">
@@ -575,12 +596,14 @@
 									<xsl:value-of select="v3:activeMoiety/v3:activeMoiety/v3:name"/>
 								</xsl:when>
 							</xsl:choose>
+							(<xsl:call-template name="hpfb-title"><xsl:with-param name="code" select="'10093'"/></xsl:call-template>:&#160;<xsl:value-of select="v3:code/@code"/>)
 						</td>
 					</xsl:for-each>
 					<td class="formItem">
 						<xsl:value-of select="v3:quantity/v3:numerator/@value"/>&#xA0;<xsl:if test="normalize-space(v3:quantity/v3:numerator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:numerator/@unit"/></xsl:if>
-						<xsl:if test="(v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@value)!='1')              or (v3:quantity/v3:denominator/@unit and normalize-space(v3:quantity/v3:denominator/@unit)!='1')">&#xA0;in&#xA0;<xsl:value-of select="v3:quantity/v3:denominator/@value"/>&#xA0;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/></xsl:if></xsl:if>
+						<xsl:if test="(v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@value)!='1') or (v3:quantity/v3:denominator/@unit and normalize-space(v3:quantity/v3:denominator/@unit)!='1')">&#xA0;in&#xA0;<xsl:value-of select="v3:quantity/v3:denominator/@value"/>&#xA0;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/></xsl:if></xsl:if>
 					</td>
+					<td>TBD</td>
 				</tr>
 			</xsl:for-each>
 		</table>
@@ -631,17 +654,15 @@
 					<xsl:for-each select="(v3:ingredientSubstance|v3:inactiveIngredientSubstance)[1]">
 						<td class="formItem">
 							<strong>
-								<xsl:value-of select="v3:code/@displayName"/>
+								<xsl:value-of select="v3:name"/>
 							</strong>
-							<xsl:text> (</xsl:text>
-							<xsl:for-each select="v3:code/@code">
+							(<xsl:for-each select="v3:code/@code">
 								<xsl:call-template name="hpfb-title">
 									<xsl:with-param name="code" select="'10093'"/>
 									<!-- ID -->
 								</xsl:call-template>:
 								<xsl:value-of select="."/>
-							</xsl:for-each>
-							<xsl:text>) </xsl:text>
+							</xsl:for-each>)
 						</td>
 					</xsl:for-each>
 					<td class="formItem">
@@ -733,18 +754,14 @@
 					</td>
 					<xsl:for-each select="(v3:ingredientSubstance|v3:activeIngredientSubstance)[1]">
 						<td class="formItem">
-							<strong>
-								<xsl:value-of select="v3:code/@displayName"/>
-							</strong>
-							<xsl:text> (</xsl:text>
-							<xsl:for-each select="v3:code/@code">
+							<strong><xsl:value-of select="v3:name"/></strong>
+							(<xsl:for-each select="v3:code/@code">
 								<xsl:call-template name="hpfb-title">
 									<xsl:with-param name="code" select="'10093'"/>
 									<!-- ID -->
 								</xsl:call-template>:
 								<xsl:value-of select="."/>
-							</xsl:for-each>
-							<xsl:text>) </xsl:text>
+							</xsl:for-each>)
 							<xsl:if test="normalize-space(v3:ingredientSubstance/v3:activeMoiety/v3:activeMoiety/v3:name)">(<xsl:value-of select="v3:ingredientSubstance/v3:activeMoiety/v3:activeMoiety/v3:name"/>)</xsl:if>
 						</td>
 					</xsl:for-each>
@@ -835,8 +852,8 @@
 	<xsl:template mode="characteristics" match="v3:value[@xsi:type = 'CV' or @xsi:type = 'CE' or @xsi:type = 'CE']">
 		<td class="formItem">
 			<xsl:value-of select=".//@displayName[1]"/>
-<!--			<xsl:if test="./v3:originalText">(<xsl:value-of select="./v3:originalText"/>)</xsl:if>-->
-			(<xsl:call-template name="hpfb-label"><xsl:with-param name="code" select=".//@code"/><xsl:with-param name="codeSystem" select=".//@codeSystem"/></xsl:call-template>)
+			<xsl:call-template name="hpfb-label"><xsl:with-param name="code" select=".//@code"/><xsl:with-param name="codeSystem" select=".//@codeSystem"/></xsl:call-template>
+			<xsl:if test="./v3:originalText">&#160;(<xsl:value-of select="./v3:originalText"/>)</xsl:if>
 		</td>
 		<td class="formItem">
 			<xsl:value-of select=".//@code[1]"/>
@@ -952,8 +969,9 @@
 				</th>
 				<td class="formItem">
 					<xsl:variable name="approval" select="current()/../../../v3:subjectOf/v3:approval/v3:code[@codeSystem = $marketing-category-oid]"/>
-					<xsl:value-of select="$approval/@displayName"/>(
-					<xsl:call-template name="hpfb-title"><xsl:with-param name="code" select="'10093'"/></xsl:call-template>:&#160;
+<!--					<xsl:value-of select="$approval/@codeSystem"/>-->
+					<xsl:call-template name="hpfb-label"><xsl:with-param name="codeSystem" select="$marketing-category-oid"/><xsl:with-param name="code" select="$approval/@code"/></xsl:call-template>
+					(<xsl:call-template name="hpfb-title"><xsl:with-param name="code" select="'10093'"/></xsl:call-template>:&#160;
 					<xsl:value-of select="$approval/@code"/>)
 				</td>
 				<td class="formItem">
@@ -1467,6 +1485,19 @@
 		</xsl:if>
 		<xsl:if test="not($value)">Error: code missing:(<xsl:value-of select="$code"/> in <xsl:value-of select="$section-id-oid"/>)</xsl:if>
 	</xsl:template>
+	<xsl:template name="hpfb-title-resolve">
+		<xsl:param name="code" select="/.."/>
+		<xsl:param name="title" select="/.."/>
+		<xsl:choose>
+		<xsl:when test="$title">
+			<xsl:value-of select="v3:title"/>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:call-template name="hpfb-title"><xsl:with-param name="code" select="$code"/></xsl:call-template>
+		</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
 	<!-- LIST MODEL -->
 	<xsl:template match="v3:list[@styleCode]" priority="1">
 		<ul>
@@ -1567,6 +1598,26 @@
 		<xsl:if test="./v3:name">
 			<xsl:call-template name="data-contactParty-new"><xsl:with-param name="orgRole" select="'2'"/></xsl:call-template>
 		</xsl:if>
+	</xsl:template>
+	<xsl:template name="stringJoin">
+		<xsl:param name="strings" select="/.."/>
+		<xsl:for-each select="$strings">
+			<xsl:value-of select="."/>
+			<xsl:if test="position() &gt; 0 and position() != last()"><xsl:value-of select="'/'"/></xsl:if>
+		</xsl:for-each>
+	</xsl:template>
+	<xsl:template name="distinctValues">
+		<xsl:param name="values" select="/.."/>
+		<xsl:for-each select="$values">
+			<xsl:value-of select="."/>
+			<xsl:if test="position() &gt; 0 and position() != last()"><xsl:value-of select="';&#160;&#160;'"/></xsl:if>
+		</xsl:for-each>
+	</xsl:template>
+	<xsl:template name="splitString">
+		<xsl:param name="text" select="/."/>
+		<xsl:param name="char" select="/."/>
+		<xsl:param name="splitter" select="/."/>
+		<xsl:value-of select="substring-before($text, $char)"/><xsl:value-of select="$char"/><xsl:value-of select="$splitter" disable-output-escaping="yes"/><xsl:value-of select="substring-after($text, $char)"/>
 	</xsl:template>
 </xsl:transform>
 	<!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.
