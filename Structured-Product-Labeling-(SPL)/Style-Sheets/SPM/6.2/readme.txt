@@ -1,1 +1,0 @@
-The release 6.2 stylesheet (both zipped and exploded) is located in this folder.
