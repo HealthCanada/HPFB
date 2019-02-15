@@ -12,12 +12,12 @@
 		<html>
 			<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<!--				<style type="text/css">-->
+				<style type="text/css">
 					<xsl:value-of select="$cssLookup/css/*"/>
 <!--					<xsl:for-each select="document($cssFile)//css/*">
 			<xsl:copy-of select="."/>
 		</xsl:for-each>-->
-<!--				</style>-->
+				</style>
 			</head>
             <body>
 <!--				<xsl:if test="count(DEVICE_COMPANY_ENROL) &gt; 0"> <xsl:apply-templates select="DEVICE_COMPANY_ENROL"></xsl:apply-templates> </xsl:if>-->
@@ -295,7 +295,7 @@
 		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="file:///e:/ip400Demo/mds/draftrepcom-2-1.xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\mds_company.html" processortype="saxon8"
 		          useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath=""
 		          postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
-			<parameterValue name="cssFile" value="'../../../REP/xslt/ip400.css'"/>
+			<parameterValue name="cssFile" value="'C:\Users\hcuser\git\HC-IMSD\REP\xslt\ip400.css'"/>
 			<parameterValue name="labelFile" value="'C:\Users\hcuser\git\HC-IMSD\REP\xslt\hp-ip400-labels.xml'"/>
 			<advancedProp name="sInitialMode" value=""/>
 			<advancedProp name="schemaCache" value="||"/>
