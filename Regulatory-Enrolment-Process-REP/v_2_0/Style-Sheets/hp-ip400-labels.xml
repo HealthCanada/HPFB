@@ -444,7 +444,6 @@
 <row><code>PROVINCE</code><eng>Province</eng><fra>fr_Province</fra></row>
 <row><code>COUNTRY</code><eng>Country</eng><fra>fr_Country</fra></row>
 <row><code>POSTAL_ZIP</code><eng>Postal / ZIP Code</eng><fra>fr_Postal / ZIP Code</fra></row>
-<row><code>PHONE_EXT</code><eng>Phone Extension</eng><fra>Poste</fra></row>
 <row><code>en</code><eng>English</eng><fra>fr_English</fra></row>
 <row><code>fr</code><eng>French</eng><fra>fr_French</fra></row>
 <row><code>LIFECYCLE_TITLE</code><eng>Transaction Details</eng><fra>fr_Transaction Details</fra></row>
@@ -954,6 +953,42 @@
 <row><code>TISSUE_TYPE_OTHER</code><eng>Tissue Type Other details</eng><fra>fr_Tissue Type Other details</fra></row>
 <row><code>DERIVATIVE</code><eng>Derivative</eng><fra>fr_Derivative</fra></row>
 <row><code>DERIVATIVE_OTHER</code><eng>Derivative Other Details</eng><fra>fr_Derivative Other Details</fra></row>
-
-
+<row><code>REG_TRANS_INFO</code><eng>Regulatory Transaction Information</eng><fra>fr_Regulatory Transaction Information</fra></row>
+<row><code>MANUFACTURING_COMPANY_ID</code><eng>Manufacturing Company ID</eng><fra>fr_Manufacturing Company ID</fra></row>
+<row><code>MANUFACTURING_CONTACT_ID</code><eng>Manufacturing Contact ID</eng><fra>fr_Manufacturing Contact ID</fra></row>
+<row><code>Activity_Lead</code><eng>Activity Lead</eng><fra>fr_Activity Lead</fra></row>
+<row><code>Reg_Activity_Type</code><eng>Regulatory Activity Type</eng><fra>fr_Regulatory Activity Type</fra></row>
+<row><code>Transaction_Desc</code><eng>Transaction Description</eng><fra>fr_Transaction Description</fra></row>
+<row><code>Date_of_Request</code><eng>Date of Request</eng><fra>fr_Date of Request</fra></row>
+<row><code>Device_details_table</code><eng>Device details table included</eng><fra>fr_Device details table included</fra></row>
+<row><code>App_Info_XML_Include</code><eng>Application information XML included in transaction</eng><fra>fr_Application information XML included in transaction</fra></row>
+<row><code>Transaction_Req_Info</code><eng>Transaction Requester Information</eng><fra>fr_Transaction Requester Information</fra></row>
+<row><code>Transaction_Req_Detail</code><eng>Transaction Requester Detail</eng><fra>fr_Transaction Requester Detail</fra></row>
+<row><code>Device_Class</code><eng>Device Class</eng><fra>fr_Device Class</fra></row>
+<row><code>Reason_for_Amendment</code><eng>Reason for filing this Amendment</eng><fra>fr_Reason for filing this Amendment</fra></row>
+<row><code>classification_change</code><eng>Change to the classification of a device</eng><fra>fr_Change to the classification of a device</fra></row>
+<row><code>licence_change</code><eng>Change in the licence name</eng><fra>fr_Change in the licence name</fra></row>
+<row><code>device_change</code><eng>Change in the device name</eng><fra>fr_Change in the device name</fra></row>
+<row><code>Chg_to_purpose_indication</code><eng>Change to the purpose/indication of a device</eng><fra>fr_Change to the purpose/indication of a device</fra></row>
+<row><code>Licence_Number</code><eng>Licence Number</eng><fra>fr_Licence Number</fra></row>
+<row><code>process_change</code><eng>Significant change in manufacturing process, facility of equipment</eng><fra>fr_Significant change in manufacturing process, facility of equipment</fra></row>
+<row><code>quality_change</code><eng>Significant change in manufacturing quality control procedures</eng><fra>fr_Significant change in manufacturing quality control procedures</fra></row>
+<row><code>design_change</code><eng>Significant change in design or performance</eng><fra>fr_Significant change in design or performance</fra></row>
+<row><code>materials_change</code><eng>Significant change in materials</eng><fra>fr_Significant change in materials</fra></row>
+<row><code>labelling_change</code><eng>Significant change in the labelling of the device</eng><fra>fr_Significant change in the labelling of the device</fra></row>
+<row><code>safety_change</code><eng>Any change which could affect the safety and effectiveness of the device</eng><fra>fr_Any change which could affect the safety and effectiveness of the device</fra></row>
+<row><code>purpose_change</code><eng>Change to the purpose/indication of a device</eng><fra>fr_Change to the purpose/indication of a device</fra></row>
+<row><code>add_delete_change</code><eng>Addition/Deletion/Change</eng><fra>fr_Addition/Deletion/Change</fra></row>
+<row><code>TRANSACTION_INFO_TMPL</code><eng>Transaction Template: Regulatory Enrolment Process (REP)</eng><fra>fr_Transaction Template: Regulatory Enrolment Process (REP)</fra></row>
+<row><code>All_Licence_Number</code><eng>All Licence Number</eng><fra>fr_All Licence Number</fra></row>
+<row><code>All_Dossier_ID</code><eng>All Dossier ID</eng><fra>fr_All Dossier ID</fra></row>
+<row><code>Company_Administrative_Changes</code><eng>Company Administrative Changes</eng><fra>fr_Company Administrative Changes</fra></row>
+<row><code>Is_there_change_name</code><eng>Is there a change to the regulatory correspondent's name and/or address</eng><fra>fr_Is there a change to the regulatory correspondent's name and/or address</fra></row>
+<row><code>Reason_Amendment</code><eng>Reason for Amendment</eng><fra>fr_Reason for Amendment</fra></row>
+<row><code>Change_Name</code><eng>Change in manufacturer's name</eng><fra>fr_Change in manufacturer's name</fra></row>
+<row><code>Change_Address</code><eng>Change in manufacturer's address</eng><fra>fr_Change in manufacturer's address</fra></row>
+<row><code>Change_facility</code><eng>Change only to the name and/or address of the manufacturing facility</eng><fra>fr_Change only to the name and/or address of the manufacturing facility</fra></row>
+<row><code>Contact_Name</code><eng>Contact's Name</eng><fra>fr_Contact's Name</fra></row>
+<row><code>MEETING_ID</code><eng>Meeting ID</eng><fra>fr_Meeting ID</fra></row>
+<row><code>Proposed_Licence_Name</code><eng>Proposed licence name</eng><fra>fr_Proposed licence name</fra></row>
 </SimpleCodeList>
