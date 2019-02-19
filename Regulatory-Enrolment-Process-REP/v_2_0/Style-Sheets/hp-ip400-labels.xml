@@ -991,4 +991,5 @@
 <row><code>Contact_Name</code><eng>Contact's Name</eng><fra>fr_Contact's Name</fra></row>
 <row><code>MEETING_ID</code><eng>Meeting ID</eng><fra>fr_Meeting ID</fra></row>
 <row><code>Proposed_Licence_Name</code><eng>Proposed licence name</eng><fra>fr_Proposed licence name</fra></row>
+<row><code>FINAL</code><eng>Final</eng><fra>fr_Final</fra></row>
 </SimpleCodeList>

@@ -111,7 +111,7 @@
 														<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
 					                                </xsl:element>
 													<span class="mouseHover">
-														<xsl:call-template name="hp-label"><xsl:with-param name="code" select="./name()"/></xsl:call-template>
+														<xsl:call-template name="hp-label"><xsl:with-param name="code" select="name()"/></xsl:call-template>
 													</span>
 												</div>
 											</xsl:if>
