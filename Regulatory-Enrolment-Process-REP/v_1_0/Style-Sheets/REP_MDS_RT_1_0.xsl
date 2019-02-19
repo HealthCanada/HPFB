@@ -196,6 +196,7 @@
 									<tr><th>&#160;</th><th><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Transaction_Req_Info'"/></xsl:call-template></th></tr>
 								</thead>
 								<tbody>
+									<xsl:if test="count(/descendant-or-self::requesters/requester/id) > 0 ">
 									<xsl:for-each select="/descendant-or-self::requesters/*">
 										<tr><td><xsl:value-of select="./id + 1"/></td>
 										<td>
@@ -203,6 +204,7 @@
 										</td>
 										</tr>
 									</xsl:for-each>
+									</xsl:if>
 								</tbody>
 							</table>
 						</div>
@@ -250,9 +252,9 @@
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="no" externalpreview="yes" url="file:///e:/ip400Demo/mds/hcreprtm-2019-02-07-0946.xml" htmlbaseurl="" outputurl="file:///c:/SPM/test/TRANSACTION.html" processortype="saxon8"
-		          useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath=""
-		          postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
+		<scenario default="yes" name="Scenario1" userelativepaths="no" externalpreview="yes" url="file:///g:/SCAPP/IP400 - REP - CTS - Docubridge/IP400 a - REP forms/test/stylesheets/data samples/hcreprtm-2019-02-01-0301.xml" htmlbaseurl=""
+		          outputurl="file:///c:/SPM/test/TRANSACTION.html" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none"
+		          postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
 			<parameterValue name="cssFile" value="'file:///C:/Users/hcuser/git/HC-IMSD/REP/xslt/ip400.css'"/>
 			<parameterValue name="labelFile" value="'file:///C:/Users/hcuser/git/HC-IMSD/REP/xslt/hp-ip400-labels.xml'"/>
 			<advancedProp name="sInitialMode" value=""/>
