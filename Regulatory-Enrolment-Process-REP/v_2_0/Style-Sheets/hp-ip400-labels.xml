@@ -761,8 +761,8 @@
 <row><code>MHPD_RQ_RESPONSE</code><eng>Response to MHPD Request</eng><fra>fr_Response to MHPD Request</fra></row>
 <row><code>NOC_RESPONSE</code><eng>Response to NOC/c-QN</eng><fra>fr_Response to NOC/c-QN</fra></row>
 <row><code>NOD_RESPONSE</code><eng>Response to NOD</eng><fra>fr_Response to NOD</fra></row>
-<row><code>NOL_RESPONSE</code><eng>Response to NON</eng><fra>fr_Response to NON</fra></row>
-<row><code>NON_RESPONSE</code><eng>Response to NOL</eng><fra>fr_Response to NOL</fra></row>
+<row><code>NOL_RESPONSE</code><eng>Response to NOL</eng><fra>fr_Response to NOL</fra></row>
+<row><code>NON_RESPONSE</code><eng>Response to NON</eng><fra>fr_Response to NON</fra></row>
 <row><code>PROCESSING_CLARIF_RESPONSE</code><eng>Response to Processing Clarification Request</eng><fra>fr_Response to Processing Clarification Request</fra></row>
 <row><code>QUAL_CLIN_CLARIF_RESPONSE</code><eng>Response to Quality and Clinical Clarification Request</eng><fra>fr_Response to Quality and Clinical Clarification Request</fra></row>
 <row><code>QUAL_CLARIF_RESPONSE</code><eng>Response to Quality Clarification Request</eng><fra>fr_Response to Quality Clarification Request</fra></row>
