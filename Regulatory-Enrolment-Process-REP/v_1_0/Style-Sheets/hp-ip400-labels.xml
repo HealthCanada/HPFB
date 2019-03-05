@@ -487,7 +487,7 @@
 <row><code>MEDICINAL_INGRED</code><eng>A. Medicinal (Active) Ingredients</eng><fra>fr_A. Medicinal (Active) Ingredients</fra></row>
 <row><code>INGREDIENT</code><eng>Ingredient</eng><fra>fr_Ingredient</fra></row>
 <row><code>IN_LIST</code><eng>In list</eng><fra>In list</fra></row>
-<row><code>CAS_NUM</code><eng>CAS</eng><fra>fr_CAS</fra></row>
+<row><code>CAS_NUM</code><eng>Chemical Abstract Services</eng><fra>fr_Chemical Abstract Services</fra></row>
 <row><code>ING_NAME</code><eng>Ingredient Name</eng><fra>fr_Ingredient Name</fra></row>
 <row><code>STANDARD</code><eng>Standard</eng><fra>fr_Standard</fra></row>
 <row><code>STRENGTH</code><eng>Strength</eng><fra>fr_Strength</fra></row>
@@ -1008,4 +1008,8 @@
 <row><code>Urgent_Public_Note</code><eng>b) no drug identification number has been assigned under section C.01.014.2 of those Regulations for the drug or for another drug that has the same medicinal ingredient, strength and route of administration and is in a comparable dosage form; and</eng><fra>fr_b) no drug identification number has been assigned under section C.01.014.2 of those Regulations for the drug or for another drug that has the same medicinal ingredient, strength and route of administration and is in a comparable dosage form; and</fra></row>
 <row><code>Urgent_Public_Note</code><eng>c) no notice of compliance has been issued under section C.08.004 of those Regulations in respect of the drug or another drug that has the same medicinal ingredient, strength and route of administration and is in a comparable dosage form.</eng><fra>fr_c) no notice of compliance has been issued under section C.08.004 of those Regulations in respect of the drug or another drug that has the same medicinal ingredient, strength and route of administration and is in a comparable dosage form.</fra></row>
 <row><code>First_Submit</code><eng>This is my first submission/application</eng><fra>fr_This is my first submission/application</fra></row>
+<row><code>Are_Licenses_Transfered</code><eng>Are any ownership of licenses being transferred</eng><fra>fr_Are any ownership of licenses being transferred</fra></row>
+<row><code>DELETE</code><eng>Delete</eng><fra>fr_Delete</fra></row>
+<row><code>VARIANT_NAME</code><eng>Variant Name</eng><fra>fr_Variant Name</fra></row>
+<row><code>PURPOSE</code><eng>Purpose</eng><fra>fr_Purpose</fra></row>
 </SimpleCodeList>

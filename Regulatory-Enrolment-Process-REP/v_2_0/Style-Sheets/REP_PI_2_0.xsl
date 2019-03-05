@@ -905,6 +905,14 @@
 																	</xsl:choose>
 																	</span></label>
 																	</div>
+																	<xsl:if test="ingredient_role = 'NONMED'">
+																		<div class="col-md-6">
+																		<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'VARIANT_NAME'"/></xsl:call-template>:&#160;<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="variant_name"/></span></label>
+																		</div>
+																		<div class="col-md-6">
+																		<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'PURPOSE'"/></xsl:call-template>:&#160;<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="purpose"/></span></label>
+																		</div>
+																	</xsl:if>
 																	<div class="col-md-6">
 																	<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ING_NAME'"/></xsl:call-template>:&#160;<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="ingredient_name"/></span></label>
 																	</div>
@@ -947,6 +955,7 @@
 																		</xsl:variable>
 																	<div class="col-md-3">
 																		<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'PER_STRENGTH'"/></xsl:call-template></label>&#160;
+																		<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="per_value"/></span>&#160;
 																		<xsl:choose>
 																		<xsl:when test="per_units_other_details != 'null' and per_units_other_details != ''">
 																				<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="per_units_other_details"/></span>
@@ -955,7 +964,7 @@
 																				<span style="font-weight: normal;" class="mouseHover"><xsl:choose><xsl:when test="$language ='eng'"><xsl:value-of select="per_units/@label_en"/></xsl:when><xsl:otherwise><xsl:value-of select="per_units/@label_fr"/></xsl:otherwise></xsl:choose></span>
 																		</xsl:otherwise>
 																		</xsl:choose>
-																		&#160;<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="per_value"/></span>
+																		
 																	</div>
 																	<div class="col-md-3"><label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ISBASE'"/></xsl:call-template>&#160;
 																		<span style="font-weight: normal;" class="mouseHover"><xsl:call-template name="YesNoUnknow"><xsl:with-param name="value" select="is_base_calc"/></xsl:call-template></span>
@@ -1064,7 +1073,7 @@
 																					</tr>
 																				</thead>-->
 																				<tbody>
-																					<xsl:for-each select="container_group">
+																					<xsl:for-each select="container_group/container_details">
 <!--																						<tr>
 																							<td class="fa fa-caret-right fa-lg fa-fw"></td>
 																							<td><xsl:value-of select="./container_details/container_type"/></td>
@@ -1076,17 +1085,17 @@
 																<legend><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTAINER_TYPE_DETAILS'"/></xsl:call-template>&#160;<xsl:value-of select="position()"/></legend>
 																<div class="row">
 																	<div class="col-md-12">
-																	<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTAINER_TYPE'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover"><xsl:value-of select="./container_details/container_type"/></span></label>
+																	<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTAINER_TYPE'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover"><xsl:value-of select="container_type"/></span></label>
 																	</div>
 																</div>
 																<div class="row">
 																	<div class="col-md-6">
-																	<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'PACKAGE_SIZE'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover"><xsl:value-of select="./container_details/package_size"/></span></label>
+																	<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'PACKAGE_SIZE'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover"><xsl:value-of select="package_size"/></span></label>
 																	</div>
 																	<div class="col-md-6">
 																		<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'SHELF_LIFE'"/></xsl:call-template>:&#160;
-																		<span class="normalWeight mouseHover"><xsl:value-of select="./container_details/shelf_life_number"/></span>&#160;
-																		<span class="normalWeight mouseHover"><xsl:choose><xsl:when test="$language = 'fra'"><xsl:apply-templates select="./container_details/shelf_life_unit/@label_fr" /></xsl:when><xsl:otherwise><xsl:apply-templates select="./container_details/shelf_life_unit/@label_en" /></xsl:otherwise></xsl:choose></span>
+																		<span class="normalWeight mouseHover"><xsl:value-of select="shelf_life_number"/></span>&#160;
+																		<span class="normalWeight mouseHover"><xsl:choose><xsl:when test="$language = 'fra'"><xsl:apply-templates select="shelf_life_unit/@label_fr" /></xsl:when><xsl:otherwise><xsl:apply-templates select="shelf_life_unit/@label_en" /></xsl:otherwise></xsl:choose></span>
 																		</label>
 																	</div>
 																</div>
@@ -1095,9 +1104,9 @@
 																<div class="row">
 																	<div class="col-md-6">
 																		<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'TEMP_RANGE'"/></xsl:call-template>:&#160;
-																		<span class="normalWeight mouseHover"><xsl:value-of select="./container_details/temperature_min"/></span>&#160;&#160;
+																		<span class="normalWeight mouseHover"><xsl:value-of select="temperature_min"/></span>&#160;&#160;
 																		<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'TO'"/></xsl:call-template>:&#160;
-																		<span class="normalWeight mouseHover"><xsl:value-of select="./container_details/temperature_max"/></span>&#160;
+																		<span class="normalWeight mouseHover"><xsl:value-of select="temperature_max"/></span>&#160;
 																		<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CELSIUS'"/></xsl:call-template>
 																		</label>
 																	</div>
@@ -1353,11 +1362,11 @@
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="no" externalpreview="yes" url="file:///e:/ip400Demo/tmp/hcreppi-2018-11-21-0841.xml" htmlbaseurl="" outputurl="file:///c:/SPM/test/product.html" processortype="saxon8" useresolver="yes"
-		          profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext=""
-		          validateoutput="no" validator="internal" customvalidator="">
-			<parameterValue name="cssFile" value="'C:\Users\hcuser\git\HC-IMSD\REP\xslt\ip400.css'"/>
-			<parameterValue name="labelFile" value="'C:\Users\hcuser\git\HC-IMSD\REP\xslt\hp-ip400-labels.xml'"/>
+		<scenario default="yes" name="Scenario1" userelativepaths="no" externalpreview="yes" url="file:///e:/ip400Demo/tmp/(0015) - hcreppi-2018-12-11-1032.xml" htmlbaseurl="" outputurl="file:///c:/SPM/test/product.html" processortype="saxon8"
+		          useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath=""
+		          postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
+			<parameterValue name="cssFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_1_0/Style-Sheets/ip400.css'"/>
+			<parameterValue name="labelFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_1_0/Style-Sheets/hp-ip400-labels.xml'"/>
 			<advancedProp name="sInitialMode" value=""/>
 			<advancedProp name="schemaCache" value="||"/>
 			<advancedProp name="bXsltOneIsOkay" value="true"/>

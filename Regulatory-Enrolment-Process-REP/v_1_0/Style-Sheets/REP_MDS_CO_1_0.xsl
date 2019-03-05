@@ -14,9 +14,6 @@
 				<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 				<style type="text/css">
 					<xsl:value-of select="$cssLookup/css/*"/>
-<!--					<xsl:for-each select="document($cssFile)//css/*">
-			<xsl:copy-of select="."/>
-		</xsl:for-each>-->
 				</style>
 			</head>
             <body>
@@ -122,6 +119,14 @@
 					</section>
 					</xsl:if>
 					<section class="panel panel-default" >
+							<div class="panel-body">
+							<div class="col-sm-12">
+								<strong><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Are_Licenses_Transfered'"/></xsl:call-template>? &#160;</strong>
+								<span class="mouseHover"><xsl:call-template name="YesNoUnknow"><xsl:with-param name="value" select="/descendant-or-self::general_information/are_licenses_transfered"/></xsl:call-template></span>
+							</div>
+							</div>
+					</section>
+					<section class="panel panel-default" >
 							<div class="panel-heading">
 								<h2 class="panel-title"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADDR_INFO'"/></xsl:call-template></h2>
 							</div>
@@ -171,7 +176,7 @@
 							<h2 class="panel-title"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTACT_INFO'"/></xsl:call-template></h2>
 						</div>
 						<div class="panel-body">
-							<xsl:apply-templates select="contacts"/>
+							<xsl:apply-templates select="/descendant-or-self::contacts/contact"/>
 						</div>
 					</section>
 					<section class="panel panel-default" >
@@ -220,46 +225,70 @@
 			</div>
 		</section>
 	</xsl:template>
-	<xsl:template match="contacts">
+	<xsl:template match="contacts/contact">
 		<section class="panel panel-default" >
 			<div class="panel-heading">
-				<h2 class="panel-title"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTACT_DETAILS'"/></xsl:call-template>&#160;<xsl:value-of select="/descendant-or-self::contact/id"/></h2>
+				<h2 class="panel-title"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTACT_DETAILS'"/></xsl:call-template>&#160;<xsl:value-of select="id + 1"/></h2>
 			</div>
 			<div class="panel-body">
 				<div class="row">&#160;
+					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'SALUTATION'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="concat('SALUT_', /descendant-or-self::contact/salutation)"/></xsl:call-template></span>&#160;&#160;
+					<span class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="concat('SALUT_', salutation)"/></xsl:call-template></span>&#160;&#160;
+					</div>
+					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTACT_ID'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:value-of select="contact/contact_id"/></span>&#160;&#160;
+					<span class="mouseHover"><xsl:value-of select="contact_id"/></span>&#160;&#160;
+					</div>
+					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'STATUS'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="/descendant-or-self::contact/status"/></xsl:call-template></span>
+					<span class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="status"/></xsl:call-template></span>
+					</div>
 				</div>
 				<div class="row">&#160;
+					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'FIRSTNAME'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:value-of select="/descendant-or-self::contact/first_name"/></span>&#160;&#160;
+					<span class="mouseHover"><xsl:value-of select="first_name"/></span>&#160;&#160;
+					</div>
+					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'INITIALS'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:value-of select="/descendant-or-self::contact/initials"/></span><xsl:if test="/descendant-or-self::contact/initials = ''">&#160;&#160;&#160;&#160;</xsl:if>&#160;&#160;
+					<span class="mouseHover"><xsl:value-of select="initials"/></span><xsl:if test="initials = ''">&#160;&#160;&#160;&#160;</xsl:if>&#160;&#160;
+					</div>
+					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'LASTNAME'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:value-of select="/descendant-or-self::contact/last_name"/></span>
+					<span class="mouseHover"><xsl:value-of select="last_name"/></span>
+					</div>
 				</div>
 				<div class="row">&#160;
+					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'LANGCORRESPOND'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code"><xsl:value-of select="translate(/descendant-or-self::contact/language, $uppercase, $smallcase)"/></xsl:with-param></xsl:call-template></span>&#160;&#160;
+					<span class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code"><xsl:value-of select="translate(language, $uppercase, $smallcase)"/></xsl:with-param></xsl:call-template></span>&#160;&#160;
+					</div>
+					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'JOBTITLE'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:value-of select="/descendant-or-self::contact/job_title"/></span>
+					<span class="mouseHover"><xsl:value-of select="job_title"/></span>
+					</div>
 				</div>
 				<div class="row">&#160;
+					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'PHONENUMBER'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:value-of select="/descendant-or-self::contact/phone_number"/></span>&#160;&#160;
+					<span class="mouseHover"><xsl:value-of select="phone_number"/></span>&#160;&#160;
+					</div>
+					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'PHONE_EXT'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:if test="/descendant-or-self::contact/phone_extension = ''">&#160;&#160;&#160;&#160;</xsl:if>
+					<span class="mouseHover"><xsl:if test="phone_extension = ''">&#160;&#160;&#160;&#160;</xsl:if>
 					<xsl:value-of select="contact/phone_extension"/></span>
+					</div>
+					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'FAX_NUMBER'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:value-of select="/descendant-or-self::contact/fax_number"/></span>
+					<span class="mouseHover"><xsl:value-of select="fax_number"/></span>
+					</div>
 				</div>
-				<div class="row">&#160;
+				<div class="row">
+					<div class="col-sm-12">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'EMAIL'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:value-of select="/descendant-or-self::contact/email"/></span>
+					<span class="mouseHover"><xsl:value-of select="email"/></span>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -292,11 +321,11 @@
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="file:///e:/ip400Demo/mds/draftrepcom-2-1.xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\mds_company.html" processortype="saxon8"
+		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="..\..\..\..\..\Downloads\hcrepcom-k12345-1-0 (3).xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\mds_company.html" processortype="saxon8"
 		          useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath=""
 		          postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
-			<parameterValue name="cssFile" value="'C:\Users\hcuser\git\HC-IMSD\REP\xslt\ip400.css'"/>
-			<parameterValue name="labelFile" value="'C:\Users\hcuser\git\HC-IMSD\REP\xslt\hp-ip400-labels.xml'"/>
+			<parameterValue name="cssFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_1_0/Style-Sheets/ip400.css'"/>
+			<parameterValue name="labelFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_1_0/Style-Sheets/hp-ip400-labels.xml'"/>
 			<advancedProp name="sInitialMode" value=""/>
 			<advancedProp name="schemaCache" value="||"/>
 			<advancedProp name="bXsltOneIsOkay" value="true"/>
