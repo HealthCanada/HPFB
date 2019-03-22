@@ -464,10 +464,10 @@
 								<p><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'NOTE_4'"/></xsl:call-template></p>
 							</xsl:when>
 							<xsl:when test="fee_details/fee_remission = 'Y' and fee_details/deferral_request = 'N'">
-								<p><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'NOTE_7'"/></xsl:call-template></p>
+								<p><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'NOTE_7_1'"/></xsl:call-template></p>
 							</xsl:when>
 							<xsl:otherwise>
-								<p><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'NOTE_7'"/></xsl:call-template></p>
+								<p><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'NOTE_7_1'"/></xsl:call-template></p>
 							</xsl:otherwise>
 							</xsl:choose>
 							</div>

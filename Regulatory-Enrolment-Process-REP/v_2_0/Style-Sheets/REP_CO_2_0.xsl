@@ -45,6 +45,14 @@
 				</div>
 				
 				<div class="panel-body">
+					<xsl:if test="dossier_type != ''">
+					<div class="row">
+						<div class="col-xs-10">
+						<strong><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'A_DossierType'"/></xsl:call-template>:&#160;</strong>
+						<span class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="dossier_type"/></xsl:call-template></span>
+						</div>
+					</div>
+					</xsl:if>
 					<section class="panel panel-default" >
 							<div class="panel-heading">
 								<h2 class="panel-title"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADDR_RECO'"/><xsl:with-param name="language" select="$language"/></xsl:call-template></h2>
@@ -97,11 +105,11 @@
 	</xsl:template>
 	<xsl:template name="contactBy">
 		<div class="oneLine">
-			<div style="white-space:nowrap;"><label style="width:15em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'LANGCORRESPOND'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover" style="font-weight:100;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="./company_contact_details/language_correspondance"/></xsl:call-template></span></label></div>
-			<div style="white-space:nowrap;"><label style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'PHONE'"/></xsl:call-template>:<span class="normalWeight mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/phone_num"/></span>&#160;
-			<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'EXTENSION'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/phone_ext"/></span></label></div>
-			<div style="white-space:nowrap;"><label style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'FAX'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/fax_num"/></span></label></div>
-			<div style="white-space:nowrap;"><label style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'EMAIL'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/email"/></span></label></div>
+			<div style="white-space:nowrap;"><strong style="width:15em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'LANGCORRESPOND'"/></xsl:call-template>:&#160;</strong><span class="mouseHover" style="font-weight:100;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="./company_contact_details/language_correspondance"/></xsl:call-template></span></div>
+			<div style="white-space:nowrap;"><strong style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'PHONE'"/></xsl:call-template>:</strong><span class="mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/phone_num"/></span></div>
+			<div style="white-space:nowrap;"><strong style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'EXTENSION'"/></xsl:call-template>:&#160;</strong><span class="mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/phone_ext"/></span></div>
+			<div style="white-space:nowrap;"><strong style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'FAX'"/></xsl:call-template>:&#160;</strong><span class="mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/fax_num"/></span></div>
+			<div style="white-space:nowrap;"><strong style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'EMAIL'"/></xsl:call-template>:&#160;</strong><span class="mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/email"/></span></div>
 		</div>
 	</xsl:template>
 	<xsl:template name="contactRoles">
@@ -155,7 +163,7 @@
 				<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
             </xsl:element>
 			<span class="normalWeight mouseHover" style="font-weight:100;">
-				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'REPPRIMARY'"/><xsl:with-param name="language" select="$language"/></xsl:call-template>
+				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'REPPRIMARY'"/></xsl:call-template>
 			</span>
 		</dt>
 		<dt>
@@ -174,11 +182,11 @@
 		</dl>
 	</xsl:template>
 	<xsl:template name="representative">
-		<div style="white-space:nowrap;"><label style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'SALUTATION'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover" style="font-weight:100;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="./company_contact_details/salutation"/></xsl:call-template></span></label></div>
-		<div style="white-space:nowrap;"><label style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'FIRSTNAME'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/given_name"/></span></label></div>
-		<div style="white-space:nowrap;"><label style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'INITIALS'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/initials"/></span></label></div>
-		<div style="white-space:nowrap;"><label style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'LASTNAME'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/surname"/></span></label></div>
-		<div style="white-space:nowrap;"><label style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'JOBTITLE'"/></xsl:call-template>:&#160;<span class="normalWeight mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/job_title"/></span></label></div>
+		<div style="white-space:nowrap;"><strong style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'SALUTATION'"/></xsl:call-template>:&#160;</strong><span class="mouseHover" style="font-weight:100;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="./company_contact_details/salutation"/></xsl:call-template></span></div>
+		<div style=""><strong style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'FIRSTNAME'"/></xsl:call-template>:&#160;</strong><span class="mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/given_name"/></span></div>
+		<div style="white-space:nowrap;"><strong style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'INITIALS'"/></xsl:call-template>:&#160;</strong><span class="mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/initials"/></span></div>
+		<div style=""><strong style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'LASTNAME'"/></xsl:call-template>:&#160;</strong><span class="mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/surname"/></span></div>
+		<div style="white-space:nowrap;"><strong style="width:6em;"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'JOBTITLE'"/></xsl:call-template>:&#160;</strong><span class="mouseHover" style="font-weight:100;"><xsl:value-of select="./company_contact_details/job_title"/></span></div>
 	</xsl:template>
 	<xsl:template name="address">
 		<div class="addressContainer">
@@ -281,11 +289,11 @@
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="no" externalpreview="yes" url="file:///c:/Users/hcuser/Downloads/draftrepco-0-3.xml" htmlbaseurl="" outputurl="file:///c:/SPM/test/company.html" processortype="saxon8" useresolver="yes"
+		<scenario default="yes" name="Scenario1" userelativepaths="no" externalpreview="yes" url="file:///c:/Users/hcuser/Downloads/draftrepco-0-6.xml" htmlbaseurl="" outputurl="file:///c:/SPM/test/company.html" processortype="saxon8" useresolver="yes"
 		          profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext=""
 		          validateoutput="no" validator="internal" customvalidator="">
-			<parameterValue name="cssFile" value="'file:///C:/Users/hcuser/git/HC-IMSD/REP/xslt/ip400.css'"/>
-			<parameterValue name="labelFile" value="'../../hp-ip400-labels.xml'"/>
+			<parameterValue name="cssFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_2_0/Style-Sheets/ip400.css'"/>
+			<parameterValue name="labelFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_1_0/Style-Sheets/hp-ip400-labels.xml'"/>
 			<advancedProp name="sInitialMode" value=""/>
 			<advancedProp name="schemaCache" value="||"/>
 			<advancedProp name="bXsltOneIsOkay" value="true"/>
