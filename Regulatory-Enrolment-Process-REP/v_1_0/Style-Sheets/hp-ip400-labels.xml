@@ -68,7 +68,7 @@
 		<fra>fr_Date Last Saved</fra>
 	</row>
 	<row>
-		<code>DossierID</code>
+		<code>dossier_id</code>
 		<eng>Dossier ID</eng>
 		<fra>fr_Dossier ID</fra>
 	</row>
@@ -161,8 +161,8 @@
 	</row>
 	<row>
 		<code>B02-20160301-038</code>
-		<eng>Level III - (Post-Notice of Compliance Changes  - Level III)</eng>
-		<fra>Level III - (Post-Notice of Compliance Changes  - Level III)</fra>
+		<eng>Level 3 – Notice of Change</eng>
+		<fra>fr_Level 3 – Notice of Change</fra>
 	</row>
 	<row>
 		<code>B02-20160301-046</code>
@@ -196,13 +196,13 @@
 	</row>
 	<row>
 		<code>B02-20160301-068</code>
-		<eng>PBRER-C</eng>
-		<fra>fr_PBRER-C</fra>
+		<eng>PBRER-C(Periodic Benefit Risk Evaluation Report - Confirmatory)</eng>
+		<fra>PBRER-C</fra>
 	</row>
 	<row>
 		<code>B02-20160301-069</code>
-		<eng>PBRER-PV</eng>
-		<fra>fr_PBRER-PV</fra>
+		<eng>PBRER-PV (Periodic Benefit Risk Evaluation Report - Post-market Vigilance)</eng>
+		<fra>PBRER-PV</fra>
 	</row>
 	<row>
 		<code>B02-20160301-075</code>
@@ -212,52 +212,52 @@
 	<row>
 		<code>B02-20160301-077</code>
 		<eng>PRSNDS (Priority Request SNDS)</eng>
-		<fra>FR_PRSNDS (Priority Request SNDS)</fra>
+		<fra>PRNDS (Demande de statut d'’évaluation prioritaire - PDN)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-078</code>
 		<eng>PSUR-C (Periodic Safety Update Report - Conditional)</eng>
-		<fra>FR_PSUR-C (Periodic Safety Update Report - Conditional)</fra>
+		<fra>PSUR-C (Rapport périodique de pharmacovigilance - Confirmation)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-079</code>
 		<eng>PSUR-PV (Periodic Safety Update Report - Pharmacovigilance)</eng>
-		<fra>FR_PSUR-PV (Periodic Safety Update Report - Pharmacovigilance)</fra>
+		<fra>PSUR-PV (Rapport périodique de pharmacovigilance - pharmacovigilance)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-080</code>
 		<eng>RMP-PV (Risk Management Plan - Pharmacovigilance)</eng>
-		<fra>FR_RMP-PV (Risk Management Plan - Pharmacovigilance)</fra>
+		<fra>RMP-PV (Plan de gestion des risques - Pharmacovigilance)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-082</code>
 		<eng>SANDS (Supplement to an Abbreviated New Drug Submission)</eng>
-		<fra>FR_SANDS (Supplement to an Abbreviated New Drug Submission)</fra>
+		<fra>SANDS (Supplément à une présentation abrégée de drogue nouvelle)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-084</code>
 		<eng>SNDS (Supplement to a New Drug Submission)</eng>
-		<fra>FR_SNDS (Supplement to a New Drug Submission)</fra>
+		<fra>SNDS (Supplément à une présentation de drogue nouvelle)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-085</code>
 		<eng>SNDS-C (Supplement to a New Drug Submission - Conditional)</eng>
-		<fra>FR_SNDS-C (Supplement to a New Drug Submission - Conditional)</fra>
+		<fra>SNDS-C (Supplément à 'une présentation de drogue nouvelle - Confirmation)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-087</code>
 		<eng>UD-PV (Undefined Data Pharmacovigilance)</eng>
-		<fra>FR_UD-PV (Undefined Data Pharmacovigilance)</fra>
+		<fra>UD-PV (Données non définies – Pharmacovigilance)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-088</code>
 		<eng>UDRA (Undefined Regulatory Activity)</eng>
-		<fra>FR_UDRA (Undefined Regulatory Activity)</fra>
+		<fra>UDRA (Activité réglementaire non définie)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-089</code>
 		<eng>YBPR (Yearly Biologic Product Report)</eng>
-		<fra>FR_YBPR (Yearly Biologic Product Report)</fra>
+		<fra>YBPR (Rapport annuel sur un produit biologique)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-028</code>
@@ -266,27 +266,27 @@
 	</row>
 	<row>
 		<code>B02-20160301-018</code>
-		<eng>DINA</eng>
+		<eng>DINA (Application for Drug Identification Number)</eng>
 		<fra>fr_DINA (Application for Drug Identification Number)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-019</code>
-		<eng>DINB</eng>
+		<eng>DINB (Application for Drug Identification Number - Biologic)</eng>
 		<fra>fr_DINB (Application for Drug Identification Number - Biologic)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-020</code>
-		<eng>DIND</eng>
+		<eng>DIND (Application for Drug Identification Number - Disinfectant Product)</eng>
 		<fra>fr_DIND (Application for Drug Identification Number - Disinfectant Product)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-021</code>
-		<eng>DINF</eng>
+		<eng>DINF (Application for Drug Identification Number - Category IV Product)</eng>
 		<fra>fr_DINF (Application for Drug Identification Number - Category IV Product)</fra>
 	</row>
 	<row>
 		<code>B02-20160301-043</code>
-		<eng>MPDIN</eng>
+		<eng>MPDIN (Pre-Submission Meeting Information)</eng>
 		<fra>fr_MPDIN (Pre-Submission Meeting Information)</fra>
 	</row>
 	<row>
@@ -296,7 +296,7 @@
 	</row>
 	<row>
 		<code>B02-20160301-071</code>
-		<eng>PDCB</eng>
+		<eng>PDC (Post-Authorization Division 1 Change)</eng>
 		<fra>fr_PDC-B (Post-Authorization Division 1 Change - Biologics)</fra>
 	</row>
 <row><code>AB</code><eng>Alberta</eng><fra>Alberta</fra></row>
@@ -735,9 +735,10 @@
 <row><code>BENEFIT_RISK_ASSESS</code><eng>Benefit Risk Assessment</eng><fra>fr_Benefit Risk Assessment</fra></row>
 <row><code>CANCEL_LETTER</code><eng>Cancellation Letter</eng><fra>fr_Cancellation Letter</fra></row>
 <row><code>CHANGE_TO_DIN</code><eng>Change to DIN</eng><fra>fr_Change to DIN</fra></row>
-<row><code>CLARIF_RESPONSE</code><eng>esponse to Clarification Reques</eng><fra>fr_esponse to Clarification Reques</fra></row>
+<row><code>CLARIF_RESPONSE</code><eng>Response to Clarification Request</eng><fra>fr_Response to Clarification Request</fra></row>
 <row><code>COMMENTS_NOC</code><eng>Comments on Notice of Decision</eng><fra>fr_Comments on Notice of Decision</fra></row>
 <row><code>COMMENTS_SUMMARY_BASIS</code><eng>Comments on Summary Basis of Decision (SBD)</eng><fra>fr_Comments on Summary Basis of Decision (SBD)</fra></row>
+<row><code>COMMENTS_REGULARTORY_DECISION</code><eng>Comments on Regulatory Decision Summary</eng><fra>fr_Comments on Regulatory Decision Summary</fra></row>
 <row><code>DIN_DISCONTINUED</code><eng>Notification of Discontinued Sale (DIN Cancellation)</eng><fra>fr_Notification of Discontinued Sale (DIN Cancellation)</fra></row>
 <row><code>DRUG_NOTIF_FORM</code><eng>Drug Notification Form</eng><fra>fr_Drug Notification Form</fra></row>
 <row><code>FOR_PERIOD</code><eng>For Period</eng><fra>fr_For Period</fra></row>
@@ -757,7 +758,7 @@
 <row><code>PRISTINE_PM_2LANG</code><eng>Pristine PM - Second Language</eng><fra>fr_Pristine PM - Second Language</fra></row>
 <row><code>ADVISEMENT_LETTER_RESPONSE</code><eng>Response to Advisement Letter</eng><fra>fr_Response to Advisement Letter</fra></row>
 <row><code>CLIN_CLARIF_RESPONSE</code><eng>Response to Clinical Clarification Request</eng><fra>fr_Response to Clinical Clarification Request</fra></row>
-<row><code>EMAIL_RQ_RESPONSE</code><eng>Response to e-mail Request</eng><fra>fr_Response to e-mail Request</fra></row>
+<row><code>EMAIL_RQ_RESPONSE</code><eng>Response to e-mail Request </eng><fra>fr_Response to e-mail Request </fra></row>
 <row><code>LABEL_CLARIF_RESPONSE</code><eng>Response to Labeling Clarification Request</eng><fra>fr_Response to Labeling Clarification Request</fra></row>
 <row><code>MHPD_RQ_RESPONSE</code><eng>Response to MHPD Request</eng><fra>fr_Response to MHPD Request</fra></row>
 <row><code>NOC_RESPONSE</code><eng>Response to NOC/c-QN</eng><fra>fr_Response to NOC/c-QN</fra></row>
@@ -767,28 +768,28 @@
 <row><code>PROCESSING_CLARIF_RESPONSE</code><eng>Response to Processing Clarification Request</eng><fra>fr_Response to Processing Clarification Request</fra></row>
 <row><code>QUAL_CLIN_CLARIF_RESPONSE</code><eng>Response to Quality and Clinical Clarification Request</eng><fra>fr_Response to Quality and Clinical Clarification Request</fra></row>
 <row><code>QUAL_CLARIF_RESPONSE</code><eng>Response to Quality Clarification Request</eng><fra>fr_Response to Quality Clarification Request</fra></row>
-<row><code>RECON_DECIS_LTR_INTENT</code><eng>Reconsideration of Decision - Letter of Intent</eng><fra>fr_Reconsideration of Decision - Letter of Intent</fra></row>
-<row><code>RECON_DECIS_RQ_RECON</code><eng>"Reconsideration of Decision - Request for Reconsideration</eng><fra>fr_"Reconsideration of Decision - Request for Reconsideration</fra></row>
-<row><code>RECON_DECIS_OTHER_INFO</code><eng>Reconsideration of Decision - Other Information</eng><fra>fr_Reconsideration of Decision - Other Information</fra></row>
 <row><code>SCREENING_ACCEPT_RESPONSE</code><eng>Response to Screening Acceptance Letter</eng><fra>fr_Response to Screening Acceptance Letter</fra></row>
 <row><code>SCREENING_CLARIF_RESPONSE</code><eng>Response to Screening Clarification Request</eng><fra>fr_Response to Screening Clarification Request</fra></row>
 <row><code>SDN_RESPONSE</code><eng>Response to SDN</eng><fra>fr_Response to SDN</fra></row>
-<row><code>LABEL_PREAPPROVAL_2LANG</code><eng>econd Language Label - Pre-Approval</eng><fra>fr_econd Language Label - Pre-Approval</fra></row>
 <row><code>PHONE_RQ_RESPONSE</code><eng>Response to Telephone Request</eng><fra>fr_Response to Telephone Request</fra></row>
 <row><code>RISK_COMMUN_DOC</code><eng>Risk Communication Document</eng><fra>fr_Risk Communication Document</fra></row>
 <row><code>RMP_VERSION_DATE</code><eng>RMP version #</eng><fra>fr_RMP version #</fra></row>
 <row><code>SIGNAL_WORK_UP</code><eng>Signal Work Up</eng><fra>fr_Signal Work Up</fra></row>
 <row><code>UNSOLICITED_DATA</code><eng>Unsolicited Data</eng><fra>fr_Unsolicited Data</fra></row>
 <row><code>YEAR_LIST_OF_CHANGE</code><eng>Year, list of change number (for example: 2012, 15, 19a,….)</eng><fra>fr_Year, list of change number (for example: 2012, 15, 19a,….)</fra></row>
-<row><code>BE_CLARIF_RESPONSE</code><eng>Response to Non-clinical Clarification Request </eng><fra>fr_Response to Non-clinical Clarification Request </fra></row>
-<row><code>CORR_PATENT_MED</code><eng>Response to BE Clarification Request</eng><fra>fr_Response to BE Clarification Request</fra></row>
-<row><code>ALLEGATION_NOTICE</code><eng>otice of allegation</eng><fra>fr_otice of allegation</fra></row>
+<row><code>NONCLIN_CLARIF_RESPONSE</code><eng>Response to Non-clinical Clarification Request </eng><fra>fr_Response to Non-clinical Clarification Request </fra></row>
+<row><code>BE_CLARIF_RESPONSE</code><eng>Response to BE Clarification Request</eng><fra>fr_Response to BE Clarification Request</fra></row>
+<row><code>RECON_DECIS_LTR_INTENT</code><eng>Reconsideration of Decision - Letter of Intent</eng><fra>fr_Reconsideration of Decision - Letter of Intent</fra></row>
+<row><code>RECON_DECIS_RQ_RECON</code><eng>Reconsideration of Decision - Request for Reconsideration</eng><fra>fr_Reconsideration of Decision - Request for Reconsideration</fra></row>
+<row><code>RECON_DECIS_OTHER_INFO</code><eng>Reconsideration of Decision - Other Information</eng><fra>fr_Reconsideration of Decision - Other Information</fra></row>
+<row><code>LABEL_PREAPPROVAL_2LANG</code><eng>Second Language Label - Pre-Approval</eng><fra>fr_Second Language Label - Pre-Approval</fra></row>
+<row><code>CORR_PATENT_MED</code><eng>Correspondence - Patented Medicines</eng><fra>fr_Correspondence - Patented Medicines</fra></row>
+<row><code>ALLEGATION_NOTICE</code><eng>Notice of allegation</eng><fra>fr_Notice of allegation</fra></row>
 <row><code>FORM_IV</code><eng>Form IV</eng><fra>fr_Form IV</fra></row>
 <row><code>FORM_V</code><eng>Form V</eng><fra>fr_Form V</fra></row>
-<row><code>CONSENT_LTR</code><eng>onsent Letter</eng><fra>fr_onsent Letter</fra></row>
-<row><code>DATA_PROTECT_CORRESP</code><eng>orrespondence - Data Protection</eng><fra>fr_orrespondence - Data Protection</fra></row>
-<row><code>NONCLIN_CLARIF_RESPONSE</code><eng>Response to Non-clinical Clarification Request </eng><fra>fr_Response to Non-clinical Clarification Request </fra></row>
-<row><code>SEQUENCE_CLEANUP</code><eng>equence Clean-up</eng><fra>fr_equence Clean-up</fra></row>
+<row><code>CONSENT_LTR</code><eng>Consent Letter</eng><fra>fr_Consent Letter</fra></row>
+<row><code>DATA_PROTECT_CORRESP</code><eng>Correspondence - Data Protection</eng><fra>fr_Correspondence - Data Protection</fra></row>
+<row><code>SEQUENCE_CLEANUP</code><eng>eCTD Dossier Clean-up</eng><fra>fr_eCTD Dossier Clean-up</fra></row>
 <row><code>IS_THIRD_PARTY_INFO</code><eng>A letter of authorization signed by the manufacture/sponsor company must be provided in folder 1.2.6 of the regulatory transaction.</eng><fra>fr_orm V</fra></row>
 <row><code>ADDITIONAL_PRODUCT_CHGE_li</code><eng>When the manufacturer wants to request an additional product name, for a previously approved product, that does not require a brand name or Look-Alike-Sound-Alike assessment.  (New DIN is issued)</eng><fra>fr_When the manufacturer wants to request an additional product name, for a previously approved product, that does not require a brand name or Look-Alike-Sound-Alike assessment.  (New DIN is issued)</fra></row>
 <row><code>ADDITIONAL_PRODUCT_CHGE_note</code><eng>Note: A new dossier ID maybe required. Contact Health Canada for more information (hc.eReview.sc@canada.ca).</eng><fra>fr_Note: A new dossier ID maybe required. Contact Health Canada for more information (eReview@canada.ca).</fra></row>
@@ -798,15 +799,15 @@
 <row><code>OWNERSHIP_CHGE_li</code><eng>When a manufacturer transfers the possession and responsibility for a product to another manufacturer. (DIN stays the same)</eng><fra>fr_When a manufacturer transfers the possession and responsibility for a product to another manufacturer. (DIN stays the same)</fra></row>
 <row><code>OWNERSHIP_CHGE_note</code><eng>Note: Dossier ID will be transferred from the previous owner if all DINs within the dossier are being transferred. Alternatively, contact Health Canada for more information (eReview@canada.ca).</eng><fra>fr_Note: A new dossier ID maybe required. Contact Health Canada for more information (eReview@canada.ca).</fra></row>
 <row><code>OWNERSHIP_CHGE_note</code><eng>On this template: Use company ID for new owner and use existing dossier ID, unless a new dossier ID was assigned by Health Canada.</eng><fra>fr_Note: A new dossier ID maybe required. Contact Health Canada for more information (eReview@canada.ca).</fra></row>
-<row><code>LICENGSING_li</code><eng>An agreement between two manufacturers whereby one manufacturer (licensor) supplies a drug product to another manufacturer (licensee) for sale under the second manufacturer’s name.</eng><fra>fr_An agreement between two manufacturers whereby one manufacturer (licensor) supplies a drug product to another manufacturer (licensee) for sale under the second manufacturer’s name.</fra></row>
+<row><code>LICENGSING_li</code><eng>An agreement between two manufacturers whereby one manufacturer (licensor) supplies a drug product to another manufacturer (licensee) for sale under the second manufacturer's name.</eng><fra>fr_An agreement between two manufacturers whereby one manufacturer (licensor) supplies a drug product to another manufacturer (licensee) for sale under the second manufacturer's name.</fra></row>
 <row><code>LICENGSING_note</code><eng>Note: A new Dossier ID is required if the proposed product(s) are not previously approved (i.e. no dossier ID already exists).  Except in the cases of a replace source cross-licensing. Contact Health Canada for more information (eReview@canada.ca).</eng><fra>fr_Note: A new Dossier ID is required if the proposed product(s) are not previously approved (i.e. no dossier ID already exists).  Except in the cases of a replace source cross-licensing. Contact Health Canada for more information (eReview@canada.ca).</fra></row>
 <row><code>LICENGSING_note</code><eng>On the RA template: Use the company ID for new owner (licensee) and and use existing dossier ID, unless a new dossier ID was assigned by Health Canada.</eng><fra>fr_on the RA template: Use the company ID for new owner (licensee) and and use existing dossier ID, unless a new dossier ID was assigned by Health Canada.</fra></row>
-<row><code>PRODUCT_MANUFACT_NAME_CHGE_li</code><eng>A change to the manufacturer’s name and the product name.</eng><fra>fr_A change to the manufacturer’s name and the product name.</fra></row>
+<row><code>PRODUCT_MANUFACT_NAME_CHGE_li</code><eng>A change to the manufacturer's name and the product name.</eng><fra>fr_A change to the manufacturer's name and the product name.</fra></row>
 <row><code>PRODUCT_MANUFACT_NAME_CHGE_note</code><eng>Note: An amended CO XML is required. A new company ID will be issued for the substantive name change.</eng><fra>fr_Note: An amended CO XML is required. A new company ID will be issued for the substantive name change.</fra></row>
-<row><code>PRODUCT_MANUFACT_NAME_CHGE_note</code><eng>On the RA template: Use new company ID (associated with new manufacturer’s name) and existing dossier ID.</eng><fra>fr_On the RA template: Use new company ID (associated with new manufacturer’s name) and existing dossier ID.</fra></row>
-<row><code>MANUFACT_NAME_CHGE_li</code><eng>A change to the manufacturer’s name.</eng><fra>fr_A change to the manufacturer’s name.</fra></row>
+<row><code>PRODUCT_MANUFACT_NAME_CHGE_note</code><eng>On the RA template: Use new company ID (associated with new manufacturer's name) and existing dossier ID.</eng><fra>fr_On the RA template: Use new company ID (associated with new manufacturer's name) and existing dossier ID.</fra></row>
+<row><code>MANUFACT_NAME_CHGE_li</code><eng>A change to the manufacturer's name.</eng><fra>fr_A change to the manufacturer's name.</fra></row>
 <row><code>MANUFACT_NAME_CHGE_note</code><eng>Note: An amended CO XML is required. A new company ID will be issued for the substantive name change.</eng><fra>fr_Note: An amended CO XML is required. A new company ID will be issued for the substantive name change.</fra></row>
-<row><code>MANUFACT_NAME_CHGE_note</code><eng>On the RA template: Use new company ID (associated with new manufacturer’s name) and existing dossier ID.</eng><fra>fr_On the RA template: Use new company ID (associated with new manufacturer’s name) and existing dossier ID.</fra></row>
+<row><code>MANUFACT_NAME_CHGE_note</code><eng>On the RA template: Use new company ID (associated with new manufacturer's name) and existing dossier ID.</eng><fra>fr_On the RA template: Use new company ID (associated with new manufacturer's name) and existing dossier ID.</fra></row>
 <row><code>MERGER_li</code><eng>The combining of two or more manufacturers into one, through a purchase, acquisition, a pooling of interests, or purchase of controlling interest in one manufacturer by another manufacturer, in order to take over assets and/or operations.</eng><fra>fr_The combining of two or more manufacturers into one, through a purchase, acquisition or a pooling of interests or purchase of controlling interest in one manufacturer by another manufacturer, in order to take over assets and/or operations.</fra></row>
 <row><code>MERGER_note</code><eng>Note: If merger/buyout resulted in a change in company name, an amended company enrolment is required. A new company ID will be issued. Dossier ID will remain the same as the dossier will be transferred from the previous owner to the new owner.</eng><fra>fr_Note: If merger/buyout resulted in a change in company name, an amended CO XML is required. A new company ID will be issued. Dossier ID will remain the same as the DO will be transferred from the previous owner to the new owner.</fra></row>
 <row><code>MERGER_note</code><eng>On this form: Use company ID for new owner and existing dossier ID.</eng><fra>fr_On this template: Use company ID for new owner and existing dossier ID.</fra></row>
