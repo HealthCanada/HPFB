@@ -68,7 +68,7 @@
 		<fra>fr_Date Last Saved</fra>
 	</row>
 	<row>
-		<code>dossier_id</code>
+		<code>DossierID</code>
 		<eng>Dossier ID</eng>
 		<fra>fr_Dossier ID</fra>
 	</row>
