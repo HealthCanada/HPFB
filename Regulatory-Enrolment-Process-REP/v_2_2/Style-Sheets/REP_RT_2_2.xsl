@@ -34,7 +34,7 @@
 							</TR>
 							<TR>
 								<TD style="text-align: center;"> <span class="mouseHover"><xsl:apply-templates select="ectd/company_id" /></span> </TD>
-								<TD style="text-align: center;"> <span class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code"><xsl:apply-templates select="ectd/dossier_type" /></xsl:with-param></xsl:call-template></span> </TD>
+								<TD style="text-align: center;"> <span class="mouseHover"><xsl:value-of select="ectd/dossier_type" /></span> </TD>
 								<TD style="text-align: center;"> <span class="mouseHover"><xsl:apply-templates select="ectd/dossier_id" /></span> </TD>
 								<TD style="text-align: center;"> <span class="mouseHover"><xsl:apply-templates select="date_saved" /></span> </TD>
 							</TR>
@@ -131,10 +131,10 @@
 					</div>
 
 					<div class="well well-sm" >
-							<div class="row">
 								<header class="panel-heading" >
 									<h4 class="panel-title" ><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'LIFECYCLE_TITLE'"/></xsl:call-template></h4>
 								</header>								
+							<div class="row">
 								
 								<div class="panel-body" >
 									<table border="1" cellspacing="2" cellpadding="2" style="table-layout: fixed; width: 100%;word-wrap: break-word;">
@@ -145,23 +145,25 @@
 														<legend><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'LIFECYCLE_RECORD'"/></xsl:call-template></legend>
 														<div class="row">
 															<div class="form-group col-md-6">
-															<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTROL_NUM'"/></xsl:call-template>:&#160;<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="control_number"/></span></label>
-															</div>
-															<div class="form-group col-md-6">
-															<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'REG_ACTIVITY_LEAD'"/></xsl:call-template>:&#160;<span style="font-weight: normal;" class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code"><xsl:value-of select="./sequence_activity_lead"/></xsl:with-param></xsl:call-template></span></label>
+															<strong class="padLeft3"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTROL_NUM'"/></xsl:call-template>:&#160;</strong><span class="mouseHover"><xsl:value-of select="control_number"/></span>
 															</div>
 														</div>
 														<div class="row">
 														</div>
 														<div class="row">
 															<div class="form-group col-md-6">
-															<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ACTIVITY_TYPE'"/></xsl:call-template>:&#160;<span style="font-weight: normal;" class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code"><xsl:value-of select="./sequence_activity_type"/></xsl:with-param></xsl:call-template></span></label>
+															<strong class="padLeft3"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'REG_ACTIVITY_LEAD'"/></xsl:call-template>:&#160;</strong><span class="mouseHover"><xsl:value-of select="./regulatory_activity_lead"/></span>
 															</div>
 															<div class="form-group col-md-6">
-															<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'REG_TRANSACTION_DESC'"/></xsl:call-template>:&#160;<span style="font-weight: normal;" class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code"><xsl:value-of select="./sequence_description_value"/></xsl:with-param></xsl:call-template></span></label>
+															<strong><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ACTIVITY_TYPE'"/></xsl:call-template>:&#160;</strong><span class="mouseHover"><xsl:value-of select="./regulatory_activity_type"/></span>
 															</div>
 														</div>
 														<div class="row">
+															<div class="form-group col-md-12">
+															<strong class="padLeft3"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'REG_TRANSACTION_DESC'"/></xsl:call-template>:&#160;</strong><span class="mouseHover"><xsl:value-of select="./transaction_description"/></span>
+															</div>
+														</div>
+<!--														<div class="row">
 															<xsl:choose>
 															<xsl:when test="./sequence_description_value = 'UNSOLICITED_DATA'">
 															<div class="form-group col-md-12">
@@ -201,7 +203,7 @@
 																<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="./sequence_details"/></span>
 															</div>
 															</xsl:if>
-														</div>
+														</div>-->
 													</fieldset>
 												</td>
 											</tr>
@@ -224,10 +226,9 @@
 							<div class="row">
 								<div class="col-xs-12">
 									<label> <xsl:call-template name="hp-label"><xsl:with-param name="code" select="'SOLICITED_RQ'"/></xsl:call-template>:&#160; </label>
-									<span class="mouseHover"> <xsl:apply-templates select="solicited_requester" /> </span>
 									<ol>
 										<xsl:for-each select="solicited_requester_record">
-											<li><span class="mouseHover"><xsl:value-of select="./solicited_requester"/></span></li>
+											<li><span class="mouseHover"><xsl:value-of select="./requester_of_solicited_information"/></span></li>
 										</xsl:for-each>
 									</ol>
 								</div>
@@ -696,7 +697,7 @@
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="..\..\..\..\..\Downloads\hcreprt-2019-03-08-1011.xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\TRANSACTION.html" processortype="saxon8"
+		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="..\..\..\..\..\Downloads\hcreprt-2019-04-02-0924.xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\TRANSACTION.html" processortype="saxon8"
 		          useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath=""
 		          postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
 			<parameterValue name="cssFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_2_0/Style-Sheets/ip400.css'"/>

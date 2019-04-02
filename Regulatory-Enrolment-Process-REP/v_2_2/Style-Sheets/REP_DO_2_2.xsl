@@ -51,7 +51,7 @@
 							<label><xsl:call-template name="hp-label">
 								<xsl:with-param name="code" select="'A_DossierType'"/>
 							</xsl:call-template>:&#160;
-							<span class="padLeft3 nowrap normalWeight mouseHover" style="font-weight:100;"><xsl:value-of select="dossier_type"/></span></label>
+							<span class="padLeft3 nowrap normalWeight mouseHover" style="font-weight:100;"><xsl:call-template name="hp-label"><xsl:with-param name="code"><xsl:value-of select="dossier_type"/></xsl:with-param></xsl:call-template></span></label>
 						</div>
 						<div class="col-xs-4">
 							<label><xsl:call-template name="hp-label">
@@ -178,6 +178,7 @@
 				</div>
             </div>
         </section>
+		<xsl:if test="count(contact_record/rep_contact_role) &gt; 0">
         <section class="panel panel-primary mrgn-tp-lg">
             <header class="panel-heading clearfix">
                <h2 class="panel-title"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'REP_CONTACT_INFO'"/></xsl:call-template></h2>
@@ -234,6 +235,7 @@
 				</div>
 			</div>
 		</section>
+		</xsl:if>
 		</div>
     </xsl:template>
 	<xsl:template name="break">
@@ -261,11 +263,11 @@
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="file:///e:/ip400Demo/tmp/hcrepdo-e123456-1-0.xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\..\SPM\test\dossier.html" processortype="saxon8"
+		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="..\..\..\..\..\Downloads\draftrepdo-0-4 (1).xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\dossier.html" processortype="saxon8"
 		          useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath=""
 		          postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
-			<parameterValue name="cssFile" value="'file:///C:/Users/hcuser/git/HC-IMSD/REP/xslt/ip400.css'"/>
-			<parameterValue name="labelFile" value="'C:\Users\hcuser\git\HC-IMSD\REP\xslt\hp-ip400-labels.xml'"/>
+			<parameterValue name="cssFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_2_0/Style-Sheets/ip400.css'"/>
+			<parameterValue name="labelFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_1_0/Style-Sheets/hp-ip400-labels.xml'"/>
 			<parameterValue name="language" value="'eng'"/>
 			<advancedProp name="sInitialMode" value=""/>
 			<advancedProp name="schemaCache" value="||"/>

@@ -418,6 +418,9 @@
 <row><code>BIOLOGIC</code><eng>Biologic</eng><fra>fr_Biologic</fra></row>
 <row><code>PHARMA</code><eng>Pharmaceutical</eng><fra>fr_Pharmaceutical</fra></row>
 <row><code>PHARMACEUTICAL</code><eng>Pharmaceutical</eng><fra>fr_Pharmaceutical</fra></row>
+<row><code>D21</code><eng>Biologic</eng><fra>fr_Biologic</fra></row>
+<row><code>D24</code><eng>Veterinary</eng><fra>fr_Veterinary</fra></row>
+<row><code>D22</code><eng>Pharmaceutical</eng><fra>fr_Pharmaceutical</fra></row>
 <row><code>CONTROL_NUM</code><eng>Control Number</eng><fra>fr_Control Number</fra></row>
 <row><code>DATE_SUBMITTED</code><eng>Date Submitted</eng><fra>fr_Date Submitted</fra></row>
 <row><code>SEQUENCE_NUM</code><eng>Sequence Number</eng><fra>fr_Sequence Number</fra></row>

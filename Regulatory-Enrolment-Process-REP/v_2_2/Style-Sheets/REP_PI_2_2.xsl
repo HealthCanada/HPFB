@@ -69,7 +69,7 @@
 							                <xsl:attribute name="disabled">disabled</xsl:attribute>
 											<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 							            </xsl:element>
-										<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+										<span style="font-weight:normal;" class="mouseHover">
 											<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'MANUFACTURER_SPONSOR'"/></xsl:call-template>
 										</span>
 										</td>
@@ -82,7 +82,7 @@
 							                <xsl:attribute name="disabled">disabled</xsl:attribute>
 											<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 							            </xsl:element>
-										<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+										<span style="font-weight:normal;" class="mouseHover">
 											<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTACT_MAILING'"/></xsl:call-template>
 										</span>
 										</td>
@@ -97,7 +97,7 @@
 							                <xsl:attribute name="disabled">disabled</xsl:attribute>
 											<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 							            </xsl:element>
-										<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+										<span style="font-weight:normal;" class="mouseHover">
 											<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'THIS_ACTIVITY'"/></xsl:call-template>
 										</span>
 										</td>
@@ -110,7 +110,7 @@
 							                <xsl:attribute name="disabled">disabled</xsl:attribute>
 											<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 							            </xsl:element>
-										<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+										<span style="font-weight:normal;" class="mouseHover">
 											<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CANADIAN_IMPORTER'"/></xsl:call-template>
 										</span>
 										</td>
@@ -164,7 +164,7 @@
 							                <xsl:attribute name="disabled">disabled</xsl:attribute>
 											<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 							            </xsl:element>
-										<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+										<span style="font-weight:normal;" class="mouseHover">
 											<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'HOSPITAL'"/></xsl:call-template>
 										</span>
 									</td>
@@ -177,7 +177,7 @@
 							                <xsl:attribute name="disabled">disabled</xsl:attribute>
 											<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 							            </xsl:element>
-										<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+										<span style="font-weight:normal;" class="mouseHover">
 											<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'FOOD_PROCESSING'"/></xsl:call-template>
 										</span>
 									</td>
@@ -190,7 +190,7 @@
 							                <xsl:attribute name="disabled">disabled</xsl:attribute>
 											<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 							            </xsl:element>
-										<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+										<span style="font-weight:normal;" class="mouseHover">
 											<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'MEDICAL_INSTRUMENTS'"/></xsl:call-template>
 										</span>
 									</td>
@@ -205,7 +205,7 @@
 							                <xsl:attribute name="disabled">disabled</xsl:attribute>
 											<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 							            </xsl:element>
-										<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+										<span style="font-weight:normal;" class="mouseHover">
 											<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'DOMESTIC'"/></xsl:call-template>
 										</span>
 									</td>
@@ -218,7 +218,7 @@
 							                <xsl:attribute name="disabled">disabled</xsl:attribute>
 											<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 							            </xsl:element>
-										<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+										<span style="font-weight:normal;" class="mouseHover">
 											<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'BARN'"/></xsl:call-template>
 										</span>
 									</td>
@@ -231,7 +231,7 @@
 							                <xsl:attribute name="disabled">disabled</xsl:attribute>
 											<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 							            </xsl:element>
-										<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+										<span style="font-weight:normal;" class="mouseHover">
 											<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'INSTITUTIONAL_INDUSTRIAL'"/></xsl:call-template>
 										</span>
 									</td>
@@ -269,7 +269,7 @@
 						                <xsl:attribute name="disabled">disabled</xsl:attribute>
 										<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 						            </xsl:element>
-									<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+									<span style="font-weight:normal;margin-left:15px;" class="mouseHover">
 										<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'SCHEDULE_C'"/></xsl:call-template>
 									</span>
 								</div>
@@ -282,7 +282,7 @@
 						                <xsl:attribute name="disabled">disabled</xsl:attribute>
 										<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 						            </xsl:element>
-									<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+									<span style="font-weight:normal;margin-left:15px;" class="mouseHover">
 										<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'SCHEDULE_D'"/></xsl:call-template>
 									</span>
 								</div>
@@ -295,7 +295,7 @@
 						                <xsl:attribute name="disabled">disabled</xsl:attribute>
 										<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 						            </xsl:element>
-									<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+									<span style="font-weight:normal;margin-left:15px;" class="mouseHover">
 										<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'PRESCRIPTION_DRUG'"/></xsl:call-template>
 									</span>
 								</div>
@@ -308,7 +308,7 @@
 						                <xsl:attribute name="disabled">disabled</xsl:attribute>
 										<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 						            </xsl:element>
-									<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+									<span style="font-weight:normal;margin-left:15px;" class="mouseHover">
 										<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'REGULATED_CDSA'"/></xsl:call-template>
 									</span>
 								</div>
@@ -321,7 +321,7 @@
 						                <xsl:attribute name="disabled">disabled</xsl:attribute>
 										<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 						            </xsl:element>
-									<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+									<span style="font-weight:normal;margin-left:15px;" class="mouseHover">
 										<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'IS_NON_PRESCRIPTION_DRUG'"/></xsl:call-template>
 									</span>
 								</div>
@@ -334,7 +334,7 @@
 						                <xsl:attribute name="disabled">disabled</xsl:attribute>
 										<xsl:attribute name="style">float:left;width:40px;</xsl:attribute>
 						            </xsl:element>
-									<span style="font-weight:normal;padding-left:15px;" class="mouseHover">
+									<span style="font-weight:normal;margin-left:15px;" class="mouseHover">
 										<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'NON_PRESC_SCHEDULE_A'"/></xsl:call-template>
 									</span>
 								</div>
@@ -547,7 +547,7 @@
 														<label>
 															<xsl:element name="input">
 												                <xsl:attribute name="type">checkbox</xsl:attribute>
-												                <xsl:if test=" schedule_a_group/dementia = 'Y'">
+												                <xsl:if test=" schedule_a_group/depression = 'Y'">
 												                    <xsl:attribute name="checked"></xsl:attribute>
 												                </xsl:if>
 												                <xsl:attribute name="disabled">disabled</xsl:attribute>
@@ -828,7 +828,7 @@
 													<tr>
 														<td colspan="3"> 
 															<fieldset>
-																<legend><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'FORMULATION_DETAILS'"/></xsl:call-template>&#160;<xsl:value-of select="formulation_id"/></legend>
+																<legend><h4>&#160;&#160;<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'FORMULATION_DETAILS'"/></xsl:call-template>&#160;<xsl:value-of select="formulation_id"/></h4></legend>
 																<div>
 																	<section class="panel panel-default">
 																		<div class="panel-body">
@@ -927,7 +927,7 @@
 																	<xsl:if test="strength/operator = 'RA'">
 																		<span style="font-weight: normal;" class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'RANGE_LOWER_LIMIT'"/></xsl:call-template></span>:&#160;
 																	</xsl:if>
-																	<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="strength/data1"/></span>&#160;/&#160;
+																	<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="strength/data1"/></span>&#160;
 																	<xsl:choose>
 																	<xsl:when test="units_other != 'null' and units_other != ''">
 																		<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="units_other"/></span>&#160;
@@ -938,7 +938,7 @@
 																	</xsl:choose>
 																	<xsl:if test="strength/operator = 'RA'">&#160;&#160;
 																		<span style="font-weight: normal;" class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'RANGE_UPPER_LIMIT'"/></xsl:call-template></span>:&#160;
-																		<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="strength/data2"/></span>&#160;/&#160;
+																		<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="strength/data2"/></span>&#160;
 																		<xsl:choose>
 																		<xsl:when test="per_units_other_details != 'null' and per_units_other_details != ''">
 																			<span style="font-weight: normal;" class="mouseHover"><xsl:value-of select="units_other"/></span>&#160;
@@ -1135,10 +1135,10 @@
 																					</tr>
 																				</thead>
 																				<tbody>
-																					<xsl:for-each select="roa_group">
+																					<xsl:for-each select="roa_group/roa_details">
 																						<tr>
-																							<td><span class="mouseHover"><xsl:choose><xsl:when test="$language = 'fra'"><xsl:apply-templates select="./roa_details/roa/@label_fr" /></xsl:when><xsl:otherwise><xsl:apply-templates select="./roa_details/roa/@label_en" /></xsl:otherwise></xsl:choose></span></td>
-																							<td><span class="mouseHover"><xsl:value-of select="./roa_details/roa_other"/>&#160;</span></td>
+																							<td><span class="mouseHover"><xsl:choose><xsl:when test="$language = 'fra'"><xsl:apply-templates select="./roa/@label_fr" /></xsl:when><xsl:otherwise><xsl:apply-templates select="./roa/@label_en" /></xsl:otherwise></xsl:choose></span></td>
+																							<td><span class="mouseHover"><xsl:value-of select="./roa_other"/>&#160;</span></td>
 																						</tr>
 																					</xsl:for-each>
 																				</tbody>
@@ -1159,9 +1159,9 @@
 																					</tr>
 																				</thead>
 																				<tbody>
-																					<xsl:for-each select="country_group">
+																					<xsl:for-each select="country_group/country_manufacturer">
 																						<tr>
-																							<td><span class="mouseHover"><xsl:choose><xsl:when test="$language = 'fra'"><xsl:apply-templates select="./country_manufacturer/@label_fr" /></xsl:when><xsl:otherwise><xsl:apply-templates select="./country_manufacturer/@label_en" /></xsl:otherwise></xsl:choose></span></td>
+																							<td><span class="mouseHover"><xsl:choose><xsl:when test="$language = 'fra'"><xsl:apply-templates select="./@label_fr" /></xsl:when><xsl:otherwise><xsl:apply-templates select="./@label_en" /></xsl:otherwise></xsl:choose></span></td>
 																						</tr>
 																					</xsl:for-each>
 																				</tbody>
