@@ -2,7 +2,6 @@
 
 <!ELEMENT css (#PCDATA)>
 <!ATTLIST css xmlns CDATA #FIXED "">
-
 ]>
 <css>
 <style type="text/css">
@@ -13251,6 +13250,34 @@ a.shr-opn, a.shr-opn:hover {
 .fa-caret-down:before {
     content: "\f0d7";
 }
+.c-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  font-size: 65%;
+  line-height: 1rem;
+  color: #eee;
+  text-align: center;
+  user-select: none;
+  background-color: #d1d1d1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.c-checkbox {
+	border-style: solid;
+	border-width: thin;
+	font-size: xx-small;
+	font-weight: 900;
+	margin-left: 15px;
+	margin-right: 15px;
+	padding-left: 2px;
+	vertical-align: 2px;
+}
+
 </style>
 
 </css>
