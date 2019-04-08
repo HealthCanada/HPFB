@@ -115,66 +115,37 @@
 	<xsl:template name="contactRoles">
 		<dl>
 		<dt>
-			<xsl:element name="input">
-                <xsl:attribute name="type">checkbox</xsl:attribute>
-                <xsl:if test=" manufacturer = 'Y'">
-                    <xsl:attribute name="checked"></xsl:attribute>
-                </xsl:if>
-                <xsl:attribute name="disabled">disabled</xsl:attribute>
-				<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-            </xsl:element>
+			<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="manufacturer"/></xsl:call-template>
 			<span class="normalWeight mouseHover" style="font-weight:100;">
 				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTACT_MANUFACTURER'"/><xsl:with-param name="language" select="$language"/></xsl:call-template>
 			</span>
 		</dt>
 		<dt>
-			<xsl:element name="input">
-                <xsl:attribute name="type">checkbox</xsl:attribute>
-                <xsl:if test=" mailing = 'Y'">
-                    <xsl:attribute name="checked"></xsl:attribute>
-                </xsl:if>
-                <xsl:attribute name="disabled">disabled</xsl:attribute>
-				<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-            </xsl:element>
+			<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="mailing"/></xsl:call-template>
 			<span class="normalWeight mouseHover" style="font-weight:100;">
 				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTACT_MAILING'"/><xsl:with-param name="language" select="$language"/></xsl:call-template>
 			</span>
 		</dt>
 		<dt>
-			<xsl:element name="input">
-                <xsl:attribute name="type">checkbox</xsl:attribute>
-                <xsl:if test=" billing = 'Y'">
-                    <xsl:attribute name="checked"></xsl:attribute>
-                </xsl:if>
-                <xsl:attribute name="disabled">disabled</xsl:attribute>
-				<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-            </xsl:element>
+			<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="billing"/></xsl:call-template>
 			<span class="normalWeight mouseHover" style="font-weight:100;">
 				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTACT_BILLING'"/></xsl:call-template>
 			</span>
 		</dt>
 		<dt>
-			<xsl:element name="input">
-                <xsl:attribute name="type">checkbox</xsl:attribute>
-                <xsl:if test=" rep_primary = 'Y'">
-                    <xsl:attribute name="checked"></xsl:attribute>
-                </xsl:if>
-                <xsl:attribute name="disabled">disabled</xsl:attribute>
-				<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-            </xsl:element>
+			<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="importer"/></xsl:call-template>
+			<span class="normalWeight mouseHover" style="font-weight:100;">
+				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTACT_IMPORTER'"/></xsl:call-template>
+			</span>
+		</dt>
+		<dt>
+			<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="rep_primary"/></xsl:call-template>
 			<span class="normalWeight mouseHover" style="font-weight:100;">
 				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'REPPRIMARY'"/></xsl:call-template>
 			</span>
 		</dt>
 		<dt>
-			<xsl:element name="input">
-                <xsl:attribute name="type">checkbox</xsl:attribute>
-                <xsl:if test=" rep_secondary = 'Y'">
-                    <xsl:attribute name="checked"></xsl:attribute>
-                </xsl:if>
-                <xsl:attribute name="disabled">disabled</xsl:attribute>
-				<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-            </xsl:element>
+			<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="rep_secondary"/></xsl:call-template>
 			<span class="normalWeight mouseHover" style="font-weight:100;">
 				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'REPSECONDARY'"/></xsl:call-template>
 			</span>
@@ -225,53 +196,25 @@
 	<xsl:template name="addressRoles">
 		<dl>
 		<dt>
-			<xsl:element name="input">
-                <xsl:attribute name="type">checkbox</xsl:attribute>
-                <xsl:if test=" manufacturer = 'Y'">
-                    <xsl:attribute name="checked"></xsl:attribute>
-                </xsl:if>
-                <xsl:attribute name="disabled">disabled</xsl:attribute>
-				<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-            </xsl:element>
+			<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="manufacturer"/></xsl:call-template>
 			<span class="normalWeight mouseHover" style="font-weight:100;">
 				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'MANUFACT_SEL'"/><xsl:with-param name="language" select="$language"/></xsl:call-template>
 			</span>
 		</dt>
 		<dt>
-			<xsl:element name="input">
-                <xsl:attribute name="type">checkbox</xsl:attribute>
-                <xsl:if test=" manufacturer = 'Y'">
-                    <xsl:attribute name="checked"></xsl:attribute>
-                </xsl:if>
-                <xsl:attribute name="disabled">disabled</xsl:attribute>
-				<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-            </xsl:element>
+			<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="mailing"/></xsl:call-template>
 			<span class="normalWeight mouseHover" style="font-weight:100;">
-				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'MAIL_SEL'"/><xsl:with-param name="language" select="$language"/></xsl:call-template>
+				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'MAIL_SEL'"/></xsl:call-template>
 			</span>
 		</dt>
 		<dt>
-			<xsl:element name="input">
-                <xsl:attribute name="type">checkbox</xsl:attribute>
-                <xsl:if test=" manufacturer = 'Y'">
-                    <xsl:attribute name="checked"></xsl:attribute>
-                </xsl:if>
-                <xsl:attribute name="disabled">disabled</xsl:attribute>
-				<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-            </xsl:element>
+			<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="billing"/></xsl:call-template>
 			<span class="normalWeight mouseHover" style="font-weight:100;">
 				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'BILLING_SEL'"/><xsl:with-param name="language" select="$language"/></xsl:call-template>
 			</span>
 		</dt>
 		<dt>
-			<xsl:element name="input">
-                <xsl:attribute name="type">checkbox</xsl:attribute>
-                <xsl:if test=" importer = 'Y'">
-                    <xsl:attribute name="checked"></xsl:attribute>
-                </xsl:if>
-                <xsl:attribute name="disabled">disabled</xsl:attribute>
-				<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-            </xsl:element>
+			<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="importer"/></xsl:call-template>
 			<span class="normalWeight mouseHover" style="font-weight:100;">
 				<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'IMPORTER_SEL'"/></xsl:call-template>
 			</span>
@@ -283,6 +226,19 @@
 		<xsl:variable name="value" select="$labelLookup/SimpleCodeList/row[code=$code]/*[name()=$language]"/>
 		<xsl:if test="$value"><xsl:value-of select="$value"/></xsl:if>
 		<xsl:if test="not($value)">Error: code missing:(<xsl:value-of select="$code"/> in <xsl:value-of select="$labelFile"/>)</xsl:if>
+	</xsl:template>
+	<xsl:template name="hp-checkbox">
+		<xsl:param name="value" select="/.."/>
+		<span class="c-checkbox">
+		<xsl:choose>
+			<xsl:when test="$value = 'Y'">
+				X
+			</xsl:when>
+			<xsl:otherwise>
+				&#160;&#160;
+			</xsl:otherwise>
+		</xsl:choose>
+		</span>
 	</xsl:template>
 
 </xsl:stylesheet><!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.

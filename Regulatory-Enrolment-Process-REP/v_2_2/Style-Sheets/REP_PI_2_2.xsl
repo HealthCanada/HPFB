@@ -832,11 +832,12 @@
 																	<div class="col-md-12">
 																		<label style="float:left"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'SOURCED'"/></xsl:call-template>:&#160;
 																		<span style="font-weight:normal;" class="mouseHover">
-																		<xsl:element name="input"><xsl:attribute name="type">checkbox</xsl:attribute><xsl:if test=" ./human_sourced = 'Y'"><xsl:attribute name="checked"></xsl:attribute></xsl:if><xsl:attribute name="disabled">disabled</xsl:attribute><xsl:attribute name="style"></xsl:attribute></xsl:element>
+																		
+										<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="human_sourced"/></xsl:call-template>
 																		&#160;<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'HUMAN'"/></xsl:call-template>
 																		</span>&#160;&#160;&#160;
 																		<span style="font-weight:normal;" class="mouseHover">
-																			<xsl:element name="input"><xsl:attribute name="type">checkbox</xsl:attribute><xsl:if test=" ./animal_sourced = 'Y'"><xsl:attribute name="checked"></xsl:attribute></xsl:if><xsl:attribute name="disabled">disabled</xsl:attribute><xsl:attribute name="style"></xsl:attribute></xsl:element>
+										<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="animal_sourced"/></xsl:call-template>
 																			&#160;<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ANIMAL'"/></xsl:call-template>
 																		</span>
 																		</label>

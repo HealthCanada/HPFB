@@ -331,14 +331,7 @@
 						<xsl:if test="fee_details/deferral_request = 'Y'">
 						<div class="row">
 							<div class="col-xs-12">
-					            <xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/required_docs/deferral_statement = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+										<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/required_docs/deferral_statement"/></xsl:call-template>
 								<span style="display:block;float:left;width:95%;" class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'DEFER_STATEMENT'"/></xsl:call-template>
 								</span>
@@ -351,86 +344,43 @@
 								<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'NOTE_2'"/></xsl:call-template></label>
 							</div>
 							<div class="col-xs-12">
-					            <xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/required_docs/remission_certified = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/required_docs/remission_certified"/></xsl:call-template>
 								<span style="display:block;float:left;width:95%;" class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'STATEMENT_REVENUE'"/></xsl:call-template>
 								</span>
 							</div>
 							<div class="col-xs-12">
-					            <xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/required_docs/est_market_share = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">width:25px;</xsl:attribute>
-                                </xsl:element>
+								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/required_docs/est_market_share"/></xsl:call-template>
 								<span class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'EST_MARKET_SHARE'"/></xsl:call-template>
 								</span>
 							</div>
 							<div class="col-xs-12">
-					            <xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/required_docs/comparison_products = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">width:25px;</xsl:attribute>
-                                </xsl:element>
+								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/required_docs/comparison_products"/></xsl:call-template>
 								<span class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'SIMILAR_PRODUCT'"/></xsl:call-template>
 								</span>
 							</div>
 							<div class="col-xs-12">
-					            <xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/required_docs/sales_history = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">width:25px;</xsl:attribute>
-                                </xsl:element>
+								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/required_docs/sales_history"/></xsl:call-template>
 								<span class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'SALES_HISTORY'"/></xsl:call-template>
 								</span>
-					            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/required_docs/market_plan = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-                                </xsl:element>&#160;
+					            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/required_docs/market_plan"/></xsl:call-template>
+&#160;
 								<span class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'MARKETING_PLAN'"/></xsl:call-template>
 								</span>
 							</div>
 							<div class="col-xs-12">
-					            <xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/required_docs/avg_sale_price = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">width:25px;</xsl:attribute>
-                                </xsl:element>
+								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/required_docs/avg_sale_price"/></xsl:call-template>
 								<span class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'AVG_SALES'"/></xsl:call-template>
 								</span>
-					            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/required_docs/other = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-                                </xsl:element>&#160;
+					            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/required_docs/other"/></xsl:call-template>
+&#160;
 								<span class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'OTHER'"/></xsl:call-template>
 								</span>
@@ -477,85 +427,43 @@
 								<h4><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'PAYMENT_METHODS'"/></xsl:call-template></h4>
 							</div>
 							<div class="col-xs-12">
-					            <label><xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/payment_method/bill_payment = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+					            <strong>
+										<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/payment_method/bill_payment"/></xsl:call-template>
 								<span style="font-weight:normal;" class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'PREFEERED_OPTION'"/></xsl:call-template>
-								</span>&#160;&#160;</label>
-					            <label><xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/payment_method/existing_credit = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+								</span>&#160;&#160;</strong>
+					            <strong>
+										<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/payment_method/existing_credit"/></xsl:call-template>
 								<span style="font-weight:normal;" class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'EXISTING_CREDIT'"/></xsl:call-template>
-								</span>&#160;&#160;</label>
-					            <label><xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/payment_method/bank_wire = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+								</span>&#160;&#160;</strong>
+					            <strong>
+										<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/payment_method/bank_wire"/></xsl:call-template>
 								<span style="font-weight:normal;" class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'BANK_WIRE'"/></xsl:call-template>
-								</span></label>
+								</span></strong>
 							</div>
 							<div class="col-xs-12">
-					            <label><xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/payment_method/credit_card = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+					            <strong>
+										<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/payment_method/credit_card"/></xsl:call-template>
 								<span style="font-weight:normal;" class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CREDIT'"/></xsl:call-template>
-								</span>&#160;&#160;</label>
-					            <label><xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/payment_method/cheque = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+								</span>&#160;&#160;</strong>
+					            <strong>
+										<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/payment_method/cheque"/></xsl:call-template>
 								<span style="font-weight:normal;" class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CHEQUE'"/></xsl:call-template>
-								</span>&#160;&#160;</label>
-					            <label><xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/payment_method/money_order = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+								</span>&#160;&#160;</strong>
+					            <strong>
+										<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/payment_method/money_order"/></xsl:call-template>
 								<span style="font-weight:normal;" class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'MONEY_ORDER'"/></xsl:call-template>
-								</span>&#160;&#160;</label>
-					            <label><xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" fee_details/payment_method/bank_draft = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+								</span>&#160;&#160;</strong>
+					            <strong>
+										<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/payment_method/bank_draft"/></xsl:call-template>
 								<span style="font-weight:normal;" class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'BANK_DRAFT'"/></xsl:call-template>
-								</span></label>
+								</span></strong>
 							</div>
 							</xsl:if>
 						</div>
@@ -652,14 +560,8 @@
 					<div class="well well-sm" >
 						<div class="row">
 							<div class="col-xs-12">
-								<label><xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" confirm_regulatory_contact = 'Y'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+								<label>
+										<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="confirm_regulatory_contact"/></xsl:call-template>
 								<span class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONFIRM_REGULATORY'"/></xsl:call-template>
 								</span></label>
@@ -692,6 +594,19 @@
 			<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'UNKNOWN'"/></xsl:call-template>
 		</xsl:otherwise>
 		</xsl:choose>
+	</xsl:template>
+	<xsl:template name="hp-checkbox">
+		<xsl:param name="value" select="/.."/>
+		<span class="c-checkbox">
+		<xsl:choose>
+			<xsl:when test="$value = 'Y'">
+				X
+			</xsl:when>
+			<xsl:otherwise>
+				&#160;&#160;
+			</xsl:otherwise>
+		</xsl:choose>
+		</span>
 	</xsl:template>
 </xsl:transform><!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.
 
