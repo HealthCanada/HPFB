@@ -52,6 +52,7 @@
 		<eng>Veterinary</eng>
 		<fra>fr_Veterinary</fra>
 	</row>
+	<row><code>DM</code><eng>Drug and Medical Device</eng><fra>fr_Drug and Medical Device</fra></row>
 	<row>
 		<code>EnrolStatus</code>
 		<eng>Enrolment Status</eng>
@@ -468,6 +469,7 @@
 <row><code>CONTACT_MANUFACTURER</code><eng>Manufacturer / Sponsor Contact</eng><fra>fr_Manufacturer / Sponsor Contact</fra></row>
 <row><code>CONTACT_MAILING</code><eng>Regulatory Mailing / Annual Contact</eng><fra>fr_Regulatory Mailing / Annual Contact</fra></row>
 <row><code>CONTACT_BILLING</code><eng>Billing Contact</eng><fra>fr_Billing Contact</fra></row>
+<row><code>CONTACT_IMPORTER</code><eng>Importer Contact</eng><fra>fr_Importer Contact</fra></row>
 <row><code>REPPRIMARY</code><eng>Primary REP contact</eng><fra>fr_Primary REP contact</fra></row>
 <row><code>REPSECONDARY</code><eng>Alternate REP contact</eng><fra>fr_Alternate REP contact</fra></row>
 <row><code>CONTACT_BY</code><eng>Contact By</eng><fra>fr_Contact By</fra></row>

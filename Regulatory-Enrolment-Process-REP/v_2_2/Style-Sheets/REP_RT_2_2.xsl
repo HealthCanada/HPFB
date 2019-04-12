@@ -331,8 +331,8 @@
 						<xsl:if test="fee_details/deferral_request = 'Y'">
 						<div class="row">
 							<div class="col-xs-12">
-										<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/required_docs/deferral_statement"/></xsl:call-template>
-								<span style="display:block;float:left;width:95%;" class="mouseHover">
+								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/required_docs/deferral_statement"/></xsl:call-template>
+								<span class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'DEFER_STATEMENT'"/></xsl:call-template>
 								</span>
 							</div>
@@ -341,11 +341,11 @@
 						<xsl:if test="fee_details/fee_remission = 'Y' and fee_details/submission_class/fee &gt; fee_details/percent_gross">
 						<div class="row">
 							<div class="col-xs-12">
-								<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'NOTE_2'"/></xsl:call-template></label>
+								<strong><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'NOTE_2'"/></xsl:call-template></strong>
 							</div>
 							<div class="col-xs-12">
 								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="fee_details/required_docs/remission_certified"/></xsl:call-template>
-								<span style="display:block;float:left;width:95%;" class="mouseHover">
+								<span class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'STATEMENT_REVENUE'"/></xsl:call-template>
 								</span>
 							</div>
@@ -612,7 +612,7 @@
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="..\..\..\..\..\Downloads\hcreprt-2019-04-02-0924.xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\TRANSACTION.html" processortype="saxon8"
+		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="file:///e:/ip400Demo/hcreprt-2019-04-11-1105.xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\TRANSACTION.html" processortype="saxon8"
 		          useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath=""
 		          postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
 			<parameterValue name="cssFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_2_0/Style-Sheets/ip400.css'"/>
