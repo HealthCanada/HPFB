@@ -913,7 +913,7 @@
 <row><code>ADDITIONAL_FLD_CONTXT</code><eng>Additional field for context</eng><fra>fr_Additional field for context</fra></row>
 <row><code>DOSSIER_ENROL</code><eng>Dossier Template: Regulatory Enrolment Process (REP)</eng><fra>fr_Dossier Template: Regulatory Enrolment Process (REP)</fra></row>
 <row><code>CSP_TITLE</code><eng>Certificate of Supplementary Protection (CSP) Application Form</eng><fra>fr_Certificate of Supplementary Protection (CSP) Application Form</fra></row>
-<row><code>QMSC_NO</code><eng>Quality Management System Certificate Number</eng><fra>fr_Quality Management System Certificate Number</fra></row>
+<row><code>QMSC_NO</code><eng>QMSC #</eng><fra>fr_QMSC #</fra></row>
 <row><code>PLACE_OF_USE</code><eng>Place of use</eng><fra>fr_Place of use</fra></row>
 <row><code>DEVICE_HISTORY</code><eng>Device History</eng><fra>fr_Device History</fra></row>
 <row><code>DOSSIER_ID</code><eng>Dossier ID</eng><fra>fr_Dossier ID</fra></row>
