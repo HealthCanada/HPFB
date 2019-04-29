@@ -662,10 +662,10 @@
 <row><code>NERVOUS_SYSTEM</code><eng>Nervous System</eng><fra>fr_Nervous System</fra></row>
 <row><code>DIGESTIVE_SYSTEM</code><eng>Digestive</eng><fra>fr_Digestive</fra></row>
 <row><code>IMMUNE_SYSTEM</code><eng>Immune</eng><fra>fr_Immune</fra></row>
-<row><code>SKINGLAND_SYSTEM</code><eng>Skin and Glandular</eng><fra>fr_Skin and Glandular</fra></row>
+<row><code>SKIN_SYSTEM</code><eng>Skin and Glandular</eng><fra>fr_Skin and Glandular</fra></row>
 <row><code>MUSCULO_SYSTEM</code><eng>Musculo-Skeletal</eng><fra>fr_Musculo-Skeletal</fra></row>
-<row><code>OTHERTISSUE_SYSTEM</code><eng>Other Tissues or Fluids</eng><fra>fr_Other Tissues or Fluids</fra></row>
-<row><code>REPRODUCT_SYSTEM</code><eng>Reproductive</eng><fra>fr_Reproductive</fra></row>
+<row><code>OTHER_SYSTEM</code><eng>Other Tissues or Fluids</eng><fra>fr_Other Tissues or Fluids</fra></row>
+<row><code>REPRODUCTIVE_SYSTEM</code><eng>Reproductive</eng><fra>fr_Reproductive</fra></row>
 <row><code>CARDIO_SYSTEM</code><eng>Cardio-Respiratory</eng><fra>fr_Cardio-Respiratory</fra></row>
 <row><code>INGRED_MAT_NAME</code><eng>Ingredient or Material Name</eng><fra>fr_Ingredient or Material Name</fra></row>
 <row><code>AGEANIMALS</code><eng>Age of animals in months</eng><fra>fr_Age of animals in months</fra></row>
@@ -989,7 +989,7 @@
 <row><code>purpose_change</code><eng>Change to the purpose/indication of a device</eng><fra>fr_Change to the purpose/indication of a device</fra></row>
 <row><code>add_delete_change</code><eng>Addition/Deletion/Change</eng><fra>fr_Addition/Deletion/Change</fra></row>
 <row><code>TRANSACTION_INFO_TMPL</code><eng>Regulatory Transaction Template: Regulatory Enrolment Process (REP)</eng><fra>fr_Regulatory Transaction Template: Regulatory Enrolment Process (REP)</fra></row>
-<row><code>All_Licence_Number</code><eng>All Licence Number</eng><fra>fr_All Licence Number</fra></row>
+<row><code>All_Licence_Number</code><eng>All impacted licence number(s)</eng><fra>fr_All impacted licence number(s)</fra></row>
 <row><code>All_Dossier_ID</code><eng>All Dossier ID</eng><fra>fr_All Dossier ID</fra></row>
 <row><code>Company_Administrative_Changes</code><eng>Company Administrative Changes</eng><fra>fr_Company Administrative Changes</fra></row>
 <row><code>Is_there_change_name</code><eng>Is there a change to the regulatory correspondent's name and/or address</eng><fra>fr_Is there a change to the regulatory correspondent's name and/or address</fra></row>
@@ -1022,4 +1022,8 @@
 <row><code>PURPOSE</code><eng>Purpose</eng><fra>fr_Purpose</fra></row>
 <row><code>CLINICAL_TRIAL</code><eng>Clinical Trial</eng><fra>fr_Clinical Trial</fra></row>
 <row><code>has_drug</code><eng>Does  this device contain a drug</eng><fra>fr_Does  this device contain a drug</fra></row>
+<row><code>THIRD_PARTY_ENROL</code><eng>Is this enrolment completed by a third party</eng><fra>fr_Is this enrolment completed by a third party</fra></row>
+<row><code>COMPANY_ID_REP</code><eng>Company ID for REP Contact</eng><fra>fr_Company ID for REP Contact</fra></row>
+<row><code>CONTACT_ID_REP</code><eng>Contact ID for REP Contact</eng><fra>fr_Contact ID for REP Contact</fra></row>
+<row><code>REP_CONTACT_NAME</code><eng>REP Contact's Name</eng><fra>fr_REP Contact's Name</fra></row>
 </SimpleCodeList>
