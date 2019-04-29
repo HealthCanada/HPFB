@@ -924,8 +924,8 @@
 <row><code>ANY_RADIATION</code><eng>Do any of the devices contained in this application emit radiation?</eng><fra>fr_Do any of the devices contained in this application emit radiation?</fra></row>
 <row><code>CONTAIN_DRUG</code><eng>Does this device contain a drug?</eng><fra>fr_Does this device contain a drug?</fra></row>
 <row><code>DRUG_NUMBER_TYPE</code><eng>Does the drug have a Drug Identification Number (DIN) or the Natural Product Number (NPN)</eng><fra>fr_Does the drug have a Drug Identification Number (DIN) or the Natural Product Number (NPN)</fra></row>
-<row><code>DRUG_DIN</code><eng>DIN</eng><fra>fr_DIN</fra></row>
-<row><code>DRUG_NPN</code><eng>NPN</eng><fra>fr_NPN</fra></row>
+<row><code>DRUG_DIN</code><eng>Drug Identification Number (DIN)</eng><fra>fr_Drug Identification Number (DIN)</fra></row>
+<row><code>DRUG_NPN</code><eng>Natural Product Number (NPN)</eng><fra>fr_Natural Product Number (NPN)</fra></row>
 <row><code>DRUG_OTHER_INFO</code><eng>For combination products, please complete the information listed below with respect to the drug or drug substance. </eng><fra>fr_For combination products, please complete the information listed below with respect to the drug or drug substance. </fra></row>
 <row><code>DRUG_BRD_NAME</code><eng>Brand/Trade Name of Drug</eng><fra>fr_Brand/Trade Name of Drug</fra></row>
 <row><code>DRUG_ACT_INGREDIENT</code><eng>Active Ingredient(s)</eng><fra>fr_Active Ingredient(s)</fra></row>
