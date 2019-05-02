@@ -36,9 +36,9 @@
 				</TR>
 				<TR>
 					<TD style="text-align: center;"> <span  class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="/descendant-or-self::general_information/status" /></xsl:call-template></span> </TD>
-					<TD style="text-align: center;"> <span  class="mouseHover"><xsl:apply-templates select="/descendant-or-self::general_information/enrol_version" /></span> </TD>
-					<TD style="text-align: center;"> <span  class="mouseHover"><xsl:apply-templates select="/descendant-or-self::general_information/last_saved_date" /></span> </TD>
-					<TD style="text-align: center;"> <span  class="mouseHover"><xsl:apply-templates select="/descendant-or-self::general_information/company_id" /></span> </TD>
+					<TD style="text-align: center;"> <span  class="mouseHover"><xsl:value-of select="/descendant-or-self::general_information/enrol_version" /></span> </TD>
+					<TD style="text-align: center;"> <span  class="mouseHover"><xsl:value-of select="/descendant-or-self::general_information/last_saved_date" /></span> </TD>
+					<TD style="text-align: center;"> <span  class="mouseHover"><xsl:value-of select="substring(/descendant-or-self::general_information/company_id,2,6)" /></span> </TD>
 				</TR>
 			</TABLE>
 		</div>
@@ -49,68 +49,40 @@
 				</div>
 				
 				<div class="panel-body">
-					<xsl:if test="/descendant-or-self::general_information/status = 'AMEND'">
+					<xsl:if test="/descendant-or-self::general_information/amend_reasons != ''">
 					<section class="panel panel-default" >
 						<div class="panel-heading">
 							<h2 class="panel-title"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Reason_Amendment'"/></xsl:call-template></h2>
 						</div>
 						<div class="panel-body">
 							<div class="row">&#160;
-							<div class="col-xs-3">
-					            <xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" /descendant-or-self::general_information/amend_reasons/manufacturer_name_change = 'yes'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+							<div class="col-xs-5">
+								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="/descendant-or-self::general_information/amend_reasons/manufacturer_name_change"/></xsl:call-template>
 								<span class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Change_Name'"/></xsl:call-template>
 								</span>
 							</div>
-							<div class="col-xs-3">
-					            <xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" /descendant-or-self::general_information/amend_reasons/manufacturer_address_change = 'yes'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+							<div class="col-xs-5">
+								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="/descendant-or-self::general_information/amend_reasons/manufacturer_address_change"/></xsl:call-template>
 								<span class="mouseHover">
-									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Change_Name'"/></xsl:call-template>
+									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Change_Address'"/></xsl:call-template>
 								</span>
 							</div>
-							<div class="col-xs-3">
-					            <xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" /descendant-or-self::general_information/amend_reasons/facility_change = 'yes'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+							<div class="col-xs-5">
+								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="/descendant-or-self::general_information/amend_reasons/facility_change"/></xsl:call-template>
 								<span class="mouseHover">
-									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Change_Name'"/></xsl:call-template>
+									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Change_facility'"/></xsl:call-template>
 								</span>
 							</div>
-							<div class="col-xs-3">
-					            <xsl:element name="input">
-                                    <xsl:attribute name="type">checkbox</xsl:attribute>
-                                    <xsl:if test=" /descendant-or-self::general_information/amend_reasons/other_change = 'yes'">
-                                        <xsl:attribute name="checked"></xsl:attribute>
-                                    </xsl:if>
-                                    <xsl:attribute name="disabled">disabled</xsl:attribute>
-									<xsl:attribute name="style">float:left;width:25px;</xsl:attribute>
-                                </xsl:element>
+							<div class="col-xs-5">
+								<xsl:call-template name="hp-checkbox"><xsl:with-param name="value" select="/descendant-or-self::general_information/amend_reasons/other_change"/></xsl:call-template>
 								<span class="mouseHover">
 									<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'OTHER'"/></xsl:call-template>
 								</span>
 							</div>
 							</div>
-							<xsl:if test="/descendant-or-self::general_information/amend_reasons/other_details != ''">
-								<div class="row">&#160;
+							<xsl:if test="/descendant-or-self::general_information/amend_reasons/other_change = 'yes'">
+								<div class="col-xs-10">
 									<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'SYSTEM_OTHER'"></xsl:with-param></xsl:call-template>:&#160;</label>
 									<span class="mouseHover"><xsl:value-of select="/descendant-or-self::general_information/amend_reasons/other_details"/></span>
 								</div>
@@ -145,8 +117,8 @@
 									<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'PROVINCE'"></xsl:with-param></xsl:call-template>:&#160;</label>
 									<span class="mouseHover">
 										<xsl:choose>
-											<xsl:when test="(/descendant-or-self::address/country = 'CAN') or (/descendant-or-self::address/country = 'USA')">
-												<xsl:call-template name="hp-label"><xsl:with-param name="code" select="/descendant-or-self::address/prov_lov"/></xsl:call-template>
+											<xsl:when test="(/descendant-or-self::address/country/@id = 'CAN') or (/descendant-or-self::address/country/@id = 'USA')">
+												<xsl:value-of select="/descendant-or-self::address/prov_lov"/>
 											</xsl:when>
 											<xsl:otherwise>
 												<xsl:value-of select="/descendant-or-self::address/prov_text"/>
@@ -154,15 +126,15 @@
 										</xsl:choose>
 									</span>&#160;&#160;
 									<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'COUNTRY'"></xsl:with-param></xsl:call-template>:&#160;</label>
-									<span class="mouseHover">					
-										<xsl:choose>
+									<span class="mouseHover"><xsl:value-of select="/descendant-or-self::address/country"/>
+<!--										<xsl:choose>
 											<xsl:when test="$language = 'fra'">
 												<xsl:value-of select="/descendant-or-self::address/country/@label_fr"/>
 											</xsl:when>
 											<xsl:otherwise>
 												<xsl:value-of select="/descendant-or-self::address/country/@label_en"/>
 											</xsl:otherwise>
-										</xsl:choose>
+										</xsl:choose>-->
 									</span>
 								</div>
 								<div class="row">&#160;
@@ -181,30 +153,65 @@
 					</section>
 					<section class="panel panel-default" >
 						<div class="panel-heading">
-							<h2 class="panel-title"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Company_Administrative_Changes'"/><xsl:with-param name="language" select="$language"/></xsl:call-template></h2>
+							<h2 class="panel-title"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'REPPRIMARY'"/><xsl:with-param name="language" select="$language"/></xsl:call-template></h2>
 						</div>
 						<div class="panel-body">
 								<div class="row">&#160;
-									<div class="col-xs-5">
-										<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'All_Licence_Number'"></xsl:with-param></xsl:call-template>:&#160;</label>
-										<span class="mouseHover"><xsl:value-of select="/descendant-or-self::administrative_changes/all_licence_number"/></span>
-									</div>
-									<div class="col-xs-5">
-										<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'All_Dossier_ID'"></xsl:with-param></xsl:call-template>:&#160;</label>
-										<span class="mouseHover"><xsl:value-of select="/descendant-or-self::administrative_changes/all_dossier_id"/></span>
-									</div>
-								</div>
-								<div class="row">&#160;
 									<div class="col-xs-10">
-									<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Is_there_change_name'"></xsl:with-param></xsl:call-template>:&#160;</label>
-									<span class="mouseHover"><xsl:call-template name="YesNoUnknow"><xsl:with-param name="value" select="/descendant-or-self::administrative_changes/is_regulatory_change"/></xsl:call-template></span>
+										<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'THIRD_PARTY_ENROL'"></xsl:with-param></xsl:call-template>?&#160;</label>
+										<span class="mouseHover"><xsl:value-of select="/descendant-or-self::primary_contact/is_third_party"/></span>
+									</div>
+								<xsl:choose>
+								<xsl:when test="/descendant-or-self::primary_contact/is_third_party = 'yes'">
+									<div class="col-xs-5">
+										<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'COMPANY_ID_REP'"></xsl:with-param></xsl:call-template>?&#160;</label>
+										<span class="mouseHover"><xsl:value-of select="/descendant-or-self::primary_contact/rep_contact_company_id"/></span>
+									</div>
+									<div class="col-xs-5">
+										<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTACT_ID_REP'"></xsl:with-param></xsl:call-template>?&#160;</label>
+										<span class="mouseHover"><xsl:value-of select="/descendant-or-self::primary_contact/rep_contact_id"/></span>
+									</div>
+								</xsl:when>
+								<xsl:otherwise>
+									<div class="col-xs-10">
+										<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'REP_CONTACT_NAME'"></xsl:with-param></xsl:call-template>:&#160;</label>
+										<span class="mouseHover"><xsl:value-of select="/descendant-or-self::primary_contact/rep_contact_name"/></span>
+									</div>
+								</xsl:otherwise>
+								</xsl:choose>
+								</div>
+						</div>
+					</section>
+					<xsl:if test="/descendant-or-self::general_information/amend_reasons/manufacturer_name_change = 'yes' or /descendant-or-self::general_information/amend_reasons/manufacturer_address_change = 'yes' or /descendant-or-self::general_information/amend_reasons/facility_change = 'yes'">
+					<section class="panel panel-default" >
+						<div class="panel-heading">
+							<h2 class="panel-title"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Company_Administrative_Changes'"/><xsl:with-param name="language" select="$language"/></xsl:call-template></h2>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="alert alert-info">
+										<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE2'"/></xsl:call-template></span>
 									</div>
 								</div>
-								<xsl:if test="/descendant-or-self::administrative_changes/is_regulatory_change = 'yes'">
+							</div>
+							<div class="row">&#160;
+								<div class="col-xs-5">
+									<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'All_Licence_Number'"></xsl:with-param></xsl:call-template>:&#160;</label>
+									<span class="mouseHover"><xsl:value-of select="/descendant-or-self::administrative_changes/all_licence_numbers"/></span>
+								</div>
+							</div>
+							<div class="row">&#160;
+								<div class="col-xs-10">
+								<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Is_there_change_name'"></xsl:with-param></xsl:call-template>:&#160;</label>
+								<span class="mouseHover"><xsl:call-template name="YesNoUnknow"><xsl:with-param name="value" select="/descendant-or-self::administrative_changes/is_regulatory_change"/></xsl:call-template></span>
+								</div>
+							</div>
+							<xsl:if test="/descendant-or-self::administrative_changes/is_regulatory_change = 'yes'">
 								<div class="row">&#160;
 									<div class="col-sm-5">
 										<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'NEW'"/></xsl:call-template>&#160;<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'COMPANY_ID'"></xsl:with-param></xsl:call-template>:&#160;</label>
-										<span class="mouseHover"><xsl:value-of select="/descendant-or-self::administrative_changes/new_company_id"/></span>
+										<span class="mouseHover"><xsl:value-of select="substring(/descendant-or-self::administrative_changes/new_company_id, 2, 6)"/></span>
 									</div>
 									<div class="col-sm-5">
 										<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'NEW'"/></xsl:call-template>&#160;<xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTACT_ID'"></xsl:with-param></xsl:call-template>:&#160;</label>
@@ -217,10 +224,18 @@
 										<span class="mouseHover"><xsl:value-of select="/descendant-or-self::administrative_changes/new_contact_name"/></span>
 									</div>
 								</div>
-								</xsl:if>
-
+							</xsl:if>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="alert alert-info">
+										<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE1'"/></xsl:call-template></span>
+									</div>
+								</div>
+							</div>
 						</div>
 					</section>
+					</xsl:if>
+
 				</div>
 			</div>
 		</section>
@@ -234,7 +249,7 @@
 				<div class="row">&#160;
 					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'SALUTATION'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="concat('SALUT_', salutation)"/></xsl:call-template></span>&#160;&#160;
+					<span class="mouseHover"><xsl:value-of select="salutation"/></span>&#160;&#160;
 					</div>
 					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'CONTACT_ID'"/></xsl:call-template>:&#160;</label>
@@ -242,7 +257,7 @@
 					</div>
 					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'STATUS'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="status"/></xsl:call-template></span>
+					<span class="mouseHover"><xsl:value-of select="status"/></span>
 					</div>
 				</div>
 				<div class="row">&#160;
@@ -262,7 +277,7 @@
 				<div class="row">&#160;
 					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'LANGCORRESPOND'"/></xsl:call-template>:&#160;</label>
-					<span class="mouseHover"><xsl:call-template name="hp-label"><xsl:with-param name="code"><xsl:value-of select="translate(language, $uppercase, $smallcase)"/></xsl:with-param></xsl:call-template></span>&#160;&#160;
+					<span class="mouseHover"><xsl:value-of select="language"/></span>&#160;&#160;
 					</div>
 					<div class="col-sm-3">
 					<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'JOBTITLE'"/></xsl:call-template>:&#160;</label>
@@ -315,13 +330,26 @@
 		</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
+	<xsl:template name="hp-checkbox">
+		<xsl:param name="value" select="/.."/>
+		<span class="c-checkbox">
+		<xsl:choose>
+			<xsl:when test="$value = 'yes'">
+				X
+			</xsl:when>
+			<xsl:otherwise>
+				&#160;&#160;
+			</xsl:otherwise>
+		</xsl:choose>
+		</span>
+	</xsl:template>
 </xsl:stylesheet>
 
 					<!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="..\..\..\..\..\Downloads\hcrepcom-k12345-1-0 (3).xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\mds_company.html" processortype="saxon8"
+		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="..\..\..\..\..\Downloads\hcrepcom-k111111-2-0 (1).xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\mds_company.html" processortype="saxon8"
 		          useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath=""
 		          postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
 			<parameterValue name="cssFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_1_0/Style-Sheets/ip400.css'"/>
