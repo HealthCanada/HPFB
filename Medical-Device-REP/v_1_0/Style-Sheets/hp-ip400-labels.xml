@@ -943,7 +943,7 @@
 <row><code>COMPATIBLE_DEVICE</code><eng>Compatibility of interdependent devices</eng><fra>fr_Compatibility of interdependent devices</fra></row>
 <row><code>INTERDEPENDENT_DEVICE</code><eng>Interdependent Device</eng><fra>fr_Interdependent Device</fra></row>
 <row><code>COMPATIBLE_DEV_NM</code><eng>Name of Compatible Device</eng><fra>fr_Name of Compatible Device</fra></row>
-<row><code>DEVICE_LICENCE</code><eng>Licence number</eng><fra>fr_Licence number</fra></row>
+<row><code>DEVICE_LICENCE</code><eng>Licence number or application number</eng><fra>fr_Licence number or application number</fra></row>
 <row><code>LIST_MANUFACTURE_STANDARDS</code><eng>List of Recognized Standards Complied with in the manufacture of the Device</eng><fra>fr_List of Recognized Standards Complied with in the manufacture of the Device</fra></row>
 <row><code>DECLARATION_COMFORMITY</code><eng>Declaration of Conformity form (available on the Health Canada website) confirms that the medical device(s) comply with Recognized Standards or equivalent or better standards</eng><fra>fr_Declaration of Conformity form (available on the Health Canada website) confirms that the medical device(s) comply with Recognized Standards or equivalent or better standards</fra></row>
 <row><code>DECLARATION_COMFORMITY_NO</code><eng>Health Canada can not process your medical Device Licence Application without the "Declaration of Conformity"</eng><fra>fr_Health Canada can not process your medical Device Licence Application without the "Declaration of Conformity"</fra></row>
