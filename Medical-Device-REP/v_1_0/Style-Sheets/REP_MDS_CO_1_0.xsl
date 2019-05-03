@@ -190,19 +190,23 @@
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-xs-12">
-									<div class="alert alert-info">
 										<xsl:choose>
 										<xsl:when test="/descendant-or-self::general_information/amend_reasons/manufacturer_name_change = 'yes'">
-										<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE2'"/></xsl:call-template></span>
+											<div class="alert alert-info">
+												<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE2'"/></xsl:call-template></span>
+											</div>
 										</xsl:when>
 										<xsl:when test="/descendant-or-self::general_information/amend_reasons/manufacturer_address_change = 'yes'">
-										<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE3'"/></xsl:call-template></span>
+											<div class="alert alert-info">
+												<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE3'"/></xsl:call-template></span>
+											</div>
 										</xsl:when>
 										<xsl:when test="/descendant-or-self::general_information/amend_reasons/facility_change = 'yes'">
-										<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE4'"/></xsl:call-template></span>
+											<div class="alert alert-info">
+												<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE4'"/></xsl:call-template></span>
+											</div>
 										</xsl:when>
 										</xsl:choose>
-									</div>
 								</div>
 							</div>
 							<div class="row">&#160;
