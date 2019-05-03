@@ -191,7 +191,17 @@
 							<div class="row">
 								<div class="col-xs-12">
 									<div class="alert alert-info">
+										<xsl:choose>
+										<xsl:when test="/descendant-or-self::general_information/amend_reasons/manufacturer_name_change = 'yes'">
 										<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE2'"/></xsl:call-template></span>
+										</xsl:when>
+										<xsl:when test="/descendant-or-self::general_information/amend_reasons/manufacturer_address_change = 'yes'">
+										<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE3'"/></xsl:call-template></span>
+										</xsl:when>
+										<xsl:when test="/descendant-or-self::general_information/amend_reasons/facility_change = 'yes'">
+										<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE4'"/></xsl:call-template></span>
+										</xsl:when>
+										</xsl:choose>
 									</div>
 								</div>
 							</div>
@@ -349,11 +359,11 @@
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="..\..\..\..\..\Downloads\hcrepcom-k111111-2-0 (1).xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\mds_company.html" processortype="saxon8"
+		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="..\..\..\..\..\Downloads\draftrepcom-0-1 (7).xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\mds_company.html" processortype="saxon8"
 		          useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath=""
 		          postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
-			<parameterValue name="cssFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_1_0/Style-Sheets/ip400.css'"/>
-			<parameterValue name="labelFile" value="'file:///C:/Users/hcuser/git/XSLT/Regulatory-Enrolment-Process-REP/v_1_0/Style-Sheets/hp-ip400-labels.xml'"/>
+			<parameterValue name="cssFile" value="'file:///C:\Users\hcuser\git\XSLT\Medical-Device-REP\v_1_0\Style-Sheets/ip400.css'"/>
+			<parameterValue name="labelFile" value="'file:///C:\Users\hcuser\git\XSLT\Medical-Device-REP\v_1_0\Style-Sheets/hp-ip400-labels.xml'"/>
 			<advancedProp name="sInitialMode" value=""/>
 			<advancedProp name="schemaCache" value="||"/>
 			<advancedProp name="bXsltOneIsOkay" value="true"/>
