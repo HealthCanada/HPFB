@@ -454,6 +454,8 @@
 <row><code>LIFECYCLE_TITLE</code><eng>Transaction Details</eng><fra>fr_Transaction Details</fra></row>
 <row><code>COMPANY_TEMPLATE</code><eng>Company Template: Regulatory Enrolment Process (REP)</eng><fra>FR_Company Template: Regulatory Enrolment Process (REP)</fra></row>
 <row><code>REG_COMPANY_ENROL</code><eng>Regulatory Company Enrolment</eng><fra>fr_Regulatory Company Enrolment</fra></row>
+<row><code>REG_COMPANY_ID</code><eng>Regulatory Company ID</eng><fra>fr_Regulatory Company ID</fra></row>
+<row><code>REG_CONTACT_ID</code><eng>Regulatory Contact ID</eng><fra>fr_Regulatory Contact ID</fra></row>
 <row><code>APPL_STATUS</code><eng>Enrolment Status</eng><fra>fr_Enrolment Status</fra></row>
 <row><code>ENROL_VERSION</code><eng>Enrolment Version</eng><fra>fr_Enrolment Version</fra></row>
 <row><code>DATE_SAVED</code><eng>Date Last Saved</eng><fra>fr_Date Last Saved</fra></row>
@@ -968,6 +970,7 @@
 <row><code>Activity_Lead</code><eng>Activity Lead</eng><fra>fr_Activity Lead</fra></row>
 <row><code>Reg_Activity_Type</code><eng>Regulatory Activity Type</eng><fra>fr_Regulatory Activity Type</fra></row>
 <row><code>Transaction_Desc</code><eng>Transaction Description</eng><fra>fr_Transaction Description</fra></row>
+<row><code>Concat_Transaction_Desc</code><eng>Concat Transaction Description</eng><fra>fr_Concat Transaction Description</fra></row>
 <row><code>Date_of_Request</code><eng>Date of Request</eng><fra>fr_Date of Request</fra></row>
 <row><code>Device_details_table</code><eng>Device details table included</eng><fra>fr_Device details table included</fra></row>
 <row><code>App_Info_XML_Include</code><eng>Application information XML included in transaction</eng><fra>fr_Application information XML included in transaction</fra></row>
@@ -1030,4 +1033,8 @@
 <row><code>ADMIN_CHANGE_NOTE2</code><eng>The revised manufacturer's name should be listed in the "company name" field in address information section above</eng><fra>fr_???????</fra></row>
 <row><code>ADMIN_CHANGE_NOTE3</code><eng>The revised manufacturer's address should be listed in the fields in address information section above</eng><fra>fr_???????</fra></row>
 <row><code>ADMIN_CHANGE_NOTE4</code><eng>Please include a signed attestation for manufacturing facility name/address change</eng><fra>fr_???????</fra></row>
+<row><code>NEW_REVISED_FEES</code><eng>Are new fees or revised fees associated with this transactions</eng><fra>fr_Are new fees or revised fees associated with this transactions</fra></row>
+<row><code>BILLING_COMPANY_ID</code><eng>Billing company ID</eng><fra>fr_Billing company ID</fra></row>
+<row><code>BILLING_CONTACT_ID</code><eng>Billing contact ID</eng><fra>fr_Billing contact ID</fra></row>
+<row><code>COMPLETED_FEE_REQUIRED</code><eng>A completed fee form is still required, however, the applicable fees will be invoiced.</eng><fra>fr_A completed fee form is still required, however, the applicable fees will be invoiced.</fra></row>
 </SimpleCodeList>
