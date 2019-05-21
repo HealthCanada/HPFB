@@ -122,7 +122,7 @@
 											<span class="mouseHover"><xsl:value-of select="/descendant-or-self::application_info/device_name"/></span>
 										</div>
 									</xsl:if>
-									<xsl:if test="/descendant-or-self::application_info/request_date != ''">
+									<xsl:if test="/descendant-or-self::application_info/description_type/@id = 'MM'">
 										<div class="col-xs-6">
 											<strong><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'MEETING_ID'"></xsl:with-param></xsl:call-template>:&#160;</strong>
 											<span class="mouseHover"><xsl:value-of select="/descendant-or-self::application_info/meeting_id"/></span>
