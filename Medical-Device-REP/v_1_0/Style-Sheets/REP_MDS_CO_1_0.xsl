@@ -188,31 +188,32 @@
 							<h2 class="panel-title"><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'Company_Administrative_Changes'"/><xsl:with-param name="language" select="$language"/></xsl:call-template></h2>
 						</div>
 						<div class="panel-body">
+							<xsl:if test="/descendant-or-self::general_information/amend_reasons/manufacturer_name_change = 'yes' or /descendant-or-self::general_information/amend_reasons/manufacturer_address_change = 'yes' or /descendant-or-self::general_information/amend_reasons/facility_change = 'yes'">
 							<div class="row">
 								<div class="col-xs-12">
+									<div class="alert alert-info">
 										<xsl:choose>
 										<xsl:when test="/descendant-or-self::general_information/amend_reasons/manufacturer_name_change = 'yes'">
-											<div class="alert alert-info">
-												<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE2'"/></xsl:call-template></span>
-											</div>
+										<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE2'"/></xsl:call-template></span>
 										</xsl:when>
 										<xsl:when test="/descendant-or-self::general_information/amend_reasons/manufacturer_address_change = 'yes'">
-											<div class="alert alert-info">
-												<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE3'"/></xsl:call-template></span>
-											</div>
+										<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE3'"/></xsl:call-template></span>
 										</xsl:when>
 										<xsl:when test="/descendant-or-self::general_information/amend_reasons/facility_change = 'yes'">
-											<div class="alert alert-info">
-												<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE4'"/></xsl:call-template></span>
-											</div>
+										<span><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'ADMIN_CHANGE_NOTE4'"/></xsl:call-template></span>
 										</xsl:when>
 										</xsl:choose>
+									</div>
 								</div>
 							</div>
+							</xsl:if>
 							<div class="row">&#160;
-								<div class="col-xs-5">
+								<div class="col-xs-12">
 									<label><xsl:call-template name="hp-label"><xsl:with-param name="code" select="'All_Licence_Number'"></xsl:with-param></xsl:call-template>:&#160;</label>
-									<span class="mouseHover"><xsl:value-of select="/descendant-or-self::administrative_changes/all_licence_numbers"/></span>
+								</div>
+								<div class="col-xs-1">&#160;</div>
+								<div class="col-xs-10">
+									<xsl:call-template name="break"><xsl:with-param name="text" select="/descendant-or-self::administrative_changes/all_licence_numbers"/></xsl:call-template>
 								</div>
 							</div>
 							<div class="row">&#160;
@@ -357,13 +358,31 @@
 		</xsl:choose>
 		</span>
 	</xsl:template>
+	<xsl:template name="break">
+	  <xsl:param name="text" select="string(.)"/>
+	  <xsl:choose>
+	    <xsl:when test="contains($text, '&#xa;')">
+	      <span class="mouseHover"><xsl:value-of select="substring-before($text, '&#xa;')"/></span>
+	      <br/>
+	      <xsl:call-template name="break">
+	        <xsl:with-param 
+	          name="text" 
+	          select="substring-after($text, '&#xa;')"
+	        />
+	      </xsl:call-template>
+	    </xsl:when>
+	    <xsl:otherwise>
+	      <span class="mouseHover"><xsl:value-of select="$text"/></span>
+	    </xsl:otherwise>
+	  </xsl:choose>
+	</xsl:template>
 </xsl:stylesheet>
 
 					<!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="..\..\..\..\..\Downloads\draftrepcom-0-1 (7).xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\mds_company.html" processortype="saxon8"
+		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="yes" url="..\..\..\..\..\Downloads\draftrepcom-0-2 (8).xml" htmlbaseurl="" outputurl="..\..\..\..\..\..\..\SPM\test\mds_company.html" processortype="saxon8"
 		          useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath=""
 		          postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
 			<parameterValue name="cssFile" value="'file:///C:\Users\hcuser\git\XSLT\Medical-Device-REP\v_1_0\Style-Sheets/ip400.css'"/>
