@@ -1,1 +1,1 @@
-HPFB’s Structured Product Labeling (SPL) Style Sheets will be directly hosted or linked to from this structure.
+HPFBâ€™s XML Product Monograph Style Sheets will be hosted in this structure.
