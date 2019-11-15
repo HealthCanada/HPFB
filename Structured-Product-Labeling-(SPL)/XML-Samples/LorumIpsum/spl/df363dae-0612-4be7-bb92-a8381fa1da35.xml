@@ -71,7 +71,7 @@
           <subject>
             <manufacturedProduct>
               <manufacturedProduct>
-                <code code="123456" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                <code code="12345678" codeSystem="2.16.840.1.113883.2.20.6.42"/>
                 <!-- DIN Number -->
                 <name>LORUM IPSUM TABLETS</name>
                 <formCode code="85" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="TABLET"/>
@@ -227,7 +227,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
-                  <value code="2" codeSystem="2.16.840.1.113883.2.20.6.53"
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53"
                     displayName="PHARMACEUTICAL" xsi:type="CV">
                     <originalText>PHARMACEUTICAL</originalText>
                   </value>
@@ -258,7 +258,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="5" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCORE"/>
-                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.4" displayName="NO SCORE"
+                  <value code="0" codeSystem="2.16.840.1.113883.2.20.6.4" displayName="NO SCORE"
                     xsi:type="CV"> </value>
                 </characteristic>
               </subjectOf>
@@ -294,7 +294,7 @@
                 <characteristic>
                   <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
                     displayName="THERAPEUTIC CLASS"/>
-                  <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="ANALGESIC"
+                  <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="THYROID AGENTS"
                     xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
@@ -308,7 +308,7 @@
           <subject>
             <manufacturedProduct>
               <manufacturedProduct>
-                <code code="456123" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                <code code="45612322" codeSystem="2.16.840.1.113883.2.20.6.42"/>
                 <!-- DIN Number -->
                 <name>LORUM IPSUM CAPSULE</name>
                 <formCode code="5" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="CAPSULE"/>
@@ -438,7 +438,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
-                  <value code="2" codeSystem="2.16.840.1.113883.2.20.6.53"
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53"
                     displayName="PHARMACEUTICAL" xsi:type="CV">
                     <originalText>PHARMACEUTICAL</originalText>
                   </value>
@@ -514,7 +514,7 @@
                 <characteristic>
                   <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
                     displayName="THERAPEUTIC CLASS"/>
-                  <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="ANALGESIC"
+                  <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="THYROID AGENTS"
                     xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
@@ -528,10 +528,10 @@
           <subject>
             <manufacturedProduct>
               <manufacturedProduct>
-                <code code="654321" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                <code code="65432551" codeSystem="2.16.840.1.113883.2.20.6.42"/>
                 <!-- DIN Number -->
                 <name>LORUM IPSUM POWDER</name>
-                <formCode code="126" codeSystem="2.16.840.1.113883.2.20.6.3"
+                <formCode code="56" codeSystem="2.16.840.1.113883.2.20.6.3"
                   displayName="POWDER FOR SOLUTION"/>
                 <asEntityWithGeneric>
                   <genericMedicine>
@@ -601,7 +601,7 @@
                     <code/>
                     <!--company defined pack code-->
                     <formCode code="55" codeSystem="2.16.840.1.113883.2.20.6.32"
-                      displayName="VIAL,GLASS"/>
+                      displayName="VIAL, GLASS"/>
                     <asContent>
                       <quantity>
                         <numerator value="2" unit="1"/>
@@ -610,7 +610,7 @@
                       <containerPackagedProduct>
                         <code/>
                         <!--company defined pack code-->
-                        <formCode code="55" codeSystem="2.16.840.1.113883.2.20.6.32"
+                        <formCode code="50" codeSystem="2.16.840.1.113883.2.20.6.32"
                           displayName="TRAY"/>
                         <asContent>
                           <quantity>
@@ -620,7 +620,7 @@
                           <containerPackagedProduct>
                             <code code="1212" codeSystem="2.16.840.1.113883.2.20.6.56"/>
                             <!--company defined pack code-->
-                            <formCode code="55" codeSystem="2.16.840.1.113883.2.20.6.32"
+                            <formCode code="19" codeSystem="2.16.840.1.113883.2.20.6.32"
                               displayName="CARTON"/>
                           </containerPackagedProduct>
                           <subjectOf>
@@ -688,7 +688,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23"
-                    displayName="Pharmaceutical Standard"/>
+                    displayName="PHARMACEUTICAL STANDARD"/>
                   <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP"
                     xsi:type="CV"/>
                 </characteristic>
@@ -705,7 +705,7 @@
                   <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
                     displayName="THERAPEUTIC CLASS"/>
                   <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6"
-                    displayName="ANALGESIC" xsi:type="CV"/>
+                    displayName="THYROID AGENTS" xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
               <consumedIn>
@@ -719,7 +719,7 @@
           <subject>
             <manufacturedProduct>
               <manufacturedProduct>
-                <code code="613254" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                <code code="61325884" codeSystem="2.16.840.1.113883.2.20.6.42"/>
                 <!-- DIN Number -->
                 <name>LORUM IPSUM KIT</name>
                 <formCode code="32" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="KIT"/>
@@ -749,7 +749,7 @@
                     <!-- DIN Number -->
                     <name>LORUM IPSUM KIT POWDER</name>
                     <formCode code="56" codeSystem="2.16.840.1.113883.2.20.6.3"
-                      displayName="Powder For Solution"/>
+                      displayName="POWDER FOR SOLUTION"/>
                     <asEntityWithGeneric>
                       <genericMedicine>
                         <name>acetaminophen</name>
@@ -858,7 +858,7 @@
                   <subjectOf>
                     <characteristic>
                       <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23"
-                        displayName="Pharmaceutical Standard"/>
+                        displayName="PHARMACEUTICAL STANDARD"/>
                       <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP"
                         xsi:type="CV"/>
                     </characteristic>
@@ -875,7 +875,7 @@
                       <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
                         displayName="THERAPEUTIC CLASS"/>
                       <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6"
-                        displayName="ANALGESIC" xsi:type="CV"/>
+                        displayName="THYROID AGENTS" xsi:type="CV"/>
                     </characteristic>
                   </subjectOf>
                   <consumedIn>
@@ -972,7 +972,7 @@
                   <subjectOf>
                     <characteristic>
                       <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
-                      <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="CLEAR"
+                      <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="WHITE"
                         xsi:type="CV">
                         <originalText>Colourless to off white</originalText>
                       </value>
@@ -983,7 +983,7 @@
                       <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23"
                         displayName="PHARMACEUTICAL STANDARD"/>
                       <value code="4" codeSystem="2.16.840.1.113883.2.20.6.5"
-                        displayName="MANUFACTURER" xsi:type="CV"/>
+                        displayName="MFR" xsi:type="CV"/>
                     </characteristic>
                   </subjectOf>
                   <subjectOf>
@@ -999,7 +999,7 @@
                       <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
                         displayName="THERAPEUTIC CLASS"/>
                       <value code="43385" codeSystem="2.16.840.1.113883.2.20.6.6"
-                        displayName="ANALGESIC" xsi:type="CV"/>
+                        displayName="BLOOD DERIVATIVES" xsi:type="CV"/>
                     </characteristic>
                   </subjectOf>
                   <consumedIn>
@@ -1151,7 +1151,7 @@
               <effectiveTime value="20180101"/>
               <component>
                 <section ID="f2aa7e0e-2042-4a4c-a783-9ad4e8717a32">
-                  <id root="b9db4be0-3f46-434a-bd7b-4a3e010adaad"/>
+                  <id root="b9db4ce0-3f46-434a-bd7b-4a3e010adaad"/>
                   <code code="60010" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="1.1 PEDIATRICS"/>
                   <title>1.1 Pediatrics</title>
@@ -1619,7 +1619,7 @@
               </component>
               <component>
                 <section ID="da324c26-b939-4d3a-901e-516ccc314522">
-                  <id root="cc0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
+                  <id root="cc0d2dd9-1c53-49dc-bad3-d6b420dc64e9"/>
                   <code code="60045" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="10.2 PHARMACODYNAMICS"/>
                   <title>10.2 Pharmacodynamics</title>
@@ -1631,7 +1631,7 @@
               </component>
               <component>
                 <section ID="aaa324c26-b939-4d4a-901e-516ccc314522">
-                  <id root="cc0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
+                  <id root="cc0d2dd9-1c53-49dc-bad3-d6b320d064e9"/>
                   <code code="60046" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="10.3 PHARMACOKINETICS"/>
                   <title>10.3 Pharmacokinetics</title>
@@ -1645,7 +1645,7 @@
           </component>
           <component>
             <section ID="da324d26-c939-443a-901e-526dcc314522">
-              <id root="cc0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
+              <id root="cc0d2dd9-1c53-49dc-bad3-d6b420d069e9"/>
               <code code="60047" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="11 STORAGE, STABILITY AND DISPOSAL"/>
               <title>11 Storage, Stability and Disposal</title>
@@ -1794,7 +1794,7 @@
               </component>
               <component>
                 <section ID="df2875272-8229-4c12-919e-827954ddd78a">
-                  <id root="c134d52c-f9d4-4698-a082-84b29ee3d95a"/>
+                  <id root="c134d52c-f9d4-4698-a012-84b29ee3d95a"/>
                   <code code="60054" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="14.3 COMPARATIVE BIOAVAILABILITY STUDIES"/>
                   <title>14.3 Comparative Bioavailability Studies</title>
@@ -1808,7 +1808,7 @@
           </component>
           <component>
             <section ID="a2875272-8229-4c12-a19e-827954ddd78a">
-              <id root="e134d52c-f9d4-4698-a082-84b29ee3d95a"/>
+              <id root="e134d52c-f1d4-4698-a082-84b29ee3d95a"/>
               <code code="60055" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="15 MICROBIOLOGY"/>
               <title>15 Microbiology</title>
@@ -1820,7 +1820,7 @@
           </component>
           <component>
             <section ID="a42a7572-8229-4c12-a19e-827954ddd78a">
-              <id root="c134d52c-f9d4-4698-a082-84b29ee3d95a"/>
+              <id root="c134d52c-f9d4-4698-a082-84b29ee3a95a"/>
               <code code="60056" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="16 NON-CLINICAL TOXICOLOGY"/>
               <title>16 Non-clinical Toxicology</title>
