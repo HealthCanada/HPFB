@@ -1323,7 +1323,7 @@
                 displayName="DATE OF INITIAL APPROVAL"/>
               <title>DATE OF INITIAL APPROVAL</title>
               <text>
-                <paragraph>20170101</paragraph>
+                <paragraph>December 20, 2019</paragraph>
               </text>
               <effectiveTime value="20180101"/>
             </section>
@@ -1335,7 +1335,7 @@
                 displayName="DATE OF REVISION"/>
               <title>DATE OF REVISION</title>
               <text>
-                <paragraph>20180101</paragraph>
+                <paragraph>December 20, 2019</paragraph>
               </text>
               <effectiveTime value="20180101"/>
             </section>
@@ -2157,8 +2157,8 @@
             <section ID="bca4d498-0gc3-4e54-bcb6-550130d4de5d">
               <id root="be74b6e6-c431-4a5f-a18e-ed3a1b381456"/>
               <code code="60064" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:"/>
-              <title>MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:</title>
+                displayName="THIS MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:"/>
+              <title>THIS MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:</title>
               <text>
                 <paragraph> sample text </paragraph>
               </text>
@@ -2274,8 +2274,8 @@
             <section ID="cb61f530-b95a-4047-b8ea-861c5a7a05e8">
               <id root="be74b6e6-c431-4a5f-a98e-ed321b381456"/>
               <code code="60074" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="WHAT ARE POSSIBLE SIDE EFFECTS FROM USING MEDICATION?"/>
-              <title>WHAT ARE POSSIBLE SIDE EFFECTS FROM USING MEDICATION?</title>
+                displayName="WHAT ARE POSSIBLE SIDE EFFECTS FROM USING THIS MEDICATION?"/>
+              <title>WHAT ARE POSSIBLE SIDE EFFECTS FROM USING THIS MEDICATION?</title>
               <text>
                 <paragraph> sample text </paragraph>
               </text>
@@ -2390,8 +2390,8 @@
             <section ID="A7">
               <id root="d84638a1-c308-4362-be57-4cfed13e7469"/>
               <code code="60064" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:"/>
-              <title>MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:</title>
+                displayName="THIS MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:"/>
+              <title>THIS MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:</title>
               <text>
                 <paragraph> sample text </paragraph>
               </text>
@@ -2507,8 +2507,8 @@
             <section ID="A17">
               <id root="ccddbbaa-1de4-44f8-b283-a736a0ad2ee0"/>
               <code code="60074" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="WHAT ARE POSSIBLE SIDE EFFECTS FROM USING MEDICATION?"/>
-              <title>WHAT ARE POSSIBLE SIDE EFFECTS FROM USING MEDICATION?</title>
+                displayName="WHAT ARE POSSIBLE SIDE EFFECTS FROM USING THIS MEDICATION?"/>
+              <title>WHAT ARE POSSIBLE SIDE EFFECTS FROM USING THIS MEDICATION?</title>
               <text>
                 <paragraph> sample text </paragraph>
               </text>
