@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SimpleCodeList [
+<!ELEMENT SimpleCodeList (row)+>
+<!ATTLIST SimpleCodeList 
+	xmlns CDATA #FIXED "">
+<!ELEMENT row (code,eng,fra)>
+<!ATTLIST row 
+	xmlns CDATA #FIXED "">
+<!ELEMENT code (#PCDATA)>
+<!ATTLIST code 
+	xmlns CDATA #FIXED "">
+<!ELEMENT eng (#PCDATA)>
+<!ATTLIST eng 
+	xmlns CDATA #FIXED "">
+<!ELEMENT fra (#PCDATA)>
+<!ATTLIST fra 
+	xmlns CDATA #FIXED "">
+]>
+<SimpleCodeList>
+	<row>
+		<code>RegEnrolProcess</code>
+		<eng>Regulatory Enrolment Process</eng>
+		<fra>fr_Regulatory Enrolment Process</fra>
+	</row>
+	<row>
+		<code>DossierInfo</code>
+		<eng>Dossier Information</eng>
+		<fra>fr_Dossier Information</fra>
+	</row>
+	<row>
+		<code>HUMAN</code>
+		<eng>Human</eng>
+		<fra>fr_Human</fra>
+	</row>
+	<row>
+		<code>RADIO</code>
+		<eng>Radiopharmaceutical</eng>
+		<fra>fr_Radiopharmaceutical</fra>
+	</row>
+	<row>
+		<code>DISINFECT</code>
+		<eng>Disinfectant</eng>
+		<fra>fr_Disinfectant</fra>
+	</row>
+	<row>
+		<code>VET</code>
+		<eng>Veterinary</eng>
+		<fra>fr_Veterinary</fra>
+	</row>
+	<row>
+		<code>VETERINARY</code>
+		<eng>Veterinary</eng>
+		<fra>fr_Veterinary</fra>
+	</row>
+	<row><code>DM</code><eng>Drug and Medical Device</eng><fra>fr_Drug and Medical Device</fra></row>
+	<row>
+		<code>EnrolStatus</code>
+		<eng>Enrolment Status</eng>
+		<fra>fr_Enrolment Status</fra>
+	</row>
+	<row>
+		<code>EnrolVersion</code>
+		<eng>Enrolment Version</eng>
+		<fra>fr_Enrolment Version</fra>
+	</row>
+	<row>
+		<code>DateLastSaved</code>
+		<eng>Date Last Saved</eng>
+		<fra>fr_Date Last Saved</fra>
+	</row>
+	<row>
+		<code>DossierID</code>
+		<eng>Dossier ID</eng>
+		<fra>fr_Dossier ID</fra>
+	</row>
+	<row>
+		<code>A_DossierType</code>
+		<eng>Dossier Type</eng>
+		<fra>fr_Dossier Type</fra>
+	</row>
+	<row>
+		<code>B_CompanyID</code>
+		<eng>Company ID</eng>
+		<fra>fr_Company ID</fra>
+	</row>
+	<row>
+		<code>C_SubmissionSignThird</code>
+		<eng>C. The submission will be signed or filed by a third party on
+				behalf of the manufacturer or sponsor</eng>
+		<fra>fr_C. The submission will be signed or filed by a third party on
+				behalf of the manufacturer or sponsor</fra>
+	</row>
+	<row>
+		<code>Yes</code>
+		<eng>Yes</eng>
+		<fra>fr_Yes</fra>
+	</row>
+	<row>
+		<code>No</code>
+		<eng>No</eng>
+		<fra>fr_No</fra>
+	</row>
+	<row>
+		<code>D_ProductName</code>
+		<eng>Product Name</eng>
+		<fra>fr_Product Name</fra>
+	</row>
+	<row>
+		<code>E_ProperCommonNonProrietaryName</code>
+		<eng>Proper, Common or Non-Proprietary Name</eng>
+		<fra>fr_Proper, Common or Non-Proprietary Name</fra>
+	</row>
+	<row>
+		<code>DrugUse</code>
+		<eng>Drug Use</eng>
+		<fra>fr_Drug Use</fra>
+	</row>
+	<row>
+		<code>G_RelatedInfo</code>
+		<eng>Related Information</eng>
+		<fra>fr_Related Information</fra>
+	</row>
+	<row>
+		<code>H_Therapeutic</code>
+		<eng>Therapeutic Classifications</eng>
+		<fra>fr_Therapeutic Classifications</fra>
+	</row>
+	<row>
+		<code>I_IsCaRefProduct</code>
+		<eng>Is there a Canadian Reference Product or Canadian Reference Biologic Drug for Biosimilars?</eng>
+		<fra>fr_Is there a Canadian Reference Product or Canadian Reference Biologic Drug for Biosimilars?</fra>
+	</row>
+	<row>
+		<code>CaRefProduct</code>
+		<eng>Canadian Reference Product</eng>
+		<fra>fr_Canadian Reference Product</fra>
+	</row>
+	<row>
+		<code>I_BrandName</code>
+		<eng>Brand Name</eng>
+		<fra>fr_Brand Name</fra>
+	</row>
+	<row>
+		<code>I_CompanyName</code>
+		<eng>Company Name (Full legal Name - no abbreviations)</eng>
+		<fra>fr_Company Name (Full legal Name - no abbreviations)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-001</code>
+		<eng>ANDS (Abbreviated New Drug Submission)</eng>
+		<fra>ANDS (Présentation abrégée de drogue nouvelle)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-031</code>
+		<eng>EU NDS (Extraordinary Use New Drug Submission)</eng>
+		<fra>EU NDS (Présentation de drogue nouvelle pour usage exceptionnel)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-032</code>
+		<eng>EUSNDS (Extraordinary Use Supplement to a New Drug Submission)</eng>
+		<fra>EUSNDS (Supplément à une présentation de drogue nouvelle pour usage exceptionnel)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-038</code>
+		<eng>Level 3 – Notice of Change</eng>
+		<fra>fr_Level 3 – Notice of Change</fra>
+	</row>
+	<row>
+		<code>B02-20160301-046</code>
+		<eng>MPNC (Pre-NC Meeting)</eng>
+		<fra>MPNC (Réunion préalable - PM)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-047</code>
+		<eng>MPNDS (Pre-NDS Meeting)</eng>
+		<fra>MPNDS (Réunion préalable – PDN)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-049</code>
+		<eng>MPSNDS (Pre-SNDS Meeting)</eng>
+		<fra>MPSNDS (Réunion préalable – RPPDN)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-050</code>
+		<eng>NC (Notifiable Change)</eng>
+		<fra>NC (Préavis de modification)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-051</code>
+		<eng>NDS (New Drug Submission)</eng>
+		<fra>NDS (Présentation de drogue nouvelle)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-067</code>
+		<eng>PAND (Pandemic Application)</eng>
+		<fra>PAND (Demande pandémique)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-068</code>
+		<eng>PBRER-C(Periodic Benefit Risk Evaluation Report - Confirmatory)</eng>
+		<fra>PBRER-C</fra>
+	</row>
+	<row>
+		<code>B02-20160301-069</code>
+		<eng>PBRER-PV (Periodic Benefit Risk Evaluation Report - Post-market Vigilance)</eng>
+		<fra>PBRER-PV</fra>
+	</row>
+	<row>
+		<code>B02-20160301-075</code>
+		<eng>PRNDS (Priority Request NDS)</eng>
+		<fra>FR_PRNDS (Priority Request NDS)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-077</code>
+		<eng>PRSNDS (Priority Request SNDS)</eng>
+		<fra>PRNDS (Demande de statut d'’évaluation prioritaire - PDN)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-078</code>
+		<eng>PSUR-C (Periodic Safety Update Report - Conditional)</eng>
+		<fra>PSUR-C (Rapport périodique de pharmacovigilance - Confirmation)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-079</code>
+		<eng>PSUR-PV (Periodic Safety Update Report - Pharmacovigilance)</eng>
+		<fra>PSUR-PV (Rapport périodique de pharmacovigilance - pharmacovigilance)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-080</code>
+		<eng>RMP-PV (Risk Management Plan - Pharmacovigilance)</eng>
+		<fra>RMP-PV (Plan de gestion des risques - Pharmacovigilance)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-082</code>
+		<eng>SANDS (Supplement to an Abbreviated New Drug Submission)</eng>
+		<fra>SANDS (Supplément à une présentation abrégée de drogue nouvelle)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-084</code>
+		<eng>SNDS (Supplement to a New Drug Submission)</eng>
+		<fra>SNDS (Supplément à une présentation de drogue nouvelle)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-085</code>
+		<eng>SNDS-C (Supplement to a New Drug Submission - Conditional)</eng>
+		<fra>SNDS-C (Supplément à 'une présentation de drogue nouvelle - Confirmation)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-087</code>
+		<eng>UD-PV (Undefined Data Pharmacovigilance)</eng>
+		<fra>UD-PV (Données non définies – Pharmacovigilance)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-088</code>
+		<eng>UDRA (Undefined Regulatory Activity)</eng>
+		<fra>UDRA (Activité réglementaire non définie)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-089</code>
+		<eng>YBPR (Yearly Biologic Product Report)</eng>
+		<fra>YBPR (Rapport annuel sur un produit biologique)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-028</code>
+		<eng>DSUR (Development Safety Update Report)</eng>
+		<fra>FR_DSUR (Development Safety Update Report)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-018</code>
+		<eng>DINA (Application for Drug Identification Number)</eng>
+		<fra>fr_DINA (Application for Drug Identification Number)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-019</code>
+		<eng>DINB (Application for Drug Identification Number - Biologic)</eng>
+		<fra>fr_DINB (Application for Drug Identification Number - Biologic)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-020</code>
+		<eng>DIND (Application for Drug Identification Number - Disinfectant Product)</eng>
+		<fra>fr_DIND (Application for Drug Identification Number - Disinfectant Product)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-021</code>
+		<eng>DINF (Application for Drug Identification Number - Category IV Product)</eng>
+		<fra>fr_DINF (Application for Drug Identification Number - Category IV Product)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-043</code>
+		<eng>MPDIN (Pre-Submission Meeting Information)</eng>
+		<fra>fr_MPDIN (Pre-Submission Meeting Information)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-070</code>
+		<eng>PDC</eng>
+		<fra>PDC (Post-Authorization Division 1 Change)</fra>
+	</row>
+	<row>
+		<code>B02-20160301-071</code>
+		<eng>PDC (Post-Authorization Division 1 Change)</eng>
+		<fra>fr_PDC-B (Post-Authorization Division 1 Change - Biologics)</fra>
+	</row>
+<row><code>AB</code><eng>Alberta</eng><fra>Alberta</fra></row>
+<row><code>BC</code><eng>British Columbia</eng><fra>Colombie-Britannique</fra></row>
+<row><code>MB</code><eng>Manitoba</eng><fra>Île-du-Prince-Édouard</fra></row>
+<row><code>NB</code><eng>New Brunswick</eng><fra>Manitoba</fra></row>
+<row><code>NL</code><eng>Newfoundland and Labrador</eng><fra>Nouveau-Brunswick</fra></row>
+<row><code>NT</code><eng>Northwest Territories</eng><fra>Nouvelle-Écosse</fra></row>
+<row><code>NS</code><eng>Nova Scotia</eng><fra>Nunavut</fra></row>
+<row><code>NU</code><eng>Nunavut</eng><fra>Ontario</fra></row>
+<row><code>ON</code><eng>Ontario</eng><fra>Québec</fra></row>
+<row><code>PE</code><eng>Prince Edward Island</eng><fra>Saskatchewan</fra></row>
+<row><code>QC</code><eng>Quebec</eng><fra>Terre-Neuve et Labrador</fra></row>
+<row><code>SK</code><eng>Saskatchewan</eng><fra>Territoires du Nord-Ouest</fra></row>
+<row><code>YT</code><eng>Yukon</eng><fra>Yukon</fra></row>
+<row><code>AL</code><eng>Alabama</eng><fra>Alabama</fra></row>
+<row><code>AK</code><eng>Alaska</eng><fra>Alaska</fra></row>
+<row><code>AZ</code><eng>Arizona</eng><fra>Arizona</fra></row>
+<row><code>AR</code><eng>Arkansas</eng><fra>Arkansas</fra></row>
+<row><code>CA</code><eng>California</eng><fra>Californie</fra></row>
+<row><code>CO</code><eng>Colorado</eng><fra>Caroline du nord</fra></row>
+<row><code>CT</code><eng>Connecticut</eng><fra>Caroline du sud</fra></row>
+<row><code>DE</code><eng>Delaware</eng><fra>Colorado</fra></row>
+<row><code>DC</code><eng>District of Columbia</eng><fra>Connecticut</fra></row>
+<row><code>FL</code><eng>Florida</eng><fra>Dakota du nord</fra></row>
+<row><code>GA</code><eng>Georgia</eng><fra>Dakota du sud</fra></row>
+<row><code>HI</code><eng>Hawaii</eng><fra>Delaware</fra></row>
+<row><code>ID</code><eng>Idaho</eng><fra>District de Columbia</fra></row>
+<row><code>IL</code><eng>Illinois</eng><fra>Floride</fra></row>
+<row><code>IN</code><eng>Indiana</eng><fra>Géorgie</fra></row>
+<row><code>IA</code><eng>Iowa</eng><fra>Hawaii</fra></row>
+<row><code>KS</code><eng>Kansas</eng><fra>Idaho</fra></row>
+<row><code>KY</code><eng>Kentucky</eng><fra>Illinois</fra></row>
+<row><code>LA</code><eng>Louisiana</eng><fra>Indiana</fra></row>
+<row><code>ME</code><eng>Maine</eng><fra>Iowa</fra></row>
+<row><code>MD</code><eng>Maryland</eng><fra>Kansas</fra></row>
+<row><code>MA</code><eng>Massachusetts</eng><fra>Kentucky</fra></row>
+<row><code>MI</code><eng>Michigan</eng><fra>L'état de New York</fra></row>
+<row><code>MN</code><eng>Minnesota</eng><fra>L'état de washington</fra></row>
+<row><code>MS</code><eng>Mississippi</eng><fra>Louisiane</fra></row>
+<row><code>MO</code><eng>Missouri</eng><fra>Maine</fra></row>
+<row><code>MT</code><eng>Montana</eng><fra>Maryland</fra></row>
+<row><code>NE</code><eng>Nebraska</eng><fra>Massachusetts</fra></row>
+<row><code>NV</code><eng>Nevada</eng><fra>Michigan</fra></row>
+<row><code>NH</code><eng>New Hampshire</eng><fra>Minnesota</fra></row>
+<row><code>NJ</code><eng>New Jersey</eng><fra>Mississippi</fra></row>
+<row><code>NM</code><eng>New Mexico</eng><fra>Missouri</fra></row>
+<row><code>NY</code><eng>New York</eng><fra>Montana</fra></row>
+<row><code>NC</code><eng>North Carolina</eng><fra>Nebraska</fra></row>
+<row><code>ND</code><eng>North Dakota</eng><fra>Nevada</fra></row>
+<row><code>OH</code><eng>Ohio</eng><fra>New Hampshire</fra></row>
+<row><code>OK</code><eng>Oklahoma</eng><fra>New Jersey</fra></row>
+<row><code>OR</code><eng>Oregon</eng><fra>Nouveau-mexique</fra></row>
+<row><code>PA</code><eng>Pennsylvania</eng><fra>Ohio</fra></row>
+<row><code>RI</code><eng>Rhode Island</eng><fra>Oklahoma</fra></row>
+<row><code>SC</code><eng>South Carolina</eng><fra>Oregon</fra></row>
+<row><code>SD</code><eng>South Dakota</eng><fra>Pennsylvanie</fra></row>
+<row><code>TN</code><eng>Tennessee</eng><fra>Rhode Island</fra></row>
+<row><code>TX</code><eng>Texas</eng><fra>Tennessee</fra></row>
+<row><code>UT</code><eng>Utah</eng><fra>Texas</fra></row>
+<row><code>VT</code><eng>Vermont</eng><fra>Utah</fra></row>
+<row><code>VA</code><eng>Virginia</eng><fra>Vermont</fra></row>
+<row><code>WA</code><eng>Washington</eng><fra>Virginie</fra></row>
+<row><code>WV</code><eng>West Virginia</eng><fra>Virginie-occidentale</fra></row>
+<row><code>WI</code><eng>Wisconsin</eng><fra>Wisconsin</fra></row>
+<row><code>WY</code><eng>Wyoming</eng><fra>Wyoming</fra></row>
+<row><code>FIRSTNAME</code><eng>First Name</eng><fra>Prénom</fra></row>
+<row><code>LASTNAME</code><eng>Last Name</eng><fra>Nom</fra></row>
+<row><code>INITIALS</code><eng>Initials</eng><fra>Initiales</fra></row>
+<row><code>LANGCORRESPOND</code><eng>Language of Correspondance</eng><fra>Langue de correspondance</fra></row>
+<row><code>JOBTITLE</code><eng>Job Title</eng><fra>Titre de poste</fra></row>
+<row><code>SALUTATION</code><eng>Salutation</eng><fra>Titre de civilité</fra></row>
+<row><code>SALUT_MR</code><eng>Mr.</eng><fra>M.</fra></row>
+<row><code>SALUT_MS</code><eng>Ms.</eng><fra>Mme</fra></row>
+<row><code>SALUT_DR</code><eng>Dr.</eng><fra>Dr.</fra></row>
+<row><code>SALUT_MRS</code><eng>Mrs.</eng><fra>Mlle</fra></row>
+<row><code>ROLE_PRIMARY</code><eng>Primary</eng><fra>Primaire</fra></row>
+<row><code>ROLE_SECONDARY</code><eng>Alternate</eng><fra>Alterner</fra></row>
+<row><code>CONTACTEMAIL</code><eng>Email</eng><fra>Adresse électronique</fra></row>
+<row><code>FAX_NUMBER</code><eng>Fax Number</eng><fra>Numéro de télécopieur</fra></row>
+<row><code>PHONE_EXT</code><eng>Phone Extension</eng><fra>Poste</fra></row>
+<row><code>ROLES</code><eng>Roles</eng><fra>fr_Roles</fra></row>
+<row><code>PHONENUMBER</code><eng>Phone Number</eng><fra>Numéro de téléphone</fra></row>
+<row><code>CONTACT_INFO</code><eng>Company Representative Information</eng><fra>fr_Company Representative Information</fra></row>
+<row><code>AMEND</code><eng>Amend</eng><fra>fr_Amend</fra></row>
+<row><code>REP_CONTACT</code><eng>REP Contact</eng><fra>fr_REP Contact</fra></row>
+<row><code>ONE_ROLE</code><eng>Role</eng><fra>fr_Role</fra></row>
+<row><code>ONE_ROLE_MED</code><eng>Medicinal Ingredient</eng><fra>fr_Medicinal Ingredient</fra></row>
+<row><code>ONE_ROLE_NON_MED</code><eng>Non-medicinal Ingredient</eng><fra>fr_Non-medicinal Ingredient</fra></row>
+<row><code>CONTACT_DETAILS</code><eng>Company Representative Details</eng><fra>fr_Company Representative Details</fra></row>
+<row><code>ADD_CONTACT</code><eng>Add REP Contact</eng><fra>fr_Add REP Contact</fra></row>
+<row><code>CONTACT_ROLE_LEGEND</code><eng>Select one or more roles for this company representative</eng><fra>fr_Select one or more roles for this company representative</fra></row>
+<row><code>REPRES</code><eng>Representative</eng><fra>fr_Representative</fra></row>
+<row><code>DELETE_REPRES</code><eng>Delete Company Rep.</eng><fra>fr_Delete Company Rep.</fra></row>
+<row><code>SAVE_REPRES</code><eng>Save Company Rep.</eng><fra>fr_Save Company Rep.</fra></row>
+<row><code>REQUIRED_DOC</code><eng>Required Documentation</eng><fra>fr_Required Documentation</fra></row>
+<row><code>STATEMENT_REVENUE</code><eng>A statement signed by the individual responsible for the applicant's financial affairs is included to certify that the fee payable is greater than 10% of the anticipated gross revenue</eng><fra>fr_A statement signed by the individual responsible for the applicant's financial affairs is included to certify that the fee payable is greater than 10% of the anticipated gross revenue</fra></row>
+<row><code>EST_MARKET_SHARE</code><eng>Estimated market share (that is [i.e.], product's market potential compared to the total market for similar products in Canada)</eng><fra>fr_Estimated market share (that is [i.e.], product's market potential compared to the total market for similar products in Canada)</fra></row>
+<row><code>SIMILAR_PRODUCT</code><eng>Comparison to similar products on the Canadian market or other similar markets (e.g., United States, European Union)</eng><fra>fr_Comparison to similar products on the Canadian market or other similar markets (e.g., United States, European Union)</fra></row>
+<row><code>SALES_HISTORY</code><eng>Sales history prior to product upgrades or sales history of similar products</eng><fra>fr_Sales history prior to product upgrades or sales history of similar products</fra></row>
+<row><code>DEFER_STATEMENT</code><eng>The statement supporting the deferral request is included.</eng><fra>fr_The statement supporting the deferral request is included.</fra></row>
+<row><code>MARKETING_PLAN</code><eng>Marketing plan/product plan for the drug product</eng><fra>fr_Marketing plan/product plan for the drug product</fra></row>
+<row><code>AVG_SALES</code><eng>Average sale price and demand</eng><fra>fr_Average sale price and demand</fra></row>
+<row><code>OTHER</code><eng>Other</eng><fra>Autre</fra></row>
+<row><code>OTHER_DOC_DETAILS</code><eng>Other Documentation Details</eng><fra>fr_Other Documentation Details</fra></row>
+<row><code>FEE_AMOUNT</code><eng>Fees</eng><fra>fr_Fees</fra></row>
+<row><code>PAYMENT</code><eng>Payment</eng><fra>fr_Payment</fra></row>
+<row><code>PAYMENT_METHODS</code><eng>Please select all the payment methods you intend to use</eng><fra>fr_Please select all the payment methods you intend to use</fra></row>
+<row><code>PREFEERED_OPTION</code><eng>Bill Payment Service Option (preferred method)</eng><fra>fr_Bill Payment Service Option (preferred method)</fra></row>
+<row><code>EXISTING_CREDIT</code><eng>Existing credit</eng><fra>fr_Existing credit</fra></row>
+<row><code>BANK_WIRE</code><eng>Wire (include bank confirmation)</eng><fra>Wire (include bank confirmation)</fra></row>
+<row><code>CREDIT</code><eng>Mastercard / Visa / Amex / Visa Debit / JCB International</eng><fra>fr_Mastercard / Visa / Amex / Visa Debit / JCB International</fra></row>
+<row><code>CHEQUE</code><eng>Cheque</eng><fra>fr_Cheque</fra></row>
+<row><code>MONEY_ORDER</code><eng>Money Order</eng><fra>fr_Money Order</fra></row>
+<row><code>BANK_DRAFT</code><eng>International Bank Draft</eng><fra>fr_International Bank Draft</fra></row>
+<row><code>COMPANY_ID</code><eng>Company ID</eng><fra>fr_Company ID</fra></row>
+<row><code>DOSSIER_TYPE</code><eng>Dossier Type</eng><fra>fr_Dossier Type</fra></row>
+<row><code>PRODUCT_NAME</code><eng>Product Name</eng><fra>fr_Product Name</fra></row>
+<row><code>BIOLOGIC</code><eng>Biologic</eng><fra>fr_Biologic</fra></row>
+<row><code>PHARMA</code><eng>Pharmaceutical</eng><fra>fr_Pharmaceutical</fra></row>
+<row><code>PHARMACEUTICAL</code><eng>Pharmaceutical</eng><fra>fr_Pharmaceutical</fra></row>
+<row><code>D21</code><eng>Biologic</eng><fra>fr_Biologic</fra></row>
+<row><code>D24</code><eng>Veterinary</eng><fra>fr_Veterinary</fra></row>
+<row><code>D22</code><eng>Pharmaceutical</eng><fra>fr_Pharmaceutical</fra></row>
+<row><code>CONTROL_NUM</code><eng>Control Number</eng><fra>fr_Control Number</fra></row>
+<row><code>DATE_SUBMITTED</code><eng>Date Submitted</eng><fra>fr_Date Submitted</fra></row>
+<row><code>SEQUENCE_NUM</code><eng>Sequence Number</eng><fra>fr_Sequence Number</fra></row>
+<row><code>REG_ACTIVITY</code><eng>Regulatory Activity</eng><fra>fr_Regulatory Activity</fra></row>
+<row><code>SEQUENCE_DESCRIPT</code><eng>Sequence Description</eng><fra>fr_Sequence Description</fra></row>
+<row><code>IS_SOLICITED</code><eng>Is this solicited information?</eng><fra>fr_Is this solicited information?</fra></row>
+<row><code>SOLICITED_RQ</code><eng>Requester of Solicited Information</eng><fra>fr_Requester of Solicited Information</fra></row>
+<row><code>PROJ_MANAGER_NAME</code><eng>Name of Regulatory Project Manager, if known</eng><fra>fr_Name of Regulatory Project Manager, if known</fra></row>
+<row><code>IS_FEE_TRANSACTION</code><eng>Are new or revised fees associated with this transaction?</eng><fra>fr_Are new or revised fees associated with this transaction?</fra></row>
+<row><code>SUB_CLASS</code><eng>Submission Class</eng><fra>fr_Submission Class</fra></row>
+<row><code>FEE_DESCRIPTION</code><eng>Submission Description</eng><fra>fr_Submission Description</fra></row>
+<row><code>DEFER_FEES</code><eng>A deferral of payment is requested with this transaction</eng><fra>fr_A deferral of payment is requested with this transaction</fra></row>
+<row><code>FEE_REMISSION</code><eng>Fee Remission is requested with this transaction</eng><fra>fr_Fee Remission is requested with this transaction</fra></row>
+<row><code>GROSS_REVENUE</code><eng>Anticipated gross revenue for this drug product during the fee verification period</eng><fra>fr_Anticipated gross revenue for this drug product during the fee verification period</fra></row>
+<row><code>TEN_PERCENT_REVENUE</code><eng>10% of anticipated gross revenue</eng><fra>fr_10% of anticipated gross revenue</fra></row>
+<row><code>REG_CONTACT_THIS</code><eng>Regulatory Activity Contact for THIS transaction</eng><fra>fr_Regulatory Activity Contact for THIS transaction</fra></row>
+<row><code>REG_ACT_CONTACT</code><eng>Regulatory Activity Contact for THIS transaction</eng><fra>fr_Regulatory Activity Contact for THIS transaction</fra></row>
+<row><code>COMPANY_NOABBREV</code><eng>Company Name (Full legal Name - no abbreviations)</eng><fra>fr_Company Name (Full legal Name - no abbreviations)</fra></row>
+<row><code>ADDRESS_INFO</code><eng>B. Address Information</eng><fra>fr_B. Address Information</fra></row>
+<row><code>COMPANY_INFO</code><eng>A. Company Information</eng><fra>fr_A. Company Information</fra></row>
+<row><code>COMPANY_REP_THIS</code><eng>C. Company Representative</eng><fra>fr_C. Company Representative</fra></row>
+<row><code>CONFIRM_REGULATORY</code><eng>I confirm that the above regulatory activity contact information is  valid.</eng><fra>fr_I confirm that the above regulatory activity contact information is  valid.</fra></row>
+<row><code>STREET_SUITE</code><eng>Street / Suite</eng><fra>fr_Street / Suite</fra></row>
+<row><code>CITY_TOWN</code><eng>City / Town</eng><fra>fr_City / Town</fra></row>
+<row><code>PROVINCE</code><eng>Province</eng><fra>fr_Province</fra></row>
+<row><code>COUNTRY</code><eng>Country</eng><fra>fr_Country</fra></row>
+<row><code>POSTAL_ZIP</code><eng>Postal / ZIP Code</eng><fra>fr_Postal / ZIP Code</fra></row>
+<row><code>en</code><eng>English</eng><fra>fr_English</fra></row>
+<row><code>fr</code><eng>French</eng><fra>fr_French</fra></row>
+<row><code>LIFECYCLE_TITLE</code><eng>Transaction Details</eng><fra>fr_Transaction Details</fra></row>
+<row><code>COMPANY_TEMPLATE</code><eng>Company Template: Regulatory Enrolment Process (REP)</eng><fra>FR_Company Template: Regulatory Enrolment Process (REP)</fra></row>
+<row><code>REG_COMPANY_ENROL</code><eng>Regulatory Company Enrolment</eng><fra>fr_Regulatory Company Enrolment</fra></row>
+<row><code>REG_COMPANY_ID</code><eng>Regulatory Company ID</eng><fra>fr_Regulatory Company ID</fra></row>
+<row><code>REG_CONTACT_ID</code><eng>Regulatory Contact ID</eng><fra>fr_Regulatory Contact ID</fra></row>
+<row><code>APPL_STATUS</code><eng>Enrolment Status</eng><fra>fr_Enrolment Status</fra></row>
+<row><code>ENROL_VERSION</code><eng>Enrolment Version</eng><fra>fr_Enrolment Version</fra></row>
+<row><code>DATE_SAVED</code><eng>Date Last Saved</eng><fra>fr_Date Last Saved</fra></row>
+<row><code>ADDR_INFO</code><eng>Address Information</eng><fra>fr_Address Information</fra></row>
+<row><code>ADDR_RECO</code><eng>Address Records</eng><fra>fr_Address Records</fra></row>
+<row><code>COMPANY</code><eng>Company</eng><fra>FR_Company</fra></row>
+<row><code>IMP_COMP_ID</code><eng>Importer Company ID</eng><fra>fr_Importer Company ID</fra></row>
+<row><code>ADDR_ROLE_LEGEND</code><eng>Select one or more roles for this company</eng><fra>fr_Select one or more roles for this company</fra></row>
+<row><code>MANUFACT_SEL</code><eng>Manufacturer / Sponsor Mailing Address</eng><fra>fr_Manufacturer / Sponsor Mailing Address</fra></row>
+<row><code>MAIL_SEL</code><eng>Regulatory Mailing / Annual Contact Address</eng><fra>fr_Regulatory Mailing / Annual Contact Address</fra></row>
+<row><code>BILLING_SEL</code><eng>Billing Address</eng><fra>fr_Billing Address</fra></row>
+<row><code>IMPORTER_SEL</code><eng>Canadian Importer Mailing Address</eng><fra>fr_Canadian Importer Mailing Address</fra></row>
+<row><code>CONTACT_MANUFACTURER</code><eng>Manufacturer / Sponsor Contact</eng><fra>fr_Manufacturer / Sponsor Contact</fra></row>
+<row><code>CONTACT_MAILING</code><eng>Regulatory Mailing / Annual Contact</eng><fra>fr_Regulatory Mailing / Annual Contact</fra></row>
+<row><code>CONTACT_BILLING</code><eng>Billing Contact</eng><fra>fr_Billing Contact</fra></row>
+<row><code>CONTACT_IMPORTER</code><eng>Importer Contact</eng><fra>fr_Importer Contact</fra></row>
+<row><code>REPPRIMARY</code><eng>Primary REP contact</eng><fra>fr_Primary REP contact</fra></row>
+<row><code>REPSECONDARY</code><eng>Alternate REP contact</eng><fra>fr_Alternate REP contact</fra></row>
+<row><code>CONTACT_BY</code><eng>Contact By</eng><fra>fr_Contact By</fra></row>
+<row><code>PHONE</code><eng>Phone</eng><fra>fr_Phone</fra></row>
+<row><code>FAX</code><eng>Fax</eng><fra>fr_Fax</fra></row>
+<row><code>EMAIL</code><eng>Email</eng><fra>fr_Email</fra></row>
+<row><code>EXTENSION</code><eng>ext</eng><fra>fr_ext</fra></row>
+<row><code>DRUG_PRODUCT</code><eng>Product Information</eng><fra>fr_Product Information</fra></row>
+<row><code>DRUG_USE</code><eng>Drug Use</eng><fra>fr_Drug Use</fra></row>
+<row><code>SCHEDULE_PRESC_STATUS</code><eng>Schedule and Prescription status (check all that apply): The product is</eng><fra>fr_Schedule and Prescription status (check all that applies): The product is</fra></row>
+<row><code>SCHEDULE_C</code><eng>included in Schedule C (radiopharmacurticals) to the Food and Drugs Act</eng><fra>fr_included in Schedule C (radiopharmacurticals) to the Food and Drugs Act</fra></row>
+<row><code>SCHEDULE_D</code><eng>included in Schedule D (biologicals) to the Food and Drugs Act</eng><fra>fr_included in Schedule D (biologicals) to the Food and Drugs Act</fra></row>
+<row><code>SCHEDULE_F</code><eng>included in Schedule F (prescription drugs) to the Food and Drug Regulations</eng><fra>fr_included in Schedule F (prescription drugs) to the Food and Drug Regulations</fra></row>
+<row><code>PROP_INDICATION</code><eng>Proposed Indication/Use/Dosage (including maximum daily dose)</eng><fra>fr_Proposed Indication/Use/Dosage (including maximum daily dose)</fra></row>
+<row><code>FORMULATION</code><eng>Formulation</eng><fra>fr_Formulation</fra></row>
+<row><code>FORMULATIONS</code><eng>Formulations</eng><fra>fr_Formulations</fra></row>
+<row><code>FORMULATION_NAME</code><eng>Formulation Name</eng><fra>fr_Formulation Name</fra></row>
+<row><code>FORMULATION_DETAILS</code><eng>Formulation Record</eng><fra>fr_Formulation Record</fra></row>
+<row><code>FORM_ID</code><eng>ID</eng><fra>fr_ID</fra></row>
+<row><code>DOSAGE_FORM</code><eng>Dosage Form</eng><fra>fr_Dosage Form</fra></row>
+<row><code>MEDICINAL_INGRED</code><eng>A. Medicinal (Active) Ingredients</eng><fra>fr_A. Medicinal (Active) Ingredients</fra></row>
+<row><code>INGREDIENT</code><eng>Ingredient</eng><fra>fr_Ingredient</fra></row>
+<row><code>IN_LIST</code><eng>In list</eng><fra>In list</fra></row>
+<row><code>CAS_NUM</code><eng>Chemical Abstract Services</eng><fra>fr_Chemical Abstract Services</fra></row>
+<row><code>ING_NAME</code><eng>Ingredient Name</eng><fra>fr_Ingredient Name</fra></row>
+<row><code>STANDARD</code><eng>Standard</eng><fra>fr_Standard</fra></row>
+<row><code>STRENGTH</code><eng>Strength</eng><fra>fr_Strength</fra></row>
+<row><code>NOT_GREAT_THAN</code><eng>Not Great Than</eng><fra>fr_Not Great Than</fra></row>
+<row><code>UNITS</code><eng>Units</eng><fra>fr_Units</fra></row>
+<row><code>UNIT</code><eng>Unit</eng><fra>fr_Unit</fra></row>
+<row><code>EQUALS</code><eng>Equals</eng><fra>fr_Equals</fra></row>
+<row><code>NOT_LESS_THAN</code><eng>Not Less Than</eng><fra>fr_Not Less Than</fra></row>
+<row><code>RANGE</code><eng>Range</eng><fra>fr_Range</fra></row>
+<row><code>RANGE_LOWER_LIMIT</code><eng>Lower Limit</eng><fra>fr_Lower Limit</fra></row>
+<row><code>RANGE_UPPER_LIMIT</code><eng>Upper Limit</eng><fra>fr_Upper Limit</fra></row>
+<row><code>OTHER_UNIT_MEASURE</code><eng>Unit of Measure Other Details</eng><fra>fr_Unit of Measure Other Details</fra></row>
+<row><code>PER_STRENGTH</code><eng>Per</eng><fra>fr_Per</fra></row>
+<row><code>UNIT_PRESENTATION</code><eng>Unit of Presentation</eng><fra>fr_Unit of Presentation</fra></row>
+<row><code>ISBASE</code><eng>Calculated as Base?</eng><fra>fr_Calculated as Base?</fra></row>
+<row><code>IS_NANO_MATERIAL</code><eng>Is this a nanomaterial?</eng><fra>fr_Is this a nanomaterial?</fra></row>
+<row><code>NANO_MATERIAL</code><eng>Nanomaterial</eng><fra>fr_Nanomaterial</fra></row>
+<row><code>NANO_MATERIAL_OTHER</code><eng>Indicate the type of nanomaterial</eng><fra>fr_Indicate the type of nanomaterial</fra></row>
+<row><code>ANIMAL_HUMAN_SOURCED</code><eng>Animal or Human Sourced?</eng><fra>fr_Animal or Human Sourced?</fra></row>
+<row><code>IS_ANIMAL_HUMAN_MATERIAL</code><eng>Was Animal and/or Human Sourced Material used at any stage in the manufacturing of the drug?</eng><fra>fr_B.  Was Animal and/or Human Sourced Material used at any stage in the manufacturing of the drug?</fra></row>
+<row><code>ANIMAL_HUMAN_HDING</code><eng>Animal and / or Human Sourced Materials used at any stage in the manufacture of the drug</eng><fra>fr_Animal and / or Human Sourced Materials used at any stage in the manufacture of the drug</fra></row>
+<row><code>CONTAINER_TYPES</code><eng>Container Types, Package Size and Shelf Life</eng><fra>fr_C. Container Types</fra></row>
+<row><code>MATERIAL_NAME</code><eng>Material Name</eng><fra>fr_Material Name</fra></row>
+<row><code>PRESENT_IN_FINAL</code><eng>Present in final Container</eng><fra>fr_Present in final Container</fra></row>
+<row><code>MATERIAL_DETAILS</code><eng>Animal and / or Human Sourced Materials Details</eng><fra>fr_Animal and / or Human Sourced Materials Details</fra></row>
+<row><code>IMPORTER_COMPANY_NAME_IF</code><eng>Importer Company Name</eng><fra>fr_Importer Company Name</fra></row>
+<row><code>REP_CONTACT_INFO</code><eng>REP Contact Information</eng><fra>fr_REP Contact Information</fra></row>
+<row><code>DOSSIER_TEMP</code><eng>Dossier Template: Regulatory Enrolment Process (REP)</eng><fra></fra></row>
+<row><code>REGULATED_CDSA</code><eng>regulated under the Controlled Drugs and Substances Act</eng><fra>fr_regulated under the Controlled Drugs and Substances Act</fra></row>
+<row><code>PRESCRIPTION_DRUG</code><eng>on the Prescription Drug List</eng><fra>fr_on the Prescription Drug List</fra></row>
+<row><code>IS_NON_PRESCRIPTION_DRUG</code><eng>a non-prescription drug</eng><fra>fr_a non-prescription drug</fra></row>
+<row><code>NON_PRESC_SCHEDULE_A</code><eng>a non-prescription drug to which one or more Schedule A claims apply</eng><fra>fr_a non-prescription drug to which one or more Schedule A claims apply</fra></row>
+<row><code>PROP_INDICATION</code><eng>Proposed Indication</eng><fra>fr_Proposed Indication</fra></row>
+<row><code>SCHEDA_DESCRIPTION</code><eng>Provide information below for non prescription products that have associated Schedule A claims only.</eng><fra>fr_Provide information below for non prescription products that have associated Schedule A claims only.</fra></row>
+<row><code>SCHEDA_DETAILS</code><eng>Schedule A Claim Details</eng><fra>fr_Schedule A Claim Details</fra></row>
+<row><code>SCHEDA_DISEASE</code><eng>Please check the diseases and disorders that apply to the claims made (select at least one)</eng><fra>fr_Please check the diseases and disorders that apply to the claims made (select at least one)</fra></row>
+<row><code>DIN_FULL</code><eng>Drug Identification Number (DIN), if issued</eng><fra>fr_Drug Identification Number (DIN), if issued</fra></row>
+<row><code>ACUTEALCOHOL</code><eng>Acute Alcoholism</eng><fra>fr_Acute Alcoholism</fra></row>
+<row><code>ACUTEANXIETY</code><eng>Acute anxiety state</eng><fra>fr_Acute anxiety state</fra></row>
+<row><code>ACUTERESP</code><eng>Acute infectious respiratory syndromes</eng><fra>fr_Acute infectious respiratory syndromes</fra></row>
+<row><code>ACUTEINFLAM</code><eng>Acute inflammatory and debilitating arthiritis</eng><fra>fr_Acute inflammatory and debilitating arthiritis</fra></row>
+<row><code>ACUTEPSYCHOTIC</code><eng>Acute psychotic conditions</eng><fra>fr_Acute psychotic conditions</fra></row>
+<row><code>ADDICTION</code><eng>Addiction (except nicotine addiction)</eng><fra>fr_Addiction (except nicotine addiction)</fra></row>
+<row><code>ATERIOSCLEROSIS</code><eng>Ateriosclerosis</eng><fra>fr_Ateriosclerosis</fra></row>
+<row><code>APPENDICITIS</code><eng>Appendicitis</eng><fra>fr_Appendicitis</fra></row>
+<row><code>ASTHMA</code><eng>Asthma</eng><fra>fr_Asthma</fra></row>
+<row><code>CANCER</code><eng>Cancer</eng><fra>fr_Cancer</fra></row>
+<row><code>HEARTCONGEST</code><eng>Congestive heart failure</eng><fra>fr_Congestive heart failure</fra></row>
+<row><code>CONVULSIONS</code><eng>Convulsions</eng><fra>fr_Convulsions</fra></row>
+<row><code>DEMENTIA</code><eng>Dementia</eng><fra>fr_Dementia</fra></row>
+<row><code>DEPRESSION</code><eng>Depresssion</eng><fra>fr_Depresssion</fra></row>
+<row><code>DIABETES</code><eng>Diabetes</eng><fra>fr_Diabetes</fra></row>
+<row><code>GANGRENE</code><eng>Gangrene</eng><fra>fr_Gangrene</fra></row>
+<row><code>GLAUCOMA</code><eng>Glaucoma</eng><fra>fr_Glaucoma</fra></row>
+<row><code>BLEEDINGDISORDERS</code><eng>Haematologic bleeding disorders</eng><fra>fr_Haematologic bleeding disorders</fra></row>
+<row><code>HEPATITIS</code><eng>Hepatitis</eng><fra>fr_Hepatitis</fra></row>
+<row><code>HYPERTENSION</code><eng>Hypertension</eng><fra>fr_Hypertension</fra></row>
+<row><code>NAUSEAPREG</code><eng>Nausea and vomiting of pregnancy</eng><fra>fr_Nausea and vomiting of pregnancy</fra></row>
+<row><code>OBESITY</code><eng>Obesity</eng><fra>fr_Obesity</fra></row>
+<row><code>RHEUMATICFEVER</code><eng>Rheumatic fever</eng><fra>fr_Rheumatic fever</fra></row>
+<row><code>SEPTICEMIA</code><eng>Septicemia</eng><fra>fr_Septicemia</fra></row>
+<row><code>SEXDISEASE</code><eng>Sexually transmitted disease</eng><fra>fr_Sexually transmitted disease</fra></row>
+<row><code>STRANGHERNIA</code><eng>Strangulated hernia</eng><fra>fr_Strangulated hernia</fra></row>
+<row><code>THROMBOTICDISORDER</code><eng>Thrombotic and Embolic Disorder</eng><fra>fr_Thrombotic and Embolic Disorder</fra></row>
+<row><code>THYROIDDISEASE</code><eng>Thyroid disease</eng><fra>fr_Thyroid disease</fra></row>
+<row><code>UCLERGASTRO</code><eng>Ulcer of gastro-intestinal tract</eng><fra>fr_Ulcer of gastro-intestinal tract</fra></row>
+<row><code>SCHEDA_CLAIMS</code><eng>Please list the schedule A Claims and Indications associated with this product</eng><fra>fr_Please list the schedule A Claims and Indications associated with this product</fra></row>
+<row><code>INGREDIENTS</code><eng>Ingredients</eng><fra>fr_Ingredients</fra></row>
+<row><code>INGRED_DETAILS</code><eng>Ingredient Details</eng><fra>fr_Ingredient Details</fra></row>
+<row><code>OTHER_UNITS</code><eng>Units other details</eng><fra>fr_Units other details</fra></row>
+<row><code>CONTAINER_TYPE_DETAILS</code><eng>Container Type Details</eng><fra>fr_Container Type Details</fra></row>
+<row><code>CONTAINER_TYPE</code><eng>Container Type</eng><fra>fr_Container Type</fra></row>
+<row><code>PACKAGE_SIZE</code><eng>Package Size</eng><fra>fr_Package Size</fra></row>
+<row><code>SHELF_LIFE_NUMBERS</code><eng>Number of Units</eng><fra>fr_Number of Units</fra></row>
+<row><code>CELSIUS</code><eng>Celsius</eng><fra>fr_Maximum, Celsius</fra></row>
+<row><code>TO</code><eng>To</eng><fra>fr_To</fra></row>
+<row><code>TEMP_RANGE</code><eng>Temperature Range From</eng><fra>fr_Temperature Range From</fra></row>
+<row><code>SHELF_LIFE</code><eng>Shelf Life</eng><fra>fr_Shelf Life</fra></row>
+<row><code>ROA_TITLE</code><eng>Routes of Administration</eng><fra>fr_D. Routes of Administration</fra></row>
+<row><code>ROA_LBL</code><eng>Route of Administration</eng><fra>fr_Route of Administration</fra></row>
+<row><code>OTHER_ROA_DETAILS</code><eng>Other Route of Administration Details</eng><fra>fr_Other Route of Administration Details</fra></row>
+<row><code>COUNTRIES_MANUFACT</code><eng>Countries of manufacture for this product</eng><fra>fr_E. Countries of manufacture for this product</fra></row>
+<row><code>COUNTRY_NAME</code><eng>Country Name</eng><fra>fr_Country Name</fra></row>
+<row><code>COUNTRY_MAN</code><eng>Country of Manufacture</eng><fra>fr_Country of Manufacture</fra></row>
+<row><code>APPENDIX4</code><eng>Animal / Human Sourced</eng><fra>fr_Animal / Human Sourced</fra></row>
+<row><code>ANIMAL_TYPE_LBL</code><eng>Animal Type Details</eng><fra>fr_Animal Type Details</fra></row>
+<row><code>ANIMAL_TYPE_LBL</code><eng>Animal Type Details</eng><fra>fr_Animal Type Details</fra></row>
+<row><code>ING_DETAILS</code><eng>Human / Animal Sourced Record</eng><fra>fr_Human / Animal Sourced Record</fra></row>
+<row><code>SOURCED</code><eng>Source From</eng><fra>fr_Source From</fra></row>
+<row><code>ANIMAL</code><eng>Animal</eng><fra>fr_Animal</fra></row>
+<row><code>TISSUES_FLUIDS_SRCS</code><eng>Tissues or Fluids sources</eng><fra>fr_Tissues or Fluids sources</fra></row>
+<row><code>SYSTEM_TYPE</code><eng>System</eng><fra>fr_System</fra></row>
+<row><code>SYSTEM_DETAILS</code><eng>System Details</eng><fra>fr_System Details</fra></row>
+<row><code>SYSTEM_OTHER</code><eng>Other Details</eng><fra>fr_Other Details</fra></row>
+<row><code>ANIMAL_SOURCE</code><eng>Animal Source</eng><fra>fr_Animal Source</fra></row>
+<row><code>ANIMAL_TYPE_DETAILS</code><eng>Animal Type Details</eng><fra>fr_Animal Type Details</fra></row>
+<row><code>APPENDIX</code><eng>appendix</eng><fra>fr_appendix</fra></row>
+<row><code>BILE</code><eng>bile</eng><fra>fr_bile</fra></row>
+<row><code>DISTAL_ILEUM</code><eng>distal ileum</eng><fra>fr_distal ileum</fra></row>
+<row><code>LARGE_INTESTINE</code><eng>large intestine</eng><fra>fr_large intestine</fra></row>
+<row><code>SALIVA_SALIVARY</code><eng>saliva or salivary gland</eng><fra>fr_saliva or salivary gland</fra></row>
+<row><code>SMALL_INTESTINE</code><eng>small intestine other than distal ileum</eng><fra>fr_small intestine other than distal ileum</fra></row>
+<row><code>STOMACH</code><eng>stomach</eng><fra>fr_stomach</fra></row>
+<row><code>OTHER_DIGESTIVE</code><eng>other digestive system</eng><fra>fr_other digestive system</fra></row>
+<row><code>BRAIN</code><eng>brain</eng><fra>fr_brain</fra></row>
+<row><code>BRAIN_STEM</code><eng>brain stem</eng><fra>fr_brain stem</fra></row>
+<row><code>CEREBELLUM</code><eng>cerebellum</eng><fra>fr_cerebellum</fra></row>
+<row><code>CEREBROSPINAL_FLUID</code><eng>cerebrospinal fluid</eng><fra>fr_cerebrospinal fluid</fra></row>
+<row><code>DORSAL_ROOT_GANGLIA</code><eng>dorsal root ganglia</eng><fra>fr_dorsal root ganglia</fra></row>
+<row><code>DURA_MATER</code><eng>dura mater</eng><fra>fr_dura mater</fra></row>
+<row><code>HYPOTHALAMUS</code><eng>hypothalamus</eng><fra>fr_hypothalamus</fra></row>
+<row><code>RETINA_OPTIC</code><eng>retina or optic nerve</eng><fra>fr_retina or optic nerve</fra></row>
+<row><code>SPINAL_CORD</code><eng>spinal cord</eng><fra>fr_spinal cord</fra></row>
+<row><code>TRIGERMINAL_GANGLIA</code><eng>trigerminal ganglia</eng><fra>fr_trigerminal ganglia</fra></row>
+<row><code>OTHER_NERVOUS</code><eng>other nervous system</eng><fra>fr_other nervous system</fra></row>
+<row><code>LYMPH_NODES</code><eng>lymph nodes</eng><fra>fr_lymph nodes</fra></row>
+<row><code>SPLEEN</code><eng>spleen</eng><fra>fr_spleen</fra></row>
+<row><code>THYMUS</code><eng>thymus</eng><fra>fr_thymus</fra></row>
+<row><code>TONSILS</code><eng>tonsils</eng><fra>fr_tonsils</fra></row>
+<row><code>OTHER_IMMUNE</code><eng>other immune system</eng><fra>fr_other immune system</fra></row>
+<row><code>ABDOMEN</code><eng>abdomen</eng><fra>fr_abdomen</fra></row>
+<row><code>SKULL</code><eng>skull</eng><fra>fr_skull</fra></row>
+<row><code>BONES</code><eng>bones other than vertebral column or skull</eng><fra>fr_bones other than vertebral column or skull</fra></row>
+<row><code>COLLAGEN</code><eng>collagen</eng><fra>fr_collagen</fra></row>
+<row><code>TENDONS_LIGAMENTS</code><eng>tendons or ligaments</eng><fra>fr_tendons or ligaments</fra></row>
+<row><code>VERTEBRAL_COLUMN</code><eng>vertebral column</eng><fra>fr_vertebral column</fra></row>
+<row><code>MUSCLE</code><eng>muscle</eng><fra>fr_muscle</fra></row>
+<row><code>OTHER_MUSCULO_SKELETAL</code><eng>other musculo-skeletal system</eng><fra>fr_other musculo-skeletal system</fra></row>
+<row><code>ADIPOSE</code><eng>adipose or omentum</eng><fra>fr_adipose or omentum</fra></row>
+<row><code>ASCITES</code><eng>acscites</eng><fra>fr_acscites</fra></row>
+<row><code>ANTLER_VELVET</code><eng>antler velvet</eng><fra>fr_antler velvet</fra></row>
+<row><code>SERUM</code><eng>serum</eng><fra>fr_serum</fra></row>
+<row><code>WHOLE_BLOOD</code><eng>whole blood</eng><fra>fr_whole blood</fra></row>
+<row><code>PLASMA</code><eng>plasma</eng><fra>fr_plasma</fra></row>
+<row><code>EMBRYONIC_TISSUE</code><eng>embryonic tissue</eng><fra>fr_embryonic tissue</fra></row>
+<row><code>FETAL_TISSUE</code><eng>fetal tissue</eng><fra>fr_fetal tissue</fra></row>
+<row><code>BONE_MARROW</code><eng>bone marrow</eng><fra>fr_bone marrow</fra></row>
+<row><code>EYES_CORNEA</code><eng>eyes or cornea</eng><fra>fr_eyes or cornea</fra></row>
+<row><code>GALL_BLADDER</code><eng>gall bladder</eng><fra>fr_gall bladder</fra></row>
+<row><code>OTHER_FLUIDS_TISSUES</code><eng>other types of tissues or fluids</eng><fra>fr_other types of tissues or fluids</fra></row>
+<row><code>MILK_PRODUCTS</code><eng>milk or milk products</eng><fra>fr_milk or milk products</fra></row>
+<row><code>KIDNEY</code><eng>kidney</eng><fra>fr_kidney</fra></row>
+<row><code>COLOSTRUM</code><eng>colostrum</eng><fra>fr_colostrum</fra></row>
+<row><code>MAMMARY_GLANDS</code><eng>mammary glands</eng><fra>fr_mammary glands</fra></row>
+<row><code>OVARIES</code><eng>ovaries</eng><fra>fr_ovaries</fra></row>
+<row><code>PLACENTA</code><eng>placenta</eng><fra>fr_placenta</fra></row>
+<row><code>PLACENTAL_FLUID</code><eng>placental fluid</eng><fra>fr_placental fluid</fra></row>
+<row><code>SEMEN</code><eng>semen</eng><fra>fr_semen</fra></row>
+<row><code>TESTES</code><eng>testes</eng><fra>fr_testes</fra></row>
+<row><code>URINE</code><eng>urine</eng><fra>fr_urine</fra></row>
+<row><code>OTHER_REPRODUCTIVE</code><eng>other reproductive system</eng><fra>fr_other reproductive system</fra></row>
+<row><code>ADRENAL_GLAND</code><eng>adrenal gland or tissue</eng><fra>fr_adrenal gland or tissue</fra></row>
+<row><code>HAIR_HOOVES_FEATHERS</code><eng>hair, feathers, hooves</eng><fra>fr_hair, feathers, hooves</fra></row>
+<row><code>LIVER</code><eng>liver</eng><fra>fr_liver</fra></row>
+<row><code>PANCREAS</code><eng>pancreas</eng><fra>fr_pancreas</fra></row>
+<row><code>PITUITARY</code><eng>pituitary gland</eng><fra>fr_pituitary gland</fra></row>
+<row><code>SKIN_HIDES</code><eng>skin or hides</eng><fra>fr_skin or hides</fra></row>
+<row><code>THYROID_PARATHYROID</code><eng>thyroid or parathyroid</eng><fra>fr_thyroid or parathyroid</fra></row>
+<row><code>OTHER_SKIN_GLANDULAR</code><eng>other skin or glandular system</eng><fra>fr_other skin or glandular system</fra></row>
+<row><code>HEART_PERICARDIUM</code><eng>Heart or pericardium</eng><fra>fr_Heart or pericardium</fra></row>
+<row><code>LUNG</code><eng>lung</eng><fra>fr_lung</fra></row>
+<row><code>NASAL_FLUID</code><eng>nasal fluid</eng><fra>fr_nasal fluid</fra></row>
+<row><code>TRACHEA</code><eng>trachea</eng><fra>fr_trachea</fra></row>
+<row><code>PLACENTALFLUID</code><eng>placental fluid</eng><fra>fr_placental fluid</fra></row>
+<row><code>OTHER_CARDIO_RESPIRATORY</code><eng>other cardio-respiratory system</eng><fra>fr_other cardio-respiratory system</fra></row>
+<row><code>NERVOUS_SYSTEM</code><eng>Nervous System</eng><fra>fr_Nervous System</fra></row>
+<row><code>DIGESTIVE_SYSTEM</code><eng>Digestive</eng><fra>fr_Digestive</fra></row>
+<row><code>IMMUNE_SYSTEM</code><eng>Immune</eng><fra>fr_Immune</fra></row>
+<row><code>SKIN_SYSTEM</code><eng>Skin and Glandular</eng><fra>fr_Skin and Glandular</fra></row>
+<row><code>MUSCULO_SYSTEM</code><eng>Musculo-Skeletal</eng><fra>fr_Musculo-Skeletal</fra></row>
+<row><code>OTHER_SYSTEM</code><eng>Other Tissues or Fluids</eng><fra>fr_Other Tissues or Fluids</fra></row>
+<row><code>REPRODUCTIVE_SYSTEM</code><eng>Reproductive</eng><fra>fr_Reproductive</fra></row>
+<row><code>CARDIO_SYSTEM</code><eng>Cardio-Respiratory</eng><fra>fr_Cardio-Respiratory</fra></row>
+<row><code>INGRED_MAT_NAME</code><eng>Ingredient or Material Name</eng><fra>fr_Ingredient or Material Name</fra></row>
+<row><code>AGEANIMALS</code><eng>Age of animals in months</eng><fra>fr_Age of animals in months</fra></row>
+<row><code>ANIMAL_CTRIES_ORIGIN</code><eng>Animal Countries of Origin</eng><fra>fr_Animal Countries of Origin</fra></row>
+<row><code>CONTROLLEDPOP</code><eng>Controlled Population</eng><fra>fr_Controlled Population</fra></row>
+<row><code>CELLLINE</code><eng>Cell line</eng><fra>fr_Cell line</fra></row>
+<row><code>BIOTECHDERIVED</code><eng>Biotechnology Derived Animal</eng><fra>fr_Biotechnology Derived Animal</fra></row>
+<row><code>ANIMAL_CTRY_ORIGIN</code><eng>Country of Origin of the Animals</eng><fra>fr_Country of Origin of the Animals</fra></row>
+<row><code>UNKNOWN_COUNTRY_DETAILS</code><eng>Unknown Country Details</eng><fra>fr_Unknown Country Details</fra></row>
+<row><code>ANIMAL_SRCS</code><eng>Animal Sources</eng><fra>fr_Animal Sources</fra></row>
+<row><code>ANIMAL_TYPE</code><eng>Animal Type</eng><fra>fr_Animal Type</fra></row>
+<row><code>ANIMAL_TYPE_LBL</code><eng>Animal Type Details</eng><fra>fr_Animal Type Details</fra></row>
+<row><code>UNKNOWN</code><eng>Unknown</eng><fra>fr_Unknown</fra></row>
+<row><code>ACTIVITY_TEMPLATE</code><eng>Regulatory Activity Template: Regulatory Enrolment Process (REP)</eng><fra>fr_Regulatory Activity Template: Regulatory Enrolment Process (REP)</fra></row>
+<row><code>ACTIVE_ENROL</code><eng>Regulatory Activity Enrolment</eng><fra>fr_Regulatory Activity Enrolment</fra></row>
+<row><code>ACTIVITY_LEAD</code><eng>Activity Lead</eng><fra>fr_Activity Lead</fra></row>
+<row><code>ACTIVITY_TYPE</code><eng>Regulatory Activity Type</eng><fra>fr_Regulatory Activity Type</fra></row>
+<row><code>REASON_FILE</code><eng>Reason for filing this Regulatory Activity</eng><fra>fr_Reason for filing this Regulatory Activity</fra></row>
+<row><code>IS_SOLICITED_ACT</code><eng>Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</eng><fra>fr_Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</fra></row>
+<row><code>IS_PRIORITY</code><eng>Was this regulatory activity approved for priority review?</eng><fra>fr_Was this regulatory activity approved for priority review?</fra></row>
+<row><code>IS_NOC</code><eng>Was this regulatory activity approved for NOC/C review?</eng><fra>fr_Was this regulatory activity approved for NOC/C review?</fra></row>
+<row><code>IS_ADMIN_SUBMISSION</code><eng>Is this regulatory activity an Administrative Submission or does this regulatory activity contain an administrative component?</eng><fra>fr_Is this regulatory activity an Administrative Submission or does this regulatory activity contain an administrative component?</fra></row>
+<row><code>ADMIN_SUB_TYPE</code><eng>Reason for Administrative Submission or administrative component</eng><fra>fr_Administrative submission type</fra></row>
+<row><code>ADMIN_SUB_TYPE_DESC</code><eng>Reason for Administrative Submission or administrative component Description</eng><fra>fr_Administrative submission type description</fra></row>
+<row><code>B14-20160301-09</code><eng>Pharmaceutical</eng><fra>fr_Pharmaceutical</fra></row>
+<row><code>B14-20160301-02</code><eng>Biological</eng><fra>fr_Biological</fra></row>
+<row><code>B14-20160301-10</code><eng>Post-Market Vigilance</eng><fra>fr_Post-Market Vigilance</fra></row>
+<row><code>B14-20160301-07</code><eng>Drug Master File</eng><fra>fr_Drug Master File</fra></row>
+<row><code>ADDRESS_NOC</code><eng>Address to which the Drug Notification Form (DNF)/Notice of Compliance (NOC) are to be sent(when required)</eng><fra>FR_Address to which the Drug Notification Form (DNF)/Notice of Compliance (NOC) are to be sent</fra></row>
+<row><code>TYPE_VNC</code><eng>Type of Notifiable Change (NC) or Veterinary Notifiable Change (VNC) submission</eng><fra>fr_Type of Notifiable Change (NC) or Veterinary Notifiable Change (VNC) submission</fra></row>
+<row><code>text_label_change</code><eng>Change in text of labelling</eng><fra>fr_Change in text of labelling</fra></row>
+<row><code>drug_substance_change</code><eng>Change in drug substance (source, synthesis)</eng><fra>fr_Change in drug substance (source, synthesis)</fra></row>
+<row><code>formulation_change</code><eng>Change in formulation or method of manufacturing with clinical / bio data</eng><fra>fr_Change in formulation or method of manufacturing with clinical / bio data</fra></row>
+<row><code>specification_change</code><eng>Change in specifications (medicinal or non-medicinal ingredient, pharmaceutical form, analytical method)</eng><fra>fr_Change in specifications (medicinal or non-medicinal ingredient, pharmaceutical form, analytical method)</fra></row>
+<row><code>expiry_storage_change</code><eng>Change in expiry period/storage conditions</eng><fra>fr_Change in expiry period/storage conditions</fra></row>
+<row><code>manufact_method_change</code><eng>Change in manufacturing method</eng><fra>fr_Change in manufacturing method</fra></row>
+<row><code>manufact_site_change</code><eng>Change in manufacturing site</eng><fra>fr_Change in manufacturing site</fra></row>
+<row><code>container_size_change</code><eng>Change in container size for parenteral drug</eng><fra>fr_Change in container size for parenteral drug</fra></row>
+<row><code>packaging_spec_change</code><eng>Change in packaging specifications for parenteral / inhalation drug</eng><fra>fr_Change in packaging specifications for parenteral / inhalation drug</fra></row>
+<row><code>packaging_materials_change</code><eng>Change in packaging material composition</eng><fra>fr_Change in packaging material composition</fra></row>
+<row><code>other_change_details</code><eng>Other - specify</eng><fra>fr_Other - specify</fra></row>
+<row><code>other_rationale_details</code><eng>Other - specify</eng><fra>fr_Other - specify</fra></row>
+<row><code>RATIONALE_SNDS</code><eng>Rationale for all SNDS, SANDS, (all human drug types); Veterinary Supplemental New Drug Submission (VSNDS), Veterinary Supplemental Abbreviated New Drug Submission( VSANDS) (All veterinary drug types); or for biological drug DIN submissions</eng><fra>fr_Rationale for all SNDS, SANDS, (all human drug types); Veterinary Supplemental New Drug Submission (VSNDS), Veterinary Supplemental Abbreviated New Drug Submission( VSANDS) (All veterinary drug types); or for biological drug DIN submissions</fra></row>
+<row><code>new_roa</code><eng>New route of administration, dosage form and / or strength</eng><fra>fr_New route of administration, dosage form and / or strength</fra></row>
+<row><code>new_claims</code><eng>New claims / use, indications, recommended administration or dosage regime</eng><fra>fr_New claims / use, indications, recommended administration or dosage regime</fra></row>
+<row><code>change_formulation</code><eng>Change in formulation or method of manufacturing with clinical / bio data</eng><fra>fr_Change in formulation or method of manufacturing with clinical / bio data</fra></row>
+<row><code>replace_sterility</code><eng>Replace sterility test with process parametric release</eng><fra>fr_Replace sterility test with process parametric release</fra></row>
+<row><code>other_rationale</code><eng></eng><fra></fra></row>
+<row><code>change_drug_substance</code><eng>Change in drug substance (source, synthesis)</eng><fra>fr_Change in drug substance (source, synthesis)</fra></row>
+<row><code>confirmitory_studies</code><eng>Confirmatory studies</eng><fra>fr_Confirmatory studies</fra></row>
+<row><code>THIS_ACTIVITY</code><eng>Contact for this Regulatory Activity</eng><fra>fr_Contact for this Regulatory Activity</fra></row>
+<row><code>PROPER_NAME</code><eng>Proper, Common or Non-Proprietary Name</eng><fra>fr_Proper, Common or Non-Proprietary Name</fra></row>
+<row><code>VALUE</code><eng>Value</eng><fra>fr_Value</fra></row>
+<row><code>IS_AGE_KNOWN</code><eng>Is age of animals known?</eng><fra>fr_Is age of animals known?</fra></row>
+<row><code>NEW</code><eng>New</eng><fra>fr_New</fra></row>
+<row><code>EXISTING</code><eng>Existing</eng><fra>fr_Exsiting</fra></row>
+<row><code>TRANSACTION_TYPE</code><eng>Is this transaction for a new or existing regulatory activity?</eng><fra>fr_Is this transaction for a new or existing regulatory activity?</fra></row>
+<row><code>IS_THIRD_PARTY</code><eng>Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</eng><fra>fr_Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</fra></row>
+<row><code>IS_ADMIN_SUB</code><eng>Is this regulatory activity an Administrative Submission or does this regulatory activity contain an administrative component?</eng><fra>fr_Is this regulatory activity an Administrative Submission or does this regulatory activity contain an administrative component?</fra></row>
+<row><code>LIFECYCLE_RECORD</code><eng>Transaction Details Record</eng><fra>fr_Lifecycle Record</fra></row>
+<row><code>REG_ACTIVITY_LEAD</code><eng>Regulatory Activity Lead</eng><fra>fr_Regulatory Activity Lead</fra></row>
+<row><code>REG_TRANSACTION_DESC</code><eng>Regulatory Transaction Description</eng><fra>fr_Regulatory Transaction Description</fra></row>
+<row><code>YEAR_OF_CHANGE</code><eng>Year of the change</eng><fra>fr_Year of the change</fra></row>
+<row><code>LIST_DESC</code><eng>List Description</eng><fra>fr_List Description</fra></row>
+<row><code>DATED</code><eng>Dated</eng><fra>fr_Dated</fra></row>
+<row><code>START_DATE</code><eng>Start Date</eng><fra>fr_Start Date</fra></row>
+<row><code>END_DATE</code><eng>End Date</eng><fra>fr_End Date</fra></row>
+<row><code>BRIEF_DESC</code><eng>Brief Description</eng><fra>fr_Brief Description</fra></row>
+<row><code>VERSION_NO</code><eng>Version No.</eng><fra>fr_Version No.</fra></row>
+<row><code>B14-20160301-06</code><eng>Consumer Health Products</eng><fra>fr_Consumer Health Products</fra></row>
+<row><code>ADMINISTRATIVE</code><eng>Administrative</eng><fra>fr_Administrative</fra></row>
+<row><code>BENEFIT_RISK_ASSESS</code><eng>Benefit Risk Assessment</eng><fra>fr_Benefit Risk Assessment</fra></row>
+<row><code>CANCEL_LETTER</code><eng>Cancellation Letter</eng><fra>fr_Cancellation Letter</fra></row>
+<row><code>CHANGE_TO_DIN</code><eng>Change to DIN</eng><fra>fr_Change to DIN</fra></row>
+<row><code>CLARIF_RESPONSE</code><eng>Response to Clarification Request</eng><fra>fr_Response to Clarification Request</fra></row>
+<row><code>COMMENTS_NOC</code><eng>Comments on Notice of Decision</eng><fra>fr_Comments on Notice of Decision</fra></row>
+<row><code>COMMENTS_SUMMARY_BASIS</code><eng>Comments on Summary Basis of Decision (SBD)</eng><fra>fr_Comments on Summary Basis of Decision (SBD)</fra></row>
+<row><code>COMMENTS_REGULARTORY_DECISION</code><eng>Comments on Regulatory Decision Summary</eng><fra>fr_Comments on Regulatory Decision Summary</fra></row>
+<row><code>DIN_DISCONTINUED</code><eng>Notification of Discontinued Sale (DIN Cancellation)</eng><fra>fr_Notification of Discontinued Sale (DIN Cancellation)</fra></row>
+<row><code>DRUG_NOTIF_FORM</code><eng>Drug Notification Form</eng><fra>fr_Drug Notification Form</fra></row>
+<row><code>FOR_PERIOD</code><eng>For Period</eng><fra>fr_For Period</fra></row>
+<row><code>INITIAL</code><eng>INITIAL</eng><fra>fr_INITIAL</fra></row>
+<row><code>MEETING_MINUTES</code><eng>Minutes of Meeting</eng><fra>fr_Minutes of Meeting</fra></row>
+<row><code>NOTIFICATION_CHANGE</code><eng>Notification of Change in Benefit-Risk Profile</eng><fra>fr_Notification of Change in Benefit-Risk Profile</fra></row>
+<row><code>NOTIFICATION_INTERRUPT_SALE</code><eng>otification Interruption of Sale</eng><fra>fr_otification Interruption of Sale</fra></row>
+<row><code>PANDEMIC_APPL</code><eng>Pandemic Application</eng><fra>fr_Pandemic Application</fra></row>
+<row><code>POST_CLEARANCE_DATA</code><eng>Post Clearance Data</eng><fra>fr_Post Clearance Data</fra></row>
+<row><code>POST_MARKET_SURV</code><eng>Post Marketing Surveillance</eng><fra>fr_Post Marketing Surveillance</fra></row>
+<row><code>POST_NOC_CHANGE</code><eng>Post NOC Change</eng><fra>fr_Post NOC Change</fra></row>
+<row><code>POST_AUTH_DIV1_CHANGE</code><eng>Post-Authorization Division 1 Change</eng><fra>fr_Post-Authorization Division 1 Change</fra></row>
+<row><code>PRESUB_MEETING_PKG</code><eng>Submission Meeting Package</eng><fra>fr_Submission Meeting Package</fra></row>
+<row><code>PRESUB_MEETING_RQ</code><eng>Submission Meeting Request</eng><fra>fr_Submission Meeting Request</fra></row>
+<row><code>PRIORITY_REVIEW_RQ</code><eng>Priority Review Request</eng><fra>fr_Priority Review Request</fra></row>
+<row><code>PRISTINE_PM</code><eng>Pristine PM</eng><fra>fr_Pristine PM</fra></row>
+<row><code>PRISTINE_PM_2LANG</code><eng>Pristine PM - Second Language</eng><fra>fr_Pristine PM - Second Language</fra></row>
+<row><code>ADVISEMENT_LETTER_RESPONSE</code><eng>Response to Advisement Letter</eng><fra>fr_Response to Advisement Letter</fra></row>
+<row><code>CLIN_CLARIF_RESPONSE</code><eng>Response to Clinical Clarification Request</eng><fra>fr_Response to Clinical Clarification Request</fra></row>
+<row><code>EMAIL_RQ_RESPONSE</code><eng>Response to e-mail Request </eng><fra>fr_Response to e-mail Request </fra></row>
+<row><code>LABEL_CLARIF_RESPONSE</code><eng>Response to Labeling Clarification Request</eng><fra>fr_Response to Labeling Clarification Request</fra></row>
+<row><code>MHPD_RQ_RESPONSE</code><eng>Response to MHPD Request</eng><fra>fr_Response to MHPD Request</fra></row>
+<row><code>NOC_RESPONSE</code><eng>Response to NOC/c-QN</eng><fra>fr_Response to NOC/c-QN</fra></row>
+<row><code>NOD_RESPONSE</code><eng>Response to NOD</eng><fra>fr_Response to NOD</fra></row>
+<row><code>NOL_RESPONSE</code><eng>Response to NOL</eng><fra>fr_Response to NOL</fra></row>
+<row><code>NON_RESPONSE</code><eng>Response to NON</eng><fra>fr_Response to NON</fra></row>
+<row><code>PROCESSING_CLARIF_RESPONSE</code><eng>Response to Processing Clarification Request</eng><fra>fr_Response to Processing Clarification Request</fra></row>
+<row><code>QUAL_CLIN_CLARIF_RESPONSE</code><eng>Response to Quality and Clinical Clarification Request</eng><fra>fr_Response to Quality and Clinical Clarification Request</fra></row>
+<row><code>QUAL_CLARIF_RESPONSE</code><eng>Response to Quality Clarification Request</eng><fra>fr_Response to Quality Clarification Request</fra></row>
+<row><code>SCREENING_ACCEPT_RESPONSE</code><eng>Response to Screening Acceptance Letter</eng><fra>fr_Response to Screening Acceptance Letter</fra></row>
+<row><code>SCREENING_CLARIF_RESPONSE</code><eng>Response to Screening Clarification Request</eng><fra>fr_Response to Screening Clarification Request</fra></row>
+<row><code>SDN_RESPONSE</code><eng>Response to SDN</eng><fra>fr_Response to SDN</fra></row>
+<row><code>PHONE_RQ_RESPONSE</code><eng>Response to Telephone Request</eng><fra>fr_Response to Telephone Request</fra></row>
+<row><code>RISK_COMMUN_DOC</code><eng>Risk Communication Document</eng><fra>fr_Risk Communication Document</fra></row>
+<row><code>RMP_VERSION_DATE</code><eng>RMP version #</eng><fra>fr_RMP version #</fra></row>
+<row><code>SIGNAL_WORK_UP</code><eng>Signal Work Up</eng><fra>fr_Signal Work Up</fra></row>
+<row><code>UNSOLICITED_DATA</code><eng>Unsolicited Data</eng><fra>fr_Unsolicited Data</fra></row>
+<row><code>YEAR_LIST_OF_CHANGE</code><eng>Year, list of change number (for example: 2012, 15, 19a,….)</eng><fra>fr_Year, list of change number (for example: 2012, 15, 19a,….)</fra></row>
+<row><code>NONCLIN_CLARIF_RESPONSE</code><eng>Response to Non-clinical Clarification Request </eng><fra>fr_Response to Non-clinical Clarification Request </fra></row>
+<row><code>BE_CLARIF_RESPONSE</code><eng>Response to BE Clarification Request</eng><fra>fr_Response to BE Clarification Request</fra></row>
+<row><code>RECON_DECIS_LTR_INTENT</code><eng>Reconsideration of Decision - Letter of Intent</eng><fra>fr_Reconsideration of Decision - Letter of Intent</fra></row>
+<row><code>RECON_DECIS_RQ_RECON</code><eng>Reconsideration of Decision - Request for Reconsideration</eng><fra>fr_Reconsideration of Decision - Request for Reconsideration</fra></row>
+<row><code>RECON_DECIS_OTHER_INFO</code><eng>Reconsideration of Decision - Other Information</eng><fra>fr_Reconsideration of Decision - Other Information</fra></row>
+<row><code>LABEL_PREAPPROVAL_2LANG</code><eng>Second Language Label - Pre-Approval</eng><fra>fr_Second Language Label - Pre-Approval</fra></row>
+<row><code>CORR_PATENT_MED</code><eng>Correspondence - Patented Medicines</eng><fra>fr_Correspondence - Patented Medicines</fra></row>
+<row><code>ALLEGATION_NOTICE</code><eng>Notice of allegation</eng><fra>fr_Notice of allegation</fra></row>
+<row><code>FORM_IV</code><eng>Form IV</eng><fra>fr_Form IV</fra></row>
+<row><code>FORM_V</code><eng>Form V</eng><fra>fr_Form V</fra></row>
+<row><code>CONSENT_LTR</code><eng>Consent Letter</eng><fra>fr_Consent Letter</fra></row>
+<row><code>DATA_PROTECT_CORRESP</code><eng>Correspondence - Data Protection</eng><fra>fr_Correspondence - Data Protection</fra></row>
+<row><code>SEQUENCE_CLEANUP</code><eng>eCTD Dossier Clean-up</eng><fra>fr_eCTD Dossier Clean-up</fra></row>
+<row><code>IS_THIRD_PARTY_INFO</code><eng>A letter of authorization signed by the manufacture/sponsor company must be provided in folder 1.2.6 of the regulatory transaction.</eng><fra>fr_orm V</fra></row>
+<row><code>ADDITIONAL_PRODUCT_CHGE_li</code><eng>When the manufacturer wants to request an additional product name, for a previously approved product, that does not require a brand name or Look-Alike-Sound-Alike assessment.  (New DIN is issued)</eng><fra>fr_When the manufacturer wants to request an additional product name, for a previously approved product, that does not require a brand name or Look-Alike-Sound-Alike assessment.  (New DIN is issued)</fra></row>
+<row><code>ADDITIONAL_PRODUCT_CHGE_note</code><eng>Note: A new dossier ID maybe required. Contact Health Canada for more information (hc.eReview.sc@canada.ca).</eng><fra>fr_Note: A new dossier ID maybe required. Contact Health Canada for more information (eReview@canada.ca).</fra></row>
+<row><code>ADDITIONAL_PRODUCT_CHGE_note</code><eng>On this form: Use existing company ID and dossier ID, unless a new dossier ID was assigned by Health Canada.</eng><fra>fr_Note: A new dossier ID maybe required. Contact Health Canada for more information (eReview@canada.ca).</fra></row>
+<row><code>PRODUCT_NAME_CHGE_li</code><eng>A change to an existing product name, for a previously approved product, that does not require a brand name or Look-Alike-Sound-Alike assessment.</eng><fra>fr_A change to an existing product name, for a previously approved product, that does not require a brand name or Look-Alike-Sound-Alike assessment.</fra></row>
+<row><code>PRODUCT_NAME_CHGE_note</code><eng>On the RA template: Use existing company ID and dossier ID.</eng><fra>fr_On the RA template: Use existing company ID and dossier ID.</fra></row>
+<row><code>OWNERSHIP_CHGE_li</code><eng>When a manufacturer transfers the possession and responsibility for a product to another manufacturer. (DIN stays the same)</eng><fra>fr_When a manufacturer transfers the possession and responsibility for a product to another manufacturer. (DIN stays the same)</fra></row>
+<row><code>OWNERSHIP_CHGE_note</code><eng>Note: Dossier ID will be transferred from the previous owner if all DINs within the dossier are being transferred. Alternatively, contact Health Canada for more information (eReview@canada.ca).</eng><fra>fr_Note: A new dossier ID maybe required. Contact Health Canada for more information (eReview@canada.ca).</fra></row>
+<row><code>OWNERSHIP_CHGE_note</code><eng>On this template: Use company ID for new owner and use existing dossier ID, unless a new dossier ID was assigned by Health Canada.</eng><fra>fr_Note: A new dossier ID maybe required. Contact Health Canada for more information (eReview@canada.ca).</fra></row>
+<row><code>LICENGSING_li</code><eng>An agreement between two manufacturers whereby one manufacturer (licensor) supplies a drug product to another manufacturer (licensee) for sale under the second manufacturer's name.</eng><fra>fr_An agreement between two manufacturers whereby one manufacturer (licensor) supplies a drug product to another manufacturer (licensee) for sale under the second manufacturer's name.</fra></row>
+<row><code>LICENGSING_note</code><eng>Note: A new Dossier ID is required if the proposed product(s) are not previously approved (i.e. no dossier ID already exists).  Except in the cases of a replace source cross-licensing. Contact Health Canada for more information (eReview@canada.ca).</eng><fra>fr_Note: A new Dossier ID is required if the proposed product(s) are not previously approved (i.e. no dossier ID already exists).  Except in the cases of a replace source cross-licensing. Contact Health Canada for more information (eReview@canada.ca).</fra></row>
+<row><code>LICENGSING_note</code><eng>On the RA template: Use the company ID for new owner (licensee) and and use existing dossier ID, unless a new dossier ID was assigned by Health Canada.</eng><fra>fr_on the RA template: Use the company ID for new owner (licensee) and and use existing dossier ID, unless a new dossier ID was assigned by Health Canada.</fra></row>
+<row><code>PRODUCT_MANUFACT_NAME_CHGE_li</code><eng>A change to the manufacturer's name and the product name.</eng><fra>fr_A change to the manufacturer's name and the product name.</fra></row>
+<row><code>PRODUCT_MANUFACT_NAME_CHGE_note</code><eng>Note: An amended CO XML is required. A new company ID will be issued for the substantive name change.</eng><fra>fr_Note: An amended CO XML is required. A new company ID will be issued for the substantive name change.</fra></row>
+<row><code>PRODUCT_MANUFACT_NAME_CHGE_note</code><eng>On the RA template: Use new company ID (associated with new manufacturer's name) and existing dossier ID.</eng><fra>fr_On the RA template: Use new company ID (associated with new manufacturer's name) and existing dossier ID.</fra></row>
+<row><code>MANUFACT_NAME_CHGE_li</code><eng>A change to the manufacturer's name.</eng><fra>fr_A change to the manufacturer's name.</fra></row>
+<row><code>MANUFACT_NAME_CHGE_note</code><eng>Note: An amended CO XML is required. A new company ID will be issued for the substantive name change.</eng><fra>fr_Note: An amended CO XML is required. A new company ID will be issued for the substantive name change.</fra></row>
+<row><code>MANUFACT_NAME_CHGE_note</code><eng>On the RA template: Use new company ID (associated with new manufacturer's name) and existing dossier ID.</eng><fra>fr_On the RA template: Use new company ID (associated with new manufacturer's name) and existing dossier ID.</fra></row>
+<row><code>MERGER_li</code><eng>The combining of two or more manufacturers into one, through a purchase, acquisition, a pooling of interests, or purchase of controlling interest in one manufacturer by another manufacturer, in order to take over assets and/or operations.</eng><fra>fr_The combining of two or more manufacturers into one, through a purchase, acquisition or a pooling of interests or purchase of controlling interest in one manufacturer by another manufacturer, in order to take over assets and/or operations.</fra></row>
+<row><code>MERGER_note</code><eng>Note: If merger/buyout resulted in a change in company name, an amended company enrolment is required. A new company ID will be issued. Dossier ID will remain the same as the dossier will be transferred from the previous owner to the new owner.</eng><fra>fr_Note: If merger/buyout resulted in a change in company name, an amended CO XML is required. A new company ID will be issued. Dossier ID will remain the same as the DO will be transferred from the previous owner to the new owner.</fra></row>
+<row><code>MERGER_note</code><eng>On this form: Use company ID for new owner and existing dossier ID.</eng><fra>fr_On this template: Use company ID for new owner and existing dossier ID.</fra></row>
+<row><code>POSTAUTH_CHEMISTRY_CHGE_li</code><eng>For schedule C and D products. Chemistry and Manufacturing information updates to match the Chemistry updates of the licensor.</eng><fra>fr_For schedule C and D products. Chemistry and Manufacturing information updates to match the Chemistry updates of the licensor.</fra></row>
+<row><code>POSTAUTH_CHEMISTRY_CHGE_note</code><eng>On the RA template: Use existing company ID and dossier ID.</eng><fra>fr_On the RA template: Use existing company ID and dossier ID.</fra></row>
+<row><code>POSTAUTH_LABEL_CHGE_li</code><eng>Label update (including but not limited to Product Monograph update, inner and outer label update) to match label updates of the licensor.</eng><fra>fr_Label update (including but not limited to Product Monograph update, inner and outer label update) to match label updates of the licensor.</fra></row>
+<row><code>POSTAUTH_LABEL_CHGE_note</code><eng>On the RA template: Use existing company ID and dossier ID.</eng><fra>fr_On the RA template: Use existing company ID and dossier ID.</fra></row>
+<row><code>NOTE_1</code><eng>You are eligible to apply for fee remission. The submission fee is greater than 10% of anticipated gross revenues.</eng><fra>fr_You are eligible to apply for fee remission. The submission fee is greater than 10% of anticipated gross revenues.</fra></row>
+<row><code>NOTE_2</code><eng>Please include the required signed statement AND at least one of the support documentation to establish that the applicable fee payable is greater than 10% of the anticipated gross revenue from sales of the drug product in Canada during the fee verification period.</eng><fra>fr_Please include the required signed statement AND at least one of the support documentation to establish that the applicable fee payable is greater than 10% of the anticipated gross revenue from sales of the drug product in Canada during the fee verification period.</fra></row>
+<row><code>NOTE_3</code><eng>Fees of $10,000 or less must be paid at the time of filing of the submission, supplement or application. Please complete the Advance Payment Details for Drug Submissions and Master Files.</eng><fra>fr_Fees of $10,000 or less must be paid at the time of filing of the submission, supplement or application. Please complete the Advance Payment Details for Drug Submissions and Master Files.</fra></row>
+<row><code>NOTE_7</code><eng>Please pay the remission processing fee of $578 using the Advance Payment Details for Drug Submissions and Master Files. </eng><fra>fra_Please pay the remission processing fee of $578 using the Advance Payment Details for Drug Submissions and Master Files. </fra></row>
+<row><code>NOTE_7_1</code><eng>Please pay the remission processing fee of $590 using the Advance Payment Details for Drug Submissions and Master Files. </eng><fra>fra_Please pay the remission processing fee of $578 using the Advance Payment Details for Drug Submissions and Master Files. </fra></row>
+<row><code>NOTE_4</code><eng>You are applying for a deferral. Please send no payment with this form.</eng><fra>fr_You are applying for a deferral. Please send no payment with this form.</fra></row>
+<row><code>NOTE_5</code><eng>You are not eligible to apply for fee remission. The submission fee is less than 10% of anticipated gross revenues.</eng><fra>fr_You are not eligible to apply for fee remission. The submission fee is less than 10% of anticipated gross revenues.</fra></row>
+<row><code>NOTE_6</code><eng>Review fees must not be included with the submission, supplement or application. Sponsors will be invoiced for fees of more than $10,000.</eng><fra>fr_Review fees must not be included with the submission, supplement or application. Sponsors will be invoiced for fees of more than $10,000.</fra></row>
+<row><code>THERAPEUTIC_CLASSIFICATION_NAME</code><eng>Therapeutic Classification Name</eng><fra>fr_Therapeutic Classification Name</fra></row>
+<row><code>MANUFACTURER_SPONSOR</code><eng>Manufacturer/Sponsor</eng><fra>fr_Manufacturer/Sponsor</fra></row>
+<row><code>CANADIAN_IMPORTER</code><eng>Canadian Importer</eng><fra>fr_Canadian Importer</fra></row>
+<row><code>IMPORTER</code><eng>Importer</eng><fra>fr_Canadian Importer</fra></row>
+<row><code>HOSPITAL</code><eng>Hospital</eng><fra>fr_Hospital</fra></row>
+<row><code>DOMESTIC</code><eng>Domestic</eng><fra>fr_Domestic</fra></row>
+<row><code>CONTACT_LENS</code><eng>Contact Lens</eng><fra>fr_Contact Lens</fra></row>
+<row><code>FOOD_PROCESSING</code><eng>Food Processing</eng><fra>fr_Food Processing</fra></row>
+<row><code>BARN</code><eng>Barn</eng><fra>fr_Barn</fra></row>
+<row><code>MEDICAL_INSTRUMENTS</code><eng>Medical Instruments</eng><fra>fr_Medical Instruments</fra></row>
+<row><code>INSTITUTIONAL_INDUSTRIAL</code><eng>Institutional/Industrial</eng><fra>fr_Institutional/Industrial</fra></row>
+<row><code>DISINFECTANT_TYPE</code><eng>Disinfectant Type</eng><fra>fr_Disinfectant Type</fra></row>
+<row><code>DateReceived</code><eng>Date Received</eng><fra>fr_Date Received</fra></row>
+<row><code>Application_Number</code><eng>Application Number</eng><fra>fr_Application Number</fra></row>
+<row><code>NOTES</code><eng>Notes</eng><fra>fr_Notes</fra></row>
+<row><code>HC_NOTES</code><eng>Health Canada Notes</eng><fra>fr_Health Canada Notes</fra></row>
+<row><code>CSP_INFO</code><eng>Certificate of Supplementary Protection (CSP) Information</eng><fra>fr_Certificate of Supplementary Protection (CSP) Information</fra></row>
+<row><code>APPLICATION_INFO</code><eng>Application Information</eng><fra>fr_Application Information</fra></row>
+<row><code>APPLICATION_NAME</code><eng>Application Name</eng><fra>fr_Application Name</fra></row>
+<row><code>AGENT_NAME</code><eng>Agent Name</eng><fra>fr_Agent Name</fra></row>
+<row><code>APPLICANT_CONTACT_INFO</code><eng>Application Contact Information</eng><fra>fr_Application Contact Information</fra></row>
+<row><code>PATENT_INFO</code><eng>Patent Information</eng><fra>fr_Patent Information</fra></row>
+<row><code>CANADIAN_PATENT_NUMBER</code><eng>Canadian Patent Number</eng><fra>fr_Canadian Patent Numbers</fra></row>
+<row><code>PATENT_FILLING_DATE</code><eng>Patent Filling Date</eng><fra>fr_Patent Filling Date</fra></row>
+<row><code>PATENT_DATE_GRANTED</code><eng>Patent Date Granted</eng><fra>fr_Patent Date Granted</fra></row>
+<row><code>PATENT_EXPIREATION_DATE</code><eng>Patent Expiration Date</eng><fra>fr_Patent Expiration Date</fra></row>
+<row><code>NDS_INFO</code><eng>New Drug Submission(NDS) Information</eng><fra>fr_New Drug Submission(NDS) Information</fra></row>
+<row><code>NDS_NUMBER</code><eng>NDS Number</eng><fra>fr_NDS Number</fra></row>
+<row><code>NOTICE_OF_COMPLIANCE_DATE</code><eng>Notice of Compliance Date</eng><fra>fr_Notice of Compliance Date</fra></row>
+<row><code>NOC_DATE</code><eng>NOC Date</eng><fra>fr_NOC Date</fra></row>
+<row><code>DRUG_USE</code><eng>Drug Use</eng><fra>fr_Drug Use</fra></row>
+<row><code>TIMING_OF_APPLICATION</code><eng>Timing of Application</eng><fra>fr_Timing of Application</fra></row>
+<row><code>APPLICANT_APPLYING</code><eng>Applicant is applying</eng><fra>fr_Applicant is applying</fra></row>
+<row><code>APPLICANT_APPLYING_NOC</code><eng>on the basis of a patent granted on or before the day on which the Notice of Compliance (NOC) for the above noted NDS is issued (before the end of the 120-day period that begins on the day on which the NOC is issued)</eng><fra>fr_on the basis of a patent granted on or before the day on which the Notice of Compliance (NOC) for the above noted NDS is issued (before the end of the 120-day period that begins on the day on which the NOC is issued)</fra></row>
+<row><code>APPLICANT_APPLYING_GRANT</code><eng>on the basis of a patent granted after the day on which the Notice of Compliance (NOC) for the above noted NDS is issued (before the end of the 120-day period that begins on the day on which the patent is granted)</eng><fra>fr_on the basis of a patent granted after the day on which the Notice of Compliance (NOC) for the above noted NDS is issued (before the end of the 120-day period that begins on the day on which the patent is granted)</fra></row>
+<row><code>MEDICINAL_INGREDIENTS</code><eng>Notes</eng><fra>fr_Notes</fra></row>
+<row><code>MEDICINAL_INGREDIENTS_DESC</code><eng>Medicinal Ingredient(s) (as provided on the NOC for the NDS provided in Section 3)</eng><fra>fr_Medicinal Ingredient(s) (as provided on the NOC for the NDS provided in Section 3)</fra></row>
+<row><code>MEDICINAL_INGREDIENTS_PROD</code><eng>Product Name (as provided on the NOC for the NDS provided in Section 3)</eng><fra>fr_Product Name (as provided on the NOC for the NDS provided in Section 3)</fra></row>
+<row><code>ATTESTATIONS</code><eng>Attestations</eng><fra>fr_Attestations</fra></row>
+<row><code>ATTESTATIONS_APPLICANT</code><eng>Attestation as to Applicant</eng><fra>fr_Attestation as to Applicant</fra></row>
+<row><code>ATTESTATIONS_APPLICANT_OWNER</code><eng>The Applicant is the patentee and is recorded as an owner of the above noted Canadian Patent at the Canadian Intellectual Property Office</eng><fra>fr_The Applicant is the patentee and is recorded as an owner of the above noted Canadian Patent at the Canadian Intellectual Property Office</fra></row>
+<row><code>ATTESTATIONS_APPLICANT_APP</code><eng>The Applicant is a manufacturer who is authorized by the person recorded in the Canadian Intellectual Property Office as the owner of the above noted Canadian Patent to file this application on their behalf and the above noted NDS was issued to the Applicant.</eng><fra>fr_The Applicant is a manufacturer who is authorized by the person recorded in the Canadian Intellectual Property Office as the owner of the above noted Canadian Patent to file this application on their behalf and the above noted NDS was issued to the Applicant.</fra></row>
+<row><code>ATTESTATIONS_SUBMISSION</code><eng>Attestation as to Timely Submission</eng><fra>fr_Attestation as to Timely Submission</fra></row>
+<row><code>ATTESTATIONS_SUBMISSION_NOC</code><eng>When the application for the authorization for sale referred to in paragraph 106(1)(c) of the Patent Act (above noted NDS) was filed with the Minister of Health, no application for a marketing approval, equivalent to an authorization for sale, with respect to the medicinal ingredient or combination of medicinal ingredients, as the case may be, set out in this CSP application had been submitted in the European Union or any country that is a member of the European Union, the United States of America, Australia, Switzerland or Japan</eng><fra>fr_When the application for the authorization for sale referred to in paragraph 106(1)(c) of the Patent Act (above noted NDS) was filed with the Minister of Health, no application for a marketing approval, equivalent to an authorization for sale, with respect to the medicinal ingredient or combination of medicinal ingredients, as the case may be, set out in this CSP application had been submitted in the European Union or any country that is a member of the European Union, the United States of America, Australia, Switzerland or Japan</fra></row>
+<row><code>ATTESTATIONS_SUBMISSION_APP</code><eng>if one or more applications for a marketing approval, equivalent to an authorization for sale, with respect to the medicinal ingredient or combination of medicinal ingredients, as the case may be, set out in this CSP application had been submitted in one or more of the European Union or any country that is a member of the European Union, the United States of America, Australia, Switzerland or Japan, the application for the authorization for sale referred to in paragraph 106(1)(c) of the Patent Act (above noted NDS) was filed with the Minister of Health before the end of the 12 month period that begins on the date of submission of the first of those marketing approval applications. Details of the first of those marketing approval applications are as follows:</eng><fra>fr_if one or more applications for a marketing approval, equivalent to an authorization for sale, with respect to the medicinal ingredient or combination of medicinal ingredients, as the case may be, set out in this CSP application had been submitted in one or more of the European Union or any country that is a member of the European Union, the United States of America, Australia, Switzerland or Japan, the application for the authorization for sale referred to in paragraph 106(1)(c) of the Patent Act (above noted NDS) was filed with the Minister of Health before the end of the 12 month period that begins on the date of submission of the first of those marketing approval applications. Details of the first of those marketing approval applications are as follows:</fra></row>
+<row><code>DATE_FIRST_MARKETING</code><eng>Date of first marketing approval application</eng><fra>fr_Date of first marketing approval application</fra></row>
+<row><code>COUNTRY_FIRST_MARKETING</code><eng>Country of first marketing approval application</eng><fra>fr_Country of first marketing approval application</fra></row>
+<row><code>FEE_PAYMENT</code><eng>Fee Payment</eng><fra>fr_Fee Payment</fra></row>
+<row><code>FEE_PAYMENT_DESC</code><eng>The Advance Payment Details form is being submitted separately by fax or mail</eng><fra>fr_The Advance Payment Details form is being submitted separately by fax or mail </fra></row>
+<row><code>FEE_BEING_PAID</code><eng>The fee is being paid or the fee has been prepaid in the amount of (please enter the fee amount)</eng><fra>fr_The fee is being paid or the fee has been prepaid in the amount of (please enter the fee amount)</fra></row>
+<row><code>METHOD_PAYMENT</code><eng>Method of Payment </eng><fra>fr_Method of Payment </fra></row>
+<row><code>DATE</code><eng>Date</eng><fra>fr_Date</fra></row>
+<row><code>NAME_AUTHORIZED</code><eng>Name of Authorized Offical</eng><fra>fr_Name of Authorized Offical</fra></row>
+<row><code>CERTIFICATION</code><eng>Certification</eng><fra>fr_Certification</fra></row>
+<row><code>ORGANIZATION_NAME</code><eng>Organization Name</eng><fra>fr_Organization Name</fra></row>
+<row><code>CSP_FINANCIAL</code><eng>Payment through a Canadian Financial Institutio</eng><fra>fr_Payment through a Canadian Financial Institutio</fra></row>
+<row><code>CSP_CHEQUE</code><eng>Cheque / Bank Draft / Money Orde</eng><fra>fr_Cheque / Bank Draft / Money Orde</fra></row>
+<row><code>CSP_CREDIT_CARD</code><eng>MasterCard / Visa / American Express (AMEX) / Visa Debit / JCB International</eng><fra>fr_MasterCard / Visa / American Express (AMEX) / Visa Debit / JCB International</fra></row>
+<row><code>CSP_CREDIT</code><eng>Payment Using Existing Credit</eng><fra>fr_Payment Using Existing Credit</fra></row>
+<row><code>CSP_WIRE</code><eng>Wire</eng><fra>fr_Wire</fra></row>
+<row><code>CONTACT_ID</code><eng>Contact ID</eng><fra>fr_Contact ID</fra></row>
+<row><code>STATUS</code><eng>Status</eng><fra>fr_Status</fra></row>
+<row><code>ANIMAL_NONHUMANPRIMATE_TYPE</code><eng>Non-human primate type</eng><fra>fr_Non-human primate type</fra></row>
+<row><code>ANIMAL_AQUATIC_TYPE</code><eng>Aquatic species such as fish, molluscs and crustacean</eng><fra>fr_Aquatic species such as fish, molluscs and crustacean</fra></row>
+<row><code>ANIMAL_AVIAN_TYPE</code><eng>Avian such as chicken, turkey and duck</eng><fra>fr_Avian such as chicken, turkey and duck</fra></row>
+<row><code>ANIMAL_BOVINE_TYPE</code><eng>Bovine such as cattle, bison type</eng><fra>fr_Bovine such as cattle, bison type</fra></row>
+<row><code>ANIMAL_CANINE_TYPE</code><eng>Canine type</eng><fra>fr_Canine type</fra></row>
+<row><code>ANIMAL_CAPRINE_TYPE</code><eng>Caprine such as goat type</eng><fra>fr_Caprine such as goat type</fra></row>
+<row><code>ANIMAL_CERVIDAE_TYPE</code><eng>Cervidae such as deer, elk(wapiti) and moose type</eng><fra>fr_Cervidae such as deer, elk(wapiti) and moose type</fra></row>
+<row><code>ANIMAL_EQUINE_TYPE</code><eng>Equine such as horse type</eng><fra>fr_Equine such as horse type</fra></row>
+<row><code>ANIMAL_FELINE_TYPE</code><eng>Feline such as cat type</eng><fra>fr_Feline such as cat type</fra></row>
+<row><code>ANIMAL_OVINE_TYPE</code><eng>Ovine type</eng><fra>fr_Ovine type</fra></row>
+<row><code>ANIMAL_PORCINE_TYPE</code><eng>Porcine such as pig type</eng><fra>fr_Porcine such as pig type</fra></row>
+<row><code>ANIMAL_RODENT_TYPE</code><eng>Rodents such as mouse, hamster, rat and rabbit type</eng><fra>fr_Rodents such as mouse, hamster, rat and rabbit type</fra></row>
+<row><code>ANIMAL_OTHERANIMAL_TYPE</code><eng>Other animal type</eng><fra>fr_Other animal type</fra></row>
+<row><code>MANUFACTURE_CO_ID</code><eng>Manufacturer Company ID</eng><fra>fr_Manufacturer Company ID</fra></row>
+<row><code>MANUFACTURE_CONTACT_ID</code><eng>Manufacturer Contact ID</eng><fra>fr_Manufacturer Contact ID</fra></row>
+<row><code>DEVICE_CLASS</code><eng>Device Class</eng><fra>fr_Device Class</fra></row>
+<row><code>DEVICE_NAME</code><eng>Device Name</eng><fra>fr_Device Name</fra></row>
+<row><code>QC_MANAGE_SYS_CERTIFICATE</code><eng>Quality Management System Certificate (QMSC) is available</eng><fra>fr_Quality Management System Certificate (QMSC) is available</fra></row>
+<row><code>QMSC_REGISTRAR</code><eng>QMSC registrar</eng><fra>fr_QMSC registrar</fra></row>
+<row><code>LICENCE_APP_TYPE</code><eng>Licence Application Type</eng><fra>fr_Licence Application Type</fra></row>
+<row><code>ADDITIONAL_FLD_CONTXT</code><eng>Additional field for context</eng><fra>fr_Additional field for context</fra></row>
+<row><code>DOSSIER_ENROL</code><eng>Dossier Template: Regulatory Enrolment Process (REP)</eng><fra>fr_Dossier Template: Regulatory Enrolment Process (REP)</fra></row>
+<row><code>CSP_TITLE</code><eng>Certificate of Supplementary Protection (CSP) Application Form</eng><fra>fr_Certificate of Supplementary Protection (CSP) Application Form</fra></row>
+<row><code>QMSC_NO</code><eng>QMSC #</eng><fra>fr_QMSC #</fra></row>
+<row><code>PLACE_OF_USE</code><eng>Place of use</eng><fra>fr_Place of use</fra></row>
+<row><code>DEVICE_HISTORY</code><eng>Device History</eng><fra>fr_Device History</fra></row>
+<row><code>DOSSIER_ID</code><eng>Dossier ID</eng><fra>fr_Dossier ID</fra></row>
+<row><code>IS_IVDD</code><eng>Is this device an IVDD?</eng><fra>fr_Is this device an IVDD?</fra></row>
+<row><code>APPLICATION_INFO_TMPL</code><eng>Application Information Template</eng><fra>fr_Application Information Template</fra></row>
+<row><code>IS_FOR_HOME</code><eng>Is this sold for home use?</eng><fra>fr_Is this sold for home use?</fra></row>
+<row><code>IS_FOR_CARE</code><eng>Is this device used at a point of care, such as pharmacy, bedside, or healthcare professional's office?</eng><fra>fr_Is this device used at a point of care, such as pharmacy, bedside, or healthcare professional's office?</fra></row>
+<row><code>ANY_RADIATION</code><eng>Do any of the devices contained in this application emit radiation?</eng><fra>fr_Do any of the devices contained in this application emit radiation?</fra></row>
+<row><code>CONTAIN_DRUG</code><eng>Does this device contain a drug?</eng><fra>fr_Does this device contain a drug?</fra></row>
+<row><code>DRUG_NUMBER_TYPE</code><eng>Does the drug have a Drug Identification Number (DIN) or the Natural Product Number (NPN)</eng><fra>fr_Does the drug have a Drug Identification Number (DIN) or the Natural Product Number (NPN)</fra></row>
+<row><code>DRUG_DIN</code><eng>Drug Identification Number (DIN)</eng><fra>fr_Drug Identification Number (DIN)</fra></row>
+<row><code>DRUG_NPN</code><eng>Natural Product Number (NPN)</eng><fra>fr_Natural Product Number (NPN)</fra></row>
+<row><code>DRUG_OTHER_INFO</code><eng>For combination products, please complete the information listed below with respect to the drug or drug substance. </eng><fra>fr_For combination products, please complete the information listed below with respect to the drug or drug substance. </fra></row>
+<row><code>DRUG_BRD_NAME</code><eng>Brand/Trade Name of Drug</eng><fra>fr_Brand/Trade Name of Drug</fra></row>
+<row><code>DRUG_ACT_INGREDIENT</code><eng>Active Ingredient(s)</eng><fra>fr_Active Ingredient(s)</fra></row>
+<row><code>DRUG_MANUFACTURER</code><eng>Manufacturer</eng><fra>fr_Manufacturer</fra></row>
+<row><code>DRUG_COMPLIANCE</code><eng>Compliance</eng><fra>fr_Compliance</fra></row>
+<row><code>DRUG_SPECIFY</code><eng>Specify other pharmacopeia</eng><fra>fr_Specify other pharmacopeia</fra></row>
+<row><code>DRUG_USP</code><eng>USP</eng><fra>fr_USP</fra></row>
+<row><code>DRUG_GMP</code><eng>GMP</eng><fra>fr_GMP</fra></row>
+<row><code>DRUG_OTHER</code><eng>Other Pharmcopeia</eng><fra>fr_Other Pharmcopeia</fra></row>
+<row><code>HAS_PRE_AUTH_IN_CA</code><eng>Has this device been previously authorized for sale in Canada under the following provisions of the Medical Devices Regulations: </eng><fra>fr_Has this device been previously authorized for sale in Canada under the following provisions of the Medical Devices Regulations</fra></row>
+<row><code>INVST_TST</code><eng>Investigational Testing</eng><fra>fr_Investigational Testing</fra></row>
+<row><code>SPL_ACC</code><eng>Special Access</eng><fra>fr_Special Access</fra></row>
+<row><code>application_number</code><eng>Application number</eng><fra>fr_Application number</fra></row>
+<row><code>sap_request_number</code><eng>SAP Request number</eng><fra>fr_SAP Request number</fra></row>
+<row><code>COMPATIBLE_DEVICE</code><eng>Compatibility of interdependent devices</eng><fra>fr_Compatibility of interdependent devices</fra></row>
+<row><code>INTERDEPENDENT_DEVICE</code><eng>Interdependent Device</eng><fra>fr_Interdependent Device</fra></row>
+<row><code>COMPATIBLE_DEV_NM</code><eng>Name of Compatible Device</eng><fra>fr_Name of Compatible Device</fra></row>
+<row><code>DEVICE_LICENCE</code><eng>Licence number or application number</eng><fra>fr_Licence number or application number</fra></row>
+<row><code>LIST_MANUFACTURE_STANDARDS</code><eng>List of Recognized Standards Complied with in the manufacture of the Device</eng><fra>fr_List of Recognized Standards Complied with in the manufacture of the Device</fra></row>
+<row><code>DECLARATION_COMFORMITY</code><eng>Declaration of Conformity form (available on the Health Canada website) confirms that the medical device(s) comply with Recognized Standards or equivalent or better standards</eng><fra>fr_Declaration of Conformity form (available on the Health Canada website) confirms that the medical device(s) comply with Recognized Standards or equivalent or better standards</fra></row>
+<row><code>DECLARATION_COMFORMITY_NO</code><eng>Health Canada can not process your medical Device Licence Application without the "Declaration of Conformity"</eng><fra>fr_Health Canada can not process your medical Device Licence Application without the "Declaration of Conformity"</fra></row>
+<row><code>BIO_MATERIAL_CONTAIN</code><eng>Devices containing Biological Material</eng><fra>fr_Devices containing Biological Material</fra></row>
+<row><code>BIO_DEVICE_RECOMBINANT</code><eng>Does this device consist of recombinant material?</eng><fra>fr_Does this device consist of recombinant material?</fra></row>
+<row><code>BIO_DEVICE_HUMAN_ANIMAL</code><eng>Does this device contain, or is it produced using, any animal or human sourced material?</eng><fra>fr_Does this device contain, or is it produced using, any animal or human sourced material?</fra></row>
+<row><code>BIO_IS_DEHP_BPA</code><eng>Is the Biological Material the same for All Devices Listed in "Identifier of Devices - DEHP/BPA" Table?</eng><fra>fr_Is the Biological Material the same for All Devices Listed in "Identifier of Devices - DEHP/BPA" Table?</fra></row>
+<row><code>BIO_MATERIAL_ATT_TAB</code><eng>Biological Material Attribute Table</eng><fra>fr_Biological Material Attribute Table</fra></row>
+<row><code>BIO_MATERIAL</code><eng>Biological Material</eng><fra>fr_Biological Material</fra></row>
+<row><code>NAME_OF_MATERIAL</code><eng>Name of Material</eng><fra>fr_Name of Material</fra></row>
+<row><code>NAME_OF_COMPATIBLE</code><eng>Name of Compatible Device</eng><fra>fr_Name of Compatible Device</fra></row>
+<row><code>ORIGIN_COUNTRY</code><eng>Country of Origin (for animals only)</eng><fra>fr_Country of Origin (for animals only)</fra></row>
+<row><code>SPECIES_FAMILY</code><eng>Family of Species</eng><fra>fr_Family of Species</fra></row>
+<row><code>TISSUE_TYPE</code><eng>Tissue/Substance Type</eng><fra>fr_Tissue/Substance Type</fra></row>
+<row><code>TISSUE_TYPE_OTHER</code><eng>Tissue Type Other details</eng><fra>fr_Tissue Type Other details</fra></row>
+<row><code>DERIVATIVE</code><eng>Derivative</eng><fra>fr_Derivative</fra></row>
+<row><code>DERIVATIVE_OTHER</code><eng>Derivative Other Details</eng><fra>fr_Derivative Other Details</fra></row>
+<row><code>REG_TRANS_INFO</code><eng>Regulatory Transaction Information</eng><fra>fr_Regulatory Transaction Information</fra></row>
+<row><code>REG_INFO</code><eng>Regulatory Information</eng><fra>fr_Regulatory Information</fra></row>
+<row><code>MANUFACTURING_COMPANY_ID</code><eng>Manufacturing Company ID</eng><fra>fr_Manufacturing Company ID</fra></row>
+<row><code>MANUFACTURING_CONTACT_ID</code><eng>Manufacturing Contact ID</eng><fra>fr_Manufacturing Contact ID</fra></row>
+<row><code>Activity_Lead</code><eng>Activity Lead</eng><fra>fr_Activity Lead</fra></row>
+<row><code>Reg_Activity_Type</code><eng>Regulatory Activity Type</eng><fra>fr_Regulatory Activity Type</fra></row>
+<row><code>Transaction_Desc</code><eng>Transaction Description</eng><fra>fr_Transaction Description</fra></row>
+<row><code>Concat_Transaction_Desc</code><eng>Concat Transaction Description</eng><fra>fr_Concat Transaction Description</fra></row>
+<row><code>Date_of_Request</code><eng>Date of Request</eng><fra>fr_Date of Request</fra></row>
+<row><code>Device_details_table</code><eng>Device details table included</eng><fra>fr_Device details table included</fra></row>
+<row><code>App_Info_XML_Include</code><eng>Application information XML included in transaction</eng><fra>fr_Application information XML included in transaction</fra></row>
+<row><code>Transaction_Req_Info</code><eng>Transaction Requester Information</eng><fra>fr_Transaction Requester Information</fra></row>
+<row><code>Transaction_Req_Detail</code><eng>Transaction Requester Detail</eng><fra>fr_Transaction Requester Detail</fra></row>
+<row><code>Device_Class</code><eng>Device Class</eng><fra>fr_Device Class</fra></row>
+<row><code>Reason_for_Amendment</code><eng>Reason for filing this Amendment</eng><fra>fr_Reason for filing this Amendment</fra></row>
+<row><code>classification_change</code><eng>Change to the classification of a device</eng><fra>fr_Change to the classification of a device</fra></row>
+<row><code>licence_change</code><eng>Change in the licence name</eng><fra>fr_Change in the licence name</fra></row>
+<row><code>device_change</code><eng>Change in the device name</eng><fra>fr_Change in the device name</fra></row>
+<row><code>Chg_to_purpose_indication</code><eng>Change to the purpose/indication of a device</eng><fra>fr_Change to the purpose/indication of a device</fra></row>
+<row><code>Licence_Number</code><eng>Licence Number</eng><fra>fr_Licence Number</fra></row>
+<row><code>process_change</code><eng>Significant change in manufacturing process, facility of equipment</eng><fra>fr_Significant change in manufacturing process, facility of equipment</fra></row>
+<row><code>quality_change</code><eng>Significant change in manufacturing quality control procedures</eng><fra>fr_Significant change in manufacturing quality control procedures</fra></row>
+<row><code>design_change</code><eng>Significant change in design or performance</eng><fra>fr_Significant change in design or performance</fra></row>
+<row><code>materials_change</code><eng>Significant change in materials</eng><fra>fr_Significant change in materials</fra></row>
+<row><code>labelling_change</code><eng>Significant change in the labelling of the device</eng><fra>fr_Significant change in the labelling of the device</fra></row>
+<row><code>safety_change</code><eng>Any change which could affect the safety and effectiveness of the device</eng><fra>fr_Any change which could affect the safety and effectiveness of the device</fra></row>
+<row><code>purpose_change</code><eng>Change to the purpose/indication of a device</eng><fra>fr_Change to the purpose/indication of a device</fra></row>
+<row><code>add_delete_change</code><eng>Addition/Deletion/Change</eng><fra>fr_Addition/Deletion/Change</fra></row>
+<row><code>TRANSACTION_INFO_TMPL</code><eng>Regulatory Transaction Template: Regulatory Enrolment Process (REP)</eng><fra>fr_Regulatory Transaction Template: Regulatory Enrolment Process (REP)</fra></row>
+<row><code>All_Licence_Number</code><eng>All impacted licence number(s)</eng><fra>fr_All impacted licence number(s)</fra></row>
+<row><code>All_Dossier_ID</code><eng>All Dossier ID</eng><fra>fr_All Dossier ID</fra></row>
+<row><code>Company_Administrative_Changes</code><eng>Company Administrative Changes</eng><fra>fr_Company Administrative Changes</fra></row>
+<row><code>Is_there_change_name</code><eng>Is there a change to the regulatory correspondent's name and/or address</eng><fra>fr_Is there a change to the regulatory correspondent's name and/or address</fra></row>
+<row><code>Reason_Amendment</code><eng>Reason for Amendment</eng><fra>fr_Reason for Amendment</fra></row>
+<row><code>Change_Name</code><eng>Change in manufacturer's name</eng><fra>fr_Change in manufacturer's name</fra></row>
+<row><code>Change_Address</code><eng>Change in manufacturer's address</eng><fra>fr_Change in manufacturer's address</fra></row>
+<row><code>Change_facility</code><eng>Change only to the name and/or address of the manufacturing facility</eng><fra>fr_Change only to the name and/or address of the manufacturing facility</fra></row>
+<row><code>Contact_Name</code><eng>Contact's Name</eng><fra>fr_Contact's Name</fra></row>
+<row><code>MEETING_ID</code><eng>Meeting ID</eng><fra>fr_Meeting ID</fra></row>
+<row><code>Proposed_Licence_Name</code><eng>Proposed licence name</eng><fra>fr_Proposed licence name</fra></row>
+<row><code>FINAL</code><eng>Final</eng><fra>fr_Final</fra></row>
+<row><code>Mitigation_Measures</code><eng>Mitigation Measures</eng><fra>fr_Mitigation Measures</fra></row>
+<row><code>Mitigation_Measures_For</code><eng>The following mitigation measures are available (select one). Sponsors must certify that they meet the criteria as outlined in the Food and Drug Regulations.</eng><fra>fr_The following mitigation measures are available (select one). Sponsors must certify that they meet the criteria as outlined in the Food and Drug Regulations.</fra></row>
+<row><code>Small_Business_1</code><eng>We certify that our organization, including its affiliates, has</eng><fra>fr_We certify that our organization, including its affiliates, has</fra></row>
+<row><code>Small_Business_Note</code><eng>a) a total number of employees less than 100 people, or</eng><fra>fr_a) a total number of employees less than 100 people, or</fra></row>
+<row><code>Small_Business_Note</code><eng>b) a total annual gross revenue between $30,000 and $5 million. </eng><fra>fr_b) a total annual gross revenue between $30,000 and $5 million. </fra></row>
+<row><code>Small_Business_2</code><eng>We have completed the Small Business Fee Mitigation Application and attached it with our submission/application. </eng><fra>fr_We have completed the Small Business Fee Mitigation Application and attached it with our submission/application. </fra></row>
+<row><code>Goverment_1</code><eng>We certify that our organization is a branch or agency of the Government of Canada or of a province or territory </eng><fra>fr_We certify that our organization is a branch or agency of the Government of Canada or of a province or territory </fra></row>
+<row><code>Public_1</code><eng>We certify that our institution is funded by the Government of Canada or the government of a province or territory and that it is</eng><fra>fr_We certify that our institution is funded by the Government of Canada or the government of a province or territory and that it is</fra></row>
+<row><code>Public_Note</code><eng>a) licensed, approved or designated by a province in accordance with the laws of the province to provide care or treatment to persons or animals suffering from any form of disease or illness; or </eng><fra>fr_a) licensed, approved or designated by a province in accordance with the laws of the province to provide care or treatment to persons or animals suffering from any form of disease or illness; or</fra></row>
+<row><code>Public_Note</code><eng>b) owned or operated by the Government of Canada or the government of a province and that provides health services.</eng><fra>fr_b) owned or operated by the Government of Canada or the government of a province and that provides health services.</fra></row>
+<row><code>Urgent_Public_1</code><eng>We certify that the drug in our submission/application is on the List of Drugs for an Urgent Public Health Need as per the Access to Drugs in Exceptional Circumstances Regulations AND</eng><fra>fr_We certify that the drug in our submission/application is on the List of Drugs for an Urgent Public Health Need as per the Access to Drugs in Exceptional Circumstances Regulations AND</fra></row>
+<row><code>Urgent_Public_Note</code><eng>a) the drug has the same medicinal ingredient, strength and route of administration, and is in a comparable dosage form, as a drug that may be imported under subsection C.10.001(2) of those Regulations;</eng><fra>fr_a) the drug has the same medicinal ingredient, strength and route of administration, and is in a comparable dosage form, as a drug that may be imported under subsection C.10.001(2) of those Regulations;</fra></row>
+<row><code>Urgent_Public_Note</code><eng>b) no drug identification number has been assigned under section C.01.014.2 of those Regulations for the drug or for another drug that has the same medicinal ingredient, strength and route of administration and is in a comparable dosage form; and</eng><fra>fr_b) no drug identification number has been assigned under section C.01.014.2 of those Regulations for the drug or for another drug that has the same medicinal ingredient, strength and route of administration and is in a comparable dosage form; and</fra></row>
+<row><code>Urgent_Public_Note</code><eng>c) no notice of compliance has been issued under section C.08.004 of those Regulations in respect of the drug or another drug that has the same medicinal ingredient, strength and route of administration and is in a comparable dosage form.</eng><fra>fr_c) no notice of compliance has been issued under section C.08.004 of those Regulations in respect of the drug or another drug that has the same medicinal ingredient, strength and route of administration and is in a comparable dosage form.</fra></row>
+<row><code>First_Submit</code><eng>This is my first submission/application</eng><fra>fr_This is my first submission/application</fra></row>
+<row><code>Are_Licenses_Transfered</code><eng>Are any ownership of licenses being transferred</eng><fra>fr_Are any ownership of licenses being transferred</fra></row>
+<row><code>DELETE</code><eng>Delete</eng><fra>fr_Delete</fra></row>
+<row><code>VARIANT_NAME</code><eng>Variant Name</eng><fra>fr_Variant Name</fra></row>
+<row><code>PURPOSE</code><eng>Purpose</eng><fra>fr_Purpose</fra></row>
+<row><code>CLINICAL_TRIAL</code><eng>Clinical Trial</eng><fra>fr_Clinical Trial</fra></row>
+<row><code>has_drug</code><eng>Does  this device contain a drug</eng><fra>fr_Does  this device contain a drug</fra></row>
+<row><code>THIRD_PARTY_ENROL</code><eng>Is this enrolment completed by a third party</eng><fra>fr_Is this enrolment completed by a third party</fra></row>
+<row><code>COMPANY_ID_REP</code><eng>Company ID for REP Contact</eng><fra>fr_Company ID for REP Contact</fra></row>
+<row><code>CONTACT_ID_REP</code><eng>Contact ID for REP Contact</eng><fra>fr_Contact ID for REP Contact</fra></row>
+<row><code>REP_CONTACT_NAME</code><eng>REP Contact's Name</eng><fra>fr_REP Contact's Name</fra></row>
+<row><code>ADMIN_CHANGE_NOTE1</code><eng>Please include the page 1 of each impacted licence, a valid Quality Management System Certificate (QMSC) that reflects the change in manufacturer name or address, a completed F202 form, signed attestation as applicable.</eng><fra>fr_??????????</fra></row>
+<row><code>ADMIN_CHANGE_NOTE2</code><eng>The revised manufacturer's name should be listed in the "company name" field in address information section above</eng><fra>fr_???????</fra></row>
+<row><code>ADMIN_CHANGE_NOTE3</code><eng>The revised manufacturer's address should be listed in the fields in address information section above</eng><fra>fr_???????</fra></row>
+<row><code>ADMIN_CHANGE_NOTE4</code><eng>Please include a signed attestation for manufacturing facility name/address change</eng><fra>fr_???????</fra></row>
+<row><code>NEW_REVISED_FEES</code><eng>Are new fees or revised fees associated with this transactions</eng><fra>fr_Are new fees or revised fees associated with this transactions</fra></row>
+<row><code>BILLING_COMPANY_ID</code><eng>Billing company ID</eng><fra>fr_Billing company ID</fra></row>
+<row><code>BILLING_CONTACT_ID</code><eng>Billing contact ID</eng><fra>fr_Billing contact ID</fra></row>
+<row><code>COMPLETED_FEE_REQUIRED</code><eng>A completed fee form is still required, however, the applicable fees will be invoiced.</eng><fra>fr_A completed fee form is still required, however, the applicable fees will be invoiced.</fra></row>
+</SimpleCodeList>
