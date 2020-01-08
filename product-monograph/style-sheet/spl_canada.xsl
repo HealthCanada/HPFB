@@ -17,7 +17,7 @@
 	<!-- Whether to show section numbers, set to 1 to enable and "/.." to turn off-->
 	<xsl:param name="show-section-numbers" select="/.."/>	
 	<!-- This is the CSS link put into the output -->
-	<xsl:param name="css">https://cease353.github.io/xtest/current/spl_canada.css</xsl:param>
+	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/spl_canada.css</xsl:param>
 
 	<xsl:variable name="lang">
 		<xsl:choose>
