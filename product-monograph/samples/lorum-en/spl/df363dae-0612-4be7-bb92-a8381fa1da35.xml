@@ -6,7 +6,7 @@
     <id root="df363dae-0612-4be7-bb92-a8381fa1da35"/>
     <code code="1" codeSystem="2.16.840.1.113883.2.20.6.10"
         displayName="2016 PRODUCT MONOGRAPH TEMPLATE - STANDARD"/>
-    <title><sup>Pr</sup>LORUM IPSUM (acetaminophen), TABLET, CAPSULE, POWDER</title>
+    <title>LORUM IPSUM (acetaminophen), TABLET, CAPSULE, POWDER</title>
     <effectiveTime value="20180101">
         <!-- Date of Last Revision -->
         <originalText description="Date of Initial Approval">20170101</originalText>
