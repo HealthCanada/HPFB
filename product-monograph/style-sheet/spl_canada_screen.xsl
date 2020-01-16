@@ -209,14 +209,7 @@
 			<meta name="documentEffectiveTime">
 				<xsl:attribute name="content"><xsl:value-of select="v3:effectiveTime/@value"/></xsl:attribute>
 			</meta>
-			<title><xsl:value-of select="v3:title"/></title>
-<!-- pmh - these are inherited Government of Canada Styles for Headers and Footers -->
-<!--			<link rel="stylesheet" href="https://canada.ca/etc/designs/canada/wet-boew/css/wet-boew.min.css"/>
-			<link rel="stylesheet" href="https://canada.ca/etc/designs/canada/wet-boew/css/theme.min.css"/>
-			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
-			<link href="https://canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon"/>
-			<noscript><link rel="stylesheet" href="https://canada.ca/etc/designs/canada/wet-boew/css/noscript.min.css"/></noscript> -->
-			
+			<title><xsl:value-of select="v3:title"/></title>			
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
 			<link rel="stylesheet" href="{$css}"/>
 			<style>
@@ -232,36 +225,21 @@
 					top: 0;
 				}
 
-/* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697:
-@media print {
-	.col, *[class^="col-"] {		
-		max-width: none !important; 
-	}
-} */
-
-
-/* pmh - I do not think this is going to work: */
-/*a::after {
-content: ", page " target-counter(attr(href), page );
-}
-.frontmatter a::after { content: leader('.') target-counter(attr(href url), page, lower-roman) }
-.bodymatter a::after { content: leader('.') target-counter(attr(href url), page, decimal) }
-@page { counter-increment: page }
-#pageNumber { content: counter(page) } */
-
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 			</style>
 		</head>
 	</xsl:template>	
-	
+
+	<!-- script tags are character unencoded to prevent transformation to singleton script tags, 
+		 which are not supported by all browsers -->
 	<xsl:template name="canada-screen-body-footer">
-		<!-- <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script> -->
-		<!-- perhaps Stickyfill should have cross origin integrity? 4.1.3 is the current "Aurora" version of Bootstrap, and I have upgraded to the latest, 4.4.1 -->
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.0.5/stickyfill.min.js"></script>
+		<xsl:text disable-output-escaping="yes">
+&lt;script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.0.5/stickyfill.min.js"&gt;&lt;/script&gt;
+		</xsl:text>
 		<script>
 			try {
 			  var elements = document.querySelectorAll('.sticky');
