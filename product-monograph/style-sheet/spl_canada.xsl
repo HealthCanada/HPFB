@@ -774,7 +774,7 @@
 								<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
 							</h5>
 							<div class="spl">
-								<xsl:apply-templates mode="print" select="v3:author/v3:assignedEntity/v3:representedOrganization"/>
+								<xsl:apply-templates mode="print" select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization"/>
 								<xsl:apply-templates mode="print" select="//v3:subject/v3:manufacturedProduct"/>
 							</div>
 						</section>
@@ -824,48 +824,6 @@
 						<xsl:apply-templates select="v3:component/v3:structuredBody" mode="main-document"/>
 					</div>
 				</div>
-<!--				<div class="global-footer">
-					<footer id="wb-info">
-						<div class="landscape">
-							<nav class="container wb-navcurr">
-								<h2 class="wb-inv">About government</h2>
-								<ul class="list-unstyled colcount-sm-2 colcount-md-3">               
-									<li><a href="/en/contact.html">Contact us</a></li>            
-									<li><a href="/en/government/dept.html">Departments and agencies</a></li>     
-									<li><a href="/en/government/publicservice.html">Public service and military</a></li>
-									<li><a href="/en/news.html">News</a></li>  
-									<li><a href="/en/government/system/laws.html">Treaties, laws and regulations</a></li>
-									<li><a href="/en/transparency/reporting.html">Government-wide reporting</a></li>
-									<li><a href="http://pm.gc.ca/en">Prime Minister</a></li>
-									<li><a href="/en/government/system.html">About government</a></li>
-									<li><a href="http://open.canada.ca/en">Open government</a></li>   
-								</ul>
-							</nav>
-						</div>
-						<div class="brand">
-							<div class="container">
-								<div class="row">
-									<nav class="col-md-10 ftr-urlt-lnk">
-										<h2 class="wb-inv">About this site</h2>
-										<ul>                             
-											<li><a href="/en/social.html">Social media</a></li>
-											<li><a href="/en/mobile.html">Mobile applications</a></li>
-											<li><a href="/en/government/about.html">About Canada.ca</a></li>
-											<li><a href="/en/transparency/terms.html">Terms and conditions</a></li>
-											<li><a href="/en/transparency/privacy.html">Privacy</a></li>
-										</ul>
-									</nav>
-									<div class="col-xs-6 visible-sm visible-xs tofpg">
-										<a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a>
-									</div>
-									<div class="col-xs-6 col-md-2 text-right">
-										<img src="http://canada.ca/etc/designs/canada/wet-boew/assets/wmms-blk.svg" alt="Symbol of the Government of Canada"/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</footer>
-				</div> -->
 				<xsl:call-template name="canada-screen-body-footer"/>
 			</body>
 		</html>

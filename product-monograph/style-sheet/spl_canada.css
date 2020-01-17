@@ -902,6 +902,9 @@ margin-bottom: 2ex;
 @media print {	
 
 .hide-in-print { display: none !important; }		
+.force-page-break-before { page-break-before: always; }
+.force-page-break-after { page-break-after: always; }
+/* pmh - eventually deprecate force-page-break and suppress-page-break */
 .force-page-break { page-break-after: always; }
 .suppress-page-break { page-break-after: avoid; }
 .card { border-width: 0 !important; }
