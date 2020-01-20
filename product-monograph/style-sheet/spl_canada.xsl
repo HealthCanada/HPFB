@@ -593,10 +593,10 @@
 		<xsl:param name="path" select="."/>
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 			<tr>
-				<td colspan="5" class="formHeadingTitle"><xsl:value-of select="$labels/partQuantity[@lang = $lang]"/></td>
+				<td colspan="3" class="formHeadingTitle"><xsl:value-of select="$labels/partQuantity[@lang = $lang]"/></td>
 			</tr>
 			<tr>
-				<th scope="col" width="5" class="formTitle"><xsl:value-of select="$labels/partNumber[@lang = $lang]"/></th>
+				<th scope="col" class="formTitle"><xsl:value-of select="$labels/partNumber[@lang = $lang]"/></th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/pkgQuantity[@lang = $lang]"/></th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/ttlProdQty[@lang = $lang]"/></th>
 			</tr>
@@ -608,7 +608,7 @@
 							<xsl:otherwise>formTableRowAlt</xsl:otherwise>
 						</xsl:choose>
 					</xsl:attribute>
-					<td width="5" class="formItem">
+					<td class="formItem">
 						<strong><xsl:value-of select="$labels/part[@lang = $lang]"/> <xsl:value-of select="position()"/></strong>
 					</td>
 					<td class="formItem">
