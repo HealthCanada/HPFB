@@ -36,13 +36,9 @@ be represented
 							
 @media print {
 @page { 
-        size:8.5in 11in; 
-/* pmh - using default margins - not sure why the margins were set to 0pt for FDA
-    margin:0pt;
-	margin-left:0pt;
-	margin-right:0pt;
-	margin-top:0pt;
-	margin-bottom:0pt; */
+    size:8.5in 11in; 
+	margin-top: 0.5in;
+	margin-bottom: 0.5in;
 	orphans:4; 
 	widows:2;
 }
