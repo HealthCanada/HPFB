@@ -98,14 +98,6 @@
 											</a>
 										</li>
 									</xsl:when>
-									<!-- LEGACY - REMOVE WHEN THESE CODES ARE FULLY DEPRECATED -->
-									<xsl:when test="v3:code[@code='TP']|v3:code[@code='RMLC']">
-										<li class="nav-item">
-											<a href="#{$unique-section-id}" class="nav-link nav-top">
-												<xsl:value-of select="v3:code/@displayName"/>
-											</a>
-										</li>
-									</xsl:when>
 									<xsl:otherwise>
 										<!-- NAVIGATION FOR DIFFERENT PARTS -->
 										<li class="nav-item">
@@ -186,7 +178,7 @@
 				<xsl:apply-templates mode="data" select="."/>
 			</xsl:if>
 			<xsl:apply-templates select="@*|node()[not(self::v3:title)]"/>
-<!--			<xsl:call-template name="flushSectionTitleFootnotes"/> -->
+			<xsl:call-template name="flushSectionTitleFootnotes"/>
 		</div>
 	</xsl:template>
 
