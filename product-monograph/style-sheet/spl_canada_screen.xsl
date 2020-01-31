@@ -11,6 +11,7 @@
 	<xsl:template match="//v3:author/v3:assignedEntity/v3:representedOrganization" mode="card">
 		<section class="card m-2" id="company-details">
 			<h6 class="card-header p-0 bg-aurora-accent2">
+				<!-- pmh - this is how one might make product accordions optional -->
 <!--				<div class="text-white text-left d-none d-md-block p-2">
 					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
 				</div> --> <!--  dropdown-toggle below caused problems with rwd, and possibly w-100 -->
@@ -98,6 +99,14 @@
 											</a>
 										</li>
 									</xsl:when>
+									<!-- LEGACY - REMOVE WHEN THESE CODES ARE FULLY DEPRECATED -->
+									<xsl:when test="v3:code[@code='TP']|v3:code[@code='RMLC']">
+										<li class="nav-item">
+											<a href="#{$unique-section-id}" class="nav-link nav-top">
+												<xsl:value-of select="v3:code/@displayName"/>
+											</a>
+										</li>
+									</xsl:when>
 									<xsl:otherwise>
 										<!-- NAVIGATION FOR DIFFERENT PARTS -->
 										<li class="nav-item">
@@ -145,41 +154,51 @@
 		</li>
 	</xsl:template>
 		
+	<!-- SECTION NUMBER MODE -->
+	<!-- Special mode to construct a section number. Apply to a sequence of sections on the ancestor-or-self axis. -->
+	<!-- Shallow null-transform for anything but sections. -->
+	<!-- pmh - we could move this to spl_canada.xsl, but it contains child apply-templates -->
+	<!-- can we just deprecate these two templates completely? No. -->
+	<xsl:template mode="sectionNumber" match="/|@*|node()"/>
+	<xsl:template mode="sectionNumber" match="v3:section">
+		<xsl:value-of select="concat('.',count(parent::v3:component/preceding-sibling::v3:component[v3:section])+1)"/>
+	</xsl:template>
+		
 	<!-- SECTION MODEL - is this kludgey to just override this? -->
 	<xsl:template match="v3:section">
-		<xsl:param name="standardSection" select="$standardSections//v3:section[@code=current()/v3:code/descendant-or-self::*[(self::v3:code or self::v3:translation) and @codeSystem='2.16.840.1.113883.6.1']/@code]"/>
 		<xsl:param name="sectionLevel" select="count(ancestor-or-self::v3:section)"/>
 		<xsl:variable name="sectionNumberSequence">
 			<xsl:apply-templates mode="sectionNumber" select="ancestor-or-self::v3:section"/>
 		</xsl:variable>
-		<div class="Section">
-			<xsl:for-each select="v3:code">
-				<xsl:attribute name="data-sectionCode"><xsl:value-of select="@code"/></xsl:attribute>
-			</xsl:for-each>
+			<div class="Section">
+				<xsl:for-each select="v3:code">
+					<xsl:attribute name="data-sectionCode"><xsl:value-of select="@code"/></xsl:attribute>
+				</xsl:for-each>
 
-			<xsl:for-each select="@ID"><!-- AURORA SPECIFIC -->
-				<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
-			</xsl:for-each>
+				<xsl:for-each select="@ID"><!-- AURORA SPECIFIC -->
+					<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
+				</xsl:for-each>
 
-			<xsl:call-template name="styleCodeAttr">
-				<xsl:with-param name="styleCode" select="@styleCode"/>
-				<xsl:with-param name="additionalStyleCode" select="'Section'"/>
-			</xsl:call-template>
-			<xsl:for-each select="@ID">
-				<a name="{.}"><xsl:text> </xsl:text></a>
-			</xsl:for-each>
-			<a name="section-{substring($sectionNumberSequence,2)}"><xsl:text> </xsl:text></a>
-			<p/>
-			<xsl:apply-templates select="v3:title">
-				<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
-				<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
-			</xsl:apply-templates>
-			<xsl:if test="boolean($show-data)">
-				<xsl:apply-templates mode="data" select="."/>
-			</xsl:if>
-			<xsl:apply-templates select="@*|node()[not(self::v3:title)]"/>
-			<xsl:call-template name="flushSectionTitleFootnotes"/>
-		</div>
+				<xsl:call-template name="styleCodeAttr">
+					<xsl:with-param name="styleCode" select="@styleCode"/>
+					<xsl:with-param name="additionalStyleCode" select="'Section'"/>
+				</xsl:call-template>
+				<xsl:for-each select="@ID">
+					<a name="{.}"><xsl:text> </xsl:text></a>
+				</xsl:for-each>
+				<a name="section-{substring($sectionNumberSequence,2)}"><xsl:text> </xsl:text></a>
+				<p/>
+				<xsl:apply-templates select="v3:title">
+					<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
+					<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
+				</xsl:apply-templates>
+				<!-- TODO remove all of the show-data? -->
+				<xsl:if test="boolean($show-data)">
+					<xsl:apply-templates mode="data" select="."/>
+				</xsl:if>
+				<xsl:apply-templates select="@*|node()[not(self::v3:title)]"/>
+				<xsl:call-template name="flushSectionTitleFootnotes"/>
+			</div>
 	</xsl:template>
 
 	<xsl:template match="v3:document" mode="html-head">
@@ -199,9 +218,10 @@
 			<meta name="documentEffectiveTime">
 				<xsl:attribute name="content"><xsl:value-of select="v3:effectiveTime/@value"/></xsl:attribute>
 			</meta>
-			<title><xsl:value-of select="v3:title"/></title>			
-			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
-			<link rel="stylesheet" href="{$css}"/>
+			<title><xsl:value-of select="v3:title"/></title>
+			<link href="http://canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon"><xsl:text> </xsl:text></link>
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><xsl:text> </xsl:text></link>
+			<link rel="stylesheet" href="{$css}"><xsl:text> </xsl:text></link>
 			<style>
 				/* ScrollSpy, Stickiness/Affix, and French Navigation Reduction */
 			  
@@ -220,10 +240,9 @@
 			</style>
 		</head>
 	</xsl:template>	
-
-	<!-- script tags are character unencoded to prevent transformation to singleton script tags, 
-		 which are not supported by all browsers -->
+	
 	<xsl:template name="canada-screen-body-footer">
+		<!-- perhaps Stickyfill should have cross origin integrity? 4.1.3 is the current "Aurora" version of Bootstrap, and I have upgraded to the latest, 4.4.1 -->
 		<xsl:text disable-output-escaping="yes">
 &lt;script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"&gt;&lt;/script&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"&gt;&lt;/script&gt;

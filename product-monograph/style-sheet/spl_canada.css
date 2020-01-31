@@ -36,11 +36,11 @@ be represented
 							
 @media print {
 @page { 
-    size:8.5in 11in; 
+    size: 8.5in 11in; 
 	margin-top: 0.5in;
 	margin-bottom: 0.5in;
-	orphans:4; 
-	widows:2;
+	orphans: 4; 
+	widows: 2;
 }
 
 .spl {
@@ -854,6 +854,18 @@ be represented
 .title-page h2 { 
     text-align: center !important; 
 }
+/* non-Bootstrap styles for XML Notepad and DocuBridge */
+.title-page-row {
+    padding: 0.5in;
+}
+.title-page-left {
+    float: left;
+    width: 50%;
+}
+.title-page-right {
+    margin-left: 50%;
+}
+
 .recent-changes table, 
 .recent-changes th, 
 .recent-changes td {
@@ -900,8 +912,6 @@ margin-bottom: 2ex;
 .hide-in-print { display: none !important; }		
 .force-page-break-before { page-break-before: always; }
 .force-page-break-after { page-break-after: always; }
-/* pmh - eventually deprecate force-page-break and suppress-page-break */
-.force-page-break { page-break-after: always; }
 .suppress-page-break { page-break-after: avoid; }
 .card { border-width: 0 !important; }
 .card-header { display: none !important; }

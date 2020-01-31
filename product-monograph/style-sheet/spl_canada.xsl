@@ -5,7 +5,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" 
 	exclude-result-prefixes="exsl msxsl v3 xsl xsi str">
-	<xsl:import href="FDA spl_stylesheet_6_2/spl-common.xsl"/>
+	<xsl:import href="spl_common.xsl"/>
 	<xsl:import href="spl_canada_screen.xsl"/>
 	<xsl:import href="spl_canada_i18n.xsl"/>
 	
@@ -18,7 +18,7 @@
 	<xsl:param name="show-section-numbers" select="/.."/>	
 	<!-- This is the CSS link put into the output -->
 	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/spl_canada.css</xsl:param>
-
+	
 	<xsl:variable name="lang">
 		<xsl:choose>
 			<xsl:when test="v3:document/v3:languageCode[@code='1']">en</xsl:when>
@@ -99,6 +99,52 @@
 			</tr>
 		</xsl:for-each>
 	</xsl:template>	
+
+	<!-- Note: This template is also used for top level Product Concept which does not have v3:asEquivalentEntity -->
+	<!-- pmh - Canada does not currently require equivalent or abstract product concept -->
+	<!-- todo: remove the FDA specific codes in this xpath -->
+	<xsl:template mode="subjects" match="v3:section/v3:subject/v3:manufacturedProduct/*[self::v3:manufacturedProduct[v3:name or v3:formCode] or self::v3:manufacturedMedicine][not(v3:asEquivalentEntity/v3:definingMaterialKind[/v3:document/v3:code/@code = '73815-3'])]|v3:section/v3:subject/v3:identifiedSubstance/v3:identifiedSubstance">
+		<table class="contentTablePetite" cellSpacing="0" cellPadding="3" width="100%">
+			<tbody>
+				<xsl:call-template name="piMedNames"/>
+				<xsl:apply-templates mode="substance" select="v3:moiety"/>
+				<xsl:call-template name="ProductInfoBasic"/>
+				
+				<xsl:choose>
+					<!-- if this is a multi-component subject then call to parts template -->
+					<xsl:when test="v3:part">
+						<xsl:apply-templates mode="subjects" select="v3:part"/>
+					</xsl:when>
+					<!-- otherwise it is a single product and we simply need to display the ingredients, imprint and packaging. -->
+					<xsl:otherwise>
+						<xsl:call-template name="ProductInfoIng"/>
+					</xsl:otherwise>
+				</xsl:choose>
+				<tr>
+					<td>						
+						<xsl:call-template name="image">
+							<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLIMAGE']"/>
+						</xsl:call-template>
+					</td>
+				</tr>
+				<tr>
+					<td class="normalizer">
+						<xsl:call-template name="MarketingInfo"/>
+					</td>
+				</tr>
+				<!-- FIXME: there seem to be so many different places where the instanceOfKind, that looks so much like copy&paste and makes maintenance difficult -->
+				<xsl:if test="v3:instanceOfKind">
+					<tr>
+						<td colspan="4">
+							<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
+								<xsl:apply-templates mode="ldd" select="v3:instanceOfKind"/>
+							</table>
+						</td>
+					</tr>
+				</xsl:if>				
+			</tbody>
+		</table>
+	</xsl:template>
 	
 	<!-- override FDA Product Info section, using Canadian French and English labels - note, we could drop the Alt class for row banding -->
 	<xsl:template name="ProductInfoBasic">
@@ -359,18 +405,6 @@
 		</tr>
 	</xsl:template>
 
-<!-- pmh - CV template from FDA:
-	<xsl:template mode="characteristics" match="v3:value[@xsi:type = 'CV' or @xsi:type = 'CE' or @xsi:type = 'CE']">
-		<td class="formItem">
-			<xsl:value-of select=".//@displayName[1]"/>
-		</td>
-		<td class="formItem">
-			<xsl:value-of select=".//@code[1]"/>
-		</td>
-	</xsl:template>
--->
-
-
 	<xsl:template name="characteristics-old">
 		<table class="formTablePetite" cellSpacing="0" cellPadding="3" width="100%">
 			<tbody>
@@ -499,25 +533,6 @@
 						</xsl:for-each>
 					</xsl:for-each>
 					<xsl:value-of select="v3:formCode/@displayName"/>
-					<!-- pmh remove old references to FDA characteristic controlled vocabulary:
-					<xsl:for-each select="../v3:subjectOf/v3:characteristic">
-						<xsl:if test="../../v3:quantity or ../../v3:containerPackagedProduct[v3:formCode[@displayName]] or ../preceding::v3:subjectOf"></xsl:if>
-						<xsl:variable name="name" select="($def/v3:code/@displayName|$def/v3:code/@p:displayName)[1]" xmlns:p="http://pragmaticdata.com/xforms" />
-						<xsl:variable name="def" select="$CHARACTERISTICS/*/*/v3:characteristic[v3:code[@code = current()/v3:code/@code and @codeSystem = current()/v3:code/@codeSystem]][1]"/>
-						<xsl:variable name="cname" select="$CHARACTERISTICS/*/*/v3:characteristic[v3:code[@code = current()/v3:code/@code]]/v3:value[@code = current()/v3:value/@code]/@displayName"/>
-						<xsl:choose>
-							<xsl:when test="$cname">
-								<xsl:text>; </xsl:text>
-								<xsl:value-of select="$cname" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:text>; </xsl:text>
-								<xsl:value-of select="$name"/>
-								<xsl:text> = </xsl:text>
-								<xsl:value-of select="(v3:value[not(../v3:code/@code = 'SPLCMBPRDTP')]/@code|v3:value/@value)[1]"/>
-							</xsl:otherwise>
-						</xsl:choose>						
-					</xsl:for-each> -->
 					<br/>
 				</xsl:for-each>
 			</td>
@@ -589,6 +604,7 @@
 		</tr>
 	</xsl:template>
 
+	<!-- pmh - for XML Notepad - removed width="5" and colspan="5" -->
 	<xsl:template name="partQuantity">
 		<xsl:param name="path" select="."/>
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
@@ -671,6 +687,7 @@
 	</xsl:template>	
 			
 	<!-- This is the main page content, which renders for both screen, with Product Details in front, and print, with Product Details at end -->	
+	<!-- pmh - replaced card level sections with divs to resolve odd behaviour in XML Notepad -->
 	<xsl:template match="v3:structuredBody" mode="main-document">
 		<main class="col">
 			<div class="container-fluid" id="main">
@@ -682,8 +699,8 @@
 							<xsl:choose>
 								<xsl:when test="v3:code[@code='MP']">
 									<!-- PRODUCT DETAIL -->
-									<section class="card mb-2 hide-in-print" id="{$unique-section-id}">
-										<h5 class="card-header text-white bg-aurora-accent1">
+									<div class="card mb-2 hide-in-print" id="{$unique-section-id}">
+										<h5 class="card-header text-white bg-aurora-accent1"> 
 											<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
 										</h5>
 										<!-- Company Details and Product Details Accordion Cards -->
@@ -691,85 +708,71 @@
 											<xsl:apply-templates select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization" mode="card"/>
 											<xsl:apply-templates select="v3:subject/v3:manufacturedProduct" mode="card"/>
 										</div>
-									</section>
+									</div>
 								</xsl:when>
 								<xsl:when test="$tri-code-value = '001'">
 									<!-- TITLE PAGE - Note: force-page-break-after here does not work on FireFox -->
-									<section class="card mb-2 force-page-break-after" id="{$unique-section-id}">
+									<div class="card mb-2 force-page-break-after" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:code/@displayName"/>
 										</h5>
-										<div class="spl title-page p-5">
+										<div class="spl title-page title-page-row">
 											<xsl:for-each select="v3:component[1]/v3:section">
 												<xsl:apply-templates select="v3:title"/>
 												<xsl:apply-templates select="v3:text"/>
 											</xsl:for-each>
 										</div>
-										<div class="spl container p-5">
-											<div class="row">
-												<div class="col-6">
-													<xsl:for-each select="v3:component[2]/v3:section">
-														<xsl:apply-templates select="v3:title"/>
-														<xsl:apply-templates select="v3:text"/>
-													</xsl:for-each>
-												</div>
-												<div class="col-6">
-													<!-- TODO - this should probably just render every subsection with position greater than [2] -->
-													<xsl:for-each select="v3:component[3]/v3:section">
-														<xsl:apply-templates select="v3:title"/>
-														<xsl:apply-templates select="v3:text"/>
-													</xsl:for-each>
-													<xsl:for-each select="v3:component[4]/v3:section">
-														<xsl:apply-templates select="v3:title"/>
-														<xsl:apply-templates select="v3:text"/>
-													</xsl:for-each>
-													<xsl:for-each select="v3:component[5]/v3:section">
-														<xsl:apply-templates select="v3:title"/>
-														<xsl:apply-templates select="v3:text"/>
-													</xsl:for-each>
-												</div>
+										<div class="spl title-page-row">
+											<div class="title-page-left">
+												<xsl:for-each select="v3:component[2]/v3:section">
+													<xsl:apply-templates select="v3:title"/>
+													<xsl:apply-templates select="v3:text"/>
+												</xsl:for-each>
 											</div>
-										</div>
-									</section>
-									<!-- PRINT ONLY TOC ON A SEPARATE PAGE -->
-									<!-- pmh - I do not think this is going to work
-									<section class="force-page-break hide-in-screen" id="print-table-of-contents">
-										<div class="spl">
-											TEST TEST TEST POC FOR TABLE OF CONTENTS from Hadlima deb4ec67-8764-4b72-b7a5-0bae88db11a3
-											<ol>
-												<li class="frontmatter"><a href="#a16a94eb-e2be-45c0-8b2e-15d0d0eebea8">Part one</a></li>
-												<li class="frontmatter"><a href="#d6a947eb-e2be-45c0-8b2e-15d0d0eebed8">Part two</a></li>
-												<li class="bodymatter"><a href="#baa4d498-0fc3-4e44-b4b6-550140d4de5d">Part threebody</a></li>
-											</ol>
-										</div>
-									</section> -->
+											<div class="title-page-right">
+												<!-- TODO - this should probably just render every subsection with position greater than [2] -->
+												<xsl:for-each select="v3:component[3]/v3:section">
+													<xsl:apply-templates select="v3:title"/>
+													<xsl:apply-templates select="v3:text"/>
+												</xsl:for-each>
+												<xsl:for-each select="v3:component[4]/v3:section">
+													<xsl:apply-templates select="v3:title"/>
+													<xsl:apply-templates select="v3:text"/>
+												</xsl:for-each>
+												<xsl:for-each select="v3:component[5]/v3:section">
+													<xsl:apply-templates select="v3:title"/>
+													<xsl:apply-templates select="v3:text"/>
+												</xsl:for-each>
+											</div>
+										</div>											
+									</div>
 								</xsl:when>
 								<xsl:when test="$tri-code-value = '007'">
 									<!-- RECENT MAJOR LABEL CHANGES -->
-									<section class="card mb-2" id="{$unique-section-id}">
+									<div class="card mb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:code/@displayName"/>
 										</h5>
 										<div class="spl recent-changes">
 											<xsl:apply-templates select="."/>
 										</div>
-									</section>
+									</div>
 								</xsl:when>
 								<xsl:otherwise>
 									<!-- NAVIGATION FOR DIFFERENT PARTS -->								
-									<section class="card mb-2 pb-2" id="{$unique-section-id}">
+									<div class="card mb-2 pb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:code/@displayName"/>
 										</h5>
 										<div class="spl">
 											<xsl:apply-templates select="."/>
 										</div>
-									</section>
+									</div>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:for-each>
 						<!-- PRINT VERSION OF MANUFACTURED PRODUCT -->
-						<section class="hide-in-screen force-page-break-before card spl" id="print-product-details">
+						<div class="hide-in-screen force-page-break-before card spl" id="print-product-details">
 							<h2>
 								<xsl:call-template name="string-uppercase">
 									<xsl:with-param name="text">
@@ -781,7 +784,7 @@
 								<xsl:apply-templates mode="print" select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization"/>
 								<xsl:apply-templates mode="print" select="//v3:subject/v3:manufacturedProduct"/>
 							</div>
-						</section>
+						</div>
 					</div>
 				</div>				
 			</div>
@@ -794,9 +797,13 @@
 			<div class="Section">
 				<p></p>
 				<h2>
-					<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
-						<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
-					</xsl:apply-templates>
+					<xsl:call-template name="string-uppercase">
+						<xsl:with-param name="text">
+							<xsl:copy><xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
+								<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
+							</xsl:apply-templates></xsl:copy>
+						</xsl:with-param>
+					</xsl:call-template>
 				</h2>
 				<xsl:apply-templates mode="subjects" select="."/>			
 			</div>
@@ -822,7 +829,7 @@
 				<div class="bg-aurora-accent1 hide-in-print">
 					<h2 class="text-white text-center p-2"><xsl:copy-of select="v3:title/node()"/></h2>
 				</div>
-					<div class="container-fluid position-relative" id="content">
+				<div class="container-fluid position-relative" id="content">
 					<div class="row h-100">
 						<xsl:apply-templates select="v3:component/v3:structuredBody" mode="sidebar-navigation"/>
 						<xsl:apply-templates select="v3:component/v3:structuredBody" mode="main-document"/>
