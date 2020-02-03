@@ -2591,12 +2591,12 @@
                 </section>
             </component>
             <component>
-                <!-- Part III: Patient Medication Information -->
+                <!-- Patient Medication Information -->
                 <section ID="baa4d498-0fc3-4e44-b4b6-550140d4de5d">
                     <id root="be74b6e6-c461-4a5f-a18e-ed321b381456"/>
                     <code code="60058" codeSystem="2.16.840.1.113883.2.20.6.60"
-                        displayName="PART III: PATIENT MEDICATION INFORMATION"/>
-                    <title>PART III: PATIENT MEDICATION INFORMATION</title>
+                        displayName="PATIENT MEDICATION INFORMATION"/>
+                    <title>PATIENT MEDICATION INFORMATION</title>
                     <effectiveTime value="20170101"/>
                     <component>
                         <section ID="baa4d498-0fc3-4e44-b4b6-550140dde5d">
@@ -2930,12 +2930,12 @@
                 </section>
             </component>
             <component>
-                <!-- Part III: Patient Medication Information -->
+                <!-- Patient Medication Information -->
                 <section ID="A1">
                     <id root="bd368132-a672-46b8-81ff-601962313762"/>
                     <code code="60058" codeSystem="2.16.840.1.113883.2.20.6.60"
-                        displayName="PART III: PATIENT MEDICATION INFORMATION"/>
-                    <title>PART III: PATIENT MEDICATION INFORMATION</title>
+                        displayName="PATIENT MEDICATION INFORMATION"/>
+                    <title>PATIENT MEDICATION INFORMATION</title>
                     <effectiveTime value="20170101"/>
                     <component>
                         <section ID="A2">
