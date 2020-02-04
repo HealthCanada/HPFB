@@ -72,7 +72,7 @@
                     <subject>
                         <manufacturedProduct>
                             <manufacturedProduct>
-                                <code code="12345678" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                                <code code="12345678"/>
                                 <!-- DIN Number -->
                                 <name>LORUM IPSUM TABLETS</name>
                                 <formCode code="10219000" codeSystem="2.16.840.1.113883.2.20.6.3"
@@ -159,7 +159,6 @@
                                         <marketingAct>
                                             <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                                                 displayName="APPROVED"/>
-                                            <statusCode code="ACTIVE"/>
                                             <effectiveTime>
                                                 <!-- regulatory status of this package -->
                                                 <low value="20170102"/>
@@ -198,7 +197,6 @@
                                                   <code code="1"
                                                   codeSystem="2.16.840.1.113883.2.20.6.11"
                                                   displayName="APPROVED"/>
-                                                  <statusCode code="ACTIVE"/>
                                                   <effectiveTime>
                                                   <!-- regulatory status of this package -->
                                                   <low value="20170101"/>
@@ -213,7 +211,7 @@
                             <subjectOf>
                                 <!--Regulatory Activity associated with this products status-->
                                 <approval>
-                                    <id extension="123456" root="2.16.840.1.113883.2.20.6.49"/>
+                                    <id extension="123456"/>
                                     <!-- Control Number -->
                                     <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37"
                                         displayName="SNDS"/>
@@ -233,7 +231,6 @@
                                 <marketingAct>
                                     <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                                         displayName="APPROVED"/>
-                                    <statusCode code="ACTIVE"/>
                                     <effectiveTime>
                                         <low value="20170101"/>
                                         <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
@@ -335,7 +332,7 @@
                     <subject>
                         <manufacturedProduct>
                             <manufacturedProduct>
-                                <code code="45612322" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                                <code code="45612322"/>
                                 <!-- DIN Number -->
                                 <name>LORUM IPSUM CAPSULE</name>
                                 <formCode code="10210000" codeSystem="2.16.840.1.113883.2.20.6.3"
@@ -433,7 +430,6 @@
                                                   <code code="1"
                                                   codeSystem="2.16.840.1.113883.2.20.6.11"
                                                   displayName="APPROVED"/>
-                                                  <statusCode code="ACTIVE"/>
                                                   <effectiveTime>
                                                   <!-- regulatory status of this package -->
                                                   <low value="20170101"/>
@@ -448,7 +444,7 @@
                             <subjectOf>
                                 <!--Regulatory Activity associated with this products status-->
                                 <approval>
-                                    <id extension="123456" root="2.16.840.1.113883.2.20.6.49"/>
+                                    <id extension="123456"/>
                                     <!-- Control Number -->
                                     <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37"
                                         displayName="SNDS"/>
@@ -468,7 +464,6 @@
                                 <marketingAct>
                                     <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                                         displayName="APPROVED"/>
-                                    <statusCode code="ACTIVE"/>
                                     <effectiveTime>
                                         <low value="20170101"/>
                                         <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
@@ -580,7 +575,7 @@
                     <subject>
                         <manufacturedProduct>
                             <manufacturedProduct>
-                                <code code="65432551" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                                <code code="65432551"/>
                                 <!-- DIN Number -->
                                 <name>LORUM IPSUM POWDER</name>
                                 <formCode code="10110000" codeSystem="2.16.840.1.113883.2.20.6.3"
@@ -690,7 +685,6 @@
                                                   <code code="1"
                                                   codeSystem="2.16.840.1.113883.2.20.6.11"
                                                   displayName="APPROVED"/>
-                                                  <statusCode code="ACTIVE"/>
                                                   <effectiveTime>
                                                   <!-- regulatory status of this package -->
                                                   <low value="20180601"/>
@@ -707,7 +701,7 @@
                             <subjectOf>
                                 <!--Regulatory Activity associated with this products status-->
                                 <approval>
-                                    <id extension="123456" root="2.16.840.1.113883.2.20.6.49"/>
+                                    <id extension="123456"/>
                                     <!-- Control Number -->
                                     <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37"
                                         displayName="SNDS"/>
@@ -727,7 +721,6 @@
                                 <marketingAct>
                                     <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                                         displayName="APPROVED"/>
-                                    <statusCode code="ACTIVE"/>
                                     <effectiveTime>
                                         <low value="20170101"/>
                                         <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
@@ -789,7 +782,7 @@
                     <subject>
                         <manufacturedProduct>
                             <manufacturedProduct>
-                                <code code="61325884" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                                <code code="61325884"/>
                                 <!-- DIN Number -->
                                 <name>LORUM IPSUM KIT</name>
                                 <formCode code="C43197" codeSystem="2.16.840.1.113883.2.20.6.3"
@@ -814,7 +807,6 @@
                                         <marketingAct>
                                             <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                                                 displayName="APPROVED"/>
-                                            <statusCode code="ACTIVE"/>
                                             <effectiveTime>
                                                 <!-- regulatory status of this package -->
                                                 <low value="20170102"/>
@@ -831,8 +823,7 @@
                                         <denominator value="1" unit="mL"/>
                                     </quantity>
                                     <partProduct>
-                                        <code code="02490064"
-                                            codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                                        <code code="02490064"/>
                                         <!-- DIN Number -->
                                         <name>LORUM IPSUM KIT POWDER</name>
                                         <formCode code="10110000"
@@ -921,8 +912,7 @@
                                     <subjectOf>
                                         <!--Regulatory Activity associated with this products status-->
                                         <approval>
-                                            <id extension="218531"
-                                                root="2.16.840.1.113883.2.20.6.49"/>
+                                            <id extension="218531"/>
                                             <!-- Control Number -->
                                             <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37"
                                                 displayName="NDS"/>
@@ -996,8 +986,7 @@
                                         <denominator value="1"/>
                                     </quantity>
                                     <partProduct>
-                                        <code code="02490065"
-                                            codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                                        <code code="02490065"/>
                                         <!-- DIN Number -->
                                         <name>WATER</name>
                                         <formCode code="10104000"
@@ -1046,8 +1035,7 @@
                                     <subjectOf>
                                         <!--Regulatory Activity associated with this products status-->
                                         <approval>
-                                            <id extension="218531"
-                                                root="2.16.840.1.113883.2.20.6.49"/>
+                                            <id extension="218531"/>
                                             <!-- Control Number -->
                                             <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37"
                                                 displayName="NDS"/>
@@ -1118,7 +1106,7 @@
                             </manufacturedProduct>
                             <subjectOf>
                                 <approval>
-                                    <id extension="225785" root="2.16.840.1.113883.2.20.6.49"/>
+                                    <id extension="225785"/>
                                     <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37"
                                         displayName="NDS"/>
                                     <author>
@@ -1136,7 +1124,6 @@
                                 <marketingAct>
                                     <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                                         displayName="APPROVED"/>
-                                    <statusCode code="ACTIVE"/>
                                     <effectiveTime>
                                         <low value="20171009"/>
                                     </effectiveTime>
@@ -1147,7 +1134,7 @@
                     <subject>
                         <manufacturedProduct>
                             <manufacturedProduct>
-                                <code code="12345678" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                                <code code="12345678"/>
                                 <!-- DIN Number -->
                                 <name>LORUM IPSUM CELLS RANGE</name>
                                 <formCode code="11201000" codeSystem="2.16.840.1.113883.2.20.6.3"
@@ -1237,7 +1224,6 @@
                                         <marketingAct>
                                             <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                                                 displayName="APPROVED"/>
-                                            <statusCode code="ACTIVE"/>
                                             <effectiveTime>
                                                 <!-- regulatory status of this package -->
                                                 <low value="20170102"/>
@@ -1276,7 +1262,6 @@
                                                   <code code="1"
                                                   codeSystem="2.16.840.1.113883.2.20.6.11"
                                                   displayName="APPROVED"/>
-                                                  <statusCode code="ACTIVE"/>
                                                   <effectiveTime>
                                                   <!-- regulatory status of this package -->
                                                   <low value="20170101"/>
@@ -1291,7 +1276,7 @@
                             <subjectOf>
                                 <!--Regulatory Activity associated with this products status-->
                                 <approval>
-                                    <id extension="123456" root="2.16.840.1.113883.2.20.6.49"/>
+                                    <id extension="123456"/>
                                     <!-- Control Number -->
                                     <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37"
                                         displayName="SNDS"/>
@@ -1311,7 +1296,6 @@
                                 <marketingAct>
                                     <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                                         displayName="APPROVED"/>
-                                    <statusCode code="ACTIVE"/>
                                     <effectiveTime>
                                         <low value="20170101"/>
                                         <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
