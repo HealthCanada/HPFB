@@ -69,7 +69,7 @@
           <subject>
             <manufacturedProduct>
               <manufacturedProduct>
-                <code code="12345623" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                <code code="12345623"/>
                 <!-- DIN Number -->
                 <name>LORUM IPSUM COMPRIMÉS</name>
                 <formCode code="85" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="COMPRIMÉ"/>
@@ -147,7 +147,6 @@
                     <marketingAct>
                       <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                         displayName="APPROUVÉS"/>
-                      <statusCode code="ACTIVE"/>
                       <effectiveTime>
                         <!-- regulatory status of this package -->
                         <low value="20170102"/>
@@ -183,7 +182,6 @@
                         <marketingAct>
                           <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                             displayName="APPROUVÉS"/>
-                          <statusCode code="ACTIVE"/>
                           <effectiveTime>
                             <!-- regulatory status of this package -->
                             <low value="20170101"/>
@@ -198,7 +196,7 @@
               <subjectOf>
                 <!--Regulatory Activity associated with this products status-->
                 <approval>
-                  <id extension="123456" root="2.16.840.1.113883.2.20.6.49"/>
+                  <id extension="123456"/>
                   <!-- Control Number -->
                   <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="SPDN"/>
                   <author>
@@ -215,7 +213,6 @@
                 <!--Regulatory status of this product-->
                 <marketingAct>
                   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROUVÉS"/>
-                  <statusCode code="ACTIVE"/>
                   <effectiveTime>
                     <low value="20170101"/>
                     <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
@@ -307,7 +304,7 @@
           <subject>
             <manufacturedProduct>
               <manufacturedProduct>
-                <code code="45612300" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                <code code="45612300"/>
                 <!-- DIN Number -->
                 <name>LORUM IPSUM CAPSULE</name>
                 <formCode code="5" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="CAPSULE"/>
@@ -394,7 +391,6 @@
                         <marketingAct>
                           <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                             displayName="APPROUVÉS"/>
-                          <statusCode code="ACTIVE"/>
                           <effectiveTime>
                             <!-- regulatory status of this package -->
                             <low value="20170101"/>
@@ -409,7 +405,7 @@
               <subjectOf>
                 <!--Regulatory Activity associated with this products status-->
                 <approval>
-                  <id extension="123456" root="2.16.840.1.113883.2.20.6.49"/>
+                  <id extension="123456"/>
                   <!-- Control Number -->
                   <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="SPDN"/>
                   <author>
@@ -426,7 +422,6 @@
                 <!--Regulatory status of this product-->
                 <marketingAct>
                   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROUVÉS"/>
-                  <statusCode code="ACTIVE"/>
                   <effectiveTime>
                     <low value="20170101"/>
                     <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
@@ -527,7 +522,7 @@
           <subject>
             <manufacturedProduct>
               <manufacturedProduct>
-                <code code="65432122" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                <code code="65432122"/>
                 <!-- DIN Number -->
                 <name>LORUM IPSUM POUDRE</name>
                 <formCode code="126" codeSystem="2.16.840.1.113883.2.20.6.3"
@@ -626,7 +621,6 @@
                             <marketingAct>
                               <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                                 displayName="APPROUVÉS"/>
-                              <statusCode code="ACTIVE"/>
                               <effectiveTime>
                                 <!-- regulatory status of this package -->
                                 <low value="20170101"/>
@@ -643,7 +637,7 @@
               <subjectOf>
                 <!--Regulatory Activity associated with this products status-->
                 <approval>
-                  <id extension="123456" root="2.16.840.1.113883.2.20.6.49"/>
+                  <id extension="123456"/>
                   <!-- Control Number -->
                   <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="SPDN"/>
                   <author>
@@ -660,7 +654,6 @@
                 <!--Regulatory status of this product-->
                 <marketingAct>
                   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROUVÉS"/>
-                  <statusCode code="ACTIVE"/>
                   <effectiveTime>
                     <low value="20170101"/>
                     <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
@@ -718,7 +711,7 @@
           <subject>
             <manufacturedProduct>
               <manufacturedProduct>
-                <code code="61325422" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                <code code="61325422"/>
                 <!-- DIN Number -->
                 <name>LORUM IPSUM TROUSSE</name>
                 <formCode code="32" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="TROUSSES"/>
@@ -744,7 +737,7 @@
                     <denominator value="1"/>
                   </quantity>
                   <partProduct>
-                    <code code="02490064" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                    <code code="02490064"/>
                     <!-- DIN Number -->
                     <name>LORUM IPSUM TROUSSE POUDRE</name>
                     <formCode code="56" codeSystem="2.16.840.1.113883.2.20.6.3"
@@ -824,7 +817,7 @@
                   <subjectOf>
                     <!--Regulatory Activity associated with this products status-->
                     <approval>
-                      <id extension="218531" root="2.16.840.1.113883.2.20.6.49"/>
+                      <id extension="218531"/>
                       <!-- Control Number -->
                       <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="SPDN"/>
                       <author>
@@ -892,7 +885,7 @@
                     <denominator value="1"/>
                   </quantity>
                   <partProduct>
-                    <code code="02490064" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                    <code code="02490064"/>
                     <!-- DIN Number -->
                     <name>EAU</name>
                     <formCode code="34" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="LIQUIDE"/>
@@ -935,7 +928,6 @@
                         <marketingAct>
                           <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
                             displayName="APPROUVÉS"/>
-                          <statusCode code="ACTIVE"/>
                           <effectiveTime>
                             <!-- regulatory status of this package -->
                             <low value="20180101"/>
@@ -948,7 +940,7 @@
                   <subjectOf>
                     <!--Regulatory Activity associated with this products status-->
                     <approval>
-                      <id extension="218531" root="2.16.840.1.113883.2.20.6.49"/>
+                      <id extension="218531"/>
                       <!-- Control Number -->
                       <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="PDN"/>
                       <author>
@@ -1013,7 +1005,7 @@
               </manufacturedProduct>
               <subjectOf>
                 <approval>
-                  <id extension="225785" root="2.16.840.1.113883.2.20.6.49"/>
+                  <id extension="225785"/>
                   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="PDN"/>
                   <author>
                     <territorialAuthority>
@@ -1028,7 +1020,6 @@
               <subjectOf>
                 <marketingAct>
                   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROUVÉS"/>
-                  <statusCode code="ACTIVE"/>
                   <effectiveTime>
                     <low value="20171009"/>
                   </effectiveTime>
