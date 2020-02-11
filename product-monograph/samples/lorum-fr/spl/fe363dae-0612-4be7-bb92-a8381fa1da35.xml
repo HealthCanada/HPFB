@@ -1092,8 +1092,8 @@
             <section ID="ebc3f3dc-71be-424f-91ef-8aca8c138b21">
               <id root="efd8c4c1-d0dd-434d-b1c2-4daa18752fa8"/>
               <code code="60006" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="NUMÉRO DE CONTRÔLE"/>
-              <title>NUMÉRO DE CONTRÔLE</title>
+                displayName="NUMÉRO DE CONTRÔLE DE LA PRÉSENTATION"/>
+              <title>NUMÉRO DE CONTRÔLE DE LA PRÉSENTATION</title>
               <text>
                 <paragraph>123456</paragraph>
               </text>
@@ -1505,7 +1505,7 @@
                   <id root="b9db4be0-3f46-437a-bd7b-4a3e01fadaad"/>
                   <code code="60036" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="9.1 BOÎTE D'INTERACTIONS MÉDICAMENTEUSES GRAVES"/>
-                  <title>99.1 BOÎTE D'INTERACTIONS MÉDICAMENTEUSES GRAVES</title>
+                  <title>9.1 BOÎTE D'INTERACTIONS MÉDICAMENTEUSES GRAVES</title>
                   <text>
                     <paragraph>exemple de texte</paragraph>
                   </text>
