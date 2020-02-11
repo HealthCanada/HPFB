@@ -102,28 +102,34 @@
                                         </activeMoiety>
                                     </ingredientSubstance>
                                 </ingredient>
-								<ingredient classCode="ACTIR">
-								<quantity>
-									<numerator unit="mg" value="45"/>
-									<denominator unit="1" value="1"/>
-								</quantity>
-								<ingredientSubstance>
-									<code code="7IC4BO7D3R" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="ACEXAMIC ACID"/>
-									<name>ACEXAMIC ACID</name>
-									<activeMoiety>
-										<activeMoiety>
-											<code code="7IC4BO7D3R" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="ACEXAMIC ACID"/>
-											<name>ACEXAMIC ACID</name>
-										</activeMoiety>
-									</activeMoiety>
-									<asEquivalentSubstance>
-										<definingSubstance>
-											<code code="7IC4BO7D3R" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="ACEXAMIC ACID"/>
-											<name>ACEXAMIC ACID</name>
-										</definingSubstance>
-									</asEquivalentSubstance>
-								</ingredientSubstance>
-								</ingredient>
+                                <ingredient classCode="ACTIR">
+                                    <quantity>
+                                        <numerator unit="mg" value="45"/>
+                                        <denominator unit="1" value="1"/>
+                                    </quantity>
+                                    <ingredientSubstance>
+                                        <code code="7IC4BO7D3R"
+                                            codeSystem="2.16.840.1.113883.2.20.6.14"
+                                            displayName="ACEXAMIC ACID"/>
+                                        <name>ACEXAMIC ACID</name>
+                                        <activeMoiety>
+                                            <activeMoiety>
+                                                <code code="7IC4BO7D3R"
+                                                  codeSystem="2.16.840.1.113883.2.20.6.14"
+                                                  displayName="ACEXAMIC ACID"/>
+                                                <name>ACEXAMIC ACID</name>
+                                            </activeMoiety>
+                                        </activeMoiety>
+                                        <asEquivalentSubstance>
+                                            <definingSubstance>
+                                                <code code="7IC4BO7D3R"
+                                                  codeSystem="2.16.840.1.113883.2.20.6.14"
+                                                  displayName="ACEXAMIC ACID"/>
+                                                <name>ACEXAMIC ACID</name>
+                                            </definingSubstance>
+                                        </asEquivalentSubstance>
+                                    </ingredientSubstance>
+                                </ingredient>
                                 <ingredient classCode="IACT">
                                     <ingredientSubstance>
                                         <code code="EWQ57Q8I5X"
@@ -384,24 +390,26 @@
                                         </activeMoiety>
                                     </ingredientSubstance>
                                 </ingredient>
-								<ingredient classCode="ACTIM">
-									<quantity>
-										<numerator value="50" unit="mg"/>
-										<denominator value="1" unit="1"/>
-									</quantity>
-									<ingredientSubstance>
-										<code code="362O9ITL9D" codeSystem="2.16.840.1.113883.2.20.6.14"
-										displayName="ACETAMINOPHEN"/>
-										<name>ACETAMINOPHEN</name>
-										<activeMoiety>
-											<activeMoiety>
-												<code code="362O9ITL9D" codeSystem="2.16.840.1.113883.2.20.6.14"
-												displayName="ACETAMINOPHEN"/>
-												<name>ACETAMINOPHEN</name>
-											</activeMoiety>
-										</activeMoiety>
-									</ingredientSubstance>
-								</ingredient>
+                                <ingredient classCode="ACTIM">
+                                    <quantity>
+                                        <numerator value="50" unit="mg"/>
+                                        <denominator value="1" unit="1"/>
+                                    </quantity>
+                                    <ingredientSubstance>
+                                        <code code="362O9ITL9D"
+                                            codeSystem="2.16.840.1.113883.2.20.6.14"
+                                            displayName="ACETAMINOPHEN"/>
+                                        <name>ACETAMINOPHEN</name>
+                                        <activeMoiety>
+                                            <activeMoiety>
+                                                <code code="362O9ITL9D"
+                                                  codeSystem="2.16.840.1.113883.2.20.6.14"
+                                                  displayName="ACETAMINOPHEN"/>
+                                                <name>ACETAMINOPHEN</name>
+                                            </activeMoiety>
+                                        </activeMoiety>
+                                    </ingredientSubstance>
+                                </ingredient>
                                 <ingredient classCode="IACT">
                                     <ingredientSubstance>
                                         <code code="EWQ57Q8I5X"
@@ -1508,6 +1516,19 @@
                             <effectiveTime value="20180101"/>
                         </section>
                     </component>
+                    <component>
+                        <section ID="e2d4279e-5fca-4d26-898d-02548a217ab9">
+                            <id root="f17bc229-d609-460a-b9dc-418008d47c90"/>
+                            <code code="60000" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="FOOTER"/>
+                            <title>FOOTER</title>
+                            <text>
+                                <paragraph>[BRAND NAME<sup>&#174;</sup> or &#8482;] is a registered
+                                    trademark of [COMPANY]</paragraph>
+                            </text>
+                            <effectiveTime value="20180101"/>
+                        </section>
+                    </component>
                 </section>
             </component>
             <component>
@@ -1567,13 +1588,12 @@
                                 displayName="1 INDICATIONS"/>
                             <title>1 INDICATIONS</title>
                             <text>
-                                <paragraph> Lorem ipsum dolor sit amet, ligula suspendisse nulla
-                                    pretium, rhoncus tempor fermentum, enim integer ad vestibulum
-                                    volutpat. Nisl rhoncus turpis est, vel elit, congue wisi enim
-                                    nunc ultricies sit, magna tincidunt. Maecenas aliquam maecenas
-                                    ligula nostra, accumsan taciti. Sociis mauris in integer, a
-                                    dolor netus non dui aliquet, sagittis felis sodales, dolor
-                                    sociis mauris, vel eu libero cras. Faucibus at. </paragraph>
+                                <paragraph> Brand name (proper name) is indicated for:</paragraph>
+                                <list listType="unordered">
+                                    <item>text</item>
+                                    <item>text</item>
+                                </list>
+                                <paragraph>text</paragraph>
                             </text>
                             <effectiveTime value="20180101"/>
                             <component>
@@ -1583,31 +1603,23 @@
                                         displayName="1.1 PEDIATRICS"/>
                                     <title>1.1 PEDIATRICS</title>
                                     <text>
-                                        <paragraph>Lorem ipsum dolor sit amet, ligula suspendisse
-                                            nulla pretium, rhoncus tempor fermentum, enim integer ad
-                                            vestibulum volutpat. Nisl rhoncus turpis est, vel elit,
-                                            congue wisi enim nunc <content styleCode="bold"
-                                                >ultricies sit, magna tincidunt. Maecenas aliquam
-                                                maecenas ligula nostra, accumsan taciti</content>.
-                                            Sociis mauris in integer, a dolor netus non dui aliquet,
-                                            sagittis felis sodales, <linkHtml
-                                                href="#a63c33a5-e08a-472c-b8a2-a12dba105f7a">(See
-                                                section 6 Dosage Forms, Strengths, Composition and
-                                                Packaging)</linkHtml>. Faucibus at.</paragraph>
-                                        <paragraph>Lorem ipsum dolor sit amet, ligula suspendisse
-                                            nulla pretium, rhoncus tempor fermentum, enim integer ad
-                                            vestibulum volutpat. Nisl rhoncus turpis est, vel elit,
-                                            congue wisi enim nunc ultricies sit, <content
-                                                styleCode="bold"><content styleCode="italics">magna
-                                                  tincidunt. Maecenas aliquam maecenas ligula
-                                                  nostra, accumsan taciti</content></content> magna
-                                            tincidunt. Maecenas aliquam maecenas ligula nostra,
-                                            accumsan taciti. <linkHtml
-                                                href="#a63c33a5-e08a-472c-b8a2-a12dba115f7a">(See
-                                                section 7 Warnings and Precautions)</linkHtml>
-                                            Sociis mauris in integer, a dolor netus non dui aliquet,
-                                            sagittis felis sodales, dolor sociis mauris, vel eu
-                                            libero cras. Faucibus at.</paragraph>
+                                        <paragraph>[One of the following or similar statements should be
+                                            used:]</paragraph>
+                                        <paragraph><content styleCode="bold">Pediatrics (age range):</content> Based on
+                                            the data submitted and reviewed by Health Canada, the safety and efficacy of
+                                            Brand name in pediatric patients has been established; therefore, Health
+                                            Canada has authorized an indication for pediatric use. (cross-reference to
+                                            relevant sections)</paragraph>
+                                        <paragraph>[or]</paragraph>
+                                        <paragraph><content styleCode="bold">Pediatrics (age range):</content> No data
+                                            are available to Health Canada; therefore, Health Canada has not authorized an
+                                            indication for pediatric use.</paragraph>
+                                        <paragraph>[or]</paragraph>
+                                        <paragraph><content styleCode="bold">Pediatrics (age range):</content> Based on
+                                            the data submitted and reviewed by Health Canada, the safety and efficacy of
+                                            Brand name in pediatric patients has not been established; therefore, Health
+                                            Canada has not authorized an indication for pediatric use. (cross-reference to
+                                            relevant sections)</paragraph>
                                     </text>
                                     <effectiveTime value="20180822"/>
                                 </section>
@@ -1619,14 +1631,15 @@
                                         displayName="1.2 GERIATRICS"/>
                                     <title>1.2 GERIATRICS</title>
                                     <text>
-                                        <paragraph>Lorem ipsum dolor sit amet, ligula suspendisse
-                                            nulla pretium, rhoncus tempor fermentum, enim integer ad
-                                            vestibulum volutpat. Nisl rhoncus turpis est, vel elit,
-                                            congue wisi enim nunc ultricies sit, magna tincidunt.
-                                            Maecenas aliquam maecenas ligula nostra, accumsan
-                                            taciti. Sociis mauris in integer, a dolor netus non dui
-                                            aliquet, sagittis felis sodales, dolor sociis mauris,
-                                            vel eu libero cras. Faucibus at.</paragraph>
+                                        <paragraph>[One of the following or similar statements may be used:]</paragraph>
+                                        <paragraph><content styleCode="bold">Geriatrics (> x years of age):</content> No
+                                            data are available to Health Canada; therefore, Health Canada has not
+                                            authorized an indication for geriatric use.</paragraph>
+                                        <paragraph>[or]</paragraph>
+                                        <paragraph><content styleCode="bold">Geriatrics (> x years of age):</content>
+                                            Evidence from clinical studies and experience suggests that use in the
+                                            geriatric population is associated with differences in safety or
+                                            effectiveness.</paragraph>
                                     </text>
                                     <effectiveTime value="20180101"/>
                                 </section>
@@ -1640,7 +1653,14 @@
                                 displayName="2 CONTRAINDICATIONS"/>
                             <title>2 CONTRAINDICATIONS</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>[Proper name] is contraindicated in patients who are hypersensitive to
+                                    this drug or to any ingredient in the formulation, including any non-medicinal
+                                    ingredient, or component of the container. For a complete listing, see Dosage
+                                    Forms, Strengths, Composition and Packaging.</paragraph>
+                                <list>
+                                    <item>text</item>
+                                    <item>text</item>
+                                </list>
                             </text>
                             <effectiveTime value="20180101"/>
                         </section>
@@ -1652,7 +1672,28 @@
                                 displayName="3 SERIOUS WARNINGS AND PRECAUTIONS BOX"/>
                             <title>3 SERIOUS WARNINGS AND PRECAUTIONS BOX</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>[Delete this section if there is no Serious Warnings and Precautions
+                                    box.]</paragraph>
+                                <table>
+                                    <caption>Serious Warnings and Precautions</caption>
+                                    <tbody>
+                                        <tr>
+                                            <td styleCode="Lrule Rrule Botrule Toprule">
+                                                <paragraph>[Clinically significant or serious (e.g., life-threatening)
+                                                    safety hazards should be placed in this box, with a cross reference to the
+                                                    relevant section(s) for more detailed information. Generally not to exceed
+                                                    20 lines. Include the following or similar statement, where the active
+                                                    ingredient is derived from plasma:]</paragraph>
+                                                <list>
+                                                    <item>The physician should discuss the risks and benefits of this product
+                                                        with the patient, before prescribing or administering to the patient
+                                                        (see Warnings and Precautions – General).</item>
+                                                    <item>text</item>
+                                                </list>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </text>
                             <effectiveTime value="20180101"/>
                         </section>
@@ -1663,9 +1704,6 @@
                             <code code="60014" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="4 DOSAGE AND ADMINISTRATION"/>
                             <title>4 DOSAGE AND ADMINISTRATION</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
                             <effectiveTime value="20180101"/>
                             <component>
                                 <section ID="be75cfb9-3131-4103-800b-267727398a13">
@@ -1674,7 +1712,12 @@
                                         displayName="4.1 DOSING CONSIDERATIONS"/>
                                     <title>4.1 DOSING CONSIDERATIONS</title>
                                     <text>
-                                        <paragraph> sample text </paragraph>
+                                        <paragraph>[Briefly list all situations that may affect dosing of the
+                                            drug:]</paragraph>
+                                        <list>
+                                            <item>text</item>
+                                            <item>text</item>
+                                        </list>
                                     </text>
                                     <effectiveTime value="20180101"/>
                                 </section>
@@ -1686,7 +1729,14 @@
                                         displayName="4.2 RECOMMENDED DOSE AND DOSAGE ADJUSTMENT"/>
                                     <title>4.2 RECOMMENDED DOSE AND DOSAGE ADJUSTMENT</title>
                                     <text>
-                                        <paragraph> sample text </paragraph>
+                                        <paragraph>[Include dosages for each indication, route of administration and/or
+                                            dosage form. Include information on booster doses for vaccines. Frequency of
+                                            and intervals between booster doses should be described.]</paragraph>
+                                        <paragraph>text</paragraph>
+                                        <paragraph>[In the absence of a Health Canada authorized pediatric indication,
+                                            the following or similar statement should be used:]</paragraph>
+                                        <paragraph>Health Canada has not authorized an indication for pediatric use.
+                                            [cross-reference to relevant sections, if applicable]</paragraph>
                                     </text>
                                     <effectiveTime value="20180101"/>
                                 </section>
@@ -1698,7 +1748,7 @@
                                         displayName="4.3 ADMINISTRATION"/>
                                     <title>4.3 ADMINISTRATION</title>
                                     <text>
-                                        <paragraph> sample text </paragraph>
+                                        <paragraph>text and/or table</paragraph>
                                     </text>
                                     <effectiveTime value="20180101"/>
                                 </section>
@@ -1710,25 +1760,22 @@
                                         displayName="4.4 RECONSTITUTION"/>
                                     <title>4.4 RECONSTITUTION</title>
                                     <text>
-                                        <paragraph> sample text </paragraph>
-                                        <table ID="t9" border="1">
+                                        <paragraph>Oral Solutions: text and/or table</paragraph>
+                                        <paragraph>Parenteral Products: table and text</paragraph>
+                                        <table width="100%">
                                             <caption>Table - Reconstitution</caption>
                                             <tbody>
                                                 <tr>
-                                                  <th styleCode="Toprule Botrule Lrule Rrule">Vial
-                                                  Size</th>
-                                                  <th styleCode="Toprule Botrule Lrule Rrule">Volume
-                                                  of Diluent to be Added to Vial</th>
-                                                  <th styleCode="Toprule Botrule Lrule Rrule"
-                                                  >Approximate Available Volume</th>
-                                                  <th styleCode="Toprule Botrule Lrule Rrule"
-                                                  >Nominal Concentration per mL</th>
+                                                    <th styleCode="Lrule Rrule Botrule Toprule">Vial Size</th>
+                                                    <th styleCode="Lrule Rrule Botrule Toprule">Volume of Diluent to be Added to Vial</th>
+                                                    <th styleCode="Lrule Rrule Botrule Toprule">Approximate Available Volume</th>
+                                                    <th styleCode="Lrule Rrule Botrule Toprule">Nominal Concentration per mL</th>
                                                 </tr>
                                                 <tr>
-                                                  <td styleCode="Toprule Botrule Lrule Rrule"/>
-                                                  <td styleCode="Toprule Botrule Lrule Rrule"/>
-                                                  <td styleCode="Toprule Botrule Lrule Rrule"/>
-                                                  <td styleCode="Toprule Botrule Lrule Rrule"/>
+                                                    <td styleCode="Lrule Rrule Botrule Toprule">text</td>
+                                                    <td styleCode="Lrule Rrule Botrule Toprule">text</td>
+                                                    <td styleCode="Lrule Rrule Botrule Toprule">text</td>
+                                                    <td styleCode="Lrule Rrule Botrule Toprule">text</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1743,7 +1790,7 @@
                                         displayName="4.5 MISSED DOSE"/>
                                     <title>4.5 MISSED DOSE</title>
                                     <text>
-                                        <paragraph> sample text </paragraph>
+                                        <paragraph> text </paragraph>
                                     </text>
                                     <effectiveTime value="20180101"/>
                                 </section>
@@ -1758,6 +1805,14 @@
                             <title>5 OVERDOSAGE</title>
                             <text>
                                 <paragraph> sample text </paragraph>
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td styleCode="Lrule Rrule Botrule Toprule">For management of a suspected drug overdose, contact your regional poison
+                                                control centre.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </text>
                             <effectiveTime value="20180101"/>
                         </section>
@@ -1769,57 +1824,28 @@
                                 displayName="6 DOSAGE FORMS, STRENGTHS, COMPOSITION AND PACKAGING"/>
                             <title>6 DOSAGE FORMS, STRENGTHS, COMPOSITION AND PACKAGING</title>
                             <text>
-                                <paragraph>sample text</paragraph>
-                                <table ID="t5" border="0" cellpadding="1">
-                                    <caption> Table - Dosage Forms, Strengths, Composition and
-                                        Packaging</caption>
-                                    <colgroup>
-                                        <col span="3"/>
-                                    </colgroup>
-                                    <tfoot>
-                                        <tr>
-                                            <td colspan="3">
-                                                <sup>1</sup>Lorem ipsum dolor sit amet, ligula
-                                                suspendisse nulla pretium</td>
-                                        </tr>
-                                    </tfoot>
+                                <paragraph>To help ensure the traceability of biologic products, including
+                                    biosimilars, health professionals should recognise the importance of recording
+                                    both the brand name and the non-proprietary (active ingredient) name as well as
+                                    other product-specific identifiers such as the Drug Identification Number (DIN)
+                                    and the batch/lot number of the product supplied.</paragraph>
+                                <table ID="t5" width="100%">
+                                    <caption> Table - Dosage Forms, Strengths, Composition and Packaging</caption>
                                     <tbody>
                                         <tr>
-                                            <th styleCode="Toprule Botrule Lrule Rrule">Route of
-                                                Administration </th>
-                                            <th styleCode="Toprule Botrule Lrule Rrule">Dosage Form
-                                                / Strength/Composition </th>
-                                            <th styleCode="Toprule Botrule Lrule Rrule"
-                                                >Non-medicinal Ingredients<sup>1</sup></th>
+                                            <th styleCode="Toprule Botrule Lrule Rrule">Route of Administration </th>
+                                            <th styleCode="Toprule Botrule Lrule Rrule">Dosage Form / Strength/Composition </th>
+                                            <th styleCode="Toprule Botrule Lrule Rrule">Non-medicinal Ingredients</th>
                                         </tr>
                                         <tr>
-                                            <td styleCode="Toprule Botrule Lrule Rrule"
-                                                >&lt;oral&gt;</td>
-                                            <td styleCode="Toprule Botrule Lrule Rrule">&lt;tablet 5
-                                                mg, 10 mg&gt;</td>
-                                            <td styleCode="Toprule Botrule Lrule Rrule">[List all
-                                                non-medicinal ingredients in alphabetical
-                                                order.]</td>
+                                            <td styleCode="Toprule Botrule Lrule Rrule">oral</td>
+                                            <td styleCode="Toprule Botrule Lrule Rrule">tablet 5 mg, 10 mg</td>
+                                            <td styleCode="Toprule Botrule Lrule Rrule">[List all non-medicinal
+                                                ingredients in alphabetical order.]</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <paragraph>new table test</paragraph>
-                                <table ID="t7" cellpadding="1" width="80%">
-                                    <caption> Table 2 - table without border test</caption>
-                                    <tbody>
-                                        <tr>
-                                            <td>Route of Administration </td>
-                                            <td>Dosage Form / Strength/Composition </td>
-                                            <td>Non-medicinal Ingredients<sup>1</sup></td>
-                                        </tr>
-                                        <tr>
-                                            <td>&lt;oral&gt;</td>
-                                            <td>&lt;tablet 5 mg, 10 mg&gt;</td>
-                                            <td>[List all non-medicinal ingredients in alphabetical
-                                                order.]</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <paragraph>text</paragraph>
                             </text>
                             <effectiveTime value="20180101"/>
                         </section>
@@ -2623,25 +2649,39 @@
                     <title>PATIENT MEDICATION INFORMATION</title>
                     <effectiveTime value="20170101"/>
                     <component>
-                        <section ID="baa4d498-0fc3-4e44-b4b6-550140dde5d">
-                            <id root="be7426e6-c431-4a5f-a18e-ed321b381456"/>
+                        <section ID="ea4ec98b-b2d3-4d73-877c-aaa5eb28997d">
+                            <id root="067c0a3b-5869-43a7-baff-ce6de72ae1e5"/>
                             <code code="60059" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="BRAND NAME"/>
-                            <title>BRAND NAME</title>
+                                displayName="READ THIS FOR SAFE AND EFFECTIVE USE OF YOUR MEDICINE"/>
+                            <title>READ THIS FOR SAFE AND EFFECTIVE USE OF YOUR MEDICINE</title>
                             <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="baa4d498-0fc3-4e44-b4b6-550140d4e5d">
-                            <id root="be74b6e6-c431-4a5f-a18e-ed321c381456"/>
-                            <code code="60060" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="PROPER NAME IN FINAL DOSAGE FORMS"/>
-                            <title>PROPER NAME IN FINAL DOSAGE FORMS</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>[BRAND NAME]</paragraph>
+                                <paragraph>[PROPER NAME IN FINAL DOSAGE FORM]</paragraph>
+                                <paragraph>Read this carefully before you start taking [Brand name]
+                                    and each time you get a refill. This leaflet is a summary and
+                                    will not tell you everything about this drug. Talk to your
+                                    healthcare professional about your medical condition and
+                                    treatment and ask if there is any new information about [Brand
+                                    name].</paragraph>
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center" colspan="2"
+                                                styleCode="Lrule Rrule Toprule">
+                                                <content styleCode="bold">Serious Warnings and
+                                                  Precautions</content>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td styleCode="Lrule Rrule Botrule">
+                                                <list>
+                                                  <item>text</item>
+                                                  <item>text</item>
+                                                </list>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2651,9 +2691,12 @@
                             <id root="be74b6e6-1431-4a5f-a18e-ed321b381456"/>
                             <code code="60061" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="WHAT IS THIS MEDICATION USED FOR?"/>
-                            <title>WHAT IS THIS MEDICATION USED FOR?</title>
+                            <title>What is [Brand name] used for?</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <list>
+                                    <item>text</item>
+                                    <item>text</item>
+                                </list>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2663,9 +2706,12 @@
                             <id root="be74b6e6-c431-4adf-a18e-ed321b381456"/>
                             <code code="60062" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="HOW DOES THIS MEDICATION WORK?"/>
-                            <title>HOW DOES THIS MEDICATION WORK?</title>
+                            <title>How does [Brand name] work?</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>[At the grade 6-8 reading level, explain the mechanism of
+                                    action, in one or two sentences. Indicate how long it takes to
+                                    work and how to know if it is working.]</paragraph>
+                                <paragraph>text</paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2675,9 +2721,12 @@
                             <id root="be74b6e6-c431-4a5f-a18e-ed321b381756"/>
                             <code code="60063" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="WHAT ARE THE INGREDIENTS IN THIS MEDICATION?"/>
-                            <title>WHAT ARE THE INGREDIENTS IN THIS MEDICATION?</title>
+                            <title>What are the ingredients in [Brand name]?</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>Medicinal ingredients: [List all medicinal ingredients
+                                    from Part I.]</paragraph>
+                                <paragraph>Non-medicinal ingredients: [List all non-medicinal
+                                    ingredients in alphabetical order from Part I.]</paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2687,9 +2736,11 @@
                             <id root="be74b6e6-c431-4a5f-a18e-ed3a1b381456"/>
                             <code code="60064" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="THIS MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:"/>
-                            <title>THIS MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:</title>
+                            <title>[Brand name] comes in the following dosage forms:</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>[To maintain brevity, this is the only information
+                                    required in this section.]</paragraph>
+                                <paragraph>[dosage form(s) and strength(s)]</paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2699,9 +2750,14 @@
                             <id root="be74b6e6-cd31-4a5f-a18e-ed321b381456"/>
                             <code code="60065" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="DO NOT USE THIS MEDICATION IF:"/>
-                            <title>DO NOT USE THIS MEDICATION IF:</title>
+                            <title>Do not use [Brand name] if:</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>[Enter one point for each contraindication from Part
+                                    I.]</paragraph>
+                                <list>
+                                    <item>text</item>
+                                    <item>text</item>
+                                </list>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2711,12 +2767,17 @@
                             <id root="be74b6e6-c431-4a5f-a18e-ed32cc381456"/>
                             <code code="60066" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="TO HELP AVOID SIDE EFFECTS AND ENSURE PROPER USE, TALK TO YOUR HEALTHCARE PROFESSIONAL BEFORE YOU TAKE MEDICATION. TALK ABOUT ANY HEALTH CONDITIONS OR PROBLEMS YOU MAY HAVE, INCLUDING IF YOU:"/>
-                            <title>TO HELP AVOID SIDE EFFECTS AND ENSURE PROPER USE, TALK TO YOUR
-                                HEALTHCARE PROFESSIONAL BEFORE YOU TAKE MEDICATION. TALK ABOUT ANY
-                                HEALTH CONDITIONS OR PROBLEMS YOU MAY HAVE, INCLUDING IF
-                                YOU:</title>
+                            <title>To help avoid side effects and ensure proper use, talk to your
+                                healthcare professional before you take [Brand name]. Talk about any
+                                health conditions or problems you may have, including if
+                                you:</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>[Enter one point for each warning and precaution from
+                                    Part I.]</paragraph>
+                                <list>
+                                    <item>text</item>
+                                    <item>text</item>
+                                </list>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2726,23 +2787,15 @@
                             <id root="be74bbe6-c431-4a5f-a18e-ed321b381456"/>
                             <code code="60067" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="OTHER WARNINGS YOU SHOULD KNOW ABOUT:"/>
-                            <title>OTHER WARNINGS YOU SHOULD KNOW ABOUT:</title>
+                            <title>Other warnings you should know about:</title>
                             <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="f040bb1e-8989-42c8-82dc-53a855e88f0f">
-                            <id root="be74b6e6-c431-4a5f-a18e-ed431b381456"/>
-                            <code code="60068" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="TELL YOUR HEALTHCARE PROFESSIONAL ABOUT ALL THE MEDICINES YOU TAKE, INCLUDING ANY DRUGS, VITAMINS, MINERALS, NATURAL SUPPLEMENTS OR ALTERNATIVE MEDICINES."/>
-                            <title>TELL YOUR HEALTHCARE PROFESSIONAL ABOUT ALL THE MEDICINES YOU
-                                TAKE, INCLUDING ANY DRUGS, VITAMINS, MINERALS, NATURAL SUPPLEMENTS
-                                OR ALTERNATIVE MEDICINES.</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>[Enter general information that would not appear in the
+                                    serious warnings and precautions box or other existing headings.
+                                    Otherwise this heading is not required.]</paragraph>
+                                <paragraph>text</paragraph>
+                                <paragraph>Tell your healthcare professional about all the medicines
+                                    you take, including any drugs, vitamins, minerals, natural
+                                    supplements or alternative medicines.</paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2752,9 +2805,12 @@
                             <id root="be74b6e6-c431-4a5f-a18e-ed321ab81456"/>
                             <code code="60069" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="THE FOLLOWING MAY INTERACT WITH THIS MEDICATION:"/>
-                            <title>THE FOLLOWING MAY INTERACT WITH THIS MEDICATION:</title>
+                            <title>The following may interact with [Brand name]:</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <list>
+                                    <item>text</item>
+                                    <item>text</item>
+                                </list>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2764,7 +2820,7 @@
                             <id root="be74b6e6-c431-4a5f-a18e-ed3212281456"/>
                             <code code="60070" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="HOW TO TAKE THIS MEDICATION:"/>
-                            <title>HOW TO TAKE THIS MEDICATION:</title>
+                            <title>How to take [Brand name]:</title>
                             <text>
                                 <paragraph> sample text </paragraph>
                             </text>
@@ -2790,7 +2846,21 @@
                                 displayName="OVERDOSE:"/>
                             <title>OVERDOSE:</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>text</paragraph>
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td styleCode="Lrule Rrule Botrule Toprule">If you think
+                                                you have taken too much [Brand name], contact your
+                                                healthcare professional, hospital emergency
+                                                department or regional poison control centre
+                                                immediately, even if there are no symptoms.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <paragraph>[The boxed message may be modified to provide the most
+                                    appropriate advice according to current standards of care for
+                                    this drug product.]</paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2812,22 +2882,17 @@
                             <id root="be74b6e6-c431-4a5f-a98e-ed321b381456"/>
                             <code code="60074" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="WHAT ARE POSSIBLE SIDE EFFECTS FROM USING THIS MEDICATION?"/>
-                            <title>WHAT ARE POSSIBLE SIDE EFFECTS FROM USING THIS
-                                MEDICATION?</title>
+                            <title>What are possible side effects from using [Brand name]?</title>
                             <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="ee37dfa5-6d8c-4490-b4a5-c6f2d73aa041">
-                            <id root="be7406e6-c431-4a5f-a18e-ed321b381456"/>
-                            <code code="60075" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="SERIOUS SIDE EFFECTS AND WHAT TO DO ABOUT THEM"/>
-                            <title>SERIOUS SIDE EFFECTS AND WHAT TO DO ABOUT THEM</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>These are not all the possible side effects you may feel
+                                    when taking [Brand name]. If you experience any side effects not
+                                    listed here, contact your healthcare professional.</paragraph>
+                                <paragraph>text</paragraph>
+                                <paragraph>[Self-limiting side effects should be described in the
+                                    text section only. Serious side effects must be listed in the
+                                    serious side effects table. Each side effect should appear only
+                                    once, in text or in the table, as duplication generally is not
+                                    wanted in Part III.]</paragraph>
                                 <table ID="t8" border="1">
                                     <caption>Serious side effects and what to do about
                                         them</caption>
@@ -2898,20 +2963,37 @@
                                 <paragraph>If you have a troublesome symptom or side effect that is
                                     not listed here or becomes bad enough to interfere with your
                                     daily activities, talk to your healthcare
-                                    professional.<br/><br/> Reporting Side Effects<br/> You can
-                                    report any suspected side effects associated with the use of
-                                    health products to Health Canada by:</paragraph>
-                                <list listType="unordered">
-                                    <item>Visiting the Web page on Adverse Reaction Reporting
-                                        (http://www.hc-sc.gc.ca/dhp-mps/medeff/report-declaration/index-eng.php)
-                                        for information on how to report online, by mail or by fax;
-                                        or</item>
-                                    <item>Calling toll-free at 1-866-234-2345.</item>
-                                </list>
-                                <paragraph><content styleCode="italics">NOTE: Contact your health
-                                        professional if you need information about how to manage
-                                        your side effects. The Canada Vigilance Program does not
-                                        provide medical advice.</content></paragraph>
+                                    professional.</paragraph>
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <th styleCode="Lrule Rrule Toprule">Reporting Side
+                                                Effects</th>
+                                        </tr>
+                                        <tr>
+                                            <td styleCode="Lrule Rrule Botrule">
+                                                <paragraph>You can report any suspected side effects
+                                                  associated with the use of health products to
+                                                  Health Canada by:</paragraph>
+                                                <list styleCode="unordered">
+                                                  <item>Visiting the Web page on Adverse Reaction
+                                                  Reporting <linkHtml
+                                                  href="http://www.hc-sc.gc.ca/dhp-
+                                                            mps/medeff/report-declaration/index-eng.php"
+                                                  >(http://www.hc-sc.gc.ca/dhp-
+                                                  mps/medeff/report-declaration/index-eng.php)</linkHtml>
+                                                  for information on how to report online, by mail
+                                                  or by fax; or</item>
+                                                  <item>Calling toll-free at 1-866-234-2345.</item>
+                                                </list>
+                                                <paragraph>NOTE: Contact your health professional if
+                                                  you need information about how to manage your side
+                                                  effects. The Canada Vigilance Program does not
+                                                  provide medical advice.</paragraph>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2923,8 +3005,8 @@
                                 displayName="STORAGE:"/>
                             <title>STORAGE:</title>
                             <text>
-                                <paragraph> sample text<br/><br/>Keep out of reach and sight of
-                                    children.</paragraph>
+                                <paragraph>text</paragraph>
+                                <paragraph>Keep out of reach and sight of children.</paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2934,263 +3016,20 @@
                             <id root="be74b6e6-c431-4a5f-a18e-ed321b381446"/>
                             <code code="60077" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="IF YOU WANT MORE INFORMATION ABOUT THIS MEDICATION:"/>
-                            <title>IF YOU WANT MORE INFORMATION ABOUT THIS MEDICATION:</title>
+                            <title>If you want more information about [Brand name]:</title>
                             <text>
-                                <list listType="ordered">
+                                <list listType="unordered">
                                     <item>Talk to your healthcare professional</item>
                                     <item>Find the full product monograph that is prepared for
                                         healthcare professionals and includes this Patient
-                                        Medication Information by visiting the Health Canada website
-                                        (http://hc-sc.gc.ca/index-eng.php); the manufacturer's
-                                        website (website), or by calling 1-800-(phone
+                                        Medication Information by visiting the Health Canada
+                                            website <linkHtml href="http://hc-sc.gc.ca/index-eng.php"
+                                            >(http://hc-sc.gc.ca/index-eng.php)</linkHtml>; the
+                                        manufacturer's website (website), or by calling 1-800-(phone
                                         number).</item>
                                 </list>
-                                <paragraph>This leaflet was prepared by (Sponsor Name)<br/><br/>
-                                    Last Revised (MON-DD-YYYY)</paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                </section>
-            </component>
-            <component>
-                <!-- Patient Medication Information -->
-                <section ID="A1">
-                    <id root="bd368132-a672-46b8-81ff-601962313762"/>
-                    <code code="60058" codeSystem="2.16.840.1.113883.2.20.6.60"
-                        displayName="PATIENT MEDICATION INFORMATION"/>
-                    <title>PATIENT MEDICATION INFORMATION</title>
-                    <effectiveTime value="20170101"/>
-                    <component>
-                        <section ID="A2">
-                            <id root="cb73b84b-3e1d-4858-9250-628a87166baf"/>
-                            <code code="60059" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="BRAND NAME"/>
-                            <title>BRAND NAME</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A3">
-                            <id root="2494b727-e7a1-4cd3-b62f-b89c2e5bfa0c"/>
-                            <code code="60060" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="PROPER NAME IN FINAL DOSAGE FORMS"/>
-                            <title>PROPER NAME IN FINAL DOSAGE FORMS</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A4">
-                            <id root="fc18a479-1ff1-4981-9c22-b55805211d38"/>
-                            <code code="60061" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="WHAT IS THIS MEDICATION USED FOR?"/>
-                            <title>WHAT IS THIS MEDICATION USED FOR?</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A5">
-                            <id root="51457336-f04a-4de7-bef9-8184200af277"/>
-                            <code code="60062" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="HOW DOES THIS MEDICATION WORK?"/>
-                            <title>HOW DOES THIS MEDICATION WORK?</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A6">
-                            <id root="e8d0896c-0786-40fa-a2db-82c48e390586"/>
-                            <code code="60063" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="WHAT ARE THE INGREDIENTS IN THIS MEDICATION?"/>
-                            <title>WHAT ARE THE INGREDIENTS IN THIS MEDICATION?</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A7">
-                            <id root="d84638a1-c308-4362-be57-4cfed13e7469"/>
-                            <code code="60064" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="THIS MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:"/>
-                            <title>THIS MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A8">
-                            <id root="d55c6c7a-27e9-4f68-85c3-aaf1c785d415"/>
-                            <code code="60065" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="DO NOT USE THIS MEDICATION IF:"/>
-                            <title>DO NOT USE THIS MEDICATION IF:</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A9">
-                            <id root="a0e7dffc-de2e-4fcc-ac2a-f657a39faecd"/>
-                            <code code="60066" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="TO HELP AVOID SIDE EFFECTS AND ENSURE PROPER USE, TALK TO YOUR HEALTHCARE PROFESSIONAL BEFORE YOU TAKE MEDICATION. TALK ABOUT ANY HEALTH CONDITIONS OR PROBLEMS YOU MAY HAVE, INCLUDING IF YOU:"/>
-                            <title>TO HELP AVOID SIDE EFFECTS AND ENSURE PROPER USE, TALK TO YOUR
-                                HEALTHCARE PROFESSIONAL BEFORE YOU TAKE MEDICATION. TALK ABOUT ANY
-                                HEALTH CONDITIONS OR PROBLEMS YOU MAY HAVE, INCLUDING IF
-                                YOU:</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A10">
-                            <id root="5d2bac24-b249-4fde-bf01-6cf92615f317"/>
-                            <code code="60067" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="OTHER WARNINGS YOU SHOULD KNOW ABOUT:"/>
-                            <title>OTHER WARNINGS YOU SHOULD KNOW ABOUT:</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A11">
-                            <id root="1c215415-f81d-4fcd-be8d-bbaac70d0993"/>
-                            <code code="60068" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="TELL YOUR HEALTHCARE PROFESSIONAL ABOUT ALL THE MEDICINES YOU TAKE, INCLUDING ANY DRUGS, VITAMINS, MINERALS, NATURAL SUPPLEMENTS OR ALTERNATIVE MEDICINES."/>
-                            <title>TELL YOUR HEALTHCARE PROFESSIONAL ABOUT ALL THE MEDICINES YOU
-                                TAKE, INCLUDING ANY DRUGS, VITAMINS, MINERALS, NATURAL SUPPLEMENTS
-                                OR ALTERNATIVE MEDICINES.</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A12">
-                            <id root="e7d94912-b414-4e38-b180-b077aada8552"/>
-                            <code code="60069" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="THE FOLLOWING MAY INTERACT WITH THIS MEDICATION:"/>
-                            <title>THE FOLLOWING MAY INTERACT WITH THIS MEDICATION:</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A13">
-                            <id root="be74b6e6-c431-4a5f-a18e-ed321b381f56"/>
-                            <code code="60070" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="HOW TO TAKE THIS MEDICATION:"/>
-                            <title>HOW TO TAKE THIS MEDICATION:</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A14">
-                            <id root="0acbf439-7cab-4feb-8ba3-22912940a5df"/>
-                            <code code="60071" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="USUAL DOSE:"/>
-                            <title>USUAL DOSE:</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A15">
-                            <id root="40d4d5a8-15ef-4031-ac1b-2d4f0c5d09e0"/>
-                            <code code="60072" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="OVERDOSE:"/>
-                            <title>OVERDOSE:</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A16">
-                            <id root="a5bea4bd-153e-449d-b49d-0d41af65a3e3"/>
-                            <code code="60073" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="MISSED DOSE:"/>
-                            <title>MISSED DOSE:</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A17">
-                            <id root="ccddbbaa-1de4-44f8-b283-a736a0ad2ee0"/>
-                            <code code="60074" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="WHAT ARE POSSIBLE SIDE EFFECTS FROM USING THIS MEDICATION?"/>
-                            <title>WHAT ARE POSSIBLE SIDE EFFECTS FROM USING THIS
-                                MEDICATION?</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A18">
-                            <id root="9ba6c878-224e-44e7-8194-b952f92b443c"/>
-                            <code code="60075" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="SERIOUS SIDE EFFECTS AND WHAT TO DO ABOUT THEM"/>
-                            <title>SERIOUS SIDE EFFECTS AND WHAT TO DO ABOUT THEM</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A19">
-                            <id root="9722b3ab-42aa-4899-9768-b9fac62489ba"/>
-                            <code code="60076" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="STORAGE:"/>
-                            <title>STORAGE:</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
-                            </text>
-                            <effectiveTime value="20170101"/>
-                        </section>
-                    </component>
-                    <component>
-                        <section ID="A20">
-                            <id root="6da2357c-5011-479c-ac47-7d78664395d7"/>
-                            <code code="60077" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="IF YOU WANT MORE INFORMATION ABOUT THIS MEDICATION:"/>
-                            <title>IF YOU WANT MORE INFORMATION ABOUT THIS MEDICATION:</title>
-                            <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>This leaflet was prepared by (Sponsor Name)</paragraph>
+                                <paragraph>Last Revised (MON-DD-YYYY)</paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
