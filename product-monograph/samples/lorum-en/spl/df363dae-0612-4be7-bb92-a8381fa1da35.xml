@@ -1508,8 +1508,8 @@
                         <section ID="ebc3f3dc-71be-424f-91ef-8aca8c138b21">
                             <id root="efd8c4c1-d0dd-434d-b1c2-4daa18752fa8"/>
                             <code code="60006" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="CONTROL NUMBER"/>
-                            <title>CONTROL NUMBER</title>
+                                displayName="SUBMISSION CONTROL NUMBER"/>
+                            <title>SUBMISSION CONTROL NUMBER</title>
                             <text>
                                 <paragraph>123456</paragraph>
                             </text>
