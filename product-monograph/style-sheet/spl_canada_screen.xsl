@@ -95,7 +95,7 @@
 									<xsl:when test="$tri-code-value = '001' or $tri-code-value = '007'">
 										<li class="nav-item">
 											<a href="#{$unique-section-id}" class="nav-link nav-top">
-												<xsl:value-of select="v3:code/@displayName"/>
+												<xsl:value-of select="v3:title"/>
 											</a>
 										</li>
 									</xsl:when>
@@ -103,7 +103,7 @@
 									<xsl:when test="v3:code[@code='TP']|v3:code[@code='RMLC']">
 										<li class="nav-item">
 											<a href="#{$unique-section-id}" class="nav-link nav-top">
-												<xsl:value-of select="v3:code/@displayName"/>
+												<xsl:value-of select="v3:title"/>
 											</a>
 										</li>
 									</xsl:when>
@@ -111,7 +111,7 @@
 										<!-- NAVIGATION FOR DIFFERENT PARTS -->
 										<li class="nav-item">
 											<a href="#drop-{$unique-section-id}" class="nav-link nav-top dropdown-toggle" data-toggle="collapse">
-												<xsl:value-of select="v3:code/@displayName"/>
+												<xsl:value-of select="v3:title"/>
 											</a>
 											<xsl:if test="v3:component/v3:section">
 											<ul id="drop-{$unique-section-id}" class="navbar-nav small collapse">
@@ -133,7 +133,7 @@
 		<xsl:variable name="unique-subsection-id"><xsl:value-of select="@ID"/></xsl:variable>
 		<li class="nav-item">
 			<a href="#{$unique-subsection-id}" class="nav-link">
-				<xsl:value-of select="v3:code/@displayName"/>
+				<xsl:value-of select="v3:title"/>				
 			</a>
 			<xsl:if test="v3:component/v3:section">
 				<ul class="navbar-nav">
@@ -154,51 +154,59 @@
 		</li>
 	</xsl:template>
 		
-	<!-- SECTION NUMBER MODE -->
+	<!-- SECTION MODEL AND NUMBER MODE -->
 	<!-- Special mode to construct a section number. Apply to a sequence of sections on the ancestor-or-self axis. -->
 	<!-- Shallow null-transform for anything but sections. -->
-	<!-- pmh - we could move this to spl_canada.xsl, but it contains child apply-templates -->
-	<!-- can we just deprecate these two templates completely? No. -->
 	<xsl:template mode="sectionNumber" match="/|@*|node()"/>
 	<xsl:template mode="sectionNumber" match="v3:section">
 		<xsl:value-of select="concat('.',count(parent::v3:component/preceding-sibling::v3:component[v3:section])+1)"/>
 	</xsl:template>
 		
-	<!-- SECTION MODEL - is this kludgey to just override this? -->
 	<xsl:template match="v3:section">
 		<xsl:param name="sectionLevel" select="count(ancestor-or-self::v3:section)"/>
 		<xsl:variable name="sectionNumberSequence">
 			<xsl:apply-templates mode="sectionNumber" select="ancestor-or-self::v3:section"/>
 		</xsl:variable>
-			<div class="Section">
-				<xsl:for-each select="v3:code">
-					<xsl:attribute name="data-sectionCode"><xsl:value-of select="@code"/></xsl:attribute>
-				</xsl:for-each>
+		<div class="Section">
+			<xsl:for-each select="v3:code">
+				<xsl:attribute name="data-sectionCode"><xsl:value-of select="@code"/></xsl:attribute>
+			</xsl:for-each>
 
-				<xsl:for-each select="@ID"><!-- AURORA SPECIFIC -->
-					<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
-				</xsl:for-each>
+			<xsl:for-each select="@ID"><!-- AURORA SPECIFIC -->
+				<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
+			</xsl:for-each>
 
-				<xsl:call-template name="styleCodeAttr">
-					<xsl:with-param name="styleCode" select="@styleCode"/>
-					<xsl:with-param name="additionalStyleCode" select="'Section'"/>
-				</xsl:call-template>
-				<xsl:for-each select="@ID">
-					<a name="{.}"><xsl:text> </xsl:text></a>
-				</xsl:for-each>
-				<a name="section-{substring($sectionNumberSequence,2)}"><xsl:text> </xsl:text></a>
-				<p/>
-				<xsl:apply-templates select="v3:title">
-					<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
-					<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
-				</xsl:apply-templates>
-				<!-- TODO remove all of the show-data? -->
-				<xsl:if test="boolean($show-data)">
-					<xsl:apply-templates mode="data" select="."/>
-				</xsl:if>
-				<xsl:apply-templates select="@*|node()[not(self::v3:title)]"/>
-				<xsl:call-template name="flushSectionTitleFootnotes"/>
-			</div>
+			<xsl:call-template name="styleCodeAttr">
+				<xsl:with-param name="styleCode" select="@styleCode"/>
+				<xsl:with-param name="additionalStyleCode" select="'Section'"/>
+			</xsl:call-template>
+			<xsl:for-each select="@ID">
+				<a name="{.}"><xsl:text> </xsl:text></a>
+			</xsl:for-each>
+			<a name="section-{substring($sectionNumberSequence,2)}"><xsl:text> </xsl:text></a>
+			<p/>
+			<xsl:apply-templates select="v3:title">
+				<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
+				<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
+			</xsl:apply-templates>
+			<!-- TODO remove all of the show-data? -->
+			<xsl:if test="boolean($show-data)">
+				<xsl:apply-templates mode="data" select="."/>
+			</xsl:if>
+			<xsl:apply-templates select="@*|node()[not(self::v3:title)]"/>
+			<xsl:call-template name="flushSectionTitleFootnotes"/>
+		</div>
+	</xsl:template>
+	
+	<!-- this template is only used on the Title Page to show Control Number on a single line -->
+	<xsl:template match="v3:section" mode="inline-title">
+		<div class="Section">
+			<br/>
+			<h2 style="display: inline;">
+				<xsl:value-of select="v3:title"/>:
+			</h2>
+			<xsl:value-of select="v3:text/v3:paragraph"/>
+		</div>
 	</xsl:template>
 
 	<xsl:template match="v3:document" mode="html-head">

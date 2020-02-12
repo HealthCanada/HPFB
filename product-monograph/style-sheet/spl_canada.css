@@ -856,14 +856,20 @@ be represented
 }
 /* non-Bootstrap styles for XML Notepad and DocuBridge */
 .title-page-row {
-    padding: 0.5in;
+    padding: 0.25in;
+}
+.title-page-rule
+{
+    border-top: 1px solid; 
+    border-bottom: 1px solid;
+    border-color: lightgrey;
 }
 .title-page-left {
     float: left;
-    width: 50%;
+    width: 60%;
 }
 .title-page-right {
-    margin-left: 50%;
+    margin-left: 40%;
 }
 
 .recent-changes table, 

@@ -255,7 +255,7 @@
 					<xsl:for-each select="(v3:ingredientSubstance|v3:activeIngredientSubstance)[1]">
 						<td class="formItem">
 							<strong>
-								<xsl:value-of select="v3:name"/>
+								<xsl:value-of select="v3:code/@displayName"/>
 							</strong>
 							<xsl:text> (</xsl:text>
 							<xsl:for-each select="v3:code/@code">
@@ -277,13 +277,13 @@
 						<td class="formItem">
 							<xsl:choose>
 								<xsl:when test="../@classCode='ACTIR'">
-									<xsl:value-of select="v3:asEquivalentSubstance/v3:definingSubstance/v3:name"/>
+									<xsl:value-of select="v3:asEquivalentSubstance/v3:definingSubstance/v3:code/@displayName"/>
 								</xsl:when>
 								<xsl:when test="../@classCode='ACTIB'">
-									<xsl:value-of select="v3:name"/>
+									<xsl:value-of select="v3:code/@displayName"/>
 								</xsl:when>
 								<xsl:when test="../@classCode='ACTIM'">
-									<xsl:value-of select="v3:activeMoiety/v3:activeMoiety/v3:name"/>
+									<xsl:value-of select="v3:activeMoiety/v3:activeMoiety/v3:code/@displayName"/>
 								</xsl:when>
 							</xsl:choose>
 						</td>
@@ -713,45 +713,31 @@
 								<xsl:when test="$tri-code-value = '001'">
 									<!-- TITLE PAGE - Note: force-page-break-after here does not work on FireFox -->
 									<div class="card mb-2 force-page-break-after" id="{$unique-section-id}">
-										<h5 class="card-header text-white bg-aurora-accent1">
-											<xsl:value-of select="v3:code/@displayName"/>
+										<h5 class="card-header text-white bg-aurora-accent1 hide-in-print">
+											<xsl:value-of select="v3:title"/>
 										</h5>
 										<div class="spl title-page title-page-row">
-											<xsl:for-each select="v3:component[1]/v3:section">
-												<xsl:apply-templates select="v3:title"/>
-												<xsl:apply-templates select="v3:text"/>
-											</xsl:for-each>
+											<xsl:apply-templates select="v3:component[1]/v3:section/v3:text"/>
 										</div>
-										<div class="spl title-page-row">
+										<div class="spl title-page-row title-page-rule">
 											<div class="title-page-left">
-												<xsl:for-each select="v3:component[2]/v3:section">
-													<xsl:apply-templates select="v3:title"/>
-													<xsl:apply-templates select="v3:text"/>
-												</xsl:for-each>
+												<xsl:apply-templates select="v3:component[2]/v3:section"/>	
+												<xsl:apply-templates select="v3:component[position() = last()-1]/v3:section" mode="inline-title"/>
 											</div>
 											<div class="title-page-right">
-												<!-- TODO - this should probably just render every subsection with position greater than [2] -->
-												<xsl:for-each select="v3:component[3]/v3:section">
-													<xsl:apply-templates select="v3:title"/>
-													<xsl:apply-templates select="v3:text"/>
-												</xsl:for-each>
-												<xsl:for-each select="v3:component[4]/v3:section">
-													<xsl:apply-templates select="v3:title"/>
-													<xsl:apply-templates select="v3:text"/>
-												</xsl:for-each>
-												<xsl:for-each select="v3:component[5]/v3:section">
-													<xsl:apply-templates select="v3:title"/>
-													<xsl:apply-templates select="v3:text"/>
-												</xsl:for-each>
+												<xsl:apply-templates select="v3:component[position() &gt; 2 and position() &lt; last()-1]/v3:section"/>
 											</div>
 										</div>											
+										<div class="spl title-page title-page-row">
+											<xsl:apply-templates select="v3:component[position()=last()]/v3:section/v3:text"/>
+										</div>
 									</div>
 								</xsl:when>
 								<xsl:when test="$tri-code-value = '007'">
 									<!-- RECENT MAJOR LABEL CHANGES -->
 									<div class="card mb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
-											<xsl:value-of select="v3:code/@displayName"/>
+											<xsl:value-of select="v3:title"/>
 										</h5>
 										<div class="spl recent-changes">
 											<xsl:apply-templates select="."/>
@@ -762,7 +748,7 @@
 									<!-- NAVIGATION FOR DIFFERENT PARTS -->								
 									<div class="card mb-2 pb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
-											<xsl:value-of select="v3:code/@displayName"/>
+											<xsl:value-of select="v3:title"/>
 										</h5>
 										<div class="spl">
 											<xsl:apply-templates select="."/>
