@@ -1100,6 +1100,18 @@
               <effectiveTime value="20180101"/>
             </section>
           </component>
+		  <component>
+            <section ID="e2d4279e-5fca-4d26-898d-02548a217ab9">
+              <id root="f17bc229-d609-460a-b9dc-418008d47c90"/>
+              <code code="60000" codeSystem="2.16.840.1.113883.2.20.6.60"
+                displayName="PIED"/>
+              <title>PIED</title>
+              <text>
+                <paragraph>[MARQUE]<sup>&#174;</sup> or &#8482;] est une marque déposée de [entreprise]</paragraph>
+              </text>
+              <effectiveTime value="20180101"/>
+            </section>
+          </component>
         </section>
       </component>
       <component>
