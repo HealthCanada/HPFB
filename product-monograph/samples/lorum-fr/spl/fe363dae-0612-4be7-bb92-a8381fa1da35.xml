@@ -1107,7 +1107,7 @@
                 displayName="PIED"/>
               <title>PIED</title>
               <text>
-                <paragraph>[MARQUE]<sup>&#174;</sup> or &#8482;] est une marque déposée de [entreprise]</paragraph>
+                <paragraph>[MARQUE<sup>&#174;</sup> or &#8482;] est une marque déposée de [entreprise]</paragraph>
               </text>
               <effectiveTime value="20180101"/>
             </section>
