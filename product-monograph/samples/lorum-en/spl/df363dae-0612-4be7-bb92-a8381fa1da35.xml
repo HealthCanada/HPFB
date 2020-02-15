@@ -1603,22 +1603,27 @@
                                         displayName="1.1 PEDIATRICS"/>
                                     <title>1.1 PEDIATRICS</title>
                                     <text>
-                                        <paragraph>[One of the following or similar statements should be
-                                            used:]</paragraph>
-                                        <paragraph><content styleCode="bold">Pediatrics (age range):</content> Based on
-                                            the data submitted and reviewed by Health Canada, the safety and efficacy of
-                                            Brand name in pediatric patients has been established; therefore, Health
-                                            Canada has authorized an indication for pediatric use. (cross-reference to
-                                            relevant sections)</paragraph>
+                                        <paragraph>[One of the following or similar statements
+                                            should be used:]</paragraph>
+                                        <paragraph><content styleCode="bold">Pediatrics (age
+                                                range):</content> Based on the data submitted and
+                                            reviewed by Health Canada, the safety and efficacy of
+                                            Brand name in pediatric patients has been established;
+                                            therefore, Health Canada has authorized an indication
+                                            for pediatric use. (cross-reference to relevant
+                                            sections)</paragraph>
                                         <paragraph>[or]</paragraph>
-                                        <paragraph><content styleCode="bold">Pediatrics (age range):</content> No data
-                                            are available to Health Canada; therefore, Health Canada has not authorized an
+                                        <paragraph><content styleCode="bold">Pediatrics (age
+                                                range):</content> No data are available to Health
+                                            Canada; therefore, Health Canada has not authorized an
                                             indication for pediatric use.</paragraph>
                                         <paragraph>[or]</paragraph>
-                                        <paragraph><content styleCode="bold">Pediatrics (age range):</content> Based on
-                                            the data submitted and reviewed by Health Canada, the safety and efficacy of
-                                            Brand name in pediatric patients has not been established; therefore, Health
-                                            Canada has not authorized an indication for pediatric use. (cross-reference to
+                                        <paragraph><content styleCode="bold">Pediatrics (age
+                                                range):</content> Based on the data submitted and
+                                            reviewed by Health Canada, the safety and efficacy of
+                                            Brand name in pediatric patients has not been
+                                            established; therefore, Health Canada has not authorized
+                                            an indication for pediatric use. (cross-reference to
                                             relevant sections)</paragraph>
                                     </text>
                                     <effectiveTime value="20180822"/>
@@ -1631,14 +1636,17 @@
                                         displayName="1.2 GERIATRICS"/>
                                     <title>1.2 GERIATRICS</title>
                                     <text>
-                                        <paragraph>[One of the following or similar statements may be used:]</paragraph>
-                                        <paragraph><content styleCode="bold">Geriatrics (> x years of age):</content> No
-                                            data are available to Health Canada; therefore, Health Canada has not
-                                            authorized an indication for geriatric use.</paragraph>
+                                        <paragraph>[One of the following or similar statements may
+                                            be used:]</paragraph>
+                                        <paragraph><content styleCode="bold">Geriatrics (> x years
+                                                of age):</content> No data are available to Health
+                                            Canada; therefore, Health Canada has not authorized an
+                                            indication for geriatric use.</paragraph>
                                         <paragraph>[or]</paragraph>
-                                        <paragraph><content styleCode="bold">Geriatrics (> x years of age):</content>
-                                            Evidence from clinical studies and experience suggests that use in the
-                                            geriatric population is associated with differences in safety or
+                                        <paragraph><content styleCode="bold">Geriatrics (> x years
+                                                of age):</content> Evidence from clinical studies
+                                            and experience suggests that use in the geriatric
+                                            population is associated with differences in safety or
                                             effectiveness.</paragraph>
                                     </text>
                                     <effectiveTime value="20180101"/>
@@ -1653,9 +1661,10 @@
                                 displayName="2 CONTRAINDICATIONS"/>
                             <title>2 CONTRAINDICATIONS</title>
                             <text>
-                                <paragraph>[Proper name] is contraindicated in patients who are hypersensitive to
-                                    this drug or to any ingredient in the formulation, including any non-medicinal
-                                    ingredient, or component of the container. For a complete listing, see Dosage
+                                <paragraph>[Proper name] is contraindicated in patients who are
+                                    hypersensitive to this drug or to any ingredient in the
+                                    formulation, including any non-medicinal ingredient, or
+                                    component of the container. For a complete listing, see Dosage
                                     Forms, Strengths, Composition and Packaging.</paragraph>
                                 <list>
                                     <item>text</item>
@@ -1672,23 +1681,26 @@
                                 displayName="3 SERIOUS WARNINGS AND PRECAUTIONS BOX"/>
                             <title>3 SERIOUS WARNINGS AND PRECAUTIONS BOX</title>
                             <text>
-                                <paragraph>[Delete this section if there is no Serious Warnings and Precautions
-                                    box.]</paragraph>
+                                <paragraph>[Delete this section if there is no Serious Warnings and
+                                    Precautions box.]</paragraph>
                                 <table>
                                     <caption>Serious Warnings and Precautions</caption>
                                     <tbody>
                                         <tr>
                                             <td styleCode="Lrule Rrule Botrule Toprule">
-                                                <paragraph>[Clinically significant or serious (e.g., life-threatening)
-                                                    safety hazards should be placed in this box, with a cross reference to the
-                                                    relevant section(s) for more detailed information. Generally not to exceed
-                                                    20 lines. Include the following or similar statement, where the active
-                                                    ingredient is derived from plasma:]</paragraph>
+                                                <paragraph>[Clinically significant or serious (e.g.,
+                                                  life-threatening) safety hazards should be placed
+                                                  in this box, with a cross reference to the
+                                                  relevant section(s) for more detailed information.
+                                                  Generally not to exceed 20 lines. Include the
+                                                  following or similar statement, where the active
+                                                  ingredient is derived from plasma:]</paragraph>
                                                 <list>
-                                                    <item>The physician should discuss the risks and benefits of this product
-                                                        with the patient, before prescribing or administering to the patient
-                                                        (see Warnings and Precautions – General).</item>
-                                                    <item>text</item>
+                                                  <item>The physician should discuss the risks and
+                                                  benefits of this product with the patient, before
+                                                  prescribing or administering to the patient (see
+                                                  Warnings and Precautions – General).</item>
+                                                  <item>text</item>
                                                 </list>
                                             </td>
                                         </tr>
@@ -1712,8 +1724,8 @@
                                         displayName="4.1 DOSING CONSIDERATIONS"/>
                                     <title>4.1 DOSING CONSIDERATIONS</title>
                                     <text>
-                                        <paragraph>[Briefly list all situations that may affect dosing of the
-                                            drug:]</paragraph>
+                                        <paragraph>[Briefly list all situations that may affect
+                                            dosing of the drug:]</paragraph>
                                         <list>
                                             <item>text</item>
                                             <item>text</item>
@@ -1729,14 +1741,18 @@
                                         displayName="4.2 RECOMMENDED DOSE AND DOSAGE ADJUSTMENT"/>
                                     <title>4.2 RECOMMENDED DOSE AND DOSAGE ADJUSTMENT</title>
                                     <text>
-                                        <paragraph>[Include dosages for each indication, route of administration and/or
-                                            dosage form. Include information on booster doses for vaccines. Frequency of
-                                            and intervals between booster doses should be described.]</paragraph>
+                                        <paragraph>[Include dosages for each indication, route of
+                                            administration and/or dosage form. Include information
+                                            on booster doses for vaccines. Frequency of and
+                                            intervals between booster doses should be
+                                            described.]</paragraph>
                                         <paragraph>text</paragraph>
-                                        <paragraph>[In the absence of a Health Canada authorized pediatric indication,
-                                            the following or similar statement should be used:]</paragraph>
-                                        <paragraph>Health Canada has not authorized an indication for pediatric use.
-                                            [cross-reference to relevant sections, if applicable]</paragraph>
+                                        <paragraph>[In the absence of a Health Canada authorized
+                                            pediatric indication, the following or similar statement
+                                            should be used:]</paragraph>
+                                        <paragraph>Health Canada has not authorized an indication
+                                            for pediatric use. [cross-reference to relevant
+                                            sections, if applicable]</paragraph>
                                     </text>
                                     <effectiveTime value="20180101"/>
                                 </section>
@@ -1766,16 +1782,24 @@
                                             <caption>Table - Reconstitution</caption>
                                             <tbody>
                                                 <tr>
-                                                    <th styleCode="Lrule Rrule Botrule Toprule">Vial Size</th>
-                                                    <th styleCode="Lrule Rrule Botrule Toprule">Volume of Diluent to be Added to Vial</th>
-                                                    <th styleCode="Lrule Rrule Botrule Toprule">Approximate Available Volume</th>
-                                                    <th styleCode="Lrule Rrule Botrule Toprule">Nominal Concentration per mL</th>
+                                                  <th styleCode="Lrule Rrule Botrule Toprule">Vial
+                                                  Size</th>
+                                                  <th styleCode="Lrule Rrule Botrule Toprule">Volume
+                                                  of Diluent to be Added to Vial</th>
+                                                  <th styleCode="Lrule Rrule Botrule Toprule"
+                                                  >Approximate Available Volume</th>
+                                                  <th styleCode="Lrule Rrule Botrule Toprule"
+                                                  >Nominal Concentration per mL</th>
                                                 </tr>
                                                 <tr>
-                                                    <td styleCode="Lrule Rrule Botrule Toprule">text</td>
-                                                    <td styleCode="Lrule Rrule Botrule Toprule">text</td>
-                                                    <td styleCode="Lrule Rrule Botrule Toprule">text</td>
-                                                    <td styleCode="Lrule Rrule Botrule Toprule">text</td>
+                                                  <td styleCode="Lrule Rrule Botrule Toprule"
+                                                  >text</td>
+                                                  <td styleCode="Lrule Rrule Botrule Toprule"
+                                                  >text</td>
+                                                  <td styleCode="Lrule Rrule Botrule Toprule"
+                                                  >text</td>
+                                                  <td styleCode="Lrule Rrule Botrule Toprule"
+                                                  >text</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1808,8 +1832,9 @@
                                 <table width="100%">
                                     <tbody>
                                         <tr>
-                                            <td styleCode="Lrule Rrule Botrule Toprule">For management of a suspected drug overdose, contact your regional poison
-                                                control centre.</td>
+                                            <td styleCode="Lrule Rrule Botrule Toprule">For
+                                                management of a suspected drug overdose, contact
+                                                your regional poison control centre.</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1824,24 +1849,32 @@
                                 displayName="6 DOSAGE FORMS, STRENGTHS, COMPOSITION AND PACKAGING"/>
                             <title>6 DOSAGE FORMS, STRENGTHS, COMPOSITION AND PACKAGING</title>
                             <text>
-                                <paragraph>To help ensure the traceability of biologic products, including
-                                    biosimilars, health professionals should recognise the importance of recording
-                                    both the brand name and the non-proprietary (active ingredient) name as well as
-                                    other product-specific identifiers such as the Drug Identification Number (DIN)
-                                    and the batch/lot number of the product supplied.</paragraph>
+                                <paragraph>To help ensure the traceability of biologic products,
+                                    including biosimilars, health professionals should recognise the
+                                    importance of recording both the brand name and the
+                                    non-proprietary (active ingredient) name as well as other
+                                    product-specific identifiers such as the Drug Identification
+                                    Number (DIN) and the batch/lot number of the product
+                                    supplied.</paragraph>
                                 <table ID="t5" width="100%">
-                                    <caption> Table - Dosage Forms, Strengths, Composition and Packaging</caption>
+                                    <caption> Table - Dosage Forms, Strengths, Composition and
+                                        Packaging</caption>
                                     <tbody>
                                         <tr>
-                                            <th styleCode="Toprule Botrule Lrule Rrule">Route of Administration </th>
-                                            <th styleCode="Toprule Botrule Lrule Rrule">Dosage Form / Strength/Composition </th>
-                                            <th styleCode="Toprule Botrule Lrule Rrule">Non-medicinal Ingredients</th>
+                                            <th styleCode="Toprule Botrule Lrule Rrule">Route of
+                                                Administration </th>
+                                            <th styleCode="Toprule Botrule Lrule Rrule">Dosage Form
+                                                / Strength/Composition </th>
+                                            <th styleCode="Toprule Botrule Lrule Rrule"
+                                                >Non-medicinal Ingredients</th>
                                         </tr>
                                         <tr>
                                             <td styleCode="Toprule Botrule Lrule Rrule">oral</td>
-                                            <td styleCode="Toprule Botrule Lrule Rrule">tablet 5 mg, 10 mg</td>
-                                            <td styleCode="Toprule Botrule Lrule Rrule">[List all non-medicinal
-                                                ingredients in alphabetical order.]</td>
+                                            <td styleCode="Toprule Botrule Lrule Rrule">tablet 5 mg,
+                                                10 mg</td>
+                                            <td styleCode="Toprule Botrule Lrule Rrule">[List all
+                                                non-medicinal ingredients in alphabetical
+                                                order.]</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -2322,12 +2355,13 @@
                                 displayName="13 PHARMACEUTICAL INFORMATION"/>
                             <title>13 PHARMACEUTICAL INFORMATION</title>
                             <text>
-                                <paragraph>Proper name:<br/><br/> Chemical name:<br/><br/> Molecular
-                                    formula and molecular mass:
-                                        A<sub>1</sub>B<sub>2</sub>C<sub>3</sub><br/><br/> Structural
-                                    formula: <br/>
-                                    <renderMultiMedia referencedObject="m1"/><br/><br/>
-                                    Physicochemical properties: </paragraph>
+                                <paragraph><content styleCode="bold">Drug
+                                    Substance</content></paragraph>
+                                <paragraph>Proper name:</paragraph>
+                                <paragraph>Chemical name:</paragraph>
+                                <paragraph>Molecular formula and molecular mass:</paragraph>
+                                <paragraph>Structural formula:</paragraph>
+                                <paragraph>Physicochemical properties:</paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                             <component>
@@ -2346,36 +2380,6 @@
                             <code code="60051" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="14 CLINICAL TRIALS"/>
                             <title>14 CLINICAL TRIALS</title>
-                            <text>
-                                <paragraph>Lorem ipsum dolor sit amet, ligula suspendisse nulla
-                                    pretium, rhoncus tempor fermentum, enim integer ad vestibulum
-                                    volutpat. Nisl rhoncus turpis est, vel elit, congue wisi enim
-                                    nunc ultricies sit, <content styleCode="bold"><content
-                                            styleCode="italics">magna tincidunt. Maecenas aliquam
-                                            maecenas ligula nostra, accumsan
-                                        taciti</content></content> magna tincidunt. Maecenas aliquam
-                                    maecenas ligula nostra, accumsan taciti. Sociis mauris in
-                                    integer, a dolor netus non dui aliquet, sagittis felis sodales,
-                                    dolor sociis mauris, vel eu libero cras. Faucibus
-                                    at.</paragraph>
-                                <list listType="ordered">
-                                    <item>Lorem ipsum dolor sit amet</item>
-                                    <item>Lorem ipsum dolor sit amet</item>
-                                    <item>Lorem ipsum dolor sit amet</item>
-                                    <item>Lorem ipsum dolor sit amet</item>
-                                    <item>Lorem ipsum dolor sit amet</item>
-                                </list>
-                                <paragraph> Lorem ipsum dolor sit amet, ligula suspendisse nulla
-                                    pretium, rhoncus tempor fermentum, enim integer ad vestibulum
-                                    volutpat </paragraph>
-                                <list listType="unordered">
-                                    <item>ligula suspendisse</item>
-                                    <item>ligula suspendisse</item>
-                                    <item>ligula suspendisse</item>
-                                    <item>ligula suspendisse</item>
-                                    <item>ligula suspendisse</item>
-                                </list>
-                            </text>
                             <effectiveTime value="20170101"/>
                             <component>
                                 <section ID="a2875272-8229-4c12-919e-827854ddd78a">
@@ -2403,15 +2407,25 @@
                                                   >Sex</th>
                                                 </tr>
                                                 <tr>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"
+                                                  >text</td>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"
+                                                  >text</td>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"
+                                                  >text</td>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"
+                                                  >text</td>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"
+                                                  >text</td>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"
+                                                  >text</td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <paragraph>[Provide a brief narrative describing the
+                                            demographic characteristics of the study
+                                            population:]</paragraph>
+                                        <paragraph>text</paragraph>
                                     </text>
                                     <effectiveTime value="20170101"/>
                                 </section>
@@ -2438,9 +2452,12 @@
                                                   Placebo or active control</th>
                                                 </tr>
                                                 <tr>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"
+                                                  >text</td>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"
+                                                  >text</td>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"
+                                                  >text</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -2458,15 +2475,20 @@
                                         <paragraph>[Provide a narrative outlining the design of the
                                             bioequivalence study. The values in the table should be
                                             based on the measured data from the study. No potency
-                                            correction should be applied.]<br/><br/> sample text<br/><br/>
-                                            <content styleCode="bold">[Table for single dose
-                                                studies:]<br/><br/> Analyte Name<br/> (__ x __
-                                                mg)<br/> From measured data<br/><br/> Geometric
-                                                Mean<br/> Arithmetic Mean (CV %)</content>
+                                            correction should be applied.]<br/><br/> sample
+                                            text<br/><br/>
                                         </paragraph>
                                         <table ID="t15">
-                                            <caption>Table # - Single dose studies</caption>
+                                            <caption>[Table for single dose studies:]</caption>
                                             <tbody>
+                                                <tr>
+                                                  <td align="center" colspan="5"
+                                                  styleCode="Toprule Rrule Lrule Botrule"><content
+                                                  styleCode="bold">Analyte Name<br/> (__ x __
+                                                  mg)<br/> From measured data<br/><br/> Geometric
+                                                  Mean<br/> Arithmetic Mean (CV %)</content>
+                                                  </td>
+                                                </tr>
                                                 <tr>
                                                   <th styleCode="Toprule Rrule Lrule Botrule"
                                                   >Parameter</th>
@@ -2532,13 +2554,16 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <paragraph><content styleCode="bold"> [Table for multiple
-                                                dose studies:] Analyte Name<br/> (__ x __ mg)<br/>
-                                                From measured data<br/><br/> Geometric Mean<br/>
-                                                Arithmetic Mean (CV %)</content></paragraph>
                                         <table ID="t16">
-                                            <caption>Table # - multiple dose studies</caption>
+                                            <caption>[Table for multiple dose studies:]</caption>
                                             <tbody>
+                                                <tr>
+                                                  <td colspan="5" align="center"
+                                                  styleCode="Toprule Rrule Lrule Botrule"><content
+                                                  styleCode="bold">Analyte Name<br/> (__ x __
+                                                  mg)<br/> From measured data<br/><br/> Geometric
+                                                  Mean<br/> Arithmetic Mean (CV %)</content></td>
+                                                </tr>
                                                 <tr>
                                                   <th styleCode="Toprule Rrule Lrule Botrule"
                                                   >Parameter</th>
@@ -2609,7 +2634,8 @@
                                 displayName="15 MICROBIOLOGY"/>
                             <title>15 MICROBIOLOGY</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph> text </paragraph>
+                                <paragraph>table</paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2621,7 +2647,9 @@
                                 displayName="16 NON-CLINICAL TOXICOLOGY"/>
                             <title>16 NON-CLINICAL TOXICOLOGY</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph>[Narrative where possible. Include a table only where
+                                    presentation is made more concise.]</paragraph>
+                                <paragraph>text</paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2633,7 +2661,13 @@
                                 displayName="17 SUPPORTING PRODUCT MONOGRAPHS"/>
                             <title>17 SUPPORTING PRODUCT MONOGRAPHS</title>
                             <text>
-                                <paragraph> sample text </paragraph>
+                                <paragraph> [Where there are no supporting product monographs, this
+                                    section should be omitted.]</paragraph>
+                                <paragraph>[numbered list:]</paragraph>
+                                <list listType="ordered">
+                                    <item>Brand name (dosage form, strength), submission control
+                                        number, Product Monograph, sponsor. (MON, DD, YYYY) </item>
+                                </list>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2832,7 +2866,7 @@
                             <id root="be74b6e6-c431-4a5f-a18e-11321b381456"/>
                             <code code="60071" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="USUAL DOSE:"/>
-                            <title>USUAL DOSE:</title>
+                            <title>Usual dose:</title>
                             <text>
                                 <paragraph> sample text </paragraph>
                             </text>
@@ -2844,7 +2878,7 @@
                             <id root="be74b6e6-c431-4a5f-a18e-ed321b311456"/>
                             <code code="60072" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="OVERDOSE:"/>
-                            <title>OVERDOSE:</title>
+                            <title>Overdose:</title>
                             <text>
                                 <paragraph>text</paragraph>
                                 <table width="100%">
@@ -2870,7 +2904,7 @@
                             <id root="be74b6e6-c431-4a5f-a18e-ed321e381456"/>
                             <code code="60073" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="MISSED DOSE:"/>
-                            <title>MISSED DOSE:</title>
+                            <title>Missed dose:</title>
                             <text>
                                 <paragraph> sample text </paragraph>
                             </text>
@@ -3003,7 +3037,7 @@
                             <id root="be74b6e6-c431-4a5f-a18e-ed321b081456"/>
                             <code code="60076" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="STORAGE:"/>
-                            <title>STORAGE:</title>
+                            <title>Storage:</title>
                             <text>
                                 <paragraph>text</paragraph>
                                 <paragraph>Keep out of reach and sight of children.</paragraph>
@@ -3022,8 +3056,8 @@
                                     <item>Talk to your healthcare professional</item>
                                     <item>Find the full product monograph that is prepared for
                                         healthcare professionals and includes this Patient
-                                        Medication Information by visiting the Health Canada
-                                            website <linkHtml href="http://hc-sc.gc.ca/index-eng.php"
+                                        Medication Information by visiting the Health Canada website
+                                            <linkHtml href="http://hc-sc.gc.ca/index-eng.php"
                                             >(http://hc-sc.gc.ca/index-eng.php)</linkHtml>; the
                                         manufacturer's website (website), or by calling 1-800-(phone
                                         number).</item>
