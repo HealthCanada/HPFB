@@ -65,7 +65,7 @@
                 <!-- Manufactured Product Information -->
                 <section ID="f6ac9de5-be91-442c-9579-5bc9ebd36902">
                     <id root="bdeefc11-4315-41e3-8c56-83e8bf4f770b"/>
-                    <code code="MP" codeSystem="2.16.840.1.113883.2.20.6.60"
+                    <code code="0MP" codeSystem="2.16.840.1.113883.2.20.6.60"
                         displayName="MANUFACTURED PRODUCT"/>
                     <title>MANUFACTURED PRODUCT</title>
                     <effectiveTime value="20170101"/>
@@ -1448,16 +1448,16 @@
                 <!--Title Page section-->
                 <section ID="d8d30d86-e343-48f4-9cec-524834b3803b">
                     <id root="eed00b53-cdb2-4aa6-9e82-88b7d793b208"/>
-                    <code code="60001" codeSystem="2.16.840.1.113883.2.20.6.60"
+                    <code code="0TP" codeSystem="2.16.840.1.113883.2.20.6.60"
                         displayName="TITLE PAGE"/>
                     <title>TITLE PAGE</title>
                     <effectiveTime value="20180101"/>
                     <component>
                         <section ID="be75cfb9-3131-4903-800b-267427388a13">
                             <id root="b9db4be0-3f46-437a-bd7b-4a3e010afaad"/>
-                            <code code="60002" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="TITLE"/>
-                            <title>TITLE</title>
+                            <code code="0tp1.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="Title"/>
+                            <title>Title</title>
                             <text>
                                 <paragraph> Scheduling Symbol, Brand Name, Proper name, Dosage
                                     Form(s), Strength(s) and Route(s) of Administration,
@@ -1469,9 +1469,9 @@
                     <component>
                         <section ID="f187daf9-5e75-425a-9de6-f6ce1af2a965">
                             <id root="ac26f58c-721a-4c51-8bbc-c9dddb1f1233"/>
-                            <code code="60003" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="COMPANY NAME AND ADDRESS"/>
-                            <title>COMPANY NAME AND ADDRESS</title>
+                            <code code="0tp1.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="Company Name and Address"/>
+                            <title>Company Name and Address</title>
                             <text>
                                 <paragraph> Company Name<br/> Street address<br/> City<br/>
                                     Province<br/> Postal code<br/>
@@ -1483,9 +1483,9 @@
                     <component>
                         <section ID="bf2dab4e-fd04-4ec9-9cdc-247188622d0f">
                             <id root="e5f1dea3-d907-4664-b46f-e1d9736d47af"/>
-                            <code code="60004" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="DATE OF INITIAL APPROVAL"/>
-                            <title>DATE OF INITIAL APPROVAL</title>
+                            <code code="0tp1.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="Date of Initial Approval"/>
+                            <title>Date of Initial Approval</title>
                             <text>
                                 <paragraph>December 20, 2019</paragraph>
                             </text>
@@ -1495,9 +1495,9 @@
                     <component>
                         <section ID="d0184119-8fd7-4378-af77-b227c39e8445">
                             <id root="ad78301c-29a9-41af-96f8-d58815fed296"/>
-                            <code code="60005" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="DATE OF REVISION"/>
-                            <title>DATE OF REVISION</title>
+                            <code code="0tp1.4" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="Date of Revision"/>
+                            <title>Date of Revision</title>
                             <text>
                                 <paragraph>December 20, 2019</paragraph>
                             </text>
@@ -1507,9 +1507,9 @@
                     <component>
                         <section ID="ebc3f3dc-71be-424f-91ef-8aca8c138b21">
                             <id root="efd8c4c1-d0dd-434d-b1c2-4daa18752fa8"/>
-                            <code code="60006" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="SUBMISSION CONTROL NUMBER"/>
-                            <title>SUBMISSION CONTROL NUMBER</title>
+                            <code code="0tp1.5" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="Submission Control Number:"/>
+                            <title>Submission Control Number:</title>
                             <text>
                                 <paragraph>123456</paragraph>
                             </text>
@@ -1519,9 +1519,9 @@
                     <component>
                         <section ID="e2d4279e-5fca-4d26-898d-02548a217ab9">
                             <id root="f17bc229-d609-460a-b9dc-418008d47c90"/>
-                            <code code="60000" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="FOOTER"/>
-                            <title>FOOTER</title>
+                            <code code="0tp1.6" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="Footer"/>
+                            <title>Footer</title>
                             <text>
                                 <paragraph>[BRAND NAME<sup>&#174;</sup> or &#8482;] is a registered
                                     trademark of [COMPANY]</paragraph>
@@ -1535,7 +1535,7 @@
                 <!-- Recent Major Changes -->
                 <section ID="d7cee5c8-7ee9-4fd2-884e-7a50c06b27e1">
                     <id root="dd1e1c43-f0d3-4ba8-b1f5-ad009a5dd5a8"/>
-                    <code code="60007" codeSystem="2.16.840.1.113883.2.20.6.60"
+                    <code code="1RMLC" codeSystem="2.16.840.1.113883.2.20.6.60"
                         displayName="RECENT MAJOR LABEL CHANGES"/>
                     <title>RECENT MAJOR LABEL CHANGES</title>
                     <text>
@@ -1577,14 +1577,14 @@
                 <!-- Part I: Health Professional Information -->
                 <section ID="d6a947eb-e2be-45c0-8b2e-15d0d0eebea8">
                     <id root="e6bb83b9-2602-4f96-9077-b8b9535c254e"/>
-                    <code code="60008" codeSystem="2.16.840.1.113883.2.20.6.60"
+                    <code code="pi00" codeSystem="2.16.840.1.113883.2.20.6.60"
                         displayName="PART I: HEALTH PROFESSIONAL INFORMATION"/>
                     <title>PART I: HEALTH PROFESSIONAL INFORMATION</title>
                     <effectiveTime value="20180101"/>
                     <component>
                         <section ID="c2ea4fad-2b79-4dbc-8d99-6843adc2dec8">
                             <id root="aa3f869a-7734-425a-85d8-b8bd4d3500a5"/>
-                            <code code="60009" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pi01" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="1 INDICATIONS"/>
                             <title>1 INDICATIONS</title>
                             <text>
@@ -1599,31 +1599,26 @@
                             <component>
                                 <section ID="f2aa7e0e-2042-4a4c-a783-9ad4e8717a32">
                                     <id root="b9db4ce0-3f46-434a-bd7b-4a3e010adaad"/>
-                                    <code code="60010" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="1.1 PEDIATRICS"/>
-                                    <title>1.1 PEDIATRICS</title>
+                                    <code code="pi01.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="1.1 Pediatrics"/>
+                                    <title>1.1 Pediatrics</title>
                                     <text>
-                                        <paragraph>[One of the following or similar statements
-                                            should be used:]</paragraph>
-                                        <paragraph><content styleCode="bold">Pediatrics (age
-                                                range):</content> Based on the data submitted and
-                                            reviewed by Health Canada, the safety and efficacy of
-                                            Brand name in pediatric patients has been established;
-                                            therefore, Health Canada has authorized an indication
-                                            for pediatric use. (cross-reference to relevant
-                                            sections)</paragraph>
+                                        <paragraph>[One of the following or similar statements should be
+                                            used:]</paragraph>
+                                        <paragraph><content styleCode="bold">Pediatrics (age range):</content> Based on
+                                            the data submitted and reviewed by Health Canada, the safety and efficacy of
+                                            Brand name in pediatric patients has been established; therefore, Health
+                                            Canada has authorized an indication for pediatric use. (cross-reference to
+                                            relevant sections)</paragraph>
                                         <paragraph>[or]</paragraph>
-                                        <paragraph><content styleCode="bold">Pediatrics (age
-                                                range):</content> No data are available to Health
-                                            Canada; therefore, Health Canada has not authorized an
+                                        <paragraph><content styleCode="bold">Pediatrics (age range):</content> No data
+                                            are available to Health Canada; therefore, Health Canada has not authorized an
                                             indication for pediatric use.</paragraph>
                                         <paragraph>[or]</paragraph>
-                                        <paragraph><content styleCode="bold">Pediatrics (age
-                                                range):</content> Based on the data submitted and
-                                            reviewed by Health Canada, the safety and efficacy of
-                                            Brand name in pediatric patients has not been
-                                            established; therefore, Health Canada has not authorized
-                                            an indication for pediatric use. (cross-reference to
+                                        <paragraph><content styleCode="bold">Pediatrics (age range):</content> Based on
+                                            the data submitted and reviewed by Health Canada, the safety and efficacy of
+                                            Brand name in pediatric patients has not been established; therefore, Health
+                                            Canada has not authorized an indication for pediatric use. (cross-reference to
                                             relevant sections)</paragraph>
                                     </text>
                                     <effectiveTime value="20180822"/>
@@ -1632,21 +1627,18 @@
                             <component>
                                 <section ID="be75cfb9-3132-4903-800b-267427388a13">
                                     <id root="b9db4be0-3f46-43fa-bd7b-4a3e010adaad"/>
-                                    <code code="60011" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="1.2 GERIATRICS"/>
-                                    <title>1.2 GERIATRICS</title>
+                                    <code code="pi01.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="1.2 Geriatrics"/>
+                                    <title>1.2 Geriatrics</title>
                                     <text>
-                                        <paragraph>[One of the following or similar statements may
-                                            be used:]</paragraph>
-                                        <paragraph><content styleCode="bold">Geriatrics (> x years
-                                                of age):</content> No data are available to Health
-                                            Canada; therefore, Health Canada has not authorized an
-                                            indication for geriatric use.</paragraph>
+                                        <paragraph>[One of the following or similar statements may be used:]</paragraph>
+                                        <paragraph><content styleCode="bold">Geriatrics (> x years of age):</content> No
+                                            data are available to Health Canada; therefore, Health Canada has not
+                                            authorized an indication for geriatric use.</paragraph>
                                         <paragraph>[or]</paragraph>
-                                        <paragraph><content styleCode="bold">Geriatrics (> x years
-                                                of age):</content> Evidence from clinical studies
-                                            and experience suggests that use in the geriatric
-                                            population is associated with differences in safety or
+                                        <paragraph><content styleCode="bold">Geriatrics (> x years of age):</content>
+                                            Evidence from clinical studies and experience suggests that use in the
+                                            geriatric population is associated with differences in safety or
                                             effectiveness.</paragraph>
                                     </text>
                                     <effectiveTime value="20180101"/>
@@ -1657,14 +1649,13 @@
                     <component>
                         <section ID="be75cfb9-3131-4903-800b-367427388a13">
                             <id root="b90b4be0-3f46-437a-bd7b-4a3e010adaad"/>
-                            <code code="60012" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pi02" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="2 CONTRAINDICATIONS"/>
                             <title>2 CONTRAINDICATIONS</title>
                             <text>
-                                <paragraph>[Proper name] is contraindicated in patients who are
-                                    hypersensitive to this drug or to any ingredient in the
-                                    formulation, including any non-medicinal ingredient, or
-                                    component of the container. For a complete listing, see Dosage
+                                <paragraph>[Proper name] is contraindicated in patients who are hypersensitive to
+                                    this drug or to any ingredient in the formulation, including any non-medicinal
+                                    ingredient, or component of the container. For a complete listing, see Dosage
                                     Forms, Strengths, Composition and Packaging.</paragraph>
                                 <list>
                                     <item>text</item>
@@ -1677,30 +1668,27 @@
                     <component>
                         <section ID="be75cfb9-3131-4903-800b-267427398a13">
                             <id root="b9fb4be0-3f46-437a-bd7b-4a3e010adaad"/>
-                            <code code="60013" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pi03" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="3 SERIOUS WARNINGS AND PRECAUTIONS BOX"/>
                             <title>3 SERIOUS WARNINGS AND PRECAUTIONS BOX</title>
                             <text>
-                                <paragraph>[Delete this section if there is no Serious Warnings and
-                                    Precautions box.]</paragraph>
+                                <paragraph>[Delete this section if there is no Serious Warnings and Precautions
+                                    box.]</paragraph>
                                 <table>
                                     <caption>Serious Warnings and Precautions</caption>
                                     <tbody>
                                         <tr>
                                             <td styleCode="Lrule Rrule Botrule Toprule">
-                                                <paragraph>[Clinically significant or serious (e.g.,
-                                                  life-threatening) safety hazards should be placed
-                                                  in this box, with a cross reference to the
-                                                  relevant section(s) for more detailed information.
-                                                  Generally not to exceed 20 lines. Include the
-                                                  following or similar statement, where the active
-                                                  ingredient is derived from plasma:]</paragraph>
+                                                <paragraph>[Clinically significant or serious (e.g., life-threatening)
+                                                    safety hazards should be placed in this box, with a cross reference to the
+                                                    relevant section(s) for more detailed information. Generally not to exceed
+                                                    20 lines. Include the following or similar statement, where the active
+                                                    ingredient is derived from plasma:]</paragraph>
                                                 <list>
-                                                  <item>The physician should discuss the risks and
-                                                  benefits of this product with the patient, before
-                                                  prescribing or administering to the patient (see
-                                                  Warnings and Precautions – General).</item>
-                                                  <item>text</item>
+                                                    <item>The physician should discuss the risks and benefits of this product
+                                                        with the patient, before prescribing or administering to the patient
+                                                        (see Warnings and Precautions – General).</item>
+                                                    <item>text</item>
                                                 </list>
                                             </td>
                                         </tr>
@@ -1713,19 +1701,19 @@
                     <component>
                         <section ID="be75cfb9-3131-4903-800b-267727398a13">
                             <id root="b9db4be0-3f46-434a-bd7b-4a3e010adaad"/>
-                            <code code="60014" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pi04" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="4 DOSAGE AND ADMINISTRATION"/>
                             <title>4 DOSAGE AND ADMINISTRATION</title>
                             <effectiveTime value="20180101"/>
                             <component>
                                 <section ID="be75cfb9-3131-4103-800b-267727398a13">
                                     <id root="b9db4be0-3f46-437a-bd7b-4a3e310adaad"/>
-                                    <code code="60015" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="4.1 DOSING CONSIDERATIONS"/>
-                                    <title>4.1 DOSING CONSIDERATIONS</title>
+                                    <code code="pi04.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="4.1 Dosing Considerations"/>
+                                    <title>4.1 Dosing Considerations</title>
                                     <text>
-                                        <paragraph>[Briefly list all situations that may affect
-                                            dosing of the drug:]</paragraph>
+                                        <paragraph>[Briefly list all situations that may affect dosing of the
+                                            drug:]</paragraph>
                                         <list>
                                             <item>text</item>
                                             <item>text</item>
@@ -1737,22 +1725,18 @@
                             <component>
                                 <section ID="b3d876c1-c36c-4ed5-8993-c507e3ab9f2e">
                                     <id root="da2d22a3-b5c2-4a62-b138-9594dd0491bb"/>
-                                    <code code="60016" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="4.2 RECOMMENDED DOSE AND DOSAGE ADJUSTMENT"/>
-                                    <title>4.2 RECOMMENDED DOSE AND DOSAGE ADJUSTMENT</title>
+                                    <code code="pi04.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="4.2 Recommended Dose and Dosage Adjustment"/>
+                                    <title>4.2 Recommended Dose and Dosage Adjustment</title>
                                     <text>
-                                        <paragraph>[Include dosages for each indication, route of
-                                            administration and/or dosage form. Include information
-                                            on booster doses for vaccines. Frequency of and
-                                            intervals between booster doses should be
-                                            described.]</paragraph>
+                                        <paragraph>[Include dosages for each indication, route of administration and/or
+                                            dosage form. Include information on booster doses for vaccines. Frequency of
+                                            and intervals between booster doses should be described.]</paragraph>
                                         <paragraph>text</paragraph>
-                                        <paragraph>[In the absence of a Health Canada authorized
-                                            pediatric indication, the following or similar statement
-                                            should be used:]</paragraph>
-                                        <paragraph>Health Canada has not authorized an indication
-                                            for pediatric use. [cross-reference to relevant
-                                            sections, if applicable]</paragraph>
+                                        <paragraph>[In the absence of a Health Canada authorized pediatric indication,
+                                            the following or similar statement should be used:]</paragraph>
+                                        <paragraph>Health Canada has not authorized an indication for pediatric use.
+                                            [cross-reference to relevant sections, if applicable]</paragraph>
                                     </text>
                                     <effectiveTime value="20180101"/>
                                 </section>
@@ -1760,46 +1744,26 @@
                             <component>
                                 <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f3a">
                                     <id root="a473c162-f176-44d0-b797-2b7b6cf00e43"/>
-                                    <code code="60017" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="4.3 ADMINISTRATION"/>
-                                    <title>4.3 ADMINISTRATION</title>
-                                    <text>
-                                        <paragraph>text and/or table</paragraph>
-                                    </text>
-                                    <effectiveTime value="20180101"/>
-                                </section>
-                            </component>
-                            <component>
-                                <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f4a">
-                                    <id root="a473c162-e176-44d0-b797-2b7b6cf0ae43"/>
-                                    <code code="60018" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="4.4 RECONSTITUTION"/>
-                                    <title>4.4 RECONSTITUTION</title>
-                                    <text>
+                                    <code code="pi04.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="4.3 Reconstitution"/>
+                                    <title>4.3 Reconstitution</title>
+									<text>
                                         <paragraph>Oral Solutions: text and/or table</paragraph>
                                         <paragraph>Parenteral Products: table and text</paragraph>
                                         <table width="100%">
                                             <caption>Table - Reconstitution</caption>
                                             <tbody>
                                                 <tr>
-                                                  <th styleCode="Lrule Rrule Botrule Toprule">Vial
-                                                  Size</th>
-                                                  <th styleCode="Lrule Rrule Botrule Toprule">Volume
-                                                  of Diluent to be Added to Vial</th>
-                                                  <th styleCode="Lrule Rrule Botrule Toprule"
-                                                  >Approximate Available Volume</th>
-                                                  <th styleCode="Lrule Rrule Botrule Toprule"
-                                                  >Nominal Concentration per mL</th>
+                                                    <th styleCode="Lrule Rrule Botrule Toprule">Vial Size</th>
+                                                    <th styleCode="Lrule Rrule Botrule Toprule">Volume of Diluent to be Added to Vial</th>
+                                                    <th styleCode="Lrule Rrule Botrule Toprule">Approximate Available Volume</th>
+                                                    <th styleCode="Lrule Rrule Botrule Toprule">Nominal Concentration per mL</th>
                                                 </tr>
                                                 <tr>
-                                                  <td styleCode="Lrule Rrule Botrule Toprule"
-                                                  >text</td>
-                                                  <td styleCode="Lrule Rrule Botrule Toprule"
-                                                  >text</td>
-                                                  <td styleCode="Lrule Rrule Botrule Toprule"
-                                                  >text</td>
-                                                  <td styleCode="Lrule Rrule Botrule Toprule"
-                                                  >text</td>
+                                                    <td styleCode="Lrule Rrule Botrule Toprule">text</td>
+                                                    <td styleCode="Lrule Rrule Botrule Toprule">text</td>
+                                                    <td styleCode="Lrule Rrule Botrule Toprule">text</td>
+                                                    <td styleCode="Lrule Rrule Botrule Toprule">text</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1808,11 +1772,74 @@
                                 </section>
                             </component>
                             <component>
+                                <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f4a">
+                                    <id root="a473c162-e176-44d0-b797-2b7b6cf0ae43"/>
+                                    <code code="pi04.4" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="4.4 Administration"/>
+                                    <title>4.4 Administration</title>
+                                    <text>
+                                        <paragraph>text and/or table</paragraph>
+									</text>
+                                    <effectiveTime value="20180101"/>
+									<component>
+                                        <section ID="a63c33a5-e08a-422c-b8a2-b12dbc115f7a">
+                                            <id root="a973c162-e176-4ad0-b797-2b7b6cf00e43"/>
+                                            <code code="pi04.4.1"
+                                                codeSystem="2.16.840.1.113883.2.20.6.60"
+                                                displayName="4.4.1 Image Acquisition and Interpretation"/>
+                                            <title>4.4.1 Image Acquisition and Interpretation</title>
+                                            <text>
+                                                <paragraph> sample text </paragraph>
+                                            </text>
+                                            <effectiveTime value="20180101"/>
+                                        </section>
+                                    </component>
+                                    <component>
+                                        <section ID="a63c33a5-e08a-472c-b8a2-b14dbd115f7a">
+                                            <id root="a413c162-1176-44d0-b797-2b7b6cf00e43"/>
+                                            <code code="pi04.4.2"
+                                                codeSystem="2.16.840.1.113883.2.20.6.60"
+                                                displayName="4.4.2 Instructions for Preparation and Use"/>
+                                            <title>4.4.2 Instructions for Preparation and Use</title>
+                                            <text>
+                                                <paragraph> sample text </paragraph>
+                                            </text>
+                                            <effectiveTime value="20180101"/>
+                                        </section>
+                                    </component>
+                                    <component>
+                                        <section ID="a63c33a5-e08a-472c-b8c2-b12dcc115f7a">
+                                            <id root="a472c162-e176-44d0-b787-2b7b6cf00e43"/>
+                                            <code code="pi04.4.3"
+                                                codeSystem="2.16.840.1.113883.2.20.6.60"
+                                                displayName="4.4.3 Directions for Quality Control"/>
+                                            <title>4.4.3 Directions for Quality Control</title>
+                                            <text>
+                                                <paragraph> sample text </paragraph>
+                                            </text>
+                                            <effectiveTime value="20180101"/>
+                                        </section>
+                                    </component>
+                                </section>
+                            </component>
+                            <component>
                                 <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f5a">
                                     <id root="a473c162-e176-44d0-b797-2b7b6cf00e33"/>
-                                    <code code="60019" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="4.5 MISSED DOSE"/>
-                                    <title>4.5 MISSED DOSE</title>
+                                    <code code="pi04.5" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="4.5 Missed Dose"/>
+                                    <title>4.5 Missed Dose</title>
+                                    <text>
+                                        <paragraph> text </paragraph>
+                                    </text>
+                                    <effectiveTime value="20180101"/>
+                                </section>
+                            </component>
+							<component>
+                                <section ID="a63c33a5-e08a-472c-b8a2-a12dba10525a">
+                                    <id root="a473c162-e176-41d0-b797-2b7b6cf00e33"/>
+                                    <code code="pi04.6" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="4.6 Radiation Dosimetry"/>
+                                    <title>4.6 Radiation Dosimetry</title>
                                     <text>
                                         <paragraph> text </paragraph>
                                     </text>
@@ -1824,7 +1851,7 @@
                     <component>
                         <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f6a">
                             <id root="a473c162-e176-44d0-b797-2b7b6cf20e43"/>
-                            <code code="60020" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pi05" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="5 OVERDOSAGE"/>
                             <title>5 OVERDOSAGE</title>
                             <text>
@@ -1832,9 +1859,8 @@
                                 <table width="100%">
                                     <tbody>
                                         <tr>
-                                            <td styleCode="Lrule Rrule Botrule Toprule">For
-                                                management of a suspected drug overdose, contact
-                                                your regional poison control centre.</td>
+                                            <td styleCode="Lrule Rrule Botrule Toprule">For management of a suspected drug overdose, contact your regional poison
+                                                control centre.</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1845,36 +1871,28 @@
                     <component>
                         <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f7a">
                             <id root="a471c162-e176-44d0-b797-2b7b6cf00e43"/>
-                            <code code="60021" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pi06" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="6 DOSAGE FORMS, STRENGTHS, COMPOSITION AND PACKAGING"/>
                             <title>6 DOSAGE FORMS, STRENGTHS, COMPOSITION AND PACKAGING</title>
                             <text>
-                                <paragraph>To help ensure the traceability of biologic products,
-                                    including biosimilars, health professionals should recognise the
-                                    importance of recording both the brand name and the
-                                    non-proprietary (active ingredient) name as well as other
-                                    product-specific identifiers such as the Drug Identification
-                                    Number (DIN) and the batch/lot number of the product
-                                    supplied.</paragraph>
+                                <paragraph>To help ensure the traceability of biologic products, including
+                                    biosimilars, health professionals should recognise the importance of recording
+                                    both the brand name and the non-proprietary (active ingredient) name as well as
+                                    other product-specific identifiers such as the Drug Identification Number (DIN)
+                                    and the batch/lot number of the product supplied.</paragraph>
                                 <table ID="t5" width="100%">
-                                    <caption> Table - Dosage Forms, Strengths, Composition and
-                                        Packaging</caption>
+                                    <caption> Table - Dosage Forms, Strengths, Composition and Packaging</caption>
                                     <tbody>
                                         <tr>
-                                            <th styleCode="Toprule Botrule Lrule Rrule">Route of
-                                                Administration </th>
-                                            <th styleCode="Toprule Botrule Lrule Rrule">Dosage Form
-                                                / Strength/Composition </th>
-                                            <th styleCode="Toprule Botrule Lrule Rrule"
-                                                >Non-medicinal Ingredients</th>
+                                            <th styleCode="Toprule Botrule Lrule Rrule">Route of Administration </th>
+                                            <th styleCode="Toprule Botrule Lrule Rrule">Dosage Form / Strength/Composition </th>
+                                            <th styleCode="Toprule Botrule Lrule Rrule">Non-medicinal Ingredients</th>
                                         </tr>
                                         <tr>
                                             <td styleCode="Toprule Botrule Lrule Rrule">oral</td>
-                                            <td styleCode="Toprule Botrule Lrule Rrule">tablet 5 mg,
-                                                10 mg</td>
-                                            <td styleCode="Toprule Botrule Lrule Rrule">[List all
-                                                non-medicinal ingredients in alphabetical
-                                                order.]</td>
+                                            <td styleCode="Toprule Botrule Lrule Rrule">tablet 5 mg, 10 mg</td>
+                                            <td styleCode="Toprule Botrule Lrule Rrule">[List all non-medicinal
+                                                ingredients in alphabetical order.]</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1886,7 +1904,7 @@
                     <component>
                         <section ID="a63c33a5-e08a-472c-b8a2-a12dba115f7a">
                             <id root="a4731162-e176-44d0-b797-2b7b6cf00e43"/>
-                            <code code="60022" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pi07" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="7 WARNINGS AND PRECAUTIONS"/>
                             <title>7 WARNINGS AND PRECAUTIONS</title>
                             <text>
@@ -1896,9 +1914,9 @@
                             <component>
                                 <section ID="a63c33a5-e08a-472c-b8a2-a12dbc115f7a">
                                     <id root="a473c162-e176-44d0-bb97-2b7b6cf00e43"/>
-                                    <code code="60023" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="7.1 SPECIAL POPULATIONS"/>
-                                    <title>7.1 SPECIAL POPULATIONS</title>
+                                    <code code="pi07.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="7.1 Special Populations"/>
+                                    <title>7.1 Special Populations</title>
                                     <text>
                                         <paragraph> sample text </paragraph>
                                     </text>
@@ -1906,10 +1924,10 @@
                                     <component>
                                         <section ID="a63c33a5-e08a-472c-b8a2-b12dbc115f7a">
                                             <id root="a473c162-e176-4ad0-b797-2b7b6cf00e43"/>
-                                            <code code="60024"
+                                            <code code="pi07.1.1"
                                                 codeSystem="2.16.840.1.113883.2.20.6.60"
-                                                displayName="7.1.1 PREGNANT WOMEN"/>
-                                            <title>7.1.1 PREGNANT WOMEN</title>
+                                                displayName="7.1.1 Pregnant Women"/>
+                                            <title>7.1.1 Pregnant Women</title>
                                             <text>
                                                 <paragraph> sample text </paragraph>
                                             </text>
@@ -1919,10 +1937,10 @@
                                     <component>
                                         <section ID="a63c33a5-e08a-472c-b8a2-b12dbd115f7a">
                                             <id root="a473c162-1176-44d0-b797-2b7b6cf00e43"/>
-                                            <code code="60025"
+                                            <code code="pi07.1.2"
                                                 codeSystem="2.16.840.1.113883.2.20.6.60"
-                                                displayName="7.1.2 BREAST-FEEDING"/>
-                                            <title>7.1.2 BREAST-FEEDING</title>
+                                                displayName="7.1.2 Breast-feeding"/>
+                                            <title>7.1.2 Breast-feeding</title>
                                             <text>
                                                 <paragraph> sample text </paragraph>
                                             </text>
@@ -1932,10 +1950,10 @@
                                     <component>
                                         <section ID="a63c33a5-e08a-472c-b8c2-b12dbc115f7a">
                                             <id root="a473c162-e176-44d0-b787-2b7b6cf00e43"/>
-                                            <code code="60026"
+                                            <code code="pi07.1.3"
                                                 codeSystem="2.16.840.1.113883.2.20.6.60"
-                                                displayName="7.1.3 PEDIATRICS"/>
-                                            <title>7.1.3 PEDIATRICS</title>
+                                                displayName="7.1.3 Pediatrics"/>
+                                            <title>7.1.3 Pediatrics</title>
                                             <text>
                                                 <paragraph> sample text </paragraph>
                                             </text>
@@ -1945,10 +1963,10 @@
                                     <component>
                                         <section ID="a63c33a5-e08a-472c-b8d2-b12dbc115f7a">
                                             <id root="a473c162-e176-44d0-b797-2b7b6df00e43"/>
-                                            <code code="60027"
+                                            <code code="pi07.1.4"
                                                 codeSystem="2.16.840.1.113883.2.20.6.60"
-                                                displayName="7.1.4 GERIATRICS"/>
-                                            <title>7.1.4 GERIATRICS</title>
+                                                displayName="7.1.4 Geriatrics"/>
+                                            <title>7.1.4 Geriatrics</title>
                                             <text>
                                                 <paragraph> sample text </paragraph>
                                             </text>
@@ -1962,7 +1980,7 @@
                     <component>
                         <section ID="a63c33a5-e08a-472c-b8a2-b22dbc115f7a">
                             <id root="a473c162-e176-44d0-b797-2b7b6cf11e43"/>
-                            <code code="60028" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pi08" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="8 ADVERSE REACTIONS"/>
                             <title>8 ADVERSE REACTIONS</title>
                             <text>
@@ -1972,9 +1990,9 @@
                             <component>
                                 <section ID="a63c33a5-e08a-472c-b8a2-b12dbd215f7a">
                                     <id root="a473c162-e176-44d0-b797-2b7b6cf12e43"/>
-                                    <code code="60029" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="8.1 ADVERSE REACTION OVERVIEW"/>
-                                    <title>8.1 ADVERSE REACTION OVERVIEW</title>
+                                    <code code="pi08.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="8.1 Adverse Reaction Overview"/>
+                                    <title>8.1 Adverse Reaction Overview</title>
                                     <text>
                                         <paragraph> sample text </paragraph>
                                     </text>
@@ -1984,9 +2002,9 @@
                             <component>
                                 <section ID="a63c33a5-e08a-473c-b8a2-b12dbd215f7a">
                                     <id root="a473c162-e176-44d0-b797-2b7b6cab0e43"/>
-                                    <code code="60030" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="8.2 CLINICAL TRIAL ADVERSE REACTIONS"/>
-                                    <title>8.2 CLINICAL TRIAL ADVERSE REACTIONS</title>
+                                    <code code="pi08.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="8.2 Clinical Trial Adverse Reactions"/>
+                                    <title>8.2 Clinical Trial Adverse Reactions</title>
                                     <text>
                                         <paragraph>Because clinical trials are conducted under very
                                             specific conditions, the adverse reaction rates observed
@@ -2028,9 +2046,9 @@
                             <component>
                                 <section ID="a63c33a5-e08a-473c-b8a2-b12dbd315f7a">
                                     <id root="a473c162-e146-44d0-b797-2b7b6cf00e43"/>
-                                    <code code="60031" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="8.3 LESS COMMON CLINICAL TRIAL ADVERSE REACTIONS"/>
-                                    <title>8.3 LESS COMMON CLINICAL TRIAL ADVERSE REACTIONS</title>
+                                    <code code="pi08.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="8.3 Less Common Clinical Trial Adverse Reactions"/>
+                                    <title>8.3 Less Common Clinical Trial Adverse Reactions</title>
                                     <text>
                                         <paragraph> sample text </paragraph>
                                     </text>
@@ -2040,9 +2058,9 @@
                             <component>
                                 <section ID="a63c33a5-e08a-473c-b8a2-b22dbd215f7a">
                                     <id root="a473c162-e176-44d0-be97-2b7b6cf00e43"/>
-                                    <code code="60032" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="8.4 ABNORMAL LABORATORY FINDINGS: HEMATOLOGIC"/>
-                                    <title>8.4 ABNORMAL LABORATORY FINDINGS: HEMATOLOGIC</title>
+                                    <code code="pi08.4" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="8.4 Abnormal Laboratory Findings: Hematologic, Clinical Chemistry and Other Quantitative Data"/>
+                                    <title>8.4 Abnormal Laboratory Findings: Hematologic, Clinical Chemistry and Other Quantitative Data</title>
                                     <text>
                                         <paragraph> table </paragraph>
                                     </text>
@@ -2052,9 +2070,9 @@
                             <component>
                                 <section ID="a63c33a5-e08a-473c-b8a2-b32dbd215f7a">
                                     <id root="a473c162-e176-44c0-b797-2b7b6cf00e43"/>
-                                    <code code="60033" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="8.5 CLINICAL TRIAL ADVERSE REACTIONS (PEDIATRICS)"/>
-                                    <title>8.5 CLINICAL TRIAL ADVERSE REACTIONS (PEDIATRICS)</title>
+                                    <code code="pi08.5" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="8.5 Clinical Trial Adverse Reactions (Pediatrics)"/>
+                                    <title>8.5 Clinical Trial Adverse Reactions (Pediatrics)</title>
                                     <text>
                                         <paragraph> text </paragraph>
                                     </text>
@@ -2064,9 +2082,9 @@
                             <component>
                                 <section ID="a63c33a5-e08a-473c-b8a2-b14dbd215f7a">
                                     <id root="a478c162-e176-44d0-b797-2b7b6cf00e43"/>
-                                    <code code="60034" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="8.6 POST-MARKET ADVERSE REACTIONS"/>
-                                    <title>8.6 POST-MARKET ADVERSE REACTIONS</title>
+                                    <code code="pi08.6" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="8.6 Post-Market Adverse Reactions"/>
+                                    <title>8.6 Post-Market Adverse Reactions</title>
                                     <text>
                                         <paragraph> text and/or table </paragraph>
                                     </text>
@@ -2078,7 +2096,7 @@
                     <component>
                         <section ID="a63c33a5-e08a-483c-b8a2-b22dbd215f7a">
                             <id root="a473c762-e176-44d0-b797-2b7b6cf00e43"/>
-                            <code code="60035" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pi09" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="9 DRUG INTERACTIONS"/>
                             <title>9 DRUG INTERACTIONS</title>
                             <text>
@@ -2088,9 +2106,9 @@
                             <component>
                                 <section ID="be75cfb9-3131-4903-800b-267527398a13">
                                     <id root="b9db4be0-3f46-437a-bd7b-4a3e01fadaad"/>
-                                    <code code="60036" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="9.1 SERIOUS DRUG INTERACTIONS BOX"/>
-                                    <title>9.1 SERIOUS DRUG INTERACTIONS BOX</title>
+                                    <code code="pi09.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="9.1 Serious Drug Interactions Box"/>
+                                    <title>9.1 Serious Drug Interactions Box</title>
                                     <text>
                                         <paragraph> [Delete this section if there is no Serious Drug
                                             Interactions box.]<br/><br/>
@@ -2109,9 +2127,9 @@
                             <component>
                                 <section ID="a63c33a5-e08a-473c-b8a2-b14dbd315f7a">
                                     <id root="a473c162-e176-44d0-b797-2b7b6cf0de43"/>
-                                    <code code="60037" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="9.2 OVERVIEW"/>
-                                    <title>9.2 OVERVIEW</title>
+                                    <code code="pi09.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="9.2 Overview"/>
+                                    <title>9.2 Overview</title>
                                     <text>
                                         <paragraph> sample text </paragraph>
                                     </text>
@@ -2121,9 +2139,9 @@
                             <component>
                                 <section ID="a63c33a5-e08a-473c-b8d2-b14dbd315f7a">
                                     <id root="a473c162-e176-44d0-b497-2b7b6cf00e43"/>
-                                    <code code="60038" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="9.3 DRUG-DRUG INTERACTIONS"/>
-                                    <title>9.3 DRUG-DRUG INTERACTIONS</title>
+                                    <code code="pi09.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="9.3 Drug-Drug Interactions"/>
+                                    <title>9.3 Drug-Drug Interactions</title>
                                     <text>
                                         <paragraph>The drugs listed in this table are based on
                                             either drug interaction case reports or studies, or
@@ -2167,9 +2185,9 @@
                             <component>
                                 <section ID="a63c33a5-e0aa-473c-b8a2-b14dbd315f7a">
                                     <id root="a273c162-e176-44d0-b797-2b7b6cf00e43"/>
-                                    <code code="60039" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="9.4 DRUG-FOOD INTERACTIONS"/>
-                                    <title>9.4 DRUG-FOOD INTERACTIONS</title>
+                                    <code code="pi09.4" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="9.4 Drug-Food Interactions"/>
+                                    <title>9.4 Drug-Food Interactions</title>
                                     <text>
                                         <paragraph> sample text </paragraph>
                                     </text>
@@ -2179,9 +2197,9 @@
                             <component>
                                 <section ID="a63c33a5-e08a-47bc-b8d2-b14dbd315f7a">
                                     <id root="a473c162-e176-44d0-b997-2b7b6cf00e43"/>
-                                    <code code="60040" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="9.5 DRUG-HERB INTERACTIONS"/>
-                                    <title>9.5 DRUG-HERB INTERACTIONS</title>
+                                    <code code="pi09.5" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="9.5 Drug-Herb Interactions"/>
+                                    <title>9.5 Drug-Herb Interactions</title>
                                     <text>
                                         <paragraph> sample text </paragraph>
                                     </text>
@@ -2191,9 +2209,9 @@
                             <component>
                                 <section ID="be78cfb9-3131-4903-800b-267527398a13">
                                     <id root="b9db4be0-3f46-437a-bd7b-4a3e01aadaad"/>
-                                    <code code="60041" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="9.6 DRUG-LABORATORY TEST INTERACTIONS"/>
-                                    <title>9.6 DRUG-LABORATORY TEST INTERACTIONS</title>
+                                    <code code="pi09.6" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="9.6 Drug-Laboratory Test Interactions"/>
+                                    <title>9.6 Drug-Laboratory Test Interactions</title>
                                     <text>
                                         <paragraph> sample text </paragraph>
                                     </text>
@@ -2203,9 +2221,9 @@
                             <component>
                                 <section ID="a63c33a5-e0aa-473c-b8a2-b14dcd315f7a">
                                     <id root="a473c162-e176-44e0-b797-2b7b6cf00e43"/>
-                                    <code code="60042" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="9.7 DRUG-LIFESTYLE INTERACTIONS"/>
-                                    <title>9.7 DRUG-LIFESTYLE INTERACTIONS</title>
+                                    <code code="pi09.7" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="9.7 Drug-Lifestyle Interactions"/>
+                                    <title>9.7 Drug-Lifestyle Interactions</title>
                                     <text>
                                         <paragraph> sample text </paragraph>
                                     </text>
@@ -2217,7 +2235,7 @@
                     <component>
                         <section ID="fa324c26-b939-4c3a-901d-516ccc314522">
                             <id root="dc0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
-                            <code code="60043" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pi10" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="10 ACTION AND CLINICAL PHARMACOLOGY"/>
                             <title>10 ACTION AND CLINICAL PHARMACOLOGY</title>
                             <text>
@@ -2227,9 +2245,9 @@
                             <component>
                                 <section ID="f7a324c26-b939-4c3a-901e-516ccc314522">
                                     <id root="ac0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
-                                    <code code="60044" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="10.1 MECHANISM OF ACTION"/>
-                                    <title>10.1 MECHANISM OF ACTION</title>
+                                    <code code="pi10.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="10.1 Mechanism of Action"/>
+                                    <title>10.1 Mechanism of Action</title>
                                     <text>
                                         <paragraph> sample text </paragraph>
                                     </text>
@@ -2239,9 +2257,9 @@
                             <component>
                                 <section ID="da324c26-b939-4d3a-901e-516ccc314522">
                                     <id root="cc0d2dd9-1c53-49dc-bad3-d6b420dc64e9"/>
-                                    <code code="60045" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="10.2 PHARMACODYNAMICS"/>
-                                    <title>10.2 PHARMACODYNAMICS</title>
+                                    <code code="pi10.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="10.2 Pharmacodynamics"/>
+                                    <title>10.2 Pharmacodynamics</title>
                                     <text>
                                         <paragraph> sample text </paragraph>
                                     </text>
@@ -2251,9 +2269,9 @@
                             <component>
                                 <section ID="aaa324c26-b939-4d4a-901e-516ccc314522">
                                     <id root="cc0d2dd9-1c53-49dc-bad3-d6b320d064e9"/>
-                                    <code code="60046" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="10.3 PHARMACOKINETICS"/>
-                                    <title>10.3 PHARMACOKINETICS</title>
+                                    <code code="pi10.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="10.3 Pharmacokinetics"/>
+                                    <title>10.3 Pharmacokinetics</title>
                                     <text>
                                         <table ID="t12">
                                             <caption>Table &lt;#&gt; - Summary of (proper name)
@@ -2317,7 +2335,7 @@
                     <component>
                         <section ID="da324d26-c939-443a-901e-526dcc314522">
                             <id root="cc0d2dd9-1c53-49dc-bad3-d6b420d069e9"/>
-                            <code code="60047" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pi11" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="11 STORAGE, STABILITY AND DISPOSAL"/>
                             <title>11 STORAGE, STABILITY AND DISPOSAL</title>
                             <text>
@@ -2329,7 +2347,7 @@
                     <component>
                         <section ID="bba325d26-c939-443a-901e-526dcc314522">
                             <id root="fc0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
-                            <code code="60048" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pi12" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="12 SPECIAL HANDLING INSTRUCTIONS"/>
                             <title>12 SPECIAL HANDLING INSTRUCTIONS</title>
                             <text>
@@ -2344,24 +2362,23 @@
                 <!-- Part II: Scientific Information -->
                 <section ID="ab6a947eb-e2be-45c0-8b2e-15d0d0eebed8">
                     <id root="d91389e0-c234-44d9-8327-91b121723a8f"/>
-                    <code code="60049" codeSystem="2.16.840.1.113883.2.20.6.60"
+                    <code code="pii00" codeSystem="2.16.840.1.113883.2.20.6.60"
                         displayName="PART II: SCIENTIFIC INFORMATION"/>
                     <title>PART II: SCIENTIFIC INFORMATION</title>
                     <effectiveTime value="20170101"/>
                     <component>
                         <section ID="ee2875272-8229-4c12-919e-827854dcd76a">
                             <id root="d134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-                            <code code="60050" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pii13" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="13 PHARMACEUTICAL INFORMATION"/>
                             <title>13 PHARMACEUTICAL INFORMATION</title>
                             <text>
-                                <paragraph><content styleCode="bold">Drug
-                                    Substance</content></paragraph>
-                                <paragraph>Proper name:</paragraph>
-                                <paragraph>Chemical name:</paragraph>
-                                <paragraph>Molecular formula and molecular mass:</paragraph>
-                                <paragraph>Structural formula:</paragraph>
-                                <paragraph>Physicochemical properties:</paragraph>
+                                <paragraph>Proper name:<br/><br/> Chemical name:<br/><br/> Molecular
+                                    formula and molecular mass:
+                                        A<sub>1</sub>B<sub>2</sub>C<sub>3</sub><br/><br/> Structural
+                                    formula: <br/>
+                                    <renderMultiMedia referencedObject="m1"/><br/><br/>
+                                    Physicochemical properties: </paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                             <component>
@@ -2377,16 +2394,46 @@
                     <component>
                         <section ID="ab2875272-8229-4c12-919e-827854ddd76a">
                             <id root="c134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-                            <code code="60051" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pii14" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="14 CLINICAL TRIALS"/>
                             <title>14 CLINICAL TRIALS</title>
+                            <text>
+                                <paragraph>Lorem ipsum dolor sit amet, ligula suspendisse nulla
+                                    pretium, rhoncus tempor fermentum, enim integer ad vestibulum
+                                    volutpat. Nisl rhoncus turpis est, vel elit, congue wisi enim
+                                    nunc ultricies sit, <content styleCode="bold"><content
+                                            styleCode="italics">magna tincidunt. Maecenas aliquam
+                                            maecenas ligula nostra, accumsan
+                                        taciti</content></content> magna tincidunt. Maecenas aliquam
+                                    maecenas ligula nostra, accumsan taciti. Sociis mauris in
+                                    integer, a dolor netus non dui aliquet, sagittis felis sodales,
+                                    dolor sociis mauris, vel eu libero cras. Faucibus
+                                    at.</paragraph>
+                                <list listType="ordered">
+                                    <item>Lorem ipsum dolor sit amet</item>
+                                    <item>Lorem ipsum dolor sit amet</item>
+                                    <item>Lorem ipsum dolor sit amet</item>
+                                    <item>Lorem ipsum dolor sit amet</item>
+                                    <item>Lorem ipsum dolor sit amet</item>
+                                </list>
+                                <paragraph> Lorem ipsum dolor sit amet, ligula suspendisse nulla
+                                    pretium, rhoncus tempor fermentum, enim integer ad vestibulum
+                                    volutpat </paragraph>
+                                <list listType="unordered">
+                                    <item>ligula suspendisse</item>
+                                    <item>ligula suspendisse</item>
+                                    <item>ligula suspendisse</item>
+                                    <item>ligula suspendisse</item>
+                                    <item>ligula suspendisse</item>
+                                </list>
+                            </text>
                             <effectiveTime value="20170101"/>
                             <component>
                                 <section ID="a2875272-8229-4c12-919e-827854ddd78a">
                                     <id root="e134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-                                    <code code="60052" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="14.1 TRIAL DESIGN AND STUDY DEMOGRAPHICS"/>
-                                    <title>14.1 TRIAL DESIGN AND STUDY DEMOGRAPHICS</title>
+                                    <code code="pii14.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="14.1 Trial Design and Study Demographics"/>
+                                    <title>14.1 Trial Design and Study Demographics</title>
                                     <text>
                                         <table ID="t13">
                                             <caption>Table # - Summary of patient demographics for
@@ -2407,25 +2454,15 @@
                                                   >Sex</th>
                                                 </tr>
                                                 <tr>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"
-                                                  >text</td>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"
-                                                  >text</td>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"
-                                                  >text</td>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"
-                                                  >text</td>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"
-                                                  >text</td>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"
-                                                  >text</td>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <paragraph>[Provide a brief narrative describing the
-                                            demographic characteristics of the study
-                                            population:]</paragraph>
-                                        <paragraph>text</paragraph>
                                     </text>
                                     <effectiveTime value="20170101"/>
                                 </section>
@@ -2433,9 +2470,9 @@
                             <component>
                                 <section ID="a2875272-8229-4a12-919e-827854ddd78a">
                                     <id root="a134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-                                    <code code="60053" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="14.2 STUDY RESULTS"/>
-                                    <title>14.2 STUDY RESULTS</title>
+                                    <code code="pii14.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="14.2 Study Results"/>
+                                    <title>14.2 Study Results</title>
                                     <text>
                                         <table ID="t14">
                                             <caption>Table # - Results of study # in (specific
@@ -2452,12 +2489,9 @@
                                                   Placebo or active control</th>
                                                 </tr>
                                                 <tr>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"
-                                                  >text</td>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"
-                                                  >text</td>
-                                                  <td styleCode="Toprule Rrule Lrule Botrule"
-                                                  >text</td>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
+                                                  <td styleCode="Toprule Rrule Lrule Botrule"/>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -2468,27 +2502,22 @@
                             <component>
                                 <section ID="df2875272-8229-4c12-919e-827954ddd78a">
                                     <id root="c134d52c-f9d4-4698-a012-84b29ee3d95a"/>
-                                    <code code="60054" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="14.3 COMPARATIVE BIOAVAILABILITY STUDIES"/>
-                                    <title>14.3 COMPARATIVE BIOAVAILABILITY STUDIES</title>
+                                    <code code="pii14.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="14.3 Comparative Bioavailability Studies"/>
+                                    <title>14.3 Comparative Bioavailability Studies</title>
                                     <text>
                                         <paragraph>[Provide a narrative outlining the design of the
                                             bioequivalence study. The values in the table should be
                                             based on the measured data from the study. No potency
-                                            correction should be applied.]<br/><br/> sample
-                                            text<br/><br/>
+                                            correction should be applied.]<br/><br/> sample text<br/><br/>
+                                            <content styleCode="bold">[Table for single dose
+                                                studies:]<br/><br/> Analyte Name<br/> (__ x __
+                                                mg)<br/> From measured data<br/><br/> Geometric
+                                                Mean<br/> Arithmetic Mean (CV %)</content>
                                         </paragraph>
                                         <table ID="t15">
-                                            <caption>[Table for single dose studies:]</caption>
+                                            <caption>Table # - Single dose studies</caption>
                                             <tbody>
-                                                <tr>
-                                                  <td align="center" colspan="5"
-                                                  styleCode="Toprule Rrule Lrule Botrule"><content
-                                                  styleCode="bold">Analyte Name<br/> (__ x __
-                                                  mg)<br/> From measured data<br/><br/> Geometric
-                                                  Mean<br/> Arithmetic Mean (CV %)</content>
-                                                  </td>
-                                                </tr>
                                                 <tr>
                                                   <th styleCode="Toprule Rrule Lrule Botrule"
                                                   >Parameter</th>
@@ -2554,16 +2583,13 @@
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <paragraph><content styleCode="bold"> [Table for multiple
+                                                dose studies:] Analyte Name<br/> (__ x __ mg)<br/>
+                                                From measured data<br/><br/> Geometric Mean<br/>
+                                                Arithmetic Mean (CV %)</content></paragraph>
                                         <table ID="t16">
-                                            <caption>[Table for multiple dose studies:]</caption>
+                                            <caption>Table # - multiple dose studies</caption>
                                             <tbody>
-                                                <tr>
-                                                  <td colspan="5" align="center"
-                                                  styleCode="Toprule Rrule Lrule Botrule"><content
-                                                  styleCode="bold">Analyte Name<br/> (__ x __
-                                                  mg)<br/> From measured data<br/><br/> Geometric
-                                                  Mean<br/> Arithmetic Mean (CV %)</content></td>
-                                                </tr>
                                                 <tr>
                                                   <th styleCode="Toprule Rrule Lrule Botrule"
                                                   >Parameter</th>
@@ -2630,12 +2656,11 @@
                     <component>
                         <section ID="a2875272-8229-4c12-a19e-827954ddd78a">
                             <id root="e134d52c-f1d4-4698-a082-84b29ee3d95a"/>
-                            <code code="60055" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pii15" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="15 MICROBIOLOGY"/>
                             <title>15 MICROBIOLOGY</title>
                             <text>
-                                <paragraph> text </paragraph>
-                                <paragraph>table</paragraph>
+                                <paragraph> sample text </paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2643,13 +2668,11 @@
                     <component>
                         <section ID="a42a7572-8229-4c12-a19e-827954ddd78a">
                             <id root="c134d52c-f9d4-4698-a082-84b29ee3a95a"/>
-                            <code code="60056" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pii16" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="16 NON-CLINICAL TOXICOLOGY"/>
                             <title>16 NON-CLINICAL TOXICOLOGY</title>
                             <text>
-                                <paragraph>[Narrative where possible. Include a table only where
-                                    presentation is made more concise.]</paragraph>
-                                <paragraph>text</paragraph>
+                                <paragraph> sample text </paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2657,17 +2680,11 @@
                     <component>
                         <section ID="ef8a4d48-0fc3-4e44-b4b6-550140d4de5d">
                             <id root="be74b6e6-c431-4a5f-a18e-ed3214381456"/>
-                            <code code="60057" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pii17" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="17 SUPPORTING PRODUCT MONOGRAPHS"/>
                             <title>17 SUPPORTING PRODUCT MONOGRAPHS</title>
                             <text>
-                                <paragraph> [Where there are no supporting product monographs, this
-                                    section should be omitted.]</paragraph>
-                                <paragraph>[numbered list:]</paragraph>
-                                <list listType="ordered">
-                                    <item>Brand name (dosage form, strength), submission control
-                                        number, Product Monograph, sponsor. (MON, DD, YYYY) </item>
-                                </list>
+                                <paragraph> sample text </paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2678,14 +2695,14 @@
                 <!-- Patient Medication Information -->
                 <section ID="baa4d498-0fc3-4e44-b4b6-550140d4de5d">
                     <id root="be74b6e6-c461-4a5f-a18e-ed321b381456"/>
-                    <code code="60058" codeSystem="2.16.840.1.113883.2.20.6.60"
+                    <code code="pmi00" codeSystem="2.16.840.1.113883.2.20.6.60"
                         displayName="PATIENT MEDICATION INFORMATION"/>
                     <title>PATIENT MEDICATION INFORMATION</title>
                     <effectiveTime value="20170101"/>
                     <component>
                         <section ID="ea4ec98b-b2d3-4d73-877c-aaa5eb28997d">
                             <id root="067c0a3b-5869-43a7-baff-ce6de72ae1e5"/>
-                            <code code="60059" codeSystem="2.16.840.1.113883.2.20.6.60"
+                            <code code="pmi01" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="READ THIS FOR SAFE AND EFFECTIVE USE OF YOUR MEDICINE"/>
                             <title>READ THIS FOR SAFE AND EFFECTIVE USE OF YOUR MEDICINE</title>
                             <text>
@@ -2723,8 +2740,8 @@
                     <component>
                         <section ID="baa4d498-0gc3-4e44-bcb6-550140d4de5d">
                             <id root="be74b6e6-1431-4a5f-a18e-ed321b381456"/>
-                            <code code="60061" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="WHAT IS THIS MEDICATION USED FOR?"/>
+                            <code code="pmi02" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="What is [Brand name] used for?"/>
                             <title>What is [Brand name] used for?</title>
                             <text>
                                 <list>
@@ -2738,8 +2755,8 @@
                     <component>
                         <section ID="bca4d498-0gc3-4e44-bcb6-550140d4de5d">
                             <id root="be74b6e6-c431-4adf-a18e-ed321b381456"/>
-                            <code code="60062" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="HOW DOES THIS MEDICATION WORK?"/>
+                            <code code="pmi03" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="How does [Brand name] work?"/>
                             <title>How does [Brand name] work?</title>
                             <text>
                                 <paragraph>[At the grade 6-8 reading level, explain the mechanism of
@@ -2753,8 +2770,8 @@
                     <component>
                         <section ID="bca4d498-0gc3-4e44-bcb6-55013024de5d">
                             <id root="be74b6e6-c431-4a5f-a18e-ed321b381756"/>
-                            <code code="60063" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="WHAT ARE THE INGREDIENTS IN THIS MEDICATION?"/>
+                            <code code="pmi04" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="What are the ingredients in [Brand name]?"/>
                             <title>What are the ingredients in [Brand name]?</title>
                             <text>
                                 <paragraph>Medicinal ingredients: [List all medicinal ingredients
@@ -2768,8 +2785,8 @@
                     <component>
                         <section ID="bca4d498-0gc3-4e54-bcb6-550130d4de5d">
                             <id root="be74b6e6-c431-4a5f-a18e-ed3a1b381456"/>
-                            <code code="60064" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="THIS MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:"/>
+                            <code code="pmi05" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="[Brand name] comes in the following dosage forms:"/>
                             <title>[Brand name] comes in the following dosage forms:</title>
                             <text>
                                 <paragraph>[To maintain brevity, this is the only information
@@ -2782,8 +2799,8 @@
                     <component>
                         <section ID="bca4c498-00c3-4e44-bcb6-550134d4de5d">
                             <id root="be74b6e6-cd31-4a5f-a18e-ed321b381456"/>
-                            <code code="60065" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="DO NOT USE THIS MEDICATION IF:"/>
+                            <code code="pmi06" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="Do not use [Brand name] if:"/>
                             <title>Do not use [Brand name] if:</title>
                             <text>
                                 <paragraph>[Enter one point for each contraindication from Part
@@ -2799,12 +2816,9 @@
                     <component>
                         <section ID="b6b37351-bbc9-46d9-b148-27ba3cb0a75e">
                             <id root="be74b6e6-c431-4a5f-a18e-ed32cc381456"/>
-                            <code code="60066" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="TO HELP AVOID SIDE EFFECTS AND ENSURE PROPER USE, TALK TO YOUR HEALTHCARE PROFESSIONAL BEFORE YOU TAKE MEDICATION. TALK ABOUT ANY HEALTH CONDITIONS OR PROBLEMS YOU MAY HAVE, INCLUDING IF YOU:"/>
-                            <title>To help avoid side effects and ensure proper use, talk to your
-                                healthcare professional before you take [Brand name]. Talk about any
-                                health conditions or problems you may have, including if
-                                you:</title>
+                            <code code="pmi07" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="To help avoid side effects and ensure proper use, talk to your healthcare professional before you take [Brand name]. Talk about any health conditions or problems you may have, including if you:"/>
+                            <title>To help avoid side effects and ensure proper use, talk to your healthcare professional before you take [Brand name]. Talk about any health conditions or problems you may have, including if you:</title>
                             <text>
                                 <paragraph>[Enter one point for each warning and precaution from
                                     Part I.]</paragraph>
@@ -2819,8 +2833,8 @@
                     <component>
                         <section ID="edac0d6f-3c91-48b5-99c0-e0f940925d37">
                             <id root="be74bbe6-c431-4a5f-a18e-ed321b381456"/>
-                            <code code="60067" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="OTHER WARNINGS YOU SHOULD KNOW ABOUT:"/>
+                            <code code="pmi08" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="Other warnings you should know about:"/>
                             <title>Other warnings you should know about:</title>
                             <text>
                                 <paragraph>[Enter general information that would not appear in the
@@ -2837,8 +2851,8 @@
                     <component>
                         <section ID="bca4c498-0ac3-4e44-bcb6-550134d4de5d">
                             <id root="be74b6e6-c431-4a5f-a18e-ed321ab81456"/>
-                            <code code="60069" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="THE FOLLOWING MAY INTERACT WITH THIS MEDICATION:"/>
+                            <code code="pmi09" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="The following may interact with [Brand name]:"/>
                             <title>The following may interact with [Brand name]:</title>
                             <text>
                                 <list>
@@ -2852,8 +2866,8 @@
                     <component>
                         <section ID="e23321cd-5111-4aa3-b650-74f93bcda261">
                             <id root="be74b6e6-c431-4a5f-a18e-ed3212281456"/>
-                            <code code="60070" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="HOW TO TAKE THIS MEDICATION:"/>
+                            <code code="pmi10" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="How to take [Brand name]:"/>
                             <title>How to take [Brand name]:</title>
                             <text>
                                 <paragraph> sample text </paragraph>
@@ -2864,8 +2878,8 @@
                     <component>
                         <section ID="cd0892a2-0e32-4fb7-9cc9-1bbfff60dee7">
                             <id root="be74b6e6-c431-4a5f-a18e-11321b381456"/>
-                            <code code="60071" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="USUAL DOSE:"/>
+                            <code code="pmi11" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="Usual dose:"/>
                             <title>Usual dose:</title>
                             <text>
                                 <paragraph> sample text </paragraph>
@@ -2876,8 +2890,8 @@
                     <component>
                         <section ID="beaaa5b8-6693-4d4c-a897-fa5c9562b1be">
                             <id root="be74b6e6-c431-4a5f-a18e-ed321b311456"/>
-                            <code code="60072" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="OVERDOSE:"/>
+                            <code code="pmi12" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="Overdose:"/>
                             <title>Overdose:</title>
                             <text>
                                 <paragraph>text</paragraph>
@@ -2902,8 +2916,8 @@
                     <component>
                         <section ID="ffd59b8d-fe66-4d86-a54f-0613d4168199">
                             <id root="be74b6e6-c431-4a5f-a18e-ed321e381456"/>
-                            <code code="60073" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="MISSED DOSE:"/>
+                            <code code="pmi13" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="Missed dose:"/>
                             <title>Missed dose:</title>
                             <text>
                                 <paragraph> sample text </paragraph>
@@ -2914,8 +2928,8 @@
                     <component>
                         <section ID="cb61f530-b95a-4047-b8ea-861c5a7a05e8">
                             <id root="be74b6e6-c431-4a5f-a98e-ed321b381456"/>
-                            <code code="60074" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="WHAT ARE POSSIBLE SIDE EFFECTS FROM USING THIS MEDICATION?"/>
+                            <code code="pmi14" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="What are possible side effects from using [Brand name]?"/>
                             <title>What are possible side effects from using [Brand name]?</title>
                             <text>
                                 <paragraph>These are not all the possible side effects you may feel
@@ -3035,8 +3049,8 @@
                     <component>
                         <section ID="c9d75711-2ce9-451e-aa51-91026ec1555e">
                             <id root="be74b6e6-c431-4a5f-a18e-ed321b081456"/>
-                            <code code="60076" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="STORAGE:"/>
+                            <code code="pmi15" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="Storage:"/>
                             <title>Storage:</title>
                             <text>
                                 <paragraph>text</paragraph>
@@ -3048,16 +3062,16 @@
                     <component>
                         <section ID="f6693e7a-21c9-492f-833b-4e8f3911d3a5">
                             <id root="be74b6e6-c431-4a5f-a18e-ed321b381446"/>
-                            <code code="60077" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="IF YOU WANT MORE INFORMATION ABOUT THIS MEDICATION:"/>
+                            <code code="pmi16" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                displayName="If you want more information about [Brand name]:"/>
                             <title>If you want more information about [Brand name]:</title>
                             <text>
                                 <list listType="unordered">
                                     <item>Talk to your healthcare professional</item>
                                     <item>Find the full product monograph that is prepared for
                                         healthcare professionals and includes this Patient
-                                        Medication Information by visiting the Health Canada website
-                                            <linkHtml href="http://hc-sc.gc.ca/index-eng.php"
+                                        Medication Information by visiting the Health Canada
+                                            website <linkHtml href="http://hc-sc.gc.ca/index-eng.php"
                                             >(http://hc-sc.gc.ca/index-eng.php)</linkHtml>; the
                                         manufacturer's website (website), or by calling 1-800-(phone
                                         number).</item>
