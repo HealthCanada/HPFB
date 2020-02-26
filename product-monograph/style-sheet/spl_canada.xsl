@@ -176,7 +176,12 @@
 						<td class="formLabel"> <!-- Product Substance Administration Route -->
 							<xsl:value-of select="$labels/adminRoute[@lang = $lang]"/>
 						</td>
-						<td class="formItem"><xsl:value-of select="../v3:consumedIn/v3:substanceAdministration/v3:routeCode/@displayName"/></td>
+						<td class="formItem"> <!-- may have multiple supported administration routes -->
+							<xsl:for-each select="../v3:consumedIn/v3:substanceAdministration/v3:routeCode">
+								<xsl:value-of select="@displayName"/>
+								<xsl:if test="position()!=last()">, </xsl:if>
+							</xsl:for-each>
+						</td>
 					</tr>
 					<tr class="formTableRowAlt">
 						<td class="formLabel"> <!-- Product Dosage Form -->
@@ -695,9 +700,8 @@
 					<div class="col">
 						<xsl:for-each select="v3:component/v3:section">
 							<xsl:variable name="unique-section-id"><xsl:value-of select="@ID"/></xsl:variable>
-							<xsl:variable name="tri-code-value" select="substring(v3:code/@code, string-length(v3:code/@code)-2)"/>
 							<xsl:choose>
-								<xsl:when test="v3:code[@code='MP']">
+								<xsl:when test="v3:code[@code='0MP']">
 									<!-- PRODUCT DETAIL -->
 									<div class="card mb-2 hide-in-print" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1"> 
@@ -710,7 +714,7 @@
 										</div>
 									</div>
 								</xsl:when>
-								<xsl:when test="$tri-code-value = '001'">
+								<xsl:when test="v3:code[@code='0TP']">
 									<!-- TITLE PAGE - Note: force-page-break-after here does not work on FireFox -->
 									<div class="card mb-2 force-page-break-after" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1 hide-in-print">
@@ -733,7 +737,7 @@
 										</div>
 									</div>
 								</xsl:when>
-								<xsl:when test="$tri-code-value = '007'">
+								<xsl:when test="v3:code[@code='1RMLC']">
 									<!-- RECENT MAJOR LABEL CHANGES -->
 									<div class="card mb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">

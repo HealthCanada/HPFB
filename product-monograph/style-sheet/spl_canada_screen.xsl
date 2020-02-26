@@ -10,12 +10,12 @@
 	<!-- accordion card for company details and distributor details - note the spl class that triggers FDA styles -->
 	<xsl:template match="//v3:author/v3:assignedEntity/v3:representedOrganization" mode="card">
 		<section class="card m-2" id="company-details">
-			<h6 class="card-header p-0 bg-aurora-accent2">
+			<h6 class="card-header p-0 bg-aurora-light"> <!-- dropped bg-aurora-accent2 from h6 and button -->
 				<!-- pmh - this is how one might make product accordions optional -->
 <!--				<div class="text-white text-left d-none d-md-block p-2">
 					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
 				</div> --> <!--  dropdown-toggle below caused problems with rwd, and possibly w-100 -->
-				<button class="btn bg-aurora-accent2 text-white text-left w-100" type="button" 
+				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-company-details" 
 				aria-expanded="true" aria-controls="collapse-company-details">
 					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
@@ -32,8 +32,9 @@
 	<xsl:template match="v3:subject/v3:manufacturedProduct" mode="card">
 		<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
 		<section class="card m-2" id="{$unique-product-id}">
-			<h6 class="card-header p-0 bg-aurora-accent2"> <!-- dropdown-toggle below caused problems with rwd, and possibly w-100 -->
-				<button class="btn bg-aurora-accent2 text-white text-left w-100" type="button" 
+			<h6 class="card-header p-0 bg-aurora-light"> <!-- dropped bg-aurora-accent2 from h6 and button -->
+				<!-- dropdown-toggle below caused problems with rwd, and possibly w-100 -->
+				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-{$unique-product-id}" 
 				aria-expanded="true" aria-controls="collapse-{$unique-product-id}">
 					<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
@@ -72,9 +73,8 @@
 						<ul class="navbar-nav" id="navigation-sidebar" style="transform: scaleX(-1); ">
 							<xsl:for-each select="v3:component/v3:section">
 								<xsl:variable name="unique-section-id"><xsl:value-of select="@ID"/></xsl:variable>
-								<xsl:variable name="tri-code-value" select="substring(v3:code/@code, string-length(v3:code/@code)-2)"/>
 								<xsl:choose>
-									<xsl:when test="v3:code[@code='1']|v3:code[@code='MP']">
+									<xsl:when test="v3:code[@code='0MP']">
 										<!-- PRODUCT DETAIL NAVIGATION -->
 										<li class="nav-item">
 											<a href="#drop-{$unique-section-id}" class="nav-link nav-top dropdown-toggle" data-toggle="collapse">
@@ -92,15 +92,7 @@
 										</li>							
 									</xsl:when>
 									<!-- TITLE PAGE OR RECENT MAJOR LABEL CHANGE NAVIGATION -->
-									<xsl:when test="$tri-code-value = '001' or $tri-code-value = '007'">
-										<li class="nav-item">
-											<a href="#{$unique-section-id}" class="nav-link nav-top">
-												<xsl:value-of select="v3:title"/>
-											</a>
-										</li>
-									</xsl:when>
-									<!-- LEGACY - REMOVE WHEN THESE CODES ARE FULLY DEPRECATED -->
-									<xsl:when test="v3:code[@code='TP']|v3:code[@code='RMLC']">
+									<xsl:when test="v3:code[@code='0TP']|v3:code[@code='1RMLC']">
 										<li class="nav-item">
 											<a href="#{$unique-section-id}" class="nav-link nav-top">
 												<xsl:value-of select="v3:title"/>
@@ -203,7 +195,9 @@
 		<div class="Section">
 			<br/>
 			<h2 style="display: inline;">
-				<xsl:value-of select="v3:title"/>:
+				<!-- pmh the colon in the title is supplied by the controlled vocabulary -->
+				<xsl:value-of select="v3:title"/>
+				<xsl:text> </xsl:text>
 			</h2>
 			<xsl:value-of select="v3:text/v3:paragraph"/>
 		</div>
@@ -213,7 +207,8 @@
 		<head>
 			<meta charset="utf-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1"/>
-			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>   
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  
+			<meta http-equiv="X-UA-Compatible" content="IE=10"/>			
 			<meta name="documentId">
 				<xsl:attribute name="content"><xsl:value-of select="v3:id/@root"/></xsl:attribute>
 			</meta>
@@ -264,6 +259,15 @@
 			} catch (e) {
 			  console.log(e)
 			}
+			
+			// Mitigate IE/Edge bug showing bullets on lists which are hidden when loading the page
+			$(document).ready(function(){
+				if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+					$('ul:hidden').each(function(){
+						$(this).parent().append($(this).detach());
+					});
+				}
+			});			
 		</script>
 	</xsl:template>
 	
