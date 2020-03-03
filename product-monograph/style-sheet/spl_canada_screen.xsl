@@ -125,6 +125,10 @@
 		<xsl:variable name="unique-subsection-id"><xsl:value-of select="@ID"/></xsl:variable>
 		<li class="nav-item">
 			<a href="#{$unique-subsection-id}" class="nav-link">
+				<!-- TODO this should never be applied to non-draft SPL documents -->
+				<xsl:if test="not(normalize-space(v3:title))">
+					<span style="color:red;">&lt;&lt;MISSING INFORMATION&gt;&gt;</span>
+				</xsl:if>
 				<xsl:value-of select="v3:title"/>				
 			</a>
 			<xsl:if test="v3:component/v3:section">
