@@ -8,7 +8,7 @@
     displayName="2016 MODÈLE DE MONOGRAPHIE DE PRODUIT - NORME"/>
   <title><sup>Pr</sup>LORUM IPSUM (acetaminophen), 100 mg ORAL TABLETTE</title>
   <effectiveTime value="20180101">
-    <!-- Date of Last Revision -->
+    <!-- Date of Last Revision or Date of Initial Approval -->
   </effectiveTime>
   <languageCode code="2" codeSystem="2.16.840.1.113883.2.20.6.29" displayName="FRANÇAIS"/>
   <setId root="aeb4ec67-8764-4b72-b7a5-0bae88db11a3"/>
