@@ -8,7 +8,7 @@
         displayName="2016 PRODUCT MONOGRAPH TEMPLATE - STANDARD"/>
     <title>LORUM IPSUM (acetaminophen), TABLET, CAPSULE, POWDER</title>
     <effectiveTime value="20180101">
-        <!-- Date of Last Revision -->
+        <!-- Date of Last Revision or Date of Initial Approval -->
     </effectiveTime>
     <languageCode code="1" codeSystem="2.16.840.1.113883.2.20.6.29" displayName="ENGLISH"/>
     <setId root="aeb4ec67-8764-4b72-b7a5-0bae88db11a3"/>
