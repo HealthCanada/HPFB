@@ -1742,11 +1742,23 @@
                                 </section>
                             </component>
                             <component>
+                                <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f4a">
+                                    <id root="a473c162-e176-44d0-b797-2b7b6cf0ae43"/>
+                                    <code code="pi04.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="4.3 Administration"/>
+                                    <title>4.3 Administration</title>
+                                    <text>
+                                        <paragraph>text and/or table</paragraph>
+									</text>
+                                    <effectiveTime value="20180101"/>
+                                </section>
+                            </component>
+							<component>
                                 <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f3a">
                                     <id root="a473c162-f176-44d0-b797-2b7b6cf00e43"/>
-                                    <code code="pi04.3" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="4.3 Reconstitution"/>
-                                    <title>4.3 Reconstitution</title>
+                                    <code code="pi04.4" codeSystem="2.16.840.1.113883.2.20.6.60"
+                                        displayName="4.4 Reconstitution"/>
+                                    <title>4.4 Reconstitution</title>
 									<text>
                                         <paragraph>Oral Solutions: text and/or table</paragraph>
                                         <paragraph>Parenteral Products: table and text</paragraph>
@@ -1772,57 +1784,6 @@
                                 </section>
                             </component>
                             <component>
-                                <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f4a">
-                                    <id root="a473c162-e176-44d0-b797-2b7b6cf0ae43"/>
-                                    <code code="pi04.4" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="4.4 Administration"/>
-                                    <title>4.4 Administration</title>
-                                    <text>
-                                        <paragraph>text and/or table</paragraph>
-									</text>
-                                    <effectiveTime value="20180101"/>
-									<component>
-                                        <section ID="a63c33a5-e08a-422c-b8a2-b12dbc115f7a">
-                                            <id root="a973c162-e176-4ad0-b797-2b7b6cf00e43"/>
-                                            <code code="pi04.4.1"
-                                                codeSystem="2.16.840.1.113883.2.20.6.60"
-                                                displayName="4.4.1 Image Acquisition and Interpretation"/>
-                                            <title>4.4.1 Image Acquisition and Interpretation</title>
-                                            <text>
-                                                <paragraph> sample text </paragraph>
-                                            </text>
-                                            <effectiveTime value="20180101"/>
-                                        </section>
-                                    </component>
-                                    <component>
-                                        <section ID="a63c33a5-e08a-472c-b8a2-b14dbd115f7a">
-                                            <id root="a413c162-1176-44d0-b797-2b7b6cf00e43"/>
-                                            <code code="pi04.4.2"
-                                                codeSystem="2.16.840.1.113883.2.20.6.60"
-                                                displayName="4.4.2 Instructions for Preparation and Use"/>
-                                            <title>4.4.2 Instructions for Preparation and Use</title>
-                                            <text>
-                                                <paragraph> sample text </paragraph>
-                                            </text>
-                                            <effectiveTime value="20180101"/>
-                                        </section>
-                                    </component>
-                                    <component>
-                                        <section ID="a63c33a5-e08a-472c-b8c2-b12dcc115f7a">
-                                            <id root="a472c162-e176-44d0-b787-2b7b6cf00e43"/>
-                                            <code code="pi04.4.3"
-                                                codeSystem="2.16.840.1.113883.2.20.6.60"
-                                                displayName="4.4.3 Directions for Quality Control"/>
-                                            <title>4.4.3 Directions for Quality Control</title>
-                                            <text>
-                                                <paragraph> sample text </paragraph>
-                                            </text>
-                                            <effectiveTime value="20180101"/>
-                                        </section>
-                                    </component>
-                                </section>
-                            </component>
-                            <component>
                                 <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f5a">
                                     <id root="a473c162-e176-44d0-b797-2b7b6cf00e33"/>
                                     <code code="pi04.5" codeSystem="2.16.840.1.113883.2.20.6.60"
@@ -1834,18 +1795,7 @@
                                     <effectiveTime value="20180101"/>
                                 </section>
                             </component>
-							<component>
-                                <section ID="a63c33a5-e08a-472c-b8a2-a12dba10525a">
-                                    <id root="a473c162-e176-41d0-b797-2b7b6cf00e33"/>
-                                    <code code="pi04.6" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                        displayName="4.6 Radiation Dosimetry"/>
-                                    <title>4.6 Radiation Dosimetry</title>
-                                    <text>
-                                        <paragraph> text </paragraph>
-                                    </text>
-                                    <effectiveTime value="20180101"/>
-                                </section>
-                            </component>
+
                         </section>
                     </component>
                     <component>
