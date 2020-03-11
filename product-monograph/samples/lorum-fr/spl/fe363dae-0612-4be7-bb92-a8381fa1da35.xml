@@ -1279,42 +1279,6 @@
                     <paragraph>exemple de texte</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
-				  <component>
-					<section ID="a63c32a5-e08a-472c-b8a2-a12dba105f5a">
-                      <id root="a673c162-e176-44d0-b797-2b7b6cf00e33"/>
-                      <code code="pi04.4.1" codeSystem="2.16.840.1.113883.2.20.6.60"
-                        displayName="4.4.1 Acquisition et interpretation d'image"/>
-                    <title>4.4.1 Acquisition et interpretation d'image</title>
-                    <text>
-                      <paragraph>exemple de texte</paragraph>
-                    </text>
-                    <effectiveTime value="20180101"/>
-                    </section>
-                  </component>
-				  <component>
-					<section ID="a63c33a5-e08a-472c-b8b2-a12dba105f5a">
-                      <id root="a473c162-e173-44d0-b797-2b7b6cf00e33"/>
-                      <code code="pi04.4.2" codeSystem="2.16.840.1.113883.2.20.6.60"
-                        displayName="4.4.2 Instructions pour la préparation et l'utilisation"/>
-                    <title>4.4.2 Instructions pour la préparation et l'utilisation</title>
-                    <text>
-                      <paragraph>exemple de texte</paragraph>
-                    </text>
-                    <effectiveTime value="20180101"/>
-                    </section>
-                  </component>
-				  <component>
-					<section ID="a63c33a5-e08a-472c-b9a2-a12dba105f5a">
-                      <id root="a473d162-e176-44d0-b797-2b7b6cf00e33"/>
-                      <code code="pi04.4.3" codeSystem="2.16.840.1.113883.2.20.6.60"
-                        displayName="4.4.3 Directives pour le contrôle de la qualité"/>
-                    <title>4.4.3 Directives pour le contrôle de la qualité</title>
-                    <text>
-                      <paragraph>exemple de texte</paragraph>
-                    </text>
-                    <effectiveTime value="20180101"/>
-                    </section>
-                  </component>
                 </section>
               </component>
               <component>
