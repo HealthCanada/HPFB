@@ -649,16 +649,7 @@ token.
 			<xsl:apply-templates mode="mixed" select="node()"/>
 		</p>
 	</xsl:template>
-	<!-- TABLE MODEL -->
-	<xsl:template match="v3:table">
-		<!-- see note anchoring and PCR 793 -->
-		<xsl:if test="@ID">
-			<a name="{@ID}"/>
-		</xsl:if>
-		<table>
-			<xsl:apply-templates select="@*|node()"/>
-		</table>
-	</xsl:template>
+	<!-- TABLE MODEL - overrode main template for v3:table in spl_canada.xsl -->
 	<xsl:template match="v3:table/@summary|v3:table/@width|v3:table/@border|v3:table/@frame|v3:table/@rules|v3:table/@cellspacing|v3:table/@cellpadding">
 		<xsl:copy-of select="."/>
 	</xsl:template>

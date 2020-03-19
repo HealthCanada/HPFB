@@ -443,16 +443,16 @@
 					<xsl:with-param name="label" select="$labels/combinationProduct[@lang = $lang]"/>
 					<xsl:with-param name="class">formTableRowAlt</xsl:with-param>
 				</xsl:call-template>
-				<xsl:call-template name="codedCharacteristicRow"> <!-- Pharmaceutical Standard is CV -->
+				<xsl:call-template name="listedCharacteristicRow"> <!-- Pharmaceutical Standard is CV Listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='9']"/>
 					<xsl:with-param name="label" select="$labels/pharmaStandard[@lang = $lang]"/>
 				</xsl:call-template>
-				<xsl:call-template name="listedCharacteristicRow"> <!-- Schedule is CV, Listed? -->
+				<xsl:call-template name="listedCharacteristicRow"> <!-- Schedule is CV Listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='10']"/>
 					<xsl:with-param name="label" select="$labels/schedule[@lang = $lang]"/>
 					<xsl:with-param name="class">formTableRowAlt</xsl:with-param>
 				</xsl:call-template>
-				<xsl:call-template name="listedCharacteristicRow"> <!-- Therapeutic Class, Listed? -->
+				<xsl:call-template name="listedCharacteristicRow"> <!-- Therapeutic Class is CV Listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='11']"/>
 					<xsl:with-param name="label" select="$labels/therapeuticClass[@lang = $lang]"/>
 				</xsl:call-template>
@@ -815,6 +815,21 @@
 		<xsl:apply-templates select="/v3:document"/>
 	</xsl:template>
 
+	<!-- TABLE MODEL -->
+	<xsl:template match="v3:table">
+		<!-- see note anchoring and PCR 793 -->
+		<xsl:if test="@ID">
+			<a name="{@ID}"/>
+		</xsl:if>
+		<table>
+			<!-- Default to 100% table width if none is specified -->
+			<xsl:if test="not(@width)">
+				<xsl:attribute name="width">100%</xsl:attribute>
+			</xsl:if>
+			<xsl:apply-templates select="@*|node()"/>
+		</table>
+	</xsl:template>
+	
 	<!-- MAIN HTML PAGE TEMPLATING -->
 	<xsl:template match="/v3:document" priority="1">
 		<html>
