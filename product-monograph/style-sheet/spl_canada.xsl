@@ -889,9 +889,6 @@
 			<xsl:apply-templates mode="mixed" select="node()"/>
 		</th>
 	</xsl:template>
-	<xsl:template match="v3:th/@align|v3:th/@char|v3:th/@charoff|v3:th/@valign|v3:th/@abbr|v3:th/@axis|v3:th/@headers|v3:th/@scope|v3:th/@rowspan|v3:th/@colspan">
-		<xsl:copy-of select="."/>
-	</xsl:template>
 	<xsl:template match="v3:td">
 		<!-- determine our position to find out the associated col -->
 		<xsl:param name="position" select="1+count(preceding-sibling::v3:td[not(@colspan[number(.) > 0])]|preceding-sibling::v3:th[not(@colspan[number(.) > 0])])+sum(preceding-sibling::v3:td/@colspan[number(.) > 0]|preceding-sibling::v3:th/@colspan[number(.) > 0])"/>
