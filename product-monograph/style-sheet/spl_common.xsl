@@ -649,7 +649,8 @@ token.
 			<xsl:apply-templates mode="mixed" select="node()"/>
 		</p>
 	</xsl:template>
-	<!-- TABLE MODEL - overrode main template for v3:table in spl_canada.xsl -->
+	
+	<!-- TABLE MODEL - the main table template has been moved to spl_canada.xsl, long with tr, td, and th -->
 	<xsl:template match="v3:table/@summary|v3:table/@width|v3:table/@border|v3:table/@frame|v3:table/@rules|v3:table/@cellspacing|v3:table/@cellpadding">
 		<xsl:copy-of select="."/>
 	</xsl:template>
@@ -722,57 +723,6 @@ token.
 	</xsl:template>
 	<xsl:template match="v3:tr/@align|v3:tr/@char|v3:tr/@charoff|v3:tr/@valign">
 		<xsl:copy-of select="."/>
-	</xsl:template>
-	<xsl:template match="v3:th">
-		<!-- determine our position to find out the associated col -->
-		<xsl:param name="position" select="1+count(preceding-sibling::v3:td[not(@colspan[number(.) > 0])]|preceding-sibling::v3:th[not(@colspan[number(.) > 0])])+sum(preceding-sibling::v3:td/@colspan[number(.) > 0]|preceding-sibling::v3:th/@colspan[number(.) > 0])"/>
-		<xsl:param name="associatedCol" select="(ancestor::v3:table/v3:colgroup/v3:col|ancestor::v3:table/v3:col)[$position]"/>
-		<xsl:param name="associatedColgroup" select="$associatedCol/parent::v3:colgroup"/>
-		<th>
-			<xsl:call-template name="styleCodeAttr">
-				<xsl:with-param name="styleCode" select="@styleCode"/>
-				<xsl:with-param name="additionalStyleCode">
-					<xsl:if test="not(ancestor::v3:tfoot) and ((contains($associatedColgroup/@styleCode,'Lrule') and not($associatedCol/preceding-sibling::v3:col)) or contains($associatedCol/@styleCode, 'Lrule'))">
-						<xsl:text> Lrule </xsl:text>
-					</xsl:if>
-					<xsl:if test="not(ancestor::v3:tfoot) and ((contains($associatedColgroup/@styleCode,'Rrule') and not($associatedCol/following-sibling::v3:col)) or contains($associatedCol/@styleCode, 'Rrule'))">
-						<xsl:text> Rrule </xsl:text>
-					</xsl:if>
-				</xsl:with-param>
-			</xsl:call-template>
-			<xsl:call-template name="additionalStyleAttr"/>
-			<xsl:copy-of select="$associatedCol/@align"/>
-			<xsl:apply-templates select="@*[not(local-name(.)='styleCode')]"/>
-			<xsl:apply-templates mode="mixed" select="node()"/>
-		</th>
-	</xsl:template>
-	<xsl:template match="v3:th/@align|v3:th/@char|v3:th/@charoff|v3:th/@valign|v3:th/@abbr|v3:th/@axis|v3:th/@headers|v3:th/@scope|v3:th/@rowspan|v3:th/@colspan">
-		<xsl:copy-of select="."/>
-	</xsl:template>
-	<xsl:template match="v3:td">
-		<!-- determine our position to find out the associated col -->
-		<xsl:param name="position" select="1+count(preceding-sibling::v3:td[not(@colspan[number(.) > 0])]|preceding-sibling::v3:th[not(@colspan[number(.) > 0])])+sum(preceding-sibling::v3:td/@colspan[number(.) > 0]|preceding-sibling::v3:th/@colspan[number(.) > 0])"/>
-
-
-		<xsl:param name="associatedCol" select="(ancestor::v3:table/v3:colgroup/v3:col|ancestor::v3:table/v3:col)[$position]"/>
-		<xsl:param name="associatedColgroup" select="$associatedCol/parent::v3:colgroup"/>
-		<td>
-			<xsl:call-template name="styleCodeAttr">
-				<xsl:with-param name="styleCode" select="@styleCode"/>
-				<xsl:with-param name="additionalStyleCode">
-					<xsl:if test="not(ancestor::v3:tfoot) and ((contains($associatedColgroup/@styleCode,'Lrule') and not($associatedCol/preceding-sibling::v3:col)) or contains($associatedCol/@styleCode, 'Lrule'))">
-						<xsl:text> Lrule </xsl:text>
-					</xsl:if>
-					<xsl:if test="not(ancestor::v3:tfoot) and ((contains($associatedColgroup/@styleCode,'Rrule') and not($associatedCol/following-sibling::v3:col)) or contains($associatedCol/@styleCode, 'Rrule'))">
-						<xsl:text> Rrule </xsl:text>
-					</xsl:if>
-				</xsl:with-param>
-			</xsl:call-template>
-			<xsl:call-template name="additionalStyleAttr"/>
-			<xsl:copy-of select="$associatedCol/@align"/>
-			<xsl:apply-templates select="@*[not(local-name(.)='styleCode')]"/>
-			<xsl:apply-templates mode="mixed" select="node()"/>
-		</td>
 	</xsl:template>
 	<xsl:template match="v3:td/@align|v3:td/@char|v3:td/@charoff|v3:td/@valign|v3:td/@abbr|v3:td/@axis|v3:td/@headers|v3:td/@scope|v3:td/@rowspan|v3:td/@colspan">
 		<xsl:copy-of select="."/>

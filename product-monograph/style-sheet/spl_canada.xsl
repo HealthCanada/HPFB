@@ -434,7 +434,7 @@
 					<xsl:with-param name="label" select="$labels/imprint[@lang = $lang]"/>
 					<xsl:with-param name="class">formTableRowAlt</xsl:with-param>
 				</xsl:call-template>
-				<xsl:call-template name="listedCharacteristicRow"> <!-- Flavour is CV -->
+				<xsl:call-template name="listedCharacteristicRow"> <!-- Flavour is CV Listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='7']"/>
 					<xsl:with-param name="label" select="$labels/flavor[@lang = $lang]"/>
 				</xsl:call-template>
@@ -452,7 +452,7 @@
 					<xsl:with-param name="label" select="$labels/schedule[@lang = $lang]"/>
 					<xsl:with-param name="class">formTableRowAlt</xsl:with-param>
 				</xsl:call-template>
-				<xsl:call-template name="listedCharacteristicRow"> <!-- Therapeutic Class is CV Listed -->
+				<xsl:call-template name="listedCharacteristicRow"> <!-- Therapeutic Class Listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='11']"/>
 					<xsl:with-param name="label" select="$labels/therapeuticClass[@lang = $lang]"/>
 				</xsl:call-template>
@@ -834,8 +834,8 @@
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode">
-					<!-- pmh added improved support for table rules=all -->
 					<xsl:choose>
+						<!-- pmh added improved support for table rules=all -->
 						<xsl:when test="ancestor::v3:table/@rules='all'">
 							<xsl:text> Toprule Botrule</xsl:text>
 						</xsl:when>
@@ -867,8 +867,8 @@
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode">
-					<!-- pmh added improved support for table rules=all -->
 					<xsl:choose>
+						<!-- pmh added improved support for table rules=all -->
 						<xsl:when test="ancestor::v3:table/@rules='all'">
 							<xsl:text> Lrule Rrule </xsl:text>
 						</xsl:when>						
@@ -889,6 +889,9 @@
 			<xsl:apply-templates mode="mixed" select="node()"/>
 		</th>
 	</xsl:template>
+	<xsl:template match="v3:th/@align|v3:th/@char|v3:th/@charoff|v3:th/@valign|v3:th/@abbr|v3:th/@axis|v3:th/@headers|v3:th/@scope|v3:th/@rowspan|v3:th/@colspan">
+		<xsl:copy-of select="."/>
+	</xsl:template>
 	<xsl:template match="v3:td">
 		<!-- determine our position to find out the associated col -->
 		<xsl:param name="position" select="1+count(preceding-sibling::v3:td[not(@colspan[number(.) > 0])]|preceding-sibling::v3:th[not(@colspan[number(.) > 0])])+sum(preceding-sibling::v3:td/@colspan[number(.) > 0]|preceding-sibling::v3:th/@colspan[number(.) > 0])"/>
@@ -898,8 +901,8 @@
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode">
-					<!-- pmh added improved support for table rules=all -->
 					<xsl:choose>
+						<!-- pmh added improved support for table rules=all -->
 						<xsl:when test="ancestor::v3:table/@rules='all'">
 							<xsl:text> Lrule Rrule </xsl:text>
 						</xsl:when>
