@@ -1674,7 +1674,7 @@
                             <text>
                                 <paragraph>[Delete this section if there is no Serious Warnings and Precautions
                                     box.]</paragraph>
-                                <table>
+                                <table rules="all" frame="border">
                                     <caption>Serious Warnings and Precautions</caption>
                                     <tbody>
                                         <tr>
@@ -1762,7 +1762,7 @@
 									<text>
                                         <paragraph>Oral Solutions: text and/or table</paragraph>
                                         <paragraph>Parenteral Products: table and text</paragraph>
-                                        <table width="100%">
+									    <table rules="all" frame="border">
                                             <caption>Table - Reconstitution</caption>
                                             <tbody>
                                                 <tr>
@@ -1830,7 +1830,7 @@
                                     both the brand name and the non-proprietary (active ingredient) name as well as
                                     other product-specific identifiers such as the Drug Identification Number (DIN)
                                     and the batch/lot number of the product supplied.</paragraph>
-                                <table ID="t5" width="100%">
+                                <table ID="t5" rules="all" frame="border">
                                     <caption> Table - Dosage Forms, Strengths, Composition and Packaging</caption>
                                     <tbody>
                                         <tr>
@@ -1966,7 +1966,7 @@
                                             approximating rates.<br/><br/> [Include a brief
                                             description of data sources.]<br/><br/>&lt;sample
                                             text&gt;</paragraph>
-                                        <table ID="t10" border="1">
+                                        <table ID="t10" rules="all" frame="border">
                                             <caption>Table &lt;#&gt; &lt;Title of
                                                 Table&gt;</caption>
                                             <tbody>
@@ -2099,7 +2099,7 @@
                                             seriousness of the interaction (i.e., those identified
                                             as contraindicated).<br/><br/> [or]<br/><br/>
                                             Interactions with other drugs have not been established. </paragraph>
-                                        <table ID="t11">
+                                        <table ID="t11" rules="all" frame="border">
                                             <caption>Table &lt;#&gt; - Established or Potential
                                                 Drug-Drug Interactions</caption>
                                             <tbody>
@@ -2223,7 +2223,7 @@
                                         displayName="10.3 Pharmacokinetics"/>
                                     <title>10.3 Pharmacokinetics</title>
                                     <text>
-                                        <table ID="t12">
+                                        <table rules="all" frame="border">
                                             <caption>Table &lt;#&gt; - Summary of (proper name)
                                                 Pharmacokinetic Parameters in (specific patient
                                                 population)</caption>
@@ -2385,7 +2385,7 @@
                                         displayName="14.1 Trial Design and Study Demographics"/>
                                     <title>14.1 Trial Design and Study Demographics</title>
                                     <text>
-                                        <table ID="t13">
+                                        <table ID="t13" rules="all" frame="border">
                                             <caption>Table # - Summary of patient demographics for
                                                 clinical trials in specific indication</caption>
                                             <tbody>
@@ -2424,7 +2424,7 @@
                                         displayName="14.2 Study Results"/>
                                     <title>14.2 Study Results</title>
                                     <text>
-                                        <table ID="t14">
+                                        <table ID="t14" rules="all" frame="border">
                                             <caption>Table # - Results of study # in (specific
                                                 indication)</caption>
                                             <tbody>
@@ -2465,7 +2465,7 @@
                                                 mg)<br/> From measured data<br/><br/> Geometric
                                                 Mean<br/> Arithmetic Mean (CV %)</content>
                                         </paragraph>
-                                        <table ID="t15">
+                                        <table ID="t15" rules="all" frame="border">
                                             <caption>Table # - Single dose studies</caption>
                                             <tbody>
                                                 <tr>
@@ -2537,7 +2537,7 @@
                                                 dose studies:] Analyte Name<br/> (__ x __ mg)<br/>
                                                 From measured data<br/><br/> Geometric Mean<br/>
                                                 Arithmetic Mean (CV %)</content></paragraph>
-                                        <table ID="t16">
+                                        <table ID="t16" rules="all" frame="border">
                                             <caption>Table # - multiple dose studies</caption>
                                             <tbody>
                                                 <tr>
@@ -2845,7 +2845,7 @@
                             <title>Overdose:</title>
                             <text>
                                 <paragraph>text</paragraph>
-                                <table width="100%">
+                                <table rules="all" frame="border">
                                     <tbody>
                                         <tr>
                                             <td styleCode="Lrule Rrule Botrule Toprule">If you think
@@ -2891,7 +2891,7 @@
                                     serious side effects table. Each side effect should appear only
                                     once, in text or in the table, as duplication generally is not
                                     wanted in Part III.]</paragraph>
-                                <table ID="t8" border="1">
+                                <table rules="all" frame="border">
                                     <caption>Serious side effects and what to do about
                                         them</caption>
                                     <tbody>
@@ -2962,7 +2962,7 @@
                                     not listed here or becomes bad enough to interfere with your
                                     daily activities, talk to your healthcare
                                     professional.</paragraph>
-                                <table width="100%">
+                                <table rules="all" frame="border">
                                     <tbody>
                                         <tr>
                                             <th styleCode="Lrule Rrule Toprule">Reporting Side
