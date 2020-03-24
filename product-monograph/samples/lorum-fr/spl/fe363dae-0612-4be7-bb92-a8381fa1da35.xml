@@ -1324,7 +1324,7 @@
               <title>6 FORMES POSOLOGIQUES, CONCENTRATIONS, COMPOSITION, ET CONDITIONNEMENT</title>
               <text>
                 <paragraph>sample text</paragraph>
-                <table ID="t5" border="0" cellpadding="1">
+                <table ID="t5" rules="all" frame="border">
                   <caption> Table - Dosage Forms, Strengths, Composition and Packaging</caption>
                   <colgroup>
                     <col span="3"/>
@@ -1338,10 +1338,10 @@
                   </tfoot>
                   <tbody>
                     <tr>
-                      <td styleCode="Toprule Botrule Lrule Rrule">Route of Administration </td>
-                      <td styleCode="Toprule Botrule Lrule Rrule">Dosage Form / Strength/Composition </td>
-                      <td styleCode="Toprule Botrule Lrule Rrule">Non-medicinal
-                          Ingredients<sup>1</sup></td>
+                      <th styleCode="Toprule Botrule Lrule Rrule">Route of Administration </th>
+                      <th styleCode="Toprule Botrule Lrule Rrule">Dosage Form / Strength/Composition </th>
+                      <th styleCode="Toprule Botrule Lrule Rrule">Non-medicinal
+                          Ingredients<sup>1</sup></th>
                     </tr>
                     <tr>
                       <td styleCode="Toprule Botrule Lrule Rrule">&lt;oral&gt;</td>
@@ -1754,19 +1754,19 @@
                   <title>14.1 Conception de l'essai et aspects démographiques de l'étude</title>
                   <text>
                     <paragraph>exemple de texte</paragraph>
-                    <table ID="t12842122" border="0" cellpadding="1" cellspacing="0">
+                    <table ID="t12842122" rules="all" frame="border">
                       <caption>Table 1: Lorem ipsum dolor sit amet</caption>
                       <tbody>
                         <tr>
-                          <td styleCode="Toprule Rrule Lrule Botrule" rowspan="2" valign="top">Lorem
-                            ipsum dolor sit amet</td>
-                          <td styleCode="Toprule Rrule Lrule Botrule" colspan="3">Lorem ipsum dolor
-                            sit amet</td>
+                          <th styleCode="Toprule Rrule Lrule Botrule" rowspan="2" valign="top">Lorem
+                            ipsum dolor sit amet</th>
+                          <th styleCode="Toprule Rrule Lrule Botrule" colspan="3">Lorem ipsum dolor
+                            sit amet</th>
                         </tr>
                         <tr>
-                          <td styleCode="Toprule Rrule Lrule Botrule">sit amet</td>
-                          <td styleCode="Toprule Rrule Lrule Botrule">amet</td>
-                          <td styleCode="Toprule Rrule Lrule Botrule">dolor</td>
+                          <th styleCode="Toprule Rrule Lrule Botrule">sit amet</th>
+                          <th styleCode="Toprule Rrule Lrule Botrule">amet</th>
+                          <th styleCode="Toprule Rrule Lrule Botrule">dolor</th>
                         </tr>
                         <tr>
                           <td styleCode="Toprule Rrule Lrule Botrule">Lorem ipsum</td>
