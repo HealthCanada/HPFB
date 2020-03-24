@@ -176,8 +176,8 @@
                       </quantity>
                       <containerPackagedProduct>
                         <code code="ABC-6789"/>
-                        <formCode code="19" codeSystem="2.16.840.1.113883.2.20.6.32"
-                          displayName="CARTON"/>
+                        <formCode code="30009000" codeSystem="2.16.840.1.113883.2.20.6.32"
+                          displayName="BOÎTE"/>
                       </containerPackagedProduct>
                       <subjectOf>
                         <marketingAct>
@@ -268,7 +268,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="7" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SAVEUR"/>
-                  <value code="C73362" codeSystem="2.16.840.1.113883.2.20.6.26" displayName="POMME"
+                  <value code="3" codeSystem="2.16.840.1.113883.2.20.6.26" displayName="POMME"
                     xsi:type="CV"> </value>
                 </characteristic>
               </subjectOf>
@@ -385,8 +385,8 @@
                       </quantity>
                       <containerPackagedProduct>
                         <code code="ABC-6789"/>
-                        <formCode code="19" codeSystem="2.16.840.1.113883.2.20.6.32"
-                          displayName="CARTON"/>
+                        <formCode code="30009000" codeSystem="2.16.840.1.113883.2.20.6.32"
+                          displayName="BOÎTE"/>
                       </containerPackagedProduct>
                       <subjectOf>
                         <marketingAct>
@@ -434,8 +434,8 @@
                 <characteristic>
                   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="TYPE DE PRODUIT"/>
                   <value code="2" codeSystem="2.16.840.1.113883.2.20.6.53"
-                    displayName="PHARMACEUTIQUE" xsi:type="CV">
-                    <originalText>PHARMACEUTIQUE</originalText>
+                    displayName="BIOLOGIQUES" xsi:type="CV">
+                    <originalText>BIOLOGIQUES</originalText>
                   </value>
                 </characteristic>
               </subjectOf>
@@ -486,7 +486,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="7" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SAVEUR"/>
-                  <value code="C73362" codeSystem="2.16.840.1.113883.2.20.6.26" displayName="APPLE"
+                  <value code="3" codeSystem="2.16.840.1.113883.2.20.6.26" displayName="APPLE"
                     xsi:type="CV"> </value>
                 </characteristic>
               </subjectOf>
@@ -536,7 +536,7 @@
                 <ingredient classCode="ACTIB">
                   <quantity>
                     <numerator value="10" unit="mg"/>
-                    <denominator value="1" unit="1"/>
+                    <denominator value="1" unit="mL"/>
                   </quantity>
                   <ingredientSubstance>
                     <code code="362O9ITL9D" codeSystem="2.16.840.1.113883.2.20.6.14"
@@ -595,8 +595,8 @@
                   <containerPackagedProduct>
                     <code code="1212"/>
                     <!--company defined pack code-->
-                    <formCode code="55" codeSystem="2.16.840.1.113883.2.20.6.32"
-                      displayName="VIALE, VERRE"/>
+                    <formCode code="30069000" codeSystem="2.16.840.1.113883.2.20.6.32"
+                      displayName="FLACON"/>
                     <asContent>
                       <quantity>
                         <numerator value="2" unit="1"/>
@@ -615,8 +615,8 @@
                           <containerPackagedProduct>
                             <code code="1212"/>
                             <!--company defined pack code-->
-                            <formCode code="55" codeSystem="2.16.840.1.113883.2.20.6.32"
-                              displayName="CARTON"/>
+                            <formCode code="30009000" codeSystem="2.16.840.1.113883.2.20.6.32"
+                              displayName="BOÎTE"/>
                           </containerPackagedProduct>
                           <subjectOf>
                             <marketingAct>
@@ -703,8 +703,8 @@
               </subjectOf>
               <consumedIn>
                 <substanceAdministration>
-                  <routeCode code="65" codeSystem="2.16.840.1.113883.2.20.6.7"
-                    displayName="SOUS-CUTANÉE"/>
+                  <routeCode code="20066000" codeSystem="2.16.840.1.113883.2.20.6.7"
+                    displayName="VOIE SOUS-CUTANÉE"/>
                 </substanceAdministration>
               </consumedIn>
             </manufacturedProduct>
@@ -728,13 +728,23 @@
                   </quantity>
                   <containerPackagedProduct>
                     <code code="1111"/>
-                    <formCode code="19" codeSystem="2.16.840.1.113883.2.20.6.32"
-                      displayName="CARTON"/>
+                    <formCode code="30009000" codeSystem="2.16.840.1.113883.2.20.6.32"
+                      displayName="BOÎTE"/>
                   </containerPackagedProduct>
+				  <subjectOf>
+                      <marketingAct>
+                          <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROUVÉS"/>
+                          <effectiveTime>
+                              <!-- regulatory status of this package -->
+                              <low value="20170102"/>
+                              <!-- Date of initial approval -->
+                          </effectiveTime>
+                      </marketingAct>
+                  </subjectOf>
                 </asContent>
                 <part>
                   <quantity>
-                    <numerator value="5" unit="mL"/>
+                    <numerator value="5" unit="1"/>
                     <denominator value="1"/>
                   </quantity>
                   <partProduct>
@@ -804,14 +814,14 @@
                     <asContent>
                       <!-- Packaging -->
                       <quantity>
-                        <numerator value="5" unit="mg"/>
+                        <numerator value="5" unit="1"/>
                         <denominator value="1"/>
                       </quantity>
                       <containerPackagedProduct>
                         <code code="1212"/>
                         <!--company defined pack code-->
-                        <formCode code="55" codeSystem="2.16.840.1.113883.2.20.6.32"
-                          displayName="VIALE, VERRE"/>
+                        <formCode code="30069000" codeSystem="2.16.840.1.113883.2.20.6.32"
+                          displayName="FLACON"/>
                       </containerPackagedProduct>
                     </asContent>
                   </partProduct>
@@ -889,7 +899,7 @@
                     <code code="02490064"/>
                     <!-- DIN Number -->
                     <name>EAU</name>
-                    <formCode code="34" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="LIQUIDE"/>
+                    <formCode code="10512000" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="LIQUIDE CUTANÉ"/>
                     <asEntityWithGeneric>
                       <genericMedicine>
                         <name>CHLORURE DE SODIUM, EAU POUR INJECTIONS</name>
@@ -901,14 +911,14 @@
                         <denominator value="1" unit="mL"/>
                       </quantity>
                       <ingredientSubstance>
-                        <code code="34" codeSystem="2.16.840.1.113883.2.20.6.14"
-                          displayName="CHLORURE DE SODIUM"/>
-                        <name>CHLORURE DE SODIUM</name>
+                        <code code="451W47IQ8X" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="SODIUM CHLORIDE"/>
+                        <name>SODIUM CHLORIDE</name>
                         <activeMoiety>
                           <activeMoiety>
-                            <code code="34" codeSystem="2.16.840.1.113883.2.20.6.14"
-                              displayName="CHLORURE DE SODIUM"/>
-                            <name>CHLORURE DE SODIUM</name>
+                            <code code="451W47IQ8X" codeSystem="2.16.840.1.113883.2.20.6.14"
+                              displayName="SODIUM CHLORIDE"/>
+                            <name>SODIUM CHLORIDE</name>
                           </activeMoiety>
                         </activeMoiety>
                       </ingredientSubstance>
@@ -922,8 +932,8 @@
                       <containerPackagedProduct>
                         <code code="1234"/>
                         <!--company defined pack code-->
-                        <formCode code="45" codeSystem="2.16.840.1.113883.2.20.6.32"
-                          displayName="SERINGUE"/>
+                        <formCode code="30051000" codeSystem="2.16.840.1.113883.2.20.6.32"
+                          displayName="SERINGUE PRÉREMPLIE"/>
                       </containerPackagedProduct>
                       <subjectOf>
                         <marketingAct>
@@ -977,7 +987,7 @@
                       <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23"
                         displayName="NORME PHARMACEUTIQUE"/>
                       <value code="4" codeSystem="2.16.840.1.113883.2.20.6.5"
-                        displayName="FABRICANT" xsi:type="CV"/>
+                        displayName="MFR" xsi:type="CV"/>
                     </characteristic>
                   </subjectOf>
                   <subjectOf>
@@ -1261,8 +1271,8 @@
                 <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f3a">
                   <id root="a473c162-f176-44d0-b797-2b7b6cf00e43"/>
                   <code code="pi04.3" codeSystem="2.16.840.1.113883.2.20.6.60"
-                    displayName="4.3 Reconstitution"/>
-                  <title>4.3 Reconstitution</title>
+                    displayName="4.3 Administration"/>
+                  <title>4.3 Administration</title>
                   <text>
                     <paragraph>exemple de texte</paragraph>
                   </text>
@@ -1273,8 +1283,8 @@
                 <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f4a">
                   <id root="a473c162-e176-44d0-b797-2b7b6cf0ae43"/>
                   <code code="pi04.4" codeSystem="2.16.840.1.113883.2.20.6.60"
-                    displayName="4.4 Administration"/>
-                  <title>4.4 Administration</title>
+                    displayName="4.4 Reconstitution"/>
+                  <title>4.4 Reconstitution</title>
                   <text>
                     <paragraph>exemple de texte</paragraph>
                   </text>
@@ -1314,7 +1324,7 @@
               <title>6 FORMES POSOLOGIQUES, CONCENTRATIONS, COMPOSITION, ET CONDITIONNEMENT</title>
               <text>
                 <paragraph>sample text</paragraph>
-                <table ID="t5" border="0" cellpadding="1" width="80%">
+                <table ID="t5" border="0" cellpadding="1">
                   <caption> Table - Dosage Forms, Strengths, Composition and Packaging</caption>
                   <colgroup>
                     <col span="3"/>
@@ -1744,7 +1754,7 @@
                   <title>14.1 Conception de l'essai et aspects démographiques de l'étude</title>
                   <text>
                     <paragraph>exemple de texte</paragraph>
-                    <table ID="t12842122" border="0" cellpadding="1" cellspacing="0" width="80%">
+                    <table ID="t12842122" border="0" cellpadding="1" cellspacing="0">
                       <caption>Table 1: Lorem ipsum dolor sit amet</caption>
                       <tbody>
                         <tr>
@@ -1802,6 +1812,9 @@
                   <title>14.3 Études comparatives de biodisponibilité</title>
                   <text>
                     <paragraph>exemple de texte</paragraph>
+					<paragraph>
+					<renderMultiMedia referencedObject="d927268d-5176-4ab0-b46e-46b6a6a26bb4"/>
+					</paragraph>
                   </text>
                   <effectiveTime value="20170101"/>
                   <component>
