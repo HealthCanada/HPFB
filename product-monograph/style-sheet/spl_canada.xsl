@@ -18,7 +18,7 @@
 	<xsl:param name="show-section-numbers" select="/.."/>	
 	<!-- This is the CSS link put into the output -->
 	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/spl_canada.css</xsl:param>
-	
+
 	<xsl:variable name="lang">
 		<xsl:choose>
 			<xsl:when test="v3:document/v3:languageCode[@code='1']">en</xsl:when>
@@ -208,17 +208,27 @@
 			</th>
 		</tr>		
 	</xsl:template>	
-	
+
+	<xsl:template match="@value" mode="format-physical-quantity">
+		<xsl:choose>
+			<xsl:when test="contains(., '.')"><xsl:value-of select="."/></xsl:when>
+			<xsl:otherwise><xsl:value-of select="format-number(., '###,###,###,###')"/></xsl:otherwise>
+		</xsl:choose>		
+	</xsl:template>
+
 	<!-- extra logic required for URG_PQ Active Ingredients -->
 	<xsl:template match="v3:quantity/v3:numerator">
 		<xsl:choose>
 			<xsl:when test="v3:low and v3:high">
-				<xsl:value-of select="v3:low/@value"/>					
+				<!-- <xsl:value-of select="v3:low/@value"/> -->
+				<xsl:apply-templates select="v3:low/@value" mode="format-physical-quantity"/>					
 				<xsl:value-of select="$labels/toConnective[@lang = $lang]"/>
-				<xsl:value-of select="v3:high/@value"/>&#160;								
+				<!-- <xsl:value-of select="v3:high/@value"/>&#160; -->								
+				<xsl:apply-templates select="v3:high/@value" mode="format-physical-quantity"/>&#160;								
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="@value"/>&#160;
+				<!-- <xsl:value-of select="@value"/>&#160; -->
+				<xsl:apply-templates select="@value" mode="format-physical-quantity"/>&#160;								
 			</xsl:otherwise>
 		</xsl:choose>
 		<xsl:choose>
@@ -233,7 +243,15 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-	
+
+	<!-- templating for Active Ingredient Basis of Strength -->
+	<xsl:template match="v3:code" mode="active-ingredient-bos">
+		<xsl:value-of select="@displayName"/>
+		<xsl:text> (</xsl:text>
+			<xsl:value-of select="@code"/>
+		<xsl:text>) </xsl:text>		
+	</xsl:template>
+		
 	<!-- display the ingredient information (both active and inactive) -->
 	<xsl:template name="ActiveIngredients">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
@@ -271,13 +289,13 @@
 						<td class="formItem">
 							<xsl:choose>
 								<xsl:when test="../@classCode='ACTIR'">
-									<xsl:value-of select="v3:asEquivalentSubstance/v3:definingSubstance/v3:code/@displayName"/>
+									<xsl:apply-templates select="v3:asEquivalentSubstance/v3:definingSubstance/v3:code" mode="active-ingredient-bos"/>
 								</xsl:when>
 								<xsl:when test="../@classCode='ACTIB'">
-									<xsl:value-of select="v3:code/@displayName"/>
+									<xsl:apply-templates select="v3:code" mode="active-ingredient-bos"/>
 								</xsl:when>
 								<xsl:when test="../@classCode='ACTIM'">
-									<xsl:value-of select="v3:activeMoiety/v3:activeMoiety/v3:code/@displayName"/>
+									<xsl:apply-templates select="v3:activeMoiety/v3:activeMoiety/v3:code" mode="active-ingredient-bos"/>
 								</xsl:when>
 							</xsl:choose>
 						</td>
@@ -399,6 +417,23 @@
 		</tr>
 	</xsl:template>
 
+	<xsl:template name="spacedCharacteristicRow">
+		<xsl:param name="path" select="."/>
+		<xsl:param name="class">formTableRow</xsl:param>
+		<xsl:param name="label"><xsl:value-of select="$path/v3:code/@displayName"/></xsl:param>
+		<tr class="{$class}">
+			<td class="formLabel">
+				<xsl:value-of select="$label"/>
+			</td>
+			<td class="formItem">			
+				<xsl:for-each select="$path/v3:value">
+					<xsl:if test="position() > 1"><br/></xsl:if>
+					<xsl:value-of select="./@displayName"/>
+				</xsl:for-each>
+			</td>
+		</tr>
+	</xsl:template>	
+
 	<xsl:template name="characteristics-old">
 		<table class="formTablePetite" cellSpacing="0" cellPadding="3" width="100%">
 			<tbody>
@@ -438,7 +473,7 @@
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='7']"/>
 					<xsl:with-param name="label" select="$labels/flavor[@lang = $lang]"/>
 				</xsl:call-template>
-				<xsl:call-template name="codedCharacteristicRow"> <!-- Combination Product is CV -->
+				<xsl:call-template name="spacedCharacteristicRow"> <!-- Combination Product is CV -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='8']"/>
 					<xsl:with-param name="label" select="$labels/combinationProduct[@lang = $lang]"/>
 					<xsl:with-param name="class">formTableRowAlt</xsl:with-param>
@@ -703,7 +738,7 @@
 				<div class="row position-relative">
 					<div class="col">
 						<xsl:for-each select="v3:component/v3:section">
-							<xsl:variable name="unique-section-id"><xsl:value-of select="@ID"/></xsl:variable>
+							<xsl:variable name="unique-section-id"><xsl:value-of select="v3:id/@root"/></xsl:variable>
 							<xsl:choose>
 								<xsl:when test="v3:code[@code='0MP']">
 									<!-- PRODUCT DETAIL -->
@@ -725,19 +760,20 @@
 											<xsl:value-of select="v3:title"/>
 										</h5>
 										<div class="spl title-page title-page-row">
-											<xsl:apply-templates select="v3:component[1]/v3:section/v3:text"/>
+											<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.1']/v3:text"/>
 										</div>
 										<div class="spl title-page-row title-page-rule">
 											<div class="title-page-left">
-												<xsl:apply-templates select="v3:component[2]/v3:section"/>	
-												<xsl:apply-templates select="v3:component[position() = last()-1]/v3:section" mode="inline-title"/>
+												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.2']"/>
+												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.5']" mode="inline-title"/>
 											</div>
 											<div class="title-page-right">
-												<xsl:apply-templates select="v3:component[position() &gt; 2 and position() &lt; last()-1]/v3:section"/>
+												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.3']"/>
+												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.4']"/>
 											</div>
 										</div>											
 										<div class="spl title-page title-page-row">
-											<xsl:apply-templates select="v3:component[position()=last()]/v3:section/v3:text"/>
+											<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.6']/v3:text"/>
 										</div>
 									</div>
 								</xsl:when>
@@ -834,8 +870,8 @@
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode">
+					<!-- pmh added improved support for table rules=all -->
 					<xsl:choose>
-						<!-- pmh added improved support for table rules=all -->
 						<xsl:when test="ancestor::v3:table/@rules='all'">
 							<xsl:text> Toprule Botrule</xsl:text>
 						</xsl:when>
@@ -867,8 +903,8 @@
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode">
+					<!-- pmh added improved support for table rules=all -->
 					<xsl:choose>
-						<!-- pmh added improved support for table rules=all -->
 						<xsl:when test="ancestor::v3:table/@rules='all'">
 							<xsl:text> Lrule Rrule </xsl:text>
 						</xsl:when>						
@@ -901,8 +937,8 @@
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode">
+					<!-- pmh added improved support for table rules=all -->
 					<xsl:choose>
-						<!-- pmh added improved support for table rules=all -->
 						<xsl:when test="ancestor::v3:table/@rules='all'">
 							<xsl:text> Lrule Rrule </xsl:text>
 						</xsl:when>

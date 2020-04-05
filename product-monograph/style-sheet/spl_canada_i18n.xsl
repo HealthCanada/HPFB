@@ -33,7 +33,7 @@
 		<size lang="en">Size</size>
 		<imprint lang="en">Imprint</imprint>
 		<flavor lang="en">Flavour</flavor>
-		<combinationProduct lang="en">Combination Product</combinationProduct>
+		<combinationProduct lang="en">Combination Product Type</combinationProduct>
 		<pharmaStandard lang="en">Pharmaceutical Standard</pharmaStandard>
 		<schedule lang="en">Schedule</schedule>
 		<therapeuticClass lang="en">Therapeutic Class</therapeuticClass>
@@ -63,7 +63,7 @@
 		<labeler lang="fr">Détenteur de l’autorisation de mise sur le marché</labeler>
 		<registrant lang="fr">Importateur/distributeur canadien</registrant>
 		<partyAddress lang="fr">Adresse de la personne-ressource</partyAddress>
-		<partyTelephone lang="fr">Autres coordonnées</partyTelephone>
+		<partyAdditional lang="fr">Autres coordonnées</partyAdditional>
 		<partyEmail lang="fr">Couriel&#160;</partyEmail>
 		<partyTel lang="fr">Tél.&#160;</partyTel>
 		<partyWeb lang="fr">Site Web&#160;</partyWeb>
@@ -98,7 +98,6 @@
 		<productRegStatus lang="fr">État réglementaire du produit</productRegStatus>
 		<approvalDate lang="fr">Date d’approbation</approvalDate>
 		<cancellationDate lang="fr">Date d’annulation</cancellationDate>
-<!--		<marketingInfo lang="fr">Régime d’emploi homologué</marketingInfo> -->
 		<marketingInfo lang="fr">État du produit</marketingInfo>
 		<marketingCategory lang="fr">Type d’activité de réglementation</marketingCategory>
 		<applicationNumber lang="fr">Numéro de contrôle</applicationNumber>
@@ -113,8 +112,22 @@
 		<toConnective lang="fr">&#160;-&#160;</toConnective>
 	</my:texts>
 	<xsl:variable name="labels" select="document('')/*/my:texts"/>
-	
-	<!-- global templates like date formatting may be specialized for different regions -->
+		
+	<!-- global templates like date and string cd formatting may be specialized for different regions -->
+	<xsl:template name="string-lowercase">
+		<!--** Convert the input text that is passed in as a parameter to lower case  -->
+		<xsl:param name="text"/>
+		<xsl:value-of select="translate($text,
+			'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞŸŽŠŒ', 
+			'abcdefghijklmnopqrstuvwxyzàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿžšœ')"/>
+	</xsl:template>
+	<xsl:template name="string-uppercase">
+		<!--** Convert the input text that is passed in as a parameter to upper case  -->
+		<xsl:param name="text"/>
+		<xsl:value-of select="translate($text,
+			'abcdefghijklmnopqrstuvwxyzàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿžšœ', 
+			'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞŸŽŠŒ')"/>
+	</xsl:template>
 	<xsl:template name="string-to-date">
 		<xsl:param name="text"/>
 		<xsl:param name="displayMonth">true</xsl:param>

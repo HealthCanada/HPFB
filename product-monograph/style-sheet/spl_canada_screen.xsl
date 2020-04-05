@@ -72,7 +72,7 @@
 					<div style="transform: scaleX(-1);" id="navigation-scrollbar">
 						<ul class="navbar-nav" id="navigation-sidebar" style="transform: scaleX(-1); ">
 							<xsl:for-each select="v3:component/v3:section">
-								<xsl:variable name="unique-section-id"><xsl:value-of select="@ID"/></xsl:variable>
+								<xsl:variable name="unique-section-id"><xsl:value-of select="v3:id/@root"/></xsl:variable>
 								<xsl:choose>
 									<xsl:when test="v3:code[@code='0MP']">
 										<!-- PRODUCT DETAIL NAVIGATION -->
@@ -168,7 +168,7 @@
 				<xsl:attribute name="data-sectionCode"><xsl:value-of select="@code"/></xsl:attribute>
 			</xsl:for-each>
 
-			<xsl:for-each select="@ID"><!-- AURORA SPECIFIC -->
+			<xsl:for-each select="@ID">
 				<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
 			</xsl:for-each>
 
@@ -176,7 +176,7 @@
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode" select="'Section'"/>
 			</xsl:call-template>
-			<xsl:for-each select="@ID">
+			<xsl:for-each select="v3:id/@root"> <!-- id/@root is guaranteed to be a GUID -->
 				<a name="{.}"><xsl:text> </xsl:text></a>
 			</xsl:for-each>
 			<a name="section-{substring($sectionNumberSequence,2)}"><xsl:text> </xsl:text></a>
@@ -192,6 +192,13 @@
 			<xsl:apply-templates select="@*|node()[not(self::v3:title)]"/>
 			<xsl:call-template name="flushSectionTitleFootnotes"/>
 		</div>
+	</xsl:template>
+	
+	<!-- this template adds a vertical bar for xmChange, and is simplified from the FDA template substantially -->
+	<xsl:template name="additionalStyleAttr">
+		<xsl:if test="self::*[self::v3:paragraph]//v3:content[@styleCode[contains(.,'xmChange')]] or v3:content[@styleCode[contains(.,'xmChange')]] and not(ancestor::v3:table)">
+			<xsl:attribute name="style">margin-left:-0.5em; padding-left:0.5em; border-left:1px solid;</xsl:attribute>
+		</xsl:if>
 	</xsl:template>
 	
 	<!-- this template is only used on the Title Page to show Control Number on a single line -->
@@ -233,7 +240,9 @@
 				/* ScrollSpy, Stickiness/Affix, and French Navigation Reduction */
 			  
 				html {
-					/* scroll-behavior: smooth; */
+/* disable smooth scrolling
+					scroll-behavior: smooth;
+*/
 				}
 								
 				.sticky {

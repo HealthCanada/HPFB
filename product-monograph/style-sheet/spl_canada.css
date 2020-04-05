@@ -130,6 +130,29 @@
 	color: black;
 }
 
+/* pmh - h5 and h6 follow the same pattern as h3 and h4 - plain, and then italicized */
+.spl h5 {	
+	text-indent: 0em;
+	font-size: 100%;
+	font-weight: normal;
+	margin-top: 2.2ex;
+	margin-bottom: 0ex;
+	text-align: left;
+	color: black;
+}
+
+.spl h6 {	
+	text-indent: 0em;
+	font-size: 100%;
+	font-weight: normal;
+	margin-top: 2.2ex;
+	margin-bottom: 0ex;
+	text-align: left;
+	font-style: italic;
+	color: black;
+}
+
+
 .spl div.Warning h1 {
 	margin-top: 0pt;
 	margin-bottom: 4pt;
