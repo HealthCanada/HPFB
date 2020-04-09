@@ -880,9 +880,6 @@
 				<xsl:with-param name="additionalStyleCode">
 					<!-- pmh added improved support for table rules=all -->
 					<xsl:choose>
-						<xsl:when test="ancestor::v3:table/@rules='all'">
-							<xsl:text> Toprule Botrule</xsl:text>
-						</xsl:when>
 						<xsl:when test="contains(ancestor::v3:table/@styleCode, 'Noautorules') or contains(ancestor::v3:section/v3:code/@code, '43683-2') and not(@styleCode)">
 							<xsl:text></xsl:text>
 						</xsl:when>
@@ -914,7 +911,7 @@
 					<!-- pmh added improved support for table rules=all -->
 					<xsl:choose>
 						<xsl:when test="ancestor::v3:table/@rules='all'">
-							<xsl:text> Lrule Rrule </xsl:text>
+							<xsl:text> Toprule Botrule Lrule Rrule </xsl:text>
 						</xsl:when>						
 						<xsl:otherwise>
 							<xsl:if test="not(ancestor::v3:tfoot) and ((contains($associatedColgroup/@styleCode,'Lrule') and not($associatedCol/preceding-sibling::v3:col)) or contains($associatedCol/@styleCode, 'Lrule'))">
@@ -948,7 +945,7 @@
 					<!-- pmh added improved support for table rules=all -->
 					<xsl:choose>
 						<xsl:when test="ancestor::v3:table/@rules='all'">
-							<xsl:text> Lrule Rrule </xsl:text>
+							<xsl:text> Toprule Botrule Lrule Rrule </xsl:text>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:if test="not(ancestor::v3:tfoot) and ((contains($associatedColgroup/@styleCode,'Lrule') and not($associatedCol/preceding-sibling::v3:col)) or contains($associatedCol/@styleCode, 'Lrule'))">
