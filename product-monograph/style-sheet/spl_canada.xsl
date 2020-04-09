@@ -82,18 +82,26 @@
 				</td>
 				<td class="formItem">
 					<div><xsl:value-of select="$labels/partyTel[@lang = $lang]"/><xsl:text>: </xsl:text>
-					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'tel:')][1], 'tel:')"/></div>
+						<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'tel:')][1], 'tel:')"/></div>
 					<xsl:for-each select="v3:telecom/@value[starts-with(.,'fax:')]">
 						<div><xsl:text>Fax: </xsl:text>
-						<xsl:value-of select="substring-after(., 'fax:')"/></div>
+							<xsl:value-of select="substring-after(., 'fax:')"/></div>
 					</xsl:for-each>
 					<xsl:for-each select="v3:telecom/@value[starts-with(.,'mailto:')]">
 						<div><xsl:value-of select="$labels/partyEmail[@lang = $lang]"/><xsl:text>: </xsl:text>
-						<xsl:value-of select="substring-after(., 'mailto:')"/></div>
+							<a>
+								<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+								<xsl:value-of select="substring-after(., 'mailto:')"/>
+							</a>
+						</div>
 					</xsl:for-each>
 					<xsl:for-each select="v3:telecom/@value[starts-with(.,'http:') or starts-with(.,'https:')]">
 						<div><xsl:value-of select="$labels/partyWeb[@lang = $lang]"/><xsl:text>: </xsl:text>
-						<xsl:value-of select="."/></div>
+							<a>
+								<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+								<xsl:value-of select="."/>
+							</a>
+						</div>
 					</xsl:for-each>
 				</td>
 			</tr>
