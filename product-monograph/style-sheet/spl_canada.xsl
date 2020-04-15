@@ -82,10 +82,10 @@
 				</td>
 				<td class="formItem">
 					<div><xsl:value-of select="$labels/partyTel[@lang = $lang]"/><xsl:text>: </xsl:text>
-						<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'tel:')][1], 'tel:')"/></div>
+					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'tel:')][1], 'tel:')"/></div>
 					<xsl:for-each select="v3:telecom/@value[starts-with(.,'fax:')]">
 						<div><xsl:text>Fax: </xsl:text>
-							<xsl:value-of select="substring-after(., 'fax:')"/></div>
+						<xsl:value-of select="substring-after(., 'fax:')"/></div>
 					</xsl:for-each>
 					<xsl:for-each select="v3:telecom/@value[starts-with(.,'mailto:')]">
 						<div><xsl:value-of select="$labels/partyEmail[@lang = $lang]"/><xsl:text>: </xsl:text>
@@ -692,10 +692,9 @@
 
 	<!-- TODO most of the other templates contain their own tr and td -->
 	<xsl:template name="MarketingInfo">
-		<!-- TODO - this was formTableMorePetite and formHeadingReg - aligning with the rest of the Product Details -->
 		<xsl:if test="../v3:subjectOf/v3:approval|../v3:subjectOf/v3:marketingAct">
 			<tr>
-				<td><!-- pmh class="normalizer" is an artifact from FDA, removing --> 
+				<td>
 					<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 						<tr>
 							<td colspan="5" class="formHeadingTitle"><xsl:value-of select="$labels/marketingInfo[@lang = $lang]"/></td>
@@ -878,7 +877,6 @@
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode">
-					<!-- pmh added improved support for table rules=all -->
 					<xsl:choose>
 						<xsl:when test="contains(ancestor::v3:table/@styleCode, 'Noautorules') or contains(ancestor::v3:section/v3:code/@code, '43683-2') and not(@styleCode)">
 							<xsl:text></xsl:text>
@@ -970,14 +968,20 @@
 		<html>
 			<xsl:apply-templates select="." mode="html-head"/>
 			<body data-spy="scroll" data-target="#navigation-sidebar" data-offset="1">
-				<div class="bg-aurora-accent1 hide-in-print">
+				<div class="bg-aurora-accent1 hide-in-print" id="header">
 					<h2 class="text-white text-center p-2"><xsl:copy-of select="v3:title/node()"/></h2>
 				</div>
 				<div class="container-fluid position-relative" id="content">
 					<div class="row h-100">
 						<xsl:apply-templates select="v3:component/v3:structuredBody" mode="sidebar-navigation"/>
 						<xsl:apply-templates select="v3:component/v3:structuredBody" mode="main-document"/>
-					</div>
+					</div>					
+				</div>
+				<div id="btnTopDiv">
+					<a id="btnTop" 
+						class="btn btn-warning btn-circle btn-md text-white" role="button">
+						<i class="fa fa-arrow-up fa-3x"></i>
+					</a>					
 				</div>
 				<xsl:call-template name="canada-screen-body-footer"/>
 			</body>

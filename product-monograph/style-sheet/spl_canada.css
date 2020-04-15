@@ -892,6 +892,42 @@
 /* Image Fix - the FDA breaks out when images are too large */
 img { max-width: 100%; height: auto; }					
 
+/* round buttons - only medium is currently used, for the Jump to Top button */
+.btn-circle.btn-sm { 
+    width: 24px; 
+    height: 24px; 
+    padding: 1px 0px; 
+    border-radius: 12px; 
+    font-size: 14px; 
+    text-align: center; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.btn-circle.btn-md { 
+    width: 48px; 
+    height: 48px; 
+    padding: 7px 10px; 
+    border-radius: 24px; 
+    font-size: 10px; 
+    text-align: center; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+} 
+.btn-circle.btn-lg { 
+    width: 70px; 
+    height: 70px; 
+    padding: 10px 16px; 
+    border-radius: 35px; 
+    font-size: 12px; 
+    text-align: center; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+} 
+#btnTopDiv {
+    position:fixed; 
+    bottom:0; 
+    right:0; 
+    width:60px; 
+    height:60px;
+}
+
 @media screen {
 
 .bg-aurora-accent1 { background-color: #002D42;	}

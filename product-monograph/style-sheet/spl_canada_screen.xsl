@@ -235,22 +235,16 @@
 			<title><xsl:value-of select="v3:title"/></title>
 			<link href="http://canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon"><xsl:text> </xsl:text></link>
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><xsl:text> </xsl:text></link>
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><xsl:text> </xsl:text></link>
 			<link rel="stylesheet" href="{$css}"><xsl:text> </xsl:text></link>
 			<style>
-				/* ScrollSpy, Stickiness/Affix, and French Navigation Reduction */
-			  
-				html {
-/* disable smooth scrolling
-					scroll-behavior: smooth;
-*/
-				}
-								
+				/* ScrollSpy, Stickiness/Affix, and French Navigation Reduction */								
 				.sticky {
 					position: -webkit-sticky;
 					position: sticky;
 					top: 0;
 				}
-
+				
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 			</style>
@@ -271,7 +265,16 @@
 			  Stickyfill.add(elements);
 			} catch (e) {
 			  console.log(e)
-			}
+			}			
+			
+			/* jump to top of form unscrolls left and right side and then scrolls the header into view */
+			$(document).ready(function(){
+				$("#btnTop").on("click", function(){
+					document.getElementById('content').scrollIntoView(true);
+					document.getElementById('navigation-scrollbar').scrollTop=0;
+					document.getElementById('header').scrollIntoView(true);
+					});
+			});			
 			
 			// Mitigate IE/Edge bug showing bullets on lists which are hidden when loading the page
 			$(document).ready(function(){
@@ -279,7 +282,7 @@
 					$('ul:hidden').each(function(){
 						$(this).parent().append($(this).detach());
 					});
-				}
+				}				
 			});			
 		</script>
 	</xsl:template>
