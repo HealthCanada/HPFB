@@ -87,7 +87,7 @@
 		<size lang="fr">Taille</size>
 		<imprint lang="fr">Empreinte</imprint>
 		<flavor lang="fr">Saveur</flavor>
-		<combinationProduct lang="fr">Produit mixte</combinationProduct>
+		<combinationProduct lang="fr">Type de produit combiné</combinationProduct>
 		<pharmaStandard lang="fr">Norme pharmaceutique</pharmaStandard>
 		<schedule lang="fr">Annexe</schedule>
 		<therapeuticClass lang="fr">Classe thérapeutique</therapeuticClass>
