@@ -242,7 +242,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="FORME"/>
-                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="BULLET"
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="BALLE"
                     xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
@@ -486,7 +486,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="7" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SAVEUR"/>
-                  <value code="3" codeSystem="2.16.840.1.113883.2.20.6.26" displayName="APPLE"
+                  <value code="3" codeSystem="2.16.840.1.113883.2.20.6.26" displayName="POMME"
                     xsi:type="CV"> </value>
                 </characteristic>
               </subjectOf>
@@ -697,7 +697,7 @@
                 <characteristic>
                   <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
                     displayName="CLASSE THÉRAPEUTIQUE"/>
-                  <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="ANALGESIC"
+                  <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="ANALGÉSIQUE"
                     xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
@@ -976,7 +976,7 @@
                   <subjectOf>
                     <characteristic>
                       <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COULEUR"/>
-                      <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="CLAIRE"
+                      <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
                         xsi:type="CV">
                         <originalText>INCOLORE</originalText>
                       </value>
@@ -1132,8 +1132,8 @@
             displayName="RÉCENTES MODIFICATIONS IMPORTANTES DE L'ÉTIQUETTE"/>
           <title>RÉCENTES MODIFICATIONS IMPORTANTES DE L'ÉTIQUETTE</title>
           <text>
-            <paragraph>Titres des sections, Titres des sous-sections (Numéros des sections ou des
-              sous-sections), MOIS, ANNÉE </paragraph>
+            <paragraph>&lt;Titres des sections&gt;, &lt;Titres des sous-sections&gt; &lt;(Numéros des sections ou des
+              sous-sections)&gt;, &lt;MOIS, ANNÉE&gt;</paragraph>
           </text>
           <effectiveTime value="20180101"/>
         </section>
@@ -1153,12 +1153,12 @@
                 displayName="1 INDICATIONS"/>
               <title>1 INDICATIONS</title>
               <text>
-                <paragraph> Lorem ipsum dolor sit amet, ligula suspendisse nulla pretium, rhoncus
-                  tempor fermentum, enim integer ad vestibulum volutpat. Nisl rhoncus turpis est,
-                  vel elit, congue wisi enim nunc ultricies sit, magna tincidunt. Maecenas aliquam
-                  maecenas ligula nostra, accumsan taciti. Sociis mauris in integer, a dolor netus
-                  non dui aliquet, sagittis felis sodales, dolor sociis mauris, vel eu libero cras.
-                  Faucibus at. </paragraph>
+                <paragraph>&lt;Marque nominative (nom propre)&gt; est indiqué pour : </paragraph>
+                <list>
+                  <item>&lt;texte&gt;</item>
+                  <item>&lt;texte&gt;</item>
+                </list>
+                <paragraph>&lt;texte&gt;</paragraph>
               </text>
               <effectiveTime value="20180101"/>
               <component>
@@ -1168,24 +1168,21 @@
                     displayName="1.1 Enfants"/>
                   <title>1.1 Enfants</title>
                   <text>
-                    <paragraph>Lorem ipsum dolor sit amet, ligula suspendisse nulla pretium, rhoncus
-                      tempor fermentum, enim integer ad vestibulum volutpat. Nisl rhoncus turpis
-                      est, vel elit, congue wisi enim nunc <content styleCode="bold">ultricies sit,
-                        magna tincidunt. Maecenas aliquam maecenas ligula nostra, accumsan
-                        taciti</content>. Sociis mauris in integer, a dolor netus non dui aliquet,
-                      sagittis felis sodales, <linkHtml href="#a63c33a5-e08a-472c-b8a2-a12dba105f7a"
-                        >(See section 6 Dosage Forms, Strengths, Composition and
-                        Packaging)</linkHtml>. Faucibus at.</paragraph>
-                    <paragraph>Lorem ipsum dolor sit amet, ligula suspendisse nulla pretium, rhoncus
-                      tempor fermentum, enim integer ad vestibulum volutpat. Nisl rhoncus turpis
-                      est, vel elit, congue wisi enim nunc ultricies sit, <content styleCode="bold"
-                          ><content styleCode="italics">magna tincidunt. Maecenas aliquam maecenas
-                          ligula nostra, accumsan taciti</content></content> magna tincidunt.
-                      Maecenas aliquam maecenas ligula nostra, accumsan taciti. <linkHtml
-                        href="#a63c33a5-e08a-472c-b8a2-a12dba115f7a">(See section 7 Warnings and
-                        Precautions)</linkHtml> Sociis mauris in integer, a dolor netus non dui
-                      aliquet, sagittis felis sodales, dolor sociis mauris, vel eu libero cras.
-                      Faucibus at.</paragraph>
+                    <paragraph>[Choisissez un des énoncés suivants ou un énoncé semblable :]</paragraph>
+                    <paragraph><content styleCode="bold">Enfants &lt;(tranche d’âge)&gt; : </content>
+                      D’après les données examinées par Santé Canada, l’innocuité et
+                      l’efficacité de &lt;marque nominative&gt; dans la population pédiatrique ont été démontrées; par
+                        conséquent, l’indication d’utilisation chez ces patients est autorisée par Santé Canada. [Inclure
+                        un renvoi aux sections pertinentes.]
+                    </paragraph>
+                    <paragraph>[ou]</paragraph>
+                    <paragraph><content styleCode="bold">Enfants &lt;(tranche d’âge)&gt; : </content>Santé Canada ne dispose d’aucune donnée; par conséquent,
+                      l’indication d’utilisation dans la population pédiatrique n’est pas autorisée par Santé Canada.</paragraph>
+                    <paragraph>[ou]</paragraph>
+                    <paragraph><content styleCode="bold">Enfants &lt;(tranche d’âge)&gt; :</content> D’après les données examinées par Santé Canada, l’innocuité et
+                      l’efficacité de &lt;marque nominative&gt; dans la population pédiatrique n’ont pas été démontrées;
+                        par conséquent, l’indication d’utilisation chez ces patients n’est pas autorisée par Santé
+                        Canada. [Inclure un renvoi aux sections pertinentes.]</paragraph>
                   </text>
                   <effectiveTime value="20180822"/>
                 </section>
@@ -1197,12 +1194,13 @@
                     displayName="1.2 Personnes âgées"/>
                   <title>1.2 Personnes âgées</title>
                   <text>
-                    <paragraph>Lorem ipsum dolor sit amet, ligula suspendisse nulla pretium, rhoncus
-                      tempor fermentum, enim integer ad vestibulum volutpat. Nisl rhoncus turpis
-                      est, vel elit, congue wisi enim nunc ultricies sit, magna tincidunt. Maecenas
-                      aliquam maecenas ligula nostra, accumsan taciti. Sociis mauris in integer, a
-                      dolor netus non dui aliquet, sagittis felis sodales, dolor sociis mauris, vel
-                      eu libero cras. Faucibus at.</paragraph>
+                    <paragraph>[Choisissez, si nécessaire, un des énoncés suivants ou un énoncé semblable :]</paragraph>
+                    <paragraph><content styleCode="bold">Personnes âgées &lt;(&gt; x ans)&gt; :</content> Santé Canada ne dispose d’aucune donnée; par conséquent,
+                      l’indication d’utilisation dans la population gériatrique n’est pas autorisée par Santé Canada.</paragraph>
+                    <paragraph>[ou]</paragraph>
+                    <paragraph><content styleCode="bold">Personnes âgées &lt;(&gt; x ans)&gt; :</content> Les données tirées des études cliniques et de l'expérience
+                      laissent entendre que l'utilisation du produit au sein de la population gériatrique entraîne des
+                      différences en matière d'innocuité ou d'efficacité.</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1216,7 +1214,14 @@
                 displayName="2 CONTRE-INDICATIONS"/>
               <title>2 CONTRE-INDICATIONS</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>&lt;Nom propre&gt; est contre-indiqué chez les patients qui présentent une hypersensibilité à ce 
+                  médicament ou à l’un des ingrédients de la formulation de ce dernier, incluant les ingrédients
+                  non-médicinaux, ou à un composant du contenant. Pour obtenir une liste complète, veuillez
+                  consulter la section Formes posologiques, concentration, composition et conditionnement.</paragraph>
+                <list>
+                  <item>&lt;texte&gt;</item>
+                  <item>&lt;texte&gt;</item>
+                </list>
               </text>
               <effectiveTime value="20180101"/>
             </section>
@@ -1228,7 +1233,25 @@
                 displayName="3 ENCADRÉ MISES EN GARDE ET PRÉCAUTIONS IMPORTANTES"/>
               <title>3 ENCADRÉ MISES EN GARDE ET PRÉCAUTIONS IMPORTANTES</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>[Supprimez cette section, si l’encadré «Mises en garde et précautions importantes» ne
+                  s’applique pas.]</paragraph>
+                <table rules="all" frame="border">
+                  <caption>Mises en garde et précautions importantes</caption>
+                  <tbody>
+                    <tr>
+                      <td styleCode="Lrule Rrule Botrule Toprule">
+                        <paragraph>[Les mises en garde et précautions sur les risques importants que peut poser l’administration
+                          de ce médicament doivent être mis en évidence dans cet encadré, avec un renvoi vers la ou
+                          les sections correspondantes qui contiennent de plus amples détails. Ce texte ne doit
+                          préférablement pas dépasser 20 lignes.]</paragraph>
+                        <list>
+                          <item>&lt;texte&gt;</item>
+                          <item>&lt;texte&gt;</item>
+                        </list>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </text>
               <effectiveTime value="20180101"/>
             </section>
@@ -1239,9 +1262,6 @@
               <code code="pi04" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="4 POSOLOGIE ET ADMINISTRATION"/>
               <title>4 POSOLOGIE ET ADMINISTRATION</title>
-              <text>
-                <paragraph>exemple de texte</paragraph>
-              </text>
               <effectiveTime value="20180101"/>
               <component>
                 <section ID="be75cfb9-3131-4103-800b-267727398a13">
@@ -1250,7 +1270,11 @@
                     displayName="4.1 Considérations posologiques"/>
                   <title>4.1 Considérations posologiques</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>[Inclure en bref toutes les situations qui peuvent influer sur la posologie du médicament :]</paragraph>
+                    <list>
+                      <item>&lt;texte&gt;</item>
+                      <item>&lt;texte&gt;</item>
+                    </list>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1262,7 +1286,11 @@
                     displayName="4.2 Posologie recommandée et modification posologique"/>
                   <title>4.2 Posologie recommandée et modification posologique</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>[Inclure les posologies pour chaque indication, voie d’administration et/ou forme posologique :]<br/>&lt;texte&gt;</paragraph>
+                    <paragraph>[En l’absence d’une indication pédiatrique autorisée par Santé Canada, l’énoncé suivant ou un
+                      énoncé semblable doit être utilisé :]</paragraph>
+                    <paragraph>Santé Canada n'a pas autorisé d'indication d'utilisation dans la population pédiatrique. [Inclure
+                      un renvoi aux sections pertinentes, s'il y a lieu.]</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1274,7 +1302,7 @@
                     displayName="4.3 Administration"/>
                   <title>4.3 Administration</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;texte et/ou table&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1286,7 +1314,26 @@
                     displayName="4.4 Reconstitution"/>
                   <title>4.4 Reconstitution</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph> Reconstitution
+                      Solutions orales : &lt;texte et/ou table&gt;<br/>Produits parentéraux : &lt;table et texte&gt;</paragraph>
+                    <table rules="all" frame="border" width="100%">
+                      <caption>Table - Reconstitution</caption>
+                      <tbody>
+                        <tr>
+                          <th>Taille du flacon</th>
+                          <th>Volume de diluent nécessaire au flacon</th>
+                          <th>Volume disponible approximatif</th>
+                          <th>Concentration nominale par mL</th>
+                        </tr>
+                        <tr>
+                          <td>&lt;texte&gt;</td>
+                          <td>&lt;texte&gt;</td>
+                          <td>&lt;texte&gt;</td>
+                          <td>&lt;texte&gt;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <paragraph>[Inclure toutes précautions particulières, périodes d’entreposage et incompatibilités.]</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1298,7 +1345,7 @@
                     displayName="4.5 Dose oubliée"/>
                   <title>4.5 Dose oubliée</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;texte&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1311,7 +1358,14 @@
               <code code="pi05" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="5 SURDOSAGE"/>
               <title>5 SURDOSAGE</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>&lt;texte&gt;</paragraph>
+                <table width="100%" rules="all" frame="border">
+                  <tbody>
+                    <tr>
+                      <td>Pour traiter une surdose présumée, communiquez avec le centre antipoison de votre région.</td>
+                    </tr>
+                  </tbody>
+                </table>
               </text>
               <effectiveTime value="20180101"/>
             </section>
@@ -1323,34 +1377,33 @@
                 displayName="6 FORMES POSOLOGIQUES, CONCENTRATIONS, COMPOSITION, ET CONDITIONNEMENT"/>
               <title>6 FORMES POSOLOGIQUES, CONCENTRATIONS, COMPOSITION, ET CONDITIONNEMENT</title>
               <text>
-                <paragraph>sample text</paragraph>
+                
                 <table ID="t5" rules="all" frame="border">
-                  <caption> Table - Dosage Forms, Strengths, Composition and Packaging</caption>
+           
                   <colgroup>
                     <col span="3"/>
                   </colgroup>
-                  <tfoot>
-                    <tr>
-                      <td colspan="3">
-                        <sup>1</sup>Lorem ipsum dolor sit amet, ligula suspendisse nulla
-                        pretium</td>
-                    </tr>
-                  </tfoot>
+              
                   <tbody>
                     <tr>
-                      <th styleCode="Toprule Botrule Lrule Rrule">Route of Administration </th>
-                      <th styleCode="Toprule Botrule Lrule Rrule">Dosage Form / Strength/Composition </th>
-                      <th styleCode="Toprule Botrule Lrule Rrule">Non-medicinal
-                          Ingredients<sup>1</sup></th>
+                      <th>Voie d’administration</th>
+                      <th>Forme posologique/
+                        concentration
+                        (dosage, teneur)/
+                        composition</th>
+                      <th>Ingrédients non-médicinaux</th>
                     </tr>
                     <tr>
-                      <td styleCode="Toprule Botrule Lrule Rrule">&lt;oral&gt;</td>
-                      <td styleCode="Toprule Botrule Lrule Rrule">&lt;tablet 5 mg, 10 mg&gt;</td>
-                      <td styleCode="Toprule Botrule Lrule Rrule">[List all non-medicinal
-                        ingredients in alphabetical order.]</td>
+                      <td>&lt;orale&gt;</td>
+                      <td>&lt;comprimé 5 mg, 10
+                        mg&gt;</td>
+                      <td>[Veuillez fournir la liste complète des
+                        ingrédients non-médicinaux, en ordre
+                        alphabétique.]</td>
                     </tr>
                   </tbody>
                 </table>
+                <paragraph>&lt;texte&gt;</paragraph>
               </text>
               <effectiveTime value="20180101"/>
             </section>
@@ -1362,7 +1415,41 @@
                 displayName="7 MISES EN GARDE ET PRÉCAUTIONS"/>
               <title>7 MISES EN GARDE ET PRÉCAUTIONS</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>[Si l’énoncé suivant s’applique, veuillez l’inclure :]</paragraph>
+                <paragraph>Veuillez voir l’encadré «Mises en garde et précautions importantes» au début de la Partie I :
+                  Renseignements pour le professionnel de la santé.</paragraph>
+                <paragraph>[Sous-titres à ajouter, le cas échéant, par ordre alphabétique :]</paragraph>
+                <paragraph><content styleCode="bold">Généralités</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Carcinogenèse et mutagenèse</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Appareil cardiovasculaire</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Conduite de véhicules et utilisation de machines</content><br/>[Ce sous-titre doit inclure l'énoncé suivant ou un énoncé semblable :]</paragraph>
+                <paragraph>La prudence est requise lors de la conduite d'un véhicule motorisé ou lors de l'opération d'une
+                  machine dangereuse.</paragraph>
+                
+                <paragraph><content styleCode="bold">Dépendence/tolérance</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Appareil digestif</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Système endocrinien/métabolisme</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Appareil génito-urinaire</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Fonction hépatique/biliaire/pancréatique</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Système immunitaire</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Système nerveux</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Oreille/nez/gorge</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Peau</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Considérations périopératoires</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Psychiatrie</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Système rénal</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Sensibilité/résistance</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Appareil respiratoire</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Sang</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Santé sexuelle<br/>Reproduction </content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Fonction sexuelle</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Fertilité</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Surveillance et épreuves de laboratoire</content><br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Yeux</content><br/>&lt;texte&gt;</paragraph>
+                
+                
+                
+                
               </text>
               <effectiveTime value="20180101"/>
               <component>
@@ -1371,9 +1458,6 @@
                   <code code="pi07.1" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="7.1 Populations particulières"/>
                   <title>7.1 Populations particulières</title>
-                  <text>
-                    <paragraph>exemple de texte</paragraph>
-                  </text>
                   <effectiveTime value="20180101"/>
                   <component>
                     <section ID="a63c33a5-e08a-472c-b8a2-b12dbc115f7a">
@@ -1382,7 +1466,7 @@
                         displayName="7.1.1 Femmes enceintes"/>
                       <title>7.1.1 Femmes enceintes</title>
                       <text>
-                        <paragraph>exemple de texte</paragraph>
+                        <paragraph>&lt;texte&gt;<br/>[Le degré d’exposition lors de la grossesse au cours des essais cliniques doit être mentionné : <br/>Élevé : plus de (&gt;) 1000 grossesses<br/>Limité : moins de (&lt;) 1000 grossesses<br/>Très limité : Cas particuliers seulement<br/>Aucun cas]</paragraph>
                       </text>
                       <effectiveTime value="20180101"/>
                     </section>
@@ -1394,7 +1478,11 @@
                         displayName="7.1.2 Allaitement"/>
                       <title>7.1.2 Allaitement</title>
                       <text>
-                        <paragraph>exemple de texte</paragraph>
+                        <paragraph>&lt;texte&gt;<br/>[En l’absence de données tirées d’études menées chez la femme, des données pertinentes
+                          tirées d’études menées chez les animaux doivent être offertes; de plus, l’énoncé suivant ou un
+                          énoncé semblable doit être utilisé :]</paragraph>
+                        <paragraph>On ignore si ce médicament est excrété dans le lait maternel chez l'humain. Puisque de
+                          nombreux autres médicaments le sont, la prudence est de mise.</paragraph>
                       </text>
                       <effectiveTime value="20180101"/>
                     </section>
@@ -1406,7 +1494,16 @@
                         displayName="7.1.3 Enfants"/>
                       <title>7.1.3 Enfants</title>
                       <text>
-                        <paragraph>exemple de texte</paragraph>
+                        <paragraph>[En l’absence d’une indication pédiatrique autorisée par Santé Canada, Un des énoncés
+                          suivants ou un énoncé semblable doit être utilisé :]</paragraph>
+                        <paragraph><content styleCode="bold">Enfants &lt;(tranche d’âge)&gt; :</content> Santé Canada ne dispose d’aucune donnée; par conséquent,
+                          l’indication d’utilisation dans la population pédiatrique n’est pas autorisée par Santé Canada.</paragraph>
+                        <paragraph>[ou]</paragraph>
+                        <paragraph><content styleCode="bold">Enfants &lt;(tranche d’âge)&gt; :</content> D’après les données examinées par Santé Canada, l’innocuité et
+                          l’efficacité de &lt;marque nominative&gt; dans la population pédiatrique n’ont pas été démontrées;
+                            par conséquent, l’indication d’utilisation chez ces patients n’est pas autorisée par Santé
+                            Canada. [Inclure un renvoi aux sections pertinentes.]</paragraph>
+                        <paragraph>&lt;texte&gt;</paragraph>
                       </text>
                       <effectiveTime value="20180101"/>
                     </section>
@@ -1418,7 +1515,7 @@
                         displayName="7.1.4 Personnes âgées"/>
                       <title>7.1.4 Personnes âgées</title>
                       <text>
-                        <paragraph>exemple de texte</paragraph>
+                        <paragraph>&lt;texte&gt;</paragraph>
                       </text>
                       <effectiveTime value="20180101"/>
                     </section>
@@ -1433,9 +1530,6 @@
               <code code="pi08" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="8 EFFETS INDÉSIRABLES"/>
               <title>8 EFFETS INDÉSIRABLES</title>
-              <text>
-                <paragraph>exemple de texte</paragraph>
-              </text>
               <effectiveTime value="20180101"/>
               <component>
                 <section ID="a63c33a5-e08a-472c-b8a2-b12dbd215f7a">
@@ -1444,7 +1538,7 @@
                     displayName="8.1 Aperçu des effets indésirables"/>
                   <title>8.1 Aperçu des effets indésirables</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;texte&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1456,7 +1550,37 @@
                     displayName="8.2 Effets indésirables identifiés lors des essais cliniques"/>
                   <title>8.2 Effets indésirables identifiés lors des essais cliniques</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>Puisque les essais cliniques sont menés dans des conditions très particulières, les taux des
+                      effets indésirables qui sont observés peuvent ne pas refléter les taux observés en pratique et ne
+                      doivent pas être comparés aux taux observés dans le cadre des essais cliniques portant sur un
+                      autre médicament. Les renseignements sur les effets indésirables d’un médicament qui sont
+                      tirés d’essais cliniques s’avèrent utiles pour la détermination des événements indésirables liés
+                      aux médicaments et pour l’approximation des taux.</paragraph>
+                    <paragraph>[Inclure une description des sources de données.]<br/>&lt;texte&gt;</paragraph>
+                    <table ID="t10" rules="all" frame="border">
+                      <caption>Tableau &lt;No&gt; &lt;Titre du tableau&gt;</caption>
+                      <tbody>
+                        <tr>
+                          <th/>
+                          <th>&lt;Nom du médicament&gt;
+                            n = &lt;No&gt;
+                              (%)</th>
+                          <th>&lt;Placebo&gt;
+                            n = &lt;No&gt;
+                              (%)</th>
+                        </tr>
+                        <tr>
+                          <td>[Utiliser les termes du
+                            MedDRA pour rédiger les
+                            titres, si appropriés.]<br/>
+                            <content styleCode="bold">Appareil cardiovasculaire</content><br/>&lt;texte&gt;<br/>&lt;texte&gt;</td>
+                          <td/>
+                          <td/>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <paragraph>[Un bref exposé de faits suivra le tableau afin d’expliquer ou de compléter les renseignements
+                      qui y sont présentés.]<br/>&lt;texte&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1468,7 +1592,8 @@
                     displayName="8.3 Effets indésirables peu courants (non fréquents) identifiés lors des essais cliniques"/>
                   <title>8.3 Effets indésirables peu courants (non fréquents) identifiés lors des essais cliniques</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>[Présentés sous forme de liste et catégorisés par la classification ‘System Organ Class’, par
+                      ordre alphabétique :]<br/>Appareil cardiovasculaire : &lt;texte&gt;<br/>Gastro-intestinal : &lt;texte&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1480,7 +1605,7 @@
                     displayName="8.4 Résultats de laboratoire anormales: hématologique, chimie clinique et autres données quantitatives"/>
                   <title>8.4 Résultats de laboratoire anormales: hématologique, chimie clinique et autres données quantitatives</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;table&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1492,7 +1617,7 @@
                     displayName="8.5 Effets indésirable observés dans les essais cliniques (Enfants)"/>
                   <title>8.5 Effets indésirable observés dans les essais cliniques (Enfants)</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;texte&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1504,7 +1629,7 @@
                     displayName="8.6 Effets indésirables identifiés après la mise en marché"/>
                   <title>8.6 Effets indésirables identifiés après la mise en marché</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;texte et/ou table&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1517,9 +1642,6 @@
               <code code="pi09" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="9 INTERACTIONS MÉDICAMENTEUSES"/>
               <title>9 INTERACTIONS MÉDICAMENTEUSES</title>
-              <text>
-                <paragraph>exemple de texte</paragraph>
-              </text>
               <effectiveTime value="20180101"/>
               <component>
                 <section ID="be75cfb9-3131-4903-800b-267527398a13">
@@ -1528,7 +1650,23 @@
                     displayName="9.1 Encadré Mises en garde et précautions importantes"/>
                   <title>9.1 Encadré Mises en garde et précautions importantes</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>[Supprimez cette section, si l’encadré «Interactions médicamenteuses graves» ne s’applique
+                      pas.]</paragraph>
+                    <table rules="all" frame="border" width="100%">
+                      <caption>Interactions médicamenteuses graves</caption>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <paragraph>[Les interactions médicamenteuses graves (celles qui constituent un danger de mort) doivent
+                              être mises en évidence dans cet encadré, sans toutefois dépasser 20 lignes.]</paragraph>
+                            <list>
+                              <item>&lt;texte&gt;</item>
+                              <item>&lt;texte&gt;</item>
+                            </list>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1540,7 +1678,7 @@
                     displayName="9.2 Aperçu"/>
                   <title>9.2 Aperçu</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;texte&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1552,7 +1690,38 @@
                     displayName="9.3 Interactions médicament-médicament"/>
                   <title>9.3 Interactions médicament-médicament</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>Les médicaments apparaissant dans ce tableau sont fondés sur des exposés de cas ou des
+                      études sur les interactions médicamenteuses, ou encore sur les interactions potentielles en
+                      raison de l’ampleur ou de la gravité anticipée de l’interaction (ceux qui ont été identifiés comme
+                      contre-indiqués).</paragraph>
+                    <paragraph>[ou]</paragraph>
+                    <paragraph>Aucune interaction avec d’autres médicaments n’a été établie.</paragraph>
+                    <table ID="t9.3" rules="all" frame="border">
+                      <caption>Tableau &lt;No&gt; - Interactions médicament-médicament établies ou potentielles</caption>
+                      <tbody>
+                        <tr>
+                          <th>&lt;Nom propre/ Nom
+                            usuel&gt;</th>
+                          <th>Source de
+                            preuves</th>
+                          <th>Effet</th>
+                          <th>Commentaire clinique</th>
+                        </tr>
+                        <tr>
+                          <td>&lt;médicament A&gt;</td>
+                          <td>&lt;source des
+                            preuves, voir
+                            la légende&gt;</td>
+                          <td>&lt;la concentration
+                            du médicament A&gt;</td>
+                          <td>&lt;la prudence s’impose et la
+                            surveillance de concentration
+                            thérapeutique est
+                            recommandée&gt;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <paragraph>Légende: É = Étude de cas; EC = Essai clinique; T = Théorique</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1564,7 +1733,7 @@
                     displayName="9.4 Interactions médicament-aliment"/>
                   <title>9.4 Interactions médicament-aliment</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;texte&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1576,7 +1745,7 @@
                     displayName="9.5 Interactions médicament-plante médicinale"/>
                   <title>9.5 Interactions médicament-plante médicinale</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;texte&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1588,7 +1757,7 @@
                     displayName="9.6 Interactions médicament-épreuves de laboratoire"/>
                   <title>9.6 Interactions médicament-épreuves de laboratoire</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;texte&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1600,7 +1769,7 @@
                     displayName="9.7 Interactions médicament-style de vie"/>
                   <title>9.7 Interactions médicament-style de vie</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;texte&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1613,9 +1782,6 @@
               <code code="pi10" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="10 MODE D'ACTION ET PHARMACOLOGIE CLINIQUE"/>
               <title>10 MODE D'ACTION ET PHARMACOLOGIE CLINIQUE</title>
-              <text>
-                <paragraph>exemple de texte</paragraph>
-              </text>
               <effectiveTime value="20180101"/>
               <component>
                 <section ID="f7a324c26-b939-4c3a-901e-516ccc314522">
@@ -1624,7 +1790,7 @@
                     displayName="10.1 Mode d'action"/>
                   <title>10.1 Mode d'action</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;texte&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1636,7 +1802,7 @@
                     displayName="10.2 Pharmacodynamique"/>
                   <title>10.2 Pharmacodynamique</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <paragraph>&lt;texte&gt;</paragraph>
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1648,7 +1814,50 @@
                     displayName="10.3 Pharmacocinétique"/>
                   <title>10.3 Pharmacocinétique</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                  
+                    <table rules="all" frame="border">
+                      <caption>Tableau &lt;No&gt; - Résumé des paramètres pharmacocinétiques de &lt;Nom propre&gt; dans
+                        &lt;population particulière de patients&gt;</caption>
+                      <tbody>
+                        <tr>
+                          <th/>
+                          <th>C<sub>max</sub></th>
+                          <th>T<sub>max</sub></th>
+                          <th>t<sub>1/2</sub>(h)</th>
+                          <th>AUC<sub>0=∞</sub></th>
+                          <th>CL</th>
+                          <th>VD</th>
+                        </tr>
+                        <tr>
+                          <td>Dose
+                            unique
+                            moyenne</td>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <paragraph><content styleCode="bold">Absorption :</content> &lt;texte&gt;</paragraph>
+                    <paragraph><content styleCode="bold">Distribution :</content> &lt;texte&gt;</paragraph>
+                    <paragraph><content styleCode="bold">Métabolisme :</content> &lt;texte&gt;</paragraph>
+                    <paragraph><content styleCode="bold">Élimination :</content> &lt;texte&gt;</paragraph>
+                    
+                    <paragraph><content styleCode="bold">Populations particulières et états pathologiques</content></paragraph>
+                    
+                    <paragraph><content styleCode="bold">Enfants :</content> &lt;texte&gt;</paragraph>
+                    <paragraph><content styleCode="bold">Personnes âgées :</content> &lt;texte&gt;</paragraph>
+                    <paragraph><content styleCode="bold">Sexe :</content> &lt;texte&gt;</paragraph>
+                    <paragraph><content styleCode="bold">Grossesse et allaitement :</content> &lt;texte&gt;</paragraph>
+                    <paragraph><content styleCode="bold">Polymorphisme génétique :</content> &lt;texte&gt;</paragraph>
+                    <paragraph><content styleCode="bold">Origine ethnique :</content> &lt;texte&gt;</paragraph>
+                    <paragraph><content styleCode="bold">Insuffisance hépatique :</content> &lt;texte&gt;</paragraph>
+                    <paragraph><content styleCode="bold">Insuffisance rénale :</content> &lt;texte&gt;</paragraph>
+                    <paragraph><content styleCode="bold">Obésité :</content> &lt;texte&gt;</paragraph>
+                    
                   </text>
                   <effectiveTime value="20180101"/>
                 </section>
@@ -1662,7 +1871,7 @@
                 displayName="11 ENTREPOSAGE, STABILITÉ ET TRAITEMENT"/>
               <title>11 ENTREPOSAGE, STABILITÉ ET TRAITEMENT</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>&lt;texte&gt;</paragraph>
               </text>
               <effectiveTime value="20180101"/>
             </section>
@@ -1674,7 +1883,7 @@
                 displayName="12 INSTRUCTIONS PARTICULIÈRES DE MANIPULATION"/>
               <title>12 INSTRUCTIONS PARTICULIÈRES DE MANIPULATION</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>&lt;texte&gt;</paragraph>
               </text>
               <effectiveTime value="20180101"/>
             </section>
@@ -1696,11 +1905,15 @@
                 displayName="13 RENSEIGNEMENTS PHARMACEUTIQUES"/>
               <title>13 RENSEIGNEMENTS PHARMACEUTIQUES</title>
               <text>
-                <paragraph>Nom propre:<br/><br/> Nom chimique:<br/><br/> Formule
-                  moléculaire<br/><br/> Masse moléculaire:
-                  A<sub>1</sub>B<sub>2</sub>C<sub>3</sub><br/><br/> Formule de structure: <br/>
-                  <renderMultiMedia referencedObject="m1"/><br/><br/> Propriétés physico-chimiques:
-                </paragraph>
+                <paragraph><content styleCode="bold">Substance pharmaceutique</content></paragraph>
+                <paragraph>Nom propre : &lt;texte&gt;</paragraph>
+                <paragraph>Nom chimique : &lt;texte&gt;</paragraph>
+                <paragraph>Formule moléculaire : &lt;texte&gt;</paragraph>
+                <paragraph>Masse moléculaire : &lt;texte&gt;</paragraph>
+                <paragraph>Formule de structure : &lt;image&gt;</paragraph>
+                  <renderMultiMedia referencedObject="m1"/>
+                <paragraph>Propriétés physico-chimiques : &lt;texte&gt;</paragraph>
+              
               </text>
               <effectiveTime value="20170101"/>
               <component>
@@ -1719,32 +1932,7 @@
               <code code="pii14" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="14 ESSAIS CLINIQUES"/>
               <title>14 ESSAIS CLINIQUES</title>
-              <text>
-                <paragraph>Lorem ipsum dolor sit amet, ligula suspendisse nulla pretium, rhoncus
-                  tempor fermentum, enim integer ad vestibulum volutpat. Nisl rhoncus turpis est,
-                  vel elit, congue wisi enim nunc ultricies sit, <content styleCode="bold"><content
-                      styleCode="italics">magna tincidunt. Maecenas aliquam maecenas ligula nostra,
-                      accumsan taciti</content></content> magna tincidunt. Maecenas aliquam maecenas
-                  ligula nostra, accumsan taciti. Sociis mauris in integer, a dolor netus non dui
-                  aliquet, sagittis felis sodales, dolor sociis mauris, vel eu libero cras. Faucibus
-                  at.</paragraph>
-                <list listType="ordered">
-                  <item>Lorem ipsum dolor sit amet</item>
-                  <item>Lorem ipsum dolor sit amet</item>
-                  <item>Lorem ipsum dolor sit amet</item>
-                  <item>Lorem ipsum dolor sit amet</item>
-                  <item>Lorem ipsum dolor sit amet</item>
-                </list>
-                <paragraph> Lorem ipsum dolor sit amet, ligula suspendisse nulla pretium, rhoncus
-                  tempor fermentum, enim integer ad vestibulum volutpat </paragraph>
-                <list listType="unordered">
-                  <item>ligula suspendisse</item>
-                  <item>ligula suspendisse</item>
-                  <item>ligula suspendisse</item>
-                  <item>ligula suspendisse</item>
-                  <item>ligula suspendisse</item>
-                </list>
-              </text>
+             
               <effectiveTime value="20170101"/>
               <component>
                 <section ID="a2875272-8229-4c12-919e-827854ddd78a">
@@ -1753,41 +1941,36 @@
                     displayName="14.1 Conception de l'essai et aspects démographiques de l'étude"/>
                   <title>14.1 Conception de l'essai et aspects démographiques de l'étude</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
-                    <table ID="t12842122" rules="all" frame="border">
-                      <caption>Table 1: Lorem ipsum dolor sit amet</caption>
+                    <table ID="t13" rules="all" frame="border">
+                      <caption>Tableau &lt;No&gt; - Résumé des données démographiques sur les patients pour &lt;indications
+                        précises&gt;</caption>
                       <tbody>
                         <tr>
-                          <th styleCode="Toprule Rrule Lrule Botrule" rowspan="2" valign="top">Lorem
-                            ipsum dolor sit amet</th>
-                          <th styleCode="Toprule Rrule Lrule Botrule" colspan="3">Lorem ipsum dolor
-                            sit amet</th>
+                          <th>No de
+                            l’étude</th>
+                          <th>Conception de
+                            l’essai</th>
+                          <th>Posologie, voie
+                            d’administration
+                            et durée</th>
+                          <th>Nombre de
+                            sujets (n)</th>
+                          <th>Âge moyen
+                            (Tranche)</th>
+                          <th>Sexe</th>
                         </tr>
                         <tr>
-                          <th styleCode="Toprule Rrule Lrule Botrule">sit amet</th>
-                          <th styleCode="Toprule Rrule Lrule Botrule">amet</th>
-                          <th styleCode="Toprule Rrule Lrule Botrule">dolor</th>
-                        </tr>
-                        <tr>
-                          <td styleCode="Toprule Rrule Lrule Botrule">Lorem ipsum</td>
-                          <td styleCode="Toprule Rrule Lrule Botrule">5</td>
-                          <td styleCode="Toprule Rrule Lrule Botrule">6</td>
-                          <td styleCode="Toprule Rrule Lrule Botrule">7</td>
-                        </tr>
-                        <tr>
-                          <td styleCode="Toprule Rrule Lrule Botrule">ligula suspendisse</td>
-                          <td styleCode="Toprule Rrule Lrule Botrule">9</td>
-                          <td styleCode="Toprule Rrule Lrule Botrule">10</td>
-                          <td styleCode="Toprule Rrule Lrule Botrule">11</td>
-                        </tr>
-                        <tr>
-                          <td styleCode="Toprule Rrule Lrule Botrule">dolor sit amet</td>
-                          <td styleCode="Toprule Rrule Lrule Botrule">13</td>
-                          <td styleCode="Toprule Rrule Lrule Botrule">14</td>
-                          <td styleCode="Toprule Rrule Lrule Botrule">15</td>
+                          <td>&lt;texte&gt;</td>
+                          <td>&lt;texte&gt;</td>
+                          <td>&lt;texte&gt;</td>
+                          <td>&lt;texte&gt;</td>
+                          <td>&lt;texte&gt;</td>
+                          <td>&lt;texte&gt;</td>
                         </tr>
                       </tbody>
-                    </table>
+                    </table>  
+                    <paragraph>[Fournir une brève description des caractéristiques démographiques de la population étudiée :]<br/>&lt;texte&gt;</paragraph>
+                   
                   </text>
                   <effectiveTime value="20170101"/>
                 </section>
@@ -1799,7 +1982,29 @@
                     displayName="14.2 Résultats de l'étude"/>
                   <title>14.2 Résultats de l'étude</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
+                    <table ID="t14.2" rules="all" frame="border">
+                      <caption>Tableau &lt;No&gt; - Résultats de l’étude &lt;No&gt; pour &lt;indications précises&gt;</caption>
+                      <tbody>
+                        <tr>
+                          <th>Principaux paramètres
+                            d’évaluation</th>
+                          <th>Valeur associée et
+                            signification statistique
+                            pour le médicament à des
+                            posologies précises
+                          </th>
+                          <th>Valeur associée et
+                            signification statistique
+                            pour le placebo ou le
+                            témoin actif</th>
+                        </tr>
+                        <tr>
+                          <td>&lt;texte&gt;</td>
+                          <td>&lt;texte&gt;</td>
+                          <td>&lt;texte&gt;</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </text>
                   <effectiveTime value="20170101"/>
                 </section>
@@ -1811,20 +2016,111 @@
                     displayName="14.3 Études comparatives de biodisponibilité"/>
                   <title>14.3 Études comparatives de biodisponibilité</title>
                   <text>
-                    <paragraph>exemple de texte</paragraph>
-					<paragraph>
-					<renderMultiMedia referencedObject="d927268d-5176-4ab0-b46e-46b6a6a26bb4"/>
-					</paragraph>
+                    <paragraph>[Inclure une description de la conception de l’étude de bioéquivalence. Les valeurs du tableau
+                      doivent reposer sur les données mesurées dans l’étude. Aucune correction de la puissance ne
+                      doit être appliquée.]<br/>&lt;texte&gt;</paragraph>
+                    <table ID="t14.3" rules="all" frame="border" width="100%">
+                      <caption>[Tableau pour les études à dose unique :]</caption>
+                      <tbody>
+                        <tr align="center">
+                          <th colspan="5">Nom de l’analyte<br/>(__x__mg)<br/>À partir des données mesurées<br/><br/>Moyenne géométrique<br/>Moyenne arithmétique (% de CV)</th>
+                        </tr>
+                        <tr>
+                          <th>Paramètre</th>
+                          <th>Test<footnote>L’identité du produit à tester.</footnote></th>
+                          <th>Référence<footnote>L’identité du produit de référence, y compris le fabricant et l’origine (pays d’achat).</footnote></th>
+                          <th>% ratio de Moyenne géométrique</th>
+                          <th>Intervalle de confiance<footnote>Indique le pourcentage de l’intervalle de confiance (c.-à-d., 90 ou 95%) à l’en-tête de la colonne et la liste pour
+                            le ASCT, ASCI et CMAX (au besoin).</footnote></th>
+                        </tr>
+                        <tr>
+                          <td>AUC<sub>T</sub>(unités)<footnote>Pour les médicaments dont la demi-vie est supérieure à 24 heures, l’ASCT devrait être remplacé par ASC0-72.</footnote></td>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                        </tr>
+                        <tr>
+                          <td>AUC<sub>I</sub>(unités)</td>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                        </tr>
+                        <tr>
+                          <td>C<sub>MAX</sub>(unités)</td>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                        </tr>
+                        <tr>
+                          <td>T<sub>MAX</sub>(h)<footnote>Exprimé sous forme de moyenne arithmétique (% de CV) ou de moyenne (tranche) seulement.</footnote></td>
+                          <td/>
+                          <td/>
+                          <td>Non applicable</td>
+                          <td>Non applicable</td>
+                        </tr>
+                        <tr>
+                          <td>T<sub>1/2</sub>(h)<footnote>Exprimé sous forme de moyenne arithmétique (% de CV) seulement.</footnote></td>
+                          <td/>
+                          <td/>
+                          <td>Not applicable</td>
+                          <td>Not applicable</td>
+                        </tr>
+                      </tbody>
+                    </table> 
+                    <table ID="t14.3m" rules="all" frame="border" width="100%">
+                      <caption>[Tableau pour les études à doses multiples :]</caption>
+                      <tbody>
+                        <tr align="center">
+                          <th colspan="5">Nom de l’analyte<br/><br/>(__x__mg)<br/>À partir des données mesurées<br/><br/>Moyenne géométrique<br/>Moyenne arithmétique (% de CV)
+                          </th>
+                        </tr>
+                        <tr>
+                          <th>Paramètre</th>
+                          <th>Test<footnote>L’identitie du produit à tester.</footnote></th>
+                          <th>Référence<footnote>L’identité du produit de référence, y compris le fabricant et l’origine (pays d’achat).</footnote></th>
+                          <th>% ratio de Moyenne géométrique</th>
+                          <th>Intervalle de confiance<footnote>Indique le pourcentage de l’intervalle de confiance (c.-à-d., 90 ou 95%) à l’en-tête de la colonne et la liste pour
+                            le ASCT, ASCI et CMAX (au besoin).</footnote></th>
+                        </tr>
+                        <tr>
+                          <td>AUC<sub>tau</sub>(unités)</td>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                        </tr>
+                        <tr>
+                          <td>C<sub>MAX</sub>(unités)</td>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                        </tr>
+                        <tr>
+                          <td>C<sub>MIN</sub>(unités)</td>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                        </tr>
+                        <tr>
+                          <td>T<sub>MAX</sub>(h)<footnote>Exprimé sous forme de moyenne arithmétique (% de CV) ou de moyenne (tranche) seulement.</footnote></td>
+                          <td/>
+                          <td/>
+                          <td>Non applicable</td>
+                          <td>Non applicable</td>
+                        </tr>
+                      </tbody>
+                    </table> 
+				
                   </text>
                   <effectiveTime value="20170101"/>
-                  <component>
-                    <observationMedia ID="d927268d-5176-4ab0-b46e-46b6a6a26bb4">
-                      <text>Chemical structure</text>
-                      <value xsi:type="ED" mediaType="image/jpeg">
-                        <reference value="chem.jpg"/>
-                      </value>
-                    </observationMedia>
-                  </component>
+                
+
+                  
                 </section>
               </component>
             </section>
@@ -1836,7 +2132,7 @@
                 displayName="15 MICROBIOLOGIE"/>
               <title>15 MICROBIOLOGIE</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>&lt;texte&gt;<br/>&lt;table&gt;</paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -1848,7 +2144,9 @@
                 displayName="16 TOXICOLOGIE NON CLINIQUE"/>
               <title>16 TOXICOLOGIE NON CLINIQUE</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>[Exposé de faits, si possible. Format tabulaire uniquement si cela permet de rendre la
+                  présentation plus concise. L’information ne doit être présentée qu’une seule fois, sous forme
+                  narrative ou tabulaire.]<br/>&lt;texte&gt;</paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -1860,7 +2158,10 @@
                 displayName="17 MONOGRAPHIES DE PRODUIT DE SOUTIEN"/>
               <title>17 MONOGRAPHIES DE PRODUIT DE SOUTIEN</title>
               <text>
-                <paragraph> exemple de texte </paragraph>
+                <paragraph>[Lorsqu’il n’y a pas de monographie de produit de soutien, cette section doit être retirée de la
+                  monographie de produit.]</paragraph>
+                <paragraph>[liste numérotée:]<br/>&lt;Marque nominative&gt; &lt;(forme posologique, concentration)&gt;, &lt;numéro de contrôle de la
+                  présentation&gt;, Monographie de produit, &lt;promoteur&gt;. &lt;( AAAA MM JJ)&gt;</paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -1882,7 +2183,26 @@
                 displayName="LISEZ CE DOCUMENT POUR ASSURER UNE UTILISATION SÉCURITAIRE ET EFFICACE DE VOTRE MÉDICAMENT"/>
               <title>LISEZ CE DOCUMENT POUR ASSURER UNE UTILISATION SÉCURITAIRE ET EFFICACE DE VOTRE MÉDICAMENT</title>
               <text>
-                <paragraph> exemple de texte </paragraph>
+                <paragraph><content styleCode="bold">&lt;MARQUE NOMINATIVE&gt;<br/>&lt;Nom du produit sous sa forme posologique finale&gt;</content></paragraph>
+                <paragraph>Lisez attentivement ce qui suit avant de commencer à prendre <content styleCode="bold">&lt;Marque nominative&gt;</content> et lors de
+                  chaque renouvellement de prescription. L’information présentée ici est un résumé et ne couvre
+                  pas tout ce qui a trait à ce médicament. Parlez de votre état médical et de votre traitement à
+                  votre professionnel de la santé et demandez-lui s’il possède de nouveaux renseignements au
+                  sujet de <content styleCode="bold">&lt;Marque nominative&gt;</content>.</paragraph>
+                <table width="100%" rules="all" frame="border">
+                  <tbody>
+                    <tr>
+                      <td colspan="2">
+                        <content styleCode="bold">Mises en garde et précautions importantes</content>
+                        
+                        <list>
+                          <item>&lt;texte&gt;</item>
+                          <item>&lt;texte&gt;</item>
+                        </list>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -1892,9 +2212,12 @@
               <id root="be74b6e6-c431-4a5f-a18e-ed321c381456"/>
               <code code="pmi02" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="Pourquoi [Marque nominative] est-il utilisé?"/>
-              <title>Pourquoi [Marque nominative] est-il utilisé?</title>
+              <title>Pourquoi &lt;Marque nominative&gt; est-il utilisé?</title>
               <text>
-                <paragraph> exemple de texte </paragraph>
+                <list>
+                  <item>&lt;texte&gt;</item>
+                  <item>&lt;texte&gt;</item>
+                </list>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -1904,9 +2227,11 @@
               <id root="be74b6e6-1431-4a5f-a18e-ed321b381456"/>
               <code code="pmi03" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="Comment [Marque nominative] agit-il?"/>
-              <title>Comment [Marque nominative] agit-il?</title>
+              <title>Comment &lt;Marque nominative&gt; agit-il?</title>
               <text>
-                <paragraph> exemple de texte </paragraph>
+                <paragraph>[Visant un niveau de lecture de la 6e année au secondaire 2, expliquez brièvement la mode
+                  l’action (1 ou 2 phrases). Indiquez le délai requis pour que le médicament agisse et la façon
+                  dont on peut en reconnaître l’action.]<br/>&lt;texte&gt;</paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -1916,9 +2241,12 @@
               <id root="be74b6e6-c431-4adf-a18e-ed321b381456"/>
               <code code="pmi04" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="Quels sont les ingrédients de [Marque nominative]?"/>
-              <title>Quels sont les ingrédients de [Marque nominative]?</title>
+              <title>Quels sont les ingrédients de &lt;Marque nominative&gt;?</title>
               <text>
-                <paragraph> exemple de texte </paragraph>
+                <paragraph>Ingrédients médicinaux : [Énumérer tous les ingrédients médicinaux mentionnés à la partie I.]
+                  Ingrédients non médicinaux : [Énumérer tous les ingrédients non médicinaux indiqués à la
+                  partie I, classés par ordre alphabétique.]
+                </paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -1928,9 +2256,10 @@
               <id root="be74b6e6-c431-4a5f-a18e-ed321b381756"/>
               <code code="pmi05" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="[Marque nominative] est offert sous les formes posologiques qui suivent:"/>
-              <title>[Marque nominative] est offert sous les formes posologiques qui suivent:</title>
+              <title>&lt;Marque nominative&gt; est offert sous les formes posologiques qui suivent:</title>
               <text>
-                <paragraph> exemple de texte </paragraph>
+                <paragraph>[Pour garder cette section brève, veuillez inclure seulement l’information requise.]
+                  &lt;forme(s) posologique(s) et concentration(s)&gt;</paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -1940,9 +2269,13 @@
               <id root="be74b6e6-c431-4a5f-a18e-ed3a1b381456"/>
               <code code="pmi06" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="Ne prenez pas [Marque nominative] si:"/>
-              <title>Ne prenez pas [Marque nominative] si:</title>
+              <title>Ne prenez pas &lt;Marque nominative&gt; si:</title>
               <text>
-                <paragraph> exemple de texte </paragraph>
+                <paragraph>[Inscrire chaque contre-indication mentionnée à la partie I.]</paragraph>
+                <list>
+                  <item>&lt;texte&gt;</item>
+                  <item>&lt;texte&gt;</item>
+                </list>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -1952,9 +2285,13 @@
               <id root="be74b6e6-cd31-4a5f-a18e-ed321b381456"/>
               <code code="pmi07" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="Consultez votre professionnel de la santé avant de prendre [Marque nominative], afin de réduire la possibilité d'effets secondaires et pour assurer la bonne utilisation du médicament."/>
-              <title>Consultez votre professionnel de la santé avant de prendre [Marque nominative], afin de réduire la possibilité d'effets secondaires et pour assurer la bonne utilisation du médicament.</title>
+              <title>Consultez votre professionnel de la santé avant de prendre &lt;Marque nominative&gt;, afin de réduire la possibilité d'effets secondaires et pour assurer la bonne utilisation du médicament.</title>
               <text>
-                <paragraph> exemple de texte </paragraph>
+                <paragraph>[Inscrire chaque mise en garde ou précaution mentionnée à la partie I.]</paragraph>
+                <list>
+                  <item>&lt;texte&gt;</item>
+                  <item>&lt;texte&gt;</item>
+                </list>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -1966,7 +2303,11 @@
                 displayName="Autres mises en garde à connaître:"/>
               <title>Autres mises en garde à connaître:</title>
               <text>
-                <paragraph> exemple de texte </paragraph>
+                <paragraph>[Fournir des renseignements généraux qui ne figureraient pas dans la liste des mises en garde
+                  et des précautions ou sous d’autres rubriques, sinon omettre la présente rubrique.]<br/>&lt;texte&gt;</paragraph>
+                <paragraph><content styleCode="bold">Informez votre professionnel de la santé de tous les produits de santé que vous prenez,
+                  y compris les médicaments, les vitamines, les minéraux, les suppléments naturels ou les
+                  produits de médecine alternative.</content></paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -1976,9 +2317,11 @@
               <id root="be74bbe6-c431-4a5f-a18e-ed321b381456"/>
               <code code="pmi09" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="Les produits qui suivent pourraient être associés à des interactions médicamenteuses avec [Marque nominative]:"/>
-              <title>Les produits qui suivent pourraient être associés à des interactions médicamenteuses avec [Marque nominative]:</title>
+              <title>Les produits qui suivent pourraient être associés à des interactions médicamenteuses avec &lt;Marque nominative&gt;:</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <list>
+                  <item>&lt;texte&gt;</item>
+                </list>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -1988,9 +2331,9 @@
               <id root="be74b6e6-c431-4a5f-a18e-ed431b381456"/>
               <code code="pmi10" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="Comment prendre [Marque nominative]:"/>
-              <title>Comment prendre [Marque nominative]:</title>
+              <title>Comment prendre &lt;Marque nominative&gt;:</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>&lt;texte&gt;</paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -2002,7 +2345,7 @@
                 displayName="Dose habituelle:"/>
               <title>Dose habituelle:</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>&lt;texte&gt;</paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -2014,7 +2357,18 @@
                 displayName="Surdosage:"/>
               <title>Surdosage:</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>&lt;texte&gt;</paragraph>
+                <table width="100%" rules="all" frame="border">
+                  <tbody>
+                    <tr>
+                      <td>Si vous croyez avoir pris trop de &lt;Marque nominative&gt;, communiquez immédiatement avec
+                        votre professionnel de la santé, le service des urgences d’un hôpital ou votre centre
+                        antipoison régional, même si vous ne présentez pas de symptômes.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <paragraph>[Le message de l’encadré peut être modifié pour fournir les avis les plus judicieux selon la
+                  norme de soins en vigueur pour le produit.]</paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -2025,7 +2379,7 @@
               <code code="pmi13" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="Dose oubliée:"/>
               <title>Dose oubliée:</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>&lt;texte&gt;</paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -2034,9 +2388,105 @@
             <section ID="beaaa5b8-6693-4d4c-a897-fa5c9562b1be">
               <id root="be74b6e6-c431-4a5f-a18e-ed321b311456"/>
               <code code="pmi14" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="Quels sont les effets secondaires qui pourraient être associés à [Marque nominative]?"/>
-              <title>Quels sont les effets secondaires qui pourraient être associés à [Marque nominative]?</title>
+              <title>Quels sont les effets secondaires qui pourraient être associés à &lt;Marque nominative&gt;?</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>En prenant &lt;Marque nominative&gt;, vous pourriez ressentir des effets secondaires autres que
+                  ceux qui figurent dans cette liste. Si c’est le cas, communiquez avec votre professionnel de la
+                  santé.</paragraph>
+                <paragraph>&lt;texte&gt;</paragraph>
+                <paragraph>[Les effets secondaires qui disparaissent d’eux-mêmes doivent être décrits sous forme
+                  d’exposé des faits. Seuls les effets secondaires graves doivent figurer dans le tableau cidessous. Chaque effet secondaire doit figurer à un seul endroit, soit dans le texte, ou dans le
+                  tableau, car les répétitions ne sont généralement pas souhaitables dans la Partie III.]</paragraph>
+                <table ID="tpmi14" border="1" rules="all" frame="border" width="100%">
+                  <caption>Effets secondaires graves et mesure à prendre</caption>
+                  <tbody>
+                    <tr>
+                      <th rowspan="2">Symptôme ou effet</th>
+                      <th colspan="2" align="center">Communiquez avec votre
+                        professionnel de la santé</th>
+                      <th rowspan="2">Cessez de prendre
+                        le médicament et</th>
+                    </tr>
+                    <tr>
+                      <th>Uniquement si
+                        l’effet est sévère</th>
+                      <th>Dans tous les
+                        cas</th>
+                    </tr>
+                    <tr>
+                      <td><content
+                        styleCode="bold">TRÈS COURANT</content><br/>
+                        &lt;État pathologique : symptôme/effet&gt;</td>
+                      <td/>
+                      <td/>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td>&lt;État pathologique :
+                        symptôme/effet&gt;</td>
+                      <td/>
+                      <td/>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td><content
+                        styleCode="bold">COURANT</content><br/>&lt;État pathologique :
+                        symptôme/effet&gt;</td>
+                      <td/>
+                      <td/>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td>&lt; État pathologique :
+                        symptôme/effet&gt;</td>
+                      <td/>
+                      <td/>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td><content
+                        styleCode="bold">RARE</content><br/>&lt;État pathologique :
+                        symptôme/effet&gt;</td>
+                      <td/>
+                      <td/>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td>&lt; État pathologique :
+                        symptôme/effet&gt;</td>
+                      <td/>
+                      <td/>
+                      <td/>
+                    </tr>
+                  </tbody>
+                </table>
+                <paragraph>En cas de symptôme ou de malaise non mentionné dans le présent document ou d’aggravation
+                  d’un symptôme ou d’un malaise vous empêchant de vaquer à vos occupations quotidiennes,
+                  parlez-en à votre professionnel de la santé.</paragraph>
+                <table width="100%" rules="all" frame="border">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <paragraph><content styleCode="bold">Déclaration des effets secondaires</content><br/></paragraph>
+                        <paragraph>Vous pouvez déclarer les effets secondaires soupçonnées d’être associé avec l’utilisation
+                          d’un produit de santé par:<br/></paragraph>
+                        <list styleCode="unordered">
+                          <item>Visitant le site Web des déclarations des effets indésirables <linkHtml
+                              href="http://www.hc-sc.gc.ca/dhp-
+                              mps/medeff/report-declaration/index-eng.php"
+                              >(http://www.hc-sc.gc.ca/dhp-
+                              mps/medeff/report-declaration/index-eng.php)</linkHtml>
+                            pour vous informer sur
+                            comment faire une déclaration en ligne, par courrier, ou par télécopieur ; ou</item>
+                          <item>Téléphonant sans frais 1-866-234-2345.</item>
+                        </list>
+                        <paragraph><content styleCode="italics">REMARQUE : Consultez votre professionnel de la santé si vous avez besoin de
+                          renseignements sur le traitement des effets secondaires. Le Programme Canada Vigilance ne
+                          donne pas de conseils médicaux.</content><br/></paragraph>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -2047,7 +2497,8 @@
               <code code="pmi15" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="Entreposage:"/>
               <title>Entreposage:</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <paragraph>&lt;texte&gt;</paragraph>
+                <paragraph>Garder hors de la portée de et de la vue des enfants.</paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
@@ -2057,9 +2508,17 @@
               <id root="be74b6e6-c431-4a5f-a98e-ed321b381456"/>
               <code code="pmi16" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="Pour en savoir davantage au sujet de [Marque nominative], vous pouvez:"/>
-              <title>Pour en savoir davantage au sujet de [Marque nominative], vous pouvez:</title>
+              <title>Pour en savoir davantage au sujet de &lt;Marque nominative&gt;, vous pouvez:</title>
               <text>
-                <paragraph>exemple de texte</paragraph>
+                <list>
+                  <item>Communiquer avec votre professionnel de la santé.</item>
+                  <item>Lire la monographie de produit intégrale rédigée à l’intention des professionnels de la santé,
+                    qui renferme également les renseignements pour les patients sur les médicaments. Ce
+                    document est publié sur le <linkHtml href="http://hc-sc.gc.ca/index-fra.php">site Web de Santé Canada</linkHtml> (http://hc-sc.gc.ca/index-fra.php), le
+                    site Web du fabricant &lt;www.siteweb.document&gt;, ou en téléphonant le 1-800-&lt;numéro de téléphone&gt;.</item>
+                </list>
+                <paragraph>Le présent dépliant a été rédigé par &lt;Nom du promoteur&gt;</paragraph>
+                <paragraph>Dernière révision &lt;ANNÉE, MOIS, JOUR&gt;</paragraph>
               </text>
               <effectiveTime value="20170101"/>
             </section>
