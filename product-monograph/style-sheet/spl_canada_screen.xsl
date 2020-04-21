@@ -92,7 +92,7 @@
 										</li>							
 									</xsl:when>
 									<!-- TITLE PAGE OR RECENT MAJOR LABEL CHANGE NAVIGATION -->
-									<xsl:when test="v3:code[@code='0TP']|v3:code[@code='1RMLC']">
+									<xsl:when test="v3:code[@code='0TP'] or not(v3:component/v3:section)">
 										<li class="nav-item">
 											<a href="#{$unique-section-id}" class="nav-link nav-top">
 												<xsl:value-of select="v3:title"/>
