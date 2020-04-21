@@ -1,4 +1,4 @@
-HTML preview of XML templates
+HTML preview of XML templates:
 1. Standard Template
 1. NOCC Template
 1. Subseqent Entry Product Template
