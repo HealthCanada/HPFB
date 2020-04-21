@@ -1,7 +1,5 @@
 Functional XML PM samples rendered to HTML using the style sheet
 
-LORUM IPSUM (English): 
-https://healthcanada.github.io/HPFB/product-monograph/samples/lorum-en/spl/df363dae-0612-4be7-bb92-a8381fa1da35.html
+[Sample - LORUM IPSUM (English)](https://healthcanada.github.io/HPFB/product-monograph/samples/lorum-en/spl/df363dae-0612-4be7-bb92-a8381fa1da35.html)
 
-LORUM IPSUM (French) - to be updated: 
-https://healthcanada.github.io/HPFB/product-monograph/samples/lorum-fr/spl/fe363dae-0612-4be7-bb92-a8381fa1da35.html 
+[Sample - LORUM IPSUM (French)](https://healthcanada.github.io/HPFB/product-monograph/samples/lorum-fr/spl/fe363dae-0612-4be7-bb92-a8381fa1da35.html)
