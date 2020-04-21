@@ -3029,6 +3029,22 @@
                     </component>
                 </section>
             </component>
+            <component>
+                <section ID="c11a616f-8cc8-4608-a969-a3af2862283e">
+                    <id root="d10febac-9113-4cc0-bc00-99f1fe2b714c"/>
+                    <code code="pmiifu" codeSystem="2.16.840.1.113883.2.20.6.60"
+                        displayName="INSTRUCTIONS FOR USE"/>
+                    <title>INSTRUCTIONS FOR USE</title>
+                    <text>
+                        <paragraph>
+                            &lt;text&gt;
+                        </paragraph>
+                    </text>
+                    <effectiveTime value="20170101"/>
+                    
+                    
+                </section>
+            </component>   
         </structuredBody>
     </component>
 </document>
