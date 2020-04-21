@@ -1,8 +1,8 @@
 HTML preview of XML templates
-* Standard Template
-* NOCC Template
-* Subseqent Entry Product Template
-* Schedule C Template
-* Schedule D Template
-* Schedule D Biosimilar Biologic Drug Template
+1 Standard Template
+1 NOCC Template
+1 Subseqent Entry Product Template
+1 Schedule C Template
+1 Schedule D Template
+1 Schedule D Biosimilar Biologic Drug Template
 
