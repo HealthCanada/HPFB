@@ -1,5 +1,5 @@
 HTML preview of XML templates:
-1. Standard Template
+1. [Standard Template](https://healthcanada.github.io/HPFB/product-monograph/templates/nocc-template.html)
 1. NOCC Template
 1. Subsequent Entry Product Template
 1. Schedule C Template
