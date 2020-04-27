@@ -236,7 +236,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COULEUR"/>
-                  <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
+                  <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
                     xsi:type="CV">
                     <originalText>BLANC</originalText>
                   </value>
@@ -245,7 +245,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="FORME"/>
-                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="BALLE"
+                  <value code="C48335" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="BALLE"
                     xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
@@ -271,7 +271,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="7" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SAVEUR"/>
-                  <value code="3" codeSystem="2.16.840.1.113883.2.20.6.26" displayName="POMME"
+                  <value code="C73362" codeSystem="2.16.840.1.113883.2.20.6.26" displayName="POMME"
                     xsi:type="CV"> </value>
                 </characteristic>
               </subjectOf>
@@ -448,7 +448,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COULEUR"/>
-                  <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
+                  <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
                     xsi:type="CV">
                     <originalText>white to off white</originalText>
                   </value>
@@ -457,7 +457,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COULEUR"/>
-                  <value code="9" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="ROUGE"
+                  <value code="C48326" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="ROUGE"
                     xsi:type="CV">
                     <originalText>dark red</originalText>
                   </value>
@@ -466,7 +466,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="FORME"/>
-                  <value code="2" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="CAPSULE"
+                  <value code="C48336" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="CAPSULE"
                     xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
@@ -492,7 +492,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="7" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SAVEUR"/>
-                  <value code="3" codeSystem="2.16.840.1.113883.2.20.6.26" displayName="POMME"
+                  <value code="C73362" codeSystem="2.16.840.1.113883.2.20.6.26" displayName="POMME"
                     xsi:type="CV"> </value>
                 </characteristic>
               </subjectOf>
@@ -680,7 +680,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COULEUR"/>
-                  <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
+                  <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
                     xsi:type="CV">
                     <originalText>OFF WHITE</originalText>
                   </value>
@@ -863,7 +863,7 @@
                   <subjectOf>
                     <characteristic>
                       <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COULEUR"/>
-                      <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
+                      <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
                         xsi:type="CV">
                         <originalText>BLANC</originalText>
                       </value>
@@ -986,7 +986,7 @@
                   <subjectOf>
                     <characteristic>
                       <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COULEUR"/>
-                      <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
+                      <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
                         xsi:type="CV">
                         <originalText>INCOLORE</originalText>
                       </value>
