@@ -1468,7 +1468,7 @@
                                 <characteristic>
                                     <code code="7" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="FLAVOUR"/>
-                                    <value code="3" codeSystem="2.16.840.1.113883.2.20.6.26"
+                                    <value code="C73362" codeSystem="2.16.840.1.113883.2.20.6.26"
                                         displayName="APPLE" xsi:type="CV"> </value>
                                 </characteristic>
                             </subjectOf>
