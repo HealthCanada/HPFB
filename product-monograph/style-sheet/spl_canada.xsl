@@ -869,6 +869,13 @@
 			<xsl:if test="not(@width)">
 				<xsl:attribute name="width">100%</xsl:attribute>
 			</xsl:if>
+			<!-- Default to thin border or thick border if box frame is specified, suitable for Boxed Warning -->
+			<xsl:if test="@frame='border'">
+				<xsl:attribute name="style">border: solid thin; border-color: #CCCCCC;</xsl:attribute>
+			</xsl:if>
+			<xsl:if test="@frame='box'">
+				<xsl:attribute name="style">border: 2px solid black;</xsl:attribute>
+			</xsl:if>
 			<xsl:apply-templates select="@*|node()"/>
 		</table>
 	</xsl:template>
