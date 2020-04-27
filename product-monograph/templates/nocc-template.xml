@@ -220,7 +220,7 @@
                                 <characteristic>
                                     <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="COLOUR"/>
-                                    <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24"
+                                    <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24"
                                         displayName="WHITE" xsi:type="CV">
                                         <originalText>OFF WHITE</originalText>
                                     </value>
@@ -230,7 +230,7 @@
                                 <characteristic>
                                     <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="SHAPE"/>
-                                    <value code="11" codeSystem="2.16.840.1.113883.2.20.6.25"
+                                    <value code="C48345" codeSystem="2.16.840.1.113883.2.20.6.25"
                                         displayName="OVAL" xsi:type="CV"> </value>
                                 </characteristic>
                             </subjectOf>
@@ -260,7 +260,7 @@
                                 <characteristic>
                                     <code code="7" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="FLAVOUR"/>
-                                    <value code="3" codeSystem="2.16.840.1.113883.2.20.6.26"
+                                    <value code="C73362" codeSystem="2.16.840.1.113883.2.20.6.26"
                                         displayName="APPLE" xsi:type="CV"> </value>
                                 </characteristic>
                             </subjectOf>
