@@ -1869,7 +1869,7 @@
                           <th>t<sub>1/2</sub>(h)</th>
                           <th>AUC<sub>0=∞</sub></th>
                           <th>CL</th>
-                          <th>VD</th>
+                          <th>Vd</th>
                         </tr>
                         <tr>
                           <td>Dose unique moyenne</td>
@@ -2069,13 +2069,13 @@
                           <th>% ratio de Moyenne géométrique</th>
                           <th>Intervalle de confiance<footnote>Indique le pourcentage de
                               l’intervalle de confiance (c.-à-d., 90 ou 95%) à l’en-tête de la
-                              colonne et la liste pour le ASCT, ASCI et CMAX (au
+                              colonne et la liste pour le ASC<sub>T</sub>, ASC<sub>I</sub> et C<sub>MAX</sub> (au
                             besoin).</footnote></th>
                         </tr>
                         <tr>
                           <td>AUC<sub>T</sub>(unités)<footnote>Pour les médicaments dont la demi-vie
-                              est supérieure à 24 heures, l’ASCT devrait être remplacé par
-                              ASC0-72.</footnote></td>
+                            est supérieure à 24 heures, l’ASC<sub>T</sub> devrait être remplacé par
+                              ASC<sub>0-72</sub>.</footnote></td>
                           <td/>
                           <td/>
                           <td/>
@@ -2129,7 +2129,7 @@
                           <th>% ratio de Moyenne géométrique</th>
                           <th>Intervalle de confiance<footnote>Indique le pourcentage de
                               l’intervalle de confiance (c.-à-d., 90 ou 95%) à l’en-tête de la
-                              colonne et la liste pour le ASCT, ASCI et CMAX (au
+                              colonne et la liste pour le ASC<sub>T</sub>, ASC<sub>I</sub> et C<sub>MAX</sub> (au
                             besoin).</footnote></th>
                         </tr>
                         <tr>
