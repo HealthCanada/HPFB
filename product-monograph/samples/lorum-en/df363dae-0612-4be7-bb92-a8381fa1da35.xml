@@ -2377,7 +2377,7 @@
                                                   <th>t<sub>1/2</sub>(h)</th>
                                                   <th>AUC<sub>0=∞</sub></th>
                                                   <th>CL</th>
-                                                  <th>VD</th>
+                                                  <th>Vd</th>
                                                 </tr>
                                                 <tr>
                                                   <td>Single dose mean</td>
@@ -2582,13 +2582,13 @@
                                                   <th>% Ratio of Geometric Means</th>
                                                   <th>Confidence Interval<footnote>Indicate %
                                                   Confidence Interval (i.e., 90% or 95%) in the
-                                                  column heading and list for the AUCT, AUCI and
-                                                  CMAX (if required).</footnote></th>
+                                                  column heading and list for the AUC<sub>T</sub>, AUC<sub>I</sub> and
+                                                      C<sub>MAX</sub> (if required).</footnote></th>
                                                 </tr>
                                                 <tr>
                                                   <td>AUC<sub>T</sub>(units)<footnote>For drugs with
                                                   a half-life greater than 24 hours AUCT should be
-                                                  replaced with AUC0-72.</footnote></td>
+                                                  replaced with AUC<sub>0-72</sub>.</footnote></td>
                                                   <td/>
                                                   <td/>
                                                   <td/>
@@ -2647,13 +2647,13 @@
                                                   <th>% Ratio of Geometric Means</th>
                                                   <th>Confidence Interval<footnote>Indicate %
                                                   Confidence Interval (i.e., 90% or 95%) in the
-                                                  column heading and list for the AUCT, AUCI and
-                                                  CMAX (if required).</footnote></th>
+                                                  column heading and list for the AUC<sub>T</sub>, AUC<sub>I</sub> and
+                                                      C<sub>MAX</sub> (if required).</footnote></th>
                                                 </tr>
                                                 <tr>
-                                                  <td>AUC<sub>tau</sub>(units)<footnote>For drugs
-                                                  with a half-life greater than 24 hours AUCT should
-                                                  be replaced with AUC0-72.</footnote></td>
+                                                  <td>AUC<sub>T</sub>(units)<footnote>For drugs
+                                                      with a half-life greater than 24 hours AUC<sub>T</sub> should
+                                                      be replaced with AUC<sub>0-72</sub>.</footnote></td>
                                                   <td/>
                                                   <td/>
                                                   <td/>
@@ -2899,7 +2899,7 @@
                             <id root="be74b6e6-c431-4a5f-a18e-ed321ab81456"/>
                             <code code="pmi09" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="The following may interact with [Brand name]:"/>
-                            <title>The following may interact with =Brand name]:</title>
+                            <title>The following may interact with [Brand name]:</title>
                             <text>
                                 <list>
                                     <item>[list]</item>
