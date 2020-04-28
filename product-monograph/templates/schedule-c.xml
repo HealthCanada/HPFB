@@ -432,7 +432,7 @@
                                 displayName="1 INDICATIONS"/>
                             <title>1 INDICATIONS</title>
                             <text>
-                                <paragraph>[rand name (proper name)] is indicated for:</paragraph>
+                                <paragraph>[Brand name (proper name)] is indicated for:</paragraph>
                                 <list listType="unordered">
                                     <item>[text]</item>
                                     <item>[text]</item>
@@ -807,6 +807,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                <paragraph>Effective Dose Equivalent (mSv/MBq) (rem/mCi)<br/>Effective Dose (mSv/MBq) (rem/mCi)</paragraph>
                             </text>
                             <effectiveTime value="20180101"/>
                         </section>
@@ -1098,7 +1099,7 @@
                                                 <tr>
                                                   <th/>
                                                   <th>[drug name]; n = [#] (%)</th>
-                                                  <th>]placebo] n = [#] (%)</th>
+                                                  <th>[placebo] n = [#] (%)</th>
                                                 </tr>
                                                 <tr>
                                                   <td>[use MedDRA terms for headings, as applicable]<br/>

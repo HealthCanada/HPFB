@@ -1248,7 +1248,7 @@
                                 <paragraph><content styleCode="bold">Drug
                                     Substance</content><br/><br/>Proper name: [text]<br/><br/>
                                     Chemical name: [text]<br/><br/> Molecular formula and molecular
-                                    mass: [text]<br/><br/>Structural formula: [image]<br/>
+                                    mass: [text]<br/><br/>Structural formula: [image]
                                     <br/><br/>
                                     Physicochemical properties: [text]</paragraph>
                             </text>
@@ -1360,13 +1360,13 @@
                                                   <th>% Ratio of Geometric Means</th>
                                                   <th>Confidence Interval<footnote>Indicate %
                                                   Confidence Interval (i.e., 90% or 95%) in the
-                                                  column heading and list for the AUCT, AUCI and
-                                                  CMAX (if required).</footnote></th>
+                                                  column heading and list for the AUC<sub>T</sub>, AUC<sub>I</sub> and
+                                                      C<sub>MAX</sub> (if required).</footnote></th>
                                                 </tr>
                                                 <tr>
                                                   <td>AUC<sub>T</sub>(units)<footnote>For drugs with
-                                                  a half-life greater than 24 hours AUCT should be
-                                                  replaced with AUC0-72.</footnote></td>
+                                                      a half-life greater than 24 hours AUC<sub>T</sub> should be
+                                                  replaced with AUC<sub>0-72</sub>.</footnote></td>
                                                   <td/>
                                                   <td/>
                                                   <td/>
@@ -1425,13 +1425,13 @@
                                                   <th>% Ratio of Geometric Means</th>
                                                   <th>Confidence Interval<footnote>Indicate %
                                                   Confidence Interval (i.e., 90% or 95%) in the
-                                                  column heading and list for the AUCT, AUCI and
-                                                  CMAX (if required).</footnote></th>
+                                                  column heading and list for the AUC<sub>T</sub>, AUC<sub>I</sub> and
+                                                      C<sub>MAX</sub> (if required).</footnote></th>
                                                 </tr>
                                                 <tr>
                                                   <td>AUC<sub>tau</sub>(units)<footnote>For drugs
-                                                  with a half-life greater than 24 hours AUCT should
-                                                  be replaced with AUC0-72.</footnote></td>
+                                                      with a half-life greater than 24 hours AUC<sub>T</sub> should
+                                                      be replaced with AUC<sub>0-72</sub>.</footnote></td>
                                                   <td/>
                                                   <td/>
                                                   <td/>
