@@ -91,10 +91,10 @@
 		<pharmaStandard lang="fr">Norme pharmaceutique</pharmaStandard>
 		<schedule lang="fr">Annexe</schedule>
 		<therapeuticClass lang="fr">Classe thérapeutique</therapeuticClass>
-		<packaging lang="fr">État de l'emballage</packaging>
+		<packaging lang="fr">État de l’emballage</packaging>
 		<itemCode lang="fr">Identificateur d’emballage</itemCode>
 		<packageDescription lang="fr">Description de l’emballage</packageDescription>
-		<packageRegStatus lang="fr">État réglementaire de l'emballage</packageRegStatus>
+		<packageRegStatus lang="fr">État réglementaire de l’emballage</packageRegStatus>
 		<productRegStatus lang="fr">État réglementaire du produit</productRegStatus>
 		<approvalDate lang="fr">Date d’approbation</approvalDate>
 		<cancellationDate lang="fr">Date d’annulation</cancellationDate>

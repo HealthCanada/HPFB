@@ -9,7 +9,7 @@
 	<xsl:import href="spl_canada_screen.xsl"/>
 	<xsl:import href="spl_canada_i18n.xsl"/>
 	
-	<!-- pmh retaining all of these unused parameters for future use -->
+	<!-- Retaining all of these unused parameters for future use -->
 	<!-- Whether to show the clickable XML, set to "/.." instead of "1" to turn off -->
 	<xsl:param name="show-subjects-xml" select="/.."/>
 	<!-- Whether to show the data elements in special tables etc., set to "/.." instead of "1" to turn off -->
@@ -28,7 +28,7 @@
 	<xsl:output method="html" encoding="UTF-8" version="4.0" doctype-public="-//W3C//DTD HTML 4.01//EN" indent="no"/>
 		
 	<!-- OVERRIDE FDA STYLES FOR MANUFACTURED PRODUCT DETAILS -->	
-	<!-- override FDA company info section, using Canadian French and English labels -->
+	<!-- Override FDA company info section, using Canadian French and English labels -->
 	<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization">	
 		<xsl:if test="(count(./v3:name)>0)">
 			<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
@@ -109,8 +109,7 @@
 	</xsl:template>	
 
 	<!-- Note: This template is also used for top level Product Concept which does not have v3:asEquivalentEntity -->
-	<!-- pmh - Canada does not currently require equivalent or abstract product concept -->
-	<!-- todo: remove the FDA specific codes in this xpath -->
+	<!-- Canada does not currently require equivalent or abstract product concept -->
 	<xsl:template mode="subjects" match="v3:section/v3:subject/v3:manufacturedProduct/*[self::v3:manufacturedProduct[v3:name or v3:formCode] or self::v3:manufacturedMedicine][not(v3:asEquivalentEntity/v3:definingMaterialKind[/v3:document/v3:code/@code = '73815-3'])]|v3:section/v3:subject/v3:identifiedSubstance/v3:identifiedSubstance">
 		<table class="contentTablePetite" cellSpacing="0" cellPadding="3" width="100%">
 			<tbody>
@@ -129,7 +128,6 @@
 						<xsl:call-template name="MarketingInfo"/>
 					</xsl:otherwise>
 				</xsl:choose>
-				<!-- FIXME: there seem to be so many different places where the instanceOfKind, that looks so much like copy&paste and makes maintenance difficult -->
 				<xsl:if test="v3:instanceOfKind">
 					<tr>
 						<td colspan="4">
@@ -143,7 +141,7 @@
 		</table>
 	</xsl:template>
 	
-	<!-- override FDA Product Info section, using Canadian French and English labels - note, we could drop the Alt class for row banding -->
+	<!-- Override FDA Product Info section, using Canadian French and English labels - note, we could drop the Alt class, since we are not using row banding -->
 	<xsl:template name="ProductInfoBasic">
 		<tr>
 			<td>
@@ -224,18 +222,15 @@
 		</xsl:choose>		
 	</xsl:template>
 
-	<!-- extra logic required for URG_PQ Active Ingredients -->
+	<!-- Extra logic required for URG_PQ Active Ingredients and formatting the Physical Quantity to add commas for thousands -->
 	<xsl:template match="v3:quantity/v3:numerator">
 		<xsl:choose>
 			<xsl:when test="v3:low and v3:high">
-				<!-- <xsl:value-of select="v3:low/@value"/> -->
 				<xsl:apply-templates select="v3:low/@value" mode="format-physical-quantity"/>					
 				<xsl:value-of select="$labels/toConnective[@lang = $lang]"/>
-				<!-- <xsl:value-of select="v3:high/@value"/>&#160; -->								
 				<xsl:apply-templates select="v3:high/@value" mode="format-physical-quantity"/>&#160;								
 			</xsl:when>
 			<xsl:otherwise>
-				<!-- <xsl:value-of select="@value"/>&#160; -->
 				<xsl:apply-templates select="@value" mode="format-physical-quantity"/>&#160;								
 			</xsl:otherwise>
 		</xsl:choose>
@@ -252,7 +247,7 @@
 		</xsl:choose>
 	</xsl:template>
 
-	<!-- templating for Active Ingredient Basis of Strength -->
+	<!-- Templating for Active Ingredient Basis of Strength -->
 	<xsl:template match="v3:code" mode="active-ingredient-bos">
 		<xsl:value-of select="@displayName"/>
 		<xsl:text> (</xsl:text>
@@ -260,7 +255,7 @@
 		<xsl:text>) </xsl:text>		
 	</xsl:template>
 		
-	<!-- display the ingredient information (both active and inactive) -->
+	<!-- Display the ingredient information (both active and inactive) -->
 	<xsl:template name="ActiveIngredients">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 			<xsl:call-template name="IngredientHeader"/>
@@ -309,7 +304,6 @@
 						</td>
 					</xsl:for-each>
 					<td class="formItem">
-						<!-- hopefully this works for URG_PQ and beyond - removed a lot of extra normalize-space -->
 						<xsl:apply-templates select="v3:quantity/v3:numerator"/>
 						<xsl:if test="(v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@value)!='1') 
 													or (v3:quantity/v3:denominator/@unit and normalize-space(v3:quantity/v3:denominator/@unit)!='1')"> <xsl:value-of select="$labels/inConnective[@lang = $lang]"/><xsl:value-of select="v3:quantity/v3:denominator/@value"/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/>
@@ -338,7 +332,6 @@
 					</xsl:attribute>
 					<xsl:for-each select="(v3:ingredientSubstance|v3:inactiveIngredientSubstance)[1]">
 						<td class="formItem">
-							<!-- TODO is this correct for more than one code? is the cardinality guaranteed [1..1]? -->							
 							<xsl:for-each select="v3:code">
 								<strong><xsl:value-of select="@displayName"/></strong>								
 								<xsl:text> (</xsl:text>
@@ -526,7 +519,7 @@
 		</table>
 	</xsl:template>
 
-	<!-- override packageInfo template to consolidate rows that have the same package number - some templating still specific to FDA business rules -->
+	<!-- Override packageInfo template to consolidate rows that have the same package number - some templating still specific to FDA business rules -->
 	<xsl:template name="packageInfo">
 		<xsl:param name="path"/>
 		<xsl:param name="number" select="1"/>
@@ -546,7 +539,6 @@
 					<xsl:sort select="position()" order="descending"/>
 					<xsl:variable name="current" select="."/>
 					<xsl:for-each select="v3:code[1]/@code">
-						<!-- TODO: this could be a lot simpler now that it is not constrained by controlled vocabulary -->
 						<xsl:value-of select="."/>
 					</xsl:for-each>
 					<br/>
@@ -606,9 +598,9 @@
 		</tr>
 	</xsl:template>
 	
-	<!-- override FDA Part templating -->
+	<!-- Override FDA Part templating -->
 	<xsl:template mode="subjects" match="v3:part/v3:partProduct|v3:part/v3:partMedicine">
-		<!-- only display the outer part packaging once -->
+		<!-- Only display the outer part packaging once -->
 		<xsl:if test="not(../preceding-sibling::v3:part)">
 			<xsl:if test="../../v3:asContent">
 				<tr>
@@ -619,7 +611,6 @@
 					</td>
 				</tr>
 			</xsl:if>
-			<!-- todo - pmh this might be cleaner as an applied template rather than a called template -->
 			<xsl:for-each select="../..">
 				<xsl:call-template name="MarketingInfo"/>
 			</xsl:for-each>
@@ -646,7 +637,6 @@
 		<xsl:call-template name="MarketingInfo"/>
 	</xsl:template>
 
-	<!-- pmh - for XML Notepad - removed width="5" and colspan="5" -->
 	<xsl:template name="partQuantity">
 		<xsl:param name="path" select="."/>
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
@@ -670,7 +660,6 @@
 						<strong><xsl:value-of select="$labels/part[@lang = $lang]"/> <xsl:value-of select="position()"/></strong>
 					</td>
 					<td class="formItem">
-						<!-- TODO cleanup - are there ever going to be multiple quantities? what is the cardinality here? -->
 						<xsl:for-each select="v3:quantity/v3:denominator">
 							<xsl:value-of select="@value"/>
 							<xsl:text> </xsl:text>
@@ -690,11 +679,10 @@
 		</table>
 	</xsl:template>
 
-	<!-- TODO most of the other templates contain their own tr and td -->
 	<xsl:template name="MarketingInfo">
 		<xsl:if test="../v3:subjectOf/v3:approval|../v3:subjectOf/v3:marketingAct">
 			<tr>
-				<td>
+				<td> 
 					<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 						<tr>
 							<td colspan="5" class="formHeadingTitle"><xsl:value-of select="$labels/marketingInfo[@lang = $lang]"/></td>
@@ -738,7 +726,6 @@
 	</xsl:template>	
 			
 	<!-- This is the main page content, which renders for both screen, with Product Details in front, and print, with Product Details at end -->	
-	<!-- pmh - replaced card level sections with divs to resolve odd behaviour in XML Notepad -->
 	<xsl:template match="v3:structuredBody" mode="main-document">
 		<main class="col">
 			<div class="container-fluid" id="main">
@@ -860,7 +847,6 @@
 
 	<!-- TABLE MODEL -->
 	<xsl:template match="v3:table">
-		<!-- see note anchoring and PCR 793 -->
 		<xsl:if test="@ID">
 			<a name="{@ID}"/>
 		</xsl:if>
@@ -869,10 +855,11 @@
 			<xsl:if test="not(@width)">
 				<xsl:attribute name="width">100%</xsl:attribute>
 			</xsl:if>
-			<!-- Default to thin border or thick border if box frame is specified, suitable for Boxed Warning -->
+			<!-- Default to thin border if frame is specified as 'border', suitable for Aurora-style tables -->
 			<xsl:if test="@frame='border'">
 				<xsl:attribute name="style">border: solid thin; border-color: #CCCCCC;</xsl:attribute>
 			</xsl:if>
+			<!-- Default to thick border if frame is specified as 'box', suitable for Boxed Warning -->
 			<xsl:if test="@frame='box'">
 				<xsl:attribute name="style">border: 2px solid black;</xsl:attribute>
 			</xsl:if>
@@ -913,7 +900,7 @@
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode">
-					<!-- pmh added improved support for table rules=all -->
+					<!-- Added default support for table rules=all, which supports an Aurora-style table -->
 					<xsl:choose>
 						<xsl:when test="ancestor::v3:table/@rules='all'">
 							<xsl:text> Toprule Botrule Lrule Rrule </xsl:text>
@@ -947,7 +934,7 @@
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode">
-					<!-- pmh added improved support for table rules=all -->
+					<!-- Added default support for table rules=all, which supports an Aurora-style table -->
 					<xsl:choose>
 						<xsl:when test="ancestor::v3:table/@rules='all'">
 							<xsl:text> Toprule Botrule Lrule Rrule </xsl:text>

@@ -892,7 +892,7 @@
 /* Image Fix - the FDA breaks out when images are too large */
 img { max-width: 100%; height: auto; }					
 
-/* round buttons - only medium is currently used, for the Jump to Top button */
+/* round buttons */
 .btn-circle.btn-sm { 
     width: 24px; 
     height: 24px; 

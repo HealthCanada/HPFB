@@ -28,7 +28,7 @@
 			<unit UCUM="a" singular="year" plural="years"/>
 		</unitsMapping>
 	</xsl:variable>
-	<!-- pmh - commenting out a number of unused variables, and process mixins -->
+	<!-- Removed a number of unused variables and process mixins -->
 
 	<!-- MAIN MODE based on the deep null-transform -->
 	<xsl:template match="/|@*|node()">
@@ -38,10 +38,9 @@
 			 This is really should be revisited when the top-level template gets refactored. --> 
 	<xsl:template match="/v3:document/v3:title" priority="1"/>
 
-	<!-- pmh commented out all of the main document targets, since spl_canada has its own -->
-	<!-- pmh commented out observation Criterion and Analyte -->
-	<!-- pmh commented out pesticides label templates -->
-	<!-- pmh commented out REMS templates -->
+	<!-- Removed all of the main document targets, since spl_canada has its own -->
+	<!-- Removed observation Criterion and Analyte templates -->
+	<!-- Removed Pesticides label and REMS templates -->
 	<!-- helper templates -->
 	<xsl:template priority="2" match="v3:highlight//@width[not(contains(.,'%'))]" /> <!-- This would avoid things moving out of 2-column view -->
 	<xsl:template mode="twocolumn" match="/|node()|@*">
@@ -52,12 +51,8 @@
 			</xsl:apply-templates>
 		</xsl:copy>
 	</xsl:template>
-	<!-- pmh - this is not a bad idea, but currently unnecessary if we primarily rely on Bootstrap js:
-	<xsl:template name="include-custom-items">
-		<script src="{$resourcesdir}spl.js" type="text/javascript" charset="utf-8">/* */</script>
-	</xsl:template> -->
 
-	<!-- pmh moved string-lowercase and string-uppercase templates into internationalization file to support French language characters -->
+	<!-- Moved string-lowercase and string-uppercase templates into internationalization file to support French language characters -->
 	<xsl:template name="printSeperator">
 		<xsl:param name="lastDelimiter"><xsl:if test="last() > 2">,</xsl:if> and </xsl:param>
 		<xsl:choose>
@@ -65,7 +60,7 @@
 			<xsl:when test="position() &lt; last() - 1">, </xsl:when>
 		</xsl:choose>
 	</xsl:template>
-	<!-- pmh - moved string-to-date into a localization file spl_canada_i18n.xsl to support international requirements -->
+	<!-- Moved string-to-date into a localization file spl_canada_i18n.xsl to support international requirements -->
 	<xsl:template name="recent-effectiveDate">
 		<xsl:param name="effectiveDateSequence" />
 		<xsl:for-each select="$effectiveDateSequence[string-length(.) &gt; 7]">
@@ -98,8 +93,7 @@
 		</table>
 	</xsl:template>
 
-	<!-- pmh commented out highlights templates -->
-	<!-- pmh commented out all of the index templates -->
+	<!-- Removed highlights and index templates -->
 	<!-- MODE: reference -->
 	<!-- Create a section number reference such as (13.2) -->
 	<xsl:template mode="reference" match="/|@*|node()">
@@ -187,7 +181,7 @@ token.
 			</xsl:when>
 		</xsl:choose>
 	</xsl:template>
-	<!-- pmh moved additionalStyleAttr to spl_canada -->
+	<!-- Moved additionalStyleAttr to spl_canada -->
 	<xsl:template name="uniqueStyleCodes">
 		<xsl:param name="in" select="/.."/>
 		<xsl:for-each select="$in/token[not(preceding::token/@value = @value)]">
@@ -213,21 +207,9 @@ token.
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
+
+	<!-- Removed related document templates -->
 	
-	<!-- pmh - quite sure we do not need this template
-	<xsl:template match="v3:relatedDocument[not(/v3:document/v3:code/@code = '82351-8')][@typeCode = 'DRIV' or @typeCode = 'RPLC']/v3:relatedDocument/v3:setId/@root[string-length(.) = 36]"> 
-		<xsl:text>Reference Label Set Id: </xsl:text>
-		<a href="{concat('../', ., '.view')}"><xsl:value-of select="."/></a>
-		<br/> 
-	</xsl:template> -->
-
-<!-- pmh - quite sure we do not need this template
-	<xsl:template match="v3:relatedDocument[@typeCode = 'XFRM']/v3:relatedDocument/v3:id/@extension"> 
-		<xsl:text>Docket Number: </xsl:text>
-			<xsl:value-of select="."/>
-		<br/> 
-	</xsl:template> -->
-
 	<xsl:template name="headerString">
 		<xsl:param name="curProduct">.</xsl:param>
 		<xsl:value-of select="$curProduct/v3:name"/>
@@ -493,8 +475,8 @@ token.
 		</xsl:choose>
 	</xsl:template>
 
-	<!-- pmh section model numbering and templates have been overridden in xpl_canada.xsl -->
-	<!-- pmh - we could move this to spl_canada.xsl, but it has child apply-templates -->
+	<!-- Moved Section Model numbering and templates to xpl_canada.xsl -->
+	<!-- We could also move the "title" and "text" templates to spl_canada.xsl as well, but they have child apply-templates -->
 	<xsl:template match="v3:title">
 		<xsl:param name="sectionLevel" select="count(ancestor::v3:section)"/>
 		<xsl:param name="sectionNumber" select="/.."/>
@@ -512,7 +494,6 @@ token.
 			<xsl:apply-templates mode="mixed" select="node()"/>
 		</xsl:element>	
 	</xsl:template>
-	<!-- pmh - we could move this to spl_canada.xsl, but it contains child apply-templates -->
 	<xsl:template match="v3:text[not(parent::v3:observationMedia)]">
 		<xsl:apply-templates select="@*"/>
 		<xsl:apply-templates mode="mixed" select="node()"/>
@@ -1129,8 +1110,8 @@ token.
 		</xsl:if>
 	</xsl:template>	
 
-	<!-- pmh templates for Active and Inactive Ingredients are overridden in spl_canada.xsl -->
-	<!-- pmh leaving this here even though it is currently unused -->
+	<!-- Templates for Active and Inactive Ingredients have been overridden in spl_canada.xsl -->
+	<!-- Templates for Other Ingredients is left here even though it is currently unused -->
 	<xsl:template name="otherIngredients">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 			<tr>
@@ -1189,8 +1170,8 @@ token.
 		</table>
 	</xsl:template>
 
-	<!-- pmh all of the characteristics using FDA controlled vocabulary have been simplified and moved to spl_canada.xsl -->
-	<!-- pmh: I would prefer to do something similar to this in spl_canada.xsl, based on xsi:type:
+	<!-- All of the characteristics using FDA controlled vocabulary have been simplified and moved to spl_canada.xsl -->
+	<!-- We could do something similar to this in spl_canada.xsl, based on xsi:type, but have not:
 	<xsl:template mode="characteristics" match="v3:value[@xsi:type = 'ST']">
 		<td class="formItem" colspan="2"><xsl:value-of select="text()"/></td>
 	</xsl:template>
@@ -1245,31 +1226,17 @@ token.
 		<img alt="Image of Product" style="width:100%;" src="{$path/v3:value/v3:reference/@value}"/>
 	</xsl:if>
 </xsl:template>
-<!-- pmh - this was replaced when characteristics were moved to spl_canada.xsl
-<xsl:template name="contains">
-	<xsl:param name="path" select="."/>
-	<td class="formLabel">Contains</td>
-	<td class="formItem">
-		<xsl:for-each select="$path/v3:value">
-			<xsl:if test="position() > 1">,&#160;</xsl:if>
-			<xsl:value-of select="./@displayName"/>
-			<xsl:if test="normalize-space(./v3:originalText)"> (<xsl:value-of select="./v3:originalText"/>) </xsl:if>
-		</xsl:for-each>
-		<xsl:if test="not($path/v3:value)">&#160;&#160;&#160;&#160;</xsl:if>
-	</td>
-</xsl:template>-->
 	
-<!-- pmh templates for Package Info overridden in spl_canada.xsl -->
-<!-- pmh commented out all templates for ldd and fill/bulk/label -->
-<!-- pmh templates for Marketing Info have been overriden in spl_canada -->
-<!-- pmh templates for Supplier and Distributor Contact Info have been overridden in spl_canada.xsl: -->
-
-<!-- pmh commented out older templating for Establishment/Organization -->
-<!-- pmh commented out PLRIndications template -->
-<!-- pmh commented out Indications, Display Conditions of Use and Display Conditions of Use -->
-<!-- pmh commented out Interactions template -->
-<!-- pmh commented out Adverse Reactions template -->
-<!-- pmh commented out Other Indication template -->
-<!-- pmh commented out Pharmacological Class template -->
+<!-- Templates for Package Info overridden in spl_canada.xsl -->
+<!-- Templates for Marketing Info have been overriden in spl_canada -->
+<!-- Templates for Supplier and Distributor Contact Info have been overridden in spl_canada.xsl: -->
+<!-- Removed all templates for ldd and fill/bulk/label -->
+<!-- Removed older templating for Establishment/Organization -->
+<!-- Removed PLRIndications template -->
+<!-- Removed Indications, Display Conditions of Use and Display Conditions of Use -->
+<!-- Removed Interactions template -->
+<!-- Removed Adverse Reactions template -->
+<!-- Removed Other Indication template -->
+<!-- Removed Pharmacological Class template -->
 
 </xsl:transform>

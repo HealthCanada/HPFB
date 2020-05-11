@@ -11,10 +11,10 @@
 	<xsl:template match="//v3:author/v3:assignedEntity/v3:representedOrganization" mode="card">
 		<section class="card m-2" id="company-details">
 			<h6 class="card-header p-0 bg-aurora-light"> <!-- dropped bg-aurora-accent2 from h6 and button -->
-				<!-- pmh - this is how one might make product accordions optional -->
-<!--				<div class="text-white text-left d-none d-md-block p-2">
+				<!-- This is how one might make product accordions optional - retained for future reference:
+				<div class="text-white text-left d-none d-md-block p-2">
 					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
-				</div> --> <!--  dropdown-toggle below caused problems with rwd, and possibly w-100 -->
+				</div> -->
 				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-company-details" 
 				aria-expanded="true" aria-controls="collapse-company-details">
@@ -32,8 +32,7 @@
 	<xsl:template match="v3:subject/v3:manufacturedProduct" mode="card">
 		<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
 		<section class="card m-2" id="{$unique-product-id}">
-			<h6 class="card-header p-0 bg-aurora-light"> <!-- dropped bg-aurora-accent2 from h6 and button -->
-				<!-- dropdown-toggle below caused problems with rwd, and possibly w-100 -->
+			<h6 class="card-header p-0 bg-aurora-light">
 				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-{$unique-product-id}" 
 				aria-expanded="true" aria-controls="collapse-{$unique-product-id}">
@@ -60,7 +59,7 @@
 		<xsl:value-of select="v3:formCode[@codeSystem='2.16.840.1.113883.2.20.6.3']/@displayName"/>
 	</xsl:template>
 	
-	<!-- This is a fairly decent navigation sidebar menu -->
+	<!-- Navigation Sidebar Menu -->
 	<xsl:template match="v3:structuredBody" mode="sidebar-navigation">
 		<aside class="hide-in-print mb-2" id="left">
 			<div class="sticky-top sticky d-none d-md-block hide-in-print" id="side">
@@ -68,7 +67,8 @@
 					<h5 class="card-header text-white bg-aurora-accent1">
 						<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
 					</h5>
-					<!-- TODO move these inline styles, and also apply -ms-transform and -webkit-transform -->
+					<!-- This transform positions the scrollbar to the left of the Navigation Sidebar Menu.
+						 We could move these inline styles, and also apply -ms-transform and -webkit-transform -->
 					<div style="transform: scaleX(-1);" id="navigation-scrollbar">
 						<ul class="navbar-nav" id="navigation-sidebar" style="transform: scaleX(-1); ">
 							<xsl:for-each select="v3:component/v3:section">
@@ -91,7 +91,7 @@
 											</ul>
 										</li>							
 									</xsl:when>
-									<!-- TITLE PAGE OR RECENT MAJOR LABEL CHANGE NAVIGATION -->
+									<!-- NAVIGATION FOR TITLE PAGE OR ANY OTHER SECTION WITH NO SUBSECTIONS, LIKE RECENT MAJOR LABEL CHANGE -->
 									<xsl:when test="v3:code[@code='0TP'] or not(v3:component/v3:section)">
 										<li class="nav-item">
 											<a href="#{$unique-section-id}" class="nav-link nav-top">
@@ -100,7 +100,7 @@
 										</li>
 									</xsl:when>
 									<xsl:otherwise>
-										<!-- NAVIGATION FOR DIFFERENT PARTS -->
+										<!-- NAVIGATION FOR DIFFERENT PARTS THAT CONTAIN SUBSECTIONS -->
 										<li class="nav-item">
 											<a href="#drop-{$unique-section-id}" class="nav-link nav-top dropdown-toggle" data-toggle="collapse">
 												<xsl:value-of select="v3:title"/>
@@ -125,7 +125,7 @@
 		<xsl:variable name="unique-subsection-id"><xsl:value-of select="@ID"/></xsl:variable>
 		<li class="nav-item">
 			<a href="#{$unique-subsection-id}" class="nav-link">
-				<!-- TODO this should never be applied to non-draft SPL documents -->
+				<!-- This conditional should never be applied to non-draft SPL documents -->
 				<xsl:if test="not(normalize-space(v3:title))">
 					<span style="color:red;">&lt;&lt;MISSING INFORMATION&gt;&gt;</span>
 				</xsl:if>
@@ -185,7 +185,6 @@
 				<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
 				<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
 			</xsl:apply-templates>
-			<!-- TODO remove all of the show-data? -->
 			<xsl:if test="boolean($show-data)">
 				<xsl:apply-templates mode="data" select="."/>
 			</xsl:if>
@@ -206,7 +205,6 @@
 		<div class="Section">
 			<br/>
 			<h2 style="display: inline;">
-				<!-- pmh the colon in the title is supplied by the controlled vocabulary -->
 				<xsl:value-of select="v3:title"/>
 				<xsl:text> </xsl:text>
 			</h2>
@@ -252,7 +250,6 @@
 	</xsl:template>	
 	
 	<xsl:template name="canada-screen-body-footer">
-		<!-- perhaps Stickyfill should have cross origin integrity? 4.1.3 is the current "Aurora" version of Bootstrap, and I have upgraded to the latest, 4.4.1 -->
 		<xsl:text disable-output-escaping="yes">
 &lt;script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"&gt;&lt;/script&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"&gt;&lt;/script&gt;
