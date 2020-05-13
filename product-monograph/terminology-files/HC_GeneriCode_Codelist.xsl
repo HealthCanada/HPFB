@@ -124,7 +124,7 @@ metadata of this list is being referenced.</xsl:variable>
 <xsl:template match="/">
   <html>
     <head>
-      <div id="logo"><a href="/"><img src="https://github.com/HealthCanada/HPFB/raw/master/Controlled-Vocabularies/Style-Sheets/current/hc-signature.jpg" width="400" height="76" border="0" alt="HC" title="Health Canada" /></a></div>
+<!-- pmh <div id="logo"><a href="/"><img src="https://github.com/HealthCanada/HPFB/raw/master/Controlled-Vocabularies/Style-Sheets/current/hc-signature.jpg" width="400" height="76" border="0" alt="HC" title="Health Canada" /></a></div> -->
       
 	<!--determine the text to put in the browser title bar-->
       <xsl:choose>
@@ -144,12 +144,12 @@ metadata of this list is being referenced.</xsl:variable>
     <body>
       <!--process the information for the page-->
       <xsl:apply-templates/>
-      <p align="left">
+<!-- pmh   <p align="left">
                   <xsl:text>Report created by HPFB-GeneriCode_Codelist.xsl details can be found at: </xsl:text>
         <a href="https://github.com/HealthCanada/HPFB/tree/master/Controlled-Vocabularies">
             <xsl:text>HPFB GenriCode Document </xsl:text>
           </a>
-        </p>
+        </p> -->
     </body>
   </html>
 </xsl:template>
@@ -310,8 +310,8 @@ metadata of this list is being referenced.</xsl:variable>
         </small>
       </sup>
     </xsl:if>
+    <!--show (pmh or withhold) the meta data:
     <br/>
-    <!--show the meta data-->
     <samp>
       <small>
         <i>Id="<xsl:value-of select="@Id"/>"</i>
@@ -322,13 +322,13 @@ metadata of this list is being referenced.</xsl:variable>
           <xsl:if test="position()&gt;1"><xsl:text> </xsl:text></xsl:if>
           <xsl:value-of select="concat(name(.),'=&#34;',.,'&#34;')"/>
         </xsl:for-each>
-        <!--if this is a key column, indicate the key information-->
+        <!- -if this is a key column, indicate the key information- ->
         <xsl:for-each select="../Key[ColumnRef/@Ref=current()/@Id]">
           <br/>
           <xsl:text>[Key Id="</xsl:text>
           <xsl:value-of select="concat(@Id,'&#34;: ',ShortName)"/>
           <xsl:if test=".//Annotation/Description">
-            <!--link to documentation-->
+            <!- -link to documentation- ->
             <a href="#{generate-id(.)}">
 <xsl:text/>(<xsl:number count="*[.//Annotation/Description]"/>)<xsl:text/>
             </a>
@@ -336,7 +336,7 @@ metadata of this list is being referenced.</xsl:variable>
           <xsl:text>]</xsl:text>
         </xsl:for-each>
       </small>
-    </samp>
+    </samp> -->
   </th>
 </xsl:template>
 
