@@ -466,8 +466,8 @@
               <subjectOf>
                 <characteristic>
                   <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="FORME"/>
-                  <value code="C48336" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="CAPSULE"
-                    xsi:type="CV"/>
+                  <value code="C48336" codeSystem="2.16.840.1.113883.2.20.6.25"
+                    displayName="CAPSULE" xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
               <subjectOf>
@@ -863,8 +863,8 @@
                   <subjectOf>
                     <characteristic>
                       <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COULEUR"/>
-                      <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
-                        xsi:type="CV">
+                      <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24"
+                        displayName="BLANC" xsi:type="CV">
                         <originalText>BLANC</originalText>
                       </value>
                     </characteristic>
@@ -986,8 +986,8 @@
                   <subjectOf>
                     <characteristic>
                       <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COULEUR"/>
-                      <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="BLANC"
-                        xsi:type="CV">
+                      <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24"
+                        displayName="BLANC" xsi:type="CV">
                         <originalText>INCOLORE</originalText>
                       </value>
                     </characteristic>
@@ -1062,9 +1062,14 @@
               <code code="0tp1.1" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="Titre"/>
               <title>Titre</title>
               <text>
-                <paragraph>Symbole de classification, MARQUE NOMINATIVE, Nom propre, Forme(s)
-                  posologique(s), concentration(s) et voie(s) d’administration, Norme pharmaceutique
-                  (s’il y a lieu), Classification thérapeutique</paragraph>
+                <paragraph>MONOGRAPHIE DE PRODUIT</paragraph>
+                <paragraph>INCLUANT LES RENSEIGNEMENTS POUR LE PATIENT SUR LE MÉDICAMENT</paragraph><br></br>
+                <paragraph>[Symbole de classification] <content styleCode="bold">[MARQUE NOMINATIVE]</content></paragraph>
+                <paragraph>[Nom propre]</paragraph>
+                <paragraph>[Forme(s) posologique(s), concentration(s) et voie(s) d’administration]</paragraph>
+                <paragraph>[Norme pharmaceutique
+                  (s’il y a lieu)]</paragraph>
+                <paragraph>[Classification thérapeutique]</paragraph>
               </text>
               <effectiveTime value="20180101"/>
             </section>
@@ -1090,7 +1095,7 @@
                 displayName="Date d'approbation initiale"/>
               <title>Date d'approbation initiale</title>
               <text>
-                <paragraph>20170101</paragraph>
+                <paragraph>1 janvier 2018</paragraph>
               </text>
               <effectiveTime value="20180101"/>
             </section>
@@ -1102,7 +1107,7 @@
                 displayName="Date de révision"/>
               <title>Date de révision</title>
               <text>
-                <paragraph>20180101</paragraph>
+                <paragraph>1 janvier 2019</paragraph>
               </text>
               <effectiveTime value="20180101"/>
             </section>
@@ -1256,7 +1261,8 @@
                   <tbody>
                     <tr>
                       <td align="center">
-                        <content styleCode="bold">Mises en garde et précautions importantes</content>
+                        <content styleCode="bold">Mises en garde et précautions
+                          importantes</content>
                       </td>
                     </tr>
                     <tr>
@@ -1635,7 +1641,8 @@
                   <id root="a473c162-e146-44d0-b797-2b7b6cf00e43"/>
                   <code code="pi08.3" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="8.3 Effets indésirables peu courants (non fréquents) identifiés lors des essais cliniques"/>
-                  <title>8.3 Effets indésirables peu courants (non fréquents) identifiés lors des essais cliniques</title>
+                  <title>8.3 Effets indésirables peu courants (non fréquents) identifiés lors des
+                    essais cliniques</title>
                   <text>
                     <paragraph>[Présentés sous forme de liste et catégorisés par la classification
                       ‘System Organ Class’, par ordre alphabétique :]<br/>Appareil cardiovasculaire
@@ -1649,7 +1656,8 @@
                   <id root="a473c162-e176-44d0-be97-2b7b6cf00e43"/>
                   <code code="pi08.4" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="8.4 Résultats de laboratoire anormales: hématologique, chimie clinique et autres données quantitatives"/>
-                  <title>8.4 Résultats de laboratoire anormales: hématologique, chimie clinique et autres données quantitatives</title>
+                  <title>8.4 Résultats de laboratoire anormales: hématologique, chimie clinique et
+                    autres données quantitatives</title>
                   <text>
                     <paragraph>[table]</paragraph>
                   </text>
@@ -2069,13 +2077,13 @@
                           <th>% ratio de Moyenne géométrique</th>
                           <th>Intervalle de confiance<footnote>Indique le pourcentage de
                               l’intervalle de confiance (c.-à-d., 90 ou 95%) à l’en-tête de la
-                              colonne et la liste pour le ASC<sub>T</sub>, ASC<sub>I</sub> et C<sub>MAX</sub> (au
-                            besoin).</footnote></th>
+                              colonne et la liste pour le ASC<sub>T</sub>, ASC<sub>I</sub> et
+                                C<sub>MAX</sub> (au besoin).</footnote></th>
                         </tr>
                         <tr>
                           <td>AUC<sub>T</sub>(unités)<footnote>Pour les médicaments dont la demi-vie
-                            est supérieure à 24 heures, l’ASC<sub>T</sub> devrait être remplacé par
-                              ASC<sub>0-72</sub>.</footnote></td>
+                              est supérieure à 24 heures, l’ASC<sub>T</sub> devrait être remplacé
+                              par ASC<sub>0-72</sub>.</footnote></td>
                           <td/>
                           <td/>
                           <td/>
@@ -2129,8 +2137,8 @@
                           <th>% ratio de Moyenne géométrique</th>
                           <th>Intervalle de confiance<footnote>Indique le pourcentage de
                               l’intervalle de confiance (c.-à-d., 90 ou 95%) à l’en-tête de la
-                              colonne et la liste pour le ASC<sub>T</sub>, ASC<sub>I</sub> et C<sub>MAX</sub> (au
-                            besoin).</footnote></th>
+                              colonne et la liste pour le ASC<sub>T</sub>, ASC<sub>I</sub> et
+                                C<sub>MAX</sub> (au besoin).</footnote></th>
                         </tr>
                         <tr>
                           <td>AUC<sub>tau</sub>(unités)</td>
@@ -2226,7 +2234,8 @@
               <id root="be7426e6-c431-4a5f-a18e-ed321b381456"/>
               <code code="pmi01" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="LISEZ CE DOCUMENT POUR ASSURER UNE UTILISATION SÉCURITAIRE ET EFFICACE DE VOTRE MÉDICAMENT"/>
-              <title>LISEZ CE DOCUMENT POUR ASSURER UNE UTILISATION SÉCURITAIRE ET EFFICACE DE VOTRE MÉDICAMENT</title>
+              <title>LISEZ CE DOCUMENT POUR ASSURER UNE UTILISATION SÉCURITAIRE ET EFFICACE DE VOTRE
+                MÉDICAMENT</title>
               <text>
                 <paragraph><content styleCode="bold">[MARQUE NOMINATIVE]<br/>[Nom du produit sous sa
                     forme posologique finale]</content></paragraph>
@@ -2589,22 +2598,14 @@
       <component>
         <section ID="c11a616f-8cc8-4608-a969-a3af2862283e">
           <id root="d10febac-9113-4cc0-bc00-99f1fe2b714c"/>
-          <code code="pmiifu" codeSystem="2.16.840.1.113883.2.20.6.60"
-            displayName="MODE D'EMPLOI"/>
+          <code code="pmiifu" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="MODE D'EMPLOI"/>
           <title>MODE D'EMPLOI</title>
           <text>
-            <paragraph>Symbole de classification, MARQUE NOMINATIVE, Nom propre, Forme(s)
-              posologique(s), concentration(s) et voie(s) d’administration</paragraph>
-            <paragraph><content styleCode="bold">Étape 1: titre</content></paragraph>
-            <paragraph>[description et / ou image]</paragraph>
-            <paragraph><content styleCode="bold">Étape 2: titre</content></paragraph>
-            <paragraph>[description et / ou image]</paragraph>
-            <paragraph><content styleCode="bold">Étape 3: titre</content></paragraph>
-            <paragraph>[description et / ou image]</paragraph>
-            <paragraph><content styleCode="bold">Étape 4: titre</content></paragraph>
-            <paragraph>[description et / ou image]</paragraph>
-            <paragraph><content styleCode="bold">Étape 5: titre</content></paragraph>
-            <paragraph>[description et / ou image]</paragraph>
+            <paragraph>[Le cas échéant, fournissez des instructions écrites et visuelles étape par
+              étape sur la façon d'utiliser un produit médicamenteux en toute sécurité et
+              efficacement. Cela peut inclure des instructions non techniques sur la préparation,
+              l'administration, la manipulation, le stockage et l'élimination. Les informations
+              doivent être rédigées dans un langage simple.]</paragraph>
           </text>
           <effectiveTime value="20170101"/>
         </section>

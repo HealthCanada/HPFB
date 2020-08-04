@@ -1531,9 +1531,13 @@
                                 displayName="Title"/>
                             <title>Title</title>
                             <text>
-                                <paragraph> Scheduling Symbol, Brand Name, Proper name, Dosage
-                                    Form(s), Strength(s) and Route(s) of Administration,
-                                    Pharmaceutical Standard, Therapeutic Classification </paragraph>
+                                <paragraph>PRODUCT MONOGRAPH</paragraph>
+                                <paragraph>INCLUDING PATIENT MEDICATION INFORMATION</paragraph><br></br>
+                                <paragraph>[Scheduling Symbol] <content styleCode="bold">[Brand Name]</content></paragraph>
+                                <paragraph>[Proper name]</paragraph>
+                                <paragraph>[Dosage Form(s), Strength(s) and Route(s) of Administration]</paragraph>
+                                <paragraph>[Pharmaceutical Standard (if applicable)]</paragraph>
+                                <paragraph>[Therapeutic Classification]</paragraph>
                             </text>
                             <effectiveTime value="20180101"/>
                         </section>
@@ -1559,7 +1563,7 @@
                                 displayName="Date of Initial Approval"/>
                             <title>Date of Initial Approval</title>
                             <text>
-                                <paragraph>December 20, 2019</paragraph>
+                                <paragraph>January 1, 2018</paragraph>
                             </text>
                             <effectiveTime value="20180101"/>
                         </section>
@@ -1571,7 +1575,7 @@
                                 displayName="Date of Revision"/>
                             <title>Date of Revision</title>
                             <text>
-                                <paragraph>December 20, 2019</paragraph>
+                                <paragraph>January 1, 2019</paragraph>
                             </text>
                             <effectiveTime value="20180101"/>
                         </section>
@@ -1744,19 +1748,19 @@
                                         <tr>
                                             <td align="center">
                                                 <content styleCode="bold">Serious Warnings and
-                                                    Precautions</content>
+                                                  Precautions</content>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <paragraph>[Clinically significant or serious (e.g.,
-                                                    life-threatening) safety hazards should be placed
-                                                    in this box, with a cross reference to the
-                                                    relevant section(s) for more detailed information.
-                                                    Generally not to exceed 20 lines.</paragraph>
+                                                  life-threatening) safety hazards should be placed
+                                                  in this box, with a cross reference to the
+                                                  relevant section(s) for more detailed information.
+                                                  Generally not to exceed 20 lines.</paragraph>
                                                 <list>
-                                                    <item>[text]</item>
-                                                    <item>[text]</item>
+                                                  <item>[text]</item>
+                                                  <item>[text]</item>
                                                 </list>
                                             </td>
                                         </tr>
@@ -2110,20 +2114,19 @@
                                             approximating rates.<br/><br/>[Include a brief
                                             description of data sources.]<br/>[text]</paragraph>
                                         <table ID="t10" border="1" rules="all" frame="border">
-                                            <caption>Table [#] [Title of
-                                                Table]</caption>
+                                            <caption>Table [#] [Title of Table]</caption>
                                             <tbody>
                                                 <tr>
-                                                    <th/>
-                                                    <th>[drug name] n = [#] (%)</th>
-                                                    <th>[placebo] n = [#] (%)</th>
+                                                  <th/>
+                                                  <th>[drug name] n = [#] (%)</th>
+                                                  <th>[placebo] n = [#] (%)</th>
                                                 </tr>
                                                 <tr>
-                                                    <td>[use MedDRA terms for headings, as applicable]<br/>
-                                                        <content styleCode="bold"
-                                                            >Cardiovascular</content><br/>[text]<br/>[text]</td>
-                                                    <td/>
-                                                    <td/>
+                                                  <td>[use MedDRA terms for headings, as applicable]<br/>
+                                                  <content styleCode="bold"
+                                                  >Cardiovascular</content><br/>[text]<br/>[text]</td>
+                                                  <td/>
+                                                  <td/>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -2153,7 +2156,8 @@
                                     <id root="a473c162-e176-44d0-be97-2b7b6cf00e43"/>
                                     <code code="pi08.4" codeSystem="2.16.840.1.113883.2.20.6.60"
                                         displayName="8.4 Abnormal Laboratory Findings: Hematologic, Clinical Chemistry and Other Quantitative Data"/>
-                                    <title>8.4 Abnormal Laboratory Findings: Hematologic, Clinical Chemistry and Other Quantitative Data</title>
+                                    <title>8.4 Abnormal Laboratory Findings: Hematologic, Clinical
+                                        Chemistry and Other Quantitative Data</title>
                                     <text>
                                         <paragraph>[table]</paragraph>
                                     </text>
@@ -2205,20 +2209,21 @@
                                         <table frame="border" width="100%">
                                             <tbody>
                                                 <tr>
-                                                    <td align="center">
-                                                        <content styleCode="bold">Serious Drug Interactions</content>
-                                                    </td>
+                                                  <td align="center">
+                                                  <content styleCode="bold">Serious Drug
+                                                  Interactions</content>
+                                                  </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <paragraph>[Serious (e.g., life-threatening) drug
-                                                            interactions should be highlighted in this box.
-                                                            Not to exceed 20 lines.]</paragraph>
-                                                        <list>
-                                                            <item>[text]</item>
-                                                            <item>[text]</item>
-                                                        </list>
-                                                    </td>
+                                                  <td>
+                                                  <paragraph>[Serious (e.g., life-threatening) drug
+                                                  interactions should be highlighted in this box.
+                                                  Not to exceed 20 lines.]</paragraph>
+                                                  <list>
+                                                  <item>[text]</item>
+                                                  <item>[text]</item>
+                                                  </list>
+                                                  </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -2252,21 +2257,21 @@
                                             as contraindicated).<br/><br/> [or]<br/><br/>
                                             Interactions with other drugs have not been established. </paragraph>
                                         <table ID="t11" rules="all" frame="border" width="100%">
-                                            <caption>Table [#] - Established or Potential
-                                                Drug-Drug Interactions</caption>
+                                            <caption>Table [#] - Established or Potential Drug-Drug
+                                                Interactions</caption>
                                             <tbody>
                                                 <tr>
-                                                    <th>Proper /Common name</th>
-                                                    <th>Source of Evidence</th>
-                                                    <th>Effect</th>
-                                                    <th>Clinical comment</th>
+                                                  <th>Proper /Common name</th>
+                                                  <th>Source of Evidence</th>
+                                                  <th>Effect</th>
+                                                  <th>Clinical comment</th>
                                                 </tr>
                                                 <tr>
-                                                    <td>[drug A]</td>
-                                                    <td>[level of evidence, see legend]</td>
-                                                    <td>[drug A] conc</td>
-                                                    <td>[Caution is warranted and therapeutic
-                                                        concentration monitoring is recommended]</td>
+                                                  <td>[drug A]</td>
+                                                  <td>[level of evidence, see legend]</td>
+                                                  <td>[drug A] conc</td>
+                                                  <td>[Caution is warranted and therapeutic
+                                                  concentration monitoring is recommended]</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -2366,9 +2371,9 @@
                                     <title>10.3 Pharmacokinetics</title>
                                     <text>
                                         <table rules="all" frame="border">
-                                            <caption>Table [#] - Summary of [proper
-                                                name] Pharmacokinetic Parameters in [specific
-                                                patient population]</caption>
+                                            <caption>Table [#] - Summary of [proper name]
+                                                Pharmacokinetic Parameters in [specific patient
+                                                population]</caption>
                                             <tbody>
                                                 <tr>
                                                   <th/>
@@ -2493,9 +2498,8 @@
                                     <title>14.1 Trial Design and Study Demographics</title>
                                     <text>
                                         <table ID="t13" rules="all" frame="border">
-                                            <caption>Table [#] - Summary of patient
-                                                demographics for clinical trials in [specific
-                                                indication]</caption>
+                                            <caption>Table [#] - Summary of patient demographics for
+                                                clinical trials in [specific indication]</caption>
                                             <tbody>
                                                 <tr>
                                                   <th>Study #</th>
@@ -2531,8 +2535,8 @@
                                     <title>14.2 Study Results</title>
                                     <text>
                                         <table ID="t14" rules="all" frame="border">
-                                            <caption>Table [#] - Results of study [#] in
-                                                [specific indication]</caption>
+                                            <caption>Table [#] - Results of study [#] in [specific
+                                                indication]</caption>
                                             <tbody>
                                                 <tr>
                                                   <th>Primary Endpoints</th>
@@ -2582,8 +2586,9 @@
                                                   <th>% Ratio of Geometric Means</th>
                                                   <th>Confidence Interval<footnote>Indicate %
                                                   Confidence Interval (i.e., 90% or 95%) in the
-                                                  column heading and list for the AUC<sub>T</sub>, AUC<sub>I</sub> and
-                                                      C<sub>MAX</sub> (if required).</footnote></th>
+                                                  column heading and list for the AUC<sub>T</sub>,
+                                                  AUC<sub>I</sub> and C<sub>MAX</sub> (if
+                                                  required).</footnote></th>
                                                 </tr>
                                                 <tr>
                                                   <td>AUC<sub>T</sub>(units)<footnote>For drugs with
@@ -2647,13 +2652,15 @@
                                                   <th>% Ratio of Geometric Means</th>
                                                   <th>Confidence Interval<footnote>Indicate %
                                                   Confidence Interval (i.e., 90% or 95%) in the
-                                                  column heading and list for the AUC<sub>T</sub>, AUC<sub>I</sub> and
-                                                      C<sub>MAX</sub> (if required).</footnote></th>
+                                                  column heading and list for the AUC<sub>T</sub>,
+                                                  AUC<sub>I</sub> and C<sub>MAX</sub> (if
+                                                  required).</footnote></th>
                                                 </tr>
                                                 <tr>
-                                                  <td>AUC<sub>T</sub>(units)<footnote>For drugs
-                                                      with a half-life greater than 24 hours AUC<sub>T</sub> should
-                                                      be replaced with AUC<sub>0-72</sub>.</footnote></td>
+                                                  <td>AUC<sub>T</sub>(units)<footnote>For drugs with
+                                                  a half-life greater than 24 hours AUC<sub>T</sub>
+                                                  should be replaced with
+                                                  AUC<sub>0-72</sub>.</footnote></td>
                                                   <td/>
                                                   <td/>
                                                   <td/>
@@ -2725,8 +2732,8 @@
                                 <paragraph>[Where there are no supporting product monographs, this
                                     section should be omitted.]</paragraph>
                                 <paragraph>[numbered list:]<br/>[Brand name] [(dosage form,
-                                    strength)], submission control [number], Product
-                                    Monograph, [sponsor]. [(MON, DD, YYYY)]</paragraph>
+                                    strength)], submission control [number], Product Monograph,
+                                    [sponsor]. [(MON, DD, YYYY)]</paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
                         </section>
@@ -2751,27 +2758,27 @@
                                 <paragraph><content styleCode="bold">[Brand
                                     name]</content></paragraph>
                                 <paragraph><content styleCode="bold">[Proper Name in Final Dosage
-                                    Form]</content></paragraph>
+                                        Form]</content></paragraph>
                                 <paragraph>Read this carefully before you start taking <content
-                                    styleCode="bold">[Brand name]</content> and each time
-                                    you get a refill. This leaflet is a summary and will not tell
-                                    you everything about this drug. Talk to your healthcare
-                                    professional about your medical condition and treatment and ask
-                                    if there is any new information about <content styleCode="bold"
-                                        >[Brand name]</content>.</paragraph>
+                                        styleCode="bold">[Brand name]</content> and each time you
+                                    get a refill. This leaflet is a summary and will not tell you
+                                    everything about this drug. Talk to your healthcare professional
+                                    about your medical condition and treatment and ask if there is
+                                    any new information about <content styleCode="bold">[Brand
+                                        name]</content>.</paragraph>
                                 <table width="100%" frame="border">
                                     <tbody>
                                         <tr>
                                             <td align="center">
                                                 <content styleCode="bold">Serious Warnings and
-                                                    Precautions</content>
+                                                  Precautions</content>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <list>
-                                                    <item>[text]</item>
-                                                    <item>[text]</item>
+                                                  <item>[text]</item>
+                                                  <item>[text]</item>
                                                 </list>
                                             </td>
                                         </tr>
@@ -2862,8 +2869,8 @@
                             <code code="pmi07" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="To help avoid side effects and ensure proper use, talk to your healthcare professional before you take [Brand name]. Talk about any health conditions or problems you may have, including if you:"/>
                             <title>To help avoid side effects and ensure proper use, talk to your
-                                healthcare professional before you take [Brand name]. Talk
-                                about any health conditions or problems you may have, including if
+                                healthcare professional before you take [Brand name]. Talk about any
+                                health conditions or problems you may have, including if
                                 you:</title>
                             <text>
                                 <paragraph>[Enter one point for each warning and precaution from
@@ -2944,8 +2951,8 @@
                                     <tbody>
                                         <tr>
                                             <td styleCode="Lrule Rrule Botrule Toprule">If you think
-                                                you have taken too much [Brand name], contact
-                                                your healthcare professional, hospital emergency
+                                                you have taken too much [Brand name], contact your
+                                                healthcare professional, hospital emergency
                                                 department or regional poison control centre
                                                 immediately, even if there are no symptoms.</td>
                                         </tr>
@@ -2975,8 +2982,7 @@
                             <id root="be74b6e6-c431-4a5f-a98e-ed321b381456"/>
                             <code code="pmi14" codeSystem="2.16.840.1.113883.2.20.6.60"
                                 displayName="What are possible side effects from using [Brand name]?"/>
-                            <title>What are possible side effects from using [Brand
-                                name]?</title>
+                            <title>What are possible side effects from using [Brand name]?</title>
                             <text>
                                 <paragraph>These are not all the possible side effects you may feel
                                     when taking [Brand name]. If you experience any side effects not
@@ -3017,7 +3023,9 @@
                                             <td/>
                                         </tr>
                                         <tr>
-                                            <td><content styleCode="bold">COMMON</content><br/>[Condition: symptom / effect]</td>
+                                            <td><content styleCode="bold"
+                                                >COMMON</content><br/>[Condition: symptom /
+                                                effect]</td>
                                             <td/>
                                             <td/>
                                             <td/>
@@ -3029,7 +3037,9 @@
                                             <td/>
                                         </tr>
                                         <tr>
-                                            <td><content styleCode="bold">RARE</content><br/>[Condition: symptom / effect]</td>
+                                            <td><content styleCode="bold"
+                                                >RARE</content><br/>[Condition: symptom /
+                                                effect]</td>
                                             <td/>
                                             <td/>
                                             <td/>
@@ -3051,25 +3061,25 @@
                                         <tr>
                                             <td>
                                                 <paragraph><content styleCode="bold">Reporting Side
-                                                    Effects</content><br/>You can report any suspected
-                                                    side effects associated with the use of health
-                                                    products to Health Canada by:</paragraph>
+                                                  Effects</content><br/>You can report any suspected
+                                                  side effects associated with the use of health
+                                                  products to Health Canada by:</paragraph>
                                                 <list styleCode="unordered">
-                                                    <item>Visiting the Web page on Adverse Reaction
-                                                        Reporting <linkHtml
-                                                            href="http://www.hc-sc.gc.ca/dhp-
+                                                  <item>Visiting the Web page on Adverse Reaction
+                                                  Reporting <linkHtml
+                                                  href="http://www.hc-sc.gc.ca/dhp-
                                                             mps/medeff/report-declaration/index-eng.php"
-                                                            >(http://www.hc-sc.gc.ca/dhp-
-                                                            mps/medeff/report-declaration/index-eng.php)</linkHtml>
-                                                        for information on how to report online, by mail
-                                                        or by fax; or</item>
-                                                    <item>Calling toll-free at 1-866-234-2345.</item>
+                                                  >(http://www.hc-sc.gc.ca/dhp-
+                                                  mps/medeff/report-declaration/index-eng.php)</linkHtml>
+                                                  for information on how to report online, by mail
+                                                  or by fax; or</item>
+                                                  <item>Calling toll-free at 1-866-234-2345.</item>
                                                 </list>
                                                 <paragraph><content styleCode="italics">NOTE:
-                                                    Contact your health professional if you need
-                                                    information about how to manage your side effects.
-                                                    The Canada Vigilance Program does not provide
-                                                    medical advice.</content><br/></paragraph>
+                                                  Contact your health professional if you need
+                                                  information about how to manage your side effects.
+                                                  The Canada Vigilance Program does not provide
+                                                  medical advice.</content><br/></paragraph>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -3105,11 +3115,10 @@
                                         Medication Information by visiting the Health Canada website
                                             <linkHtml href="http://hc-sc.gc.ca/index-eng.php"
                                             >(http://hc-sc.gc.ca/index-eng.php)</linkHtml>; the
-                                        manufacturer's website [website], or by calling
-                                        1-800-[phone number].</item>
+                                        manufacturer's website [website], or by calling 1-800-[phone
+                                        number].</item>
                                 </list>
-                                <paragraph>This leaflet was prepared by [Sponsor
-                                    Name]</paragraph>
+                                <paragraph>This leaflet was prepared by [Sponsor Name]</paragraph>
                                 <paragraph>Last Revised (MON-DD-YYYY)</paragraph>
                             </text>
                             <effectiveTime value="20170101"/>
@@ -3124,18 +3133,11 @@
                         displayName="INSTRUCTIONS FOR USE"/>
                     <title>INSTRUCTIONS FOR USE</title>
                     <text>
-                        <paragraph>Scheduling Symbol, Brand Name, Proper name, Dosage Form(s),
-                            Strength(s) and Route(s) of Administration</paragraph>
-                        <paragraph><content styleCode="bold">Step 1: Title</content></paragraph>
-                        <paragraph>[description and/or image]</paragraph>
-                        <paragraph><content styleCode="bold">Step 2: Title</content></paragraph>
-                        <paragraph>[description and/or image]</paragraph>
-                        <paragraph><content styleCode="bold">Step 3: Title</content></paragraph>
-                        <paragraph>[description and/or image]</paragraph>
-                        <paragraph><content styleCode="bold">Step 4: Title</content></paragraph>
-                        <paragraph>[description and/or image]</paragraph>
-                        <paragraph><content styleCode="bold">Step 5: Title</content></paragraph>
-                        <paragraph>[description and/or image]</paragraph>
+                        <paragraph>[If applicable, provide step-by-step written and visual
+                            instructions on how to use a drug product safely and effectively. This
+                            may include non-technical instructions on preparation, administration,
+                            handling storage and disposal. The information should be written in
+                            plain language.]</paragraph>
                     </text>
                     <effectiveTime value="20170101"/>
                 </section>
