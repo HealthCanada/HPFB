@@ -1,1 +1,1 @@
-# HPFB - Placeholder
+# Repository for Health Canada/Health Products and Food Branch (HPFB) XML related content (E.g., schemas, style sheets, samples, templates, instructions.)
