@@ -28,7 +28,7 @@
                         <state>Illinois</state>
                         <postalCode>60133</postalCode>
                         <country code="USA" codeSystem="2.16.840.1.113883.2.20.6.17"
-                            displayName="UNITED STATES OF AMERICA (THE)"/>
+                            displayName="United States of America (the)"/>
                     </addr>
                     <telecom value="tel:+1-202-555-0178"/>
                     <telecom value="mailto:test@canada.ca"/>
@@ -47,7 +47,7 @@
                                 <state>Ontario</state>
                                 <postalCode>K1Z 6R5</postalCode>
                                 <country code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17"
-                                    displayName="CANADA"/>
+                                    displayName="Canada"/>
                             </addr>
                             <telecom value="tel:+1-416-555-0134"/>
                             <telecom value="mailto:test.2@canada.ca"/>
@@ -76,7 +76,7 @@
                                 <!-- DIN Number -->
                                 <name>LORUM IPSUM TABLETS</name>
                                 <formCode code="10219000" codeSystem="2.16.840.1.113883.2.20.6.3"
-                                    displayName="TABLET"/>
+                                    displayName="Tablet"/>
                                 <asEntityWithGeneric>
                                     <genericMedicine>
                                         <name>acetaminophen</name>
@@ -181,7 +181,7 @@
                                         <!--company defined pack code-->
                                         <formCode code="30008000"
                                             codeSystem="2.16.840.1.113883.2.20.6.32"
-                                            displayName="BOTTLE"/>
+                                            displayName="Bottle"/>
                                     </containerPackagedProduct>
                                     <subjectOf>
                                         <marketingAct>
@@ -208,7 +208,7 @@
                                         <!--company defined pack code-->
                                         <formCode code="30007000"
                                             codeSystem="2.16.840.1.113883.2.20.6.32"
-                                            displayName="BLISTER"/>
+                                            displayName="Blister"/>
                                         <asContent>
                                             <quantity>
                                                 <numerator value="4" unit="1"/>
@@ -218,7 +218,7 @@
                                                 <code code="ABC-6789"/>
                                                 <formCode code="30009000"
                                                   codeSystem="2.16.840.1.113883.2.20.6.32"
-                                                  displayName="BOX"/>
+                                                  displayName="Box"/>
                                             </containerPackagedProduct>
                                             <subjectOf>
                                                 <marketingAct>
@@ -248,7 +248,7 @@
                                             <territory>
                                                 <code code="CAN"
                                                   codeSystem="2.16.840.1.113883.2.20.6.17"
-                                                  displayName="CANADA"/>
+                                                  displayName="Canada"/>
                                             </territory>
                                         </territorialAuthority>
                                     </author>
@@ -344,8 +344,8 @@
                                 <characteristic>
                                     <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="THERAPEUTIC CLASS"/>
-                                    <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6"
-                                        displayName="THYROID AGENTS" xsi:type="CV"/>
+                                    <value code="N0000009695" codeSystem="2.16.840.1.113883.2.20.6.6"
+                                        displayName="Increased Thrombolysis [PE]" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
                             <subjectOf>
@@ -361,7 +361,7 @@
                                 <substanceAdministration>
                                     <routeCode code="20053000"
                                         codeSystem="2.16.840.1.113883.2.20.6.7"
-                                        displayName="ORAL USE"/>
+                                        displayName="Oral use"/>
                                 </substanceAdministration>
                             </consumedIn>
                         </manufacturedProduct>
@@ -373,7 +373,7 @@
                                 <!-- DIN Number -->
                                 <name>LORUM IPSUM CAPSULE</name>
                                 <formCode code="10210000" codeSystem="2.16.840.1.113883.2.20.6.3"
-                                    displayName="CAPSULE, HARD"/>
+                                    displayName="Capsule, hard"/>
                                 <asEntityWithGeneric>
                                     <genericMedicine>
                                         <name>acetaminophen</name>
@@ -470,7 +470,7 @@
                                         <!--company defined pack code-->
                                         <formCode code="30007000"
                                             codeSystem="2.16.840.1.113883.2.20.6.32"
-                                            displayName="BLISTER"/>
+                                            displayName="Blister"/>
                                         <asContent>
                                             <quantity>
                                                 <numerator value="4" unit="1"/>
@@ -480,7 +480,7 @@
                                                 <code code="ABC-6789"/>
                                                 <formCode code="30009000"
                                                   codeSystem="2.16.840.1.113883.2.20.6.32"
-                                                  displayName="BOX"/>
+                                                  displayName="Box"/>
                                             </containerPackagedProduct>
                                             <subjectOf>
                                                 <marketingAct>
@@ -510,7 +510,7 @@
                                             <territory>
                                                 <code code="CAN"
                                                   codeSystem="2.16.840.1.113883.2.20.6.17"
-                                                  displayName="CANADA"/>
+                                                  displayName="Canada"/>
                                             </territory>
                                         </territorialAuthority>
                                     </author>
@@ -616,8 +616,8 @@
                                 <characteristic>
                                     <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="THERAPEUTIC CLASS"/>
-                                    <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6"
-                                        displayName="THYROID AGENTS" xsi:type="CV"/>
+                                    <value code="N0000009741" codeSystem="2.16.840.1.113883.2.20.6.6"
+                                        displayName="Lysosomal Function Alteration [PE]" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
                             <subjectOf>
@@ -633,7 +633,7 @@
                                 <substanceAdministration>
                                     <routeCode code="20053000"
                                         codeSystem="2.16.840.1.113883.2.20.6.7"
-                                        displayName="ORAL USE"/>
+                                        displayName="Oral use"/>
                                 </substanceAdministration>
                             </consumedIn>
                         </manufacturedProduct>
@@ -645,7 +645,7 @@
                                 <!-- DIN Number -->
                                 <name>LORUM IPSUM POWDER</name>
                                 <formCode code="10110000" codeSystem="2.16.840.1.113883.2.20.6.3"
-                                    displayName="POWDER FOR ORAL SOLUTION"/>
+                                    displayName="Powder for oral solution"/>
                                 <asEntityWithGeneric>
                                     <genericMedicine>
                                         <name>acetaminophen</name>
@@ -722,7 +722,7 @@
                                         <!--company defined pack code-->
                                         <formCode code="30069000"
                                             codeSystem="2.16.840.1.113883.2.20.6.32"
-                                            displayName="VIAL"/>
+                                            displayName="Vial"/>
                                         <asContent>
                                             <quantity>
                                                 <numerator value="2" unit="1"/>
@@ -731,9 +731,9 @@
                                             <containerPackagedProduct>
                                                 <code/>
                                                 <!--company defined pack code-->
-                                                <formCode code="C53438"
+                                                <formCode code="30004000"
                                                   codeSystem="2.16.840.1.113883.2.20.6.32"
-                                                  displayName="TRAY"/>
+                                                  displayName="Bag"/>
                                                 <asContent>
                                                   <quantity>
                                                   <numerator value="1" unit="1"/>
@@ -744,7 +744,7 @@
                                                   <!--company defined pack code-->
                                                   <formCode code="30009000"
                                                   codeSystem="2.16.840.1.113883.2.20.6.32"
-                                                  displayName="BOX"/>
+                                                  displayName="Box"/>
                                                   </containerPackagedProduct>
                                                   <subjectOf>
                                                   <marketingAct>
@@ -776,7 +776,7 @@
                                             <territory>
                                                 <code code="CAN"
                                                   codeSystem="2.16.840.1.113883.2.20.6.17"
-                                                  displayName="CANADA"/>
+                                                  displayName="Canada"/>
                                             </territory>
                                         </territorialAuthority>
                                     </author>
@@ -841,15 +841,15 @@
                                 <characteristic>
                                     <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="THERAPEUTIC CLASS"/>
-                                    <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6"
-                                        displayName="THYROID AGENTS" xsi:type="CV"/>
+                                    <value code="N0000009741" codeSystem="2.16.840.1.113883.2.20.6.6"
+                                        displayName="Lysosomal Function Alteration [PE]" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
                             <consumedIn>
                                 <substanceAdministration>
                                     <routeCode code="20066000"
                                         codeSystem="2.16.840.1.113883.2.20.6.7"
-                                        displayName="SUBCUTANEOUS USE"/>
+                                        displayName="Subcutaneous use"/>
                                 </substanceAdministration>
                             </consumedIn>
                         </manufacturedProduct>
@@ -876,7 +876,7 @@
                                         <code code="1111"/>
                                         <formCode code="30009000"
                                             codeSystem="2.16.840.1.113883.2.20.6.32"
-                                            displayName="BOX"/>
+                                            displayName="Box"/>
                                     </containerPackagedProduct>
                                     <subjectOf>
                                         <marketingAct>
@@ -903,7 +903,7 @@
                                         <name>LORUM IPSUM KIT POWDER</name>
                                         <formCode code="10110000"
                                             codeSystem="2.16.840.1.113883.2.20.6.3"
-                                            displayName="POWDER FOR ORAL SOLUTION"/>
+                                            displayName="Powder for oral solution"/>
                                         <asEntityWithGeneric>
                                             <genericMedicine>
                                                 <name>acetaminophen</name>
@@ -980,7 +980,7 @@
                                                 <!--company defined pack code-->
                                                 <formCode code="30069000"
                                                   codeSystem="2.16.840.1.113883.2.20.6.32"
-                                                  displayName="VIAL"/>
+                                                  displayName="Vial"/>
                                             </containerPackagedProduct>
                                         </asContent>
                                     </partProduct>
@@ -996,7 +996,7 @@
                                                   <territory>
                                                   <code code="CAN"
                                                   codeSystem="2.16.840.1.113883.2.20.6.17"
-                                                  displayName="CANADA"/>
+                                                  displayName="Canada"/>
                                                   </territory>
                                                 </territorialAuthority>
                                             </author>
@@ -1042,9 +1042,9 @@
                                         <characteristic>
                                             <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
                                                 displayName="THERAPEUTIC CLASS"/>
-                                            <value code="772"
+                                            <value code="N0000175579"
                                                 codeSystem="2.16.840.1.113883.2.20.6.6"
-                                                displayName="THYROID AGENTS" xsi:type="CV"/>
+                                                displayName="Bisphosphonate [EPC]" xsi:type="CV"/>
                                         </characteristic>
                                     </subjectOf>
                                     <subjectOf>
@@ -1069,7 +1069,7 @@
                                         <substanceAdministration>
                                             <routeCode code="20045000"
                                                 codeSystem="2.16.840.1.113883.2.20.6.7"
-                                                displayName="INTRAVENOUS USE"/>
+                                                displayName="Intravenous use"/>
                                         </substanceAdministration>
                                     </consumedIn>
                                 </part>
@@ -1084,7 +1084,7 @@
                                         <name>WATER</name>
                                         <formCode code="10104000"
                                             codeSystem="2.16.840.1.113883.2.20.6.3"
-                                            displayName="ORAL LIQUID"/>
+                                            displayName="Oral liquid"/>
                                         <asEntityWithGeneric>
                                             <genericMedicine>
                                                 <name>Sodium chloride, water for injections</name>
@@ -1121,7 +1121,7 @@
                                                 <!--company defined pack code-->
                                                 <formCode code="30029000"
                                                   codeSystem="2.16.840.1.113883.2.20.6.32"
-                                                  displayName="INJECTION SYRINGE"/>
+                                                  displayName="Injection syringe"/>
                                             </containerPackagedProduct>
                                         </asContent>
                                     </partProduct>
@@ -1137,7 +1137,7 @@
                                                   <territory>
                                                   <code code="CAN"
                                                   codeSystem="2.16.840.1.113883.2.20.6.17"
-                                                  displayName="CANADA"/>
+                                                  displayName="Canada"/>
                                                   </territory>
                                                 </territorialAuthority>
                                             </author>
@@ -1183,9 +1183,9 @@
                                         <characteristic>
                                             <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
                                                 displayName="THERAPEUTIC CLASS"/>
-                                            <value code="43385"
+                                            <value code="N0000178476"
                                                 codeSystem="2.16.840.1.113883.2.20.6.6"
-                                                displayName="BLOOD DERIVATIVES" xsi:type="CV"/>
+                                                displayName="Blood Pressure Alteration [PE]" xsi:type="CV"/>
                                         </characteristic>
                                     </subjectOf>
                                     <subjectOf>
@@ -1210,7 +1210,7 @@
                                         <substanceAdministration>
                                             <routeCode code="20045000"
                                                 codeSystem="2.16.840.1.113883.2.20.6.7"
-                                                displayName="INTRAVENOUS USE"/>
+                                                displayName="Intravenous use"/>
                                         </substanceAdministration>
                                     </consumedIn>
                                 </part>
@@ -1225,7 +1225,7 @@
                                             <territory>
                                                 <code code="CAN"
                                                   codeSystem="2.16.840.1.113883.2.20.6.17"
-                                                  displayName="CANADA"/>
+                                                  displayName="Canada"/>
                                             </territory>
                                         </territorialAuthority>
                                     </author>
@@ -1249,7 +1249,7 @@
                                 <!-- DIN Number -->
                                 <name>LORUM IPSUM CELLS RANGE</name>
                                 <formCode code="11201000" codeSystem="2.16.840.1.113883.2.20.6.3"
-                                    displayName="SOLUTION FOR INJECTION"/>
+                                    displayName="Solution for injection"/>
                                 <asEntityWithGeneric>
                                     <genericMedicine>
                                         <name>acetaminophen</name>
@@ -1329,7 +1329,7 @@
                                         <!--company defined pack code-->
                                         <formCode code="30008000"
                                             codeSystem="2.16.840.1.113883.2.20.6.32"
-                                            displayName="BOTTLE"/>
+                                            displayName="Bottle"/>
                                     </containerPackagedProduct>
                                     <subjectOf>
                                         <marketingAct>
@@ -1356,7 +1356,7 @@
                                         <!--company defined pack code-->
                                         <formCode code="30007000"
                                             codeSystem="2.16.840.1.113883.2.20.6.32"
-                                            displayName="BLISTER"/>
+                                            displayName="Blister"/>
                                         <asContent>
                                             <quantity>
                                                 <numerator value="4" unit="1"/>
@@ -1366,7 +1366,7 @@
                                                 <code code="ABC-6789"/>
                                                 <formCode code="30009000"
                                                   codeSystem="2.16.840.1.113883.2.20.6.32"
-                                                  displayName="BOX"/>
+                                                  displayName="Box"/>
                                             </containerPackagedProduct>
                                             <subjectOf>
                                                 <marketingAct>
@@ -1396,7 +1396,7 @@
                                             <territory>
                                                 <code code="CAN"
                                                   codeSystem="2.16.840.1.113883.2.20.6.17"
-                                                  displayName="CANADA"/>
+                                                  displayName="Canada"/>
                                             </territory>
                                         </territorialAuthority>
                                     </author>
@@ -1492,8 +1492,8 @@
                                 <characteristic>
                                     <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="THERAPEUTIC CLASS"/>
-                                    <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6"
-                                        displayName="THYROID AGENTS" xsi:type="CV"/>
+                                    <value code="N0000178476" codeSystem="2.16.840.1.113883.2.20.6.6"
+                                        displayName="Blood Pressure Alteration [PE]" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
                             <subjectOf>
@@ -1509,7 +1509,7 @@
                                 <substanceAdministration>
                                     <routeCode code="20053000"
                                         codeSystem="2.16.840.1.113883.2.20.6.7"
-                                        displayName="ORAL USE"/>
+                                        displayName="Oral use"/>
                                 </substanceAdministration>
                             </consumedIn>
                         </manufacturedProduct>
@@ -2156,8 +2156,7 @@
                                     <id root="a473c162-e176-44d0-be97-2b7b6cf00e43"/>
                                     <code code="pi08.4" codeSystem="2.16.840.1.113883.2.20.6.60"
                                         displayName="8.4 Abnormal Laboratory Findings: Hematologic, Clinical Chemistry and Other Quantitative Data"/>
-                                    <title>8.4 Abnormal Laboratory Findings: Hematologic, Clinical
-                                        Chemistry and Other Quantitative Data</title>
+                                    <title>8.4 Abnormal Laboratory Findings: Hematologic, Clinical Chemistry and Other Quantitative Data</title>
                                     <text>
                                         <paragraph>[table]</paragraph>
                                     </text>
