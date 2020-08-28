@@ -28,7 +28,7 @@
             <state>Illinois</state>
             <postalCode>60133</postalCode>
             <country code="USA" codeSystem="2.16.840.1.113883.2.20.6.17"
-              displayName="ÉTATS-UNIS D'AMÉRIQUE (LES)"/>
+              displayName="États-Unis d'Amérique (les)"/>
           </addr>
           <telecom value="tel:+1-202-555-0178"/>
           <telecom value="mailto:test@canada.ca"/>
@@ -47,7 +47,7 @@
                 <state>Ontario</state>
                 <postalCode>K1Z 6R5</postalCode>
                 <country code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17"
-                  displayName="CANADA (LE)"/>
+                  displayName="Canada (le)"/>
               </addr>
               <telecom value="tel:+1-416-555-0134"/>
               <telecom value="mailto:test.2@canada.ca"/>
@@ -75,7 +75,7 @@
                 <!-- DIN Number -->
                 <name>LORUM IPSUM COMPRIMÉS</name>
                 <formCode code="10219000" codeSystem="2.16.840.1.113883.2.20.6.3"
-                  displayName="COMPRIMÉ"/>
+                  displayName="Comprimé"/>
                 <asEntityWithGeneric>
                   <genericMedicine>
                     <name>acetaminophen</name>
@@ -144,7 +144,7 @@
                     <code code="ABC-1234"/>
                     <!--company defined pack code-->
                     <formCode code="30024000" codeSystem="2.16.840.1.113883.2.20.6.32"
-                      displayName="BOUTEILLE"/>
+                      displayName="Bouteille"/>
                   </containerPackagedProduct>
                   <subjectOf>
                     <marketingAct>
@@ -170,7 +170,7 @@
                     <code code="ABC-5678"/>
                     <!--company defined pack code-->
                     <formCode code="30007000" codeSystem="2.16.840.1.113883.2.20.6.32"
-                      displayName="PLAQUETTE"/>
+                      displayName="Plaquette"/>
                     <asContent>
                       <quantity>
                         <numerator value="4" unit="1"/>
@@ -179,7 +179,7 @@
                       <containerPackagedProduct>
                         <code code="ABC-6789"/>
                         <formCode code="30009000" codeSystem="2.16.840.1.113883.2.20.6.32"
-                          displayName="BOÎTE"/>
+                          displayName="Boîte"/>
                       </containerPackagedProduct>
                       <subjectOf>
                         <marketingAct>
@@ -206,7 +206,7 @@
                     <territorialAuthority>
                       <territory>
                         <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17"
-                          displayName="CANADA (LE)"/>
+                          displayName="Canada (le)"/>
                       </territory>
                     </territorialAuthority>
                   </author>
@@ -290,18 +290,10 @@
                     xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
-              <subjectOf>
-                <characteristic>
-                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
-                    displayName="CLASSE THÉRAPEUTIQUE"/>
-                  <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6"
-                    displayName="ANALGÉSIQUE" xsi:type="CV"/>
-                </characteristic>
-              </subjectOf>
               <consumedIn>
                 <substanceAdministration>
                   <routeCode code="20053000" codeSystem="2.16.840.1.113883.2.20.6.7"
-                    displayName="VOIE ORALE"/>
+                    displayName="Voie orale"/>
                 </substanceAdministration>
               </consumedIn>
             </manufacturedProduct>
@@ -313,7 +305,7 @@
                 <!-- DIN Number -->
                 <name>LORUM IPSUM CAPSULE</name>
                 <formCode code="10210000" codeSystem="2.16.840.1.113883.2.20.6.3"
-                  displayName="GÉLULE"/>
+                  displayName="Gélule"/>
                 <asEntityWithGeneric>
                   <genericMedicine>
                     <name>acetaminophen</name>
@@ -382,7 +374,7 @@
                     <code code="ABC-5678"/>
                     <!--company defined pack code-->
                     <formCode code="30007000" codeSystem="2.16.840.1.113883.2.20.6.32"
-                      displayName="PLAQUETTE"/>
+                      displayName="Plaquette"/>
                     <asContent>
                       <quantity>
                         <numerator value="4" unit="1"/>
@@ -391,7 +383,7 @@
                       <containerPackagedProduct>
                         <code code="ABC-6789"/>
                         <formCode code="30009000" codeSystem="2.16.840.1.113883.2.20.6.32"
-                          displayName="BOÎTE"/>
+                          displayName="Boîte"/>
                       </containerPackagedProduct>
                       <subjectOf>
                         <marketingAct>
@@ -418,7 +410,7 @@
                     <territorialAuthority>
                       <territory>
                         <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17"
-                          displayName="CANADA (LE)"/>
+                          displayName="Canada (le)"/>
                       </territory>
                     </territorialAuthority>
                   </author>
@@ -511,18 +503,10 @@
                     xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
-              <subjectOf>
-                <characteristic>
-                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
-                    displayName="CLASSE THÉRAPEUTIQUE"/>
-                  <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6"
-                    displayName="ANALGÉSIQUE" xsi:type="CV"/>
-                </characteristic>
-              </subjectOf>
               <consumedIn>
                 <substanceAdministration>
                   <routeCode code="20053000" codeSystem="2.16.840.1.113883.2.20.6.7"
-                    displayName="VOIE ORALE"/>
+                    displayName="Voie orale"/>
                 </substanceAdministration>
               </consumedIn>
             </manufacturedProduct>
@@ -534,7 +518,7 @@
                 <!-- DIN Number -->
                 <name>LORUM IPSUM POUDRE</name>
                 <formCode code="10110000" codeSystem="2.16.840.1.113883.2.20.6.3"
-                  displayName="POUDRE POUR SOLUTION BUVABLE"/>
+                  displayName="Poudre pour solution buvable"/>
                 <asEntityWithGeneric>
                   <genericMedicine>
                     <name>acetaminophen</name>
@@ -603,7 +587,7 @@
                     <code code="1212"/>
                     <!--company defined pack code-->
                     <formCode code="30069000" codeSystem="2.16.840.1.113883.2.20.6.32"
-                      displayName="FLACON"/>
+                      displayName="Flacon"/>
                     <asContent>
                       <quantity>
                         <numerator value="2" unit="1"/>
@@ -612,8 +596,8 @@
                       <containerPackagedProduct>
                         <code code="1212"/>
                         <!--company defined pack code-->
-                        <formCode code="C53438" codeSystem="2.16.840.1.113883.2.20.6.32"
-                          displayName="PLATEAU"/>
+                        <formCode code="30004000" codeSystem="2.16.840.1.113883.2.20.6.32"
+                          displayName="Poche"/>
                         <asContent>
                           <quantity>
                             <numerator value="1" unit="1"/>
@@ -623,7 +607,7 @@
                             <code code="1212"/>
                             <!--company defined pack code-->
                             <formCode code="30009000" codeSystem="2.16.840.1.113883.2.20.6.32"
-                              displayName="BOÎTE"/>
+                              displayName="Boîte"/>
                           </containerPackagedProduct>
                           <subjectOf>
                             <marketingAct>
@@ -652,7 +636,7 @@
                     <territorialAuthority>
                       <territory>
                         <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17"
-                          displayName="CANADA (LE)"/>
+                          displayName="Canada (le)"/>
                       </territory>
                     </territorialAuthority>
                   </author>
@@ -701,18 +685,10 @@
                     xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
-              <subjectOf>
-                <characteristic>
-                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
-                    displayName="CLASSE THÉRAPEUTIQUE"/>
-                  <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6"
-                    displayName="ANALGÉSIQUE" xsi:type="CV"/>
-                </characteristic>
-              </subjectOf>
               <consumedIn>
                 <substanceAdministration>
                   <routeCode code="20066000" codeSystem="2.16.840.1.113883.2.20.6.7"
-                    displayName="VOIE SOUS-CUTANÉE"/>
+                    displayName="Voie sous-cutanée"/>
                 </substanceAdministration>
               </consumedIn>
             </manufacturedProduct>
@@ -738,7 +714,7 @@
                   <containerPackagedProduct>
                     <code code="1111"/>
                     <formCode code="30009000" codeSystem="2.16.840.1.113883.2.20.6.32"
-                      displayName="BOÎTE"/>
+                      displayName="Boîte"/>
                   </containerPackagedProduct>
                   <subjectOf>
                     <marketingAct>
@@ -762,7 +738,7 @@
                     <!-- DIN Number -->
                     <name>LORUM IPSUM TROUSSE POUDRE</name>
                     <formCode code="10110000" codeSystem="2.16.840.1.113883.2.20.6.3"
-                      displayName="POUDRE POUR SOLUTION BUVABLE"/>
+                      displayName="Poudre pour solution buvable"/>
                     <asEntityWithGeneric>
                       <genericMedicine>
                         <name>acetaminophen</name>
@@ -831,7 +807,7 @@
                         <code code="1212"/>
                         <!--company defined pack code-->
                         <formCode code="30069000" codeSystem="2.16.840.1.113883.2.20.6.32"
-                          displayName="FLACON"/>
+                          displayName="Flacon"/>
                       </containerPackagedProduct>
                     </asContent>
                   </partProduct>
@@ -845,7 +821,7 @@
                         <territorialAuthority>
                           <territory>
                             <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17"
-                              displayName="CANADA (LE)"/>
+                              displayName="Canada (le)"/>
                           </territory>
                         </territorialAuthority>
                       </author>
@@ -884,18 +860,10 @@
                         displayName="PRESCRIPTION" xsi:type="CV"/>
                     </characteristic>
                   </subjectOf>
-                  <subjectOf>
-                    <characteristic>
-                      <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
-                        displayName="CLASSE THÉRAPEUTIQUE"/>
-                      <value code="772" codeSystem="2.16.840.1.113883.2.20.6.6"
-                        displayName="ANALGÉSIQUE" xsi:type="CV"/>
-                    </characteristic>
-                  </subjectOf>
                   <consumedIn>
                     <substanceAdministration>
                       <routeCode code="20045000" codeSystem="2.16.840.1.113883.2.20.6.7"
-                        displayName="VOIE INTRAVEINEUSE"/>
+                        displayName="Voie intraveineuse"/>
                     </substanceAdministration>
                   </consumedIn>
                 </part>
@@ -909,7 +877,7 @@
                     <!-- DIN Number -->
                     <name>EAU</name>
                     <formCode code="10512000" codeSystem="2.16.840.1.113883.2.20.6.3"
-                      displayName="LIQUIDE CUTANÉ"/>
+                      displayName="Liquide cutané"/>
                     <asEntityWithGeneric>
                       <genericMedicine>
                         <name>CHLORURE DE SODIUM, EAU POUR INJECTIONS</name>
@@ -943,7 +911,7 @@
                         <code code="1234"/>
                         <!--company defined pack code-->
                         <formCode code="30051000" codeSystem="2.16.840.1.113883.2.20.6.32"
-                          displayName="SERINGUE PRÉREMPLIE"/>
+                          displayName="Seringue préremplie"/>
                       </containerPackagedProduct>
                       <subjectOf>
                         <marketingAct>
@@ -968,7 +936,7 @@
                         <territorialAuthority>
                           <territory>
                             <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17"
-                              displayName="CANADA (LE)"/>
+                              displayName="Canada (le)"/>
                           </territory>
                         </territorialAuthority>
                       </author>
@@ -1007,18 +975,10 @@
                         displayName="EN VENTE LIBRE" xsi:type="CV"/>
                     </characteristic>
                   </subjectOf>
-                  <subjectOf>
-                    <characteristic>
-                      <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
-                        displayName="CLASSE THÉRAPEUTIQUE"/>
-                      <value code="43385" codeSystem="2.16.840.1.113883.2.20.6.6"
-                        displayName="ANALGÉSIQUE" xsi:type="CV"/>
-                    </characteristic>
-                  </subjectOf>
                   <consumedIn>
                     <substanceAdministration>
                       <routeCode code="20045000" codeSystem="2.16.840.1.113883.2.20.6.7"
-                        displayName="VOIE INTRAVEINEUSE"/>
+                        displayName="Voie intraveineuse"/>
                     </substanceAdministration>
                   </consumedIn>
                 </part>
@@ -1031,7 +991,7 @@
                     <territorialAuthority>
                       <territory>
                         <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17"
-                          displayName="CANADA (LE)"/>
+                          displayName="Canada (le)"/>
                       </territory>
                     </territorialAuthority>
                   </author>
@@ -1641,8 +1601,7 @@
                   <id root="a473c162-e146-44d0-b797-2b7b6cf00e43"/>
                   <code code="pi08.3" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="8.3 Effets indésirables peu courants (non fréquents) identifiés lors des essais cliniques"/>
-                  <title>8.3 Effets indésirables peu courants (non fréquents) identifiés lors des
-                    essais cliniques</title>
+                  <title>8.3 Effets indésirables peu courants (non fréquents) identifiés lors des essais cliniques</title>
                   <text>
                     <paragraph>[Présentés sous forme de liste et catégorisés par la classification
                       ‘System Organ Class’, par ordre alphabétique :]<br/>Appareil cardiovasculaire
@@ -1656,8 +1615,7 @@
                   <id root="a473c162-e176-44d0-be97-2b7b6cf00e43"/>
                   <code code="pi08.4" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="8.4 Résultats de laboratoire anormales: hématologique, chimie clinique et autres données quantitatives"/>
-                  <title>8.4 Résultats de laboratoire anormales: hématologique, chimie clinique et
-                    autres données quantitatives</title>
+                  <title>8.4 Résultats de laboratoire anormales: hématologique, chimie clinique et autres données quantitatives</title>
                   <text>
                     <paragraph>[table]</paragraph>
                   </text>
@@ -1701,8 +1659,8 @@
                 <section ID="be75cfb9-3131-4903-800b-267527398a13">
                   <id root="b9db4be0-3f46-437a-bd7b-4a3e01fadaad"/>
                   <code code="pi09.1" codeSystem="2.16.840.1.113883.2.20.6.60"
-                    displayName="9.1 Encadré Mises en garde et précautions importantes"/>
-                  <title>9.1 Encadré Mises en garde et précautions importantes</title>
+                    displayName="9.1 Encadré Interactions médicamenteuses graves"/>
+                  <title>9.1 Encadré Interactions médicamenteuses graves</title>
                   <text>
                     <paragraph>[Supprimez cette section, si l’encadré «Interactions médicamenteuses
                       graves» ne s’applique pas.]</paragraph>
@@ -2234,8 +2192,7 @@
               <id root="be7426e6-c431-4a5f-a18e-ed321b381456"/>
               <code code="pmi01" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="LISEZ CE DOCUMENT POUR ASSURER UNE UTILISATION SÉCURITAIRE ET EFFICACE DE VOTRE MÉDICAMENT"/>
-              <title>LISEZ CE DOCUMENT POUR ASSURER UNE UTILISATION SÉCURITAIRE ET EFFICACE DE VOTRE
-                MÉDICAMENT</title>
+              <title>LISEZ CE DOCUMENT POUR ASSURER UNE UTILISATION SÉCURITAIRE ET EFFICACE DE VOTRE MÉDICAMENT</title>
               <text>
                 <paragraph><content styleCode="bold">[MARQUE NOMINATIVE]<br/>[Nom du produit sous sa
                     forme posologique finale]</content></paragraph>
@@ -2317,9 +2274,8 @@
             <section ID="bca4d498-0gc3-4e44-bcb6-55013024de5d">
               <id root="be74b6e6-c431-4a5f-a18e-ed321b381756"/>
               <code code="pmi05" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="[Marque nominative] est offert sous les formes posologiques qui suivent:"/>
-              <title>[Marque nominative] est offert sous les formes posologiques qui
-                suivent:</title>
+                displayName="[Marque nominative] est offert sous les formes posologiques qui suivent :"/>
+              <title>[Marque nominative] est offert sous les formes posologiques qui suivent :</title>
               <text>
                 <paragraph>[Pour garder cette section brève, veuillez inclure seulement
                   l’information requise.] [forme(s) posologique(s) et concentration(s)]</paragraph>
@@ -2331,8 +2287,8 @@
             <section ID="bca4d498-0gc3-4e54-bcb6-550130d4de5d">
               <id root="be74b6e6-c431-4a5f-a18e-ed3a1b381456"/>
               <code code="pmi06" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Ne prenez pas [Marque nominative] si:"/>
-              <title>Ne prenez pas [Marque nominative] si:</title>
+                displayName="Ne prenez pas [Marque nominative] si :"/>
+              <title>Ne prenez pas [Marque nominative] si :</title>
               <text>
                 <paragraph>[Inscrire chaque contre-indication mentionnée à la partie I.]</paragraph>
                 <list>
@@ -2347,10 +2303,8 @@
             <section ID="bca4c498-00c3-4e44-bcb6-550134d4de5d">
               <id root="be74b6e6-cd31-4a5f-a18e-ed321b381456"/>
               <code code="pmi07" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Consultez votre professionnel de la santé avant de prendre [Marque nominative], afin de réduire la possibilité d'effets secondaires et pour assurer la bonne utilisation du médicament."/>
-              <title>Consultez votre professionnel de la santé avant de prendre [Marque nominative],
-                afin de réduire la possibilité d'effets secondaires et pour assurer la bonne
-                utilisation du médicament.</title>
+                displayName="Consultez votre professionnel de la santé avant de prendre [Marque nominative], afin de réduire la possibilité d'effets secondaires et pour assurer la bonne utilisation du médicament. Mentionnez à votre professionnel de la santé tous vos problèmes de santé, notamment :"/>
+              <title>Consultez votre professionnel de la santé avant de prendre [Marque nominative], afin de réduire la possibilité d'effets secondaires et pour assurer la bonne utilisation du médicament. Mentionnez à votre professionnel de la santé tous vos problèmes de santé, notamment :</title>
               <text>
                 <paragraph>[Inscrire chaque mise en garde ou précaution mentionnée à la partie
                   I.]</paragraph>
@@ -2366,8 +2320,8 @@
             <section ID="b6b37351-bbc9-46d9-b148-27ba3cb0a75e">
               <id root="be74b6e6-c431-4a5f-a18e-ed32cc381456"/>
               <code code="pmi08" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Autres mises en garde à connaître:"/>
-              <title>Autres mises en garde à connaître:</title>
+                displayName="Autres mises en garde à connaître :"/>
+              <title>Autres mises en garde à connaître :</title>
               <text>
                 <paragraph>[Fournir des renseignements généraux qui ne figureraient pas dans la
                   liste des mises en garde et des précautions ou sous d’autres rubriques, sinon
@@ -2384,9 +2338,9 @@
             <section ID="edac0d6f-3c91-48b5-99c0-e0f940925d37">
               <id root="be74bbe6-c431-4a5f-a18e-ed321b381456"/>
               <code code="pmi09" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Les produits qui suivent pourraient être associés à des interactions médicamenteuses avec [Marque nominative]:"/>
+                displayName="Les produits qui suivent pourraient être associés à des interactions médicamenteuses avec [Marque nominative] :"/>
               <title>Les produits qui suivent pourraient être associés à des interactions
-                médicamenteuses avec [Marque nominative]:</title>
+                médicamenteuses avec [Marque nominative] :</title>
               <text>
                 <list>
                   <item>[texte]</item>
@@ -2399,8 +2353,8 @@
             <section ID="f040bb1e-8989-42c8-82dc-53a855e88f0f">
               <id root="be74b6e6-c431-4a5f-a18e-ed431b381456"/>
               <code code="pmi10" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Comment prendre [Marque nominative]:"/>
-              <title>Comment prendre [Marque nominative]:</title>
+                displayName="Comment prendre [Marque nominative] :"/>
+              <title>Comment prendre [Marque nominative] :</title>
               <text>
                 <paragraph>[texte]</paragraph>
               </text>
@@ -2411,8 +2365,8 @@
             <section ID="bca4c498-0ac3-4e44-bcb6-550134d4de5d">
               <id root="be74b6e6-c431-4a5f-a18e-ed321ab81456"/>
               <code code="pmi11" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Dose habituelle:"/>
-              <title>Dose habituelle:</title>
+                displayName="Dose habituelle :"/>
+              <title>Dose habituelle :</title>
               <text>
                 <paragraph>[texte]</paragraph>
               </text>
@@ -2422,8 +2376,8 @@
           <component>
             <section ID="e23321cd-5111-4aa3-b650-74f93bcda261">
               <id root="be74b6e6-c431-4a5f-a18e-ed3212281456"/>
-              <code code="pmi12" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="Surdosage:"/>
-              <title>Surdosage:</title>
+              <code code="pmi12" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="Surdosage :"/>
+              <title>Surdosage :</title>
               <text>
                 <paragraph>[texte]</paragraph>
                 <table width="100%" rules="all" frame="border">
@@ -2446,8 +2400,8 @@
             <section ID="cd0892a2-0e32-4fb7-9cc9-1bbfff60dee7">
               <id root="be74b6e6-c431-4a5f-a18e-11321b381456"/>
               <code code="pmi13" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Dose oubliée:"/>
-              <title>Dose oubliée:</title>
+                displayName="Dose oubliée :"/>
+              <title>Dose oubliée :</title>
               <text>
                 <paragraph>[texte]</paragraph>
               </text>
@@ -2562,8 +2516,8 @@
           <component>
             <section ID="ffd59b8d-fe66-4d86-a54f-0613d4168199">
               <id root="be74b6e6-c431-4a5f-a18e-ed321e381456"/>
-              <code code="pmi15" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="Entreposage:"/>
-              <title>Entreposage:</title>
+              <code code="pmi15" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="Entreposage :"/>
+              <title>Entreposage :</title>
               <text>
                 <paragraph>[texte]</paragraph>
                 <paragraph>Garder hors de la portée de et de la vue des enfants.</paragraph>
@@ -2575,8 +2529,8 @@
             <section ID="cb61f530-b95a-4047-b8ea-861c5a7a05e8">
               <id root="be74b6e6-c431-4a5f-a98e-ed321b381456"/>
               <code code="pmi16" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Pour en savoir davantage au sujet de [Marque nominative], vous pouvez:"/>
-              <title>Pour en savoir davantage au sujet de [Marque nominative], vous pouvez:</title>
+                displayName="Pour en savoir davantage au sujet de [Marque nominative], vous pouvez :"/>
+              <title>Pour en savoir davantage au sujet de [Marque nominative], vous pouvez :</title>
               <text>
                 <list>
                   <item>Communiquer avec votre professionnel de la santé.</item>
