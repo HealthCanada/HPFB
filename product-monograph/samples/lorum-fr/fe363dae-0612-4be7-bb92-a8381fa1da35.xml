@@ -2549,21 +2549,6 @@
           </component>
         </section>
       </component>
-      <component>
-        <section ID="c11a616f-8cc8-4608-a969-a3af2862283e">
-          <id root="d10febac-9113-4cc0-bc00-99f1fe2b714c"/>
-          <code code="pmiifu" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="MODE D'EMPLOI"/>
-          <title>MODE D'EMPLOI</title>
-          <text>
-            <paragraph>[Le cas échéant, fournissez des instructions écrites et visuelles étape par
-              étape sur la façon d'utiliser un produit médicamenteux en toute sécurité et
-              efficacement. Cela peut inclure des instructions non techniques sur la préparation,
-              l'administration, la manipulation, le stockage et l'élimination. Les informations
-              doivent être rédigées dans un langage simple.]</paragraph>
-          </text>
-          <effectiveTime value="20170101"/>
-        </section>
-      </component>
     </structuredBody>
   </component>
 </document>
