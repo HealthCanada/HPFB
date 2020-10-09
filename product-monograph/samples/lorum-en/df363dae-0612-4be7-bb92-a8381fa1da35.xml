@@ -1560,8 +1560,8 @@
                         <section ID="bf2dab4e-fd04-4ec9-9cdc-247188622d0f">
                             <id root="e5f1dea3-d907-4664-b46f-e1d9736d47af"/>
                             <code code="0tp1.3" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="Date of Initial Approval"/>
-                            <title>Date of Initial Approval</title>
+                                displayName="Date of Initial Approval:"/>
+                            <title>Date of Initial Approval:</title>
                             <text>
                                 <paragraph>January 1, 2018</paragraph>
                             </text>
@@ -1572,8 +1572,8 @@
                         <section ID="d0184119-8fd7-4378-af77-b227c39e8445">
                             <id root="ad78301c-29a9-41af-96f8-d58815fed296"/>
                             <code code="0tp1.4" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="Date of Revision"/>
-                            <title>Date of Revision</title>
+                                displayName="Date of Revision:"/>
+                            <title>Date of Revision:</title>
                             <text>
                                 <paragraph>January 1, 2019</paragraph>
                             </text>
