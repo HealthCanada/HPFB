@@ -88,13 +88,13 @@
                   </quantity>
                   <ingredientSubstance>
                     <code code="362O9ITL9D" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="ACETAMINOPHEN"/>
-                    <name>ACETAMINOPHEN</name>
+                      displayName="ACÉTAMINOPHÈNE"/>
+                    <name>ACÉTAMINOPHÈNE</name>
                     <activeMoiety>
                       <activeMoiety>
                         <code code="362O9ITL9D" codeSystem="2.16.840.1.113883.2.20.6.14"
-                          displayName="ACETAMINOPHEN"/>
-                        <name>ACETAMINOPHEN</name>
+                          displayName="ACÉTAMINOPHÈNE"/>
+                        <name>ACÉTAMINOPHÈNE</name>
                       </activeMoiety>
                     </activeMoiety>
                   </ingredientSubstance>
@@ -123,15 +123,15 @@
                 <ingredient classCode="IACT">
                   <ingredientSubstance>
                     <code code="70097M6I30" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="MAGNESIUM STEARATE"/>
-                    <name>MAGNESIUM STEARATE</name>
+                      displayName="STÉARATE DE MAGNÉSIUM"/>
+                    <name>STÉARATE DE MAGNÉSIUM</name>
                   </ingredientSubstance>
                 </ingredient>
                 <ingredient classCode="IACT">
                   <ingredientSubstance>
                     <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="TITANIUM DIOXIDE"/>
-                    <name>TITANIUM DIOXIDE</name>
+                      displayName="DIOXYDE DE TITANE"/>
+                    <name>DIOXYDE DE TITANE</name>
                   </ingredientSubstance>
                 </ingredient>
                 <asContent>
@@ -318,13 +318,13 @@
                   </quantity>
                   <ingredientSubstance>
                     <code code="362O9ITL9D" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="ACETAMINOPHEN"/>
-                    <name>ACETAMINOPHEN</name>
+                      displayName="ACÉTAMINOPHÈNE"/>
+                    <name>ACÉTAMINOPHÈNE</name>
                     <activeMoiety>
                       <activeMoiety>
                         <code code="362O9ITL9D" codeSystem="2.16.840.1.113883.2.20.6.14"
-                          displayName="ACETAMINOPHEN"/>
-                        <name>ACETAMINOPHEN</name>
+                          displayName="ACÉTAMINOPHÈNE"/>
+                        <name>ACÉTAMINOPHÈNE</name>
                       </activeMoiety>
                     </activeMoiety>
                   </ingredientSubstance>
@@ -353,15 +353,15 @@
                 <ingredient classCode="IACT">
                   <ingredientSubstance>
                     <code code="70097M6I30" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="MAGNESIUM STEARATE"/>
-                    <name>MAGNESIUM STEARATE</name>
+                      displayName="STÉARATE DE MAGNÉSIUM"/>
+                    <name>STÉARATE DE MAGNÉSIUM</name>
                   </ingredientSubstance>
                 </ingredient>
                 <ingredient classCode="IACT">
                   <ingredientSubstance>
                     <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="TITANIUM DIOXIDE"/>
-                    <name>TITANIUM DIOXIDE</name>
+                      displayName="DIOXYDE DE TITANE"/>
+                    <name>DIOXYDE DE TITANE</name>
                   </ingredientSubstance>
                 </ingredient>
                 <asContent>
@@ -531,13 +531,13 @@
                   </quantity>
                   <ingredientSubstance>
                     <code code="362O9ITL9D" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="ACETAMINOPHEN"/>
-                    <name>ACETAMINOPHEN</name>
+                      displayName="ACÉTAMINOPHÈNE"/>
+                    <name>ACÉTAMINOPHÈNE</name>
                     <activeMoiety>
                       <activeMoiety>
                         <code code="362O9ITL9D" codeSystem="2.16.840.1.113883.2.20.6.14"
-                          displayName="ACETAMINOPHEN"/>
-                        <name>ACETAMINOPHEN</name>
+                          displayName="ACÉTAMINOPHÈNE"/>
+                        <name>ACÉTAMINOPHÈNE</name>
                       </activeMoiety>
                     </activeMoiety>
                   </ingredientSubstance>
@@ -566,15 +566,15 @@
                 <ingredient classCode="IACT">
                   <ingredientSubstance>
                     <code code="70097M6I30" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="MAGNESIUM STEARATE"/>
-                    <name>MAGNESIUM STEARATE</name>
+                      displayName="STÉARATE DE MAGNÉSIUM"/>
+                    <name>STÉARATE DE MAGNÉSIUM</name>
                   </ingredientSubstance>
                 </ingredient>
                 <ingredient classCode="IACT">
                   <ingredientSubstance>
                     <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="TITANIUM DIOXIDE"/>
-                    <name>TITANIUM DIOXIDE</name>
+                      displayName="DIOXYDE DE TITANE"/>
+                    <name>DIOXYDE DE TITANE</name>
                   </ingredientSubstance>
                 </ingredient>
                 <asContent>
@@ -751,13 +751,13 @@
                       </quantity>
                       <ingredientSubstance>
                         <code code="362O9ITL9D" codeSystem="2.16.840.1.113883.2.20.6.14"
-                          displayName="ACETAMINOPHEN"/>
-                        <name>ACETAMINOPHEN</name>
+                          displayName="ACÉTAMINOPHÈNE"/>
+                        <name>ACÉTAMINOPHÈNE</name>
                         <activeMoiety>
                           <activeMoiety>
                             <code code="362O9ITL9D" codeSystem="2.16.840.1.113883.2.20.6.14"
-                              displayName="ACETAMINOPHEN"/>
-                            <name>ACETAMINOPHEN</name>
+                              displayName="ACÉTAMINOPHÈNE"/>
+                            <name>ACÉTAMINOPHÈNE</name>
                           </activeMoiety>
                         </activeMoiety>
                       </ingredientSubstance>
@@ -786,15 +786,15 @@
                     <ingredient classCode="IACT">
                       <ingredientSubstance>
                         <code code="70097M6I30" codeSystem="2.16.840.1.113883.2.20.6.14"
-                          displayName="MAGNESIUM STEARATE"/>
-                        <name>MAGNESIUM STEARATE</name>
+                          displayName="STÉARATE DE MAGNÉSIUM"/>
+                        <name>STÉARATE DE MAGNÉSIUM</name>
                       </ingredientSubstance>
                     </ingredient>
                     <ingredient classCode="IACT">
                       <ingredientSubstance>
                         <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.2.20.6.14"
-                          displayName="TITANIUM DIOXIDE"/>
-                        <name>TITANIUM DIOXIDE</name>
+                          displayName="DIOXYDE DE TITANE"/>
+                        <name>DIOXYDE DE TITANE</name>
                       </ingredientSubstance>
                     </ingredient>
                     <asContent>
@@ -890,13 +890,13 @@
                       </quantity>
                       <ingredientSubstance>
                         <code code="451W47IQ8X" codeSystem="2.16.840.1.113883.2.20.6.14"
-                          displayName="SODIUM CHLORIDE"/>
-                        <name>SODIUM CHLORIDE</name>
+                          displayName="CHLORURE DE SODIUM"/>
+                        <name>CHLORURE DE SODIUM</name>
                         <activeMoiety>
                           <activeMoiety>
                             <code code="451W47IQ8X" codeSystem="2.16.840.1.113883.2.20.6.14"
-                              displayName="SODIUM CHLORIDE"/>
-                            <name>SODIUM CHLORIDE</name>
+                              displayName="CHLORURE DE SODIUM"/>
+                            <name>CHLORURE DE SODIUM</name>
                           </activeMoiety>
                         </activeMoiety>
                       </ingredientSubstance>
@@ -1052,8 +1052,8 @@
             <section ID="bf2dab4e-fd04-4ec9-9cdc-247188622d0f">
               <id root="e5f1dea3-d907-4664-b46f-e1d9736d47af"/>
               <code code="0tp1.3" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Date d'approbation initiale"/>
-              <title>Date d'approbation initiale</title>
+                displayName="Date d'approbation initiale :"/>
+              <title>Date d'approbation initiale :</title>
               <text>
                 <paragraph>1 janvier 2018</paragraph>
               </text>
@@ -1064,8 +1064,8 @@
             <section ID="d0184119-8fd7-4378-af77-b227c39e8445">
               <id root="ad78301c-29a9-41af-96f8-d58815fed296"/>
               <code code="0tp1.4" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Date de révision"/>
-              <title>Date de révision</title>
+                displayName="Date de révision :"/>
+              <title>Date de révision :</title>
               <text>
                 <paragraph>1 janvier 2019</paragraph>
               </text>
@@ -1272,8 +1272,8 @@
                 <section ID="b3d876c1-c36c-4ed5-8993-c507e3ab9f2e">
                   <id root="da2d22a3-b5c2-4a62-b138-9594dd0491bb"/>
                   <code code="pi04.2" codeSystem="2.16.840.1.113883.2.20.6.60"
-                    displayName="4.2 Posologie recommandée et modification posologique"/>
-                  <title>4.2 Posologie recommandée et modification posologique</title>
+                    displayName="4.2 Dose recommandée et modification posologique"/>
+                  <title>4.2 Dose recommandée et modification posologique</title>
                   <text>
                     <paragraph>[Inclure les posologies pour chaque indication, voie d’administration
                       et/ou forme posologique :]<br/>[texte]</paragraph>
@@ -1368,8 +1368,8 @@
             <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f7a">
               <id root="a471c162-e176-44d0-b797-2b7b6cf00e43"/>
               <code code="pi06" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="6 FORMES POSOLOGIQUES, CONCENTRATIONS, COMPOSITION, ET CONDITIONNEMENT"/>
-              <title>6 FORMES POSOLOGIQUES, CONCENTRATIONS, COMPOSITION, ET CONDITIONNEMENT</title>
+                displayName="6 FORMES POSOLOGIQUES, CONCENTRATIONS, COMPOSITION ET EMBALLAGE"/>
+              <title>6 FORMES POSOLOGIQUES, CONCENTRATIONS, COMPOSITION ET EMBALLAGE</title>
               <text>
                 <table ID="t5" rules="all" frame="border">
 
@@ -1614,8 +1614,8 @@
                 <section ID="a63c33a5-e08a-473c-b8a2-b22dbd215f7a">
                   <id root="a473c162-e176-44d0-be97-2b7b6cf00e43"/>
                   <code code="pi08.4" codeSystem="2.16.840.1.113883.2.20.6.60"
-                    displayName="8.4 Résultats de laboratoire anormales: hématologique, chimie clinique et autres données quantitatives"/>
-                  <title>8.4 Résultats de laboratoire anormales: hématologique, chimie clinique et autres données quantitatives</title>
+                    displayName="8.4 Résultats de laboratoire anormaux : hématologique, chimie clinique et autres données quantitatives"/>
+                  <title>8.4 Résultats de laboratoire anormaux : hématologique, chimie clinique et autres données quantitatives</title>
                   <text>
                     <paragraph>[table]</paragraph>
                   </text>
@@ -1764,8 +1764,8 @@
                 <section ID="be78cfb9-3131-4903-800b-267527398a13">
                   <id root="b9db4be0-3f46-437a-bd7b-4a3e01aadaad"/>
                   <code code="pi09.6" codeSystem="2.16.840.1.113883.2.20.6.60"
-                    displayName="9.6 Interactions médicament-épreuves de laboratoire"/>
-                  <title>9.6 Interactions médicament-épreuves de laboratoire</title>
+                    displayName="9.6 Interactions médicament-tests de laboratoire"/>
+                  <title>9.6 Interactions médicament-tests de laboratoire</title>
                   <text>
                     <paragraph>[texte]</paragraph>
                   </text>
@@ -1914,8 +1914,8 @@
             <section ID="ee2875272-8229-4c12-919e-827854dcd76a">
               <id root="d134d52c-f9d4-4698-a082-84b29ee3d95a"/>
               <code code="pii13" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="13 RENSEIGNEMENTS PHARMACEUTIQUES"/>
-              <title>13 RENSEIGNEMENTS PHARMACEUTIQUES</title>
+                displayName="13 INFORMATION PHARMACEUTIQUES"/>
+              <title>13 INFORMATION PHARMACEUTIQUES</title>
               <text>
                 <paragraph><content styleCode="bold">Substance pharmaceutique</content></paragraph>
                 <paragraph>Nom propre : [texte]</paragraph>
@@ -2229,8 +2229,8 @@
             <section ID="baa4d498-0fc3-4e44-b4b6-550140d4e5d">
               <id root="be74b6e6-c431-4a5f-a18e-ed321c381456"/>
               <code code="pmi02" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Pourquoi [Marque nominative] est-il utilisé?"/>
-              <title>Pourquoi [Marque nominative] est-il utilisé?</title>
+                displayName="Pour quoi [Marque nominative] est-il utilisé?"/>
+              <title>Pour quoi [Marque nominative] est-il utilisé?</title>
               <text>
                 <list>
                   <item>[texte]</item>
@@ -2259,8 +2259,8 @@
             <section ID="bca4d498-0gc3-4e44-bcb6-550140d4de5d">
               <id root="be74b6e6-c431-4adf-a18e-ed321b381456"/>
               <code code="pmi04" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Quels sont les ingrédients de [Marque nominative]?"/>
-              <title>Quels sont les ingrédients de [Marque nominative]?</title>
+                displayName="Quels sont les ingrédients dans [Marque nominative]?"/>
+              <title>Quels sont les ingrédients dans [Marque nominative]?</title>
               <text>
                 <paragraph>Ingrédients médicinaux : [Énumérer tous les ingrédients médicinaux
                   mentionnés à la partie I.] Ingrédients non médicinaux : [Énumérer tous les
@@ -2274,8 +2274,8 @@
             <section ID="bca4d498-0gc3-4e44-bcb6-55013024de5d">
               <id root="be74b6e6-c431-4a5f-a18e-ed321b381756"/>
               <code code="pmi05" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="[Marque nominative] est offert sous les formes posologiques qui suivent :"/>
-              <title>[Marque nominative] est offert sous les formes posologiques qui suivent :</title>
+                displayName="[Marque nominative] est disponible sous les formes posologiques suivantes :"/>
+              <title>[Marque nominative] est disponible sous les formes posologiques suivantes :</title>
               <text>
                 <paragraph>[Pour garder cette section brève, veuillez inclure seulement
                   l’information requise.] [forme(s) posologique(s) et concentration(s)]</paragraph>
@@ -2303,8 +2303,8 @@
             <section ID="bca4c498-00c3-4e44-bcb6-550134d4de5d">
               <id root="be74b6e6-cd31-4a5f-a18e-ed321b381456"/>
               <code code="pmi07" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Consultez votre professionnel de la santé avant de prendre [Marque nominative], afin de réduire la possibilité d'effets secondaires et pour assurer la bonne utilisation du médicament. Mentionnez à votre professionnel de la santé tous vos problèmes de santé, notamment :"/>
-              <title>Consultez votre professionnel de la santé avant de prendre [Marque nominative], afin de réduire la possibilité d'effets secondaires et pour assurer la bonne utilisation du médicament. Mentionnez à votre professionnel de la santé tous vos problèmes de santé, notamment :</title>
+                displayName="Consultez votre professionnel de la santé avant de prendre [Marque nominative], afin de réduire la possibilité d'effets indésirables et pour assurer la bonne utilisation du médicament. Mentionnez à votre professionnel de la santé tous vos problèmes de santé, notamment :"/>
+              <title>Consultez votre professionnel de la santé avant de prendre [Marque nominative], afin de réduire la possibilité d'effets indésirables et pour assurer la bonne utilisation du médicament. Mentionnez à votre professionnel de la santé tous vos problèmes de santé, notamment :</title>
               <text>
                 <paragraph>[Inscrire chaque mise en garde ou précaution mentionnée à la partie
                   I.]</paragraph>
