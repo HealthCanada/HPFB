@@ -337,7 +337,7 @@
                                     <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="SCHEDULE"/>
                                     <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2"
-                                        displayName="PRESCRIPTION" xsi:type="CV"/>
+                                        displayName="Prescription" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
                             <subjectOf>
@@ -609,7 +609,7 @@
                                     <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="SCHEDULE"/>
                                     <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2"
-                                        displayName="PRESCRIPTION" xsi:type="CV"/>
+                                        displayName="Prescription" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
                             <subjectOf>
@@ -834,7 +834,7 @@
                                     <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="SCHEDULE"/>
                                     <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2"
-                                        displayName="PRESCRIPTION" xsi:type="CV"/>
+                                        displayName="Prescription" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
                             <subjectOf>
@@ -1035,7 +1035,7 @@
                                             <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23"
                                                 displayName="SCHEDULE"/>
                                             <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2"
-                                                displayName="PRESCRIPTION" xsi:type="CV"/>
+                                                displayName="Prescription" xsi:type="CV"/>
                                         </characteristic>
                                     </subjectOf>
                                     <subjectOf>
@@ -1485,7 +1485,7 @@
                                     <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="SCHEDULE"/>
                                     <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2"
-                                        displayName="PRESCRIPTION" xsi:type="CV"/>
+                                        displayName="Prescription" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
                             <subjectOf>
