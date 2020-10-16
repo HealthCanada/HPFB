@@ -259,7 +259,7 @@
                 <characteristic>
                   <code code="5" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="RAINURE"/>
                   <value code="0" codeSystem="2.16.840.1.113883.2.20.6.4"
-                    displayName="NON COMPRIMÉS" xsi:type="CV"> </value>
+                    displayName="SANS RAINURE" xsi:type="CV"> </value>
                 </characteristic>
               </subjectOf>
               <subjectOf>
@@ -286,7 +286,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="ANNEXE"/>
-                  <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="PRESCRIPTION"
+                  <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Prescription"
                     xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
@@ -472,7 +472,7 @@
                 <characteristic>
                   <code code="5" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="RAINURE"/>
                   <value code="0" codeSystem="2.16.840.1.113883.2.20.6.4"
-                    displayName="NON COMPRIMÉS" xsi:type="CV"> </value>
+                    displayName="SANS RAINURE" xsi:type="CV"> </value>
                 </characteristic>
               </subjectOf>
               <subjectOf>
@@ -499,7 +499,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="ANNEXE"/>
-                  <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="PRESCRIPTION"
+                  <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Prescription"
                     xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
@@ -681,7 +681,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="ANNEXE"/>
-                  <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="PRESCRIPTION"
+                  <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Prescription"
                     xsi:type="CV"/>
                 </characteristic>
               </subjectOf>
@@ -857,7 +857,7 @@
                     <characteristic>
                       <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="ANNEXE"/>
                       <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2"
-                        displayName="PRESCRIPTION" xsi:type="CV"/>
+                        displayName="Prescription" xsi:type="CV"/>
                     </characteristic>
                   </subjectOf>
                   <consumedIn>
@@ -972,7 +972,7 @@
                     <characteristic>
                       <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="ANNEXE"/>
                       <value code="5" codeSystem="2.16.840.1.113883.2.20.6.2"
-                        displayName="EN VENTE LIBRE" xsi:type="CV"/>
+                        displayName="En vente libre" xsi:type="CV"/>
                     </characteristic>
                   </subjectOf>
                   <consumedIn>
