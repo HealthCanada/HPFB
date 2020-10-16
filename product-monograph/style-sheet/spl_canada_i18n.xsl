@@ -90,7 +90,7 @@
 		<combinationProduct lang="fr">Type de produit combiné</combinationProduct>
 		<pharmaStandard lang="fr">Norme pharmaceutique</pharmaStandard>
 		<schedule lang="fr">Annexe</schedule>
-		<therapeuticClass lang="fr">Classe thérapeutique</therapeuticClass>
+		<therapeuticClass lang="fr">Classification thérapeutique</therapeuticClass>
 		<packaging lang="fr">État de l’emballage</packaging>
 		<itemCode lang="fr">Identificateur d’emballage</itemCode>
 		<packageDescription lang="fr">Description de l’emballage</packageDescription>
