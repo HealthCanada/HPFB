@@ -562,8 +562,8 @@
                                 <characteristic>
                                     <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="SHAPE"/>
-                                    <value code="C48336" codeSystem="2.16.840.1.113883.2.20.6.25"
-                                        displayName="CAPSULE" xsi:type="CV"/>
+                                    <value code="C48345" codeSystem="2.16.840.1.113883.2.20.6.25"
+                                        displayName="OVAL" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
                             <subjectOf>
