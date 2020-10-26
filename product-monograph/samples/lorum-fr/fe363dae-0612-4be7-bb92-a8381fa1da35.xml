@@ -229,7 +229,7 @@
                     displayName="TYPE DE PRODUIT"/>
                   <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53"
                     displayName="PHARMACEUTIQUE" xsi:type="CV">
-                    <originalText>PHARMACEUTIQUE</originalText>
+             
                   </value>
                 </characteristic>
               </subjectOf>
@@ -433,7 +433,7 @@
                     displayName="TYPE DE PRODUIT"/>
                   <value code="2" codeSystem="2.16.840.1.113883.2.20.6.53" displayName="BIOLOGIQUES"
                     xsi:type="CV">
-                    <originalText>BIOLOGIQUES</originalText>
+           
                   </value>
                 </characteristic>
               </subjectOf>
