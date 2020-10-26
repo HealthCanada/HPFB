@@ -272,7 +272,7 @@
                                         displayName="PRODUCT TYPE"/>
                                     <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53"
                                         displayName="PHARMACEUTICAL" xsi:type="CV">
-                                        <originalText>PHARMACEUTICAL</originalText>
+                                  
                                     </value>
                                 </characteristic>
                             </subjectOf>
@@ -534,7 +534,7 @@
                                         displayName="PRODUCT TYPE"/>
                                     <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53"
                                         displayName="PHARMACEUTICAL" xsi:type="CV">
-                                        <originalText>PHARMACEUTICAL</originalText>
+                    
                                     </value>
                                 </characteristic>
                             </subjectOf>
@@ -1420,7 +1420,7 @@
                                         displayName="PRODUCT TYPE"/>
                                     <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53"
                                         displayName="PHARMACEUTICAL" xsi:type="CV">
-                                        <originalText>PHARMACEUTICAL</originalText>
+                                 
                                     </value>
                                 </characteristic>
                             </subjectOf>
@@ -2968,8 +2968,8 @@
                         <section ID="ffd59b8d-fe66-4d86-a54f-0613d4168199">
                             <id root="be74b6e6-c431-4a5f-a18e-ed321e381456"/>
                             <code code="pmi13" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="Missed dose:"/>
-                            <title>Missed dose:</title>
+                                displayName="Missed Dose:"/>
+                            <title>Missed Dose:</title>
                             <text>
                                 <paragraph>[text]</paragraph>
                             </text>
