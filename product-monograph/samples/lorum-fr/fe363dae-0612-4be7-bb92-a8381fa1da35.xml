@@ -109,8 +109,8 @@
                 <ingredient classCode="IACT">
                   <ingredientSubstance>
                     <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="MICROCRYSTALLINE CELLULOSE"/>
-                    <name>MICROCRYSTALLINE CELLULOSE</name>
+                      displayName="CELLULOSE MICROCRYSTALLINE"/>
+                    <name>CELLULOSE MICROCRYSTALLINE</name>
                   </ingredientSubstance>
                 </ingredient>
                 <ingredient classCode="IACT">
@@ -339,8 +339,8 @@
                 <ingredient classCode="IACT">
                   <ingredientSubstance>
                     <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="MICROCRYSTALLINE CELLULOSE"/>
-                    <name>MICROCRYSTALLINE CELLULOSE</name>
+                      displayName="CELLULOSE MICROCRYSTALLINE"/>
+                    <name>CELLULOSE MICROCRYSTALLINE</name>
                   </ingredientSubstance>
                 </ingredient>
                 <ingredient classCode="IACT">
@@ -552,8 +552,8 @@
                 <ingredient classCode="IACT">
                   <ingredientSubstance>
                     <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="MICROCRYSTALLINE CELLULOSE"/>
-                    <name>MICROCRYSTALLINE CELLULOSE</name>
+                      displayName="CELLULOSE MICROCRYSTALLINE"/>
+                    <name>CELLULOSE MICROCRYSTALLINE</name>
                   </ingredientSubstance>
                 </ingredient>
                 <ingredient classCode="IACT">
@@ -772,8 +772,8 @@
                     <ingredient classCode="IACT">
                       <ingredientSubstance>
                         <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.2.20.6.14"
-                          displayName="MICROCRYSTALLINE CELLULOSE"/>
-                        <name>MICROCRYSTALLINE CELLULOSE</name>
+                          displayName="CELLULOSE MICROCRYSTALLINE"/>
+                        <name>CELLULOSE MICROCRYSTALLINE</name>
                       </ingredientSubstance>
                     </ingredient>
                     <ingredient classCode="IACT">
@@ -1117,8 +1117,8 @@
         <section ID="d6a947eb-e2be-45c0-8b2e-15d0d0eebea8">
           <id root="e6bb83b9-2602-4f96-9077-b8b9535c254e"/>
           <code code="pi00" codeSystem="2.16.840.1.113883.2.20.6.60"
-            displayName="PARTIE I: RENSEIGNEMENTS POUR LE PROFESSIONNEL DE LA SANTÉ"/>
-          <title>PARTIE I: RENSEIGNEMENTS POUR LE PROFESSIONNEL DE LA SANTÉ</title>
+            displayName="PARTIE I : RENSEIGNEMENTS POUR LE PROFESSIONNEL DE LA SANTÉ"/>
+          <title>PARTIE I : RENSEIGNEMENTS POUR LE PROFESSIONNEL DE LA SANTÉ</title>
           <effectiveTime value="20180101"/>
           <component>
             <section ID="c2ea4fad-2b79-4dbc-8d99-6843adc2dec8">
@@ -1907,8 +1907,8 @@
         <section ID="ab6a947eb-e2be-45c0-8b2e-15d0d0eebed8">
           <id root="d91389e0-c234-44d9-8327-91b121723a8f"/>
           <code code="pii00" codeSystem="2.16.840.1.113883.2.20.6.60"
-            displayName="PARTIE II: RENSEIGNEMENTS SCIENTIFIQUES"/>
-          <title>PARTIE II: RENSEIGNEMENTS SCIENTIFIQUES</title>
+            displayName="PARTIE II : RENSEIGNEMENTS SCIENTIFIQUES"/>
+          <title>PARTIE II : RENSEIGNEMENTS SCIENTIFIQUES</title>
           <effectiveTime value="20170101"/>
           <component>
             <section ID="ee2875272-8229-4c12-919e-827854dcd76a">
