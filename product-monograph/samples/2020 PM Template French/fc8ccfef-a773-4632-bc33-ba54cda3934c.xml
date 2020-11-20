@@ -142,8 +142,8 @@
                                     <ingredientSubstance>
                                         <code code="OP1R32D61U"
                                             codeSystem="2.16.840.1.113883.2.20.6.14"
-                                            displayName="MICROCRYSTALLINE CELLULOSE"/>
-                                        <name>MICROCRYSTALLINE CELLULOSE</name>
+                                            displayName="CELLULOSE MICROCRYSTALLINE"/>
+                                        <name>CELLULOSE MICROCRYSTALLINE</name>
                                     </ingredientSubstance>
                                 </ingredient>
                                 <ingredient classCode="IACT">
@@ -431,8 +431,8 @@
                                     <ingredientSubstance>
                                         <code code="OP1R32D61U"
                                             codeSystem="2.16.840.1.113883.2.20.6.14"
-                                            displayName="MICROCRYSTALLINE CELLULOSE"/>
-                                        <name>MICROCRYSTALLINE CELLULOSE</name>
+                                            displayName="CELLULOSE MICROCRYSTALLINE"/>
+                                        <name>CELLULOSE MICROCRYSTALLINE</name>
                                     </ingredientSubstance>
                                 </ingredient>
                                 <ingredient classCode="IACT">
@@ -683,8 +683,8 @@
                                     <ingredientSubstance>
                                         <code code="OP1R32D61U"
                                             codeSystem="2.16.840.1.113883.2.20.6.14"
-                                            displayName="MICROCRYSTALLINE CELLULOSE"/>
-                                        <name>MICROCRYSTALLINE CELLULOSE</name>
+                                            displayName="CELLULOSE MICROCRYSTALLINE"/>
+                                        <name>CELLULOSE MICROCRYSTALLINE</name>
                                     </ingredientSubstance>
                                 </ingredient>
                                 <ingredient classCode="IACT">
@@ -941,8 +941,8 @@
                                             <ingredientSubstance>
                                                 <code code="OP1R32D61U"
                                                   codeSystem="2.16.840.1.113883.2.20.6.14"
-                                                  displayName="MICROCRYSTALLINE CELLULOSE"/>
-                                                <name>MICROCRYSTALLINE CELLULOSE</name>
+                                                  displayName="CELLULOSE MICROCRYSTALLINE"/>
+                                                <name>CELLULOSE MICROCRYSTALLINE</name>
                                             </ingredientSubstance>
                                         </ingredient>
                                         <ingredient classCode="IACT">
@@ -1290,8 +1290,8 @@
                                     <ingredientSubstance>
                                         <code code="OP1R32D61U"
                                             codeSystem="2.16.840.1.113883.2.20.6.14"
-                                            displayName="MICROCRYSTALLINE CELLULOSE"/>
-                                        <name>MICROCRYSTALLINE CELLULOSE</name>
+                                            displayName="CELLULOSE MICROCRYSTALLINE"/>
+                                        <name>CELLULOSE MICROCRYSTALLINE</name>
                                     </ingredientSubstance>
                                 </ingredient>
                                 <ingredient classCode="IACT">
