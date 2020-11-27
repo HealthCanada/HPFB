@@ -698,7 +698,7 @@
               <manufacturedProduct>
                 <code code="61325422"/>
                 <!-- DIN Number -->
-                <name>LORUM IPSUM TROUSSE</name>
+                <name>LORUM IPSUM</name>
                 <formCode code="C43197" codeSystem="2.16.840.1.113883.2.20.6.3"
                   displayName="TROUSSES"/>
                 <asEntityWithGeneric>
@@ -736,7 +736,7 @@
                   <partProduct>
                     <code code="02490064"/>
                     <!-- DIN Number -->
-                    <name>LORUM IPSUM TROUSSE POUDRE</name>
+                    <name>LORUM IPSUM POUDRE</name>
                     <formCode code="10110000" codeSystem="2.16.840.1.113883.2.20.6.3"
                       displayName="Poudre pour solution buvable"/>
                     <asEntityWithGeneric>
