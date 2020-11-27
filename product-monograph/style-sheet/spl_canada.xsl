@@ -193,6 +193,103 @@
 		</tr>
 	</xsl:template>
 	
+	<!-- Override FDA Medication Names in order to withhold Medication Form Code 'Kit' -->
+	<xsl:template name="piMedNames">
+		<xsl:variable name="medName">
+			<xsl:call-template name="string-uppercase">
+				<xsl:with-param name="text">
+					<xsl:copy><xsl:apply-templates mode="specialCus" select="v3:name" /></xsl:copy>
+				</xsl:with-param>
+			</xsl:call-template>
+		</xsl:variable>
+		<xsl:variable name="genMedName">
+			<xsl:call-template name="string-uppercase">
+				<xsl:with-param name="text" select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name|v3:asSpecializedKind/v3:generalizedMaterialKind/v3:code[@codeSystem = '2.16.840.1.113883.6.276'  or @codeSystem = '2.16.840.1.113883.6.303']/@displayName"/>
+			</xsl:call-template>
+		</xsl:variable>		
+		
+		<tr>
+			<td class="contentTableTitle">
+				<strong>
+					<xsl:value-of select="$medName"/>&#160;		
+					<xsl:call-template name="string-uppercase">
+						<xsl:with-param name="text" select="v3:name/v3:suffix"/>
+					</xsl:call-template>	
+				</strong>
+				<xsl:apply-templates mode="substance" select="v3:code[@codeSystem = '2.16.840.1.113883.4.9']/@code"/>
+				<xsl:if test="not($root/v3:document/v3:code/@code = '73815-3')">
+					<br/>
+				</xsl:if>	
+				<span class="contentTableReg">
+					<xsl:call-template name="string-lowercase">
+						<xsl:with-param name="text" select="$genMedName"/>
+					</xsl:call-template>
+					<xsl:if test="not((v3:formCode/@code='C43197') and (v3:formCode/@codeSystem='2.16.840.1.113883.2.20.6.3'))">
+						<xsl:text> </xsl:text>
+						<xsl:call-template name="string-lowercase">
+							<xsl:with-param name="text" select="v3:formCode/@displayName"/>
+						</xsl:call-template>
+					</xsl:if>
+				</span>
+			</td>
+		</tr>
+	</xsl:template>
+	<xsl:template name="ProductInfoIng">		
+		<xsl:if test="v3:ingredient[starts-with(@classCode,'ACTI')]|v3:activeIngredient">
+			<tr>
+				<td>
+					<xsl:call-template name="ActiveIngredients"/>
+				</td>
+			</tr>
+		</xsl:if>
+		<xsl:if test="v3:ingredient[@classCode = 'IACT']|v3:inactiveIngredient">
+			<tr>
+				<td>
+					<xsl:call-template name="InactiveIngredients"/>
+				</td>
+			</tr>
+		</xsl:if>
+		<xsl:if test="v3:ingredient[not(@classCode='IACT' or starts-with(@classCode,'ACTI'))]">
+			<tr>
+				<td>
+					<xsl:call-template name="otherIngredients"/>
+				</td>
+			</tr>
+		</xsl:if>
+		<xsl:if test="not($root/v3:document/v3:code/@code = '58476-3')">
+			<tr>
+				<td>
+					<xsl:choose>
+						<xsl:when test="v3:asEntityWithGeneric and ../v3:subjectOf/v3:characteristic/v3:code[starts-with(@code, 'SPL')]">
+							<xsl:call-template name="characteristics-old"/>
+						</xsl:when>
+						<xsl:when test="../v3:subjectOf/v3:characteristic">
+							<xsl:call-template name="characteristics-new"/>
+						</xsl:when>
+					</xsl:choose>
+				</td>
+			</tr>
+		</xsl:if>
+		<xsl:if test="v3:asContent">
+			<tr>
+				<td>
+					<xsl:call-template name="packaging">
+						<xsl:with-param name="path" select="."/>
+					</xsl:call-template>
+				</td>
+			</tr>
+		</xsl:if>
+		<xsl:if test="v3:instanceOfKind[parent::v3:partProduct]">
+			<tr>
+				<td colspan="4">
+					<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
+						<xsl:apply-templates mode="ldd" select="v3:instanceOfKind"/>
+					</table>
+				</td>
+			</tr>
+		</xsl:if>
+	</xsl:template>	
+	
 	<!-- Overide FDA Ingredients - this is a helper template to simplify header generation -->
 	<xsl:template name="IngredientHeader">
 		<xsl:param name="title-label">
