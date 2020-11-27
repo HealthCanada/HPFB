@@ -179,10 +179,14 @@
 						</td>
 					</tr>
 					<tr class="formTableRowAlt">
-						<td class="formLabel"> <!-- Product Dosage Form -->
+						<td class="formLabel"> <!-- Product Dosage Form - withhold display name if the form code indicates a 'kit' -->
 							<xsl:value-of select="$labels/dosageForm[@lang = $lang]"/>
 						</td>
-						<td class="formItem"><xsl:value-of select="v3:formCode/@displayName"/></td>
+						<td class="formItem">
+							<xsl:if test="not((v3:formCode/@code='C43197') and (v3:formCode/@codeSystem='2.16.840.1.113883.2.20.6.3'))">
+								<xsl:value-of select="v3:formCode/@displayName"/>
+							</xsl:if>
+						</td>
 					</tr>
 				</table>
 			</td>
@@ -971,7 +975,8 @@
 						<xsl:apply-templates select="v3:component/v3:structuredBody" mode="main-document"/>
 					</div>					
 				</div>
-				<div id="btnTopDiv">
+				<!-- Withhold the jump to top button on the print version -->
+				<div id="btnTopDiv" class="hide-in-print">
 					<a id="btnTop" 
 						class="btn btn-warning btn-circle btn-md text-white" role="button">
 						<i class="fa fa-arrow-up fa-3x"></i>

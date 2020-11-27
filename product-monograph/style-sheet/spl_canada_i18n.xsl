@@ -4,6 +4,7 @@
 	<my:texts>
 		<!-- English Labels -->
 		<tableOfContents lang="en">TABLE OF CONTENTS</tableOfContents>
+		<tocBoilerplate lang="en">Sections or subsections that are not applicable at the time of authorization are not listed.</tocBoilerplate>
 		<productDetails lang="en">PRODUCT DETAILS</productDetails>
 		<companyDetails lang="en">COMPANY DETAILS</companyDetails>
 		<labeler lang="en">Market Authorization Holder</labeler>
@@ -56,8 +57,10 @@
 		<andConnective lang="en">&#160;and&#160;</andConnective>
 		<ofConnective lang="en">&#160;of&#160;</ofConnective>
 		<toConnective lang="en">&#160;-&#160;</toConnective>
+
 		<!-- French Labels -->
 		<tableOfContents lang="fr">TABLE DES MATIÈRES</tableOfContents>
+		<tocBoilerplate lang="fr">Les sections ou sous-sections qui ne sont pas pertinentes au moment de l’autorisation ne sont pas énumérées.</tocBoilerplate>
 		<productDetails lang="fr">DÉTAILS SUR LE PRODUIT</productDetails>
 		<companyDetails lang="fr">RENSEIGNEMENTS SUR L’ENTREPRISE</companyDetails>
 		<labeler lang="fr">Détenteur de l’autorisation de mise sur le marché</labeler>

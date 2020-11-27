@@ -50,13 +50,15 @@
 	<xsl:template mode="generateUniqueLabel" match="v3:manufacturedProduct">
 		<xsl:param name="position"/>
 		<xsl:value-of select="$labels/product[@lang = $lang]"/> #<xsl:value-of select="$position"/><xsl:text> </xsl:text><xsl:value-of select="v3:name"/> 
-		(<xsl:value-of select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name"/>), 		
-		<xsl:for-each select="v3:ingredient[starts-with(@classCode,'ACTI')]">
-			<xsl:if test="position() > 1">/ </xsl:if>
-			<xsl:value-of select="v3:ingredientSubstance/v3:activeMoiety/v3:activeMoiety/v3:code/@displayName"/>&#160;
-			<xsl:apply-templates select="v3:quantity/v3:numerator"/>&#160;
-		</xsl:for-each>
-		<xsl:value-of select="v3:formCode[@codeSystem='2.16.840.1.113883.2.20.6.3']/@displayName"/>
+		(<xsl:value-of select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name"/>)<xsl:if test="not((v3:formCode/@code='C43197') and (v3:formCode/@codeSystem='2.16.840.1.113883.2.20.6.3'))">, 		
+			<!-- Withhold the display name and the comma when the form code indicates that this is a 'kit' -->
+			<xsl:for-each select="v3:ingredient[starts-with(@classCode,'ACTI')]">
+				<xsl:if test="position() > 1">/ </xsl:if>
+				<xsl:value-of select="v3:ingredientSubstance/v3:activeMoiety/v3:activeMoiety/v3:code/@displayName"/>&#160;
+				<xsl:apply-templates select="v3:quantity/v3:numerator"/>&#160;
+			</xsl:for-each>
+			<xsl:value-of select="v3:formCode[@codeSystem='2.16.840.1.113883.2.20.6.3']/@displayName"/>
+		</xsl:if>
 	</xsl:template>
 	
 	<!-- Navigation Sidebar Menu -->
@@ -71,6 +73,8 @@
 						 We could move these inline styles, and also apply -ms-transform and -webkit-transform -->
 					<div style="transform: scaleX(-1);" id="navigation-scrollbar">
 						<ul class="navbar-nav" id="navigation-sidebar" style="transform: scaleX(-1); ">
+							<!-- Add table of contents boilerplate as a separate list item, with nav-top class so the French label is reduced -->
+							<li class="nav-top"><xsl:value-of select="$labels/tocBoilerplate[@lang = $lang]"/></li>
 							<xsl:for-each select="v3:component/v3:section">
 								<xsl:variable name="unique-section-id"><xsl:value-of select="v3:id/@root"/></xsl:variable>
 								<xsl:choose>
