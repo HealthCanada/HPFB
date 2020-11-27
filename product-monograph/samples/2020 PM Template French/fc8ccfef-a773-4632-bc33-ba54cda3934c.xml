@@ -5,7 +5,7 @@
     <templateId extension="PDN" root="2.16.840.1.113883.2.20.6.37"/>
     <id root="fc8ccfef-a773-4632-bc33-ba54cda3934c"/>
     <code code="4" codeSystem="2.16.840.1.113883.2.20.6.10"
-        displayName="2020 MODÈLE DE MONOGRAPHIE DE PRODUIT"/>
+        displayName="MODÈLE PRINCIPAL - 2020"/>
     <title>LORUM IPSUM (acetaminophen), TABLET, CAPSULE, POWDER</title>
     <effectiveTime value="20180101">
         <!-- Date of Last Revision or Date of Initial Authorization -->
@@ -859,7 +859,7 @@
                             <manufacturedProduct>
                                 <code code="61325884"/>
                                 <!-- DIN Number -->
-                                <name>LORUM IPSUM KIT</name>
+                                <name>LORUM IPSUM</name>
                                 <formCode code="C43197" codeSystem="2.16.840.1.113883.2.20.6.3"
                                     displayName="TROUSSES"/>
                                 <asEntityWithGeneric>
@@ -900,7 +900,7 @@
                                     <partProduct>
                                         <code code="02490064"/>
                                         <!-- DIN Number -->
-                                        <name>LORUM IPSUM KIT POWDER</name>
+                                        <name>LORUM IPSUM POWDER</name>
                                         <formCode code="10110000"
                                             codeSystem="2.16.840.1.113883.2.20.6.3"
                                             displayName="Poudre pour solution buvable"/>
@@ -1056,15 +1056,7 @@
                                                 xsi:type="CV"/>
                                         </characteristic>
                                     </subjectOf>
-                                    <subjectOf>
-                                        <characteristic>
-                                            <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
-                                                displayName="TYPE DE PRODUIT COMBINÉ"/>
-                                            <value code="8" codeSystem="2.16.840.1.113883.2.20.6.8"
-                                                displayName="Type 8 : Trousse : deux ou plusieurs produits pharmaceutiques ayant des DIN différents, ou une combinaison d’un ou plusieurs produits pharmaceutiques et non pharmaceutiques emballés pour être utilisés ensemble"
-                                                xsi:type="CV"/>
-                                        </characteristic>
-                                    </subjectOf>
+
                                     <consumedIn>
                                         <substanceAdministration>
                                             <routeCode code="20045000"
@@ -1197,15 +1189,7 @@
                                                 xsi:type="CV"/>
                                         </characteristic>
                                     </subjectOf>
-                                    <subjectOf>
-                                        <characteristic>
-                                            <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
-                                                displayName="TYPE DE PRODUIT COMBINÉ"/>
-                                            <value code="8" codeSystem="2.16.840.1.113883.2.20.6.8"
-                                                displayName="Type 8 : Trousse : deux ou plusieurs produits pharmaceutiques ayant des DIN différents, ou une combinaison d’un ou plusieurs produits pharmaceutiques et non pharmaceutiques emballés pour être utilisés ensemble"
-                                                xsi:type="CV"/>
-                                        </characteristic>
-                                    </subjectOf>
+
                                     <consumedIn>
                                         <substanceAdministration>
                                             <routeCode code="20045000"
