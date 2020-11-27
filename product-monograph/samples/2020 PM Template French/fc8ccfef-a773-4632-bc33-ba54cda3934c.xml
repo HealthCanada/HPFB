@@ -353,7 +353,7 @@
                                     <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="TYPE DE PRODUIT COMBINÉ"/>
                                     <value code="9" codeSystem="2.16.840.1.113883.2.20.6.8"
-                                        displayName="Type 9 : Produit combiné à dose fixe : deux ou plusieurs principes actifs combinés sous forme de dosage unique"
+                                        displayName="Type 9 : Produit combiné à dose fixe : deux ou plusieurs principes actifs combinés sous forme de dosage unique"
                                         xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
@@ -625,7 +625,7 @@
                                     <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
                                         displayName="TYPE DE PRODUIT COMBINÉ"/>
                                     <value code="9" codeSystem="2.16.840.1.113883.2.20.6.8"
-                                        displayName="Type 9 : Produit combiné à dose fixe : deux ou plusieurs principes actifs combinés sous forme de dosage unique"
+                                        displayName="Type 9 : Produit combiné à dose fixe : deux ou plusieurs principes actifs combinés sous forme de dosage unique"
                                         xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
@@ -1185,7 +1185,7 @@
                                             <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
                                                 displayName="TYPE DE PRODUIT COMBINÉ"/>
                                             <value code="1" codeSystem="2.16.840.1.113883.2.20.6.8"
-                                                displayName="Type 1 : Dispositif de drogue prérempli/Système d’administration de drogue (seringue, timbre transdermique, etc.)"
+                                                displayName="Type 1 : Dispositif de drogue prérempli/Système d’administration de drogue (seringue, timbre transdermique, etc.)"
                                                 xsi:type="CV"/>
                                         </characteristic>
                                     </subjectOf>
@@ -1561,8 +1561,8 @@
                         <section ID="bf2dab4e-fd04-4ec9-9cdc-247188622d0f">
                             <id root="e5f1dea3-d907-4664-b46f-e1d9736d47af"/>
                             <code code="0tp1.3" codeSystem="2.16.840.1.113883.2.20.6.63"
-                                displayName="Date d'approbation initiale :"/>
-                            <title>Date d'approbation initiale :</title>
+                                displayName="Date d'approbation initiale :"/>
+                            <title>Date d'approbation initiale :</title>
                             <text>
                                 <paragraph>January 1, 2018</paragraph>
                             </text>
@@ -1573,8 +1573,8 @@
                         <section ID="d0184119-8fd7-4378-af77-b227c39e8445">
                             <id root="ad78301c-29a9-41af-96f8-d58815fed296"/>
                             <code code="0tp1.4" codeSystem="2.16.840.1.113883.2.20.6.63"
-                                displayName="Date de révision :"/>
-                            <title>Date de révision :</title>
+                                displayName="Date de révision :"/>
+                            <title>Date de révision :</title>
                             <text>
                                 <paragraph>January 1, 2019</paragraph>
                             </text>
@@ -1585,8 +1585,8 @@
                         <section ID="ebc3f3dc-71be-424f-91ef-8aca8c138b21">
                             <id root="efd8c4c1-d0dd-434d-b1c2-4daa18752fa8"/>
                             <code code="0tp1.5" codeSystem="2.16.840.1.113883.2.20.6.63"
-                                displayName="Numéro de contrôle de la présentation :"/>
-                            <title>Numéro de contrôle de la présentation :</title>
+                                displayName="Numéro de contrôle de la présentation :"/>
+                            <title>Numéro de contrôle de la présentation :</title>
                             <text>
                                 <paragraph>123456</paragraph>
                             </text>
