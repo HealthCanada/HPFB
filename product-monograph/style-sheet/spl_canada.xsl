@@ -234,61 +234,6 @@
 			</td>
 		</tr>
 	</xsl:template>
-	<xsl:template name="ProductInfoIng">		
-		<xsl:if test="v3:ingredient[starts-with(@classCode,'ACTI')]|v3:activeIngredient">
-			<tr>
-				<td>
-					<xsl:call-template name="ActiveIngredients"/>
-				</td>
-			</tr>
-		</xsl:if>
-		<xsl:if test="v3:ingredient[@classCode = 'IACT']|v3:inactiveIngredient">
-			<tr>
-				<td>
-					<xsl:call-template name="InactiveIngredients"/>
-				</td>
-			</tr>
-		</xsl:if>
-		<xsl:if test="v3:ingredient[not(@classCode='IACT' or starts-with(@classCode,'ACTI'))]">
-			<tr>
-				<td>
-					<xsl:call-template name="otherIngredients"/>
-				</td>
-			</tr>
-		</xsl:if>
-		<xsl:if test="not($root/v3:document/v3:code/@code = '58476-3')">
-			<tr>
-				<td>
-					<xsl:choose>
-						<xsl:when test="v3:asEntityWithGeneric and ../v3:subjectOf/v3:characteristic/v3:code[starts-with(@code, 'SPL')]">
-							<xsl:call-template name="characteristics-old"/>
-						</xsl:when>
-						<xsl:when test="../v3:subjectOf/v3:characteristic">
-							<xsl:call-template name="characteristics-new"/>
-						</xsl:when>
-					</xsl:choose>
-				</td>
-			</tr>
-		</xsl:if>
-		<xsl:if test="v3:asContent">
-			<tr>
-				<td>
-					<xsl:call-template name="packaging">
-						<xsl:with-param name="path" select="."/>
-					</xsl:call-template>
-				</td>
-			</tr>
-		</xsl:if>
-		<xsl:if test="v3:instanceOfKind[parent::v3:partProduct]">
-			<tr>
-				<td colspan="4">
-					<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
-						<xsl:apply-templates mode="ldd" select="v3:instanceOfKind"/>
-					</table>
-				</td>
-			</tr>
-		</xsl:if>
-	</xsl:template>	
 	
 	<!-- Overide FDA Ingredients - this is a helper template to simplify header generation -->
 	<xsl:template name="IngredientHeader">
