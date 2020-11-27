@@ -5,7 +5,7 @@
     <templateId extension="NDS" root="2.16.840.1.113883.2.20.6.37"/>
     <id root="e24f574b-7e12-4374-b010-b808e0b108aa"/>
     <code code="4" codeSystem="2.16.840.1.113883.2.20.6.10"
-        displayName="2020 PRODUCT MONOGRAPH TEMPLATE"/>
+        displayName="MASTER TEMPLATE - 2020"/>
     <title>LORUM IPSUM (acetaminophen), TABLET, CAPSULE, POWDER</title>
     <effectiveTime value="20180101">
         <!-- Date of Last Revision or Date of Initial Authorization -->
@@ -859,7 +859,7 @@
                             <manufacturedProduct>
                                 <code code="61325884"/>
                                 <!-- DIN Number -->
-                                <name>LORUM IPSUM KIT</name>
+                                <name>LORUM IPSUM</name>
                                 <formCode code="C43197" codeSystem="2.16.840.1.113883.2.20.6.3"
                                     displayName="KIT"/>
                                 <asEntityWithGeneric>
@@ -900,7 +900,7 @@
                                     <partProduct>
                                         <code code="02490064"/>
                                         <!-- DIN Number -->
-                                        <name>LORUM IPSUM KIT POWDER</name>
+                                        <name>LORUM IPSUM POWDER</name>
                                         <formCode code="10110000"
                                             codeSystem="2.16.840.1.113883.2.20.6.3"
                                             displayName="Powder for oral solution"/>
@@ -1197,15 +1197,7 @@
                                                 xsi:type="CV"/>
                                         </characteristic>
                                     </subjectOf>
-                                    <subjectOf>
-                                        <characteristic>
-                                            <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
-                                                displayName="COMBINATION PRODUCT TYPE"/>
-                                            <value code="8" codeSystem="2.16.840.1.113883.2.20.6.8"
-                                                displayName="Type 8: Kit - two or more drug products having separate DINs, or a combination of one or more drug products and non-drug products packaged for use together"
-                                                xsi:type="CV"/>
-                                        </characteristic>
-                                    </subjectOf>
+
                                     <consumedIn>
                                         <substanceAdministration>
                                             <routeCode code="20045000"
