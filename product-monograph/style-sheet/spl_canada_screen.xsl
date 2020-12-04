@@ -130,7 +130,8 @@
 		<li class="nav-item">
 			<a href="#{$unique-subsection-id}" class="nav-link">
 				<!-- This conditional should never be applied to non-draft SPL documents -->
-				<xsl:if test="not(normalize-space(v3:title))">
+				<!-- [pmh] replace non-breaking spaces so these also get normalized as whitespace -->
+				<xsl:if test="not(normalize-space(translate(v3:title, '&#160;', ' ')))">
 					<span style="color:red;">&lt;&lt;MISSING INFORMATION&gt;&gt;</span>
 				</xsl:if>
 				<xsl:value-of select="v3:title"/>				
@@ -154,67 +155,6 @@
 		</li>
 	</xsl:template>
 		
-	<!-- SECTION MODEL AND NUMBER MODE -->
-	<!-- Special mode to construct a section number. Apply to a sequence of sections on the ancestor-or-self axis. -->
-	<!-- Shallow null-transform for anything but sections. -->
-	<xsl:template mode="sectionNumber" match="/|@*|node()"/>
-	<xsl:template mode="sectionNumber" match="v3:section">
-		<xsl:value-of select="concat('.',count(parent::v3:component/preceding-sibling::v3:component[v3:section])+1)"/>
-	</xsl:template>
-		
-	<xsl:template match="v3:section">
-		<xsl:param name="sectionLevel" select="count(ancestor-or-self::v3:section)"/>
-		<xsl:variable name="sectionNumberSequence">
-			<xsl:apply-templates mode="sectionNumber" select="ancestor-or-self::v3:section"/>
-		</xsl:variable>
-		<div class="Section">
-			<xsl:for-each select="v3:code">
-				<xsl:attribute name="data-sectionCode"><xsl:value-of select="@code"/></xsl:attribute>
-			</xsl:for-each>
-
-			<xsl:for-each select="@ID">
-				<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
-			</xsl:for-each>
-
-			<xsl:call-template name="styleCodeAttr">
-				<xsl:with-param name="styleCode" select="@styleCode"/>
-				<xsl:with-param name="additionalStyleCode" select="'Section'"/>
-			</xsl:call-template>
-			<xsl:for-each select="v3:id/@root"> <!-- id/@root is guaranteed to be a GUID -->
-				<a name="{.}"><xsl:text> </xsl:text></a>
-			</xsl:for-each>
-			<a name="section-{substring($sectionNumberSequence,2)}"><xsl:text> </xsl:text></a>
-			<p/>
-			<xsl:apply-templates select="v3:title">
-				<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
-				<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
-			</xsl:apply-templates>
-			<xsl:if test="boolean($show-data)">
-				<xsl:apply-templates mode="data" select="."/>
-			</xsl:if>
-			<xsl:apply-templates select="@*|node()[not(self::v3:title)]"/>
-			<xsl:call-template name="flushSectionTitleFootnotes"/>
-		</div>
-	</xsl:template>
-	
-	<!-- this template adds a vertical bar for xmChange, and is simplified from the FDA template substantially -->
-	<xsl:template name="additionalStyleAttr">
-		<xsl:if test="self::*[self::v3:paragraph]//v3:content[@styleCode[contains(.,'xmChange')]] or v3:content[@styleCode[contains(.,'xmChange')]] and not(ancestor::v3:table)">
-			<xsl:attribute name="style">margin-left:-0.5em; padding-left:0.5em; border-left:1px solid;</xsl:attribute>
-		</xsl:if>
-	</xsl:template>
-	
-	<!-- this template is only used on the Title Page to show Control Number on a single line -->
-	<xsl:template match="v3:section" mode="inline-title">
-		<div class="Section">
-			<br/>
-			<h2 style="display: inline;">
-				<xsl:value-of select="v3:title"/>
-				<xsl:text> </xsl:text>
-			</h2>
-			<xsl:value-of select="v3:text/v3:paragraph"/>
-		</div>
-	</xsl:template>
 
 	<xsl:template match="v3:document" mode="html-head">
 		<head>
@@ -247,6 +187,15 @@
 					top: 0;
 				}
 				
+				/* Print Table of Contents Styles that should be in CSS eventually */	
+				ul.toc {
+					list-style-type: none;
+				}					
+				li.toc a::after {
+					content: target-counter(attr(href), page);
+					float: right;
+				}
+								
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 			</style>

@@ -14,8 +14,10 @@
 	<xsl:param name="show-subjects-xml" select="/.."/>
 	<!-- Whether to show the data elements in special tables etc., set to "/.." instead of "1" to turn off -->
 	<xsl:param name="show-data" select="/.."/>
-	<!-- Whether to show section numbers, set to 1 to enable and "/.." to turn off-->
-	<xsl:param name="show-section-numbers" select="/.."/>	
+	<!-- Whether to show section numbers, set to 1 to enable and "/.." to turn off -->
+	<xsl:param name="show-section-numbers" select="/.."/>
+	<!-- Whether to show print table of contents, set to 1 to enable and "/.." to turn off -->
+	<xsl:param name="show-print-toc" select="/.."/>
 	<!-- This is the CSS link put into the output -->
 	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/spl_canada.css</xsl:param>
 
@@ -27,7 +29,7 @@
 	</xsl:variable>
 	<xsl:output method="html" encoding="UTF-8" version="4.0" doctype-public="-//W3C//DTD HTML 4.01//EN" indent="no"/>
 		
-	<!-- OVERRIDE FDA STYLES FOR MANUFACTURED PRODUCT DETAILS -->	
+	<!-- OVERRIDE FDA STYLES FOR MANUFACTURED PRODUCT DETAILS - SUBJECTS MODE -->	
 	<!-- Override FDA company info section, using Canadian French and English labels -->
 	<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization">	
 		<xsl:if test="(count(./v3:name)>0)">
@@ -39,7 +41,7 @@
 						<xsl:if test="./v3:id/@extension"> (<xsl:value-of select="./v3:id/@extension"/>)</xsl:if>
 					</td>
 				</tr>
-				<xsl:call-template name="data-contactParty"/>
+				<xsl:apply-templates mode="subjects" select="v3:contactParty"/>
 			</table>
 		</xsl:if>
 	</xsl:template>
@@ -54,58 +56,56 @@
 						<xsl:if test="./v3:id/@extension"> (<xsl:value-of select="./v3:id/@extension"/>)</xsl:if>
 					</td>
 				</tr>
-				<xsl:call-template name="data-contactParty"/>
+				<xsl:apply-templates mode="subjects" select="v3:contactParty"/>
 			</table>
 		</xsl:if>
 	</xsl:template>	
 
-	<xsl:template name="data-contactParty">
-		<xsl:for-each select="v3:contactParty">
-			<xsl:if test="position() = 1">
-				<tr>
-					<th scope="col" class="formTitle"><xsl:value-of select="$labels/partyAddress[@lang = $lang]"/></th>
-					<th scope="col" class="formTitle"><xsl:value-of select="$labels/partyAdditional[@lang = $lang]"/></th>
-				</tr>
-			</xsl:if>
-			<tr class="formTableRowAlt">
-				<td class="formItem">		
-					<table>
-						<tr><td><xsl:value-of select="v3:addr/v3:streetAddressLine"/></td></tr>
-						<tr><td>
-								<xsl:value-of select="v3:addr/v3:city"/>
-								<xsl:if test="string-length(v3:addr/v3:state)>0">,&#160;<xsl:value-of select="v3:addr/v3:state"/></xsl:if>
-								<xsl:if test="string-length(v3:addr/v3:postalCode)>0">,&#160;<xsl:value-of select="v3:addr/v3:postalCode"/></xsl:if>
-							</td>
-						</tr>
-						<tr><td><xsl:value-of select="v3:addr/v3:country/@displayName"/></td></tr>
-					</table>
-				</td>
-				<td class="formItem">
-					<div><xsl:value-of select="$labels/partyTel[@lang = $lang]"/><xsl:text>: </xsl:text>
-					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'tel:')][1], 'tel:')"/></div>
-					<xsl:for-each select="v3:telecom/@value[starts-with(.,'fax:')]">
-						<div><xsl:text>Fax: </xsl:text>
-						<xsl:value-of select="substring-after(., 'fax:')"/></div>
-					</xsl:for-each>
-					<xsl:for-each select="v3:telecom/@value[starts-with(.,'mailto:')]">
-						<div><xsl:value-of select="$labels/partyEmail[@lang = $lang]"/><xsl:text>: </xsl:text>
-							<a>
-								<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-								<xsl:value-of select="substring-after(., 'mailto:')"/>
-							</a>
-						</div>
-					</xsl:for-each>
-					<xsl:for-each select="v3:telecom/@value[starts-with(.,'http:') or starts-with(.,'https:')]">
-						<div><xsl:value-of select="$labels/partyWeb[@lang = $lang]"/><xsl:text>: </xsl:text>
-							<a>
-								<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-								<xsl:value-of select="."/>
-							</a>
-						</div>
-					</xsl:for-each>
-				</td>
+	<xsl:template mode="subjects" match="v3:contactParty">
+		<xsl:if test="position() = 1">
+			<tr>
+				<th scope="col" class="formTitle"><xsl:value-of select="$labels/partyAddress[@lang = $lang]"/></th>
+				<th scope="col" class="formTitle"><xsl:value-of select="$labels/partyAdditional[@lang = $lang]"/></th>
 			</tr>
-		</xsl:for-each>
+		</xsl:if>
+		<tr class="formTableRowAlt">
+			<td class="formItem">		
+				<table>
+					<tr><td><xsl:value-of select="v3:addr/v3:streetAddressLine"/></td></tr>
+					<tr><td>
+						<xsl:value-of select="v3:addr/v3:city"/>
+						<xsl:if test="string-length(v3:addr/v3:state)>0">,&#160;<xsl:value-of select="v3:addr/v3:state"/></xsl:if>
+						<xsl:if test="string-length(v3:addr/v3:postalCode)>0">,&#160;<xsl:value-of select="v3:addr/v3:postalCode"/></xsl:if>
+					</td>
+					</tr>
+					<tr><td><xsl:value-of select="v3:addr/v3:country/@displayName"/></td></tr>
+				</table>
+			</td>
+			<td class="formItem">
+				<div><xsl:value-of select="$labels/partyTel[@lang = $lang]"/><xsl:text>: </xsl:text>
+					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'tel:')][1], 'tel:')"/></div>
+				<xsl:for-each select="v3:telecom/@value[starts-with(.,'fax:')]">
+					<div><xsl:text>Fax: </xsl:text>
+						<xsl:value-of select="substring-after(., 'fax:')"/></div>
+				</xsl:for-each>
+				<xsl:for-each select="v3:telecom/@value[starts-with(.,'mailto:')]">
+					<div><xsl:value-of select="$labels/partyEmail[@lang = $lang]"/><xsl:text>: </xsl:text>
+						<a>
+							<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+							<xsl:value-of select="substring-after(., 'mailto:')"/>
+						</a>
+					</div>
+				</xsl:for-each>
+				<xsl:for-each select="v3:telecom/@value[starts-with(.,'http:') or starts-with(.,'https:')]">
+					<div><xsl:value-of select="$labels/partyWeb[@lang = $lang]"/><xsl:text>: </xsl:text>
+						<a>
+							<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+							<xsl:value-of select="."/>
+						</a>
+					</div>
+				</xsl:for-each>
+			</td>
+		</tr>
 	</xsl:template>	
 
 	<!-- Note: This template is also used for top level Product Concept which does not have v3:asEquivalentEntity -->
@@ -770,7 +770,69 @@
 			</tr> 
 		</xsl:if>
 	</xsl:template>	
+
+	<!-- SECTION MODEL AND NUMBER MODE -->
+	<!-- Special mode to construct a section number. Apply to a sequence of sections on the ancestor-or-self axis. -->
+	<!-- Shallow null-transform for anything but sections. -->
+	<xsl:template mode="sectionNumber" match="/|@*|node()"/>
+	<xsl:template mode="sectionNumber" match="v3:section">
+		<xsl:value-of select="concat('.',count(parent::v3:component/preceding-sibling::v3:component[v3:section])+1)"/>
+	</xsl:template>
+	
+	<xsl:template match="v3:section">
+		<xsl:param name="sectionLevel" select="count(ancestor-or-self::v3:section)"/>
+		<xsl:variable name="sectionNumberSequence">
+			<xsl:apply-templates mode="sectionNumber" select="ancestor-or-self::v3:section"/>
+		</xsl:variable>
+		<div class="Section">
+			<xsl:for-each select="v3:code">
+				<xsl:attribute name="data-sectionCode"><xsl:value-of select="@code"/></xsl:attribute>
+			</xsl:for-each>
 			
+			<xsl:for-each select="@ID">
+				<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
+			</xsl:for-each>
+			
+			<xsl:call-template name="styleCodeAttr">
+				<xsl:with-param name="styleCode" select="@styleCode"/>
+				<xsl:with-param name="additionalStyleCode" select="'Section'"/>
+			</xsl:call-template>
+			<xsl:for-each select="v3:id/@root"> <!-- id/@root is guaranteed to be a GUID -->
+				<a name="{.}"><xsl:text> </xsl:text></a>
+			</xsl:for-each>
+			<a name="section-{substring($sectionNumberSequence,2)}"><xsl:text> </xsl:text></a>
+			<p/>
+			<xsl:apply-templates select="v3:title">
+				<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
+				<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
+			</xsl:apply-templates>
+			<xsl:if test="boolean($show-data)">
+				<xsl:apply-templates mode="data" select="."/>
+			</xsl:if>
+			<xsl:apply-templates select="@*|node()[not(self::v3:title)]"/>
+			<xsl:call-template name="flushSectionTitleFootnotes"/>
+		</div>
+	</xsl:template>
+	
+	<!-- this template adds a vertical bar for xmChange, and is simplified from the FDA template substantially -->
+	<xsl:template name="additionalStyleAttr">
+		<xsl:if test="self::*[self::v3:paragraph]//v3:content[@styleCode[contains(.,'xmChange')]] or v3:content[@styleCode[contains(.,'xmChange')]] and not(ancestor::v3:table)">
+			<xsl:attribute name="style">margin-left:-0.5em; padding-left:0.5em; border-left:1px solid;</xsl:attribute>
+		</xsl:if>
+	</xsl:template>
+	
+	<!-- this template is only used on the Title Page to show Control Number on a single line -->
+	<xsl:template match="v3:section" mode="inline-title">
+		<div class="Section">
+			<br/>
+			<h2 style="display: inline;">
+				<xsl:value-of select="v3:title"/>
+				<xsl:text> </xsl:text>
+			</h2>
+			<xsl:value-of select="v3:text/v3:paragraph"/>
+		</div>
+	</xsl:template>
+	
 	<!-- This is the main page content, which renders for both screen, with Product Details in front, and print, with Product Details at end -->	
 	<xsl:template match="v3:structuredBody" mode="main-document">
 		<main class="col">
@@ -829,6 +891,36 @@
 									</div>
 								</xsl:when>
 								<xsl:otherwise>
+									<!-- TABLE OF CONTENTS IMMEDIATELY PRECEDES PART I IN PRINT VERSION - WITHHOLD ACTUAL TOC FOR NOW -->
+									<!-- [pmh] always force a page break, but only include print page break if we can use page numbers -->
+									<xsl:if test="v3:code[@code='pi00']">
+										<xsl:choose>
+											<xsl:when test="$show-print-toc">
+												<div class="hide-in-screen force-page-break-before force-page-break-after card spl" id="print-toc">
+													<h2><xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/></h2>
+													<div class="spl"><xsl:value-of select="$labels/tocBoilerplate[@lang = $lang]"/></div>
+													<ul class="toc">
+														<xsl:apply-templates mode="toc" select="//v3:structuredBody/v3:component/v3:section[not(v3:code/@code='0MP')]"/>
+														<li class="toc"><a href="#company-details"><xsl:value-of select="$labels/productDetails[@lang = $lang]"/></a></li>
+														<li class="toc"><a href="#company-details"><xsl:value-of select="$labels/companyDetails[@lang = $lang]"/></a></li>
+														<xsl:for-each select="//v3:subject/v3:manufacturedProduct">
+															<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
+															<li class="toc">
+																<a href="#{$unique-product-id}">
+																	<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
+																		<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
+																	</xsl:apply-templates>
+																</a>
+															</li>
+														</xsl:for-each>
+													</ul>
+												</div>																						
+											</xsl:when>
+											<xsl:otherwise>
+												<div class="hide-in-screen force-page-break-before" id="print-toc"/>
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:if> 
 									<!-- NAVIGATION FOR DIFFERENT PARTS -->								
 									<div class="card mb-2 pb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
@@ -860,7 +952,32 @@
 			</div>
 		</main>	
 	</xsl:template>
+	
+	<!-- [pmh] Extra Templates for Print Table of Contents -->
+	<xsl:template mode="toc" match="v3:component/v3:section">
+		<li class="toc"> 
+			<a href="#{v3:id/@root}">
+				<xsl:value-of select="v3:title"/>
+			</a> 
+		</li>
+<!--		<xsl:if test="not(v3:code/@code='0TP')">
+			<xsl:apply-templates mode="toc-hack" select="v3:component/v3:section"/>			
+		</xsl:if> -->
+	</xsl:template>												
 
+<!--
+	<xsl:template mode="toc-hack" match="v3:component/v3:section">
+		<li class="toc"> 
+			<a href="#{@ID}">
+				<xsl:value-of select="v3:title"/>
+			</a> 
+		</li>
+		<xsl:if test="not(v3:code/@code='0TP')">
+			<xsl:apply-templates mode="toc-hack" select="v3:component/v3:section"/>			
+		</xsl:if>
+	</xsl:template>												
+-->
+	
 	<!-- Print Version of each Manufactured Product - very simplified version for print -->
 	<xsl:template match="v3:subject/v3:manufacturedProduct" mode="print">
 		<section>
