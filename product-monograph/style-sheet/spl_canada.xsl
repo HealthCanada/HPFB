@@ -20,7 +20,9 @@
 	<xsl:param name="show-print-toc" select="/.."/>
 	<!-- This is the CSS link put into the output -->
 	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/spl_canada.css</xsl:param>
-
+	<!-- This is the HTML Document Title -->
+	<xsl:param name="doc-title"><xsl:value-of select="v3:document/v3:title"/></xsl:param>
+	
 	<xsl:variable name="lang">
 		<xsl:choose>
 			<xsl:when test="v3:document/v3:languageCode[@code='1']">en</xsl:when>
@@ -821,8 +823,8 @@
 		</xsl:if>
 	</xsl:template>
 	
-	<!-- this template is only used on the Title Page to show Control Number on a single line -->
-	<xsl:template match="v3:section" mode="inline-title">
+	<!-- this template is used on the Title Page to show Control Number on a single line -->
+	<xsl:template mode="inline-title" match="v3:section">
 		<div class="Section">
 			<br/>
 			<h2 style="display: inline;">
@@ -834,7 +836,7 @@
 	</xsl:template>
 	
 	<!-- This is the main page content, which renders for both screen, with Product Details in front, and print, with Product Details at end -->	
-	<xsl:template match="v3:structuredBody" mode="main-document">
+	<xsl:template mode="main-document" match="v3:structuredBody">
 		<main class="col">
 			<div class="container-fluid" id="main">
 				<div class="row position-relative">
@@ -843,15 +845,15 @@
 							<xsl:variable name="unique-section-id"><xsl:value-of select="v3:id/@root"/></xsl:variable>
 							<xsl:choose>
 								<xsl:when test="v3:code[@code='0MP']">
-									<!-- PRODUCT DETAIL -->
+									<!-- SCREEN VERSION OF MANUFACTURED PRODUCT DETAIL -->
 									<div class="card mb-2 hide-in-print" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1"> 
 											<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
 										</h5>
 										<!-- Company Details and Product Details Accordion Cards -->
 										<div id="product-accordion">
-											<xsl:apply-templates select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization" mode="card"/>
-											<xsl:apply-templates select="v3:subject/v3:manufacturedProduct" mode="card"/>
+											<xsl:apply-templates mode="screen" select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization"/>
+											<xsl:apply-templates mode="screen" select="v3:subject/v3:manufacturedProduct"/>
 										</div>
 									</div>
 								</xsl:when>
@@ -879,8 +881,12 @@
 										</div>
 									</div>
 								</xsl:when>
+								<xsl:when test="v3:code[@code='0NOC']">
+									<!-- Optional NOTICE OF COMPLIANCE WITH CONDITIONS section does not require page break -->
+									<xsl:apply-templates mode="main-document" select="."/>									
+								</xsl:when>
 								<xsl:when test="v3:code[@code='1RMLC']">
-									<!-- RECENT MAJOR LABEL CHANGES -->
+									<!-- RECENT MAJOR LABEL CHANGES - These require extra styling to suppress table rules -->
 									<div class="card mb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:title"/>
@@ -890,51 +896,35 @@
 										</div>
 									</div>
 								</xsl:when>
-								<xsl:otherwise>
+									<!-- Withhold the optional Biosimilar Biologic Drug and prepend to Part I after TOC -->
+								<xsl:when test="v3:code[@code='0BBD']"></xsl:when>									
+								<xsl:when test="v3:code[@code='pi00']">
 									<!-- TABLE OF CONTENTS IMMEDIATELY PRECEDES PART I IN PRINT VERSION - WITHHOLD ACTUAL TOC FOR NOW -->
-									<!-- [pmh] always force a page break, but only include print page break if we can use page numbers -->
-									<xsl:if test="v3:code[@code='pi00']">
-										<xsl:choose>
-											<xsl:when test="$show-print-toc">
-												<div class="hide-in-screen force-page-break-before force-page-break-after card spl" id="print-toc">
-													<h2><xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/></h2>
-													<div class="spl"><xsl:value-of select="$labels/tocBoilerplate[@lang = $lang]"/></div>
-													<ul class="toc">
-														<xsl:apply-templates mode="toc" select="//v3:structuredBody/v3:component/v3:section[not(v3:code/@code='0MP')]"/>
-														<li class="toc"><a href="#company-details"><xsl:value-of select="$labels/productDetails[@lang = $lang]"/></a></li>
-														<li class="toc"><a href="#company-details"><xsl:value-of select="$labels/companyDetails[@lang = $lang]"/></a></li>
-														<xsl:for-each select="//v3:subject/v3:manufacturedProduct">
-															<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
-															<li class="toc">
-																<a href="#{$unique-product-id}">
-																	<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
-																		<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
-																	</xsl:apply-templates>
-																</a>
-															</li>
-														</xsl:for-each>
-													</ul>
-												</div>																						
-											</xsl:when>
-											<xsl:otherwise>
-												<div class="hide-in-screen force-page-break-before" id="print-toc"/>
-											</xsl:otherwise>
-										</xsl:choose>
-									</xsl:if> 
-									<!-- NAVIGATION FOR DIFFERENT PARTS -->								
-									<div class="card mb-2 pb-2" id="{$unique-section-id}">
-										<h5 class="card-header text-white bg-aurora-accent1">
-											<xsl:value-of select="v3:title"/>
-										</h5>
-										<div class="spl">
-											<xsl:apply-templates select="."/>
-										</div>
-									</div>
+									<xsl:choose>
+										<xsl:when test="$show-print-toc">
+											<xsl:call-template name="render-toc"/>
+										</xsl:when>
+										<xsl:otherwise>
+											<div class="hide-in-screen force-page-break-after"/>
+										</xsl:otherwise>
+									</xsl:choose>
+									<!-- Optional BIOSIMILAR BIOLOGIC DRUG, prepended to Part I if present -->
+									<xsl:apply-templates mode="main-document" select="../../v3:component/v3:section[v3:code/@code='0BBD']"/>
+									<!-- PART I HEALTH PROFESSIONAL INFORMATION requires page break after -->								
+									<xsl:apply-templates mode="main-document" select=".">
+										<xsl:with-param name="additional-classes">force-page-break-after</xsl:with-param>
+									</xsl:apply-templates>									
+								</xsl:when>
+								<xsl:otherwise>
+									<!-- ADDITIONAL SECTIONS - PART II and optional sections like PMI, etc -->
+									<xsl:apply-templates mode="main-document" select=".">
+											<xsl:with-param name="additional-classes">force-page-break-after</xsl:with-param>									
+									</xsl:apply-templates>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:for-each>
-						<!-- PRINT VERSION OF MANUFACTURED PRODUCT -->
-						<div class="hide-in-screen force-page-break-before card spl" id="print-product-details">
+						<!-- PRINT VERSION OF MANUFACTURED PRODUCT DETAIL will already have a page break after previous section -->
+						<div class="hide-in-screen card spl" id="print-product-details">
 							<h2>
 								<xsl:call-template name="string-uppercase">
 									<xsl:with-param name="text">
@@ -952,31 +942,50 @@
 			</div>
 		</main>	
 	</xsl:template>
+
+	<xsl:template match="v3:section" mode="main-document">
+		<xsl:param name="additional-classes"/>
+		<xsl:variable name="unique-section-id"><xsl:value-of select="v3:id/@root"/></xsl:variable>
+		<div class="card mb-2 pb-2 {$additional-classes}" id="{$unique-section-id}">
+			<h5 class="card-header text-white bg-aurora-accent1">
+				<xsl:value-of select="v3:title"/>
+			</h5>
+			<div class="spl">
+				<xsl:apply-templates select="."/>
+			</div>
+		</div>
+	</xsl:template>
+
+	<!-- Extra Templates for Print Table of Contents -->
+	<xsl:template name="render-toc">
+		<div class="hide-in-screen force-page-break-after card spl" id="print-toc">
+			<h2><xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/></h2>
+			<div class="spl"><xsl:value-of select="$labels/tocBoilerplate[@lang = $lang]"/></div>
+			<ul class="toc">
+				<xsl:apply-templates mode="toc" select="//v3:structuredBody/v3:component/v3:section[not(v3:code/@code='0MP')]"/>
+				<li class="toc"><a href="#company-details"><xsl:value-of select="$labels/productDetails[@lang = $lang]"/></a></li>
+				<li class="toc"><a href="#company-details"><xsl:value-of select="$labels/companyDetails[@lang = $lang]"/></a></li>
+				<xsl:for-each select="//v3:subject/v3:manufacturedProduct">
+					<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
+					<li class="toc">
+						<a href="#{$unique-product-id}">
+							<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
+								<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
+							</xsl:apply-templates>
+						</a>
+					</li>
+				</xsl:for-each>
+			</ul>
+		</div>																							
+	</xsl:template>
 	
-	<!-- [pmh] Extra Templates for Print Table of Contents -->
 	<xsl:template mode="toc" match="v3:component/v3:section">
 		<li class="toc"> 
 			<a href="#{v3:id/@root}">
 				<xsl:value-of select="v3:title"/>
 			</a> 
 		</li>
-<!--		<xsl:if test="not(v3:code/@code='0TP')">
-			<xsl:apply-templates mode="toc-hack" select="v3:component/v3:section"/>			
-		</xsl:if> -->
 	</xsl:template>												
-
-<!--
-	<xsl:template mode="toc-hack" match="v3:component/v3:section">
-		<li class="toc"> 
-			<a href="#{@ID}">
-				<xsl:value-of select="v3:title"/>
-			</a> 
-		</li>
-		<xsl:if test="not(v3:code/@code='0TP')">
-			<xsl:apply-templates mode="toc-hack" select="v3:component/v3:section"/>			
-		</xsl:if>
-	</xsl:template>												
--->
 	
 	<!-- Print Version of each Manufactured Product - very simplified version for print -->
 	<xsl:template match="v3:subject/v3:manufacturedProduct" mode="print">

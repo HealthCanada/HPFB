@@ -962,8 +962,8 @@ margin-bottom: 2ex;
 @media print {	
 
 .hide-in-print { display: none !important; }		
-.force-page-break-before { page-break-before: always; }
-.force-page-break-after { page-break-after: always; }
+.force-page-break-before { page-break-before: always !important; break-before: page !important; }
+.force-page-break-after { page-break-after: always !important; break-after: page !important; }
 .suppress-page-break { page-break-after: avoid; }
 .card { border-width: 0 !important; }
 .card-header { display: none !important; }

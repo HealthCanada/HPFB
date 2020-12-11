@@ -8,13 +8,9 @@
 	exclude-result-prefixes="exsl msxsl v3 xsl xsi str">
 
 	<!-- accordion card for company details and distributor details - note the spl class that triggers FDA styles -->
-	<xsl:template match="//v3:author/v3:assignedEntity/v3:representedOrganization" mode="card">
+	<xsl:template mode="screen" match="//v3:author/v3:assignedEntity/v3:representedOrganization">
 		<section class="card m-2" id="company-details">
-			<h6 class="card-header p-0 bg-aurora-light"> <!-- dropped bg-aurora-accent2 from h6 and button -->
-				<!-- This is how one might make product accordions optional - retained for future reference:
-				<div class="text-white text-left d-none d-md-block p-2">
-					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
-				</div> -->
+			<h6 class="card-header p-0 bg-aurora-light">
 				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-company-details" 
 				aria-expanded="true" aria-controls="collapse-company-details">
@@ -29,7 +25,7 @@
 	</xsl:template>
 	
 	<!-- accordion card for product details - note the spl class that triggers FDA styles -->
-	<xsl:template match="v3:subject/v3:manufacturedProduct" mode="card">
+	<xsl:template mode="screen" match="v3:subject/v3:manufacturedProduct">
 		<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
 		<section class="card m-2" id="{$unique-product-id}">
 			<h6 class="card-header p-0 bg-aurora-light">
@@ -130,7 +126,6 @@
 		<li class="nav-item">
 			<a href="#{$unique-subsection-id}" class="nav-link">
 				<!-- This conditional should never be applied to non-draft SPL documents -->
-				<!-- [pmh] replace non-breaking spaces so these also get normalized as whitespace -->
 				<xsl:if test="not(normalize-space(translate(v3:title, '&#160;', ' ')))">
 					<span style="color:red;">&lt;&lt;MISSING INFORMATION&gt;&gt;</span>
 				</xsl:if>
@@ -174,7 +169,7 @@
 			<meta name="documentEffectiveTime">
 				<xsl:attribute name="content"><xsl:value-of select="v3:effectiveTime/@value"/></xsl:attribute>
 			</meta>
-			<title><xsl:value-of select="v3:title"/></title>
+			<title><xsl:value-of select="$doc-title"/></title>
 			<link href="http://canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon"><xsl:text> </xsl:text></link>
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><xsl:text> </xsl:text></link>
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><xsl:text> </xsl:text></link>
@@ -195,7 +190,7 @@
 					content: target-counter(attr(href), page);
 					float: right;
 				}
-								
+
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 			</style>
