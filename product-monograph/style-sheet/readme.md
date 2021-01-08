@@ -17,6 +17,9 @@ and it also relies on the templates in FDA spl_stylesheet_6_2. The spl_canada.xs
 root template and a number of templates which override the corresponding templates in the FDA XSL. 
 The other two stylesheets provide templates for onscreen navigation and bilingual language support.
 
+Change Log:
+2021-01-08 - removed Combination Product Type Characteristic; renamed Packaging Availability, removed Packaging Cancellation Date and Product Approval Status
+
 2. This should be the only processing instruction referenced in the SPM XML:
 
 <?xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/HealthCanada/HPFB/master/product-monograph/style-sheet/spl_canada.xsl"?>

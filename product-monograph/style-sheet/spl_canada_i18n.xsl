@@ -41,7 +41,7 @@
 		<packaging lang="en">Packaging Status</packaging>
 		<itemCode lang="en">Package Identifier</itemCode>
 		<packageDescription lang="en">Package Description</packageDescription>
-		<packageRegStatus lang="en">Package Regulatory Status</packageRegStatus>
+		<packageRegStatus lang="en">Package Available</packageRegStatus>
 		<productRegStatus lang="en">Product Regulatory Status</productRegStatus>
 		<approvalDate lang="en">Date of Approval</approvalDate>
 		<cancellationDate lang="en">Date of Cancellation</cancellationDate>
@@ -97,7 +97,7 @@
 		<packaging lang="fr">État de l’emballage</packaging>
 		<itemCode lang="fr">Identificateur d’emballage</itemCode>
 		<packageDescription lang="fr">Description de l’emballage</packageDescription>
-		<packageRegStatus lang="fr">État réglementaire de l’emballage</packageRegStatus>
+		<packageRegStatus lang="fr">Emballage disponible</packageRegStatus>
 		<productRegStatus lang="fr">État réglementaire du produit</productRegStatus>
 		<approvalDate lang="fr">Date d’approbation</approvalDate>
 		<cancellationDate lang="fr">Date d’annulation</cancellationDate>
