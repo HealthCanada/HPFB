@@ -134,8 +134,8 @@
                                     <ingredientSubstance>
                                         <code code="EWQ57Q8I5X"
                                             codeSystem="2.16.840.1.113883.2.20.6.14"
-                                            displayName="LACTOSE MONOHYDRATE"/>
-                                        <name>LACTOSE MONOHYDRATE</name>
+                                            displayName="LACTOSE MONOHYDRATÉ"/>
+                                        <name>LACTOSE MONOHYDRATÉ</name>
                                     </ingredientSubstance>
                                 </ingredient>
                                 <ingredient classCode="IACT">
@@ -186,13 +186,12 @@
                                     <subjectOf>
                                         <marketingAct>
                                             <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                                                displayName="APPROUVÉS"/>
+                                                displayName="OUI"/>
                                             <effectiveTime>
-                                                <!-- regulatory status of this package -->
+                               
                                                 <low value="20170102"/>
                                                 <!-- Date of initial approval -->
-                                                <high value="20180101"/>
-                                                <!-- Date of cancellation -->
+                        
                                             </effectiveTime>
                                         </marketingAct>
                                     </subjectOf>
@@ -224,9 +223,9 @@
                                                 <marketingAct>
                                                   <code code="1"
                                                   codeSystem="2.16.840.1.113883.2.20.6.11"
-                                                  displayName="APPROUVÉS"/>
+                                                  displayName="OUI"/>
                                                   <effectiveTime>
-                                                  <!-- regulatory status of this package -->
+                            
                                                   <low value="20170101"/>
                                                   <!-- Date of initial approval -->
                                                   </effectiveTime>
@@ -255,13 +254,12 @@
                                 </approval>
                             </subjectOf>
                             <subjectOf>
-                                <!--Regulatory status of this product-->
+
                                 <marketingAct>
-                                    <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                                        displayName="APPROUVÉS"/>
+                           
                                     <effectiveTime>
                                         <low value="20170101"/>
-                                        <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
+     
                                     </effectiveTime>
                                 </marketingAct>
                             </subjectOf>
@@ -348,15 +346,7 @@
                                         displayName="Increased Thrombolysis [PE]" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
-                            <subjectOf>
-                                <characteristic>
-                                    <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
-                                        displayName="TYPE DE PRODUIT COMBINÉ"/>
-                                    <value code="9" codeSystem="2.16.840.1.113883.2.20.6.8"
-                                        displayName="Type 9 : Produit combiné à dose fixe : deux ou plusieurs principes actifs combinés sous forme de dosage unique"
-                                        xsi:type="CV"/>
-                                </characteristic>
-                            </subjectOf>
+
                             <consumedIn>
                                 <substanceAdministration>
                                     <routeCode code="20053000"
@@ -423,8 +413,8 @@
                                     <ingredientSubstance>
                                         <code code="EWQ57Q8I5X"
                                             codeSystem="2.16.840.1.113883.2.20.6.14"
-                                            displayName="LACTOSE MONOHYDRATE"/>
-                                        <name>LACTOSE MONOHYDRATE</name>
+                                            displayName="LACTOSE MONOHYDRATÉ"/>
+                                        <name>LACTOSE MONOHYDRATÉ</name>
                                     </ingredientSubstance>
                                 </ingredient>
                                 <ingredient classCode="IACT">
@@ -486,9 +476,9 @@
                                                 <marketingAct>
                                                   <code code="1"
                                                   codeSystem="2.16.840.1.113883.2.20.6.11"
-                                                  displayName="APPROUVÉS"/>
+                                                  displayName="OUI"/>
                                                   <effectiveTime>
-                                                  <!-- regulatory status of this package -->
+                    
                                                   <low value="20170101"/>
                                                   <!-- Date of initial approval -->
                                                   </effectiveTime>
@@ -517,13 +507,12 @@
                                 </approval>
                             </subjectOf>
                             <subjectOf>
-                                <!--Regulatory status of this product-->
+    
                                 <marketingAct>
-                                    <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                                        displayName="APPROUVÉS"/>
+ 
                                     <effectiveTime>
                                         <low value="20170101"/>
-                                        <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
+         
                                     </effectiveTime>
                                 </marketingAct>
                             </subjectOf>
@@ -620,15 +609,7 @@
                                         displayName="Lysosomal Function Alteration [PE]" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
-                            <subjectOf>
-                                <characteristic>
-                                    <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
-                                        displayName="TYPE DE PRODUIT COMBINÉ"/>
-                                    <value code="9" codeSystem="2.16.840.1.113883.2.20.6.8"
-                                        displayName="Type 9 : Produit combiné à dose fixe : deux ou plusieurs principes actifs combinés sous forme de dosage unique"
-                                        xsi:type="CV"/>
-                                </characteristic>
-                            </subjectOf>
+
                             <consumedIn>
                                 <substanceAdministration>
                                     <routeCode code="20053000"
@@ -675,8 +656,8 @@
                                     <ingredientSubstance>
                                         <code code="EWQ57Q8I5X"
                                             codeSystem="2.16.840.1.113883.2.20.6.14"
-                                            displayName="LACTOSE MONOHYDRATE"/>
-                                        <name>LACTOSE MONOHYDRATE</name>
+                                            displayName="LACTOSE MONOHYDRATÉ"/>
+                                        <name>LACTOSE MONOHYDRATÉ</name>
                                     </ingredientSubstance>
                                 </ingredient>
                                 <ingredient classCode="IACT">
@@ -750,9 +731,9 @@
                                                   <marketingAct>
                                                   <code code="1"
                                                   codeSystem="2.16.840.1.113883.2.20.6.11"
-                                                  displayName="APPROUVÉS"/>
+                                                  displayName="OUI"/>
                                                   <effectiveTime>
-                                                  <!-- regulatory status of this package -->
+                         
                                                   <low value="20180601"/>
                                                   <!-- Date of initial approval -->
                                                   </effectiveTime>
@@ -783,13 +764,12 @@
                                 </approval>
                             </subjectOf>
                             <subjectOf>
-                                <!--Regulatory status of this product-->
+
                                 <marketingAct>
-                                    <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                                        displayName="APPROUVÉS"/>
+           
                                     <effectiveTime>
                                         <low value="20170101"/>
-                                        <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
+
                                     </effectiveTime>
                                 </marketingAct>
                             </subjectOf>
@@ -820,15 +800,7 @@
                                         displayName="USP" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
-                            <subjectOf>
-                                <characteristic>
-                                    <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
-                                        displayName="TYPE DE PRODUIT COMBINÉ"/>
-                                    <value code="0" codeSystem="2.16.840.1.113883.2.20.6.8"
-                                        displayName="Type 0 : Un produit non combiné"
-                                        xsi:type="CV"/>
-                                </characteristic>
-                            </subjectOf>
+ 
                             <subjectOf>
                                 <characteristic>
                                     <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23"
@@ -881,13 +853,11 @@
                                     <subjectOf>
                                         <marketingAct>
                                             <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                                                displayName="APPROUVÉS"/>
+                                                displayName="OUI"/>
                                             <effectiveTime>
-                                                <!-- regulatory status of this package -->
                                                 <low value="20170102"/>
                                                 <!-- Date of initial approval -->
-                                                <high value="20180101"/>
-                                                <!-- Date of cancellation -->
+   
                                             </effectiveTime>
                                         </marketingAct>
                                     </subjectOf>
@@ -933,8 +903,8 @@
                                             <ingredientSubstance>
                                                 <code code="EWQ57Q8I5X"
                                                   codeSystem="2.16.840.1.113883.2.20.6.14"
-                                                  displayName="LACTOSE MONOHYDRATE"/>
-                                                <name>LACTOSE MONOHYDRATE</name>
+                                                  displayName="LACTOSE MONOHYDRATÉ"/>
+                                                <name>LACTOSE MONOHYDRATÉ</name>
                                             </ingredientSubstance>
                                         </ingredient>
                                         <ingredient classCode="IACT">
@@ -1047,15 +1017,7 @@
                                                 displayName="Bisphosphonate [EPC]" xsi:type="CV"/>
                                         </characteristic>
                                     </subjectOf>
-                                    <subjectOf>
-                                        <characteristic>
-                                            <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
-                                                displayName="TYPE DE PRODUIT COMBINÉ"/>
-                                            <value code="0" codeSystem="2.16.840.1.113883.2.20.6.8"
-                                                displayName="Type 0 : Un produit non combiné"
-                                                xsi:type="CV"/>
-                                        </characteristic>
-                                    </subjectOf>
+
 
                                     <consumedIn>
                                         <substanceAdministration>
@@ -1180,15 +1142,7 @@
                                                 displayName="Blood Pressure Alteration [PE]" xsi:type="CV"/>
                                         </characteristic>
                                     </subjectOf>
-                                    <subjectOf>
-                                        <characteristic>
-                                            <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
-                                                displayName="TYPE DE PRODUIT COMBINÉ"/>
-                                            <value code="1" codeSystem="2.16.840.1.113883.2.20.6.8"
-                                                displayName="Type 1 : Dispositif de drogue prérempli/Système d’administration de drogue (seringue, timbre transdermique, etc.)"
-                                                xsi:type="CV"/>
-                                        </characteristic>
-                                    </subjectOf>
+  
 
                                     <consumedIn>
                                         <substanceAdministration>
@@ -1217,8 +1171,7 @@
                             </subjectOf>
                             <subjectOf>
                                 <marketingAct>
-                                    <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                                        displayName="APPROUVÉS"/>
+
                                     <effectiveTime>
                                         <low value="20171009"/>
                                     </effectiveTime>
@@ -1266,8 +1219,8 @@
                                     <ingredientSubstance>
                                         <code code="EWQ57Q8I5X"
                                             codeSystem="2.16.840.1.113883.2.20.6.14"
-                                            displayName="LACTOSE MONOHYDRATE"/>
-                                        <name>LACTOSE MONOHYDRATE</name>
+                                            displayName="LACTOSE MONOHYDRATÉ"/>
+                                        <name>LACTOSE MONOHYDRATÉ</name>
                                     </ingredientSubstance>
                                 </ingredient>
                                 <ingredient classCode="IACT">
@@ -1318,13 +1271,12 @@
                                     <subjectOf>
                                         <marketingAct>
                                             <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                                                displayName="APPROUVÉS"/>
+                                                displayName="OUI"/>
                                             <effectiveTime>
-                                                <!-- regulatory status of this package -->
+                   
                                                 <low value="20170102"/>
                                                 <!-- Date of initial approval -->
-                                                <high value="20180101"/>
-                                                <!-- Date of cancellation -->
+          
                                             </effectiveTime>
                                         </marketingAct>
                                     </subjectOf>
@@ -1356,9 +1308,9 @@
                                                 <marketingAct>
                                                   <code code="1"
                                                   codeSystem="2.16.840.1.113883.2.20.6.11"
-                                                  displayName="APPROUVÉS"/>
+                                                  displayName="OUI"/>
                                                   <effectiveTime>
-                                                  <!-- regulatory status of this package -->
+                                    
                                                   <low value="20170101"/>
                                                   <!-- Date of initial approval -->
                                                   </effectiveTime>
@@ -1387,14 +1339,12 @@
                                 </approval>
                             </subjectOf>
                             <subjectOf>
-                                <!--Regulatory status of this product-->
+         
                                 <marketingAct>
-                                    <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                                        displayName="APPROUVÉS"/>
+
                                     <effectiveTime>
                                         <low value="20170101"/>
-                                        <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
-                                    </effectiveTime>
+                                   </effectiveTime>
                                 </marketingAct>
                             </subjectOf>
                             <!--Characteristics of this product-->
@@ -1480,15 +1430,7 @@
                                         displayName="Blood Pressure Alteration [PE]" xsi:type="CV"/>
                                 </characteristic>
                             </subjectOf>
-                            <subjectOf>
-                                <characteristic>
-                                    <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
-                                        displayName="TYPE DE PRODUIT COMBINÉ"/>
-                                    <value code="0" codeSystem="2.16.840.1.113883.2.20.6.8"
-                                        displayName="Type 0 : Un produit non combiné"
-                                        xsi:type="CV"/>
-                                </characteristic>
-                            </subjectOf>
+   
                             <consumedIn>
                                 <substanceAdministration>
                                     <routeCode code="20053000"
