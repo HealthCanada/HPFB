@@ -102,8 +102,8 @@
                 <ingredient classCode="IACT">
                   <ingredientSubstance>
                     <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="LACTOSE MONOHYDRATE"/>
-                    <name>LACTOSE MONOHYDRATE</name>
+                      displayName="LACTOSE MONOHYDRATÉ"/>
+                    <name>LACTOSE MONOHYDRATÉ</name>
                   </ingredientSubstance>
                 </ingredient>
                 <ingredient classCode="IACT">
@@ -148,14 +148,12 @@
                   </containerPackagedProduct>
                   <subjectOf>
                     <marketingAct>
-                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                        displayName="APPROUVÉS"/>
+        
                       <effectiveTime>
-                        <!-- regulatory status of this package -->
+           
                         <low value="20170102"/>
                         <!-- Date of initial approval -->
-                        <high value="20180101"/>
-                        <!-- Date of cancellation -->
+     
                       </effectiveTime>
                     </marketingAct>
                   </subjectOf>
@@ -184,9 +182,9 @@
                       <subjectOf>
                         <marketingAct>
                           <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                            displayName="APPROUVÉS"/>
+                            displayName="OUI"/>
                           <effectiveTime>
-                            <!-- regulatory status of this package -->
+           
                             <low value="20170101"/>
                             <!-- Date of initial approval -->
                           </effectiveTime>
@@ -213,12 +211,12 @@
                 </approval>
               </subjectOf>
               <subjectOf>
-                <!--Regulatory status of this product-->
+ 
                 <marketingAct>
-                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROUVÉS"/>
+    
                   <effectiveTime>
                     <low value="20170101"/>
-                    <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
+       
                   </effectiveTime>
                 </marketingAct>
               </subjectOf>
@@ -332,8 +330,8 @@
                 <ingredient classCode="IACT">
                   <ingredientSubstance>
                     <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="LACTOSE MONOHYDRATE"/>
-                    <name>LACTOSE MONOHYDRATE</name>
+                      displayName="LACTOSE MONOHYDRATÉ"/>
+                    <name>LACTOSE MONOHYDRATÉ</name>
                   </ingredientSubstance>
                 </ingredient>
                 <ingredient classCode="IACT">
@@ -388,9 +386,9 @@
                       <subjectOf>
                         <marketingAct>
                           <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                            displayName="APPROUVÉS"/>
+                            displayName="OUI"/>
                           <effectiveTime>
-                            <!-- regulatory status of this package -->
+             
                             <low value="20170101"/>
                             <!-- Date of initial approval -->
                           </effectiveTime>
@@ -417,12 +415,12 @@
                 </approval>
               </subjectOf>
               <subjectOf>
-                <!--Regulatory status of this product-->
+  
                 <marketingAct>
-                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROUVÉS"/>
+     
                   <effectiveTime>
                     <low value="20170101"/>
-                    <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
+          
                   </effectiveTime>
                 </marketingAct>
               </subjectOf>
@@ -545,8 +543,8 @@
                 <ingredient classCode="IACT">
                   <ingredientSubstance>
                     <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.2.20.6.14"
-                      displayName="LACTOSE MONOHYDRATE"/>
-                    <name>LACTOSE MONOHYDRATE</name>
+                      displayName="LACTOSE MONOHYDRATÉ"/>
+                    <name>LACTOSE MONOHYDRATÉ</name>
                   </ingredientSubstance>
                 </ingredient>
                 <ingredient classCode="IACT">
@@ -611,10 +609,9 @@
                           </containerPackagedProduct>
                           <subjectOf>
                             <marketingAct>
-                              <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                                displayName="APPROUVÉS"/>
+         
                               <effectiveTime>
-                                <!-- regulatory status of this package -->
+             
                                 <low value="20170101"/>
                                 <!-- Date of initial approval -->
                               </effectiveTime>
@@ -645,10 +642,10 @@
               <subjectOf>
                 <!--Regulatory status of this product-->
                 <marketingAct>
-                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROUVÉS"/>
+   
                   <effectiveTime>
                     <low value="20170101"/>
-                    <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
+      
                   </effectiveTime>
                 </marketingAct>
               </subjectOf>
@@ -719,9 +716,9 @@
                   <subjectOf>
                     <marketingAct>
                       <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                        displayName="APPROUVÉS"/>
+                        displayName="OUI"/>
                       <effectiveTime>
-                        <!-- regulatory status of this package -->
+  
                         <low value="20170102"/>
                         <!-- Date of initial approval -->
                       </effectiveTime>
@@ -765,8 +762,8 @@
                     <ingredient classCode="IACT">
                       <ingredientSubstance>
                         <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.2.20.6.14"
-                          displayName="LACTOSE MONOHYDRATE"/>
-                        <name>LACTOSE MONOHYDRATE</name>
+                          displayName="LACTOSE MONOHYDRATÉ"/>
+                        <name>LACTOSE MONOHYDRATÉ</name>
                       </ingredientSubstance>
                     </ingredient>
                     <ingredient classCode="IACT">
@@ -916,9 +913,9 @@
                       <subjectOf>
                         <marketingAct>
                           <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11"
-                            displayName="APPROUVÉS"/>
+                            displayName="OUI"/>
                           <effectiveTime>
-                            <!-- regulatory status of this package -->
+               
                             <low value="20180101"/>
                             <!-- Date of initial approval -->
                           </effectiveTime>
@@ -999,7 +996,7 @@
               </subjectOf>
               <subjectOf>
                 <marketingAct>
-                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROUVÉS"/>
+     
                   <effectiveTime>
                     <low value="20171009"/>
                   </effectiveTime>
