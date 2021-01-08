@@ -522,11 +522,6 @@
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='7']"/>
 					<xsl:with-param name="label" select="$labels/flavor[@lang = $lang]"/>
 				</xsl:call-template>
-<!-- [pmh]				<xsl:call-template name="spacedCharacteristicRow"> <!- - Combination Product is CV - ->
-					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='8']"/>
-					<xsl:with-param name="label" select="$labels/combinationProduct[@lang = $lang]"/>
-					<xsl:with-param name="class">formTableRowAlt</xsl:with-param>
-				</xsl:call-template> -->
 				<xsl:call-template name="listedCharacteristicRow"> <!-- Pharmaceutical Standard is CV Listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='9']"/>
 					<xsl:with-param name="label" select="$labels/pharmaStandard[@lang = $lang]"/>
@@ -555,7 +550,6 @@
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/itemCode[@lang = $lang]"/></th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/packageDescription[@lang = $lang]"/></th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/approvalDate[@lang = $lang]"/></th>
-<!-- [pmh]				<th scope="col" class="formTitle"><xsl:value-of select="$labels/cancellationDate[@lang = $lang]"/></th> -->
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/packageRegStatus[@lang = $lang]"/></th>
 			</tr>
 			<xsl:for-each select="$path/v3:asContent/descendant-or-self::v3:asContent[not(*/v3:asContent)]">
@@ -625,17 +619,6 @@
 					<br/>
 				</xsl:for-each>
 			</td>
-<!-- [pmh]			<td class="formItem">					
-				<xsl:for-each select="$containerPackagedPath">
-					<xsl:sort select="position()" order="descending"/>
-					<xsl:call-template name="string-to-date">
-						<xsl:with-param name="text">
-							<xsl:value-of select="../v3:subjectOf/v3:marketingAct/v3:effectiveTime/v3:high/@value"/>
-						</xsl:with-param>
-					</xsl:call-template>
-					<br/>
-				</xsl:for-each>
-			</td> -->
 			<td class="formItem">	
 				<xsl:for-each select="$containerPackagedPath">
 					<xsl:sort select="position()" order="descending"/>
@@ -738,7 +721,6 @@
 						<tr>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/marketingCategory[@lang = $lang]"/></th>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/applicationNumber[@lang = $lang]"/></th>
-<!-- [pmh]							<th scope="col" class="formTitle"><xsl:value-of select="$labels/productRegStatus[@lang = $lang]"/></th> -->
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/approvalDate[@lang = $lang]"/></th>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/cancellationDate[@lang = $lang]"/></th>
 						</tr>
@@ -749,9 +731,6 @@
 							<td class="formItem">
 								<xsl:value-of select="../v3:subjectOf/v3:approval/v3:id/@extension"/>
 							</td>
-<!-- [pmh]							<td class="formItem">						
-								<xsl:value-of select="../v3:subjectOf/v3:marketingAct/v3:code/@displayName"/>
-							</td> -->
 							<td class="formItem">						
 								<xsl:call-template name="string-to-date">
 									<xsl:with-param name="text">
