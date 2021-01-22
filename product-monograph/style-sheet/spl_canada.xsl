@@ -22,6 +22,8 @@
 	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/spl_canada.css</xsl:param>
 	<!-- This is the HTML Document Title -->
 	<xsl:param name="doc-title"><xsl:value-of select="v3:document/v3:title"/></xsl:param>
+	<!-- This is to replace relative image paths with absolute paths -->
+	<xsl:param name="base-uri"></xsl:param>
 	
 	<xsl:variable name="lang">
 		<xsl:choose>
@@ -995,7 +997,33 @@
 	<xsl:template match="/" priority="1">
 		<xsl:apply-templates select="/v3:document"/>
 	</xsl:template>
+	
+	<!-- IMAGE SUPPORT - moved here from spl_common, and there are other renderMultiMedia templates there that are unused -->
+	<!-- this one applies specifically to images embedded in paragraphs or tables, and was moved here to support prepending absolute paths -->
+	<xsl:template mode="mixed" priority="1" match="v3:renderMultiMedia[@referencedObject and (ancestor::v3:paragraph or ancestor::v3:td or ancestor::v3:th)]">
+		<xsl:variable name="reference" select="@referencedObject"/>
+		<!-- see note anchoring and PCR 793 -->
+		<xsl:if test="@ID">
+			<a name="{@ID}"/>
+		</xsl:if>
 
+		<xsl:choose>
+			<xsl:when test="boolean(//v3:observationMedia[@ID=$reference]//v3:text)">
+				<img alt="{//v3:observationMedia[@ID=$reference]//v3:text}" 
+					src="{$base-uri}{//v3:observationMedia[@ID=$reference]//v3:reference/@value}">
+					<xsl:apply-templates select="@*"/>
+				</img>
+			</xsl:when>
+			<xsl:when test="not(boolean(//v3:observationMedia[@ID=$reference]//v3:text))">
+				<img alt="Image from Drug Label Content" 
+					src="{$base-uri}{//v3:observationMedia[@ID=$reference]//v3:reference/@value}">
+					<xsl:apply-templates select="@*"/>
+				</img>
+			</xsl:when>
+		</xsl:choose>
+		<xsl:apply-templates mode="notCentered" select="v3:caption"/>
+	</xsl:template>
+	
 	<!-- TABLE MODEL -->
 	<xsl:template match="v3:table">
 		<xsl:if test="@ID">

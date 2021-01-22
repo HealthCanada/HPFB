@@ -122,9 +122,9 @@
 	</xsl:template>
 
 	<xsl:template match="v3:component/v3:section" mode="sidebar-navigation">
-		<xsl:variable name="unique-subsection-id"><xsl:value-of select="@ID"/></xsl:variable>
+		<xsl:variable name="unique-section-id"><xsl:value-of select="v3:id/@root"/></xsl:variable>
 		<li class="nav-item">
-			<a href="#{$unique-subsection-id}" class="nav-link">
+			<a href="#{$unique-section-id}" class="nav-link">
 				<!-- This conditional should never be applied to non-draft SPL documents -->
 				<xsl:if test="not(normalize-space(translate(v3:title, '&#160;', ' ')))">
 					<span style="color:red;">&lt;&lt;MISSING INFORMATION&gt;&gt;</span>
