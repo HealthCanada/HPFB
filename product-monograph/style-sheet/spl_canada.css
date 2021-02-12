@@ -1,44 +1,66 @@
 
 @media screen {
-.spl {
-	font-family: "Rubik", sans-serif;
-	font-size: 12pt;	
-	background-color: rgba(255,255,255,0);
-	color: #000000;
-	margin-left: 1em;
-	margin-right: 1em;
-}
+
+    .spl {
+    	font-family: "Rubik", sans-serif;
+    	font-size: 12pt;	
+    	background-color: rgba(255,255,255,0);
+    	color: #000000;
+    	margin-left: 1em;
+    	margin-right: 1em;
+    }
+
 }
 							
 @media print {
-@page { 
-    size: 8.5in 11in; 
-	margin-top: 0.5in;
-	margin-bottom: 0.5in;
-	orphans: 4; 
-	widows: 2;
+    @page { 
+        size: 8.5in 11in; 
+    	margin-top: 0.5in;
+    	margin-bottom: 0.5in;
+    	orphans: 4; 
+    	widows: 2;
+        @bottom-right {
+        	font-family: "Rubik", sans-serif;
+        	font-size: 10pt;	
+            content: counter(page);
+        }
+    }
+    
+    /* PDF Outline bookmarks - withhold headings which are on the Title Page and Table of Contents - WeasyPrint defaults to h1, h2 */
+    #print-toc h2, .title-page-row h2 {
+        bookmark-level: none;
+    }
+    
+    /* Table of Contents styles */
+    ul.toc {
+    	list-style-type: none;
+    }					
+    li.toc a::after {
+    	content: target-counter(attr(href), page);
+    	float: right;
+    }
+    
+    /* font-size for Print Media has been chnaged from 12pt to 10pt */
+    .spl {
+    	font-family: "Rubik", sans-serif;
+    	font-size: 10pt;
+    	color: #000000;
+    	margin-left: 0in;
+    	margin-right: 0in;
+    	margin-top: 0in;
+    	margin-bottom: 0in;
+    }
+    
+    .spl div.DocumentTitle {
+            display: none;
+    }
+    
+    .spl .bars {
+         display:none;
+    }
+    
 }
 
-.spl {
-	font-family: "Rubik", sans-serif;
-	font-size: 12pt;	
-	color: #000000;
-	margin-left: 0in;
-	margin-right: 0in;
-	margin-top: 0in;
-	margin-bottom: 0in;
-}
-
-
-.spl div.DocumentTitle {
-        display: none;
-}
-
-.spl .bars {
-     display:none;
-}
-
-}
 .header3911 {	
 	font-family: Century Gothic,sans-serif;
 	width: 60%;
@@ -130,7 +152,7 @@
 	color: black;
 }
 
-/* pmh - h5 and h6 follow the same pattern as h3 and h4 - plain, and then italicized */
+/* Headers for h5 and h6 follow the same pattern as h3 and h4 - plain, and then italicized */
 .spl h5 {	
 	text-indent: 0em;
 	font-size: 100%;
@@ -401,7 +423,7 @@
 	margin-top: 3ex;
 	margin-bottom: 3ex;
 	border-collapse: collapse;
-/*  pmh align border color with Product Detail tables */
+/*  Align border color with Product Detail tables */
     border-color: #CCCCCC;
 	border-width: thin;
 }
@@ -417,13 +439,13 @@
 	text-align: center;
 	font-weight: bold;
 	font-size: 100%;
-    /* pmh - override Bootstrap default to put captions below tables and black instead of dark gray */
+    /* Override Bootstrap default to put captions below tables and black instead of dark gray */
     caption-side: top !important;
     color: black !important; 
 }
 
 .spl th {
-    /* pmh always make table headers consistent with Product Detail colour scheme */
+    /* Always make table headers consistent with Product Detail colour scheme */
     	background-color: #EAEAEA;
 }
 				
@@ -434,7 +456,7 @@
 	border-right-style: none;
 	border-left-style: none;
 	border-collapse: collapse;
-/*  pmh align border color with Product Detail tables, no longer black */
+/*  Align border color with Product Detail tables, no longer black */
     border-color: #CCCCCC;
 	border-width: thin;
 /*
@@ -764,7 +786,7 @@
 }
 .spl .formTableRowAlt {
  	background-color: #FFFFFF;
-/* pmh - removed the banding the FDA was using for this 
+/* Removed the banding the FDA was using for this - every row is now white 
   background-color: #F2F2F2;
  */
 }
@@ -865,11 +887,13 @@
 }
 /* non-Bootstrap styles for XML Notepad and DocuBridge */
 .title-page-row {
-    padding: 0.25in;
+    padding: 0.20in;
 }
-.title-page-rule
-{
+.title-page-rule-top {
     border-top: 1px solid; 
+    border-color: lightgrey;
+}
+.title-page-rule-bot {
     border-bottom: 1px solid;
     border-color: lightgrey;
 }
@@ -928,54 +952,58 @@ img { max-width: 100%; height: auto; }
     height:60px;
 }
 
-@media screen {
-
-.bg-aurora-accent1 { background-color: #002D42;	}
-.bg-aurora-accent2 { background-color: #4D5D6C;	}
-.bg-aurora-light   { background-color: #EAEAEA; } /*  matched to the base colour int the tables #CECECE;	}*/
-
-#side .nav-link.active,
-#side .nav-link:hover,
-#side .nav-link:focus {
-	color: #4D5D6C;
+.spl .fullWidth {
+    width: 100%;
 }
 
-.hide-in-screen { display: none; }
-.Section h1 {display: none; } /* hide top level section headings on screen */
-#main { max-width: 1000px; }
-#side { max-width: 420px; min-width: 420px; }
-#navigation-sidebar li { padding-left: 10px !important; }
-#navigation-scrollbar { height: calc(100vh - 50px); overflow-y: scroll; }
+/* Only pad top and bottom margins for the last table in the main content to prevent double margins */
+.spl table.formTablePetite {
+    margin-top: 2ex;
+    margin-bottom: 0ex;
+}
+.spl table.formTablePetite:lastchild {
+    margin-top: 2ex;
+    margin-bottom: 2ex;
+}
+
+@media screen {
+
+    .bg-aurora-accent1 { background-color: #002D42;	}
+    .bg-aurora-accent2 { background-color: #4D5D6C;	}
+    .bg-aurora-light   { background-color: #EAEAEA; } /*  matched to the base colour int the tables #CECECE;	}*/
+    
+    #side .nav-link.active,
+    #side .nav-link:hover,
+    #side .nav-link:focus {
+    	color: #4D5D6C;
+    }
+    
+    .hide-in-screen { display: none; }
+    .Section h1 {display: none; } /* hide top level section headings on screen */
+    #main { max-width: 1000px; }
+    #side { max-width: 420px; min-width: 420px; }
+    #navigation-sidebar li { padding-left: 10px !important; }
+    #navigation-scrollbar { height: calc(100vh - 50px); overflow-y: scroll; }
 				
 }
 	
-/* Only pad top and bottom margins for the last table in the main content to prevent double margins */
-.spl table.formTablePetite {
-margin-top: 2ex;
-margin-bottom: 0ex;
-}
-.spl table.formTablePetite:lastchild {
-margin-top: 2ex;
-margin-bottom: 2ex;
-}
-
 @media print {	
 
-.hide-in-print { display: none !important; }		
-.force-page-break-before { page-break-before: always !important; break-before: page !important; }
-.force-page-break-after { page-break-after: always !important; break-after: page !important; }
-.suppress-page-break { page-break-after: avoid; }
-.card { border-width: 0 !important; }
-.card-header { display: none !important; }
-	
-/* override FDA tables so they look nicer in print */
-.spl .formTable, 
-.spl .formTablePetite,
-.spl .formTableMorePetite,
-.spl .formTitle,
-.spl .formHeadingReg,
-.spl .formLabel {
-    border: 1px solid #CCCCCC !important;
-}
+    .hide-in-print { display: none !important; }		
+    .force-page-break-before { page-break-before: always !important; break-before: page !important; }
+    .force-page-break-after { page-break-after: always !important; break-after: page !important; }
+    .suppress-page-break { page-break-after: avoid; }
+    .card { border-width: 0 !important; }
+    .card-header { display: none !important; }
+    	
+    /* override FDA tables so they look nicer in print */
+    .spl .formTable, 
+    .spl .formTablePetite,
+    .spl .formTableMorePetite,
+    .spl .formTitle,
+    .spl .formHeadingReg,
+    .spl .formLabel {
+        border: 1px solid #CCCCCC !important;
+    }
 
 }	

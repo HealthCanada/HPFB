@@ -37,9 +37,9 @@
 	<!-- Override FDA company info section, using Canadian French and English labels -->
 	<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization">	
 		<xsl:if test="(count(./v3:name)>0)">
-			<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
+			<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite fullWidth">
 				<tr>
-					<td colspan="4" class="formHeadingReg">
+					<td colspan="2" class="formHeadingReg">
 						<span class="formHeadingTitle"><xsl:value-of select="$labels/labeler[@lang = $lang]"/> -&#160;</span>
 						<xsl:value-of select="./v3:name"/> 
 						<xsl:if test="./v3:id/@extension"> (<xsl:value-of select="./v3:id/@extension"/>)</xsl:if>
@@ -52,9 +52,9 @@
 
 	<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization">	
 		<xsl:if test="./v3:name">
-			<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
+			<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite fullWidth">
 				<tr>
-					<td colspan="4" class="formHeadingReg">
+					<td colspan="2" class="formHeadingReg">
 						<span class="formHeadingTitle"><xsl:value-of select="$labels/registrant[@lang = $lang]"/> -&#160;</span>
 						<xsl:value-of select="./v3:name"/>
 						<xsl:if test="./v3:id/@extension"> (<xsl:value-of select="./v3:id/@extension"/>)</xsl:if>
@@ -115,7 +115,7 @@
 	<!-- Note: This template is also used for top level Product Concept which does not have v3:asEquivalentEntity -->
 	<!-- Canada does not currently require equivalent or abstract product concept -->
 	<xsl:template mode="subjects" match="v3:section/v3:subject/v3:manufacturedProduct/*[self::v3:manufacturedProduct[v3:name or v3:formCode] or self::v3:manufacturedMedicine][not(v3:asEquivalentEntity/v3:definingMaterialKind[/v3:document/v3:code/@code = '73815-3'])]|v3:section/v3:subject/v3:identifiedSubstance/v3:identifiedSubstance">
-		<table class="contentTablePetite" cellSpacing="0" cellPadding="3" width="100%">
+		<table class="contentTablePetite fullWidth" cellSpacing="0" cellPadding="3" width="100%">
 			<tbody>
 				<xsl:call-template name="piMedNames"/>
 				<xsl:apply-templates mode="substance" select="v3:moiety"/>
@@ -135,7 +135,7 @@
 				<xsl:if test="v3:instanceOfKind">
 					<tr>
 						<td colspan="4">
-							<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
+							<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 								<xsl:apply-templates mode="ldd" select="v3:instanceOfKind"/>
 							</table>
 						</td>
@@ -149,7 +149,7 @@
 	<xsl:template name="ProductInfoBasic">
 		<tr>
 			<td>
-				<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
+				<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 					<tr>
 						<td colspan="2" class="formHeadingTitle"><xsl:value-of select="$labels/productInfo[@lang = $lang]"/></td>
 					</tr>
@@ -307,7 +307,7 @@
 		
 	<!-- Display the ingredient information (both active and inactive) -->
 	<xsl:template name="ActiveIngredients">
-		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
+		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 			<xsl:call-template name="IngredientHeader"/>
 			<xsl:for-each select="v3:ingredient[starts-with(@classCode, 'ACTI')]|v3:activeIngredient">
 				<tr>
@@ -365,7 +365,7 @@
 	</xsl:template>
 
 	<xsl:template name="InactiveIngredients">
-		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
+		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 			<xsl:call-template name="IngredientHeader">
 				<xsl:with-param name="title-label">
 					<xsl:value-of select="$labels/inactiveIngredients[@lang = $lang]"/>					
@@ -486,7 +486,7 @@
 	</xsl:template>	
 
 	<xsl:template name="characteristics-old">
-		<table class="formTablePetite" cellSpacing="0" cellPadding="3" width="100%">
+		<table class="formTablePetite fullWidth" cellSpacing="0" cellPadding="3" width="100%">
 			<tbody>
 				<tr>
 					<td class="formHeadingTitle" colspan="2">
@@ -543,9 +543,9 @@
 
 	<xsl:template name="packaging">
 		<xsl:param name="path" select="."/>
-		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
+		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 			<tr>
-				<td colspan="6" class="formHeadingTitle"><xsl:value-of select="$labels/packaging[@lang = $lang]"/></td>
+				<td colspan="5" class="formHeadingTitle"><xsl:value-of select="$labels/packaging[@lang = $lang]"/></td>
 			</tr>
 			<tr>
 				<th scope="col" width="1" class="formTitle">#</th>
@@ -657,7 +657,7 @@
 		</xsl:if>
 		<tr>
 			<td>
-				<table width="100%" cellspacing="0" cellpadding="5">
+				<table width="100%" class="fullWidth" cellspacing="0" cellpadding="5">
 					<tr>
 						<td class="contentTableTitle"><xsl:value-of select="$labels/part[@lang = $lang]"/> <xsl:value-of select="count(../preceding-sibling::v3:part)+1"/><xsl:value-of select="$labels/ofConnective[@lang = $lang]"/><xsl:value-of select="count(../../v3:part)"/></td>
 					</tr>
@@ -672,7 +672,7 @@
 
 	<xsl:template name="partQuantity">
 		<xsl:param name="path" select="."/>
-		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
+		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 			<tr>
 				<td colspan="3" class="formHeadingTitle"><xsl:value-of select="$labels/partQuantity[@lang = $lang]"/></td>
 			</tr>
@@ -716,9 +716,9 @@
 		<xsl:if test="../v3:subjectOf/v3:approval|../v3:subjectOf/v3:marketingAct">
 			<tr>
 				<td> 
-					<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
+					<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 						<tr>
-							<td colspan="5" class="formHeadingTitle"><xsl:value-of select="$labels/marketingInfo[@lang = $lang]"/></td>
+							<td colspan="4" class="formHeadingTitle"><xsl:value-of select="$labels/marketingInfo[@lang = $lang]"/></td>
 						</tr>
 						<tr>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/marketingCategory[@lang = $lang]"/></th>
@@ -807,7 +807,6 @@
 	<!-- this template is used on the Title Page to show Control Number on a single line -->
 	<xsl:template mode="inline-title" match="v3:section">
 		<div class="Section">
-			<br/>
 			<h2 style="display: inline;">
 				<xsl:value-of select="v3:title"/>
 				<xsl:text> </xsl:text>
@@ -847,16 +846,18 @@
 										<div class="spl title-page title-page-row">
 											<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.1']/v3:text"/>
 										</div>
-										<div class="spl title-page-row title-page-rule">
+										<div class="spl title-page-row title-page-rule-top">
 											<div class="title-page-left">
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.2']"/>
-												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.5']" mode="inline-title"/>
 											</div>
 											<div class="title-page-right">
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.3']"/>
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.4']"/>
 											</div>
 										</div>											
+										<div class="spl title-page-row title-page-rule-bot">
+											<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.5']" mode="inline-title"/>
+										</div>
 										<div class="spl title-page title-page-row">
 											<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.6']/v3:text"/>
 										</div>
@@ -944,8 +945,8 @@
 			<div class="spl"><xsl:value-of select="$labels/tocBoilerplate[@lang = $lang]"/></div>
 			<ul class="toc">
 				<xsl:apply-templates mode="toc" select="//v3:structuredBody/v3:component/v3:section[not(v3:code/@code='0MP')]"/>
-				<li class="toc"><a href="#company-details"><xsl:value-of select="$labels/productDetails[@lang = $lang]"/></a></li>
-				<li class="toc"><a href="#company-details"><xsl:value-of select="$labels/companyDetails[@lang = $lang]"/></a></li>
+				<li class="toc"><a href="#print-product-details"><xsl:value-of select="$labels/productDetails[@lang = $lang]"/></a></li>
+				<li class="toc"><a href="#print-product-details"><xsl:value-of select="$labels/companyDetails[@lang = $lang]"/></a></li>
 				<xsl:for-each select="//v3:subject/v3:manufacturedProduct">
 					<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
 					<li class="toc">
@@ -966,19 +967,30 @@
 				<xsl:value-of select="v3:title"/>
 			</a> 
 		</li>
+		<xsl:if test="self::node()[not(v3:code/@code='0TP')]/v3:component/v3:section and not($show-print-toc = 1)">
+			<ul class="toc">
+				<xsl:apply-templates mode="toc" select="v3:component/v3:section"/>
+			</ul>
+		</xsl:if>
 	</xsl:template>												
 	
-	<!-- Print Version of each Manufactured Product - very simplified version for print -->
+	<!-- Print Version of each Manufactured Product - simplified version for Print Media -->
 	<xsl:template match="v3:subject/v3:manufacturedProduct" mode="print">
+		<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/>
+		</xsl:variable>
 		<section>
-			<div class="Section">
-				<p></p>
+			<div class="Section" id="{$unique-product-id}">
+				<p/>
 				<h2>
 					<xsl:call-template name="string-uppercase">
 						<xsl:with-param name="text">
-							<xsl:copy><xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
-								<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
-							</xsl:apply-templates></xsl:copy>
+							<xsl:copy>
+								<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
+									<xsl:with-param name="position">
+										<xsl:value-of select="position()"/>
+									</xsl:with-param>
+								</xsl:apply-templates>
+							</xsl:copy>
 						</xsl:with-param>
 					</xsl:call-template>
 				</h2>
