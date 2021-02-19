@@ -468,6 +468,23 @@
 		</tr>
 	</xsl:template>
 
+	<xsl:template name="codelistedCharacteristicRow">
+		<xsl:param name="path" select="."/>
+		<xsl:param name="class">formTableRow</xsl:param>
+		<xsl:param name="label"><xsl:value-of select="$path/v3:code/@displayName"/></xsl:param>
+		<tr class="{$class}">
+			<td class="formLabel">
+				<xsl:value-of select="$label"/>
+			</td>
+			<td class="formItem">			
+				<xsl:for-each select="$path/v3:value">
+					<xsl:if test="position() > 1">,&#160;</xsl:if>
+					<xsl:value-of select="./@code"/>
+				</xsl:for-each>
+			</td>
+		</tr>
+	</xsl:template>
+	
 	<xsl:template name="spacedCharacteristicRow">
 		<xsl:param name="path" select="."/>
 		<xsl:param name="class">formTableRow</xsl:param>
@@ -500,7 +517,6 @@
 				<xsl:call-template name="listedCharacteristicRow"> <!-- Colour is CV (original text), listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='2']"/>
 					<xsl:with-param name="label" select="$labels/color[@lang = $lang]"/>
-					<xsl:with-param name="class">formTableRowAlt</xsl:with-param>
 				</xsl:call-template>
 				<xsl:call-template name="listedCharacteristicRow"> <!-- Shape is CV (original text), listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='3']"/>
@@ -509,7 +525,6 @@
 				<xsl:call-template name="pqCharacteristicRow"> <!-- Size is PQ -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='4']"/>
 					<xsl:with-param name="label" select="$labels/size[@lang = $lang]"/>
-					<xsl:with-param name="class">formTableRowAlt</xsl:with-param>
 				</xsl:call-template>
 				<xsl:call-template name="codedCharacteristicRow"> <!-- Score is CV -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='5']"/>
@@ -518,7 +533,6 @@
 				<xsl:call-template name="stringCharacteristicRow"> <!-- Imprint Code is ST -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='6']"/>
 					<xsl:with-param name="label" select="$labels/imprint[@lang = $lang]"/>
-					<xsl:with-param name="class">formTableRowAlt</xsl:with-param>
 				</xsl:call-template>
 				<xsl:call-template name="listedCharacteristicRow"> <!-- Flavour is CV Listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='7']"/>
@@ -531,9 +545,8 @@
 				<xsl:call-template name="listedCharacteristicRow"> <!-- Schedule is CV Listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='10']"/>
 					<xsl:with-param name="label" select="$labels/schedule[@lang = $lang]"/>
-					<xsl:with-param name="class">formTableRowAlt</xsl:with-param>
 				</xsl:call-template>
-				<xsl:call-template name="listedCharacteristicRow"> <!-- Therapeutic Class Listed -->
+				<xsl:call-template name="codelistedCharacteristicRow"> <!-- Therapeutic Class Listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='11']"/>
 					<xsl:with-param name="label" select="$labels/therapeuticClass[@lang = $lang]"/>
 				</xsl:call-template>
@@ -610,7 +623,7 @@
 					<br/>
 				</xsl:for-each>
 			</td>
-			<td class="formItem">	
+			<td class="formItem">
 				<xsl:for-each select="$containerPackagedPath">
 					<xsl:sort select="position()" order="descending"/>
 					<xsl:call-template name="string-to-date">

@@ -5,7 +5,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" 
 	xmlns="http://www.w3.org/1999/xhtml"
-	exclude-result-prefixes="exsl msxsl v3 xsl xsi str">
+	exclude-result-prefixes="exsl msxsl v3 gc xsl xsi str">
 
 	<!-- accordion card for company details and distributor details - note the spl class that triggers FDA styles -->
 	<xsl:template mode="screen" match="//v3:author/v3:assignedEntity/v3:representedOrganization">

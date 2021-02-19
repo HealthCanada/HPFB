@@ -40,7 +40,14 @@
     	float: right;
     }
     
-    /* font-size for Print Media has been chnaged from 12pt to 10pt */
+    div[data-sectionCode="0TP"] h1,
+    div[data-sectionCode="0BBD"] h1,
+    div[data-sectionCode="0NOC"] h1 {
+        position: absolute;
+        left: -999px;
+    }
+    
+    /* font-size for Print Media has been changed from 12pt to 10pt */
     .spl {
     	font-family: "Rubik", sans-serif;
     	font-size: 10pt;
