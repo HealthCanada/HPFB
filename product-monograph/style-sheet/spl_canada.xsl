@@ -816,7 +816,7 @@
 			<xsl:attribute name="style">margin-left:-0.5em; padding-left:0.5em; border-left:1px solid;</xsl:attribute>
 		</xsl:if>
 	</xsl:template>
-	
+
 	<!-- this template is used on the Title Page to show Control Number on a single line -->
 	<xsl:template mode="inline-title" match="v3:section">
 		<div class="Section">
@@ -840,9 +840,15 @@
 								<xsl:when test="v3:code[@code='0MP']">
 									<!-- SCREEN VERSION OF MANUFACTURED PRODUCT DETAIL -->
 									<div class="card mb-2 hide-in-print" id="{$unique-section-id}">
+										
+										<!-- [pmh] replace top level headings with semantic stuff like headers - move the font-size eventually
 										<h5 class="card-header text-white bg-aurora-accent1"> 
 											<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
-										</h5>
+										</h5> -->
+										<header class="card-header bg-aurora-accent1 text-white font-weight-bold">
+											<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
+										</header>
+										
 										<!-- Company Details and Product Details Accordion Cards -->
 										<div id="product-accordion">
 											<xsl:apply-templates mode="screen" select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization"/>
@@ -853,9 +859,15 @@
 								<xsl:when test="v3:code[@code='0TP']">
 									<!-- TITLE PAGE - Note: force-page-break-after here does not work on FireFox -->
 									<div class="card mb-2 force-page-break-after" id="{$unique-section-id}">
+										<!-- [pmh] replace top level headings with semantic stuff like headers - move the font-size eventually
 										<h5 class="card-header text-white bg-aurora-accent1 hide-in-print">
 											<xsl:value-of select="v3:title"/>
-										</h5>
+										</h5> -->
+										<header class="card-header bg-aurora-accent1 text-white font-weight-bold hide-in-print">
+											<xsl:value-of select="v3:title"/>
+										</header>
+										<!-- [pmh] add an extra Title Page heading for semantic accessibility purposes -->
+										<h1 class="hide-in-screen hide-offscreen"><xsl:value-of select="v3:title"/></h1>
 										<div class="spl title-page title-page-row">
 											<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.1']/v3:text"/>
 										</div>
@@ -883,9 +895,13 @@
 								<xsl:when test="v3:code[@code='1RMLC']">
 									<!-- RECENT MAJOR LABEL CHANGES - These require extra styling to suppress table rules -->
 									<div class="card mb-2" id="{$unique-section-id}">
+										<!-- [pmh] replace top level headings with semantic stuff like headers - move the font-size eventually
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:title"/>
-										</h5>
+										</h5> -->
+										<header class="card-header bg-aurora-accent1 text-white font-weight-bold">
+											<xsl:value-of select="v3:title"/>
+										</header>
 										<div class="spl recent-changes">
 											<xsl:apply-templates select="."/>
 										</div>
@@ -920,13 +936,14 @@
 						</xsl:for-each>
 						<!-- PRINT VERSION OF MANUFACTURED PRODUCT DETAIL will already have a page break after previous section -->
 						<div class="hide-in-screen card spl" id="print-product-details">
-							<h2>
+							<!-- [pmh] changed h2 to h1 for semantic accessibility reasons -->
+							<h1>
 								<xsl:call-template name="string-uppercase">
 									<xsl:with-param name="text">
 										<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
 									</xsl:with-param>
 								</xsl:call-template>
-							</h2>
+							</h1>
 							<div class="spl">
 								<xsl:apply-templates mode="print" select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization"/>
 								<xsl:apply-templates mode="print" select="//v3:subject/v3:manufacturedProduct"/>
@@ -942,9 +959,13 @@
 		<xsl:param name="additional-classes"/>
 		<xsl:variable name="unique-section-id"><xsl:value-of select="v3:id/@root"/></xsl:variable>
 		<div class="card mb-2 pb-2 {$additional-classes}" id="{$unique-section-id}">
+			<!-- [pmh] replace top level headings with semantic stuff like headers - move the font-size eventually
 			<h5 class="card-header text-white bg-aurora-accent1">
 				<xsl:value-of select="v3:title"/>
-			</h5>
+			</h5> -->
+			<header class="card-header bg-aurora-accent1 text-white font-weight-bold">
+				<xsl:value-of select="v3:title"/>
+			</header>
 			<div class="spl">
 				<xsl:apply-templates select="."/>
 			</div>
@@ -954,7 +975,8 @@
 	<!-- Extra Templates for Print Table of Contents -->
 	<xsl:template name="render-toc">
 		<div class="hide-in-screen force-page-break-after card spl" id="print-toc">
-			<h2><xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/></h2>
+			<!-- [pmh] changed this from h2 to h1 for consistency -->
+			<h1><xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/></h1><br/>
 			<div class="spl"><xsl:value-of select="$labels/tocBoilerplate[@lang = $lang]"/></div>
 			<ul class="toc">
 				<xsl:apply-templates mode="toc" select="//v3:structuredBody/v3:component/v3:section[not(v3:code/@code='0MP')]"/>
@@ -1166,9 +1188,14 @@
 		<html>
 			<xsl:apply-templates select="." mode="html-head"/>
 			<body data-spy="scroll" data-target="#navigation-sidebar" data-offset="1">
+				<a class="skip-main" href="#main">Skip to main content</a>
+				<!-- [pmh] replace top level headings with semantic stuff like headers - move the font-size eventually
 				<div class="bg-aurora-accent1 hide-in-print" id="header">
 					<h2 class="text-white text-center p-2"><xsl:copy-of select="v3:title/node()"/></h2>
-				</div>
+				</div> -->
+				<header class="bg-aurora-accent1 hide-in-print mb-2" id="header" style="font-size:20pt;">
+					<div class="text-white text-center p-2 font-weight-bold"><xsl:copy-of select="v3:title/node()"/></div>
+				</header>
 				<div class="container-fluid position-relative" id="content">
 					<div class="row h-100">
 						<xsl:apply-templates select="v3:component/v3:structuredBody" mode="sidebar-navigation"/>
@@ -1177,7 +1204,7 @@
 				</div>
 				<!-- Withhold the jump to top button on the print version -->
 				<div id="btnTopDiv" class="hide-in-print">
-					<a id="btnTop" 
+					<a id="btnTop" href="#"
 						class="btn btn-warning btn-circle btn-md text-white" role="button">
 						<i class="fa fa-arrow-up fa-3x"></i>
 					</a>					

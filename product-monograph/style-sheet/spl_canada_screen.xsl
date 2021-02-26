@@ -11,13 +11,14 @@
 	<xsl:template mode="screen" match="//v3:author/v3:assignedEntity/v3:representedOrganization">
 		<section class="card m-2" id="company-details">
 			<a name="company-details"> </a>
-			<h6 class="card-header p-0 bg-aurora-light">
+			<!-- [pmh] replaced h6 with div and strong -->
+			<header class="card-header p-0 bg-aurora-light font-weight-bold">
 				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-company-details" 
 				aria-expanded="true" aria-controls="collapse-company-details">
-					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
+					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>						
 				</button>
-			</h6>
+			</header>
 			<div id="collapse-company-details" class="collapse show spl" data-parent="#product-accordion">
 				<xsl:apply-templates mode="subjects" select="."/>
 				<xsl:apply-templates mode="subjects" select="v3:assignedEntity/v3:assignedOrganization"/>
@@ -29,15 +30,16 @@
 	<xsl:template mode="screen" match="v3:subject/v3:manufacturedProduct">
 		<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
 		<section class="card m-2" id="{$unique-product-id}">
-			<h6 class="card-header p-0 bg-aurora-light">
+			<!-- [pmh] replaced h6 with div and strong -->
+			<header class="card-header p-0 bg-aurora-light font-weight-bold">
 				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-{$unique-product-id}" 
 				aria-expanded="true" aria-controls="collapse-{$unique-product-id}">
 					<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
 						<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
-					</xsl:apply-templates>
+					</xsl:apply-templates>						
 				</button>
-			</h6>
+			</header>
 			<div id="collapse-{$unique-product-id}" class="collapse spl" data-parent="#product-accordion">
 				<xsl:apply-templates mode="subjects" select="."/>
 			</div>
@@ -63,9 +65,13 @@
 		<aside class="hide-in-print mb-2" id="left">
 			<div class="sticky-top sticky d-none d-md-block hide-in-print" id="side">
 				<section class="card">
+					<!-- [pmh] replace top level headings with semantic stuff like headers - move the font-size eventually
 					<h5 class="card-header text-white bg-aurora-accent1">
 						<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
-					</h5>
+					</h5> -->
+					<header class="card-header bg-aurora-accent1 text-white font-weight-bold">
+						<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
+					</header>
 					<!-- This transform positions the scrollbar to the left of the Navigation Sidebar Menu.
 						 We could move these inline styles, and also apply -ms-transform and -webkit-transform -->
 					<div style="transform: scaleX(-1);" id="navigation-scrollbar">
@@ -157,6 +163,7 @@
 			<meta charset="utf-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1"/>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  
+			<meta http-equiv="Content-Language" content="{ $lang }-ca"/>
 			<meta http-equiv="X-UA-Compatible" content="IE=10"/>			
 			<meta name="documentId">
 				<xsl:attribute name="content"><xsl:value-of select="v3:id/@root"/></xsl:attribute>
@@ -182,6 +189,51 @@
 					position: sticky;
 					top: 0;
 				}
+				
+				/* [pmh] Health Canada uses #284162:active/#0535d2:hover, and I am going to always underline spl links, never navigation
+				/* [pmh] added for better compliance with accessibility requirements - merge into spl_canada.css */
+				.spl a, #side a.nav-link { 
+					color: #002D42;
+				}
+				.spl a:hover, #side a.nav-link:hover,
+				.spl a:focus, #side a.nav-link:focus { 
+					color: #0535d2;
+				}
+				/* [pmh] just underline all content links, including on hover and focus? */
+				.spl a, .spl a:link, .spl a:visited, .spl a:active  { 
+					text-decoration: underline; 
+				}
+				.spl a:hover, .spl a:focus {
+					text-decoration: underline;
+				}
+				
+				/* [pmh] WCAG accessibility - pop out when this gets tabbed - move to css when ready */
+				a.skip-main {
+					left:-999px;
+					position:absolute;
+					top:auto;
+					width:1px;
+					height:1px;
+					overflow:hidden;
+					z-index:-999;
+				}
+				a.skip-main:focus, a.skip-main:active {
+					color: #fff;
+					background-color:#000;
+					left: auto;
+					top: auto;
+					width: 30%;
+					height: auto;
+					overflow:auto;
+					margin: 10px 35%;
+					padding:4px;
+					border-radius: 15px;
+					border:4px solid #ffc107;
+					text-align:center;
+					font-size:1.2em;
+					z-index:999;
+				}				
+								
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 			</style>

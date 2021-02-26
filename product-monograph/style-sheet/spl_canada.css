@@ -25,12 +25,7 @@
             content: counter(page);
         }
     }
-    
-    /* PDF Outline bookmarks - withhold headings which are on the Title Page and Table of Contents - WeasyPrint defaults to h1, h2 */
-    #print-toc h2, .title-page-row h2 {
-        bookmark-level: none;
-    }
-    
+        
     /* Table of Contents styles */
     ul.toc {
     	list-style-type: none;
@@ -40,7 +35,16 @@
     	float: right;
     }
     
-    div[data-sectionCode="0TP"] h1,
+    /* PDF Outline bookmarks - wpthhold headings which are on the Title Page and Table of Contents - WeasyPrint defaults to h1, h2 */
+    #print-toc h2, .title-page-row h2 {
+        bookmark-level: none;
+    }
+
+    /* [pmh] Helper class for print only - section headers for the two sections below also are withheld in the PDF */
+    .hide-offscreen {
+        position: absolute;
+        left: -999px;        
+    }
     div[data-sectionCode="0BBD"] h1,
     div[data-sectionCode="0NOC"] h1 {
         position: absolute;
@@ -402,9 +406,16 @@
        text-decoration: line-through;
 }
 
+/* [pmh] leave the decoration so it is obvious content links are navigation?
+ * see further changes inline in spl_canada_screen.xsl */
 .spl a:link    { text-decoration: none; }
 .spl a:visited { text-decoration: none; }
 .spl a:active  { text-decoration: none; }
+
+/* [pmh] added for better compliance with accessibility requirements
+.spl a         { 
+    color: #002D42;
+} */
 
 /* use <span class="sub"> to avoid ugly uneven line spacing in IE */
 .spl .Sub { 
@@ -959,6 +970,44 @@ img { max-width: 100%; height: auto; }
     height:60px;
 }
 
+	/* [pmh] WCAG accessibility - pop out when this gets tabbed */
+	a.skip-main {
+		left:-999px;
+		position:absolute;
+		top:auto;
+		width:1px;
+		height:1px;
+		overflow:hidden;
+		z-index:-999;
+	}
+	a.skip-main:focus, a.skip-main:active {
+		color: #fff;
+		background-color:#000;
+		left: auto;
+		top: auto;
+		width: 30%;
+		height: auto;
+		overflow:auto;
+		margin: 10px 35%;
+		padding:5px;
+		border-radius: 15px;
+		border:4px solid yellow;
+		text-align:center;
+		font-size:1.2em;
+		z-index:999;
+	}
+/* 	.btn-backtotop {
+		border: 1px solid #CECECE;
+		border-radius: 1.5rem;
+		box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+		color: #666666;
+		font-weight: 600; 
+	}
+	.btn-backtotop .icon {
+		margin-right: 5px; 
+	}  */
+
+
 .spl .fullWidth {
     width: 100%;
 }
@@ -978,12 +1027,16 @@ img { max-width: 100%; height: auto; }
     .bg-aurora-accent1 { background-color: #002D42;	}
     .bg-aurora-accent2 { background-color: #4D5D6C;	}
     .bg-aurora-light   { background-color: #EAEAEA; } /*  matched to the base colour int the tables #CECECE;	}*/
-    
+
+    /* [pmh] make these darker accent colour - all of this is currently in spl_canada_screen
+    #side .nav-link {
+	   color: #002D42; 
+	}
     #side .nav-link.active,
     #side .nav-link:hover,
     #side .nav-link:focus {
     	color: #4D5D6C;
-    }
+    } */
     
     .hide-in-screen { display: none; }
     .Section h1 {display: none; } /* hide top level section headings on screen */
