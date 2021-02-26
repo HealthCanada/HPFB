@@ -20,7 +20,7 @@
 		<nonPropName lang="en">Non-Proprietary Name</nonPropName>
 		<din lang="en">Drug Identification Number (DIN)</din>
 		<adminRoute lang="en">Route of Administration</adminRoute>
-		<dosageForm lang="en">Dosage Form</dosageForm>
+		<dosageForm lang="en">Manufactured Dosage Form</dosageForm>
 		<activeIngredients lang="en">Active Ingredient/Active Moiety</activeIngredients>
 		<inactiveIngredients lang="en">Inactive Ingredients</inactiveIngredients>
 		<ingredientName lang="en">Ingredient Name</ingredientName>
@@ -76,7 +76,7 @@
 		<nonPropName lang="fr">Dénomination non exclusive</nonPropName>
 		<din lang="fr">Numéro d’identification du médicament (DIN)</din>
 		<adminRoute lang="fr">Voie d’administration</adminRoute>
-		<dosageForm lang="fr">Forme pharmaceutique</dosageForm>
+		<dosageForm lang="fr">Forme posologique fabriquée</dosageForm>
 		<activeIngredients lang="fr">Principe actif/Fragment actif</activeIngredients>
 		<inactiveIngredients lang="fr">Ingrédients inactifs</inactiveIngredients>
 		<ingredientName lang="fr">Nom d’ingrédient</ingredientName>
