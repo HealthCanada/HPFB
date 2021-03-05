@@ -854,7 +854,6 @@
 								<xsl:when test="v3:code[@code='0TP']">
 									<!-- TITLE PAGE - Note: force-page-break-after here does not work on FireFox -->
 									<div class="card mb-2 force-page-break-after" id="{$unique-section-id}">
-										<!-- [pmh] div instead of header? -->
 										<header class="card-header bg-aurora-accent1 text-white font-weight-bold hide-in-print">
 											<xsl:value-of select="v3:title"/>
 										</header>
