@@ -31,8 +31,8 @@
 			<xsl:when test="v3:document/v3:languageCode[@code='2']">fr</xsl:when>
 		</xsl:choose>
 	</xsl:variable>
-	<xsl:output method="html" encoding="UTF-8" version="4.0" doctype-public="-//W3C//DTD HTML 4.01//EN" indent="no"/>
-		
+	<xsl:output method="xml" doctype-system="about:legacy-compat" encoding="UTF-8" indent="no" />
+	
 	<!-- OVERRIDE FDA STYLES FOR MANUFACTURED PRODUCT DETAILS - SUBJECTS MODE -->	
 	<!-- Override FDA company info section, using Canadian French and English labels -->
 	<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization">	
@@ -73,40 +73,40 @@
 			</tr>
 		</xsl:if>
 		<tr class="formTableRowAlt">
-			<td class="formItem">		
-				<table>
-					<tr><td><xsl:value-of select="v3:addr/v3:streetAddressLine"/></td></tr>
-					<tr><td>
-						<xsl:value-of select="v3:addr/v3:city"/>
-						<xsl:if test="string-length(v3:addr/v3:state)>0">,&#160;<xsl:value-of select="v3:addr/v3:state"/></xsl:if>
-						<xsl:if test="string-length(v3:addr/v3:postalCode)>0">,&#160;<xsl:value-of select="v3:addr/v3:postalCode"/></xsl:if>
-					</td>
-					</tr>
-					<tr><td><xsl:value-of select="v3:addr/v3:country/@displayName"/></td></tr>
-				</table>
+			<!-- [pmh] "padded"? "Padded"? -->
+			<td class="formItem Padded">
+				<xsl:value-of select="v3:addr/v3:streetAddressLine"/>
+				<br/>
+				<xsl:value-of select="v3:addr/v3:city"/>
+				<xsl:if test="string-length(v3:addr/v3:state)>0">,&#160;<xsl:value-of select="v3:addr/v3:state"/></xsl:if>
+				<xsl:if test="string-length(v3:addr/v3:postalCode)>0">,&#160;<xsl:value-of select="v3:addr/v3:postalCode"/></xsl:if>
+				<br/>
+				<xsl:value-of select="v3:addr/v3:country/@displayName"/>					
 			</td>
-			<td class="formItem">
-				<div><xsl:value-of select="$labels/partyTel[@lang = $lang]"/><xsl:text>: </xsl:text>
-					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'tel:')][1], 'tel:')"/></div>
+			<td class="formItem Padded">
+				<xsl:value-of select="$labels/partyTel[@lang = $lang]"/><xsl:text>: </xsl:text>
+				<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'tel:')][1], 'tel:')"/>
+				<br/>
 				<xsl:for-each select="v3:telecom/@value[starts-with(.,'fax:')]">
-					<div><xsl:text>Fax: </xsl:text>
-						<xsl:value-of select="substring-after(., 'fax:')"/></div>
+					<xsl:text>Fax: </xsl:text>
+					<xsl:value-of select="substring-after(., 'fax:')"/>
+					<br/>
 				</xsl:for-each>
 				<xsl:for-each select="v3:telecom/@value[starts-with(.,'mailto:')]">
-					<div><xsl:value-of select="$labels/partyEmail[@lang = $lang]"/><xsl:text>: </xsl:text>
-						<a>
-							<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-							<xsl:value-of select="substring-after(., 'mailto:')"/>
-						</a>
-					</div>
+					<xsl:value-of select="$labels/partyEmail[@lang = $lang]"/><xsl:text>: </xsl:text>
+					<a>
+						<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+						<xsl:value-of select="substring-after(., 'mailto:')"/>
+					</a>
+					<br/>
 				</xsl:for-each>
 				<xsl:for-each select="v3:telecom/@value[starts-with(.,'http:') or starts-with(.,'https:')]">
-					<div><xsl:value-of select="$labels/partyWeb[@lang = $lang]"/><xsl:text>: </xsl:text>
-						<a>
-							<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-							<xsl:value-of select="."/>
-						</a>
-					</div>
+					<xsl:value-of select="$labels/partyWeb[@lang = $lang]"/><xsl:text>: </xsl:text>
+					<a>
+						<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+						<xsl:value-of select="."/>
+					</a>
+					<br/>
 				</xsl:for-each>
 			</td>
 		</tr>
@@ -564,7 +564,7 @@
 				<th scope="col" width="1" class="formTitle">#</th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/itemCode[@lang = $lang]"/></th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/packageDescription[@lang = $lang]"/></th>
-				<th scope="col" class="formTitle"><xsl:value-of select="$labels/approvalDate[@lang = $lang]"/></th>
+				<th scope="col" class="formTitle"><xsl:value-of select="$labels/packageApprovalDate[@lang = $lang]"/></th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/packageRegStatus[@lang = $lang]"/></th>
 			</tr>
 			<xsl:for-each select="$path/v3:asContent/descendant-or-self::v3:asContent[not(*/v3:asContent)]">
@@ -736,7 +736,7 @@
 						<tr>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/marketingCategory[@lang = $lang]"/></th>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/applicationNumber[@lang = $lang]"/></th>
-							<th scope="col" class="formTitle"><xsl:value-of select="$labels/approvalDate[@lang = $lang]"/></th>
+							<th scope="col" class="formTitle"><xsl:value-of select="$labels/productApprovalDate[@lang = $lang]"/></th>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/cancellationDate[@lang = $lang]"/></th>
 						</tr>
 						<tr class="formTableRowAlt">
@@ -840,11 +840,6 @@
 								<xsl:when test="v3:code[@code='0MP']">
 									<!-- SCREEN VERSION OF MANUFACTURED PRODUCT DETAIL -->
 									<div class="card mb-2 hide-in-print" id="{$unique-section-id}">
-										
-										<!-- [pmh] replace top level headings with semantic stuff like headers - move the font-size eventually
-										<h5 class="card-header text-white bg-aurora-accent1"> 
-											<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
-										</h5> -->
 										<header class="card-header bg-aurora-accent1 text-white font-weight-bold">
 											<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
 										</header>
@@ -859,14 +854,11 @@
 								<xsl:when test="v3:code[@code='0TP']">
 									<!-- TITLE PAGE - Note: force-page-break-after here does not work on FireFox -->
 									<div class="card mb-2 force-page-break-after" id="{$unique-section-id}">
-										<!-- [pmh] replace top level headings with semantic stuff like headers - move the font-size eventually
-										<h5 class="card-header text-white bg-aurora-accent1 hide-in-print">
-											<xsl:value-of select="v3:title"/>
-										</h5> -->
 										<header class="card-header bg-aurora-accent1 text-white font-weight-bold hide-in-print">
 											<xsl:value-of select="v3:title"/>
 										</header>
-										<!-- [pmh] add an extra Title Page heading for semantic accessibility purposes -->
+										
+										<!-- Extra hidden Title Page heading for semantic accessibility purposes -->
 										<h1 class="hide-in-screen hide-offscreen"><xsl:value-of select="v3:title"/></h1>
 										<div class="spl title-page title-page-row">
 											<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.1']/v3:text"/>
@@ -895,10 +887,6 @@
 								<xsl:when test="v3:code[@code='1RMLC']">
 									<!-- RECENT MAJOR LABEL CHANGES - These require extra styling to suppress table rules -->
 									<div class="card mb-2" id="{$unique-section-id}">
-										<!-- [pmh] replace top level headings with semantic stuff like headers - move the font-size eventually
-										<h5 class="card-header text-white bg-aurora-accent1">
-											<xsl:value-of select="v3:title"/>
-										</h5> -->
 										<header class="card-header bg-aurora-accent1 text-white font-weight-bold">
 											<xsl:value-of select="v3:title"/>
 										</header>
@@ -936,7 +924,6 @@
 						</xsl:for-each>
 						<!-- PRINT VERSION OF MANUFACTURED PRODUCT DETAIL will already have a page break after previous section -->
 						<div class="hide-in-screen card spl" id="print-product-details">
-							<!-- [pmh] changed h2 to h1 for semantic accessibility reasons -->
 							<h1>
 								<xsl:call-template name="string-uppercase">
 									<xsl:with-param name="text">
@@ -959,10 +946,6 @@
 		<xsl:param name="additional-classes"/>
 		<xsl:variable name="unique-section-id"><xsl:value-of select="v3:id/@root"/></xsl:variable>
 		<div class="card mb-2 pb-2 {$additional-classes}" id="{$unique-section-id}">
-			<!-- [pmh] replace top level headings with semantic stuff like headers - move the font-size eventually
-			<h5 class="card-header text-white bg-aurora-accent1">
-				<xsl:value-of select="v3:title"/>
-			</h5> -->
 			<header class="card-header bg-aurora-accent1 text-white font-weight-bold">
 				<xsl:value-of select="v3:title"/>
 			</header>
@@ -975,7 +958,6 @@
 	<!-- Extra Templates for Print Table of Contents -->
 	<xsl:template name="render-toc">
 		<div class="hide-in-screen force-page-break-after card spl" id="print-toc">
-			<!-- [pmh] changed this from h2 to h1 for consistency -->
 			<h1><xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/></h1><br/>
 			<div class="spl"><xsl:value-of select="$labels/tocBoilerplate[@lang = $lang]"/></div>
 			<ul class="toc">
@@ -1078,8 +1060,10 @@
 		</xsl:if>
 		<table>
 			<!-- Default to 100% table width if none is specified -->
+			<!-- [pmh] this should be class=fullWidth for PDF -->
 			<xsl:if test="not(@width)">
 				<xsl:attribute name="width">100%</xsl:attribute>
+				<xsl:attribute name="class">fullWidth</xsl:attribute>
 			</xsl:if>
 			<!-- Default to thin border if frame is specified as 'border', suitable for Aurora-style tables -->
 			<xsl:if test="@frame='border'">
@@ -1189,11 +1173,7 @@
 			<xsl:apply-templates select="." mode="html-head"/>
 			<body data-spy="scroll" data-target="#navigation-sidebar" data-offset="1">
 				<a class="skip-main" href="#main">Skip to main content</a>
-				<!-- [pmh] replace top level headings with semantic stuff like headers - move the font-size eventually
-				<div class="bg-aurora-accent1 hide-in-print" id="header">
-					<h2 class="text-white text-center p-2"><xsl:copy-of select="v3:title/node()"/></h2>
-				</div> -->
-				<header class="bg-aurora-accent1 hide-in-print mb-2" id="header" style="font-size:20pt;">
+				<header class="bg-aurora-accent1 hide-in-print mb-2" id="banner">
 					<div class="text-white text-center p-2 font-weight-bold"><xsl:copy-of select="v3:title/node()"/></div>
 				</header>
 				<div class="container-fluid position-relative" id="content">

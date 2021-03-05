@@ -43,7 +43,8 @@
 		<packageDescription lang="en">Package Description</packageDescription>
 		<packageRegStatus lang="en">Package Available</packageRegStatus>
 		<productRegStatus lang="en">Product Regulatory Status</productRegStatus>
-		<approvalDate lang="en">Date of Approval</approvalDate>
+		<packageApprovalDate lang="en">Date of Authorization</packageApprovalDate>
+		<productApprovalDate lang="en">Date of Initial Authorization</productApprovalDate>
 		<cancellationDate lang="en">Date of Cancellation</cancellationDate>
 		<marketingInfo lang="en">Product Status</marketingInfo>
 		<marketingCategory lang="en">Regulatory Activity Type</marketingCategory>
@@ -99,7 +100,8 @@
 		<packageDescription lang="fr">Description de l’emballage</packageDescription>
 		<packageRegStatus lang="fr">Emballage disponible</packageRegStatus>
 		<productRegStatus lang="fr">État réglementaire du produit</productRegStatus>
-		<approvalDate lang="fr">Date d’approbation</approvalDate>
+		<packageApprovalDate lang="fr">Date de l’autorisation</packageApprovalDate>
+		<productApprovalDate lang="fr">Date de l’autorisation initiale</productApprovalDate>
 		<cancellationDate lang="fr">Date d’annulation</cancellationDate>
 		<marketingInfo lang="fr">État du produit</marketingInfo>
 		<marketingCategory lang="fr">Type d’activité de réglementation</marketingCategory>

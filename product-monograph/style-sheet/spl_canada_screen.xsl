@@ -65,10 +65,6 @@
 		<aside class="hide-in-print mb-2" id="left">
 			<div class="sticky-top sticky d-none d-md-block hide-in-print" id="side">
 				<section class="card">
-					<!-- [pmh] replace top level headings with semantic stuff like headers - move the font-size eventually
-					<h5 class="card-header text-white bg-aurora-accent1">
-						<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
-					</h5> -->
 					<header class="card-header bg-aurora-accent1 text-white font-weight-bold">
 						<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
 					</header>
@@ -157,7 +153,6 @@
 		</li>
 	</xsl:template>
 		
-
 	<xsl:template match="v3:document" mode="html-head">
 		<head>
 			<meta charset="utf-8"/>
@@ -188,52 +183,7 @@
 					position: -webkit-sticky;
 					position: sticky;
 					top: 0;
-				}
-				
-				/* [pmh] Health Canada uses #284162:active/#0535d2:hover, and I am going to always underline spl links, never navigation
-				/* [pmh] added for better compliance with accessibility requirements - merge into spl_canada.css */
-				.spl a, #side a.nav-link { 
-					color: #002D42;
-				}
-				.spl a:hover, #side a.nav-link:hover,
-				.spl a:focus, #side a.nav-link:focus { 
-					color: #0535d2;
-				}
-				/* [pmh] just underline all content links, including on hover and focus? */
-				.spl a, .spl a:link, .spl a:visited, .spl a:active  { 
-					text-decoration: underline; 
-				}
-				.spl a:hover, .spl a:focus {
-					text-decoration: underline;
-				}
-				
-				/* [pmh] WCAG accessibility - pop out when this gets tabbed - move to css when ready */
-				a.skip-main {
-					left:-999px;
-					position:absolute;
-					top:auto;
-					width:1px;
-					height:1px;
-					overflow:hidden;
-					z-index:-999;
-				}
-				a.skip-main:focus, a.skip-main:active {
-					color: #fff;
-					background-color:#000;
-					left: auto;
-					top: auto;
-					width: 30%;
-					height: auto;
-					overflow:auto;
-					margin: 10px 35%;
-					padding:4px;
-					border-radius: 15px;
-					border:4px solid #ffc107;
-					text-align:center;
-					font-size:1.2em;
-					z-index:999;
 				}				
-								
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 			</style>

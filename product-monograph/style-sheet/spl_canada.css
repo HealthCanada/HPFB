@@ -1,4 +1,30 @@
-
+/* WCAG Accessibility - Skip to Main - pop out when this gets tabbed - move to css when ready */
+a.skip-main {
+	left:-999px;
+	position:absolute;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	z-index:-999;
+}
+a.skip-main:focus, a.skip-main:active {
+	color: #fff;
+	background-color:#000;
+	left: auto;
+	top: auto;
+	width: 30%;
+	height: auto;
+	overflow:auto;
+	margin: 10px 35%;
+	padding:4px;
+	border-radius: 15px;
+	border:4px solid #ffc107;
+	text-align:center;
+	font-size:1.2em;
+	z-index:999;
+}				
+								
 @media screen {
 
     .spl {
@@ -145,7 +171,7 @@
 .spl h3 {	
 	text-indent: 0em;
 	font-size: 100%;
-	font-weight: normal;
+	font-weight: bold;
 	margin-top: 2.2ex;
 	margin-bottom: 0ex;
 	text-align: left;
@@ -155,19 +181,17 @@
 .spl h4 {	
 	text-indent: 0em;
 	font-size: 100%;
-	font-weight: normal;
+	font-weight: bold;
 	margin-top: 2.2ex;
 	margin-bottom: 0ex;
 	text-align: left;
-	font-style: italic;
 	color: black;
 }
 
-/* Headers for h5 and h6 follow the same pattern as h3 and h4 - plain, and then italicized */
 .spl h5 {	
 	text-indent: 0em;
 	font-size: 100%;
-	font-weight: normal;
+	font-weight: bold;
 	margin-top: 2.2ex;
 	margin-bottom: 0ex;
 	text-align: left;
@@ -177,11 +201,10 @@
 .spl h6 {	
 	text-indent: 0em;
 	font-size: 100%;
-	font-weight: normal;
+	font-weight: bold;
 	margin-top: 2.2ex;
 	margin-bottom: 0ex;
 	text-align: left;
-	font-style: italic;
 	color: black;
 }
 
@@ -397,7 +420,9 @@
 .spl .Underline {
  	text-decoration: underline;
 }
-
+.spl .Padded {
+    padding: 10px;
+}
 .spl .Insert {
 	color: green;
 	border-bottom: 3px double;
@@ -935,30 +960,12 @@
 img { max-width: 100%; height: auto; }					
 
 /* round buttons */
-.btn-circle.btn-sm { 
-    width: 24px; 
-    height: 24px; 
-    padding: 1px 0px; 
-    border-radius: 12px; 
-    font-size: 14px; 
-    text-align: center; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
 .btn-circle.btn-md { 
     width: 48px; 
     height: 48px; 
     padding: 7px 10px; 
     border-radius: 24px; 
     font-size: 10px; 
-    text-align: center; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-} 
-.btn-circle.btn-lg { 
-    width: 70px; 
-    height: 70px; 
-    padding: 10px 16px; 
-    border-radius: 35px; 
-    font-size: 12px; 
     text-align: center; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 } 
@@ -969,44 +976,6 @@ img { max-width: 100%; height: auto; }
     width:60px; 
     height:60px;
 }
-
-	/* [pmh] WCAG accessibility - pop out when this gets tabbed */
-	a.skip-main {
-		left:-999px;
-		position:absolute;
-		top:auto;
-		width:1px;
-		height:1px;
-		overflow:hidden;
-		z-index:-999;
-	}
-	a.skip-main:focus, a.skip-main:active {
-		color: #fff;
-		background-color:#000;
-		left: auto;
-		top: auto;
-		width: 30%;
-		height: auto;
-		overflow:auto;
-		margin: 10px 35%;
-		padding:5px;
-		border-radius: 15px;
-		border:4px solid yellow;
-		text-align:center;
-		font-size:1.2em;
-		z-index:999;
-	}
-/* 	.btn-backtotop {
-		border: 1px solid #CECECE;
-		border-radius: 1.5rem;
-		box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-		color: #666666;
-		font-weight: 600; 
-	}
-	.btn-backtotop .icon {
-		margin-right: 5px; 
-	}  */
-
 
 .spl .fullWidth {
     width: 100%;
@@ -1024,27 +993,35 @@ img { max-width: 100%; height: auto; }
 
 @media screen {
 
-    .bg-aurora-accent1 { background-color: #002D42;	}
-    .bg-aurora-accent2 { background-color: #4D5D6C;	}
-    .bg-aurora-light   { background-color: #EAEAEA; } /*  matched to the base colour int the tables #CECECE;	}*/
-
-    /* [pmh] make these darker accent colour - all of this is currently in spl_canada_screen
-    #side .nav-link {
-	   color: #002D42; 
-	}
-    #side .nav-link.active,
-    #side .nav-link:hover,
-    #side .nav-link:focus {
-    	color: #4D5D6C;
-    } */
+    .bg-aurora-accent1 { background-color: #002D42; }
+    .bg-aurora-accent2 { background-color: #4D5D6C; }
+    .bg-aurora-light   { background-color: #EAEAEA; } /* matched to a base colour in the tables */
     
     .hide-in-screen { display: none; }
     .Section h1 {display: none; } /* hide top level section headings on screen */
+    #banner { font-size: 20pt; }
     #main { max-width: 1000px; }
     #side { max-width: 420px; min-width: 420px; }
     #navigation-sidebar li { padding-left: 10px !important; }
     #navigation-scrollbar { height: calc(100vh - 50px); overflow-y: scroll; }
-				
+
+    /* Screen links are aligned with Health Canada colours, with underline for spl links, and not navigation */
+    .spl a, #side a.nav-link { 
+	   color: #002D42;
+    }
+    .spl a:hover, #side a.nav-link:hover,
+    .spl a:focus, #side a.nav-link:focus { 
+    	color: #0535d2;
+    }
+
+    /* Underline all screen content links, including on hover and focus */
+    .spl a, .spl a:link, .spl a:visited, .spl a:active  { 
+    	text-decoration: underline; 
+    }
+    .spl a:hover, .spl a:focus {
+    	text-decoration: underline;
+    }
+
 }
 	
 @media print {	
