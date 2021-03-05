@@ -10,8 +10,7 @@
 	<!-- accordion card for company details and distributor details - note the spl class that triggers FDA styles -->
 	<xsl:template mode="screen" match="//v3:author/v3:assignedEntity/v3:representedOrganization">
 		<section class="card m-2" id="company-details">
-			<a name="company-details"> </a>
-			<!-- [pmh] replaced h6 with div and strong -->
+			<a name="company-details"><xsl:text> </xsl:text></a>
 			<header class="card-header p-0 bg-aurora-light font-weight-bold">
 				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-company-details" 
