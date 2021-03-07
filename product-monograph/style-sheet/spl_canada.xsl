@@ -73,7 +73,6 @@
 			</tr>
 		</xsl:if>
 		<tr class="formTableRowAlt">
-			<!-- [pmh] "padded"? "Padded"? -->
 			<td class="formItem Padded">
 				<xsl:value-of select="v3:addr/v3:streetAddressLine"/>
 				<br/>
@@ -904,7 +903,7 @@
 											<xsl:call-template name="render-toc"/>
 										</xsl:when>
 										<xsl:otherwise>
-											<div class="hide-in-screen force-page-break-after"/>
+											<div class="hide-in-screen force-page-break-after">This is wher the TOC would be</div>
 										</xsl:otherwise>
 									</xsl:choose>
 									<!-- Optional BIOSIMILAR BIOLOGIC DRUG, prepended to Part I if present -->
@@ -1033,7 +1032,7 @@
 		<xsl:variable name="reference" select="@referencedObject"/>
 		<!-- see note anchoring and PCR 793 -->
 		<xsl:if test="@ID">
-			<a name="{@ID}"/>
+			<a name="{@ID}"><xsl:text> </xsl:text></a>
 		</xsl:if>
 
 		<xsl:choose>
@@ -1056,11 +1055,10 @@
 	<!-- TABLE MODEL -->
 	<xsl:template match="v3:table">
 		<xsl:if test="@ID">
-			<a name="{@ID}"/>
+			<a name="{@ID}"><xsl:text> </xsl:text></a>
 		</xsl:if>
 		<table>
 			<!-- Default to 100% table width if none is specified -->
-			<!-- [pmh] this should be class=fullWidth for PDF -->
 			<xsl:if test="not(@width)">
 				<xsl:attribute name="width">100%</xsl:attribute>
 				<xsl:attribute name="class">fullWidth</xsl:attribute>

@@ -29,7 +29,6 @@
 	<xsl:template mode="screen" match="v3:subject/v3:manufacturedProduct">
 		<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
 		<section class="card m-2" id="{$unique-product-id}">
-			<!-- [pmh] replaced h6 with div and strong -->
 			<header class="card-header p-0 bg-aurora-light font-weight-bold">
 				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-{$unique-product-id}" 
