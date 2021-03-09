@@ -31,7 +31,8 @@
 			<xsl:when test="v3:document/v3:languageCode[@code='2']">fr</xsl:when>
 		</xsl:choose>
 	</xsl:variable>
-	<xsl:output method="xml" doctype-system="about:legacy-compat" encoding="UTF-8" indent="no" />
+	
+	<xsl:output method="html" version="5" doctype-system="about:legacy-compat" encoding="UTF-8" indent="no" />
 	
 	<!-- OVERRIDE FDA STYLES FOR MANUFACTURED PRODUCT DETAILS - SUBJECTS MODE -->	
 	<!-- Override FDA company info section, using Canadian French and English labels -->
