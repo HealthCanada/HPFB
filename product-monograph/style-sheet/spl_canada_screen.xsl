@@ -181,7 +181,26 @@
 					position: -webkit-sticky;
 					position: sticky;
 					top: 0;
-				}				
+				}
+				
+				/* preadoption of styles for accessibility */
+				.spl .formHeadingTitle {
+					border: none;
+					background-color: #CCCCCC;
+					font-size: 150%;
+					font-weight: bold;
+					text-align: left;
+					padding: 3px;
+				}
+				.spl .contentTableTitle {
+					border-bottom: 1px solid #999999;
+					background-color: #CCCCCC;
+					font-size: 140%;
+					font-weight: bold;
+					text-align: left;
+					padding: 3px;
+				}
+				
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 			</style>

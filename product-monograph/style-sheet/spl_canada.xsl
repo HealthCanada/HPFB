@@ -18,6 +18,8 @@
 	<xsl:param name="show-section-numbers" select="/.."/>
 	<!-- Whether to show print table of contents, set to 1 to enable and "/.." to turn off -->
 	<xsl:param name="show-print-toc" select="/.."/>
+	<!-- Whether to show jump to top button, set to 1 to enable and "/.." to turn off -->
+	<xsl:param name="show-jump-to-top" select="/.."/>
 	<!-- This is the CSS link put into the output -->
 	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/spl_canada.css</xsl:param>
 	<!-- This is the HTML Document Title -->
@@ -150,31 +152,37 @@
 		<tr>
 			<td>
 				<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
-					<tr>
-						<td colspan="2" class="formHeadingTitle"><xsl:value-of select="$labels/productInfo[@lang = $lang]"/></td>
-					</tr>
-					<tr class="formTableRowAlt">
-						<td class="formLabel"> <!-- Product Brand Name -->
-							<xsl:value-of select="$labels/brandName[@lang = $lang]"/>
+					<!-- [pmh WS_PM-028/029] replace the top row with a caption, use th for vertical headers, and remove banding on alternate rows -->
+					<caption class="formHeadingTitle">
+						<xsl:value-of select="$labels/productInfo[@lang = $lang]"/>
+					</caption>
+<!--				<tr>
+						<td colspan="2" class="formHeadingTitle">
+							<xsl:value-of select="$labels/productInfo[@lang = $lang]"/>
 						</td>
+					</tr> -->
+					<tr class="formTableRow">
+						<th class="formLabel"> <!-- Product Brand Name -->
+							<xsl:value-of select="$labels/brandName[@lang = $lang]"/>
+						</th>
 						<td class="formItem"><xsl:value-of select="v3:name"/></td>
 					</tr>
 					<tr class="formTableRow">
-						<td class="formLabel"> <!-- Product Generic Name -->
+						<th class="formLabel"> <!-- Product Generic Name -->
 							<xsl:value-of select="$labels/nonPropName[@lang = $lang]"/>
-						</td>
+						</th>
 						<td class="formItem"><xsl:value-of select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name"/></td>
 					</tr>
-					<tr class="formTableRowAlt">
-						<td class="formLabel"> <!-- Product DIN -->
+					<tr class="formTableRow">
+						<th class="formLabel"> <!-- Product DIN -->
 							<xsl:value-of select="$labels/din[@lang = $lang]"/>
-						</td>
+						</th>
 						<td class="formItem"><xsl:value-of select="v3:code/@code"/></td>
 					</tr>
 					<tr class="formTableRow">
-						<td class="formLabel"> <!-- Product Substance Administration Route -->
+						<th class="formLabel"> <!-- Product Substance Administration Route -->
 							<xsl:value-of select="$labels/adminRoute[@lang = $lang]"/>
-						</td>
+						</th>
 						<td class="formItem"> <!-- may have multiple supported administration routes -->
 							<xsl:for-each select="../v3:consumedIn/v3:substanceAdministration/v3:routeCode">
 								<xsl:value-of select="@displayName"/>
@@ -182,10 +190,10 @@
 							</xsl:for-each>
 						</td>
 					</tr>
-					<tr class="formTableRowAlt">
-						<td class="formLabel"> <!-- Product Dosage Form - withhold display name if the form code indicates a 'kit' -->
+					<tr class="formTableRow">
+						<th class="formLabel"> <!-- Product Dosage Form - withhold display name if the form code indicates a 'kit' -->
 							<xsl:value-of select="$labels/dosageForm[@lang = $lang]"/>
-						</td>
+						</th>
 						<td class="formItem">
 							<xsl:if test="not((v3:formCode/@code='C43197') and (v3:formCode/@codeSystem='2.16.840.1.113883.2.20.6.3'))">
 								<xsl:value-of select="v3:formCode/@displayName"/>
@@ -212,31 +220,32 @@
 			</xsl:call-template>
 		</xsl:variable>		
 		
-		<tr>
-			<td class="contentTableTitle">
-				<strong>
-					<xsl:value-of select="$medName"/>&#160;		
-					<xsl:call-template name="string-uppercase">
-						<xsl:with-param name="text" select="v3:name/v3:suffix"/>
-					</xsl:call-template>	
-				</strong>
-				<xsl:apply-templates mode="substance" select="v3:code[@codeSystem = '2.16.840.1.113883.4.9']/@code"/>
-				<xsl:if test="not($root/v3:document/v3:code/@code = '73815-3')">
-					<br/>
-				</xsl:if>	
-				<span class="contentTableReg">
+		<!-- [pmh WS_PM-028] use caption instead of the first header row??? -->
+		<!-- <tr>
+			<td class="contentTableTitle"> -->
+		<caption class="contentTableTitle">
+			<strong>
+				<xsl:value-of select="$medName"/>&#160;		
+				<xsl:call-template name="string-uppercase">
+					<xsl:with-param name="text" select="v3:name/v3:suffix"/>
+				</xsl:call-template>	
+			</strong>
+			<xsl:apply-templates mode="substance" select="v3:code[@codeSystem = '2.16.840.1.113883.4.9']/@code"/>
+			<xsl:if test="not($root/v3:document/v3:code/@code = '73815-3')">
+				<br/>
+			</xsl:if>	
+			<span class="contentTableReg">
+				<xsl:call-template name="string-lowercase">
+					<xsl:with-param name="text" select="$genMedName"/>
+				</xsl:call-template>
+				<xsl:if test="not((v3:formCode/@code='C43197') and (v3:formCode/@codeSystem='2.16.840.1.113883.2.20.6.3'))">
+					<xsl:text> </xsl:text>
 					<xsl:call-template name="string-lowercase">
-						<xsl:with-param name="text" select="$genMedName"/>
+						<xsl:with-param name="text" select="v3:formCode/@displayName"/>
 					</xsl:call-template>
-					<xsl:if test="not((v3:formCode/@code='C43197') and (v3:formCode/@codeSystem='2.16.840.1.113883.2.20.6.3'))">
-						<xsl:text> </xsl:text>
-						<xsl:call-template name="string-lowercase">
-							<xsl:with-param name="text" select="v3:formCode/@displayName"/>
-						</xsl:call-template>
-					</xsl:if>
-				</span>
-			</td>
-		</tr>
+				</xsl:if>
+			</span>
+		</caption>
 	</xsl:template>
 	
 	<!-- Overide FDA Ingredients - this is a helper template to simplify header generation -->
@@ -244,12 +253,16 @@
 		<xsl:param name="title-label">
 			<xsl:value-of select="$labels/activeIngredients[@lang = $lang]"/>
 		</xsl:param>
+		<!-- [pmh WS_PM-028] if we use caption instead of the first header row, we will no longer need colspans!!! -->
 		<xsl:param name="column-count">3</xsl:param>
-		<tr>
+		<caption class="formHeadingTitle">
+			<xsl:value-of select="$title-label"/>			
+		</caption>
+<!--	<tr>
 			<td colspan="{$column-count}" class="formHeadingTitle">	
 				<xsl:value-of select="$title-label"/>
 			</td>
-		</tr>
+		</tr> -->
 		<tr>
 			<th class="formTitle" scope="col">
 				<xsl:value-of select="$labels/ingredientName[@lang = $lang]"/>
@@ -421,14 +434,15 @@
 		</tr>
 	</xsl:template>
 
+	<!-- [pmh WS_PM-029] use th instead of td for vertical characteristic headings -->
 	<xsl:template name="stringCharacteristicRow">
 		<xsl:param name="path" select="."/>
 		<xsl:param name="class">formTableRow</xsl:param>
 		<xsl:param name="label"><xsl:value-of select="$path/v3:code/@displayName"/></xsl:param>
 		<tr class="{$class}">
-			<td class="formLabel">
+			<th class="formLabel">
 				<xsl:value-of select="$label"/>
-			</td>
+			</th>
 			<td class="formItem">
 				<xsl:value-of select="$path/v3:value[@xsi:type='ST']/text()"/>
 			</td>
@@ -440,9 +454,9 @@
 		<xsl:param name="class">formTableRow</xsl:param>
 		<xsl:param name="label"><xsl:value-of select="$path/v3:code/@displayName"/></xsl:param>
 		<tr class="{$class}">
-			<td class="formLabel">
+			<th class="formLabel">
 				<xsl:value-of select="$label"/>
-			</td>
+			</th>
 			<td class="formItem">
 				<xsl:value-of select="$path/v3:value/@value"/>
 				<xsl:value-of select="$path/v3:value/@unit"/>
@@ -455,9 +469,9 @@
 		<xsl:param name="class">formTableRow</xsl:param>
 		<xsl:param name="label"><xsl:value-of select="$path/v3:code/@displayName"/></xsl:param>
 		<tr class="{$class}">
-			<td class="formLabel">
+			<th class="formLabel">
 				<xsl:value-of select="$label"/>
-			</td>
+			</th>
 			<td class="formItem">			
 				<xsl:for-each select="$path/v3:value">
 					<xsl:if test="position() > 1">,&#160;</xsl:if>
@@ -473,9 +487,9 @@
 		<xsl:param name="class">formTableRow</xsl:param>
 		<xsl:param name="label"><xsl:value-of select="$path/v3:code/@displayName"/></xsl:param>
 		<tr class="{$class}">
-			<td class="formLabel">
+			<th class="formLabel">
 				<xsl:value-of select="$label"/>
-			</td>
+			</th>
 			<td class="formItem">			
 				<xsl:for-each select="$path/v3:value">
 					<xsl:if test="position() > 1">,&#160;</xsl:if>
@@ -490,9 +504,9 @@
 		<xsl:param name="class">formTableRow</xsl:param>
 		<xsl:param name="label"><xsl:value-of select="$path/v3:code/@displayName"/></xsl:param>
 		<tr class="{$class}">
-			<td class="formLabel">
+			<th class="formLabel">
 				<xsl:value-of select="$label"/>
-			</td>
+			</th>
 			<td class="formItem">			
 				<xsl:for-each select="$path/v3:value">
 					<xsl:if test="position() > 1"><br/></xsl:if>
@@ -505,11 +519,15 @@
 	<xsl:template name="characteristics-old">
 		<table class="formTablePetite fullWidth" cellSpacing="0" cellPadding="3" width="100%">
 			<tbody>
-				<tr>
+				<!-- [pmh WS_PM-028] us caption for first table row, no colspans!!! -->
+				<caption class="formHeadingTitle">
+					<xsl:value-of select="$labels/productCharacteristics[@lang = $lang]"/>
+				</caption>
+<!--			<tr>
 					<td class="formHeadingTitle" colspan="2">
 						<xsl:value-of select="$labels/productCharacteristics[@lang = $lang]"/>
 					</td>
-				</tr>
+				</tr> -->
 				<xsl:call-template name="codedCharacteristicRow"> <!-- Product Type is CV -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='1']"/>
 					<xsl:with-param name="label" select="$labels/productType[@lang = $lang]"/>
@@ -557,9 +575,13 @@
 	<xsl:template name="packaging">
 		<xsl:param name="path" select="."/>
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
-			<tr>
+			<!-- [pmh WS_PM-028] replace the top row of any product metadata tables with a caption -->
+			<caption class="formHeadingTitle">
+				<xsl:value-of select="$labels/packaging[@lang = $lang]"/>
+			</caption>
+<!--		<tr>
 				<td colspan="5" class="formHeadingTitle"><xsl:value-of select="$labels/packaging[@lang = $lang]"/></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<th scope="col" width="1" class="formTitle">#</th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/itemCode[@lang = $lang]"/></th>
@@ -671,9 +693,13 @@
 		<tr>
 			<td>
 				<table width="100%" class="fullWidth" cellspacing="0" cellpadding="5">
-					<tr>
+					<!-- [pmh WS_PM-028] use caption instead of the first header row? -->
+					<caption class="contentTableTitle">
+						<xsl:value-of select="$labels/part[@lang = $lang]"/> <xsl:value-of select="count(../preceding-sibling::v3:part)+1"/><xsl:value-of select="$labels/ofConnective[@lang = $lang]"/><xsl:value-of select="count(../../v3:part)"/>
+					</caption>
+<!--				<tr>
 						<td class="contentTableTitle"><xsl:value-of select="$labels/part[@lang = $lang]"/> <xsl:value-of select="count(../preceding-sibling::v3:part)+1"/><xsl:value-of select="$labels/ofConnective[@lang = $lang]"/><xsl:value-of select="count(../../v3:part)"/></td>
-					</tr>
+					</tr> -->
 					<xsl:call-template name="piMedNames"/>
 				</table>
 			</td>
@@ -686,9 +712,11 @@
 	<xsl:template name="partQuantity">
 		<xsl:param name="path" select="."/>
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
-			<tr>
+			<!-- [pmh WS_PM-028] replace the top row of any product metadata tables with a caption -->
+			<caption class="formHeadingTitle"><xsl:value-of select="$labels/partQuantity[@lang = $lang]"/></caption>
+<!--		<tr>
 				<td colspan="3" class="formHeadingTitle"><xsl:value-of select="$labels/partQuantity[@lang = $lang]"/></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/partNumber[@lang = $lang]"/></th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/pkgQuantity[@lang = $lang]"/></th>
@@ -730,9 +758,13 @@
 			<tr>
 				<td> 
 					<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
-						<tr>
+						<!-- [pmh WS_PM-028] replace the top row of any product metadata tables with a caption -->
+						<caption class="formHeadingTitle">
+							<xsl:value-of select="$labels/marketingInfo[@lang = $lang]"/>
+						</caption>
+<!--					<tr>
 							<td colspan="4" class="formHeadingTitle"><xsl:value-of select="$labels/marketingInfo[@lang = $lang]"/></td>
-						</tr>
+						</tr> -->
 						<tr>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/marketingCategory[@lang = $lang]"/></th>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/applicationNumber[@lang = $lang]"/></th>
@@ -1182,12 +1214,14 @@
 					</div>					
 				</div>
 				<!-- Withhold the jump to top button on the print version -->
-				<div id="btnTopDiv" class="hide-in-print">
-					<a id="btnTop" href="#"
-						class="btn btn-warning btn-circle btn-md text-white" role="button">
-						<i class="fa fa-arrow-up fa-3x"></i>
-					</a>					
-				</div>
+				<xsl:if test="$show-jump-to-top">
+					<div id="btnTopDiv" class="hide-in-print">
+						<a id="btnTop" href="#"
+							class="btn btn-warning btn-circle btn-md text-white" role="button">
+							<i class="fa fa-arrow-up fa-3x"></i>
+						</a>					
+					</div>					
+				</xsl:if>
 				<xsl:call-template name="canada-screen-body-footer"/>
 			</body>
 		</html>

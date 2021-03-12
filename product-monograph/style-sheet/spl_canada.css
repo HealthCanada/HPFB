@@ -786,6 +786,9 @@ a.skip-main:focus, a.skip-main:active {
 	background-color: #CCCCCC;
 	font-size: 140%;
 	font-weight: bold;
+	/* [pmh] added for WS_PM-028 */
+	text-align: left;
+	padding: 3px;
 }
 .spl .contentTableReg {
 	border-bottom: none;
@@ -818,6 +821,9 @@ a.skip-main:focus, a.skip-main:active {
 	background-color: #CCCCCC;
 	font-size: 150%;
 	font-weight: bold;
+	/* [pmh] added for WS_PM-028 */
+	text-align: left;
+	padding: 3px;
 }
 .spl .formHeadingReg {
 	background-color: #CCCCCC;
