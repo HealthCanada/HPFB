@@ -58,6 +58,7 @@
 		<andConnective lang="en">&#160;and&#160;</andConnective>
 		<ofConnective lang="en">&#160;of&#160;</ofConnective>
 		<toConnective lang="en">&#160;-&#160;</toConnective>
+		<skipToMainContent lang="en">Skip to main content</skipToMainContent>
 
 		<!-- French Labels -->
 		<tableOfContents lang="fr">TABLE DES MATIÈRES</tableOfContents>
@@ -115,6 +116,7 @@
 		<andConnective lang="fr">&#160;et&#160;</andConnective>
 		<ofConnective lang="fr">&#160;de&#160;</ofConnective>
 		<toConnective lang="fr">&#160;-&#160;</toConnective>
+		<skipToMainContent lang="fr">Passer au contenu principal</skipToMainContent>
 	</my:texts>
 	<xsl:variable name="labels" select="document('')/*/my:texts"/>
 		

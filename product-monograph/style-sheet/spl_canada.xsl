@@ -20,6 +20,7 @@
 	<xsl:param name="show-print-toc" select="/.."/>
 	<!-- Whether to show jump to top button, set to 1 to enable and "/.." to turn off -->
 	<xsl:param name="show-jump-to-top" select="/.."/>
+	<xsl:param name="use-wet-boew-headers" select="/.."/>
 	<!-- This is the CSS link put into the output -->
 	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/spl_canada.css</xsl:param>
 	<!-- This is the HTML Document Title -->
@@ -220,7 +221,7 @@
 			</xsl:call-template>
 		</xsl:variable>		
 		
-		<!-- [pmh WS_PM-028] use caption instead of the first header row??? -->
+		<!-- [pmh WS_PM-028] use caption instead of the first header row -->
 		<!-- <tr>
 			<td class="contentTableTitle"> -->
 		<caption class="contentTableTitle">
@@ -253,7 +254,7 @@
 		<xsl:param name="title-label">
 			<xsl:value-of select="$labels/activeIngredients[@lang = $lang]"/>
 		</xsl:param>
-		<!-- [pmh WS_PM-028] if we use caption instead of the first header row, we will no longer need colspans!!! -->
+		<!-- [pmh WS_PM-028] if we use caption instead of the first header row, we no longer need colspans. -->
 		<xsl:param name="column-count">3</xsl:param>
 		<caption class="formHeadingTitle">
 			<xsl:value-of select="$title-label"/>			
@@ -519,7 +520,7 @@
 	<xsl:template name="characteristics-old">
 		<table class="formTablePetite fullWidth" cellSpacing="0" cellPadding="3" width="100%">
 			<tbody>
-				<!-- [pmh WS_PM-028] us caption for first table row, no colspans!!! -->
+				<!-- [pmh WS_PM-028] us caption for first table row -->
 				<caption class="formHeadingTitle">
 					<xsl:value-of select="$labels/productCharacteristics[@lang = $lang]"/>
 				</caption>
@@ -864,7 +865,7 @@
 	<xsl:template mode="main-document" match="v3:structuredBody">
 		<main class="col">
 			<div class="container-fluid" id="main">
-				<div class="row position-relative">
+				<div class="row position-relative" id="wb-cont">
 					<div class="col">
 						<xsl:for-each select="v3:component/v3:section">
 							<xsl:variable name="unique-section-id"><xsl:value-of select="v3:id/@root"/></xsl:variable>
@@ -1092,7 +1093,7 @@
 		</xsl:if>
 		<table>
 			<!-- Default to 100% table width if none is specified -->
-			<xsl:if test="not(@width)">
+			<xsl:if test="not(@width) or @width='100%'">
 				<xsl:attribute name="width">100%</xsl:attribute>
 				<xsl:attribute name="class">fullWidth</xsl:attribute>
 			</xsl:if>
@@ -1203,7 +1204,19 @@
 		<html>
 			<xsl:apply-templates select="." mode="html-head"/>
 			<body data-spy="scroll" data-target="#navigation-sidebar" data-offset="1">
-				<a class="skip-main" href="#main">Skip to main content</a>
+				<!-- [pmh] WS_PM-032/033 - I think we should target using the wet-boew skip to main, but we need to resolve some style issues first, translation is good -->
+				<xsl:choose>
+					<xsl:when test="$use-wet-boew-headers">
+						<div class="global-header"><nav><ul id="wb-tphp">
+							<li class="wb-slc"><a class="wb-sl" href="#wb-cont"><xsl:value-of select="$labels/skipToMainContent[@lang = $lang]"/></a></li>
+<!--						<li class="wb-slc"><a class="wb-sl" href="#wb-info">Skip to &#34;About government&#34;</a></li> -->					
+						</ul></nav></div>
+					</xsl:when>
+					<xsl:otherwise>
+						<a class="skip-main" href="#main"><xsl:value-of select="$labels/skipToMainContent[@lang = $lang]"/></a>				
+					</xsl:otherwise>
+				</xsl:choose>
+					
 				<header class="bg-aurora-accent1 hide-in-print mb-2" id="banner">
 					<div class="text-white text-center p-2 font-weight-bold"><xsl:copy-of select="v3:title/node()"/></div>
 				</header>
