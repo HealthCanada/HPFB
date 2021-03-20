@@ -186,20 +186,7 @@
 					position: -webkit-sticky;
 					position: sticky;
 					top: 0;
-				}
-				
-				/* pre-adoption area */
-				/* [pmh] WS_PM-040 - this is quite obscure - add link text after external content links only (not footnotes, toc, etc) */
-				@media print {
-					.spl a:not([href^="#"])[href]::after {
-						content: " (" attr(href) ") ";
-					}
-					
-					#print-product-details a[href]::after {
-						content: "";
-					}
 				}				
-				
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 			</style>

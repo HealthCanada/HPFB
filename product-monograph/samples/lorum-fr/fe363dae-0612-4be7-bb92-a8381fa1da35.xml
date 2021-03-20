@@ -1049,8 +1049,8 @@
             <section ID="bf2dab4e-fd04-4ec9-9cdc-247188622d0f">
               <id root="e5f1dea3-d907-4664-b46f-e1d9736d47af"/>
               <code code="0tp1.3" codeSystem="2.16.840.1.113883.2.20.6.60"
-                displayName="Date d'approbation initiale :"/>
-              <title>Date d'approbation initiale :</title>
+                displayName="Date de l’autorisation initiale :"/>
+              <title>Date de l’autorisation initiale :</title>
               <text>
                 <paragraph>1 janvier 2018</paragraph>
               </text>
@@ -1926,7 +1926,7 @@
               <effectiveTime value="20170101"/>
               <component>
                 <observationMedia ID="m1">
-                  <text>structure chimique</text>
+                  <text>Structure chimique du lorum ipsum</text>
                   <value xsi:type="ED" mediaType="image/jpeg">
                     <reference value="structure.jpg"/>
                   </value>
@@ -2488,12 +2488,11 @@
                         <paragraph>Vous pouvez déclarer les effets secondaires soupçonnées d’être
                           associé avec l’utilisation d’un produit de santé par:<br/></paragraph>
                         <list styleCode="unordered">
-                          <item>Visitant le site Web des déclarations des effets indésirables
+                          <item>Visitant 
                               <linkHtml
                               href="http://www.hc-sc.gc.ca/dhp-
                               mps/medeff/report-declaration/index-eng.php"
-                              >(http://www.hc-sc.gc.ca/dhp-
-                              mps/medeff/report-declaration/index-eng.php)</linkHtml> pour vous
+                                >le site Web des déclarations des effets indésirables</linkHtml> pour vous
                             informer sur comment faire une déclaration en ligne, par courrier, ou
                             par télécopieur ; ou</item>
                           <item>Téléphonant sans frais 1-866-234-2345.</item>
@@ -2533,9 +2532,8 @@
                   <item>Communiquer avec votre professionnel de la santé.</item>
                   <item>Lire la monographie de produit intégrale rédigée à l’intention des
                     professionnels de la santé, qui renferme également les renseignements pour les
-                    patients sur les médicaments. Ce document est publié sur le <linkHtml
-                      href="http://hc-sc.gc.ca/index-fra.php">site Web de Santé Canada</linkHtml>
-                    (http://hc-sc.gc.ca/index-fra.php), le site Web du fabricant
+                    patients sur les médicaments. Ce document est publié sur <linkHtml
+                      href="http://hc-sc.gc.ca/index-fra.php">le site Web de Santé Canada</linkHtml>, le site Web du fabricant
                     [www.siteweb.document], ou en téléphonant le 1-800-[numéro de téléphone].</item>
                 </list>
                 <paragraph>Le présent dépliant a été rédigé par [Nom du promoteur]</paragraph>

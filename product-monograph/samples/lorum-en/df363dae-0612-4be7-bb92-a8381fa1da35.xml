@@ -1488,8 +1488,8 @@
                         <section ID="bf2dab4e-fd04-4ec9-9cdc-247188622d0f">
                             <id root="e5f1dea3-d907-4664-b46f-e1d9736d47af"/>
                             <code code="0tp1.3" codeSystem="2.16.840.1.113883.2.20.6.60"
-                                displayName="Date of Initial Approval:"/>
-                            <title>Date of Initial Approval:</title>
+                                displayName="Date of Initial Authorization:"/>
+                            <title>Date of Initial Authorization:</title>
                             <text>
                                 <paragraph>January 1, 2018</paragraph>
                             </text>
@@ -2402,7 +2402,7 @@
                             <effectiveTime value="20170101"/>
                             <component>
                                 <observationMedia ID="m1">
-                                    <text>chemical structure</text>
+                                    <text>Chemical structure of lorum ipsum</text>
                                     <value xsi:type="ED" mediaType="image/jpeg">
                                         <reference value="structure.jpg"/>
                                     </value>
@@ -2992,12 +2992,8 @@
                                                   side effects associated with the use of health
                                                   products to Health Canada by:</paragraph>
                                                 <list styleCode="unordered">
-                                                  <item>Visiting the Web page on Adverse Reaction
-                                                  Reporting <linkHtml
-                                                  href="http://www.hc-sc.gc.ca/dhp-
-                                                            mps/medeff/report-declaration/index-eng.php"
-                                                  >(http://www.hc-sc.gc.ca/dhp-
-                                                  mps/medeff/report-declaration/index-eng.php)</linkHtml>
+                                                  <item>Visiting the Web page on <linkHtml
+                                                  href="http://www.hc-sc.gc.ca/dhp-mps/medeff/report-declaration/index-eng.php">Adverse Reaction Reporting</linkHtml>
                                                   for information on how to report online, by mail
                                                   or by fax; or</item>
                                                   <item>Calling toll-free at 1-866-234-2345.</item>
@@ -3039,9 +3035,9 @@
                                     <item>Talk to your healthcare professional</item>
                                     <item>Find the full product monograph that is prepared for
                                         healthcare professionals and includes this Patient
-                                        Medication Information by visiting the Health Canada website
+                                        Medication Information by visiting the 
                                             <linkHtml href="http://hc-sc.gc.ca/index-eng.php"
-                                            >(http://hc-sc.gc.ca/index-eng.php)</linkHtml>; the
+                                                >Health Canada website</linkHtml>; the
                                         manufacturer's website [website], or by calling 1-800-[phone
                                         number].</item>
                                 </list>

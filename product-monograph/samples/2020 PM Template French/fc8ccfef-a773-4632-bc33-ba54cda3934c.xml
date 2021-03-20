@@ -1471,8 +1471,9 @@
                                             <td styleCode="Lrule Rrule Botrule Toprule">
                                                 <paragraph>« [Marque nominative], indiqué pour :</paragraph>
                                                 <paragraph>- [ ]</paragraph>
-                                                <paragraph>bénéficie d’une autorisation de mise en marché avec conditions, en attendant les résultats d’études permettant d’attester son bénéfice clinique. Les patients doivent être avisés de la nature de l’autorisation. Pour obtenir des renseignements supplémentaires concernant &lt;Marque nominative&gt;, veuillez consulter l’avis de conformité avec conditions - produits pharmaceutiques sur le site Web de Santé Canada : 
-                                                    <linkHtml href="https://www.canada.ca/fr/sante-canada/services/medicaments-produits-sante/medicaments/avis-conformite/conditions.html">https://www.canada.ca/fr/sante-canada/services/medicaments-produits-sante/medicaments/avis-conformite/conditions.html</linkHtml></paragraph>
+                                                <paragraph>bénéficie d’une autorisation de mise en marché avec conditions, en attendant les résultats d’études permettant d’attester son bénéfice clinique. Les patients doivent être avisés de la nature de l’autorisation. Pour obtenir des renseignements supplémentaires concernant &lt;Marque nominative&gt;, veuillez consulter 
+                                                    <linkHtml href="https://www.canada.ca/fr/sante-canada/services/medicaments-produits-sante/medicaments/avis-conformite/conditions.html">l’avis de conformité avec conditions - produits pharmaceutiques sur le site Web de Santé Canada</linkHtml>.»
+                                                </paragraph>
                                                 <paragraph>[Pour les autorisations de mise en marché sans conditions]</paragraph>
                                                 <paragraph>« [Marque nominative], indiqué pour :</paragraph>
                                                 <paragraph>- [ ]</paragraph>
@@ -1503,8 +1504,8 @@
                         <section ID="bf2dab4e-fd04-4ec9-9cdc-247188622d0f">
                             <id root="e5f1dea3-d907-4664-b46f-e1d9736d47af"/>
                             <code code="0tp1.3" codeSystem="2.16.840.1.113883.2.20.6.63"
-                                displayName="Date d'approbation initiale :"/>
-                            <title>Date d'approbation initiale :</title>
+                                displayName="Date de l’autorisation initiale :"/>
+                            <title>Date de l’autorisation initiale :</title>
                             <text>
                                 <paragraph>January 1, 2018</paragraph>
                             </text>
@@ -3228,7 +3229,7 @@
                             <effectiveTime value="20170101"/>
                             <component>
                                 <observationMedia ID="m1">
-                                    <text>chemical structure</text>
+                                    <text>Structure chimique du lorum ipsum</text>
                                     <value xsi:type="ED" mediaType="image/jpeg">
                                         <reference value="structure.jpg"/>
                                     </value>
@@ -4052,9 +4053,9 @@
                                             <td>
                                                 <paragraph><content styleCode="bold">Déclaration des effets secondaires</content></paragraph><br></br><paragraph>Vous pouvez déclarer des effets secondaires soupçonnés d’être associés à l’utilisation d’un produit à Santé Canada en</paragraph><br></br>
                                                 <list styleCode="unordered">
-                                                    <item>Visitant le site Web des déclarations des effets indésirables  <linkHtml
+                                                    <item>Visitant le site Web des <linkHtml
                                                         href="https://www.canada.ca/fr/sante-canada/services/medicaments-produits-sante/medeffet-canada/declaration-effets-indesirables.html"
-                                                        >(https://www.canada.ca/fr/sante-canada/services/medicaments-produits-sante/medeffet-canada/declaration-effets-indesirables.html)</linkHtml>
+                                                        >déclarations des effets indésirables</linkHtml> 
                                                         pour vous informer sur comment faire une déclaration en ligne, par courriel, ou par télécopieur ;</item>
                                                     
                                                 </list>
@@ -4074,7 +4075,7 @@
                                                 <paragraph><content styleCode="bold">Déclaration des effets secondaires soupçonnés des vaccins</content></paragraph><br></br>
                                                 <paragraph><content styleCode="bold">Pour le grand public : </content>Si vous ressentez un effet secondaire à la suite d’une vaccination, veuillez le signaler à votre professionnel de la santé.</paragraph><br></br>
                                                 <paragraph>Si vous souhaitez obtenir des informations sur l’atténuation des effets secondaires, veuillez contacter votre professionnel de la santé. L’Agence de la santé publique du Canada (ASPC), Santé Canada et [nom du promoteur] ne peuvent pas fournir de conseils médicaux.</paragraph><br></br>
-                                                <paragraph><content styleCode="bold">Pour les professionnels de la santé : </content>Si un patient ressent un effet secondaire à la suite d’une vaccination, veuillez remplir le formulaire approprié de rapport des effets secondaires suivant l’immunisation (ESSI) selon votre province ou territoire (<linkHtml href="https://www.canada.ca/fr/sante-publique/services/immunisation/declaration-manifestations-cliniques-inhabituelles-suite-immunisation/formulaire.html">https://www.canada.ca/fr/sante-publique/services/immunisation/declaration-manifestations-cliniques-inhabituelles-suite-immunisation/formulaire.html</linkHtml>) et l’envoyer à votre unité de santé locale.</paragraph>
+                                                <paragraph><content styleCode="bold">Pour les professionnels de la santé : </content>Si un patient ressent un effet secondaire à la suite d’une vaccination, veuillez remplir le formulaire approprié de rapport des <linkHtml href="https://www.canada.ca/fr/sante-publique/services/immunisation/declaration-manifestations-cliniques-inhabituelles-suite-immunisation/formulaire.html">effets secondaires suivant l’immunisation (ESSI)</linkHtml> selon votre province ou territoire et l’envoyer à votre unité de santé locale.</paragraph>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -4115,9 +4116,7 @@
                             <text>
                                 <list listType="unordered">
                                     <item>Communiquer avec votre professionnel de la santé.</item>
-                                    <item>Lire la monographie de produit intégrale rédigée à l’intention des professionnels de la santé, qui renferme également les renseignements sur le médicament pour le patient. Ce document est disponible sur le site Web de Santé Canada 
-                                        <linkHtml href="https://www.canada.ca/fr/sante-canada/services/medicaments-produits-sante/medicaments/base-donnees-produits-pharmaceutiques.html"
-                                            >(https://www.canada.ca/fr/sante-canada/services/medicaments-produits-sante/medicaments/base-donnees-produits-pharmaceutiques.html)</linkHtml>, the
+                                    <item>Lire la monographie de produit intégrale rédigée à l’intention des professionnels de la santé, qui renferme également les renseignements sur le médicament pour le patient. Ce document est disponible sur <linkHtml href="https://www.canada.ca/fr/sante-canada/services/medicaments-produits-sante/medicaments/base-donnees-produits-pharmaceutiques.html">le site Web de Santé Canada</linkHtml>,
                                         le site Web du fabricant &lt;www.siteweb.document&gt;, ou peut être obtenu en téléphonant au 1-800-&lt;numéro de téléphone&gt;.</item>
                                 </list>
                                 <paragraph>Le présent dépliant a été rédigé par &lt;Nom du promoteur&gt;</paragraph>

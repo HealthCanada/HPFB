@@ -1473,8 +1473,9 @@
                                             <td styleCode="Lrule Rrule Botrule Toprule">
                                                 <paragraph>&quot;[Brand name], indicated for:</paragraph>
                                                 <paragraph>- [ ]</paragraph>
-                                                <paragraph>has been issued market authorization with conditions, pending the results of trials to verify its clinical benefit. Patients should be advised of the nature of the authorization. For further information for &lt;Brand name&gt; please refer to Health Canada’s Notice of Compliance with conditions - drug products web site: 
-                                                    <linkHtml href="https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/notice-compliance/conditions.html">https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/notice-compliance/conditions.html&quot;</linkHtml></paragraph>
+                                                <paragraph>has been issued market authorization with conditions, pending the results of trials to verify its clinical benefit. Patients should be advised of the nature of the authorization. For further information for &lt;Brand name&gt; please refer to Health Canada’s 
+                                                    <linkHtml href="https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/notice-compliance/conditions.html">Notice of Compliance with conditions - drug products</linkHtml>  web site.&quot; 
+                                                </paragraph>
                                                 <paragraph>[For market authorizations without conditions]</paragraph>
                                                 <paragraph>&quot;[Brand name], indicated for:</paragraph>
                                                 <paragraph>- [ ]</paragraph>
@@ -3241,7 +3242,7 @@
                             <effectiveTime value="20170101"/>
                             <component>
                                 <observationMedia ID="m1">
-                                    <text>chemical structure</text>
+                                    <text>Chemical structure of lorum ipsum</text>
                                     <value xsi:type="ED" mediaType="image/jpeg">
                                         <reference value="structure.jpg"/>
                                     </value>
@@ -4121,10 +4122,9 @@
                                                   side effects associated with the use of health
                                                   products to Health Canada by:</paragraph><br></br>
                                                 <list styleCode="unordered">
-                                                  <item>Visiting the Web page on Adverse Reaction
-                                                  Reporting <linkHtml
+                                                    <item>Visiting the Web page on <linkHtml
                                                       href="https://www.canada.ca/en/health-canada/services/drugs-health-products/medeffect-canada.html"
-                                                      >(https://www.canada.ca/en/health-canada/services/drugs-health-products/medeffect-canada.html)</linkHtml>
+                                                      >Adverse Reaction Reporting</linkHtml> 
                                                   for information on how to report online, by mail
                                                   or by fax; or</item>
                                                   <item>Calling toll-free at 1-866-234-2345.</item>
@@ -4145,7 +4145,7 @@
                                                 <paragraph><content styleCode="bold">Reporting Suspected Side Effects for Vaccines</content><br></br>
                                                     <content styleCode="bold">For the general public: </content>Should you experience a side effect following immunization, please report it to your healthcare professional.</paragraph><br></br>
                                                 <paragraph>Should you require information related to the management of the side effect, please contact your healthcare professional. The Public Health Agency of Canada, Health Canada and [Sponsor Name] cannot provide medical advice.</paragraph><br></br>
-                                                <paragraph><content styleCode="bold">For healthcare professionals: </content>If a patient experiences a side effect following immunization, please complete the Adverse Events Following Immunization (AEFI) Form appropriate for your province/territory (<linkHtml href="http://www.phac-aspc.gc.ca/im/aefi-essi-form-eng.php">http://www.phac-aspc.gc.ca/im/aefi-essi-form-eng.php</linkHtml>) and send it to your local Health Unit.</paragraph>
+                                                <paragraph><content styleCode="bold">For healthcare professionals: </content>If a patient experiences a side effect following immunization, please complete the <linkHtml href="http://www.phac-aspc.gc.ca/im/aefi-essi-form-eng.php">Adverse Events Following Immunization (AEFI) Form</linkHtml> appropriate for your province/territory and send it to your local Health Unit.</paragraph>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -4188,9 +4188,8 @@
                                     <item>Talk to your healthcare professional</item>
                                     <item>Find the full product monograph that is prepared for
                                         healthcare professionals and includes this Patient
-                                        Medication Information by visiting the Health Canada website 
-                                        <linkHtml href="https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database.html"
-                                                >https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database.html</linkHtml>; the
+                                        Medication Information by visiting the  
+                                        <linkHtml href="https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database.html">Health Canada website</linkHtml>; the
                                         manufacturer's website [website], or by calling 1-800-[phone
                                         number].</item>
                                 </list>
