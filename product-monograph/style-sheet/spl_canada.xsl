@@ -1198,7 +1198,44 @@
 			<xsl:apply-templates mode="mixed" select="node()"/>
 		</td>
 	</xsl:template>
-	
+
+	<!-- TABLE FOOTNOTES - MODIFIED FOR ACCESSIBILITY -->
+	<xsl:template match="v3:tfoot" name="flushtablefootnotes">
+		<xsl:variable name="allspan" select="count(ancestor::v3:table[1]/v3:colgroup/v3:col|ancestor::v3:table[1]/v3:col)"/>
+		<xsl:if test="self::v3:tfoot or ancestor::v3:table[1]//v3:footnote">
+			<tfoot>
+				<xsl:if test="self::v3:tfoot">
+					<xsl:apply-templates select="@*|node()"/>
+				</xsl:if>
+				<xsl:if test="ancestor::v3:table[1]//v3:footnote">
+					<tr>
+						<td colspan="{$allspan}" align="left">
+							<aside class="wb-fnote" role="note">
+								<dl class="Footnote">
+									<xsl:apply-templates mode="footnote" select="ancestor::v3:table[1]/node()"/>				
+								</dl>								
+							</aside>
+						</td>
+					</tr>
+				</xsl:if>
+			</tfoot>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template mode="footnote" match="v3:footnote">
+		<xsl:variable name="mark">
+			<xsl:call-template name="footnoteMark"/>
+		</xsl:variable>
+		<xsl:variable name="globalnumber" select="count(preceding::v3:footnote)+1"/>
+		<dt>
+			<a name="footnote-{$globalnumber}" href="#footnote-reference-{$globalnumber}" aria-describedby="footnote-label">
+				<xsl:value-of select="$mark"/>
+			</a>
+		</dt>
+		<dd>
+			<xsl:apply-templates mode="mixed" select="node()"/>
+		</dd>
+	</xsl:template>	
+
 	<!-- MAIN HTML PAGE TEMPLATING -->
 	<xsl:template match="/v3:document" priority="1">
 		<html>

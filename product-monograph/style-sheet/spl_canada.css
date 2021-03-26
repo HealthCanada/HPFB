@@ -1051,7 +1051,7 @@ img { max-width: 100%; height: auto; }
 
 	/* [pmh] WS_PM-040 - this is quite obscure - add link text in print after external content links only (not footnotes, toc, or contact info in product details) */
 	.spl a:not([href^="#"])[href]::after {
-		content: " (" attr(href) ") ";
+		content: " (" attr(href) ")";
 	}
 	
 	#print-product-details a[href]::after {

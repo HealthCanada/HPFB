@@ -398,21 +398,7 @@ token.
 		</xsl:if>
 	</xsl:template>
 	<xsl:template mode="footnote" match="/|node()">
-		<xsl:apply-templates mode="footnote" select="node()"/>
-	</xsl:template>
-	<xsl:template mode="footnote" match="v3:footnote">
-		<xsl:variable name="mark">
-			<xsl:call-template name="footnoteMark"/>
-		</xsl:variable>
-		<xsl:variable name="globalnumber" select="count(preceding::v3:footnote)+1"/>
-		<dt>
-			<a name="footnote-{$globalnumber}" href="#footnote-reference-{$globalnumber}">
-				<xsl:value-of select="$mark"/>
-			</a>
-		</dt>
-		<dd>
-			<xsl:apply-templates mode="mixed" select="node()"/>
-		</dd>
+		<xsl:apply-templates mode="footnote" select="node()"/>			
 	</xsl:template>
 	<xsl:template mode="footnote" match="v3:section|v3:table"/>
 
@@ -612,7 +598,7 @@ token.
 		</p>
 	</xsl:template>
 	
-	<!-- TABLE MODEL - the main table template has been moved to spl_canada.xsl, long with tr, td, and th -->
+	<!-- TABLE MODEL - the main table template has been moved to spl_canada.xsl, along with tr, td, and th; also some of tfoot for footnotes -->
 	<xsl:template match="v3:table/@summary|v3:table/@width|v3:table/@border|v3:table/@frame|v3:table/@rules|v3:table/@cellspacing|v3:table/@cellpadding">
 		<xsl:copy-of select="."/>
 	</xsl:template>
@@ -635,25 +621,6 @@ token.
 	</xsl:template>
 	<xsl:template match="v3:thead/@align                       |v3:thead/@char                       |v3:thead/@charoff                       |v3:thead/@valign">
 		<xsl:copy-of select="."/>
-	</xsl:template>
-	<xsl:template match="v3:tfoot" name="flushtablefootnotes">
-		<xsl:variable name="allspan" select="count(ancestor::v3:table[1]/v3:colgroup/v3:col|ancestor::v3:table[1]/v3:col)"/>
-		<xsl:if test="self::v3:tfoot or ancestor::v3:table[1]//v3:footnote">
-			<tfoot>
-				<xsl:if test="self::v3:tfoot">
-					<xsl:apply-templates select="@*|node()"/>
-				</xsl:if>
-				<xsl:if test="ancestor::v3:table[1]//v3:footnote">
-					<tr>
-						<td colspan="{$allspan}" align="left">
-							<dl class="Footnote">
-								<xsl:apply-templates mode="footnote" select="ancestor::v3:table[1]/node()"/>				
-							</dl>
-						</td>
-					</tr>
-				</xsl:if>
-			</tfoot>
-		</xsl:if>
 	</xsl:template>
 	<xsl:template match="v3:tfoot/@align                       |v3:tfoot/@char                       |v3:tfoot/@charoff                       |v3:tfoot/@valign">
 		<xsl:copy-of select="."/>
