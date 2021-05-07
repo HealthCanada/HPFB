@@ -1052,9 +1052,9 @@
                 displayName="Date de l’autorisation initiale :"/>
               <title>Date de l’autorisation initiale :</title>
               <text>
-                <paragraph>1 janvier 2018</paragraph>
+                <paragraph>2018-01-05</paragraph>
               </text>
-              <effectiveTime value="20180101"/>
+              <effectiveTime value="20180126"/>
             </section>
           </component>
           <component>
@@ -1064,9 +1064,9 @@
                 displayName="Date de révision :"/>
               <title>Date de révision :</title>
               <text>
-                <paragraph>1 janvier 2019</paragraph>
+                <paragraph>2019-01-07</paragraph>
               </text>
-              <effectiveTime value="20180101"/>
+              <effectiveTime value="20180128"/>
             </section>
           </component>
           <component>
