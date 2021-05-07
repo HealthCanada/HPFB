@@ -1491,9 +1491,9 @@
                                 displayName="Date of Initial Authorization:"/>
                             <title>Date of Initial Authorization:</title>
                             <text>
-                                <paragraph>January 1, 2018</paragraph>
+                                <paragraph>2018-01-05</paragraph>
                             </text>
-                            <effectiveTime value="20180101"/>
+                            <effectiveTime value="20180126"/>
                         </section>
                     </component>
                     <component>
@@ -1503,9 +1503,9 @@
                                 displayName="Date of Revision:"/>
                             <title>Date of Revision:</title>
                             <text>
-                                <paragraph>January 1, 2019</paragraph>
+                                <paragraph>2019-01-07</paragraph>
                             </text>
-                            <effectiveTime value="20180101"/>
+                            <effectiveTime value="20190127"/>
                         </section>
                     </component>
                     <component>
