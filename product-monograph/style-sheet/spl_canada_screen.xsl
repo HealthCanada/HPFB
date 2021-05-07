@@ -15,7 +15,7 @@
 				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-company-details" 
 				aria-expanded="true" aria-controls="collapse-company-details">
-					<i class="fa fa-chevron-down" style="color:grey"></i><xsl:text> </xsl:text>
+<!-- [pmh] problems in IE <i class="fa fa-chevron-down" style="color:grey"></i><xsl:text> </xsl:text> -->
 					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>						
 				</button>
 			</header>
@@ -34,7 +34,7 @@
 				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-{$unique-product-id}" 
 				aria-expanded="true" aria-controls="collapse-{$unique-product-id}">
-					<i class="fa fa-chevron-down" style="color:grey"></i><xsl:text>  </xsl:text>
+<!-- [pmh] problems in IE <i class="fa fa-chevron-down" style="color:grey"></i><xsl:text> </xsl:text> -->
 					<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
 						<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
 					</xsl:apply-templates>						
