@@ -159,4 +159,61 @@
 		</xsl:if>
 	</xsl:template>
 	
+	<!-- extra templating to convert 2020-01-01 to English or French formatted date -->
+	<xsl:template name="string-to-internationalized-date">
+		<xsl:param name="text"/>
+		<xsl:variable name="year" select="substring($text,1,4)"/>
+		<xsl:variable name="month" select="substring($text,6,2)"/>
+		<xsl:variable name="day" select="substring($text,9,2)"/>
+		<xsl:variable name="month-text" select="document('')/*/my:months[@lang=$lang]/my:mon[number($month)]/text()"/>
+		<xsl:choose>
+			<xsl:when test="$lang='en' and string-length($text)=10">
+				<xsl:value-of select="$month-text"/>
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="number($day)"/>,<xsl:text> </xsl:text>
+				<xsl:value-of select="$year"/>			
+			</xsl:when>
+			<xsl:when test="$lang='fr' and string-length($text)=10">
+				<xsl:value-of select="number($day)"/>
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="$month-text"/>
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="$year"/>			
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="$text"/>			
+			</xsl:otherwise>
+		</xsl:choose>		
+	</xsl:template>
+	
+	<!-- Data islands for French and English months - these could live in spl_canada_i18n.xsl -->
+	<my:months lang="en">
+		<my:mon>January</my:mon>
+		<my:mon>February</my:mon>
+		<my:mon>March</my:mon>
+		<my:mon>April</my:mon>
+		<my:mon>May</my:mon>
+		<my:mon>June</my:mon>
+		<my:mon>July</my:mon>
+		<my:mon>August</my:mon>
+		<my:mon>September</my:mon>
+		<my:mon>October</my:mon>
+		<my:mon>November</my:mon>
+		<my:mon>December</my:mon>
+	</my:months>
+	<my:months lang="fr">
+		<my:mon>janvier</my:mon>
+		<my:mon>février</my:mon>
+		<my:mon>mars</my:mon>
+		<my:mon>avril</my:mon>
+		<my:mon>mai</my:mon>
+		<my:mon>juin</my:mon>
+		<my:mon>juillet</my:mon>
+		<my:mon>août</my:mon>
+		<my:mon>septembre</my:mon>
+		<my:mon>octobre</my:mon>
+		<my:mon>novembre</my:mon>
+		<my:mon>decembre</my:mon>
+	</my:months>
+		
 </xsl:transform>

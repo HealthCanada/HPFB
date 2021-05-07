@@ -157,11 +157,6 @@
 					<caption class="formHeadingTitle">
 						<xsl:value-of select="$labels/productInfo[@lang = $lang]"/>
 					</caption>
-<!--				<tr>
-						<td colspan="2" class="formHeadingTitle">
-							<xsl:value-of select="$labels/productInfo[@lang = $lang]"/>
-						</td>
-					</tr> -->
 					<tr class="formTableRow">
 						<th class="formLabel"> <!-- Product Brand Name -->
 							<xsl:value-of select="$labels/brandName[@lang = $lang]"/>
@@ -222,8 +217,6 @@
 		</xsl:variable>		
 		
 		<!-- [pmh WS_PM-028] use caption instead of the first header row -->
-		<!-- <tr>
-			<td class="contentTableTitle"> -->
 		<caption class="contentTableTitle">
 			<strong>
 				<xsl:value-of select="$medName"/>&#160;		
@@ -259,11 +252,6 @@
 		<caption class="formHeadingTitle">
 			<xsl:value-of select="$title-label"/>			
 		</caption>
-<!--	<tr>
-			<td colspan="{$column-count}" class="formHeadingTitle">	
-				<xsl:value-of select="$title-label"/>
-			</td>
-		</tr> -->
 		<tr>
 			<th class="formTitle" scope="col">
 				<xsl:value-of select="$labels/ingredientName[@lang = $lang]"/>
@@ -524,11 +512,6 @@
 				<caption class="formHeadingTitle">
 					<xsl:value-of select="$labels/productCharacteristics[@lang = $lang]"/>
 				</caption>
-<!--			<tr>
-					<td class="formHeadingTitle" colspan="2">
-						<xsl:value-of select="$labels/productCharacteristics[@lang = $lang]"/>
-					</td>
-				</tr> -->
 				<xsl:call-template name="codedCharacteristicRow"> <!-- Product Type is CV -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='1']"/>
 					<xsl:with-param name="label" select="$labels/productType[@lang = $lang]"/>
@@ -580,9 +563,6 @@
 			<caption class="formHeadingTitle">
 				<xsl:value-of select="$labels/packaging[@lang = $lang]"/>
 			</caption>
-<!--		<tr>
-				<td colspan="5" class="formHeadingTitle"><xsl:value-of select="$labels/packaging[@lang = $lang]"/></td>
-			</tr> -->
 			<tr>
 				<th scope="col" width="1" class="formTitle">#</th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/itemCode[@lang = $lang]"/></th>
@@ -694,13 +674,10 @@
 		<tr>
 			<td>
 				<table width="100%" class="fullWidth" cellspacing="0" cellpadding="5">
-					<!-- [pmh WS_PM-028] use caption instead of the first header row? -->
+					<!-- [pmh WS_PM-028] use caption instead of the first header row -->
 					<caption class="contentTableTitle">
 						<xsl:value-of select="$labels/part[@lang = $lang]"/> <xsl:value-of select="count(../preceding-sibling::v3:part)+1"/><xsl:value-of select="$labels/ofConnective[@lang = $lang]"/><xsl:value-of select="count(../../v3:part)"/>
 					</caption>
-<!--				<tr>
-						<td class="contentTableTitle"><xsl:value-of select="$labels/part[@lang = $lang]"/> <xsl:value-of select="count(../preceding-sibling::v3:part)+1"/><xsl:value-of select="$labels/ofConnective[@lang = $lang]"/><xsl:value-of select="count(../../v3:part)"/></td>
-					</tr> -->
 					<xsl:call-template name="piMedNames"/>
 				</table>
 			</td>
@@ -715,9 +692,6 @@
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 			<!-- [pmh WS_PM-028] replace the top row of any product metadata tables with a caption -->
 			<caption class="formHeadingTitle"><xsl:value-of select="$labels/partQuantity[@lang = $lang]"/></caption>
-<!--		<tr>
-				<td colspan="3" class="formHeadingTitle"><xsl:value-of select="$labels/partQuantity[@lang = $lang]"/></td>
-			</tr> -->
 			<tr>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/partNumber[@lang = $lang]"/></th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/pkgQuantity[@lang = $lang]"/></th>
@@ -763,9 +737,6 @@
 						<caption class="formHeadingTitle">
 							<xsl:value-of select="$labels/marketingInfo[@lang = $lang]"/>
 						</caption>
-<!--					<tr>
-							<td colspan="4" class="formHeadingTitle"><xsl:value-of select="$labels/marketingInfo[@lang = $lang]"/></td>
-						</tr> -->
 						<tr>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/marketingCategory[@lang = $lang]"/></th>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/applicationNumber[@lang = $lang]"/></th>
@@ -860,30 +831,33 @@
 			<xsl:value-of select="v3:text/v3:paragraph"/>
 		</div>
 	</xsl:template>
+
+	<!-- this template is used on the Title Page to show Control Number on a single line -->
+	<xsl:template mode="international-date-format" match="v3:section">
+		<div class="Section">
+			<h2>
+				<xsl:value-of select="v3:title"/>
+			</h2>
+			<p>
+				<xsl:call-template name="string-to-internationalized-date">
+					<xsl:with-param name="text">
+						<xsl:value-of select="v3:text/v3:paragraph"/>
+					</xsl:with-param>
+				</xsl:call-template>
+			</p>
+		</div>
+	</xsl:template>
 	
+
 	<!-- This is the main page content, which renders for both screen, with Product Details in front, and print, with Product Details at end -->	
 	<xsl:template mode="main-document" match="v3:structuredBody">
 		<main class="col">
 			<div class="container-fluid" id="main">
 				<div class="row position-relative" id="wb-cont">
 					<div class="col">
-						<xsl:for-each select="v3:component/v3:section">
+						<xsl:for-each select="v3:component/v3:section[not(v3:code/@code='0MP')]">
 							<xsl:variable name="unique-section-id"><xsl:value-of select="v3:id/@root"/></xsl:variable>
 							<xsl:choose>
-								<xsl:when test="v3:code[@code='0MP']">
-									<!-- SCREEN VERSION OF MANUFACTURED PRODUCT DETAIL -->
-									<div class="card mb-2 hide-in-print" id="{$unique-section-id}">
-										<header class="card-header bg-aurora-accent1 text-white font-weight-bold">
-											<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
-										</header>
-										
-										<!-- Company Details and Product Details Accordion Cards -->
-										<div id="product-accordion">
-											<xsl:apply-templates mode="screen" select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization"/>
-											<xsl:apply-templates mode="screen" select="v3:subject/v3:manufacturedProduct"/>
-										</div>
-									</div>
-								</xsl:when>
 								<xsl:when test="v3:code[@code='0TP']">
 									<!-- TITLE PAGE - Note: force-page-break-after here does not work on FireFox -->
 									<div class="card mb-2 force-page-break-after" id="{$unique-section-id}">
@@ -901,8 +875,8 @@
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.2']"/>
 											</div>
 											<div class="title-page-right">
-												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.3']"/>
-												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.4']"/>
+												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.3']" mode="international-date-format"/>
+												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.4']" mode="international-date-format"/>
 											</div>
 										</div>											
 										<div class="spl title-page-row title-page-rule-bot">
@@ -954,6 +928,20 @@
 									</xsl:apply-templates>
 								</xsl:otherwise>
 							</xsl:choose>
+						</xsl:for-each>
+						<!-- SCREEN VERSION OF MANUFACTURED PRODUCT DETAIL -->
+						<xsl:for-each select="v3:component/v3:section[v3:code/@code='0MP']">
+							<xsl:variable name="unique-section-id"><xsl:value-of select="v3:id/@root"/></xsl:variable>
+							<div class="card mb-2 hide-in-print" id="{$unique-section-id}">
+								<header class="card-header bg-aurora-accent1 text-white font-weight-bold">
+									<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
+								</header>
+								<!-- Company Details and Product Details Accordion Cards -->
+								<div id="product-accordion">
+									<xsl:apply-templates mode="screen" select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization"/>
+									<xsl:apply-templates mode="screen" select="v3:subject/v3:manufacturedProduct"/>
+								</div>
+							</div>
 						</xsl:for-each>
 						<!-- PRINT VERSION OF MANUFACTURED PRODUCT DETAIL will already have a page break after previous section -->
 						<div class="hide-in-screen card spl" id="print-product-details">
@@ -1210,11 +1198,11 @@
 				<xsl:if test="ancestor::v3:table[1]//v3:footnote">
 					<tr>
 						<td colspan="{$allspan}" align="left">
-							<aside class="wb-fnote" role="note">
+<!--							<aside class="wb-fnote" role="note"> -->
 								<dl class="Footnote">
 									<xsl:apply-templates mode="footnote" select="ancestor::v3:table[1]/node()"/>				
 								</dl>								
-							</aside>
+<!--							</aside> -->
 						</td>
 					</tr>
 				</xsl:if>
@@ -1246,7 +1234,6 @@
 					<xsl:when test="$use-wet-boew-headers">
 						<div class="global-header"><nav><ul id="wb-tphp">
 							<li class="wb-slc"><a class="wb-sl" href="#wb-cont"><xsl:value-of select="$labels/skipToMainContent[@lang = $lang]"/></a></li>
-<!--						<li class="wb-slc"><a class="wb-sl" href="#wb-info">Skip to &#34;About government&#34;</a></li> -->					
 						</ul></nav></div>
 					</xsl:when>
 					<xsl:otherwise>
