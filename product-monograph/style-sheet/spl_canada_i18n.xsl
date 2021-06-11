@@ -81,7 +81,7 @@
 		<din lang="fr">Numéro d’identification du médicament (DIN)</din>
 		<adminRoute lang="fr">Voie d’administration</adminRoute>
 		<dosageForm lang="fr">Forme posologique fabriquée</dosageForm>
-		<combinationProduct lang="fr">Type de produit combiné</combinationProduct>
+		<composition lang="fr">Composition du produit</composition>
 		<activeIngredients lang="fr">Principe actif</activeIngredients>
 		<activeMoieties lang="fr">Fragment actif</activeMoieties>
 		<inactiveIngredients lang="fr">Ingrédients inactifs</inactiveIngredients>
