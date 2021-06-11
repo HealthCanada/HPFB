@@ -21,7 +21,9 @@
 		<din lang="en">Drug Identification Number (DIN)</din>
 		<adminRoute lang="en">Route of Administration</adminRoute>
 		<dosageForm lang="en">Manufactured Dosage Form</dosageForm>
-		<activeIngredients lang="en">Active Ingredient/Active Moiety</activeIngredients>
+		<composition lang="en">Product Composition</composition>
+		<activeIngredients lang="en">Active Ingredient</activeIngredients>
+		<activeMoieties lang="en">Active Moiety</activeMoieties>
 		<inactiveIngredients lang="en">Inactive Ingredients</inactiveIngredients>
 		<ingredientName lang="en">Ingredient Name</ingredientName>
 		<strength lang="en">Strength</strength>
@@ -79,7 +81,9 @@
 		<din lang="fr">Numéro d’identification du médicament (DIN)</din>
 		<adminRoute lang="fr">Voie d’administration</adminRoute>
 		<dosageForm lang="fr">Forme posologique fabriquée</dosageForm>
-		<activeIngredients lang="fr">Principe actif/Fragment actif</activeIngredients>
+		<combinationProduct lang="fr">Type de produit combiné</combinationProduct>
+		<activeIngredients lang="fr">Principe actif</activeIngredients>
+		<activeMoieties lang="fr">Fragment actif</activeMoieties>
 		<inactiveIngredients lang="fr">Ingrédients inactifs</inactiveIngredients>
 		<ingredientName lang="fr">Nom d’ingrédient</ingredientName>
 		<strength lang="fr">Concentration</strength>

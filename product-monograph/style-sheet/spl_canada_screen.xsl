@@ -59,7 +59,7 @@
 			<xsl:value-of select="v3:formCode[@codeSystem='2.16.840.1.113883.2.20.6.3']/@displayName"/>
 		</xsl:if>
 	</xsl:template>
-	
+		
 	<!-- Navigation Sidebar Menu -->
 	<xsl:template match="v3:structuredBody" mode="sidebar-navigation">
 		<aside class="hide-in-print mb-2" id="left">
@@ -92,9 +92,9 @@
 												<xsl:value-of select="v3:title"/>
 											</a>
 											<xsl:if test="v3:component/v3:section">
-											<ul id="drop-{$unique-section-id}" class="navbar-nav small collapse">
-												<xsl:apply-templates select="v3:component/v3:section" mode="sidebar-navigation"/>
-											</ul>
+												<ul id="drop-{$unique-section-id}" class="navbar-nav small collapse">
+													<xsl:apply-templates select="v3:component/v3:section" mode="sidebar-navigation"/>
+												</ul>
 											</xsl:if>
 										</li>
 									</xsl:otherwise>
@@ -116,8 +116,18 @@
 										</li>
 										<xsl:apply-templates select="v3:subject/v3:manufacturedProduct" mode="sidebar-navigation"/>
 									</ul>
-								</li>								
+								</li>						
 							</xsl:for-each>
+							<!-- Navigation section for Review only, which links to a new section in the content -->
+							<xsl:if test="$show-review-section">
+								<li class="nav-item">
+									<div class="card mr-2 mt-2">
+										<header class="card-header bg-success text-white font-weight-bold">
+											<a href="#review-section" class="nav-link active text-white">REVIEW SECTION</a>										
+										</header>
+									</div>
+								</li>								
+							</xsl:if>
 						</ul>
 					</div>
 				</section>	
@@ -125,22 +135,48 @@
 		</aside>	
 	</xsl:template>
 
+	<!-- Review Section for things like Image Alt Text -->
+	<xsl:template mode="review" match="v3:observationMedia">
+		<div class="card m-2 p-2">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="font-weight-bold"><xsl:value-of select="ancestor::v3:section/v3:title"/></div>
+					<img alt="{v3:text}" src="{$base-uri}{v3:value/v3:reference/@value}"/>						
+				</div>
+				<div class="col-sm-8">
+					<div class="font-weight-bold">
+						<a href="#{ parent::v3:component/preceding-sibling::v3:id/@root }">
+							<xsl:value-of select="parent::v3:component/preceding-sibling::v3:title"/>
+						</a>
+					</div>
+					<br/>
+					Image reference: <xsl:value-of select="v3:value/v3:reference/@value"/><br/>
+					Image alt-text: "<xsl:value-of select="v3:text"/>"
+				</div>
+			</div>
+		</div>
+	</xsl:template>
+	
 	<xsl:template match="v3:component/v3:section" mode="sidebar-navigation">
 		<xsl:variable name="unique-section-id"><xsl:value-of select="v3:id/@root"/></xsl:variable>
 		<li class="nav-item">
 			<a href="#{$unique-section-id}" class="nav-link">
-				<!-- This conditional should never be applied to non-draft SPL documents -->
-				<xsl:if test="not(normalize-space(translate(v3:title, '&#160;', ' ')))">
-					<span style="color:red;">&lt;&lt;MISSING INFORMATION&gt;&gt;</span>
-				</xsl:if>
-				<xsl:value-of select="v3:title"/>				
+				<xsl:choose>
+					<xsl:when test="not(normalize-space(translate(v3:title, '&#160;', ' ')))">
+						<!-- This conditional should never be applied to non-draft SPL documents -->
+						<span style="color:red;">&lt;&lt;MISSING INFORMATION&gt;&gt;</span>								
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="v3:title"/>
+					</xsl:otherwise>
+				</xsl:choose>
 			</a>
 			<xsl:if test="v3:component/v3:section">
 				<ul class="navbar-nav">
 					<xsl:apply-templates select="v3:component/v3:section" mode="sidebar-navigation"/>
 				</ul>
 			</xsl:if>
-		</li>
+		</li>						
 	</xsl:template>
 
 	<xsl:template match="v3:subject/v3:manufacturedProduct" mode="sidebar-navigation">
@@ -190,16 +226,22 @@
 					position: sticky;
 					top: 0;
 				}				
+				
+				a:not([href="#review-section"]).nav-link.active {
+					background-color: #EAEAEA;
+				}
+
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 			</style>
 		</head>
 	</xsl:template>	
 	
-	<xsl:template name="canada-screen-body-footer">
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"><xsl:text> </xsl:text></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"><xsl:text> </xsl:text></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"><xsl:text> </xsl:text></script>
+	<!-- [pmh] type is counterindicated for HTML5 Javascript tags -->
+	<xsl:template name="canada-screen-body-scripts">
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"><xsl:text> </xsl:text></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"><xsl:text> </xsl:text></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"><xsl:text> </xsl:text></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.0.5/stickyfill.min.js"><xsl:text> </xsl:text></script>
 		<script>
 			try {
@@ -207,7 +249,7 @@
 			  Stickyfill.add(elements);
 			} catch (e) {
 			  console.log(e)
-			}			
+			}		
 			
 			/* jump to top of form unscrolls left and right side and then scrolls the header into view */
 			$(document).ready(function(){

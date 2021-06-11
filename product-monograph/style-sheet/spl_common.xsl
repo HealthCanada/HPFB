@@ -774,12 +774,12 @@ token.
 		</xsl:if>
 		<xsl:choose>
 			<xsl:when test="boolean(//v3:observationMedia[@ID=$reference]//v3:text)">
-				<img alt="{//v3:observationMedia[@ID=$reference]//v3:text}" src="{//v3:observationMedia[@ID=$reference]//v3:reference/@value}">
+				<img alt="{//v3:observationMedia[@ID=$reference]//v3:text}" src="{$base-uri}{//v3:observationMedia[@ID=$reference]//v3:reference/@value}">
 					<xsl:apply-templates select="@*"/>
 				</img>
 			</xsl:when>
 			<xsl:when test="not(boolean(//v3:observationMedia[@ID=$reference]//v3:text))">
-				<img alt="Image from Drug Label Content" src="{//v3:observationMedia[@ID=$reference]//v3:reference/@value}">
+				<img alt="Image from Drug Label Content" src="{$base-uri}{//v3:observationMedia[@ID=$reference]//v3:reference/@value}">
 					<xsl:apply-templates select="@*"/>
 				</img>
 			</xsl:when>
@@ -802,12 +802,12 @@ token.
 
 			<xsl:choose>
 				<xsl:when test="boolean(//v3:observationMedia[@ID=$reference]//v3:text)">
-					<img alt="{//v3:observationMedia[@ID=$reference]//v3:text}" src="{//v3:observationMedia[@ID=$reference]//v3:reference/@value}">
+					<img alt="{//v3:observationMedia[@ID=$reference]//v3:text}" src="{$base-uri}{//v3:observationMedia[@ID=$reference]//v3:reference/@value}">
 						<xsl:apply-templates select="@*"/>
 					</img>
 				</xsl:when>
 				<xsl:when test="not(boolean(//v3:observationMedia[@ID=$reference]//v3:text))">
-					<img alt="Image from Drug Label Content" src="{//v3:observationMedia[@ID=$reference]//v3:reference/@value}">
+					<img alt="Image from Drug Label Content" src="{$base-uri}{//v3:observationMedia[@ID=$reference]//v3:reference/@value}">
 						<xsl:apply-templates select="@*"/>
 					</img>
 				</xsl:when>
@@ -925,7 +925,8 @@ token.
 		<xsl:apply-templates mode="subjects" select="@*|node()"/>
 	</xsl:template>
 	<xsl:template mode="subjects" match="v3:section[v3:code/@code ='48780-1'][not(v3:subject/v3:manufacturedProduct)]/v3:text">
-		<table class="contentTablePetite" cellSpacing="0" cellPadding="3" width="100%">
+		<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+		<table class="contentTablePetite fullWidth" cellSpacing="0" cellPadding="3">
 			<tbody>
 				<xsl:call-template name="ProductInfoBasic"/>
 			</tbody>
@@ -934,7 +935,8 @@ token.
 	<xsl:template name="equivalentProductInfo">
 		<tr>
 			<td>
-				<table style="font-size:100%"  width="100%"  cellpadding="3" cellspacing="0" class="contentTablePetite">
+				<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+				<table style="font-size:100%" cellpadding="3" cellspacing="0" class="contentTablePetite fullWidth">
 					<tbody>
 						<tr>
 							<th align="left" class="formHeadingTitle">
@@ -975,7 +977,7 @@ token.
 			 Usually any of these templates are to be invoked in the product entity context, that way we avoid so many navigation choices
 			 to get to role information and additional information it is easier to just step up.
 	-->
-	<!-- Templates for Medication Name have been overridden in spl_canada.xsl -->
+	<!-- Templates for Product Information and Medication Name have been overridden in spl_canada.xsl -->
 	
 	<xsl:template name="ProductInfoIng">		
 		<xsl:if test="v3:ingredient[starts-with(@classCode,'ACTI')]|v3:activeIngredient">
@@ -1025,7 +1027,8 @@ token.
 		<xsl:if test="v3:instanceOfKind[parent::v3:partProduct]">
 			<tr>
 				<td colspan="4">
-					<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
+					<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+					<table cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 						<xsl:apply-templates mode="ldd" select="v3:instanceOfKind"/>
 					</table>
 				</td>
@@ -1036,7 +1039,8 @@ token.
 	<!-- Templates for Active and Inactive Ingredients have been overridden in spl_canada.xsl -->
 	<!-- Templates for Other Ingredients is left here even though it is currently unused -->
 	<xsl:template name="otherIngredients">
-		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
+		<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+		<table cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 			<tr>
 				<td colspan="3" class="formHeadingTitle">
 					<xsl:if test="v3:ingredient[@classCode = 'INGR' or starts-with(@classCode,'ACTI')]">Other </xsl:if>
@@ -1146,7 +1150,7 @@ token.
 <xsl:template name="image">
 	<xsl:param name="path" select="."/>
 	<xsl:if test="string-length($path/v3:value/v3:reference/@value) > 0">
-		<img alt="Image of Product" style="width:100%;" src="{$path/v3:value/v3:reference/@value}"/>
+		<img alt="Image of Product" style="width:100%;" src="{$base-uri}{$path/v3:value/v3:reference/@value}"/>
 	</xsl:if>
 </xsl:template>
 	

@@ -20,6 +20,7 @@
 	<xsl:param name="show-print-toc" select="/.."/>
 	<!-- Whether to show jump to top button, set to 1 to enable and "/.." to turn off -->
 	<xsl:param name="show-jump-to-top" select="/.."/>
+	<xsl:param name="show-review-section" select="/.."/>
 	<xsl:param name="use-wet-boew-headers" select="/.."/>
 	<!-- This is the CSS link put into the output -->
 	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/spl_canada.css</xsl:param>
@@ -36,12 +37,14 @@
 	</xsl:variable>
 	
 	<xsl:output method="html" version="5" doctype-system="about:legacy-compat" encoding="UTF-8" indent="no" />
+<!--	<xsl:output method="html" version="5" encoding="utf-8" indent="yes" /> -->
 	
 	<!-- OVERRIDE FDA STYLES FOR MANUFACTURED PRODUCT DETAILS - SUBJECTS MODE -->	
 	<!-- Override FDA company info section, using Canadian French and English labels -->
 	<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization">	
 		<xsl:if test="(count(./v3:name)>0)">
-			<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite fullWidth">
+			<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+			<table cellpadding="3" cellspacing="0" class="formTableMorePetite fullWidth">
 				<tr>
 					<td colspan="2" class="formHeadingReg">
 						<span class="formHeadingTitle"><xsl:value-of select="$labels/labeler[@lang = $lang]"/> -&#160;</span>
@@ -56,7 +59,8 @@
 
 	<xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization">	
 		<xsl:if test="./v3:name">
-			<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite fullWidth">
+			<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+			<table cellpadding="3" cellspacing="0" class="formTableMorePetite fullWidth">
 				<tr>
 					<td colspan="2" class="formHeadingReg">
 						<span class="formHeadingTitle"><xsl:value-of select="$labels/registrant[@lang = $lang]"/> -&#160;</span>
@@ -97,7 +101,7 @@
 				</xsl:for-each>
 				<xsl:for-each select="v3:telecom/@value[starts-with(.,'mailto:')]">
 					<xsl:value-of select="$labels/partyEmail[@lang = $lang]"/><xsl:text>: </xsl:text>
-					<a>
+st					<a>
 						<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
 						<xsl:value-of select="substring-after(., 'mailto:')"/>
 					</a>
@@ -118,7 +122,8 @@
 	<!-- Note: This template is also used for top level Product Concept which does not have v3:asEquivalentEntity -->
 	<!-- Canada does not currently require equivalent or abstract product concept -->
 	<xsl:template mode="subjects" match="v3:section/v3:subject/v3:manufacturedProduct/*[self::v3:manufacturedProduct[v3:name or v3:formCode] or self::v3:manufacturedMedicine][not(v3:asEquivalentEntity/v3:definingMaterialKind[/v3:document/v3:code/@code = '73815-3'])]|v3:section/v3:subject/v3:identifiedSubstance/v3:identifiedSubstance">
-		<table class="contentTablePetite fullWidth" cellSpacing="0" cellPadding="3" width="100%">
+		<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+		<table class="contentTablePetite fullWidth" cellSpacing="0" cellPadding="3">
 			<tbody>
 				<xsl:call-template name="piMedNames"/>
 				<xsl:apply-templates mode="substance" select="v3:moiety"/>
@@ -138,7 +143,8 @@
 				<xsl:if test="v3:instanceOfKind">
 					<tr>
 						<td colspan="4">
-							<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
+							<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+							<table cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 								<xsl:apply-templates mode="ldd" select="v3:instanceOfKind"/>
 							</table>
 						</td>
@@ -152,7 +158,8 @@
 	<xsl:template name="ProductInfoBasic">
 		<tr>
 			<td>
-				<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
+				<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+				<table cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 					<!-- [pmh WS_PM-028/029] replace the top row with a caption, use th for vertical headers, and remove banding on alternate rows -->
 					<caption class="formHeadingTitle">
 						<xsl:value-of select="$labels/productInfo[@lang = $lang]"/>
@@ -242,30 +249,49 @@
 		</caption>
 	</xsl:template>
 	
-	<!-- Overide FDA Ingredients - this is a helper template to simplify header generation -->
-	<xsl:template name="IngredientHeader">
-		<xsl:param name="title-label">
-			<xsl:value-of select="$labels/activeIngredients[@lang = $lang]"/>
-		</xsl:param>
-		<!-- [pmh WS_PM-028] if we use caption instead of the first header row, we no longer need colspans. -->
-		<xsl:param name="column-count">3</xsl:param>
-		<caption class="formHeadingTitle">
-			<xsl:value-of select="$title-label"/>			
-		</caption>
+	<xsl:template name="ProductInfoIng">		
 		<tr>
-			<th class="formTitle" scope="col">
-				<xsl:value-of select="$labels/ingredientName[@lang = $lang]"/>
-			</th>
-			<xsl:if test="$column-count = '3'">
-				<th class="formTitle" scope="col">
-					<xsl:value-of select="$labels/basisOfStrength[@lang = $lang]"/>
-				</th>
-			</xsl:if>
-			<th class="formTitle" scope="col">
-				<xsl:value-of select="$labels/strength[@lang = $lang]"/>
-			</th>
-		</tr>		
-	</xsl:template>	
+			<td>
+				<table cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
+					<caption class="formHeadingTitle">
+						<xsl:value-of select="$labels/composition[@lang = $lang]"/>
+					</caption>
+					<xsl:if test="v3:ingredient[starts-with(@classCode,'ACTI')]|v3:activeIngredient">
+						<xsl:call-template name="ActiveIngredients"/>
+					</xsl:if>
+					<xsl:if test="v3:ingredient[@classCode = 'IACT']|v3:inactiveIngredient">
+						<xsl:call-template name="InactiveIngredients">
+							<xsl:with-param name="show-strength" select="not(v3:ingredient[starts-with(@classCode,'ACTI')]|v3:activeIngredient)"/>
+						</xsl:call-template>
+					</xsl:if>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<xsl:call-template name="characteristics-old"/>
+			</td>
+		</tr>
+		<xsl:if test="v3:asContent">
+			<tr>
+				<td>
+					<xsl:call-template name="packaging">
+						<xsl:with-param name="path" select="."/>
+					</xsl:call-template>
+				</td>
+			</tr>
+		</xsl:if>
+		<xsl:if test="v3:instanceOfKind[parent::v3:partProduct]">
+			<tr>
+				<td colspan="4">
+					<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+					<table cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
+						<xsl:apply-templates mode="ldd" select="v3:instanceOfKind"/>
+					</table>
+				</td>
+			</tr>
+		</xsl:if>
+	</xsl:template>
 
 	<xsl:template match="@value" mode="format-physical-quantity">
 		<xsl:choose>
@@ -309,99 +335,115 @@
 		
 	<!-- Display the ingredient information (both active and inactive) -->
 	<xsl:template name="ActiveIngredients">
-		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
-			<xsl:call-template name="IngredientHeader"/>
-			<xsl:for-each select="v3:ingredient[starts-with(@classCode, 'ACTI')]|v3:activeIngredient">
-				<tr>
-					<xsl:attribute name="class">
-						<xsl:choose>
-							<xsl:when test="position() mod 2 = 0">formTableRow</xsl:when>
-							<xsl:otherwise>formTableRowAlt</xsl:otherwise>
-						</xsl:choose>
-					</xsl:attribute>
-					<xsl:for-each select="(v3:ingredientSubstance|v3:activeIngredientSubstance)[1]">
-						<td class="formItem">
-							<strong>
-								<xsl:value-of select="v3:code/@displayName"/>
-							</strong>
-							<xsl:text> (</xsl:text>
-							<xsl:for-each select="v3:code/@code">
-								<xsl:value-of select="."/>
-								<xsl:if test="position()!=last()"><xsl:value-of select="$labels/andConnective[@lang = $lang]"/></xsl:if>
-							</xsl:for-each>
-							<xsl:text>) </xsl:text>
-							<xsl:if test="normalize-space(v3:activeMoiety/v3:activeMoiety/v3:code/@displayName)">
-								<xsl:text> (</xsl:text>
-								<xsl:for-each select="v3:activeMoiety/v3:activeMoiety/v3:code">
-									<xsl:value-of select="@displayName"/>
-									<xsl:text> - </xsl:text>
-									<xsl:value-of select="@code"/>
-									<xsl:if test="position()!=last()">, </xsl:if>
-								</xsl:for-each>
-								<xsl:text>) </xsl:text>
-							</xsl:if>
-						</td>
-						<td class="formItem">
-							<xsl:choose>
-								<xsl:when test="../@classCode='ACTIR'">
-									<xsl:apply-templates select="v3:asEquivalentSubstance/v3:definingSubstance/v3:code" mode="active-ingredient-bos"/>
-								</xsl:when>
-								<xsl:when test="../@classCode='ACTIB'">
-									<xsl:apply-templates select="v3:code" mode="active-ingredient-bos"/>
-								</xsl:when>
-								<xsl:when test="../@classCode='ACTIM'">
-									<xsl:apply-templates select="v3:activeMoiety/v3:activeMoiety/v3:code" mode="active-ingredient-bos"/>
-								</xsl:when>
-							</xsl:choose>
-						</td>
-					</xsl:for-each>
+		<tr>
+			<th class="formTitle" scope="col">
+				<xsl:value-of select="$labels/activeIngredients[@lang = $lang]"/>
+			</th>
+			<th class="formTitle" scope="col">
+				<xsl:value-of select="$labels/activeMoieties[@lang = $lang]"/>
+			</th>
+			<th class="formTitle" scope="col">
+				<xsl:value-of select="$labels/basisOfStrength[@lang = $lang]"/>
+			</th>
+			<th class="formTitle" scope="col">
+				<xsl:value-of select="$labels/strength[@lang = $lang]"/>
+			</th>
+		</tr>		
+		
+		<xsl:for-each select="v3:ingredient[starts-with(@classCode, 'ACTI')]|v3:activeIngredient">
+			<tr>
+				<xsl:attribute name="class">
+					<xsl:choose>
+						<xsl:when test="position() mod 2 = 0">formTableRow</xsl:when>
+						<xsl:otherwise>formTableRowAlt</xsl:otherwise>
+					</xsl:choose>
+				</xsl:attribute>
+				<xsl:for-each select="(v3:ingredientSubstance|v3:activeIngredientSubstance)[1]">
 					<td class="formItem">
-						<xsl:apply-templates select="v3:quantity/v3:numerator"/>
-						<xsl:if test="(v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@value)!='1') 
-													or (v3:quantity/v3:denominator/@unit and normalize-space(v3:quantity/v3:denominator/@unit)!='1')"> <xsl:value-of select="$labels/inConnective[@lang = $lang]"/><xsl:value-of select="v3:quantity/v3:denominator/@value"/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/>
-						</xsl:if></xsl:if>
+						<strong>
+							<xsl:value-of select="v3:code/@displayName"/>
+						</strong>
+						<xsl:text> (</xsl:text>
+						<xsl:for-each select="v3:code/@code">
+							<xsl:value-of select="."/>
+							<xsl:if test="position()!=last()"><xsl:value-of select="$labels/andConnective[@lang = $lang]"/></xsl:if>
+						</xsl:for-each>
+						<xsl:text>) </xsl:text>
 					</td>
-				</tr>
-			</xsl:for-each>
-		</table>
+					<td class="formItem">
+						<xsl:if test="normalize-space(v3:activeMoiety/v3:activeMoiety/v3:code/@displayName)">
+							<xsl:for-each select="v3:activeMoiety/v3:activeMoiety/v3:code">
+								<xsl:value-of select="@displayName"/>
+								<xsl:text> (</xsl:text>
+								<xsl:value-of select="@code"/>
+								<xsl:text>) </xsl:text>
+								<xsl:if test="position()!=last()">, </xsl:if>
+							</xsl:for-each>
+						</xsl:if>
+					</td>
+					<td class="formItem">
+						<xsl:choose>
+							<xsl:when test="../@classCode='ACTIR'">
+								<xsl:apply-templates select="v3:asEquivalentSubstance/v3:definingSubstance/v3:code" mode="active-ingredient-bos"/>
+							</xsl:when>
+							<xsl:when test="../@classCode='ACTIB'">
+								<xsl:apply-templates select="v3:code" mode="active-ingredient-bos"/>
+							</xsl:when>
+							<xsl:when test="../@classCode='ACTIM'">
+								<xsl:apply-templates select="v3:activeMoiety/v3:activeMoiety/v3:code" mode="active-ingredient-bos"/>
+							</xsl:when>
+						</xsl:choose>
+					</td>
+				</xsl:for-each>
+				<td class="formItem">
+					<xsl:apply-templates select="v3:quantity/v3:numerator"/>
+					<xsl:if test="(v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@value)!='1') 
+												or (v3:quantity/v3:denominator/@unit and normalize-space(v3:quantity/v3:denominator/@unit)!='1')"> <xsl:value-of select="$labels/inConnective[@lang = $lang]"/><xsl:value-of select="v3:quantity/v3:denominator/@value"/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/>
+					</xsl:if></xsl:if>
+				</td>
+			</tr>
+		</xsl:for-each>
 	</xsl:template>
 
 	<xsl:template name="InactiveIngredients">
-		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
-			<xsl:call-template name="IngredientHeader">
-				<xsl:with-param name="title-label">
-					<xsl:value-of select="$labels/inactiveIngredients[@lang = $lang]"/>					
-				</xsl:with-param>
-				<xsl:with-param name="column-count">2</xsl:with-param>
-			</xsl:call-template>
-			<xsl:for-each select="v3:ingredient[@classCode='IACT']|v3:inactiveIngredient">
-				<tr>
-					<xsl:attribute name="class">
-						<xsl:choose>
-							<xsl:when test="position() mod 2 = 0">formTableRow</xsl:when>
-							<xsl:otherwise>formTableRowAlt</xsl:otherwise>
-						</xsl:choose>
-					</xsl:attribute>
-					<xsl:for-each select="(v3:ingredientSubstance|v3:inactiveIngredientSubstance)[1]">
-						<td class="formItem">
-							<xsl:for-each select="v3:code">
-								<strong><xsl:value-of select="@displayName"/></strong>								
-								<xsl:text> (</xsl:text>
-									<xsl:value-of select="@code"/>
-								<xsl:text>) </xsl:text>
-								<xsl:if test="position()!=last()"><xsl:value-of select="$labels/andConnective[@lang = $lang]"/></xsl:if>
-							</xsl:for-each>
-						</td>
-					</xsl:for-each>
-					<td class="formItem">
-						<xsl:value-of select="v3:quantity/v3:numerator/@value"/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:numerator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:numerator/@unit"/></xsl:if>
-						<xsl:if test="v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@unit)!='1'"> <xsl:value-of select="$labels/inConnective[@lang = $lang]"/><xsl:value-of select="v3:quantity/v3:denominator/@value"
-						/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/>
-							</xsl:if></xsl:if>
+		<xsl:param name="show-strength" select="false()"/>
+		<tr>
+			<th class="formTitle" scope="col" colspan="3">
+				<xsl:value-of select="$labels/inactiveIngredients[@lang = $lang]"/>						
+			</th>
+			<th class="formTitle" scope="col">
+				<xsl:if test="$show-strength">
+					<xsl:value-of select="$labels/strength[@lang = $lang]"/>					
+				</xsl:if>
+			</th>
+		</tr>		
+		<xsl:for-each select="v3:ingredient[@classCode='IACT']|v3:inactiveIngredient">
+			<tr>
+				<xsl:attribute name="class">
+					<xsl:choose>
+						<xsl:when test="position() mod 2 = 0">formTableRow</xsl:when>
+						<xsl:otherwise>formTableRowAlt</xsl:otherwise>
+					</xsl:choose>
+				</xsl:attribute>
+				<xsl:for-each select="(v3:ingredientSubstance|v3:inactiveIngredientSubstance)[1]">
+					<td class="formItem" colspan="3">
+						<xsl:for-each select="v3:code">
+							<strong><xsl:value-of select="@displayName"/></strong>								
+							<xsl:text> (</xsl:text>
+								<xsl:value-of select="@code"/>
+							<xsl:text>) </xsl:text>
+							<xsl:if test="position()!=last()"><xsl:value-of select="$labels/andConnective[@lang = $lang]"/></xsl:if>
+						</xsl:for-each>
 					</td>
-				</tr>
-			</xsl:for-each>
-		</table>
+				</xsl:for-each>
+				<td class="formItem">
+					<xsl:value-of select="v3:quantity/v3:numerator/@value"/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:numerator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:numerator/@unit"/></xsl:if>
+					<xsl:if test="v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@unit)!='1'"> <xsl:value-of select="$labels/inConnective[@lang = $lang]"/><xsl:value-of select="v3:quantity/v3:denominator/@value"
+					/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/>
+						</xsl:if></xsl:if>
+				</td>
+			</tr>
+		</xsl:for-each>
 	</xsl:template>
 
 	<!-- Product Characteristics now use simplified templating -->
@@ -506,9 +548,10 @@
 	</xsl:template>	
 
 	<xsl:template name="characteristics-old">
-		<table class="formTablePetite fullWidth" cellSpacing="0" cellPadding="3" width="100%">
+		<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+		<table class="formTablePetite fullWidth" cellSpacing="0" cellPadding="3">
 			<tbody>
-				<!-- [pmh WS_PM-028] us caption for first table row -->
+				<!-- [pmh WS_PM-028] use caption for first table row -->
 				<caption class="formHeadingTitle">
 					<xsl:value-of select="$labels/productCharacteristics[@lang = $lang]"/>
 				</caption>
@@ -558,7 +601,8 @@
 
 	<xsl:template name="packaging">
 		<xsl:param name="path" select="."/>
-		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
+		<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+		<table cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 			<!-- [pmh WS_PM-028] replace the top row of any product metadata tables with a caption -->
 			<caption class="formHeadingTitle">
 				<xsl:value-of select="$labels/packaging[@lang = $lang]"/>
@@ -673,7 +717,8 @@
 		</xsl:if>
 		<tr>
 			<td>
-				<table width="100%" class="fullWidth" cellspacing="0" cellpadding="5">
+				<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+				<table class="fullWidth" cellspacing="0" cellpadding="5">
 					<!-- [pmh WS_PM-028] use caption instead of the first header row -->
 					<caption class="contentTableTitle">
 						<xsl:value-of select="$labels/part[@lang = $lang]"/> <xsl:value-of select="count(../preceding-sibling::v3:part)+1"/><xsl:value-of select="$labels/ofConnective[@lang = $lang]"/><xsl:value-of select="count(../../v3:part)"/>
@@ -689,7 +734,8 @@
 
 	<xsl:template name="partQuantity">
 		<xsl:param name="path" select="."/>
-		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
+		<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+		<table cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 			<!-- [pmh WS_PM-028] replace the top row of any product metadata tables with a caption -->
 			<caption class="formHeadingTitle"><xsl:value-of select="$labels/partQuantity[@lang = $lang]"/></caption>
 			<tr>
@@ -732,7 +778,8 @@
 		<xsl:if test="../v3:subjectOf/v3:approval|../v3:subjectOf/v3:marketingAct">
 			<tr>
 				<td> 
-					<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
+					<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
+					<table cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
 						<!-- [pmh WS_PM-028] replace the top row of any product metadata tables with a caption -->
 						<caption class="formHeadingTitle">
 							<xsl:value-of select="$labels/marketingInfo[@lang = $lang]"/>
@@ -788,8 +835,9 @@
 			<xsl:for-each select="v3:code">
 				<xsl:attribute name="data-sectionCode"><xsl:value-of select="@code"/></xsl:attribute>
 			</xsl:for-each>
-			
-			<xsl:for-each select="@ID">
+
+			<!-- [pmh] switch @ID for v3:id/@root which is guaranteed to be a GUID to simplify section model in future -->
+			<xsl:for-each select="v3:id/@root">
 				<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
 			</xsl:for-each>
 			
@@ -797,11 +845,11 @@
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode" select="'Section'"/>
 			</xsl:call-template>
-			<xsl:for-each select="v3:id/@root"> <!-- id/@root is guaranteed to be a GUID -->
+<!--			<xsl:for-each select="v3:id/@root">
 				<a name="{.}"><xsl:text> </xsl:text></a>
 			</xsl:for-each>
 			<a name="section-{substring($sectionNumberSequence,2)}"><xsl:text> </xsl:text></a>
-			<p/>
+			<p/> -->
 			<xsl:apply-templates select="v3:title">
 				<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
 				<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
@@ -943,6 +991,17 @@
 								</div>
 							</div>
 						</xsl:for-each>
+						<!-- SCREEN VERSION OF EXTRA SECTION FOR REVIEW ONLY -->
+						<xsl:if test="$show-review-section">
+							<div class="card mb-2 hide-in-print" id="review-section">
+								<header class="card-header bg-success text-white font-weight-bold">REVIEW IMAGE ALT TEXT</header>
+								<div class="px-2 pt-2">This section is used to review the Alt Text associated with image(s) within a Product Monograph.</div>
+								<div id="review">
+									<xsl:if test="not(//v3:observationMedia)">This Product Monograph does not contain images</xsl:if>
+									<xsl:apply-templates select="//v3:observationMedia" mode="review"/>
+								</div>
+							</div>													
+						</xsl:if>
 						<!-- PRINT VERSION OF MANUFACTURED PRODUCT DETAIL will already have a page break after previous section -->
 						<div class="hide-in-screen card spl" id="print-product-details">
 							<h1>
@@ -1053,9 +1112,11 @@
 	<xsl:template mode="mixed" priority="1" match="v3:renderMultiMedia[@referencedObject and (ancestor::v3:paragraph or ancestor::v3:td or ancestor::v3:th)]">
 		<xsl:variable name="reference" select="@referencedObject"/>
 		<!-- see note anchoring and PCR 793 -->
+
+		<!-- [pmh] this does not serve any functional purpose
 		<xsl:if test="@ID">
 			<a name="{@ID}"><xsl:text> </xsl:text></a>
-		</xsl:if>
+		</xsl:if> -->
 
 		<xsl:choose>
 			<xsl:when test="boolean(//v3:observationMedia[@ID=$reference]//v3:text)">
@@ -1074,16 +1135,20 @@
 		<xsl:apply-templates mode="notCentered" select="v3:caption"/>
 	</xsl:template>
 	
-	<!-- TABLE MODEL -->
+	<!-- TABLE MODEL-->
 	<xsl:template match="v3:table">
+		<!-- [pmh] this does not serve any functional purpose
 		<xsl:if test="@ID">
 			<a name="{@ID}"><xsl:text> </xsl:text></a>
-		</xsl:if>
+		</xsl:if> -->
 		<table>
 			<!-- Default to 100% table width if none is specified -->
 			<xsl:if test="not(@width) or @width='100%'">
-				<xsl:attribute name="width">100%</xsl:attribute>
 				<xsl:attribute name="class">fullWidth</xsl:attribute>
+			</xsl:if>
+			<!-- Show table width if specified but not 100% -->
+			<xsl:if test="@width and not(@width='100%')">
+				<xsl:attribute name="width"><xsl:value-of select="@width"/></xsl:attribute>
 			</xsl:if>
 			<!-- Default to thin border if frame is specified as 'border', suitable for Aurora-style tables -->
 			<xsl:if test="@frame='border'">
@@ -1093,7 +1158,7 @@
 			<xsl:if test="@frame='box'">
 				<xsl:attribute name="style">border: 2px solid black;</xsl:attribute>
 			</xsl:if>
-			<xsl:apply-templates select="@*|node()"/>
+			<xsl:apply-templates select="@*[name(.)!='width']|node()"/>
 		</table>
 	</xsl:template>
 	<xsl:template match="v3:tr">
@@ -1259,7 +1324,7 @@
 						</a>					
 					</div>					
 				</xsl:if>
-				<xsl:call-template name="canada-screen-body-footer"/>
+				<xsl:call-template name="canada-screen-body-scripts"/>
 			</body>
 		</html>
 	</xsl:template>
