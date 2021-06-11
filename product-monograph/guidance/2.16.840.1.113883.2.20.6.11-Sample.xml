@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/HealthCanada/HPFB/master/product-monograph/terminology-files/HC_GeneriCode_Codelist.xsl"?>
+<gc:CodeList xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://docs.oasis-open.org/codelist/ns/genericode/1.0/ https://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd" xmlns:gc="https://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:html="https://www.w3.org/1999/xhtml">
+  <Annotation>
+    <Description>
+      <html:p>This is a Health Products and Food Branch (HPFB) maintained code list, encoded in OASIS genericode format.</html:p>
+    </Description>
+    <AppInfo/>
+  </Annotation>
+  <Identification>
+    <ShortName>N/A</ShortName>
+    <LongName>N/A</LongName>
+    <Version>N/A</Version>
+    <CanonicalUri>N/A</CanonicalUri>
+    <CanonicalVersionUri>N/A</CanonicalVersionUri>
+    <LocationUri>N/A</LocationUri>
+    <Agency>
+      <ShortName>HPFB</ShortName>
+      <LongName>Health Products and Food Branch</LongName>
+    </Agency>
+  </Identification>
+  <ColumnSet>
+    <Column Use="required" Id="code">
+      <ShortName>Code</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Use="required" Id="display_name_en">
+      <ShortName>Display Name (EN)</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Use="required" Id="display_name_fr">
+      <ShortName>Display Name (FR)</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Use="required" Id="source">
+      <ShortName>Source</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Use="required" Id="status">
+      <ShortName>Status</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Use="required" Id="last_updated">
+      <ShortName>Last updated</ShortName>
+      <Data Type="string"/>
+    </Column>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="display_name_en">
+        <SimpleValue>YES</SimpleValue>
+      </Value>
+      <Value ColumnRef="display_name_fr">
+        <SimpleValue>OUI</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>Active</SimpleValue>
+      </Value>
+      <Value ColumnRef="last_updated">
+        <SimpleValue>2021-05-24T23:48:17+0000</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="display_name_en">
+        <SimpleValue>NO</SimpleValue>
+      </Value>
+      <Value ColumnRef="display_name_fr">
+        <SimpleValue>NON</SimpleValue>
+      </Value>
+      <Value ColumnRef="source">
+        <SimpleValue>HPFB</SimpleValue>
+      </Value>
+      <Value ColumnRef="status">
+        <SimpleValue>Active</SimpleValue>
+      </Value>
+      <Value ColumnRef="last_updated">
+        <SimpleValue>2021-05-24T23:48:17+0000</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>
