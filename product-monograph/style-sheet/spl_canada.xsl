@@ -845,11 +845,13 @@ st					<a>
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode" select="'Section'"/>
 			</xsl:call-template>
-<!--			<xsl:for-each select="v3:id/@root">
+			
+			<!-- [pmh] @ID is still used for internal links, so it needs to be supported -->
+			<xsl:for-each select="@ID">
 				<a name="{.}"><xsl:text> </xsl:text></a>
 			</xsl:for-each>
 			<a name="section-{substring($sectionNumberSequence,2)}"><xsl:text> </xsl:text></a>
-			<p/> -->
+			
 			<xsl:apply-templates select="v3:title">
 				<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
 				<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
@@ -1113,11 +1115,9 @@ st					<a>
 		<xsl:variable name="reference" select="@referencedObject"/>
 		<!-- see note anchoring and PCR 793 -->
 
-		<!-- [pmh] this does not serve any functional purpose
 		<xsl:if test="@ID">
 			<a name="{@ID}"><xsl:text> </xsl:text></a>
-		</xsl:if> -->
-
+		</xsl:if>
 		<xsl:choose>
 			<xsl:when test="boolean(//v3:observationMedia[@ID=$reference]//v3:text)">
 				<img alt="{//v3:observationMedia[@ID=$reference]//v3:text}" 
@@ -1137,10 +1137,9 @@ st					<a>
 	
 	<!-- TABLE MODEL-->
 	<xsl:template match="v3:table">
-		<!-- [pmh] this does not serve any functional purpose
 		<xsl:if test="@ID">
 			<a name="{@ID}"><xsl:text> </xsl:text></a>
-		</xsl:if> -->
+		</xsl:if>
 		<table>
 			<!-- Default to 100% table width if none is specified -->
 			<xsl:if test="not(@width) or @width='100%'">
