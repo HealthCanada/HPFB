@@ -949,17 +949,10 @@ a.skip-main:focus, a.skip-main:active {
 .title-page-left {
     float: left;
     width: 60%;
+    min-height: 9em;
 }
 .title-page-right {
     margin-left: 40%;
-}
-
-/* Removing any top and bottom table rule for this section only */
-.recent-changes table, 
-.recent-changes th, 
-.recent-changes td {
-	border-top-style: none !important;
-	border-bottom-style: none !important;
 }
 
 /* Image Fix - the FDA breaks out when images are too large */
