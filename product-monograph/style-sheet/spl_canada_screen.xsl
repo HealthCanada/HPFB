@@ -226,10 +226,6 @@
 					position: sticky;
 					top: 0;
 				}				
-				
-				a:not([href="#review-section"]).nav-link.active {
-					background-color: #EAEAEA;
-				}
 
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				

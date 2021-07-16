@@ -990,6 +990,29 @@ img { max-width: 100%; height: auto; }
     margin-bottom: 2ex;
 }
 
+/* Boxed Statements - There is a set of StyleCodes - Boxed, First, and Last - which can be used to put a Boxed Statement 
+ * around one or more consecutive elements - for a single element, just use styleCode="Boxed First Last" */
+.spl .Boxed {
+	text-align: left !important; 
+	padding: 3px 15px;
+	margin: 0px 10px;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+.spl .Boxed.First {
+	padding-top: 15px;
+	margin-top: 10px;
+	border-top: 2px solid black;
+}
+.spl .Boxed.Last {
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid black;
+}
+.spl ul.Boxed {
+	padding-left: 35px;
+}
+
 @media screen {
 
     .bg-aurora-accent1 { background-color: #002D42; }
