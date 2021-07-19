@@ -1009,7 +1009,7 @@ img { max-width: 100%; height: auto; }
 	margin-bottom: 10px;
 	border-bottom: 2px solid black;
 }
-.spl ul.Boxed {
+.spl ul.Boxed, .spl ol.Boxed {
 	padding-left: 35px;
 }
 
