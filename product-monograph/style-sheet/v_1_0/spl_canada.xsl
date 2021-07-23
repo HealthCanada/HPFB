@@ -23,7 +23,7 @@
 	<xsl:param name="show-review-section" select="/.."/>
 	<xsl:param name="use-wet-boew-headers" select="/.."/>
 	<!-- This is the CSS link put into the output -->
-	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/spl_canada.css</xsl:param>
+	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/v_1_0/spl_canada.css</xsl:param>
 	<!-- This is the HTML Document Title -->
 	<xsl:param name="doc-title"><xsl:value-of select="v3:document/v3:title"/></xsl:param>
 	<!-- This is to replace relative image paths with absolute paths -->

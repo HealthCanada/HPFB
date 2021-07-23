@@ -6,7 +6,7 @@
 	exclude-result-prefixes="v3 xsl">
 	<xsl:import href="spl_canada.xsl"/>
 
-	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/spl_canada.css</xsl:param>
+	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/v_1_0/spl_canada.css</xsl:param>
 	<xsl:param name="alt-lang-docid">alternate-language-document</xsl:param>
 	
 	<xsl:template match="v3:document" mode="html-head">
