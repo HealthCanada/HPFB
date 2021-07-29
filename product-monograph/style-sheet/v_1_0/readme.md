@@ -1,4 +1,6 @@
-# 1. Manifest
+# XML Product Monograph Stylesheets - Version 1.0
+
+## 1. Manifest
 
 spl_canada.xsl  
 spl_canada_screen.xsl  
@@ -11,7 +13,7 @@ on some common templates that were inherited from the FDA. The spl_canada.xsl st
 number of templates which override the corresponding templates in the FDA XSL. 
 The other two stylesheets provide templates for onscreen navigation and bilingual language support.
 
-# 2. Change Log
+## 2. Change Log
 
 2021-01-08 - Removed Combination Product Type Characteristic; renamed Packaging Availability, removed Packaging Cancellation Date and Product Approval Status  
 2021-01-22 - Added optional parameter base-uri to support passing in absolute image base uri for server-side rendering; use section.root.id for subsection navigation  
@@ -27,11 +29,11 @@ The other two stylesheets provide templates for onscreen navigation and bilingua
 2021-07-09 - Removed special table logic for Recent Major Label Changes section, which previously had suppressed table styles  
 2021-07-16 - Added styles for styleCodes Boxed, First, and Last to support Boxed Statement around consecutive SPL text elements (paragraph and list)  
 
-# 3. This should be the only processing instruction referenced in the SPM XML:
+## 3. This should be the only processing instruction referenced in the SPM XML:
 
 <?xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/HealthCanada/HPFB/master/product-monograph/stylesheet/v_1_1/spl_canada.xsl"?>
 
-# 4. Bootstrap, Web Navigation and Responsive Design
+## 4. Bootstrap, Web Navigation and Responsive Design
 
 We use our own styles, in spl_canada.css, and the Bootstrap Bundle contained styles and JavaScript. The Bootstrap 4 
 Bundle contains the Popper library, and we are also using the JQuery Slim version and StickyFill polyfill library.
@@ -50,13 +52,13 @@ currently does not extend below the second level of sections.
 In the current implementation, the width of the sidebar navigation has been fixed to 400px to
 resolve an issue discovered with accordion resizing. 
 
-# 5. Internationalization, Labels and Local Date Formats
+## 5. Internationalization, Labels and Local Date Formats
 
 Internationalization and local date formatting maintained in the spl_canada_i18n.xsl transform file.
 Where it is possible, Display Names should be used. Where static labels are required, these need to
 be internationalized. These are necessary for any fields that are Required but not Mandatory.
 
-# 6. Key Links
+## 6. Key Links
 
 XSL: https://healthcanada.github.io/HPFB/product-monograph/style-sheet/v_1_0/spl_canada.xsl  
 (or https://raw.githubusercontent.com/HealthCanada/HPFB/master/product-monograph/v_1_0/style-sheet/spl_canada.xsl)  
