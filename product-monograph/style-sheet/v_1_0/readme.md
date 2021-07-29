@@ -8,9 +8,7 @@ spl_canada_i18n.xsl
 spl_common.xsl  
 spl_canada.css  
  
-The spl_canada.xsl stylesheet references its siblings, spl_canada_screen.xsl, and spl_canada_i18n.xsl, and it also relies 
-on some common templates that were inherited from the FDA. The spl_canada.xsl stylesheet contains the root template and a 
-number of templates which override the corresponding templates in the FDA XSL. 
+The spl_canada.xsl stylesheet references its siblings, spl_canada_screen.xsl, and spl_canada_i18n.xsl, and it also relies on some common templates that were inherited from the FDA. The spl_canada.xsl stylesheet contains the root template and a number of templates which override the corresponding templates in the FDA XSL. 
 The other two stylesheets provide templates for onscreen navigation and bilingual language support.
 
 ## 2. Change Log
@@ -35,28 +33,15 @@ The other two stylesheets provide templates for onscreen navigation and bilingua
 
 ## 4. Bootstrap, Web Navigation and Responsive Design
 
-We use our own styles, in spl_canada.css, and the Bootstrap Bundle contained styles and JavaScript. The Bootstrap 4 
-Bundle contains the Popper library, and we are also using the JQuery Slim version and StickyFill polyfill library.
+We use our own styles, in spl_canada.css, and the Bootstrap Bundle contained styles and JavaScript. The Bootstrap 4 Bundle contains the Popper library, and we are also using the JQuery Slim version and StickyFill polyfill library. Bootstrap 4 provides exceptional modern browser support, and aligns closely with the Aurora Design Guide, whereas Bootstrap 3 more closely aligns with current wet-boew guidance.
 
-Bootstrap 4 provides exceptional modern browser support, and aligns closely with the Aurora Design Guide, 
-whereas Bootstrap 3 more closely aligns with current wet-boew guidance.
+Sidebar navigation is hidden for small screen sizes and can be used on larger screens. Sidebar navigation and accordion collapsing is essentially the same thing: clicking a menu item and the corresponding accordion header have the same effect. In both cases, the behaviour is to show or hide a section of content. In the current implementation, the width of the sidebar navigation has been fixed to 400px to resolve an issue discovered with accordion resizing. 
 
-Sidebar navigation is hidden for small screen sizes and can be used on larger screens. Sidebar
-navigation and accordion collapsing is essentially the same thing: clicking a menu item and
-the corresponding accordion header have the same effect. In both cases, the behaviour is to show
-or hide a section of content.
-
-Bootstrap Scrollspy is a library which synchronizes scrolling and navigation. The navigation menu 
-currently does not extend below the second level of sections.
-
-In the current implementation, the width of the sidebar navigation has been fixed to 400px to
-resolve an issue discovered with accordion resizing. 
+Bootstrap Scrollspy is a library which synchronizes scrolling and navigation. The navigation menu currently does not extend below the second level of sections.
 
 ## 5. Internationalization, Labels and Local Date Formats
 
-Internationalization and local date formatting maintained in the spl_canada_i18n.xsl transform file.
-Where it is possible, Display Names should be used. Where static labels are required, these need to
-be internationalized. These are necessary for any fields that are Required but not Mandatory.
+Internationalization and local date formatting maintained in the spl_canada_i18n.xsl transform file. Where it is possible, Display Names should be used. Where static labels are required, these need to be internationalized. These are necessary for any fields that are Required but not Mandatory.
 
 ## 6. Key Links
 
