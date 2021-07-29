@@ -11,7 +11,7 @@ spl_canada.css
 The spl_canada.xsl stylesheet references its siblings, spl_canada_screen.xsl, and spl_canada_i18n.xsl, and it also relies on some common templates that were inherited from the FDA. The spl_canada.xsl stylesheet contains the root template and a number of templates which override the corresponding templates in the FDA XSL. 
 The other two stylesheets provide templates for onscreen navigation and bilingual language support.
 
-## 2. Change Log
+## 2. Revision Log
 
 2021-01-08 - Removed Combination Product Type Characteristic; renamed Packaging Availability, removed Packaging Cancellation Date and Product Approval Status  
 2021-01-22 - Added optional parameter base-uri to support passing in absolute image base uri for server-side rendering; use section.root.id for subsection navigation  
@@ -27,7 +27,7 @@ The other two stylesheets provide templates for onscreen navigation and bilingua
 2021-07-09 - Removed special table logic for Recent Major Label Changes section, which previously had suppressed table styles  
 2021-07-16 - Added styles for styleCodes Boxed, First, and Last to support Boxed Statement around consecutive SPL text elements (paragraph and list)  
 
-## 3. This should be the only processing instruction referenced in the SPM XML:
+## 3. This should be the only processing instruction referenced in the XML PM:
 
     <?xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/HealthCanada/HPFB/master/product-monograph/stylesheet/v_1_1/spl_canada.xsl"?>
 
