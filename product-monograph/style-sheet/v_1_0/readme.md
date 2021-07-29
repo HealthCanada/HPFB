@@ -31,7 +31,9 @@ The other two stylesheets provide templates for onscreen navigation and bilingua
 
 ## 3. This should be the only processing instruction referenced in the SPM XML:
 
+```xml
 <?xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/HealthCanada/HPFB/master/product-monograph/stylesheet/v_1_1/spl_canada.xsl"?>
+.```
 
 ## 4. Bootstrap, Web Navigation and Responsive Design
 
