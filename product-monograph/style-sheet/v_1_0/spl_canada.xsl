@@ -1134,7 +1134,31 @@ st					<a>
 		</xsl:choose>
 		<xsl:apply-templates mode="notCentered" select="v3:caption"/>
 	</xsl:template>
-	
+
+	<!-- PARAGRAPH MODEL -->
+	<xsl:template match="v3:paragraph">
+		<p>
+			<xsl:call-template name="styleCodeAttr">
+				<xsl:with-param name="styleCode" select="@styleCode"/>
+				<xsl:with-param name="additionalStyleCode">
+					<!-- [pmh] this interdered with Boxed Statement StyleCodes and serves no purpose
+					<xsl:if test="count(preceding-sibling::v3:paragraph)=0">
+						<xsl:text>First</xsl:text>
+					</xsl:if> -->
+				</xsl:with-param>
+			</xsl:call-template>
+			<xsl:call-template name="additionalStyleAttr"/> 
+			<xsl:apply-templates select="@*[not(local-name(.)='styleCode')]"/>
+			<!-- see note anchoring and PCR 793 -->
+			<!-- GS: moved this to after the styleCode and othe attribute handling -->
+			<xsl:if test="@ID">
+				<a name="{@ID}"/>
+			</xsl:if>
+			<xsl:apply-templates select="v3:caption"/>
+			<xsl:apply-templates mode="mixed" select="node()[not(self::v3:caption)]"/>
+		</p>
+	</xsl:template>
+
 	<!-- TABLE MODEL-->
 	<xsl:template match="v3:table">
 		<xsl:if test="@ID">

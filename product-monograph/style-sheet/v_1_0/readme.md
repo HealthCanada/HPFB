@@ -26,6 +26,7 @@ The other two stylesheets provide templates for onscreen navigation and bilingua
 2021-06-11 - Product Composition Changes to consolidate Ingredients into a single table within the Product Metadata  
 2021-07-09 - Removed special table logic for Recent Major Label Changes section, which previously had suppressed table styles  
 2021-07-16 - Added styles for styleCodes Boxed, First, and Last to support Boxed Statement around consecutive SPL text elements (paragraph and list)  
+2021-08-09 - Removed rule for First Paragraph StyleCode, which interferes with Boxed Statement  
 
 ## 3. This should be the only processing instruction referenced in the XML PM:
 
