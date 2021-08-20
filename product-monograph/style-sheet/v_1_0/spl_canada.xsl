@@ -1277,7 +1277,16 @@ st					<a>
 
 	<!-- TABLE FOOTNOTES - MODIFIED FOR ACCESSIBILITY -->
 	<xsl:template match="v3:tfoot" name="flushtablefootnotes">
-		<xsl:variable name="allspan" select="count(ancestor::v3:table[1]/v3:colgroup/v3:col|ancestor::v3:table[1]/v3:col)"/>
+		<xsl:variable name="allspan">
+			<xsl:choose>
+				<xsl:when test="ancestor::v3:table[1]/v3:colgroup/@span">
+					<xsl:value-of select="ancestor::v3:table[1]/v3:colgroup/@span"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="count(ancestor::v3:table[1]/v3:colgroup/v3:col|ancestor::v3:table[1]/v3:col)"/>
+				</xsl:otherwise>
+			</xsl:choose>			
+		</xsl:variable>
 		<xsl:if test="self::v3:tfoot or ancestor::v3:table[1]//v3:footnote">
 			<tfoot>
 				<xsl:if test="self::v3:tfoot">
@@ -1302,16 +1311,34 @@ st					<a>
 			<xsl:call-template name="footnoteMark"/>
 		</xsl:variable>
 		<xsl:variable name="globalnumber" select="count(preceding::v3:footnote)+1"/>
+		<xsl:variable name="number">
+			<xsl:number level="any" from="v3:table" count="v3:footnote"/>
+		</xsl:variable>
 		<dt>
 			<a name="footnote-{$globalnumber}" href="#footnote-reference-{$globalnumber}" aria-describedby="footnote-label">
-				<xsl:value-of select="$mark"/>
+				<xsl:value-of select="$number"/>
 			</a>
 		</dt>
 		<dd>
 			<xsl:apply-templates mode="mixed" select="node()"/>
 		</dd>
 	</xsl:template>	
-
+	<xsl:template match="v3:footnote[name(..) != 'text']">
+		<xsl:param name="isTableOfContent2"/>
+		<xsl:if test="$isTableOfContent2!='yes'">
+			<xsl:variable name="mark">
+				<xsl:call-template name="footnoteMark"/>
+			</xsl:variable>
+			<xsl:variable name="globalnumber" select="count(preceding::v3:footnote)+1"/>
+			<xsl:variable name="number">
+				<xsl:number level="any" from="v3:table" count="v3:footnote"/>
+			</xsl:variable>
+			<a name="footnote-reference-{$globalnumber}" href="#footnote-{$globalnumber}" class="Sup">
+				<xsl:value-of select="$number"/>
+			</a>
+		</xsl:if>
+	</xsl:template>
+	
 	<!-- MAIN HTML PAGE TEMPLATING -->
 	<xsl:template match="/v3:document" priority="1">
 		<html>
