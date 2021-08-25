@@ -1,4 +1,3 @@
-/* WCAG Accessibility - Skip to Main - pop out when this gets tabbed - move to css when ready */
 a.skip-main {
 	left:-999px;
 	position:absolute;
