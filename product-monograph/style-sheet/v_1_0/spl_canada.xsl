@@ -1306,10 +1306,30 @@ st					<a>
 			</tfoot>
 		</xsl:if>
 	</xsl:template>
+	
+	<!-- Override the original in spl_common.spl to always show numbers, rather than footnote marks
+		 This is a change from the FDA templating, which always used footnote marks. -->
+	<xsl:template name="footnoteMark">
+		<xsl:param name="target" select="."/>
+		<xsl:for-each select="$target[1]">
+			<xsl:choose>
+				<xsl:when test="ancestor::v3:title[parent::v3:document]">
+					<xsl:variable name="number" select="count(preceding::v3:footnote)+1"/>
+					<xsl:value-of select="$number"/>
+				</xsl:when>
+				<xsl:when test="ancestor::v3:table">
+					<xsl:variable name="number">
+						<xsl:number level="any" from="v3:table" count="v3:footnote"/>
+					</xsl:variable>
+					<xsl:value-of select="$number"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="count(preceding::v3:footnote[not(ancestor::v3:table or ancestor::v3:title[parent::v3:document])])+1"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:for-each>
+	</xsl:template>
 	<xsl:template mode="footnote" match="v3:footnote">
-		<xsl:variable name="mark">
-			<xsl:call-template name="footnoteMark"/>
-		</xsl:variable>
 		<xsl:variable name="globalnumber" select="count(preceding::v3:footnote)+1"/>
 		<xsl:variable name="number">
 			<xsl:number level="any" from="v3:table" count="v3:footnote"/>
@@ -1326,9 +1346,6 @@ st					<a>
 	<xsl:template match="v3:footnote[name(..) != 'text']">
 		<xsl:param name="isTableOfContent2"/>
 		<xsl:if test="$isTableOfContent2!='yes'">
-			<xsl:variable name="mark">
-				<xsl:call-template name="footnoteMark"/>
-			</xsl:variable>
 			<xsl:variable name="globalnumber" select="count(preceding::v3:footnote)+1"/>
 			<xsl:variable name="number">
 				<xsl:number level="any" from="v3:table" count="v3:footnote"/>
