@@ -323,7 +323,7 @@ token.
 	<xsl:template name="footnoteMark">
 		<xsl:param name="target" select="."/>
 		<xsl:for-each select="$target[1]">
-		<xsl:choose>
+			<xsl:choose>
 				<xsl:when test="ancestor::v3:title[parent::v3:document]">
 					<!-- innermost table - FIXME: does not work for the constructed tables -->
 					<xsl:variable name="number" select="count(preceding::v3:footnote)+1"/>
@@ -400,8 +400,22 @@ token.
 	<xsl:template mode="footnote" match="/|node()">
 		<xsl:apply-templates mode="footnote" select="node()"/>			
 	</xsl:template>
+	<xsl:template mode="footnote" match="v3:footnote">
+		<xsl:variable name="mark">
+			<xsl:call-template name="footnoteMark"/>
+		</xsl:variable>
+		<xsl:variable name="globalnumber" select="count(preceding::v3:footnote)+1"/>
+		<dt>
+			<a name="footnote-{$globalnumber}" href="#footnote-reference-{$globalnumber}">
+				<xsl:value-of select="$mark"/>
+			</a>
+		</dt>
+		<dd>
+			<xsl:apply-templates mode="mixed" select="node()"/>
+		</dd>
+	</xsl:template>
 	<xsl:template mode="footnote" match="v3:section|v3:table"/>
-
+	
 	<!-- CROSS REFERENCE linkHtml -->
 	<xsl:template name="reference" mode="mixed" match="v3:linkHtml[@href]">
 		<xsl:param name="current" select="current()"/>

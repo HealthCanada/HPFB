@@ -400,6 +400,20 @@ token.
 	<xsl:template mode="footnote" match="/|node()">
 		<xsl:apply-templates mode="footnote" select="node()"/>			
 	</xsl:template>
+	<xsl:template mode="footnote" match="v3:footnote">
+		<xsl:variable name="mark">
+			<xsl:call-template name="footnoteMark"/>
+		</xsl:variable>
+		<xsl:variable name="globalnumber" select="count(preceding::v3:footnote)+1"/>
+		<dt>
+			<a name="footnote-{$globalnumber}" href="#footnote-reference-{$globalnumber}">
+				<xsl:value-of select="$mark"/>
+			</a>
+		</dt>
+		<dd>
+			<xsl:apply-templates mode="mixed" select="node()"/>
+		</dd>
+	</xsl:template>
 	<xsl:template mode="footnote" match="v3:section|v3:table"/>
 
 	<!-- CROSS REFERENCE linkHtml -->

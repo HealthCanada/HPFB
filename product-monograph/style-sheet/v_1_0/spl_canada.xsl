@@ -1308,16 +1308,19 @@ st					<a>
 	</xsl:template>
 	
 	<!-- Override the original in spl_common.spl to always show numbers, rather than footnote marks
-		 This is a change from the FDA templating, which always used footnote marks. -->
+		 This is a change from the FDA templating, which always used footnote marks.
+		 was: <xsl:value-of select="substring($footnoteMarks,$number,1)"/> -->
 	<xsl:template name="footnoteMark">
 		<xsl:param name="target" select="."/>
 		<xsl:for-each select="$target[1]">
 			<xsl:choose>
 				<xsl:when test="ancestor::v3:title[parent::v3:document]">
+					<!-- innermost table - FIXME: does not work for the constructed tables -->
 					<xsl:variable name="number" select="count(preceding::v3:footnote)+1"/>
 					<xsl:value-of select="$number"/>
 				</xsl:when>
 				<xsl:when test="ancestor::v3:table">
+					<!-- innermost table - FIXME: does not work for the constructed tables -->
 					<xsl:variable name="number">
 						<xsl:number level="any" from="v3:table" count="v3:footnote"/>
 					</xsl:variable>
@@ -1328,32 +1331,6 @@ st					<a>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:for-each>
-	</xsl:template>
-	<xsl:template mode="footnote" match="v3:footnote">
-		<xsl:variable name="globalnumber" select="count(preceding::v3:footnote)+1"/>
-		<xsl:variable name="number">
-			<xsl:number level="any" from="v3:table" count="v3:footnote"/>
-		</xsl:variable>
-		<dt>
-			<a name="footnote-{$globalnumber}" href="#footnote-reference-{$globalnumber}" aria-describedby="footnote-label">
-				<xsl:value-of select="$number"/>
-			</a>
-		</dt>
-		<dd>
-			<xsl:apply-templates mode="mixed" select="node()"/>
-		</dd>
-	</xsl:template>	
-	<xsl:template match="v3:footnote[name(..) != 'text']">
-		<xsl:param name="isTableOfContent2"/>
-		<xsl:if test="$isTableOfContent2!='yes'">
-			<xsl:variable name="globalnumber" select="count(preceding::v3:footnote)+1"/>
-			<xsl:variable name="number">
-				<xsl:number level="any" from="v3:table" count="v3:footnote"/>
-			</xsl:variable>
-			<a name="footnote-reference-{$globalnumber}" href="#footnote-{$globalnumber}" class="Sup">
-				<xsl:value-of select="$number"/>
-			</a>
-		</xsl:if>
 	</xsl:template>
 	
 	<!-- MAIN HTML PAGE TEMPLATING -->

@@ -28,6 +28,7 @@ The other two stylesheets provide templates for onscreen navigation and bilingua
 2021-07-16 - Added styles for styleCodes Boxed, First, and Last to support Boxed Statement around consecutive SPL text elements (paragraph and list)  
 2021-08-09 - Removed rule for First Paragraph StyleCode, which interferes with Boxed Statement  
 2021-08-20 - Use local numbers instead of footnote marks, and change styles to allow space for doucle digits  
+2021-09-10 - Resolved issue with footnote numbers, override footnote marks template to always use local numbers instead  
 
 ## 3. This should be the only processing instruction referenced in the XML PM:
 
@@ -50,4 +51,5 @@ Internationalization and local date formatting maintained in the spl_canada_i18n
 XSL: https://healthcanada.github.io/HPFB/product-monograph/style-sheet/v_1_0/spl_canada.xsl  
 (or https://raw.githubusercontent.com/HealthCanada/HPFB/master/product-monograph/v_1_0/style-sheet/spl_canada.xsl)  
 CSS: https://healthcanada.github.io/HPFB/product-monograph/style-sheet/v_1_0/spl_canada.css  
+CSS: https://health-products.canada.ca/product-monograph/style-sheet/v_1_0/spl_canada.css  
 XSD: https://raw.githubusercontent.com/HealthCanada/HPFB/master/product-monograph/schema/SPL.xsd  
