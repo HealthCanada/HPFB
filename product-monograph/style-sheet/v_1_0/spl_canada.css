@@ -1012,6 +1012,12 @@ img { max-width: 100%; height: auto; }
 	padding-left: 35px;
 }
 
+.spl .Table-secondary {
+	background-color:#e2e3e5;
+	color:#000;
+	border-color:#cbccce
+}
+
 @media screen {
 
     .bg-aurora-accent1 { background-color: #002D42; }

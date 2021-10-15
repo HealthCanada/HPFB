@@ -210,11 +210,6 @@
 				<xsl:attribute name="content"><xsl:value-of select="v3:effectiveTime/@value"/></xsl:attribute>
 			</meta>
 			<title><xsl:value-of select="$doc-title"/></title>
-			<!-- [pmh] WS_PM-020/032/033 for accessibility - can we use the health canada styles for accordions and Skip to Main? -->
-			<xsl:if test="$use-wet-boew-headers">
-				<link media="screen" rel="stylesheet" href="http://canada.ca/etc/designs/canada/wet-boew/css/wet-boew.min.css"><xsl:text> </xsl:text></link>
-				<link media="screen" rel="stylesheet" href="http://canada.ca/etc/designs/canada/wet-boew/css/theme.min.css"><xsl:text> </xsl:text></link>							
-			</xsl:if>
 			<link href="http://canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon"><xsl:text> </xsl:text></link>
 			<link media="screen" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><xsl:text> </xsl:text></link>
 			<link media="screen" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><xsl:text> </xsl:text></link>
@@ -225,7 +220,7 @@
 					position: -webkit-sticky;
 					position: sticky;
 					top: 0;
-				}				
+				}
 
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				

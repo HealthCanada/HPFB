@@ -21,9 +21,8 @@
 	<!-- Whether to show jump to top button, set to 1 to enable and "/.." to turn off -->
 	<xsl:param name="show-jump-to-top" select="/.."/>
 	<xsl:param name="show-review-section" select="/.."/>
-	<xsl:param name="use-wet-boew-headers" select="/.."/>
 	<!-- This is the CSS link put into the output -->
-	<xsl:param name="css">https://healthcanada.github.io/HPFB/product-monograph/style-sheet/v_1_0/spl_canada.css</xsl:param>
+	<xsl:param name="css">https://health-products.canada.ca/product-monograph/style-sheet/v_1_0/spl_canada.css</xsl:param>
 	<!-- This is the HTML Document Title -->
 	<xsl:param name="doc-title"><xsl:value-of select="v3:document/v3:title"/></xsl:param>
 	<!-- This is to replace relative image paths with absolute paths -->
@@ -37,7 +36,6 @@
 	</xsl:variable>
 	
 	<xsl:output method="html" version="5" doctype-system="about:legacy-compat" encoding="UTF-8" indent="no" />
-<!--	<xsl:output method="html" version="5" encoding="utf-8" indent="yes" /> -->
 	
 	<!-- OVERRIDE FDA STYLES FOR MANUFACTURED PRODUCT DETAILS - SUBJECTS MODE -->	
 	<!-- Override FDA company info section, using Canadian French and English labels -->
@@ -551,7 +549,6 @@ st					<a>
 		<!-- [pmh] removed obsolete width="100%", replaced with fullWidth class -->
 		<table class="formTablePetite fullWidth" cellSpacing="0" cellPadding="3">
 			<tbody>
-				<!-- [pmh WS_PM-028] use caption for first table row -->
 				<caption class="formHeadingTitle">
 					<xsl:value-of select="$labels/productCharacteristics[@lang = $lang]"/>
 				</caption>
@@ -870,7 +867,7 @@ st					<a>
 			<xsl:attribute name="style">margin-left:-0.5em; padding-left:0.5em; border-left:1px solid;</xsl:attribute>
 		</xsl:if>
 	</xsl:template>
-
+	
 	<!-- this template is used on the Title Page to show Control Number on a single line -->
 	<xsl:template mode="inline-title" match="v3:section">
 		<div class="Section">
@@ -1141,7 +1138,7 @@ st					<a>
 			<xsl:call-template name="styleCodeAttr">
 				<xsl:with-param name="styleCode" select="@styleCode"/>
 				<xsl:with-param name="additionalStyleCode">
-					<!-- [pmh] this interdered with Boxed Statement StyleCodes and serves no purpose
+					<!-- [pmh] this interfered with Boxed Statement StyleCodes and serves no purpose
 					<xsl:if test="count(preceding-sibling::v3:paragraph)=0">
 						<xsl:text>First</xsl:text>
 					</xsl:if> -->
@@ -1338,17 +1335,8 @@ st					<a>
 		<html>
 			<xsl:apply-templates select="." mode="html-head"/>
 			<body data-spy="scroll" data-target="#navigation-sidebar" data-offset="1">
-				<!-- [pmh] WS_PM-032/033 - I think we should target using the wet-boew skip to main, but we need to resolve some style issues first, translation is good -->
-				<xsl:choose>
-					<xsl:when test="$use-wet-boew-headers">
-						<div class="global-header"><nav><ul id="wb-tphp">
-							<li class="wb-slc"><a class="wb-sl" href="#wb-cont"><xsl:value-of select="$labels/skipToMainContent[@lang = $lang]"/></a></li>
-						</ul></nav></div>
-					</xsl:when>
-					<xsl:otherwise>
-						<a class="skip-main" href="#main"><xsl:value-of select="$labels/skipToMainContent[@lang = $lang]"/></a>				
-					</xsl:otherwise>
-				</xsl:choose>
+				<!-- [pmh] WS_PM-032/033 - this is a placeholder for sponsors. -->
+				<a class="skip-main" href="#main"><xsl:value-of select="$labels/skipToMainContent[@lang = $lang]"/></a>				
 					
 				<header class="bg-aurora-accent1 hide-in-print mb-2" id="banner">
 					<div class="text-white text-center p-2 font-weight-bold"><xsl:copy-of select="v3:title/node()"/></div>
