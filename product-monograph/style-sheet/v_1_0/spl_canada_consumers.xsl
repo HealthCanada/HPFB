@@ -6,7 +6,7 @@
 	<xsl:template match="/v3:document" priority="1">
 		<main property="mainContentOfPage" class="container">
 			<h2 class="wb-cont">
-				Company: <xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:name"/>
+				<xsl:value-of select="$labels/company[@lang = $lang]"/>: <xsl:value-of select="v3:author/v3:assignedEntity/v3:representedOrganization/v3:name"/>
 			</h2>
 			<table class="table table-hover table-bordered table-responsive">
 				<xsl:call-template name="din-table-header"/>
@@ -22,7 +22,7 @@
 			<div class="clear" style="clear:both;"</div>
 			<hr/> -->
 			
-			<h3>Patient Medication Information</h3>
+			<h3><xsl:value-of select="$labels/patientMedicationInformation[@lang = $lang]"/></h3>
 			<p>
 				<xsl:value-of select="$labels/consumerBoilerplate[@lang = $lang]"/>
 			</p><!-- SUB-HEADER START | DEBUT DU SOUS EN-TETE -->

@@ -10,6 +10,7 @@ spl_canada.css
  
 The spl_canada.xsl stylesheet references its siblings, spl_canada_screen.xsl, and spl_canada_i18n.xsl, and it also relies on some common templates that were inherited from the FDA. The spl_canada.xsl stylesheet contains the root template and a number of templates which override the corresponding templates in the FDA XSL. 
 The other two stylesheets provide templates for onscreen navigation and bilingual language support.
+Additional stylesheets for Consumer and Product Monograph views support rendering during publication.
 
 ## 2. Revision Log
 
@@ -28,7 +29,8 @@ The other two stylesheets provide templates for onscreen navigation and bilingua
 2021-07-16 - Added styles for styleCodes Boxed, First, and Last to support Boxed Statement around consecutive SPL text elements (paragraph and list)  
 2021-08-09 - Removed rule for First Paragraph StyleCode, which interferes with Boxed Statement  
 2021-08-20 - Use local numbers instead of footnote marks, and change styles to allow space for doucle digits  
-2021-09-10 - Resolved issue with footnote numbers, override footnote marks template to always use local numbers instead  
+2021-09-10 - Resolved issue with footnote numbers, override footnote marks template to always use local numbers instead 
+2021-10-29 - Support for multiple Companies and Addresses on PM Title Page; table-shading using styleCode=table-secondary  
 
 ## 3. This should be the only processing instruction referenced in the XML PM:
 

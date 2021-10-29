@@ -61,7 +61,9 @@
 		<ofConnective lang="en">&#160;of&#160;</ofConnective>
 		<toConnective lang="en">&#160;-&#160;</toConnective>
 		<skipToMainContent lang="en">Skip to main content</skipToMainContent>
-
+		<patientMedicationInformation lang="en">Patient Medication Information</patientMedicationInformation>
+		<company lang="en">Company</company>
+		
 		<!-- French Labels -->
 		<tableOfContents lang="fr">TABLE DES MATIÈRES</tableOfContents>
 		<tocBoilerplate lang="fr">Les sections ou sous-sections qui ne sont pas pertinentes au moment de l’autorisation ne sont pas énumérées.</tocBoilerplate>
@@ -121,6 +123,8 @@
 		<ofConnective lang="fr">&#160;de&#160;</ofConnective>
 		<toConnective lang="fr">&#160;-&#160;</toConnective>
 		<skipToMainContent lang="fr">Passer au contenu principal</skipToMainContent>
+		<patientMedicationInformation lang="fr">Renseignements à l'intention des consommateurs</patientMedicationInformation>
+		<company lang="fr">Entreprise</company>
 	</my:texts>
 	<xsl:variable name="labels" select="document('')/*/my:texts"/>
 		

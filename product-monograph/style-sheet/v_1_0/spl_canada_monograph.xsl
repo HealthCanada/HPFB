@@ -41,24 +41,23 @@
                                         </header>
                                         
                                         <!-- Extra hidden Title Page heading for semantic accessibility purposes -->
-                                        <h1 class="hide-in-screen hide-offscreen">
-                                            <xsl:value-of select="v3:title"/>
-                                        </h1>
+                                        <h1 class="hide-in-screen hide-offscreen"><xsl:value-of select="v3:title"/></h1>
                                         <div class="spl title-page title-page-row">
                                             <xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.1']/v3:text"/>
                                         </div>
                                         <div class="spl title-page-row title-page-rule-top">
                                             <div class="title-page-left">
-                                                <xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.2']"/>
+                                                <xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text"/>
+                                                <xsl:if test="count(v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text/v3:paragraph)=1">
+                                                    <br/><br/><br/><br/>
+                                                </xsl:if>
                                             </div>
                                             <div class="title-page-right">
                                                 <xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.3']" mode="international-date-format"/>
                                                 <xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.4']" mode="international-date-format"/>
+                                                <xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.5']"/>
                                             </div>
                                         </div>											
-                                        <div class="spl title-page-row title-page-rule-bot">
-                                            <xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.5']" mode="inline-title"/>
-                                        </div>
                                         <div class="spl title-page title-page-row">
                                             <xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.6']/v3:text"/>
                                         </div>
