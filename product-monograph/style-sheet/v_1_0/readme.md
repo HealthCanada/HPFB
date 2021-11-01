@@ -14,6 +14,7 @@ Additional stylesheets for Consumer and Product Monograph views support renderin
 
 ## 2. Revision Log
 
+"Unversioned Changes"
 2021-01-08 - Removed Combination Product Type Characteristic; renamed Packaging Availability, removed Packaging Cancellation Date and Product Approval Status  
 2021-01-22 - Added optional parameter base-uri to support passing in absolute image base uri for server-side rendering; use section.root.id for subsection navigation  
 2021-02-12 - Minor changes to Title Page and print table of contents  
@@ -30,6 +31,8 @@ Additional stylesheets for Consumer and Product Monograph views support renderin
 2021-08-09 - Removed rule for First Paragraph StyleCode, which interferes with Boxed Statement  
 2021-08-20 - Use local numbers instead of footnote marks, and change styles to allow space for doucle digits  
 2021-09-10 - Resolved issue with footnote numbers, override footnote marks template to always use local numbers instead 
+
+"v_1_0" Changes:
 2021-10-29 - Support for multiple Companies and Addresses on PM Title Page; table-shading using styleCode=table-secondary  
 
 ## 3. This should be the only processing instruction referenced in the XML PM:
