@@ -868,7 +868,7 @@ st					<a>
 		</xsl:if>
 	</xsl:template>
 	
-	<!-- this template is used on the Title Page to show Control Number on a single line -->
+	<!-- this template was used on the Title Page to show Control Number on a single line - currently unused -->
 	<xsl:template mode="inline-title" match="v3:section">
 		<div class="Section">
 			<h2 style="display: inline;">
@@ -879,7 +879,7 @@ st					<a>
 		</div>
 	</xsl:template>
 
-	<!-- this template is used on the Title Page to show Control Number on a single line -->
+	<!-- this template is used on the Title Page to parse Authorization and Revision Dates -->
 	<xsl:template mode="international-date-format" match="v3:section">
 		<div class="Section">
 			<h2>
@@ -895,7 +895,6 @@ st					<a>
 		</div>
 	</xsl:template>
 	
-
 	<!-- This is the main page content, which renders for both screen, with Product Details in front, and print, with Product Details at end -->	
 	<xsl:template mode="main-document" match="v3:structuredBody">
 		<main class="col">

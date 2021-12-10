@@ -1024,7 +1024,7 @@ img { max-width: 100%; height: auto; }
     .bg-aurora-accent2 { background-color: #4D5D6C; }
     .bg-aurora-light   { background-color: #EAEAEA; } /* matched to a base colour in the tables */
     
-    .hide-in-screen { display: none; }
+    .hide-in-screen { display: none !important; }
     .Section h1 {display: none; } /* hide top level section headings on screen */
     #banner { font-size: 20pt; }
     #main { max-width: 1000px; }

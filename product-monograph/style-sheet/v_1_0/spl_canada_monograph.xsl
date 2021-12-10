@@ -87,7 +87,7 @@
                                             <xsl:call-template name="render-toc"/>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <div class="hide-in-screen force-page-break-after">This is wher the TOC would be</div>
+                                            <div class="hide-in-screen force-page-break-after"><!-- This is where the TOC would be --></div>
                                         </xsl:otherwise>
                                     </xsl:choose>
                                     <!-- Optional BIOSIMILAR BIOLOGIC DRUG, prepended to Part I if present -->
@@ -124,7 +124,20 @@
                             </div>
                         </xsl:for-each>
                         <!-- SCREEN VERSION OF EXTRA SECTION FOR REVIEW ONLY -->
-                        <!-- REMOVED PRINT VERSION OF MANUFACTURED PRODUCT DETAIL!!! -->
+                        <!-- PRINT VERSION OF MANUFACTURED PRODUCT DETAIL will already have a page break after previous section -->
+                        <div class="hide-in-screen card spl" id="print-product-details">
+                            <h1>
+                                <xsl:call-template name="string-uppercase">
+                                    <xsl:with-param name="text">
+                                        <xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
+                                    </xsl:with-param>
+                                </xsl:call-template>
+                            </h1>
+                            <div class="spl">
+                                <xsl:apply-templates mode="print" select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization"/>
+                                <xsl:apply-templates mode="print" select="//v3:subject/v3:manufacturedProduct"/>
+                            </div>
+                        </div>
                     </div>
                 </div>				
             </div>
