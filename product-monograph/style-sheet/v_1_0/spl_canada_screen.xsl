@@ -53,8 +53,20 @@
 			<!-- Withhold the display name and the comma when the form code indicates that this is a 'kit' -->
 			<xsl:for-each select="v3:ingredient[starts-with(@classCode,'ACTI')]">
 				<xsl:if test="position() > 1">/ </xsl:if>
-				<xsl:value-of select="v3:ingredientSubstance/v3:activeMoiety/v3:activeMoiety/v3:code/@displayName"/>&#160;
+
+				<!-- [pmh #94] Replace Active Moiety with Basis of Strength in Product Detail section labels -->
 				<xsl:apply-templates select="v3:quantity/v3:numerator"/>&#160;
+				<xsl:choose>
+					<xsl:when test="@classCode='ACTIR'">
+						<xsl:value-of select="v3:ingredientSubstance/v3:asEquivalentSubstance/v3:definingSubstance/v3:code/@displayName"/>
+					</xsl:when>
+					<xsl:when test="@classCode='ACTIB'">
+						<xsl:value-of select="v3:ingredientSubstance/v3:code/@displayName"/>
+					</xsl:when>
+					<xsl:when test="@classCode='ACTIM'">
+						<xsl:value-of select="v3:ingredientSubstance/v3:activeMoiety/v3:activeMoiety/v3:code/@displayName"/>
+					</xsl:when>
+				</xsl:choose>&#160;
 			</xsl:for-each>
 			<xsl:value-of select="v3:formCode[@codeSystem='2.16.840.1.113883.2.20.6.3']/@displayName"/>
 		</xsl:if>

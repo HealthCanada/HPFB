@@ -129,6 +129,18 @@
 	<xsl:variable name="labels" select="document('')/*/my:texts"/>
 		
 	<!-- global templates like date and string cd formatting may be specialized for different regions -->
+
+	<!-- [pmh #93] Moved format-physical-quantity to spl_canada_i18n.xsl, since rendering is different for French and English values -->
+	<xsl:decimal-format name="spaces" grouping-separator=" "/>	
+	<xsl:template match="@value" mode="format-physical-quantity">
+		<xsl:choose>
+			<xsl:when test="not(contains(., '.')) and $lang='en'"><xsl:value-of select="format-number(., '###,###,###,###')"/></xsl:when>
+			<xsl:when test="not(contains(., '.')) and $lang='fr'"><xsl:value-of select="format-number(., '### ### ### ###', 'spaces')"/></xsl:when>
+			<xsl:when test="contains(., '.') and $lang='fr'"><xsl:value-of select="translate(., '.', ',')"/></xsl:when>
+			<xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
+		</xsl:choose>		
+	</xsl:template>
+	
 	<xsl:template name="string-lowercase">
 		<!--** Convert the input text that is passed in as a parameter to lower case  -->
 		<xsl:param name="text"/>

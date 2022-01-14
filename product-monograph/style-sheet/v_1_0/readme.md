@@ -36,6 +36,7 @@ Additional stylesheets for Consumer and Product Monograph views support renderin
 "v_1_0" Changes:
 2021-10-29 - Support for multiple Companies and Addresses on PM Title Page; table-shading using styleCode=table-secondary  
 2021-11-26 - Added Product Metadata section for Print back to spl_canada_monograph.spl  
+2022-01-14 - [#93, #94] Use Basis of Strength in Product Detail section headings, render French physical quantity values using commas and spaces  
 
 ## 3. This should be the only processing instruction referenced in the XML PM:
 
