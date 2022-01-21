@@ -14,7 +14,7 @@ Additional stylesheets for Consumer and Product Monograph views support renderin
 
 ## 2. Revision Log
 
-"Unversioned" Changes
+"Legacy" Changes
 2021-01-08 - Removed Combination Product Type Characteristic; renamed Packaging Availability, removed Packaging Cancellation Date and Product Approval Status  
 2021-01-22 - Added optional parameter base-uri to support passing in absolute image base uri for server-side rendering; use section.root.id for subsection navigation  
 2021-02-12 - Minor changes to Title Page and print table of contents  
@@ -32,9 +32,10 @@ Additional stylesheets for Consumer and Product Monograph views support renderin
 2021-08-20 - Use local numbers instead of footnote marks, and change styles to allow space for doucle digits  
 2021-09-10 - Resolved issue with footnote numbers, override footnote marks template to always use local numbers instead 
 2021-11-29 - Support for multiple Companies and Addresses on PM Title Page  
+2022-01-21 - [#93, #94] Use Basis of Strength in Product Detail section headings, render French physical quantity values using commas and spaces  
 
 "v_1_0" Changes:
-2021-10-29 - Support for multiple Companies and Addresses on PM Title Page; table-shading using styleCode=table-secondary  
+2021-10-29 - [#68] Support for multiple Companies and Addresses on PM Title Page; table-shading using styleCode=table-secondary  
 2021-11-26 - Added Product Metadata section for Print back to spl_canada_monograph.spl  
 2022-01-14 - [#93, #94] Use Basis of Strength in Product Detail section headings, render French physical quantity values using commas and spaces  
 

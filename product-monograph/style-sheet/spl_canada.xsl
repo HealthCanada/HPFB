@@ -293,13 +293,7 @@ st					<a>
 		</xsl:if>
 	</xsl:template>
 
-	<xsl:template match="@value" mode="format-physical-quantity">
-		<xsl:choose>
-			<xsl:when test="contains(., '.')"><xsl:value-of select="."/></xsl:when>
-			<xsl:otherwise><xsl:value-of select="format-number(., '###,###,###,###')"/></xsl:otherwise>
-		</xsl:choose>		
-	</xsl:template>
-
+	<!-- [pmh #93] Moved format-physical-quantity to spl_canada_i18n.xsl, since rendering is different for French and English values -->
 	<!-- Extra logic required for URG_PQ Active Ingredients and formatting the Physical Quantity to add commas for thousands -->
 	<xsl:template match="v3:quantity/v3:numerator">
 		<xsl:choose>
