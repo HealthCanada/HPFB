@@ -841,12 +841,12 @@ a.skip-main:focus, a.skip-main:active {
 .spl .formLabel {
 	border: 1px solid #FFFFFF;
 	background-color: #DDDDDD;
-	font-size: 115%;
+	font-size: 125%;
 	font-weight: bold;
 }
 .spl .formItem {
 	border: 1px solid #CCCCCC;
-	font-size: 110%;
+	font-size: 120%;
 }
 .spl .formTitle a:link {
 	font-weight: bold;
