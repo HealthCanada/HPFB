@@ -914,9 +914,9 @@ st					<a>
 											<div class="title-page-left">
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text"/>
 												<!-- [#109] we can support multiple company address blocks, but we need to pad if we only have one -->								
-												<xsl:if test="not(count(v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text/v3:paragraph) &gt; 4 
-													or count(v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text/v3:paragraph/v3:br) &gt; 4)">
-													<br/><br/><br/><br/>
+												<xsl:if test="not(count(v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text/v3:paragraph) &gt; 5 
+													or count(v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text/v3:paragraph/v3:br) &gt; 5)">
+													<br/><br/><br/><br/><br/>
 												</xsl:if>
 											</div>
 											<div class="title-page-right">
