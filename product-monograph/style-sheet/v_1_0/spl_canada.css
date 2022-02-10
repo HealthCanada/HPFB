@@ -948,7 +948,7 @@ a.skip-main:focus, a.skip-main:active {
 .title-page-left {
     float: left;
     width: 60%;
-    min-height: 9em;
+    min-height: 11em;
 }
 .title-page-right {
     margin-left: 40%;
