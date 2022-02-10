@@ -913,11 +913,7 @@ st					<a>
 										<div class="spl title-page-row title-page-rule-top">
 											<div class="title-page-left">
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text"/>
-												<!-- [#109] we can support multiple company address blocks, but we need to pad if we only have one -->								
-												<xsl:if test="not(count(v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text/v3:paragraph) &gt; 5 
-													or count(v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text/v3:paragraph/v3:br) &gt; 5)">
-													<br/><br/><br/><br/><br/>
-												</xsl:if>
+												<!-- [#109] we can support multiple company address blocks by providing more min height in css -->								
 											</div>
 											<div class="title-page-right">
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.3']" mode="international-date-format"/>
