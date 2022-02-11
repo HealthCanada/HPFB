@@ -916,17 +916,14 @@ st					<a>
 										<div class="spl title-page-row title-page-rule-top">
 											<div class="title-page-left">
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text"/>
-												<!-- we can support multiple company and address blocks, but if we only have one we need to pad -->
-												<xsl:if test="count(v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text/v3:paragraph)=1">
-													<br/><br/><br/><br/>
-												</xsl:if>
+												<!-- [#109] we can support multiple company address blocks by providing more min height in css -->								
 											</div>
 											<div class="title-page-right">
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.3']" mode="international-date-format"/>
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.4']" mode="international-date-format"/>
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.5']"/>
 											</div>
-										</div>	
+										</div>											
 										<div class="spl title-page title-page-row">
 											<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.6']/v3:text"/>
 										</div>
