@@ -34,6 +34,7 @@ Additional stylesheets for Consumer and Product Monograph views support renderin
 2021-11-29 - Support for multiple Companies and Addresses on PM Title Page  
 2022-01-21 - [#93, #94] Use Basis of Strength in Product Detail section headings, render French physical quantity values using commas and spaces  
 2022-02-11 - [#109] Support multiple company and address blocks with CSS min height on .title-page-left rather than conditional padding  
+2022-04-08 - [#120] Cleaner styling when xmChange in paragraph with Boxed Warning
 
 "v_1_0" Changes:
 2021-10-29 - [#68] Support for multiple Companies and Addresses on PM Title Page; table-shading using styleCode=table-secondary  

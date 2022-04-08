@@ -858,7 +858,14 @@ st					<a>
 	<!-- this template adds a vertical bar for xmChange, and is simplified from the FDA template substantially -->
 	<xsl:template name="additionalStyleAttr">
 		<xsl:if test="self::*[self::v3:paragraph]//v3:content[@styleCode[contains(.,'xmChange')]] or v3:content[@styleCode[contains(.,'xmChange')]] and not(ancestor::v3:table)">
-			<xsl:attribute name="style">margin-left:-0.5em; padding-left:0.5em; border-left:1px solid;</xsl:attribute>
+			<xsl:choose>
+				<xsl:when test="ancestor-or-self::v3:paragraph[@styleCode[contains(.,'Boxed')]]">
+					<xsl:attribute name="style">margin-left:-0.5em; padding-left:2.1em; border-left:1px solid;</xsl:attribute>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="style">margin-left:-0.5em; padding-left:0.5em; border-left:1px solid;</xsl:attribute>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:if>
 	</xsl:template>
 	
