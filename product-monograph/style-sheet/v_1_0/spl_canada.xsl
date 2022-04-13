@@ -863,7 +863,7 @@ st					<a>
 					<xsl:attribute name="style">margin-left:-2.1em; padding-left:2.1em; border-left:1px solid; display:inline-block;</xsl:attribute>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:attribute name="style">margin-left:-0.5em; padding-left:0.5em; border-left:1px solid;</xsl:attribute>
+					<xsl:attribute name="style">margin-left:-0.5em; padding-left:0.5em; border-left:1px solid; display:inline-block;</xsl:attribute>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:if>
