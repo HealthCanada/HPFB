@@ -863,7 +863,7 @@ st					<a>
 		<xsl:if test="self::*[self::v3:paragraph]//v3:content[@styleCode[contains(.,'xmChange')]] or v3:content[@styleCode[contains(.,'xmChange')]] and not(ancestor::v3:table)">
 			<xsl:choose>
 				<xsl:when test="ancestor-or-self::v3:paragraph[@styleCode[contains(.,'Boxed')]]">
-					<xsl:attribute name="style">margin-left:-0.5em; padding-left:2.1em; border-left:1px solid;</xsl:attribute>
+					<xsl:attribute name="style">margin-left:-2.1em; padding-left:2.1em; border-left:1px solid;</xsl:attribute>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:attribute name="style">margin-left:-0.5em; padding-left:0.5em; border-left:1px solid;</xsl:attribute>
@@ -1146,7 +1146,7 @@ st					<a>
 					</xsl:if> -->
 				</xsl:with-param>
 			</xsl:call-template>
-			<xsl:call-template name="additionalStyleAttr"/> 
+			<!-- [pmh] moved the additional style attributes into a span wrapper to better support xmChange with Boxed Warning, see below -->
 			<xsl:apply-templates select="@*[not(local-name(.)='styleCode')]"/>
 			<!-- see note anchoring and PCR 793 -->
 			<!-- GS: moved this to after the styleCode and othe attribute handling -->
@@ -1154,7 +1154,10 @@ st					<a>
 				<a name="{@ID}"/>
 			</xsl:if>
 			<xsl:apply-templates select="v3:caption"/>
-			<xsl:apply-templates mode="mixed" select="node()[not(self::v3:caption)]"/>
+			<span>
+				<xsl:call-template name="additionalStyleAttr"/> 
+				<xsl:apply-templates mode="mixed" select="node()[not(self::v3:caption)]"/>
+			</span>
 		</p>
 	</xsl:template>
 
