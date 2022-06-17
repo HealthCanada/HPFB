@@ -981,7 +981,7 @@ img { max-width: 100%; height: auto; }
 }
 
 /* Only pad top and bottom margins for the last table in the main content to prevent double margins */
-.spl table.formTablePetite {
+.spl table.formTablePetite, .spl table.formTablePart tab {
     margin-top: 2ex;
     margin-bottom: 0ex;
 }

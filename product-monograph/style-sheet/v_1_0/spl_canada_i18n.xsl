@@ -41,11 +41,13 @@
 		<schedule lang="en">Schedule</schedule>
 		<therapeuticClass lang="en">Therapeutic Class</therapeuticClass>
 		<packaging lang="en">Packaging Status</packaging>
+		<packagingCaveat lang="en">does not reflect availability on the Canadian Market</packagingCaveat>
 		<itemCode lang="en">Package Identifier</itemCode>
 		<packageDescription lang="en">Package Description</packageDescription>
 		<packageRegStatus lang="en">Package Available</packageRegStatus>
 		<productRegStatus lang="en">Product Regulatory Status</productRegStatus>
-		<packageApprovalDate lang="en">Date of Authorization</packageApprovalDate>
+		<packageApprovalDate lang="en">Date Introduced</packageApprovalDate>
+		<packageRemovedDate lang="en">Date Removed</packageRemovedDate>
 		<productApprovalDate lang="en">Date of Initial Authorization</productApprovalDate>
 		<cancellationDate lang="en">Date of Cancellation</cancellationDate>
 		<marketingInfo lang="en">Product Status</marketingInfo>
@@ -54,6 +56,8 @@
 		<partQuantity lang="en">Quantity of Parts</partQuantity>
 		<partNumber lang="en">Part&#160;#</partNumber>
 		<part lang="en">Part&#160;</part>
+		<seeBelow lang="en">See below</seeBelow>
+		<multiPartProduct lang="en">Multi-part product</multiPartProduct>
 		<pkgQuantity lang="en">Package Quantity</pkgQuantity>
 		<ttlProdQty lang="en">Total Product Quantity</ttlProdQty>
 		<inConnective lang="en">&#160;in&#160;</inConnective>
@@ -103,11 +107,13 @@
 		<schedule lang="fr">Annexe</schedule>
 		<therapeuticClass lang="fr">Classification thérapeutique</therapeuticClass>
 		<packaging lang="fr">État de l’emballage</packaging>
+		<packagingCaveat lang="fr">ne reflète pas la disponibilité sur le marché canadien</packagingCaveat>
 		<itemCode lang="fr">Identificateur d’emballage</itemCode>
 		<packageDescription lang="fr">Description de l’emballage</packageDescription>
 		<packageRegStatus lang="fr">Emballage disponible</packageRegStatus>
 		<productRegStatus lang="fr">État réglementaire du produit</productRegStatus>
-		<packageApprovalDate lang="fr">Date de l’autorisation</packageApprovalDate>
+		<packageApprovalDate lang="fr">Date d’introduction</packageApprovalDate>
+		<packageRemovedDate lang="fr">Date de suppression</packageRemovedDate>
 		<productApprovalDate lang="fr">Date de l’autorisation initiale</productApprovalDate>
 		<cancellationDate lang="fr">Date d’annulation</cancellationDate>
 		<marketingInfo lang="fr">État du produit</marketingInfo>
@@ -116,6 +122,8 @@
 		<partQuantity lang="fr">Nombre d’éléments</partQuantity>
 		<partNumber lang="fr">No&#160;d’élément</partNumber>
 		<part lang="fr">Élément&#160;</part>
+		<seeBelow lang="fr">Voir ci-dessous</seeBelow>
+		<multiPartProduct lang="fr">Produit en plusiers éléments</multiPartProduct>
 		<pkgQuantity lang="fr">Nombre d’emballages</pkgQuantity>
 		<ttlProdQty lang="fr">Quantité de produit totale</ttlProdQty>
 		<inConnective lang="fr">&#160;dans&#160;</inConnective>

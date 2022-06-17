@@ -49,8 +49,8 @@
 	<xsl:template mode="generateUniqueLabel" match="v3:manufacturedProduct">
 		<xsl:param name="position"/>
 		<xsl:value-of select="$labels/product[@lang = $lang]"/> #<xsl:value-of select="$position"/><xsl:text> </xsl:text><xsl:value-of select="v3:name"/> 
-		(<xsl:value-of select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name"/>)<xsl:if test="not((v3:formCode/@code='C43197') and (v3:formCode/@codeSystem='2.16.840.1.113883.2.20.6.3'))">, 		
-			<!-- Withhold the display name and the comma when the form code indicates that this is a 'kit' -->
+		(<xsl:value-of select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name"/>)<xsl:if test="not(v3:part)">, 		
+			<!-- Withhold the display name and the comma when the form code indicates that this is a 'kit', ie product is multi-part [pmh #124]-->
 			<xsl:for-each select="v3:ingredient[starts-with(@classCode,'ACTI')]">
 				<xsl:if test="position() > 1">/ </xsl:if>
 
@@ -270,7 +270,7 @@
 						$(this).parent().append($(this).detach());
 					});
 				}				
-			});			
+			});
 		</script>
 	</xsl:template>
 	

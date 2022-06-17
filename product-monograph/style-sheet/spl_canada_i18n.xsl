@@ -54,6 +54,8 @@
 		<partQuantity lang="en">Quantity of Parts</partQuantity>
 		<partNumber lang="en">Part&#160;#</partNumber>
 		<part lang="en">Part&#160;</part>
+		<seeBelow lang="en">See below</seeBelow>
+		<multiPartProduct lang="en">Multi-part product</multiPartProduct>
 		<pkgQuantity lang="en">Package Quantity</pkgQuantity>
 		<ttlProdQty lang="en">Total Product Quantity</ttlProdQty>
 		<inConnective lang="en">&#160;in&#160;</inConnective>
@@ -114,6 +116,8 @@
 		<partQuantity lang="fr">Nombre d’éléments</partQuantity>
 		<partNumber lang="fr">No&#160;d’élément</partNumber>
 		<part lang="fr">Élément&#160;</part>
+		<seeBelow lang="fr">Voir ci-dessous</seeBelow>
+		<multiPartProduct lang="fr">Produit en plusiers éléments</multiPartProduct>
 		<pkgQuantity lang="fr">Nombre d’emballages</pkgQuantity>
 		<ttlProdQty lang="fr">Quantité de produit totale</ttlProdQty>
 		<inConnective lang="fr">&#160;dans&#160;</inConnective>

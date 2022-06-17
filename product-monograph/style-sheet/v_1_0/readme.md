@@ -43,6 +43,7 @@ Additional stylesheets for Consumer and Product Monograph views support renderin
 2022-01-14 - [#93, #94] Use Basis of Strength in Product Detail section headings, render French physical quantity values using commas and spaces  
 2022-02-04 - [#109] Support multiple company and address blocks with padding that works with paragraph and br delimited addresses  
 2022-02-11 - [#109] Support multiple company and address blocks with CSS min height rather than conditional padding  
+2022-06-17 - [#124] Packaging description changes, including "See Below" and label changes for Multipart, stop relying on CV code C43197, swap Product Status and Packaging Status  
 
 ## 3. This should be the only processing instruction referenced in the XML PM:
 

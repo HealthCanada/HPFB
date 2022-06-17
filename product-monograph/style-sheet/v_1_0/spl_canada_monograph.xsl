@@ -1,4 +1,4 @@
-<xsl:transform xmlns="urn:hl7-org:v3" xmlns:str="http://exslt.org/strings" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:v3="urn:hl7-org:v3" version="1.0" exclude-result-prefixes="v3 xsl">
+<xsl:transform xmlns:str="http://exslt.org/strings" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:v3="urn:hl7-org:v3" version="1.0" exclude-result-prefixes="v3 xsl">
     <xsl:import href="spl_canada.xsl"/>
     
     <!-- MAIN HTML PAGE TEMPLATING -->
