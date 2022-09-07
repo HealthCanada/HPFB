@@ -1209,23 +1209,33 @@
 	
 	<!-- TABLE MODEL-->
 	<xsl:template match="v3:table">
+		<xsl:variable name="class">
+			<xsl:if test="@frame='border'">table table-sm table-bordered </xsl:if>
+			<!-- Default to 100% table width if none is specified -->
+			<xsl:if test="not(@width) or @width='100%'">fullWidth</xsl:if>			
+		</xsl:variable>
 		<xsl:if test="@ID">
 			<a name="{@ID}"><xsl:text> </xsl:text></a>
 		</xsl:if>
 		<table>
-			<!-- Default to 100% table width if none is specified -->
+			<xsl:if test="$class">
+				<xsl:attribute name="class">
+					<xsl:value-of select="$class"/>
+				</xsl:attribute>
+			</xsl:if>
+			<!-- Default to 100% table width if none is specified
 			<xsl:if test="not(@width) or @width='100%'">
 				<xsl:attribute name="class">fullWidth</xsl:attribute>
-			</xsl:if>
+			</xsl:if> -->
 			<!-- Show table width if specified but not 100% -->
 			<xsl:if test="@width and not(@width='100%')">
 				<xsl:attribute name="width"><xsl:value-of select="@width"/></xsl:attribute>
 			</xsl:if>
 			<!-- Default to thin border if 
-				is specified as 'border', suitable for Aurora-style tables -->
+				is specified as 'border', suitable for Aurora-style tables
 			<xsl:if test="@frame='border'">
 				<xsl:attribute name="style">border: solid thin; border-color: #CCCCCC;</xsl:attribute>
-			</xsl:if>
+			</xsl:if> -->
 			<!-- Default to thick border if frame is specified as 'box', suitable for Boxed Warning -->
 			<xsl:if test="@frame='box'">
 				<xsl:attribute name="style">border: 2px solid black;</xsl:attribute>
