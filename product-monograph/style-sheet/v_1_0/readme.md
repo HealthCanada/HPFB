@@ -43,8 +43,10 @@ Additional stylesheets for Consumer and Product Monograph views support renderin
 2022-01-14 - [#93, #94] Use Basis of Strength in Product Detail section headings, render French physical quantity values using commas and spaces  
 2022-02-04 - [#109] Support multiple company and address blocks with padding that works with paragraph and br delimited addresses  
 2022-02-11 - [#109] Support multiple company and address blocks with CSS min height rather than conditional padding  
-2022-06-17 - [#124] Packaging description changes, including "See Below" and label changes for Multipart, stop relying on CV code C43197, swap Product Status and Packaging Status  
-
+2022-06-17 - [#124, #138] Packaging description changes, including "See Below" and label changes for Multipart, stop relying on CV code C43197, swap Product Status and Packaging Status  
+2022-09-21 - [#134, #136] left justify title page footer, added support for Date First Authorized for Current Owner, with conditional extra padding
+2022-11-03 - [#140, #141] remove bolding from active/inactive ingredient names; left align table captions
+ 
 ## 3. This should be the only processing instruction referenced in the XML PM:
 
     <?xml-stylesheet type="text/xsl" href="https://health-products.canada.ca/product-monograph/stylesheet/v_1_0/spl_canada.xsl"?>
@@ -63,8 +65,6 @@ Internationalization and local date formatting maintained in the spl_canada_i18n
 
 ## 6. Key Links
 
-XSL: https://healthcanada.github.io/HPFB/product-monograph/style-sheet/v_1_0/spl_canada.xsl  
-(or https://raw.githubusercontent.com/HealthCanada/HPFB/master/product-monograph/v_1_0/style-sheet/spl_canada.xsl)  
-CSS: https://healthcanada.github.io/HPFB/product-monograph/style-sheet/v_1_0/spl_canada.css  
+XSL: https://health-products.canada.ca/product-monograph/style-sheet/v_1_0/spl_canada.xsl  
 CSS: https://health-products.canada.ca/product-monograph/style-sheet/v_1_0/spl_canada.css  
-XSD: https://raw.githubusercontent.com/HealthCanada/HPFB/master/product-monograph/schema/SPL.xsd  
+XSD: https://health-products.canada.ca/product-monograph/schema/SPL.xsd  

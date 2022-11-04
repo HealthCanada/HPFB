@@ -118,7 +118,6 @@
 		<cancellationDate lang="fr">Date d’annulation</cancellationDate>
 		<marketingInfo lang="fr">État du produit</marketingInfo>
 		<marketingCategory lang="fr">Type d’activité de réglementation</marketingCategory>
-		<applicationNumber lang="fr">Numéro de contrôle</applicationNumber>
 		<partQuantity lang="fr">Nombre d’éléments</partQuantity>
 		<partNumber lang="fr">No&#160;d’élément</partNumber>
 		<part lang="fr">Élément&#160;</part>

@@ -250,7 +250,7 @@
 				</xsl:call-template>
 				<!-- [pmh #124] removed all references to FDA formCode for KIT, C43197 -->
 				<xsl:if test="not(v3:part)">
-						<xsl:text> </xsl:text>
+					<xsl:text> </xsl:text>
 					<xsl:call-template name="string-lowercase">
 						<xsl:with-param name="text" select="v3:formCode/@displayName"/>
 					</xsl:call-template>
@@ -282,28 +282,7 @@
 				<xsl:call-template name="characteristics-old"/>
 			</td>
 		</tr>
-		
-		
-<!-- [pmh #124 pkg] move all of packaging out of ingredients, up one level
-		<xsl:if test="v3:asContent">
-			<tr>
-				<td>
-					<xsl:call-template name="packaging">
-						<xsl:with-param name="path" select="."/>
-					</xsl:call-template>
-				</td>
-			</tr>
-		</xsl:if>
-		<xsl:if test="v3:instanceOfKind[parent::v3:partProduct]">
-			<tr>
-				<td colspan="4">
-					<!- - [pmh] removed obsolete width="100%", replaced with fullWidth class - ->
-					<table cellpadding="3" cellspacing="0" class="formTablePetite fullWidth">
-						<xsl:apply-templates mode="ldd" select="v3:instanceOfKind"/>
-					</table>
-				</td>
-			</tr>
-		</xsl:if> -->
+		<!-- [pmh #124 pkg] moved all of packaging out of ingredients, up one level -->
 	</xsl:template>
 
 	<!-- [pmh #93] Moved format-physical-quantity to spl_canada_i18n.xsl, since rendering is different for French and English values -->
@@ -367,9 +346,7 @@
 				</xsl:attribute>
 				<xsl:for-each select="(v3:ingredientSubstance|v3:activeIngredientSubstance)[1]">
 					<td class="formItem">
-						<strong>
-							<xsl:value-of select="v3:code/@displayName"/>
-						</strong>
+						<xsl:value-of select="v3:code/@displayName"/>
 						<xsl:text> (</xsl:text>
 						<xsl:for-each select="v3:code/@code">
 							<xsl:value-of select="."/>
@@ -435,7 +412,7 @@
 				<xsl:for-each select="(v3:ingredientSubstance|v3:inactiveIngredientSubstance)[1]">
 					<td class="formItem" colspan="3">
 						<xsl:for-each select="v3:code">
-							<strong><xsl:value-of select="@displayName"/></strong>								
+							<xsl:value-of select="@displayName"/>								
 							<xsl:text> (</xsl:text>
 								<xsl:value-of select="@code"/>
 							<xsl:text>) </xsl:text>
@@ -565,27 +542,27 @@
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='1']"/>
 					<xsl:with-param name="label" select="$labels/productType[@lang = $lang]"/>
 				</xsl:call-template>
-				<xsl:call-template name="listedCharacteristicRow"> <!-- Colour is CV (original text), listed -->
+				<xsl:call-template name="listedCharacteristicRow"> <!-- optional Colour is CV (original text), listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='2']"/>
 					<xsl:with-param name="label" select="$labels/color[@lang = $lang]"/>
 				</xsl:call-template>
-				<xsl:call-template name="listedCharacteristicRow"> <!-- Shape is CV (original text), listed -->
+				<xsl:call-template name="listedCharacteristicRow"> <!-- optional Shape is CV (original text), listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='3']"/>
 					<xsl:with-param name="label" select="$labels/shape[@lang = $lang]"/>
 				</xsl:call-template>
-				<xsl:call-template name="pqCharacteristicRow"> <!-- Size is PQ -->
+				<xsl:call-template name="pqCharacteristicRow"> <!-- optional Size is PQ -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='4']"/>
 					<xsl:with-param name="label" select="$labels/size[@lang = $lang]"/>
 				</xsl:call-template>
-				<xsl:call-template name="codedCharacteristicRow"> <!-- Score is CV -->
+				<xsl:call-template name="codedCharacteristicRow"> <!-- optional Score is CV -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='5']"/>
 					<xsl:with-param name="label" select="$labels/score[@lang = $lang]"/>
 				</xsl:call-template>
-				<xsl:call-template name="stringCharacteristicRow"> <!-- Imprint Code is ST -->
+				<xsl:call-template name="stringCharacteristicRow"> <!-- optional Imprint Code is ST -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='6']"/>
 					<xsl:with-param name="label" select="$labels/imprint[@lang = $lang]"/>
 				</xsl:call-template>
-				<xsl:call-template name="listedCharacteristicRow"> <!-- Flavour is CV Listed -->
+				<xsl:call-template name="listedCharacteristicRow"> <!-- optional Flavour is CV Listed -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='7']"/>
 					<xsl:with-param name="label" select="$labels/flavor[@lang = $lang]"/>
 				</xsl:call-template>
@@ -954,16 +931,21 @@
 										</div>
 										<div class="spl title-page-row title-page-rule-top">
 											<div class="title-page-left">
+												<!-- [#136] added 0tp1.7 for Date First Authorized for Current Owner and extra padding -->
+												<xsl:if test="v3:component/v3:section[v3:code/@code='0tp1.7']" >
+													<xsl:attribute name="style">min-height: 22em;</xsl:attribute>
+												</xsl:if>													
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.2']/v3:text"/>
 												<!-- [#109] we can support multiple company address blocks by providing more min height in css -->								
 											</div>
 											<div class="title-page-right">
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.3']" mode="international-date-format"/>
+												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.7']" mode="international-date-format"/>													
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.4']" mode="international-date-format"/>
 												<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.5']"/>
 											</div>
 										</div>											
-										<div class="spl title-page title-page-row">
+										<div class="spl title-page-row"><!-- [#134] left justify title page footer (removed title-page class) -->
 											<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='0tp1.6']/v3:text"/>
 										</div>
 									</div>
@@ -977,7 +959,7 @@
 									<div class="card mb-2" id="{$unique-section-id}">
 										<header class="card-header bg-aurora-accent1 text-white font-weight-bold">
 											<xsl:value-of select="v3:title"/>
-										</header>
+caveat										</header>
 										<div class="spl recent-changes">
 											<xsl:apply-templates select="."/>
 										</div>

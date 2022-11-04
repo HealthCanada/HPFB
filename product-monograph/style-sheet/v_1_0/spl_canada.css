@@ -478,7 +478,7 @@ a.skip-main:focus, a.skip-main:active {
 
 .spl table caption {	
 	margin-top: 10px; /* Gecko needs this, IE doesn't add any extra */
-	text-align: center;
+	text-align: left;
 	font-weight: bold;
 	font-size: 100%;
     /* Override Bootstrap default to put captions below tables and black instead of dark gray */
@@ -945,6 +945,7 @@ a.skip-main:focus, a.skip-main:active {
     border-bottom: 1px solid;
     border-color: lightgrey;
 }
+/*  [#136] changed from 13em to 15em accommodate smaller screens  */
 .title-page-left {
     float: left;
     width: 60%;
