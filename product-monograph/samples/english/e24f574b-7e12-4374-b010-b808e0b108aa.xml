@@ -1,0 +1,3301 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://health-products.canada.ca/product-monograph/style-sheet/v_1_0/spl_canada.xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://health-products.canada.ca/product-monograph/schema/SPL.xsd">
+  <id root="e24f574b-7e12-4374-b010-b808e0b108aa"/>
+  <code code="4" codeSystem="2.16.840.1.113883.2.20.6.10" displayName="MASTER TEMPLATE"/>
+  <title>Sample Only - Not Intended to Reflect Actual Products</title>
+  <effectiveTime value="20210501"></effectiveTime>
+  <languageCode code="1" codeSystem="2.16.840.1.113883.2.20.6.29" displayName="ENGLISH"/>
+  <setId root="ac9c8e28-2798-4134-8197-2b249d836002"/>
+  <versionNumber value="3"/>
+  <author>
+    <time/>
+    <assignedEntity>
+      <representedOrganization>
+        <id extension="1111" root="2.16.840.1.113883.2.20.6.31"/>
+        <name>Acme Pharma Inc.</name>
+        <contactParty>
+          <addr>
+            <streetAddressLine>9526 Columbia St.</streetAddressLine>
+            <city>Hanover Park</city>
+            <state>Illinois</state>
+            <postalCode>60133</postalCode>
+            <country code="USA" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="United States of America (the)"/>
+          </addr>
+          <telecom value="tel:+1-202-555-0178"/>
+          <telecom value="mailto:test@canada.ca"/>
+          <telecom value="http://www.test.ca"/>
+          <contactPerson/>
+        </contactParty>
+        <assignedEntity>
+          <assignedOrganization>
+            <id extension="0000" root="2.16.840.1.113883.2.20.6.31"/>
+            <name>Acme Distributing Ltd.</name>
+            <contactParty>
+              <addr>
+                <streetAddressLine>250 Lanark Ave.</streetAddressLine>
+                <city>Ottawa</city>
+                <state>Ontario</state>
+                <postalCode>K1Z 6R5</postalCode>
+                <country code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+              </addr>
+              <telecom value="tel:+1-416-555-0134"/>
+              <telecom value="mailto:test.2@canada.ca"/>
+              <telecom value="http://www.test.ca"/>
+              <contactPerson/>
+            </contactParty>
+          </assignedOrganization>
+        </assignedEntity>
+      </representedOrganization>
+    </assignedEntity>
+  </author>
+  <component>
+    <structuredBody>
+      <component>
+        <section ID="f6ac9de5-be91-442c-9579-5bc9ebd36902">
+          <id root="bdeefc11-4315-41e3-8c56-83e8bf4f770b"/>
+          <code code="0MP" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="MANUFACTURED PRODUCT"/>
+          <title>MANUFACTURED PRODUCT</title>
+          <effectiveTime value="20210101"/>
+          <subject>
+            <manufacturedProduct>
+              <manufacturedProduct>
+                <code code="11112345"/>
+                <name>Solid Product</name>
+                <formCode code="85" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Tablet"/>
+                <asEntityWithGeneric>
+                  <genericMedicine>
+                    <name>Solid Generic Name</name>
+                  </genericMedicine>
+                </asEntityWithGeneric>
+                <ingredient classCode="ACTIB">
+                  <quantity>
+                    <numerator value="2" unit="mg"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="005990WHZZ" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="DEOXYCHOLIC ACID"/>
+                    <name>DEOXYCHOLIC ACID</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="005990WHZZ" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="DEOXYCHOLIC ACID"/>
+                        <name>DEOXYCHOLIC ACID</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIB">				
+                  <quantity>
+                    <numerator value="4.27" unit="mg"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>				  
+                  <ingredientSubstance>
+                    <code code="94A7UFL2SI" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="ENALAPRIL SODIUM"/>
+                    <name>ENALAPRIL SODIUM</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="9O25354EPJ" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="ENALAPRIL MALEATE"/>
+                        <name>ENALAPRIL MALEATE</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIM">
+                  <quantity>
+                    <numerator value="4271" unit="mg"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="48A5M73Z4Q" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="ATORVASTATIN CALCIUM"/>
+                    <name>ATORVASTATIN CALCIUM</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="A0JWA85V8F" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="ATORVASTATIN"/>
+                        <name>ATORVASTATIN</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIR">
+                  <quantity>
+                    <numerator value="2.91" unit="mg"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="1X9VK9O1SC" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="FLUDARABINE PHOSPHATE"/>
+                    <name>FLUDARABINE PHOSPHATE</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="2BP70L44PR" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="DEXAMETHASONE PHOSPHATE"/>
+                        <name>DEXAMETHASONE PHOSPHATE</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                    <asEquivalentSubstance>
+                      <definingSubstance>
+                        <code code="436LRU32H5" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="RUXOLITINIB PHOSPHATE"/>
+                        <name>RUXOLITINIB PHOSPHATE</name>
+                      </definingSubstance>
+                    </asEquivalentSubstance>
+                  </ingredientSubstance>
+                </ingredient>
+				<ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="4AQJ3LG584" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="FD&amp;C BLUE NO. 2 ALUMINUM LAKE"/>
+                    <name>FD&amp;C BLUE NO. 2 ALUMINUM LAKE</name>
+                  </ingredientSubstance>
+				</ingredient>
+                <ingredient classCode="IACT">
+                  <quantity>
+                    <numerator value="2.8" unit="mg"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="LACTOSE MONOHYDRATE"/>
+                    <name>LACTOSE MONOHYDRATE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="Z944H5SN0H" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="METHYLCELLULOSE"/>
+                    <name>METHYLCELLULOSE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+				  <quantity>
+                    <numerator value="1.7" unit="mg"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="2S7830E561" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="CROSPOVIDONE"/>
+                    <name>CROSPOVIDONE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="70097M6I30" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="MAGNESIUM STEARATE"/>
+                    <name>MAGNESIUM STEARATE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="TITANIUM DIOXIDE"/>
+                    <name>TITANIUM DIOXIDE</name>
+                  </ingredientSubstance>
+                </ingredient>
+				<asContent>
+                  <quantity>
+                    <numerator value="5" unit="1"/>
+                    <denominator value="1"/>
+                  </quantity>
+				  <containerPackagedProduct>
+					<code code="AAA-1111"/>
+                    <formCode code="30008000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Bottle"/>
+                  </containerPackagedProduct>
+                  <subjectOf>
+                    <marketingAct>
+                      <effectiveTime>
+                        <low value="20100215"/>
+                      </effectiveTime>
+                    </marketingAct>
+                  </subjectOf>
+                </asContent>
+                <asContent>
+                  <quantity>
+                    <numerator value="10" unit="1"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+					<code code="AAA-2222"/>
+                    <formCode code="30008000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Bottle"/>
+                  </containerPackagedProduct>
+                  <subjectOf>
+                    <marketingAct>
+                      <effectiveTime>
+                        <low value="20120702"/>
+						<high value="20170614"/>
+                      </effectiveTime>
+                    </marketingAct>
+                  </subjectOf>
+                </asContent>
+                <asContent>
+                  <quantity>
+                    <numerator value="30" unit="1"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+                    <code code="AAA-3333"/>
+                    <formCode code="30008000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Bottle"/>
+                  </containerPackagedProduct>
+                  <subjectOf>
+                    <marketingAct>
+                      <effectiveTime>
+                        <low value="20131031"/>
+                      </effectiveTime>
+                    </marketingAct>
+                  </subjectOf>
+                </asContent>
+                <asContent>
+                  <quantity>
+                    <numerator value="10" unit="1"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+                    <code code="ABC-4444"/>
+                    <formCode code="30007000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Blister"/>
+                    <asContent>
+                      <quantity>
+                        <numerator value="3" unit="1"/>
+                        <denominator value="1"/>
+                      </quantity>
+                      <containerPackagedProduct>
+                        <code code="AAA-4445"/>
+                        <formCode code="30009000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Box"/>
+                      </containerPackagedProduct>
+					  <subjectOf>					  							
+                        <marketingAct>
+						  <effectiveTime>
+							<low value="20180502"/>
+						  </effectiveTime>						  
+                        </marketingAct>
+                      </subjectOf>
+                    </asContent>
+                  </containerPackagedProduct>
+                </asContent>
+              </manufacturedProduct>
+              <subjectOf>
+                <approval>
+                  <id extension="111222"/>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="NDS"/>
+                  <author>
+                    <territorialAuthority>
+                      <territory>
+                        <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                      </territory>
+                    </territorialAuthority>
+                  </author>
+                </approval>
+              </subjectOf>
+              <subjectOf>
+                <marketingAct>
+                  <effectiveTime>
+                    <low value="20100215"/>
+                  </effectiveTime>
+                </marketingAct>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53" displayName="PHARMACEUTICAL" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                  <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="WHITE" xsi:type="CV">
+                    <originalText>white to off white</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>              
+			  <subjectOf>
+                <characteristic>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                  <value code="C48326" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="RED" xsi:type="CV">
+                    <originalText>dark red</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>			  
+              <subjectOf>
+                <characteristic>
+                  <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SHAPE"/>
+                  <value code="C48335" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="BULLET" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="4" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SIZE"/>
+                  <value value="10" unit="mm" xsi:type="PQ"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="5" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCORE"/>
+                  <value code="0" codeSystem="2.16.840.1.113883.2.20.6.4" displayName="NO SCORE" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="6" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="IMPRINT"/>
+                  <value xsi:type="ST">A;45</value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PHARMACEUTICAL STANDARD"/>
+                  <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCHEDULE"/>
+                  <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Prescription" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="THERAPEUTIC CLASS"/>
+                  <value code="A01AA" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="Caries prophylactic agents" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <consumedIn>
+                <substanceAdministration>
+                  <routeCode code="20053000" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Oral use"/>
+                </substanceAdministration>
+              </consumedIn>
+            </manufacturedProduct>
+          </subject>	
+		  <subject>
+            <manufacturedProduct>
+              <manufacturedProduct>
+                <code code="22223456"/>
+                <name>Range Product</name>
+                <formCode code="134" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Solution"/>
+                <asEntityWithGeneric>
+                  <genericMedicine>
+                    <name>Range Generic Name</name>
+                  </genericMedicine>
+                </asEntityWithGeneric>				
+                <ingredient classCode="ACTIB">
+                  <quantity>
+                    <numerator xsi:type="URG_PQ">
+                      <low value="10000" unit="[CFU]"/>
+                      <high value="20000" unit="[CFU]"/>
+                    </numerator>
+                    <denominator value="1" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="KZ3L01D2PC" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="ROTAVIRUS VACCINE (RIX4414 STRAIN), LIVE, ORAL, ATTENUATED (HUMAN)"/>
+                    <name>ROTAVIRUS VACCINE (RIX4414 STRAIN), LIVE, ORAL, ATTENUATED (HUMAN)</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="KZ3L01D2PC" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="ROTAVIRUS VACCINE (RIX4414 STRAIN), LIVE, ORAL, ATTENUATED (HUMAN)"/>
+                        <name>ROTAVIRUS VACCINE (RIX4414 STRAIN), LIVE, ORAL, ATTENUATED (HUMAN)</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>				
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="LACTOSE MONOHYDRATE"/>
+                    <name>LACTOSE MONOHYDRATE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="Z944H5SN0H" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="METHYLCELLULOSE"/>
+                    <name>METHYLCELLULOSE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="2S7830E561" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="CROSPOVIDONE"/>
+                    <name>CROSPOVIDONE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="70097M6I30" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="MAGNESIUM STEARATE"/>
+                    <name>MAGNESIUM STEARATE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="TITANIUM DIOXIDE"/>
+                    <name>TITANIUM DIOXIDE</name>
+                  </ingredientSubstance>
+                </ingredient>				
+				<asContent>				  
+				  <quantity>
+                    <numerator value="5" unit="mL"/>
+                    <denominator value="1"/>
+                  </quantity>				  
+                  <containerPackagedProduct>
+					<code code="BBB-1111"/>
+                    <formCode code="30069000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Vial"/>
+				  </containerPackagedProduct>
+                  <subjectOf>
+                     <marketingAct>
+                        <effectiveTime>
+                            <low value="20150522"/>
+                        </effectiveTime>
+                     </marketingAct>
+                   </subjectOf>
+                </asContent>				
+              </manufacturedProduct>
+              <subjectOf>
+                <approval>
+                  <id extension="222333"/>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="SNDS"/>
+                  <author>
+                    <territorialAuthority>
+                      <territory>
+                        <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                      </territory>
+                    </territorialAuthority>
+                  </author>
+                </approval>
+              </subjectOf>
+              <subjectOf>
+                <marketingAct>
+                  <effectiveTime>
+                    <low value="20140614"/>
+                    <high value="20210215"/>
+                  </effectiveTime>
+                </marketingAct>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53" displayName="PHARMACEUTICAL" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                  <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="WHITE" xsi:type="CV">
+                    <originalText>white to off white</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PHARMACEUTICAL STANDARD"/>
+                  <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCHEDULE"/>
+                  <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Prescription" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="THERAPEUTIC CLASS"/>
+                  <value code="A01AA30" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="combinations" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <consumedIn>
+                <substanceAdministration>
+                  <routeCode code="20035000" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Intramuscular use"/>
+                </substanceAdministration>
+              </consumedIn>
+            </manufacturedProduct>
+          </subject>		  
+          <subject>
+            <manufacturedProduct>
+              <manufacturedProduct>
+                <code code="33334567"/>
+                <name>Liquid Product</name>
+                <formCode code="134" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Solution"/>
+                <asEntityWithGeneric>
+                  <genericMedicine>
+                    <name>Liquid Generic Name</name>
+                  </genericMedicine>
+                </asEntityWithGeneric>
+                <ingredient classCode="ACTIB">
+                  <quantity>
+                    <numerator value="3.129" unit="mg"/>
+                    <denominator value="1" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="005990WHZZ" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="DEOXYCHOLIC ACID"/>
+                    <name>DEOXYCHOLIC ACID</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="005990WHZZ" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="DEOXYCHOLIC ACID"/>
+                        <name>DEOXYCHOLIC ACID</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="LACTOSE MONOHYDRATE"/>
+                    <name>LACTOSE MONOHYDRATE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <quantity>
+                    <numerator value="1.23" unit="mg"/>
+                    <denominator value="1" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="Z944H5SN0H" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="METHYLCELLULOSE"/>
+                    <name>METHYLCELLULOSE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <quantity>
+                    <numerator value="2.45" unit="mg"/>
+                    <denominator value="1" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="2S7830E561" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="CROSPOVIDONE"/>
+                    <name>CROSPOVIDONE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="70097M6I30" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="MAGNESIUM STEARATE"/>
+                    <name>MAGNESIUM STEARATE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="TITANIUM DIOXIDE"/>
+                    <name>TITANIUM DIOXIDE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <asContent>
+                  <quantity>
+                    <numerator value="3" unit="mL"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+                    <code code="CCC-1111"/>
+                    <formCode code="30069000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Vial"/>
+                  </containerPackagedProduct>
+                  <subjectOf>
+                    <marketingAct>
+                      <effectiveTime>
+                        <low value="20150522"/>
+                      </effectiveTime>
+                    </marketingAct>
+                  </subjectOf>
+                </asContent>
+                <asContent>
+                  <quantity>
+                    <numerator value="5" unit="mL"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+                    <code code="CCC-1112"/>
+                    <formCode code="30069000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Vial"/>
+                  </containerPackagedProduct>
+                  <subjectOf>
+                    <marketingAct>
+                      <effectiveTime>
+                        <low value="20150522"/>
+                      </effectiveTime>
+                    </marketingAct>
+                  </subjectOf>
+                </asContent>
+                <asContent>
+                  <quantity>
+                    <numerator value="6.5" unit="mL"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+                    <code code="CCD-1113"/>
+                    <formCode code="30069000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Vial"/>
+                  </containerPackagedProduct>
+					  <subjectOf>					  							
+                        <marketingAct>
+						  <effectiveTime>
+							<low value="20160126"/>
+						  </effectiveTime>						  
+                        </marketingAct>
+                      </subjectOf>				  
+                </asContent>
+              </manufacturedProduct>
+              <subjectOf>
+                <approval>
+                  <id extension="333444"/>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="SNDS"/>
+                  <author>
+                    <territorialAuthority>
+                      <territory>
+                        <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                      </territory>
+                    </territorialAuthority>
+                  </author>
+                </approval>
+              </subjectOf>
+              <subjectOf>
+                <marketingAct>
+                  <effectiveTime>
+                    <low value="20150522"/>
+                  </effectiveTime>
+                </marketingAct>
+              </subjectOf>
+			  <subjectOf>
+			    <characteristic>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                  <value code="C48327" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="PURPLE" xsi:type="CV">
+                    <originalText>light purple</originalText>
+                  </value>
+                </characteristic>
+			  </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53" displayName="PHARMACEUTICAL" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PHARMACEUTICAL STANDARD"/>
+                  <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCHEDULE"/>
+                  <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Prescription" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="THERAPEUTIC CLASS"/>
+                  <value code="A01AB" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="Antiinfectives and antiseptics for local oral treatment" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <consumedIn>
+                <substanceAdministration>
+                  <routeCode code="20035000" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Intramuscular use"/>
+                </substanceAdministration>
+              </consumedIn>
+			  <consumedIn>
+                <substanceAdministration>
+                  <routeCode code="20066000" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Subcutaneous use"/>
+                </substanceAdministration>
+              </consumedIn>
+            </manufacturedProduct>
+          </subject>
+          <subject>
+            <manufacturedProduct>
+              <manufacturedProduct>
+                <code code="44445678"/>
+                <name>Powder Oral Solution Product</name>
+                <formCode code="56" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Powder for solution"/>
+                <asEntityWithGeneric>
+                  <genericMedicine>
+                    <name>Powder Oral Solution Generic Name</name>
+                  </genericMedicine>
+                </asEntityWithGeneric>				
+				<ingredient classCode="ACTIB">				
+                  <quantity>
+                    <numerator value="2" unit="mg"/>
+                    <denominator value="1" unit="mL"/>						
+                  </quantity>				  
+                  <ingredientSubstance>
+                    <code code="K7RO88SP7A" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="SOLRIAMFETOL HYDROCHLORIDE"/>
+                    <name>SOLRIAMFETOL HYDROCHLORIDE</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="K7RO88SP7A" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="SOLRIAMFETOL HYDROCHLORIDE"/>
+                        <name>SOLRIAMFETOL HYDROCHLORIDE</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>			
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="LACTOSE MONOHYDRATE"/>
+                    <name>LACTOSE MONOHYDRATE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="Z944H5SN0H" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="METHYLCELLULOSE"/>
+                    <name>METHYLCELLULOSE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="2S7830E561" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="CROSPOVIDONE"/>
+                    <name>CROSPOVIDONE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="70097M6I30" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="MAGNESIUM STEARATE"/>
+                    <name>MAGNESIUM STEARATE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="TITANIUM DIOXIDE"/>
+                    <name>TITANIUM DIOXIDE</name>
+                  </ingredientSubstance>
+                </ingredient>											
+                <asContent>				
+                  <quantity>
+                    <numerator value="1" unit="mL"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+					<code code="DDD-1111"/>
+                    <formCode code="30069000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Vial"/>
+				  </containerPackagedProduct>
+                  <subjectOf>
+				     <marketingAct>
+                        <effectiveTime>
+                            <low value="20150522"/>
+							<high value="20170614"/>
+                        </effectiveTime>
+                     </marketingAct>
+                   </subjectOf>
+                </asContent>
+              </manufacturedProduct>
+              <subjectOf>
+                <approval>
+                  <id extension="333444"/>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="SNDS"/>
+                  <author>
+                    <territorialAuthority>
+                      <territory>
+                        <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                      </territory>
+                    </territorialAuthority>
+                  </author>
+                </approval>
+              </subjectOf>
+              <subjectOf>
+                <marketingAct>
+                  <effectiveTime>
+                    <low value="20150522"/>
+                  </effectiveTime>
+                </marketingAct>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53" displayName="PHARMACEUTICAL" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                  <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="WHITE" xsi:type="CV">
+                    <originalText>OFF WHITE</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PHARMACEUTICAL STANDARD"/>
+                  <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCHEDULE"/>
+                  <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Prescription" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="THERAPEUTIC CLASS"/>
+                  <value code="A01AA02" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="sodium monofluorophosphate" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <consumedIn>
+                <substanceAdministration>
+                  <routeCode code="20053000" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Oral use"/>
+                </substanceAdministration>
+              </consumedIn>
+            </manufacturedProduct>
+          </subject>		  
+          <subject>
+            <manufacturedProduct>
+              <manufacturedProduct>
+                <code code="55556781"/>
+                <name>Multi-part Multi-DIN Product Cream and Tablet Example</name>
+				<formCode code="32" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Multi-part product"/>
+                <asEntityWithGeneric>
+                  <genericMedicine>
+                    <name>Multi-part Multi-DIN Generic Name</name>
+                  </genericMedicine>
+                </asEntityWithGeneric>
+                <asContent>
+                  <quantity>
+                    <numerator value="1" unit="1"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+                    <code code="EEE-1111"/>
+                    <formCode code="30009000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Box"/>
+                  </containerPackagedProduct>
+                  <subjectOf>
+                    <marketingAct>
+                      <effectiveTime>
+                        <low value="20171111"/>
+                      </effectiveTime>
+                    </marketingAct>
+                  </subjectOf>
+                </asContent>
+                <part>
+                  <quantity>
+                    <numerator value="10" unit="mL"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <partProduct>
+                    <code code="55556782"/>
+                    <name>Multi-part Multi-DIN Cream</name>
+                    <formCode code="9" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Cream"/>
+                    <asEntityWithGeneric>
+                      <genericMedicine>
+                        <name>Multi-part Multi-DIN Cream Generic Name</name>
+                      </genericMedicine>
+                    </asEntityWithGeneric>
+                    <ingredient classCode="ACTIB">
+                      <quantity>
+                        <numerator value="2" unit="mg"/>
+                        <denominator value="1" unit="mL"/>
+                      </quantity>     
+					  <ingredientSubstance>
+                        <code code="G07GZ97H65" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="CLOTRIMAZOLE"/>
+                        <name>CLOTRIMAZOLE</name>
+                        <activeMoiety>
+                          <activeMoiety>
+                            <code code="G07GZ97H65" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="CLOTRIMAZOLE"/>
+                            <name>CLOTRIMAZOLE</name>
+                          </activeMoiety>
+                        </activeMoiety>
+                      </ingredientSubstance>					  
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="LACTOSE MONOHYDRATE"/>
+                        <name>LACTOSE MONOHYDRATE</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="Z944H5SN0H" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="METHYLCELLULOSE"/>
+                        <name>METHYLCELLULOSE</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="2S7830E561" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="CROSPOVIDONE"/>
+                        <name>CROSPOVIDONE</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="70097M6I30" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="MAGNESIUM STEARATE"/>
+                        <name>MAGNESIUM STEARATE</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="TITANIUM DIOXIDE"/>
+                        <name>TITANIUM DIOXIDE</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <asContent>
+                      <quantity>
+                        <numerator value="10" unit="mL"/>
+                        <denominator value="1"/>
+                      </quantity>
+                      <containerPackagedProduct>
+                        <code code="EEE-2222"/>
+                        <formCode code="30067000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Tube"/>
+                      </containerPackagedProduct>					  
+					  <subjectOf>					  							
+                        <marketingAct>
+						  <effectiveTime>
+							<low value="20120901"/>
+						  </effectiveTime>						  
+                        </marketingAct>
+                      </subjectOf>						  
+                    </asContent>
+                  </partProduct>
+                  <subjectOf>
+                    <approval>
+                      <id extension="555002"/>
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="NDS"/>
+                      <author>
+                        <territorialAuthority>
+                          <territory>
+                            <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                          </territory>
+                        </territorialAuthority>
+                      </author>
+                    </approval>
+                  </subjectOf>				  
+				  <subjectOf>
+					<marketingAct>
+					<effectiveTime>
+						<low value="20120901"/>
+					</effectiveTime>
+					</marketingAct>
+				  </subjectOf>				  
+                  <subjectOf>
+                    <characteristic>
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
+                      <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53" displayName="PHARMACEUTICAL" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                      <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="WHITE" xsi:type="CV">
+                        <originalText>OFF WHITE</originalText>
+                      </value>
+                    </characteristic>
+                  </subjectOf>				  
+                  <subjectOf>
+                    <characteristic>
+                      <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PHARMACEUTICAL STANDARD"/>
+                      <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCHEDULE"/>
+                      <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Prescription" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="THERAPEUTIC CLASS"/>
+                      <value code="A01AA03" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="olaflur" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <consumedIn>
+                    <substanceAdministration>
+                      <routeCode code="20072000" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Vaginal use"/>
+                    </substanceAdministration>
+                  </consumedIn>
+                </part>
+                <part>
+                  <quantity>
+                    <numerator value="2" unit="1"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <partProduct>
+                    <code code="55556783"/>
+                    <name>Multi-part Multi-DIN Suppository</name>
+                    <formCode code="154" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Vaginal tablet"/>
+                    <asEntityWithGeneric>
+                      <genericMedicine>
+                        <name>Multi-part Multi-DIN Suppository Generic Name</name>
+                      </genericMedicine>
+                    </asEntityWithGeneric>
+                    <ingredient classCode="ACTIB">
+                      <quantity>
+                        <numerator value="500" unit="mg"/>
+                        <denominator value="1" unit="1"/>
+                      </quantity>
+                      <ingredientSubstance>
+                        <code code="G07GZ97H65" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="CLOTRIMAZOLE"/>
+                        <name>CLOTRIMAZOLE</name>
+                        <activeMoiety>
+                          <activeMoiety>
+                            <code code="G07GZ97H65" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="CLOTRIMAZOLE"/>
+                            <name>CLOTRIMAZOLE</name>
+                          </activeMoiety>
+                        </activeMoiety>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <asContent>
+                      <quantity>
+                        <numerator value="2" unit="1"/>
+                        <denominator value="1"/>
+                      </quantity>
+                      <containerPackagedProduct>
+                        <code code="EEE-3333"/>
+                        <formCode code="30007000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Blister"/>
+                      </containerPackagedProduct>
+					  <subjectOf>
+						<marketingAct>
+						<effectiveTime>
+							<low value="20150814"/>
+						</effectiveTime>
+						</marketingAct>
+					  </subjectOf>					  
+                    </asContent>
+                  </partProduct>
+                  <subjectOf>
+                    <approval>
+                      <id extension="555106"/>
+                      <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="SNDS"/>
+                      <author>
+                        <territorialAuthority>
+                          <territory>
+                            <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                          </territory>
+                        </territorialAuthority>
+                      </author>
+                    </approval>
+                  </subjectOf>				  
+				  <subjectOf>
+					<marketingAct>
+					<effectiveTime>
+						<low value="20150814"/>
+					</effectiveTime>
+					</marketingAct>
+				  </subjectOf>					  
+                  <subjectOf>
+                    <characteristic>
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
+                      <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53" displayName="PHARMACEUTICAL" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                      <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="WHITE" xsi:type="CV">
+                        <originalText>Colourless to off white</originalText>
+                      </value>
+                    </characteristic>
+                  </subjectOf>				  
+			   	  <subjectOf>
+					<characteristic>
+					  <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SHAPE"/>
+                      <value code="C48335" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="BULLET" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="4" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SIZE"/>
+                      <value value="10" unit="mm" xsi:type="PQ"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="5" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCORE"/>
+                      <value code="0" codeSystem="2.16.840.1.113883.2.20.6.4" displayName="NO SCORE" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="6" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="IMPRINT"/>
+                      <value xsi:type="ST">A;45</value>
+                    </characteristic>
+                  </subjectOf>				  
+                  <subjectOf>
+                    <characteristic>
+                      <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PHARMACEUTICAL STANDARD"/>
+                      <value code="4" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="MFR" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCHEDULE"/>
+                      <value code="5" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="OTC" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="THERAPEUTIC CLASS"/>
+                      <value code="A01AA04" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="stannous fluoride" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <consumedIn>
+                    <substanceAdministration>
+					  <routeCode code="20072000" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Vaginal use"/>
+                    </substanceAdministration>
+                  </consumedIn>
+                </part>
+              </manufacturedProduct>
+              <subjectOf>
+                <approval>
+                  <id extension="555661"/>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="SNDS"/>
+                  <author>
+                    <territorialAuthority>
+                      <territory>
+                        <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                      </territory>
+                    </territorialAuthority>
+                  </author>
+                </approval>
+              </subjectOf>
+              <subjectOf>
+                <marketingAct>
+                  <effectiveTime>
+                    <low value="20171111"/>
+                  </effectiveTime>
+                </marketingAct>
+              </subjectOf>
+            </manufacturedProduct>
+          </subject>			  
+		  <subject>
+            <manufacturedProduct>
+              <manufacturedProduct>
+                <code code="66667891"/>
+                <name>Multi-part Single-DIN Product Birth Control</name>
+                <formCode code="32" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Multi-part product"/>
+                <asEntityWithGeneric>
+                  <genericMedicine>
+                    <name>Multi-part Single-DIN Generic Name</name>
+                  </genericMedicine>
+                </asEntityWithGeneric>				
+                <asContent>
+                  <quantity>
+				    <numerator value="1" unit="1"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+                    <code code="FFF-1111"/>
+					<formCode code="30007000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Blister"/>
+					<asContent>
+						<quantity>
+							<numerator value="2" unit="1"/>
+							<denominator value="1"/>
+						</quantity>
+						<containerPackagedProduct>
+							<code code="FFF-1112"/>
+							<formCode code="30009000" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="Box"/>
+						</containerPackagedProduct>
+						<subjectOf>
+							<marketingAct>
+								<effectiveTime>
+									<low value="20191229"/>
+								</effectiveTime>
+							</marketingAct>
+						</subjectOf>
+					</asContent>
+				  </containerPackagedProduct>					
+				</asContent>				
+				<part>
+                  <quantity>
+                    <numerator value="7" unit="1"/>   
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <partProduct>
+					<code code="66667891"/>
+                    <name>Multi-part Single-DIN Product Tablet 1</name>
+					<formCode code="85" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Tablet"/>
+                    <asEntityWithGeneric>
+                      <genericMedicine>
+                        <name>Multi-part Single-DIN Product Generic Name</name>
+                      </genericMedicine>
+                    </asEntityWithGeneric>
+                    <ingredient classCode="ACTIB">             
+					  <quantity>
+                         <numerator value="3" unit="mg"/>
+                         <denominator value="1" unit="1"/>
+                      </quantity>					  
+					  <ingredientSubstance>
+						<code code="005990WHZZ" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="DEOXYCHOLIC ACID"/>
+						<name>DEOXYCHOLIC ACID</name>
+						<activeMoiety>
+							<activeMoiety>
+								<code code="005990WHZZ" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="DEOXYCHOLIC ACID"/>
+								<name>DEOXYCHOLIC ACID</name>
+							</activeMoiety>
+						</activeMoiety>
+					  </ingredientSubstance>					  
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="LACTOSE MONOHYDRATE"/>
+                        <name>LACTOSE MONOHYDRATE</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="Z944H5SN0H" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="METHYLCELLULOSE"/>
+                        <name>METHYLCELLULOSE</name>
+                      </ingredientSubstance>
+                    </ingredient>		
+                  </partProduct>				  
+                  <subjectOf>
+                    <approval>
+                      <id extension="666771"/>
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="NDS"/>
+                      <author>
+                        <territorialAuthority>
+                          <territory>
+                            <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                          </territory>
+                        </territorialAuthority>
+                      </author>
+                    </approval>
+                  </subjectOf>					  
+				  <subjectOf>
+					<marketingAct>
+					<effectiveTime>
+						<low value="20191229"/>
+					</effectiveTime>
+					</marketingAct>
+				  </subjectOf>					  
+                  <subjectOf>
+                    <characteristic>
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
+                      <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53" displayName="PHARMACEUTICAL" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                      <value code="C48325" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="WHITE" xsi:type="CV">
+                        <originalText>OFF WHITE</originalText>
+                      </value>
+                    </characteristic>
+                  </subjectOf>				  
+				  <subjectOf>
+					  <characteristic>
+					  <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SHAPE"/>
+				  	  <value code="C48335" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="BULLET" xsi:type="CV"/>
+					  </characteristic>
+				  </subjectOf>
+				  <subjectOf>
+					  <characteristic>
+					  <code code="4" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SIZE"/>
+					  <value value="10" unit="mm" xsi:type="PQ"/>
+					  </characteristic>
+				  </subjectOf>
+				  <subjectOf>
+					<characteristic>
+					<code code="5" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCORE"/>
+					<value code="0" codeSystem="2.16.840.1.113883.2.20.6.4" displayName="NO SCORE" xsi:type="CV"/>
+					</characteristic>
+				  </subjectOf>					  				  
+                  <subjectOf>
+                    <characteristic>
+                      <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PHARMACEUTICAL STANDARD"/>
+                      <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCHEDULE"/>
+                      <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Prescription" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="THERAPEUTIC CLASS"/>
+                      <value code="A01AA03" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="olaflur" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+				  <consumedIn>
+                    <substanceAdministration>
+                      <routeCode code="20053000" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Oral use"/>
+                    </substanceAdministration>
+                  </consumedIn>				  
+                </part>					
+				<part>
+                  <quantity>
+                    <numerator value="8" unit="1"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <partProduct>
+					<code code="66667891"/>
+                    <name>Multi-part Single-DIN Product Tablet 2</name>
+					<formCode code="85" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Tablet"/>
+                    <asEntityWithGeneric>
+                      <genericMedicine>
+                        <name>Multi-part Single-DIN Product Generic Name</name>
+                      </genericMedicine>
+                    </asEntityWithGeneric>
+                    <ingredient classCode="ACTIB">             
+					  <quantity>
+                         <numerator value="4" unit="mg"/>
+                         <denominator value="1" unit="1"/>
+                      </quantity>					  
+					  <ingredientSubstance>
+						<code code="005990WHZZ" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="DEOXYCHOLIC ACID"/>
+						<name>DEOXYCHOLIC ACID</name>
+						<activeMoiety>
+							<activeMoiety>
+								<code code="005990WHZZ" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="DEOXYCHOLIC ACID"/>
+								<name>DEOXYCHOLIC ACID</name>
+							</activeMoiety>
+						</activeMoiety>
+					  </ingredientSubstance>					  
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="LACTOSE MONOHYDRATE"/>
+                        <name>LACTOSE MONOHYDRATE</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="Z944H5SN0H" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="METHYLCELLULOSE"/>
+                        <name>METHYLCELLULOSE</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                  </partProduct>
+                  <subjectOf>
+                    <approval>
+                      <id extension="666771"/>
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="NDS"/>
+                      <author>
+                        <territorialAuthority>
+                          <territory>
+                            <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                          </territory>
+                        </territorialAuthority>
+                      </author>
+                    </approval>
+                  </subjectOf>				  
+				  <subjectOf>
+					<marketingAct>
+					<effectiveTime>
+						<low value="20191229"/>
+					</effectiveTime>
+					</marketingAct>
+				  </subjectOf>					  
+                  <subjectOf>
+                    <characteristic>
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
+                      <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53" displayName="PHARMACEUTICAL" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                      <value code="C48328" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="PINK" xsi:type="CV">
+                        <originalText>OFF PINK</originalText>
+                      </value>
+                    </characteristic>
+                  </subjectOf>				  
+				  <subjectOf>
+					  <characteristic>
+					  <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SHAPE"/>
+				  	  <value code="C48335" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="BULLET" xsi:type="CV"/>
+					  </characteristic>
+				  </subjectOf>
+				  <subjectOf>
+					  <characteristic>
+					  <code code="4" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SIZE"/>
+					  <value value="10" unit="mm" xsi:type="PQ"/>
+					  </characteristic>
+				  </subjectOf>
+				  <subjectOf>
+					<characteristic>
+					<code code="5" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCORE"/>
+					<value code="0" codeSystem="2.16.840.1.113883.2.20.6.4" displayName="NO SCORE" xsi:type="CV"/>
+					</characteristic>
+				  </subjectOf>					  
+                  <subjectOf>
+                    <characteristic>
+                      <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PHARMACEUTICAL STANDARD"/>
+                      <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCHEDULE"/>
+                      <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Prescription" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="THERAPEUTIC CLASS"/>
+                      <value code="A01AA03" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="olaflur" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+				  <consumedIn>
+                    <substanceAdministration>
+                      <routeCode code="20053000" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Oral use"/>
+                    </substanceAdministration>
+                  </consumedIn>				  
+                </part>					
+                <part>
+                  <quantity>
+                    <numerator value="9" unit="1"/>
+                    <denominator value="1" unit="1"/>
+                  </quantity>
+                  <partProduct>
+					<code code="66667891"/>
+                    <name>Multi-part Single-DIN Product Tablet 3</name>
+					<formCode code="85" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="Tablet"/>
+                    <asEntityWithGeneric>
+                      <genericMedicine>
+                        <name>Multi-part Single-DIN Product Generic Name</name>
+                      </genericMedicine>
+                    </asEntityWithGeneric>
+                    <ingredient classCode="ACTIB">             
+					  <quantity>
+                         <numerator value="5" unit="mg"/>
+                         <denominator value="1" unit="1"/>
+                      </quantity>					  
+					  <ingredientSubstance>
+						<code code="005990WHZZ" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="DEOXYCHOLIC ACID"/>
+						<name>DEOXYCHOLIC ACID</name>
+						<activeMoiety>
+							<activeMoiety>
+								<code code="005990WHZZ" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="DEOXYCHOLIC ACID"/>
+								<name>DEOXYCHOLIC ACID</name>
+							</activeMoiety>
+						</activeMoiety>
+					  </ingredientSubstance>					  
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="LACTOSE MONOHYDRATE"/>
+                        <name>LACTOSE MONOHYDRATE</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="Z944H5SN0H" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="METHYLCELLULOSE"/>
+                        <name>METHYLCELLULOSE</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                  </partProduct>
+                  <subjectOf>
+                    <approval>
+                      <id extension="666771"/>
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="NDS"/>
+                      <author>
+                        <territorialAuthority>
+                          <territory>
+                            <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                          </territory>
+                        </territorialAuthority>
+                      </author>
+                    </approval>
+                  </subjectOf>				  
+				  <subjectOf>
+					<marketingAct>
+					<effectiveTime>
+						<low value="20191229"/>
+					</effectiveTime>
+					</marketingAct>
+				  </subjectOf>					  
+                  <subjectOf>
+                    <characteristic>
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
+                      <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53" displayName="PHARMACEUTICAL" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                      <value code="C48329" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="GREEN" xsi:type="CV">
+                        <originalText>OFF GREEN</originalText>
+                      </value>
+                    </characteristic>
+                  </subjectOf>
+				  <subjectOf>
+					  <characteristic>
+					  <code code="3" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SHAPE"/>
+				  	  <value code="C48335" codeSystem="2.16.840.1.113883.2.20.6.25" displayName="BULLET" xsi:type="CV"/>
+					  </characteristic>
+				  </subjectOf>
+				  <subjectOf>
+					  <characteristic>
+					  <code code="4" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SIZE"/>
+					  <value value="10" unit="mm" xsi:type="PQ"/>
+					  </characteristic>
+				  </subjectOf>
+				  <subjectOf>
+					<characteristic>
+					<code code="5" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCORE"/>
+					<value code="0" codeSystem="2.16.840.1.113883.2.20.6.4" displayName="NO SCORE" xsi:type="CV"/>
+					</characteristic>
+				  </subjectOf>				  
+                  <subjectOf>
+                    <characteristic>
+                      <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PHARMACEUTICAL STANDARD"/>
+                      <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="USP" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="SCHEDULE"/>
+                      <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="Prescription" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="THERAPEUTIC CLASS"/>
+                      <value code="A01AA03" codeSystem="2.16.840.1.113883.2.20.6.6" displayName="olaflur" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+				  <consumedIn>
+                    <substanceAdministration>
+                      <routeCode code="20053000" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="Oral use"/>
+                    </substanceAdministration>
+                  </consumedIn>				  
+                </part>			
+              </manufacturedProduct>
+              <subjectOf>
+                <approval>
+                  <id extension="666771"/>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="NDS"/>
+                  <author>
+                    <territorialAuthority>
+                      <territory>
+                        <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="Canada"/>
+                      </territory>
+                    </territorialAuthority>
+                  </author>
+                </approval>
+              </subjectOf>
+              <subjectOf>
+                <marketingAct>
+                  <effectiveTime>
+                    <low value="20191229"/>
+                  </effectiveTime>
+                </marketingAct>
+              </subjectOf>
+            </manufacturedProduct>
+          </subject>		  
+	    </section>		
+	  </component>	  
+      <component>
+        <section ID="d8d30d86-e343-48f4-9cec-524834b3803b">
+          <id root="eed00b53-cdb2-4aa6-9e82-88b7d793b208"/>
+          <code code="0TP" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="TITLE PAGE"/>
+          <title>TITLE PAGE</title>
+          <effectiveTime value="20210101"/>
+          <component>
+            <section ID="be75cfb9-3131-4903-800b-267427388a13">
+              <id root="b9db4be0-3f46-437a-bd7b-4a3e010afaad"/>
+              <code code="0tp1.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Title"/>
+              <title>Title</title>
+              <text>
+                <paragraph>PRODUCT MONOGRAPH</paragraph>
+                <paragraph>INCLUDING PATIENT MEDICATION INFORMATION</paragraph>
+                <br/>
+                <paragraph>
+                  <sup>Scheduling Symbol </sup>
+                  <content styleCode="bold">BRAND NAME</content>
+                </paragraph>
+                <paragraph>Proper name in final dosage form</paragraph>
+                <paragraph>Dosage Form, Strength and Route of Administration</paragraph>
+                <paragraph>Pharmaceutical Standard</paragraph>
+                <paragraph>Therapeutic Classification</paragraph>
+                <br/>
+                <paragraph styleCode="Boxed First">"Brand name, indicated for:</paragraph>
+                <list styleCode="Boxed" listType="unordered">
+                  <item>indication text</item>
+                </list>
+                <paragraph styleCode="Boxed Last">
+					has been issued market authorization with conditions, pending the results of trials to verify its clinical benefit. Patients should be advised of the nature of the authorization. For further information for &lt;Brand name&gt; please refer to Health Canada’s Notice of Compliance with conditions - drug products web site: 
+					<linkHtml href="https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/notice-compliance/conditions.html">https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/notice-compliance/conditions.html"</linkHtml></paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="f187daf9-5e75-425a-9de6-f6ce1af2a965">
+              <id root="ac26f58c-721a-4c51-8bbc-c9dddb1f1233"/>
+              <code code="0tp1.2" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Company Name and Address"/>
+              <title>Company Name and Address</title>
+              <text>
+				<paragraph>Company Name 1<br/>Street address<br/>City, PROV  Postal code<br/>Web address</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+		  <component>
+            <section ID="f187daf9-5e75-425a-9de6-f6ce1af2a967">
+              <id root="ac26f58c-721a-4c51-8bbc-c9dddb1f1235"/>
+              <code code="0tp1.2" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Company Name and Address"/>
+              <title>Company Name and Address</title>
+              <text>
+                <paragraph>Company Name 2<br/>Street address<br/>City, PROV  Postal code<br/>Web address</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="bf2dab4e-fd04-4ec9-9cdc-247188622d0f">
+              <id root="e5f1dea3-d907-4664-b46f-e1d9736d47af"/>
+              <code code="0tp1.3" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Date of Initial Authorization:"/>
+              <title>Date of Initial Authorization:</title>
+              <text>
+                <paragraph>2010-02-15</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="d0184119-8fd7-4378-af77-b227c39e8445">
+              <id root="ad78301c-29a9-41af-96f8-d58815fed296"/>
+              <code code="0tp1.4" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Date of Revision:"/>
+              <title>Date of Revision:</title>
+              <text>
+                <paragraph>2022-01-24</paragraph>
+              </text>			  
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="ebc3f3dc-71be-424f-91ef-8aca8c138b21">
+              <id root="efd8c4c1-d0dd-434d-b1c2-4daa18752fa8"/>
+              <code code="0tp1.5" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Control Number:"/>
+              <title>Control Number:</title>
+              <text>
+                <paragraph>123456</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="e2d4279e-5fca-4d26-898d-02548a217ab9">
+              <id root="f17bc229-d609-460a-b9dc-418008d47c90"/>
+              <code code="0tp1.6" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Footer"/>
+              <title>Footer</title>
+              <text>
+                <paragraph>[BRAND NAME<sup>®</sup> or ™] is a registered trademark of [COMPANY]</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+        </section>
+      </component>
+      <component>
+        <section ID="d7ceb5c8-7ee9-4fd2-884e-7a50c06b27e1">
+          <id root="dd1e1c43-f0d3-4ba8-b1f5-bd009a5dd5a8"/>
+          <code code="0NOC" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="NOTICE OF COMPLIANCE WITH CONDITIONS"/>
+          <title>NOTICE OF COMPLIANCE WITH CONDITIONS</title>
+          <text>
+            <paragraph>
+              <content styleCode="bold">What is a Notice of Compliance with Conditions (NOC/c)?</content>
+            </paragraph>
+            <paragraph>
+              <content styleCode="italics">An NOC/c is a form of market approval granted to a product on the basis of promising evidence of clinical effectiveness following review of the submission by Health Canada.</content>
+            </paragraph>
+            <paragraph>
+              <content styleCode="italics">Products authorized under Health Canada’s NOC/c policy are intended for the treatment, prevention or diagnosis of a serious, life-threatening or severely debilitating illness. They have demonstrated promising benefit, are of high quality and possess an acceptable safety profile based on a benefit/risk assessment. In addition, they either respond to a serious unmet medical need in Canada or have demonstrated a significant improvement in the benefit/risk profile over existing therapies. Health Canada has provided access to this  product on the condition that sponsors carry out additional clinical trials to verify the anticipated benefit within an agreed upon time frame.</content>
+            </paragraph>
+          </text>
+          <effectiveTime value="20210101"/>
+        </section>
+      </component>
+      <component>
+        <section ID="d7cee5c8-7ee9-4fd2-184e-7a50c06b27e1">
+          <id root="dd1e1c93-f0d3-4ba8-b1f5-ad009a5dd5a8"/>
+          <code code="1RMLC" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="RECENT MAJOR LABEL CHANGES"/>
+          <title>RECENT MAJOR LABEL CHANGES</title>
+          <text>
+            <table ID="TableRMLC" rules="all" frame="border">
+              <thead>
+                <tr>
+                  <th>Section</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody valign="top" align="left">
+                <tr>
+                  <td align="left">1 INDICATIONS, <linkHtml href="#b9db4ce0-3f46-434a-bd7b-4a3e010adaad">1.1 Pediatrics
+				  </linkHtml></td>
+                  <td>12/2020</td>
+                </tr>
+				<tr>
+                  <td align="left">3 SERIOUS WARNINGS AND PRECAUTIONS BOX, Lactic Acidosis</td>
+                  <td>[Removed] 04/2019</td>
+                </tr>
+                <tr>
+                  <td align="left">7 WARNINGS AND PRECAUTIONS, <linkHtml href="#a473c162-e176-4ad0-b797-2b7b6cf00e43">7.1.1 Pregnant Women</linkHtml></td>
+                  <td>01/2021</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <effectiveTime value="20210101"/>
+        </section>
+      </component>
+      <component>
+        <section ID="d7ceb5c1-7ee9-4fd2-884e-7a50c06b27e1">
+          <id root="dd1e1c41-f0d3-4ba8-b1f5-bd009a5dd5a8"/>
+          <code code="0BBD" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="BIOSIMILAR BIOLOGIC DRUG"/>
+          <title>BIOSIMILAR BIOLOGIC DRUG</title>
+          <text>
+            <paragraph>
+              <content styleCode="italics">
+			  [Biosimilar brand name (proper name)] is a biosimilar biologic drug (biosimilar) to [Reference biologic drug brand name]
+			  </content>
+            </paragraph>
+          </text>
+          <effectiveTime value="20210101"/>
+        </section>
+      </component>
+      <component>
+        <section ID="d6a947eb-e2be-45c0-8b2e-15d0d0eebea8">
+          <id root="e6bb83b9-2602-4f96-9077-b8b9535c254e"/>
+          <code code="pi00" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="PART I: HEALTH PROFESSIONAL INFORMATION"/>
+          <title>PART I: HEALTH PROFESSIONAL INFORMATION</title>
+          <effectiveTime value="20210101"/>
+          <component>
+            <section ID="c2ea4fad-2b79-4dbc-8d99-6843adc2dec8">
+              <id root="aa3f869a-7734-425a-85d8-b8bd4d3500a5"/>
+              <code code="pi01" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="1 INDICATIONS"/>
+              <title>1 INDICATIONS</title>
+              <text>
+                <paragraph>BRAND NAME (proper name in final dosage form) is indicated for:</paragraph>
+                <list listType="unordered">
+                  <item>Text</item>
+                  <item>Text</item>
+                </list>
+                <paragraph>Text</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+              <component>
+                <section ID="f2aa7e0e-2042-4a4c-a783-9ad4e8717a32">
+                  <id root="b9db4ce0-3f46-434a-bd7b-4a3e010adaad"/>
+                  <code code="pi01.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="1.1 Pediatrics"/>
+                  <title>1.1 Pediatrics</title>
+                  <text>
+                    <paragraph><content styleCode="xmChange">Text</content></paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="be75cfb9-3132-4903-800b-267427388a13">
+                  <id root="b9db4be0-3f46-43fa-bd7b-4a3e010adaad"/>
+                  <code code="pi01.2" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="1.2 Geriatrics"/>
+                  <title>1.2 Geriatrics</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+            </section>
+          </component>
+          <component>
+            <section ID="be75cfb9-3131-4903-800b-367427388a13">
+              <id root="b90b4be0-3f46-437a-bd7b-4a3e010adaad"/>
+              <code code="pi02" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="2 CONTRAINDICATIONS"/>
+              <title>2 CONTRAINDICATIONS</title>
+              <text>
+                <list>
+                  <item>Text</item>
+                </list>
+				<paragraph>This is an example of an internal hyperlink (see
+				   <linkHtml href="#Hyperlink1">Cardiovascular</linkHtml>)</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="be75cfb9-3131-4903-800b-267427398a13">
+              <id root="b9fb4be0-3f46-437a-bd7b-4a3e010adaad"/>
+              <code code="pi03" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="3 SERIOUS WARNINGS AND PRECAUTIONS BOX"/>
+              <title>3 SERIOUS WARNINGS AND PRECAUTIONS BOX</title>
+              <text>
+                <list styleCode="Boxed First Last">
+                  <item>Text</item>
+                  <item>Text</item>
+                </list>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="be75cfb9-3131-4903-800b-267727398a13">
+              <id root="b9db4be0-3f46-434a-bd7b-4a3e010adaad"/>
+              <code code="pi04" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="4 DOSAGE AND ADMINISTRATION"/>
+              <title>4 DOSAGE AND ADMINISTRATION</title>
+              <effectiveTime value="20210101"/>
+              <component>
+                <section ID="be75cfb9-3131-4103-800b-267727398a13">
+                  <id root="b9db4be0-3f46-437a-bd7b-4a3e310adaad"/>
+                  <code code="pi04.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="4.1 Dosing Considerations"/>
+                  <title>4.1 Dosing Considerations</title>
+                  <text>
+                    <list>
+                      <item>Text</item>
+                    </list>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="b3d876c1-c36c-4ed5-8993-c507e3ab9f2e">
+                  <id root="da2d22a3-b5c2-4a62-b138-9594dd0491bb"/>
+                  <code code="pi04.2" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="4.2 Recommended Dose and Dosage Adjustment"/>
+                  <title>4.2 Recommended Dose and Dosage Adjustment</title>
+                  <text>
+                    <list>
+                      <item>Text</item>
+                    </list>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f4a">
+                  <id root="a473c162-e176-44d0-b797-2b7b6cf0ae43"/>
+                  <code code="pi04.3" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="4.3 Reconstitution"/>
+                  <title>4.3 Reconstitution</title>
+                  <text>
+                    <paragraph>
+                      <content styleCode="bold">Oral Solutions:</content>
+                    </paragraph>
+                    <list>
+                      <item>Text and/or table</item>
+                    </list>
+                    <paragraph>
+                      <content styleCode="bold">Parenteral Products:</content>
+                    </paragraph>
+                    <list>
+                      <item>Table and text</item>
+                    </list>
+                    <table ID="Table1" rules="all" frame="border">
+                      <caption>Table 1 Reconstitution</caption>
+                      <thead>
+                        <tr align="center">
+                          <th>Vial Size</th>
+                          <th>Volume of Diluent to be Added to Vial</th>
+                          <th>Approximate Available Volume</th>
+                          <th>Concentration per mL</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Text</td>
+                          <td>Text</td>
+                          <td>Text</td>
+                          <td>Text</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f3a">
+                  <id root="a473c162-f176-44d0-b797-2b7b6cf00e43"/>
+                  <code code="pi04.4" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="4.4 Administration"/>
+                  <title>4.4 Administration</title>
+                  <text>
+                    <paragraph>Text and/or table</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f5a">
+                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e33"/>
+                  <code code="pi04.5" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="4.5 Missed Dose"/>
+                  <title>4.5 Missed Dose</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c98a5-e08a-472c-b8a2-a12dba105a5a">
+                  <id root="a473c162-e176-44d0-b797-2b2b6cf00e33"/>
+                  <code code="pi04.6" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="4.6 Image Acquisition and Interpretation"/>
+                  <title>4.6 Image Acquisition and Interpretation</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c98a5-e08a-472c-b8a2-a12dba105f5a">
+                  <id root="a473c162-e176-44d0-b797-212b6cf00e33"/>
+                  <code code="pi04.7" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="4.7 Instructions for Preparation and Use"/>
+                  <title>4.7 Instructions for Preparation and Use</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c08a5-e08a-472c-b8a2-a12dba105f5a">
+                  <id root="a173c162-e176-44d0-b797-212b6cf00e33"/>
+                  <code code="pi04.8" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="4.8 Radiation Dosimetry"/>
+                  <title>4.8 Radiation Dosimetry</title>
+                  <text>
+                    <table ID="Table2" rules="all" frame="border">
+					  <caption>Table 2 Final Dose Estimates</caption>
+                      <thead>
+                        <tr align="center">
+                          <th>ORGAN</th>
+                          <th>mGy/MBq</th>
+                          <th>rad/mCi</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Adrenals</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Brain</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Breasts</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Gallbladder Wall</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>LLI Wall</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Small Intestine</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Stomach</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>ULI Wall</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Heart Wall</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Kidneys</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Liver</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Lungs</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Muscle</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Ovaries</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Pancreas</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Red Marrow</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Bone Surfaces</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Skin</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Spleen</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Testes</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Thymus</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Thyroid</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Urinary Bladder</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Uterus</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+            </section>
+          </component>
+          <component>
+            <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f6a">
+              <id root="a473c162-e176-44d0-b797-2b7b6cf20e43"/>
+              <code code="pi05" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="5 OVERDOSAGE"/>
+              <title>5 OVERDOSAGE</title>
+              <text>
+                <paragraph>Text</paragraph>
+                <paragraph styleCode="Boxed First Last">
+					For management of a suspected drug overdose, contact your regional poison control centre.
+				</paragraph>
+			  </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f7a">
+              <id root="a471c162-e176-44d0-b797-2b7b6cf00e43"/>
+              <code code="pi06" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="6 DOSAGE FORMS, STRENGTHS, COMPOSITION AND PACKAGING"/>
+              <title>6 DOSAGE FORMS, STRENGTHS, COMPOSITION AND PACKAGING</title>
+              <text>
+                <table ID="Table3" rules="all" frame="border">
+                  <caption>Table 3 Dosage Forms, Strengths, Composition and Packaging</caption>
+				  <colgroup span="5"/>	
+                  <thead>
+                    <tr align="center">
+                      <th>Route of Administration<footnote ID="Footnote1">This is an example of long footnote text that will span all of the table columns and uses the full width of the table.</footnote></th>
+                      <th>Dosage Form / Strength/Composition<footnote>This is an example of a second footnote text.</footnote></th>
+                      <th>Non-medicinal Ingredients</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>oral</td>
+                      <td>tablet 5 mg, 10 mg</td>
+                      <td>Ingredient<footnoteRef IDREF="Footnote1"/>, Ingredient, Ingredient</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Description</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+              <component>
+                <section ID="a63c98a5-e08a-400c-b8a2-a12dba105f5a">
+                  <id root="a473c162-e176-44d0-b797-212b60000e33"/>
+                  <code code="pi06.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="6.1 Physical Characteristics"/>
+                  <title>6.1 Physical Characteristics</title>
+                  <text>
+                    <paragraph>Table</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c90a5-e08a-400c-b8a2-a12dba105f5a">
+                  <id root="a473c162-e176-44d0-b797-214b60000e33"/>
+                  <code code="pi06.2" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="6.2 External Radiation"/>
+                  <title>6.2 External Radiation</title>
+                  <text>
+                    <paragraph>Table</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+            </section>
+          </component>
+          <component>
+            <section ID="a63c33a5-e08a-472c-b8a2-a12dba115f7a">
+              <id root="a4731162-e176-44d0-b797-2b7b6cf00e43"/>
+              <code code="pi07" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="7 WARNINGS AND PRECAUTIONS"/>
+              <title>7 WARNINGS AND PRECAUTIONS</title>
+              <text>
+                <paragraph>
+                  <content styleCode="bold">General</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Carcinogenesis and Mutagenesis</content>
+                </paragraph>
+                <paragraph>Text</paragraph>			
+				<paragraph ID="Hyperlink1">				
+                  <content styleCode="bold">Cardiovascular</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Contamination</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Dependence/Tolerance</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Driving and Operating Machinery</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Ear/Nose/Throat</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Endocrine and Metabolism</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Gastrointestinal</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Genitourinary</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Hematologic</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Hepatic/Biliary/Pancreatic</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Immune</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Monitoring and Laboratory Tests</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Musculoskeletal</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Neurologic</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Ophthalmologic</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Peri-Operative Considerations</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Psychiatric</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Renal</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Reproductive Health: Female and Male Potential</content>
+                </paragraph>
+                <list>
+                  <item>
+                    <content styleCode="bold">Fertility</content>
+                    <paragraph>Text</paragraph>
+                  </item>
+                </list>
+                <list>
+                  <item>
+                    <content styleCode="bold">Function</content>
+                    <paragraph>Text</paragraph>
+                  </item>
+                </list>
+                <list>
+                  <item>
+                    <content styleCode="bold">Teratogenic Risk</content>
+                    <paragraph>Text</paragraph>
+                  </item>
+                </list>
+                <paragraph>
+                  <content styleCode="bold">Respiratory</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Sensitivity/Resistance</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Skin</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+              <component>
+                <section ID="a63c33a5-e08a-472c-b8a2-a12dbc115f7a">
+                  <id root="a473c162-e176-44d0-bb97-2b7b6cf00e43"/>
+                  <code code="pi07.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="7.1 Special Populations"/>
+                  <title>7.1 Special Populations</title>
+                  <effectiveTime value="20210101"/>
+                  <component>
+                    <section ID="a63c33a5-e08a-472c-b8a2-b12dbc115f7a">
+                      <id root="a473c162-e176-4ad0-b797-2b7b6cf00e43"/>
+                      <code code="pi07.1.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="7.1.1 Pregnant Women"/>
+                      <title>7.1.1 Pregnant Women</title>
+                      <text>
+                        <paragraph>Text</paragraph>
+						<paragraph><content styleCode="xmChange">Text<br/>Text</content></paragraph>
+						<paragraph><content styleCode="xmChange">Text</content></paragraph>
+						<paragraph>Text</paragraph>
+                      </text>
+                      <effectiveTime value="20210101"/>
+                    </section>
+                  </component>
+                  <component>
+                    <section ID="a63c33a5-e08a-472c-b8a2-b12dbd115f7a">
+                      <id root="a473c162-1176-44d0-b797-2b7b6cf00e43"/>
+                      <code code="pi07.1.2" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="7.1.2 Breast-feeding"/>
+                      <title>7.1.2 Breast-feeding</title>
+                      <text>
+                        <paragraph>Text</paragraph>
+                      </text>
+                      <effectiveTime value="20210101"/>
+                    </section>
+                  </component>
+                  <component>
+                    <section ID="a63c33a5-e08a-472c-b8c2-b12dbc115f7a">
+                      <id root="a473c162-e176-44d0-b787-2b7b6cf00e43"/>
+                      <code code="pi07.1.3" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="7.1.3 Pediatrics"/>
+                      <title>7.1.3 Pediatrics</title>
+                      <text>
+                        <paragraph>Text</paragraph>
+                      </text>
+                      <effectiveTime value="20210101"/>
+                    </section>
+                  </component>
+                  <component>
+                    <section ID="a63c33a5-e08a-472c-b8d2-b12dbc115f7a">
+                      <id root="a473c162-e176-44d0-b797-2b7b6df00e43"/>
+                      <code code="pi07.1.4" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="7.1.4 Geriatrics"/>
+                      <title>7.1.4 Geriatrics</title>
+                      <text>
+                        <paragraph>Text</paragraph>
+                      </text>
+                      <effectiveTime value="20210101"/>
+                    </section>
+                  </component>
+                </section>
+              </component>
+            </section>
+          </component>
+          <component>
+            <section ID="a63c33a5-e08a-472c-b8a2-b22dbc115f7a">
+              <id root="a473c162-e176-44d0-b797-2b7b6cf11e43"/>
+              <code code="pi08" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="8 ADVERSE REACTIONS"/>
+              <title>8 ADVERSE REACTIONS</title>
+              <effectiveTime value="20210101"/>
+              <component>
+                <section ID="a63c33a5-e08a-472c-b8a2-b12dbd215f7a">
+                  <id root="a473c162-e176-44d0-b797-2b7b6cf12e43"/>
+                  <code code="pi08.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="8.1 Adverse Reaction Overview"/>
+                  <title>8.1 Adverse Reaction Overview</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c33a5-e08a-473c-b8a2-b12dbd215f7a">
+                  <id root="a473c162-e176-44d0-b797-2b7b6cab0e43"/>
+                  <code code="pi08.2" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="8.2 Clinical Trial Adverse Reactions"/>
+                  <title>8.2 Clinical Trial Adverse Reactions</title>
+                  <text>
+                    <paragraph>Clinical trials are conducted under very specific conditions.  The adverse reaction rates observed in the clinical trials; therefore, may not reflect the rates observed in practice and should not be compared to the rates in the clinical trials of another drug. Adverse reaction information from clinical trials may be useful in identifying and approximating rates of adverse drug reactions in real-world use.</paragraph>
+                    <paragraph>Text</paragraph>
+                    <table ID="Table4" rules="all" frame="border">
+                      <caption>Table 4 Clinical Trial Adverse Reactions</caption>
+                      <thead>
+                        <tr align="center">
+                          <th>System Organ Class (SOC)</th>
+                          <th>drug name n = # (%)</th>
+                          <th>placebo n = # (%)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>[use MedDRA terms for headings, as applicable]<br/><content styleCode="bold">Cardiovascular</content><br/>Text</td>
+                          <td/>
+                          <td/>
+                        </tr>
+                        <tr>
+                          <td>
+                            <content styleCode="bold">Gastrointestinal</content>
+                            <br/>Text</td>
+                          <td/>
+                          <td/>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                  <component>
+                    <section ID="a63c33a5-e08a-473c-b8a2-b12d0d215f7a">
+                      <id root="a473c162-e196-44d0-b797-207b6cf12e43"/>
+                      <code code="pi08.2.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="8.2.1 Clinical Trial Adverse Reactions - Pediatrics"/>
+                      <title>8.2.1 Clinical Trial Adverse Reactions - Pediatrics</title>
+                      <text>
+                        <paragraph>Text</paragraph>
+                      </text>
+                      <effectiveTime value="20210101"/>
+                    </section>
+                  </component>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c33a5-e08a-473c-b8a2-b12dbd315f7a">
+                  <id root="a473c162-e146-44d0-b797-2b7b6cf00e43"/>
+                  <code code="pi08.3" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="8.3 Less Common Clinical Trial Adverse Reactions"/>
+                  <title>8.3 Less Common Clinical Trial Adverse Reactions</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                  <component>
+                    <section ID="a63c33a5-e08a-465c-b8a2-b12d0d215f7a">
+                      <id root="a473c162-e196-44d0-b797-20700cf12e43"/>
+                      <code code="pi08.3.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="8.3.1 Less Common Clinical Trial Adverse Reactions - Pediatrics"/>
+                      <title>8.3.1 Less Common Clinical Trial Adverse Reactions - Pediatrics</title>
+                      <text>
+                        <paragraph>Text</paragraph>
+                      </text>
+                      <effectiveTime value="20210101"/>
+                    </section>
+                  </component>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c33a5-e08a-473c-b8a2-b22dbd215f7a">
+                  <id root="a473c162-e176-44d0-be97-2b7b6cf00e43"/>
+                  <code code="pi08.4" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="8.4 Abnormal Laboratory Findings: Hematologic, Clinical Chemistry and Other Quantitative Data"/>
+                  <title>8.4 Abnormal Laboratory Findings: Hematologic, Clinical Chemistry and Other Quantitative Data</title>
+                  <text>
+                    <paragraph>
+                      <content styleCode="bold">Clinical Trial Findings</content>
+                    </paragraph>
+                    <paragraph>Table</paragraph>
+                    <paragraph>
+                      <content styleCode="bold">Post-Market Findings</content>
+                    </paragraph>
+                    <paragraph>Table</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c33a5-e08a-473c-b8a2-b32dbd215f7a">
+                  <id root="a473c162-e176-44c0-b797-2b7b6cf00e43"/>
+                  <code code="pi08.5" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="8.5 Post-Market Adverse Reactions"/>
+                  <title>8.5 Post-Market Adverse Reactions</title>
+                  <text>
+                    <paragraph>Text and/or table</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+            </section>
+          </component>
+          <component>
+            <section ID="a63c33a5-e08a-483c-b8a2-b22dbd215f7a">
+              <id root="a473c762-e176-44d0-b797-2b7b6cf00e43"/>
+              <code code="pi09" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="9 DRUG INTERACTIONS"/>
+              <title>9 DRUG INTERACTIONS</title>
+              <effectiveTime value="20210101"/>
+              <component>
+                <section ID="be75cfb9-3131-4903-800b-267527398a13">
+                  <id root="b9db4be0-3f46-437a-bd7b-4a3e01fadaad"/>
+                  <code code="pi09.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="9.1 Serious Drug Interactions"/>
+                  <title>9.1 Serious Drug Interactions</title>
+                  <text>
+                    <paragraph styleCode="Boxed First bold">Serious Drug Interactions</paragraph>
+                    <list styleCode="Boxed Last">
+                      <item>Text</item>
+                      <item>Text</item>
+                    </list>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c33a5-e08a-473c-b8a2-b14dbd315f7a">
+                  <id root="a473c162-e176-44d0-b797-2b7b6cf0de43"/>
+                  <code code="pi09.2" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="9.2 Drug Interactions Overview"/>
+                  <title>9.2 Drug Interactions Overview</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c33a5-e08a-473c-b8d2-b14dbd315f7a">
+                  <id root="a473c162-e176-44d0-b497-2b7b6cf00e43"/>
+                  <code code="pi09.3" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="9.3 Drug-Behavioural Interactions"/>
+                  <title>9.3 Drug-Behavioural Interactions</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c33a5-e0aa-473c-b8a2-b14dbd315f7a">
+                  <id root="a273c162-e176-44d0-b797-2b7b6cf00e43"/>
+                  <code code="pi09.4" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="9.4 Drug-Drug Interactions"/>
+                  <title>9.4 Drug-Drug Interactions</title>
+                  <text>
+                    <table ID="Table5" rules="all" frame="border">
+                      <caption>Table 5 Established or Potential Drug-Drug Interactions</caption>
+                      <thead>
+                        <tr align="center">
+                          <th>Proper/Common name</th>
+                          <th>Source of Evidence</th>
+                          <th>Effect</th>
+                          <th>Clinical comment</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Drug A</td>
+                          <td>Level/source of evidence</td>
+                          <td>Drug A conc</td>
+                          <td>Text</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <paragraph>Legend: C = Case Study; CT = Clinical Trial; T = Theoretical</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c33a5-e08a-47bc-b8d2-b14dbd315f7a">
+                  <id root="a473c162-e176-44d0-b997-2b7b6cf00e43"/>
+                  <code code="pi09.5" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="9.5 Drug-Food Interactions"/>
+                  <title>9.5 Drug-Food Interactions</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="be78cfb9-3131-4903-800b-267527398a13">
+                  <id root="b9db4be0-3f46-437a-bd7b-4a3e01aadaad"/>
+                  <code code="pi09.6" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="9.6 Drug-Herb Interactions"/>
+                  <title>9.6 Drug-Herb Interactions</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="a63c33a5-e0aa-473c-b8a2-b14dcd315f7a">
+                  <id root="a473c162-e176-44e0-b797-2b7b6cf00e43"/>
+                  <code code="pi09.7" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="9.7 Drug-Laboratory Test Interactions"/>
+                  <title>9.7 Drug-Laboratory Test Interactions</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+            </section>
+          </component>
+          <component>
+            <section ID="fa324c26-b939-4c3a-901d-516ccc314522">
+              <id root="dc0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
+              <code code="pi10" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="10 CLINICAL PHARMACOLOGY"/>
+              <title>10 CLINICAL PHARMACOLOGY</title>
+              <effectiveTime value="20210101"/>
+              <component>
+                <section ID="f7a324c26-b939-4c3a-901e-516ccc314522">
+                  <id root="ac0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
+                  <code code="pi10.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="10.1 Mechanism of Action"/>
+                  <title>10.1 Mechanism of Action</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="da324c26-b939-4d3a-901e-516ccc314522">
+                  <id root="cc0d2dd9-1c53-49dc-bad3-d6b420dc64e9"/>
+                  <code code="pi10.2" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="10.2 Pharmacodynamics"/>
+                  <title>10.2 Pharmacodynamics</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="aaa324c26-b939-4d4a-901e-516ccc314522">
+                  <id root="cc0d2dd9-1c53-49dc-bad3-d6b320d064e9"/>
+                  <code code="pi10.3" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="10.3 Pharmacokinetics"/>
+                  <title>10.3 Pharmacokinetics</title>
+                  <text>
+                    <table ID="Table6" rules="all" frame="border">
+                      <caption>Table 6 Summary of proper name Pharmacokinetic Parameters in specific patient population</caption>
+                      <thead>
+                        <tr align="center">
+                          <th>Criteria</th>
+                          <th>C<sub>max</sub></th>
+                          <th>T<sub>max</sub></th>
+                          <th>t<sub>1/2</sub> (h)</th>
+                          <th>AUC<sub>0-∞</sub></th>
+                          <th>CL</th>
+                          <th>Vd</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Single dose mean</td>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <paragraph styleCode="bold">Absorption</paragraph>
+                    <paragraph>Text</paragraph>
+                    <paragraph styleCode="bold">Distribution</paragraph>
+                    <paragraph>Text</paragraph>
+                    <paragraph styleCode="bold">Metabolism</paragraph>
+                    <paragraph>Text</paragraph>
+                    <paragraph styleCode="bold">Elimination</paragraph>
+                    <paragraph>Text</paragraph>
+                    <paragraph styleCode="bold">Duration of Effect</paragraph>
+                    <paragraph>Text</paragraph>
+                    <paragraph styleCode="bold">Special Populations and Conditions</paragraph>
+                    <paragraph>Text</paragraph>
+                    <list>
+                      <item>
+                        <content styleCode="bold">Pediatrics </content>Text</item>
+                      <item>
+                        <content styleCode="bold">Geriatrics </content>Text</item>
+                      <item>
+                        <content styleCode="bold">Sex </content>Text</item>
+                      <item>
+                        <content styleCode="bold">Pregnancy and Breast-feeding  </content>Text</item>
+                      <item>
+                        <content styleCode="bold">Genetic Polymorphism </content>Text</item>
+                      <item>
+                        <content styleCode="bold">Ethnic Origin </content>Text</item>
+                      <item>
+                        <content styleCode="bold">Hepatic Insufficiency </content>Text</item>
+                      <item>
+                        <content styleCode="bold">Renal Insufficiency </content>Text</item>
+                      <item>
+                        <content styleCode="bold">Obesity </content>Text</item>
+                    </list>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+            </section>
+          </component>
+          <component>
+            <section ID="da324d26-c939-443a-901e-526dcc314522">
+              <id root="cc0d2dd9-1c53-49dc-bad3-d6b420d069e9"/>
+              <code code="pi11" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="11 STORAGE, STABILITY AND DISPOSAL"/>
+              <title>11 STORAGE, STABILITY AND DISPOSAL</title>
+              <text>
+                <paragraph>Text</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="bba325d26-c939-443a-901e-526dcc314522">
+              <id root="fc0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
+              <code code="pi12" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="12 SPECIAL HANDLING INSTRUCTIONS"/>
+              <title>12 SPECIAL HANDLING INSTRUCTIONS</title>
+              <text>
+                <paragraph>Text</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+        </section>
+      </component>
+      <component>
+        <section ID="ab6a947eb-e2be-45c0-8b2e-15d0d0eebed8">
+          <id root="d91389e0-c234-44d9-8327-91b121723a8f"/>
+          <code code="pii00" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="PART II: SCIENTIFIC INFORMATION"/>
+          <title>PART II: SCIENTIFIC INFORMATION</title>
+          <effectiveTime value="20210101"/>
+          <component>
+            <section ID="ee2875272-8229-4c12-919e-827854dcd76a">
+              <id root="d134d52c-f9d4-4698-a082-84b29ee3d95a"/>
+              <code code="pii13" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="13 PHARMACEUTICAL INFORMATION"/>
+              <title>13 PHARMACEUTICAL INFORMATION</title>
+              <text>
+                <paragraph>
+                  <content styleCode="bold">Drug Substance</content>
+                </paragraph>
+                <paragraph>Proper name:  Text</paragraph>
+                <paragraph>Chemical name:  Text</paragraph>
+                <paragraph>Molecular formula and molecular mass:  Text</paragraph>
+                <paragraph>Structural formula:  <br/><renderMultiMedia referencedObject="Image1"/></paragraph>
+                <paragraph>Physicochemical properties:  Text</paragraph>
+                <paragraph>Pharmaceutical standard:  Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Product Characteristics:</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Viral Inactivation</content>
+                </paragraph>
+                <paragraph>Text</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+              <component>
+                <observationMedia ID="Image1">
+                  <text>Chemical structure of chemical name</text>
+                  <value xsi:type="ED" mediaType="image/jpeg">
+                    <reference value="name-of-chemical-structure.jpg"/>
+                  </value>
+                </observationMedia>
+              </component>
+            </section>
+          </component>
+          <component>
+            <section ID="ab2875272-8229-4c12-919e-827854ddd76a">
+              <id root="c134d52c-f9d4-4698-a082-84b29ee3d95a"/>
+              <code code="pii14" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="14 CLINICAL TRIALS"/>
+              <title>14 CLINICAL TRIALS</title>
+              <effectiveTime value="20210101"/>
+              <component>
+                <section ID="a2875272-8229-4c12-919e-827854ddd78a">
+                  <id root="e134d52c-f9d4-4698-a082-84b29ee3d95a"/>
+                  <code code="pii14.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="14.1 Clinical Trials by Indication"/>
+                  <title>14.1 Clinical Trials by Indication</title>
+                  <effectiveTime value="20210101"/>
+                  <component>
+                    <section ID="a2875272-8229-4c12-919e-827854dc0101">
+                      <id root="e134d52c-f9d4-4698-a082-84b29eec0101"/>
+                      <code code="CG" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Clinical Group"/>
+                      <title styleCode="bold">Indication 1</title>
+                      <text>
+                        <table ID="Table7" rules="all" frame="border">						
+						  <caption>Table 7 Summary of patient demographics for clinical trials in specific indication</caption>					
+                          <thead>
+                            <tr align="center">
+                              <th>Study #</th>
+                              <th>Study design</th>
+                              <th>Dosage, route of administration and duration</th>
+                              <th>Study subjects (n)</th>
+                              <th>Mean age (Range)</th>
+                              <th>Sex</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Text</td>
+                              <td/>
+                              <td/>
+                              <td/>
+                              <td/>
+                              <td/>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <paragraph>Text</paragraph>
+                        <table ID="Table8" rules="all" frame="border">
+						  <caption>Table 8 Results of study # in specific indication</caption>
+                          <thead>
+                            <tr align="center">
+                              <th>Primary Endpoints</th>
+                              <th>Associated value and statistical significance for Drug at specific dosages</th>
+                              <th>Associated value and statistical significance for Placebo or active control</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Text</td>
+                              <td/>
+                              <td/>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </text>
+                      <effectiveTime value="20210101"/>
+                    </section>
+                  </component>
+                  <component>
+                    <section ID="a2875272-8229-4c12-919e-827854dc0102">
+                      <id root="e134d52c-f9d4-4698-a082-84b29eec0102"/>
+                      <code code="CG" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Clinical Group"/>
+                      <title styleCode="bold">Indication 2</title>
+                      <text>
+                        <table ID="Table9" rules="all" frame="border">
+						 <caption>Table 9 Summary of patient demographics for clinical trials in specific indication</caption>
+                          <thead>
+                            <tr align="center">
+                              <th>Study #</th>
+                              <th>Study design</th>
+                              <th>Dosage, route of administration and duration</th>
+                              <th>Study subjects (n)</th>
+                              <th>Mean age (Range)</th>
+                              <th>Sex</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Text</td>
+                              <td/>
+                              <td/>
+                              <td/>
+                              <td/>
+                              <td/>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <paragraph>Text</paragraph>
+                        <table ID="Table10" rules="all" frame="border">
+						  <caption>Table 10 Results of study # in specific indication</caption> 
+                          <thead>
+                            <tr align="center">
+                              <th>Primary Endpoints</th>
+                              <th>Associated value and statistical significance for Drug at specific dosages</th>
+                              <th>Associated value and statistical significance for Placebo or active control</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Text</td>
+                              <td/>
+                              <td/>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </text>
+                      <effectiveTime value="20210101"/>
+                    </section>
+                  </component>
+                </section>
+              </component>
+              <component>
+                <section ID="a2875272-8229-4a12-919e-827854ddd78a">
+                  <id root="a134d52c-f9d4-4698-a082-84b29ee3d95a"/>
+                  <code code="pii14.2" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="14.2 Comparative Bioavailability Studies"/>
+                  <title>14.2 Comparative Bioavailability Studies</title>
+                  <text>
+                    <paragraph>Text</paragraph>					
+                    <table ID="Table11" rules="all" frame="border">
+					  <caption>Table 11 Summary Table of the Comparative Bioavailability Data</caption>
+					  <colgroup span="5"/>					  
+                      <thead>
+                        <tr align="center">
+                          <th colspan="5">Analyte Name<br/>(number of units x strength)<br/>Geometric Mean<br/>Arithmetic Mean (CV %)</th>
+                        </tr>
+                        <tr align="center">
+                          <th>Parameter</th>
+                          <th>Test<footnote>Identity of the test product.</footnote></th>
+                          <th>Reference<footnote>Identity of the reference product, including the manufacturer, and origin (country of purchase).</footnote></th>
+                          <th>% Ratio of Geometric Means</th>
+                          <th>90% Confidence Interval</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>AUC<sub>T</sub> (units)</td>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                        </tr>
+                        <tr>
+                          <td>AUC<sub>I</sub> (units)</td>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                        </tr>
+                        <tr>
+                          <td>C<sub>MAX</sub> (units)</td>
+                          <td/>
+                          <td/>
+                          <td/>
+                          <td/>
+                        </tr>
+                        <tr>
+                          <td>T<sub>MAX</sub><footnote>Expressed as either the arithmetic mean (CV%) or the median (range) only.</footnote> (h)</td>
+                          <td/>
+                          <td/>
+                          <td styleCode="table-secondary"></td>
+                          <td styleCode="table-secondary"></td>
+                        </tr>
+                        <tr>
+                          <td>T<sub>1/2</sub><footnote>Expressed as the arithmetic mean (CV%) only.</footnote> (h)</td>
+                          <td/>
+                          <td/>
+                          <td styleCode="table-secondary"></td>
+                          <td styleCode="table-secondary"></td>
+                        </tr>
+                      </tbody>
+                    </table>					
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="df2875272-8229-4c12-919e-827954ddd78a">
+                  <id root="c134d52c-f9d4-4698-a012-84b29ee3d95a"/>
+                  <code code="pii14.3" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="14.3 Immunogenicity"/>
+                  <title>14.3 Immunogenicity</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+              <component>
+                <section ID="bba325d26-c939-443a-901e-526ddc314522">
+                  <id root="fc0d2dd9-1c53-a9dc-bad3-d6b420d064e9"/>
+                  <code code="pii14.4" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="14.4 Clinical Trials - Reference Biologic Drug"/>
+                  <title>14.4 Clinical Trials - Reference Biologic Drug</title>
+                  <text>
+                    <paragraph>Text</paragraph>
+                  </text>
+                  <effectiveTime value="20210101"/>
+                </section>
+              </component>
+            </section>
+          </component>
+          <component>
+            <section ID="a2875272-8229-4c12-a19e-827954ddd78a">
+              <id root="e134e52c-f1d4-4798-a082-84b29ee3d95a"/>
+              <code code="pii15" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="15 MICROBIOLOGY"/>
+              <title>15 MICROBIOLOGY</title>
+              <text>
+                <paragraph>Text and table</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="a42a7572-8229-4c12-a19e-827954ddd78a">
+              <id root="c134d52c-f9d4-4698-a082-84b29ee3a95a"/>
+              <code code="pii16" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="16 NON-CLINICAL TOXICOLOGY"/>
+              <title>16 NON-CLINICAL TOXICOLOGY</title>
+              <text>
+                <paragraph>
+                  <content styleCode="bold">General Toxicology: </content>Text</paragraph>
+				<paragraph>
+                  <content styleCode="bold">Genotoxicity: </content>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Carcinogenicity: </content>Text</paragraph>
+				<paragraph>
+                  <content styleCode="bold">Reproductive and Developmental Toxicology: </content>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Special Toxicology: </content>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Juvenile Toxicity: </content>Text</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+              <component>
+                <section ID="a2875272-8229-4c12-a19e-8279549dd78a">
+                  <id root="e124d52c-f2d4-4698-a082-84b29ee3d95a"/>
+                  <code code="pii16.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="16.1 Comparative Non-Clinical Pharmacology and Toxicology"/>
+                  <title>16.1 Comparative Non-Clinical Pharmacology and Toxicology</title>
+                  <effectiveTime value="20210101"/>
+                  <component>
+                    <section ID="a2875272-8229-4c12-a19e-8279749dd78a">
+                      <id root="e134a52c-f1d4-4698-a182-84b29ee3d95a"/>
+                      <code code="pii16.1.1" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="16.1.1 Comparative Non-Clinical Pharmacodynamics"/>
+                      <title>16.1.1 Comparative Non-Clinical Pharmacodynamics</title>
+                      <text>
+                        <paragraph styleCode="bold">In vitro Studies</paragraph>
+                        <paragraph>Text and/or table</paragraph>
+                      </text>
+                      <effectiveTime value="20210101"/>
+                    </section>
+                  </component>
+                  <component>
+                    <section ID="a2875212-8229-4c12-a19e-8279749dd78a">
+                      <id root="e184a52c-f1d4-4698-a082-84b29ee3d95a"/>
+                      <code code="pii16.1.2" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="16.1.2 Comparative Toxicology"/>
+                      <title>16.1.2 Comparative Toxicology</title>
+                      <text>
+                        <paragraph>Text and/or table</paragraph>
+                      </text>
+                      <effectiveTime value="20210101"/>
+                    </section>
+                  </component>
+                </section>
+              </component>
+            </section>
+          </component>
+          <component>
+            <section ID="ef8a4d48-0fc3-4e44-b4b6-550140d4de5d">
+              <id root="be74b6e6-c431-4a5f-a18e-ed3214381456"/>
+              <code code="pii17" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="17 SUPPORTING PRODUCT MONOGRAPHS"/>
+              <title>17 SUPPORTING PRODUCT MONOGRAPHS</title>
+              <text>
+                <list listType="ordered">
+                  <item>Brand name dosage form, strength, submission control 123456, Product Monograph, Sponsor. (MON, DD, YYYY)</item>
+                  <item>Brand name dosage form, strength, submission control 123456, Product Monograph, Sponsor. (MON, DD, YYYY)</item>
+                </list>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+        </section>
+      </component>
+      <component>
+        <section ID="baa4d498-0fc3-4e44-b4b6-550140d4de5d">
+          <id root="be74b6e6-c461-4a5f-a18e-ed321b381456"/>
+          <code code="pmi00" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="PATIENT MEDICATION INFORMATION"/>
+          <title>PATIENT MEDICATION INFORMATION</title>
+          <effectiveTime value="20210101"/>
+          <component>
+            <section ID="ea4ec98b-b2d3-4d73-877c-aaa5eb28997d">
+              <id root="067c0a3b-5869-43a7-baff-ce6de72ae1e5"/>
+              <code code="pmi01" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="READ THIS FOR SAFE AND EFFECTIVE USE OF YOUR MEDICINE"/>
+              <title>READ THIS FOR SAFE AND EFFECTIVE USE OF YOUR MEDICINE</title>
+              <text>
+                <paragraph>
+                  <content styleCode="bold">BRAND NAME</content>
+                </paragraph>
+                <paragraph>
+                  <content styleCode="bold">Proper Name in final dosage form</content>
+                </paragraph>
+                <paragraph>Read this carefully before you start taking <content styleCode="bold">Brand name</content> and each time you get a refill. This leaflet is a summary and will not tell you everything about this drug. Talk to your healthcare professional about your medical condition and treatment and ask if there is any new information about <content styleCode="bold">Brand name</content>.</paragraph>
+                <paragraph styleCode="Boxed First bold">Serious Warnings and Precautions</paragraph>
+                <list styleCode="Boxed Last">
+                  <item>Text</item>
+                  <item>Text</item>
+                </list>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="baa4d498-0gc3-4e44-bcb6-550140d4de5d">
+              <id root="be74b6e6-1431-4a5f-a18e-ed321b381456"/>
+              <code code="pmi02" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="What is [Brand name] used for?"/>
+              <title>What is Brand name used for?</title>
+              <text>
+                <list>
+                  <item>Text</item>
+                  <item>Text</item>
+                </list>
+                <paragraph styleCode="Boxed First">"For the following indication(s) [Brand name] has been approved with conditions (NOC/c). This means it has passed Health Canada’s review and can be bought and sold in Canada, but the manufacturer has agreed to complete more studies to make sure the drug works the way it should. For more information, talk to your healthcare professional."</paragraph>
+                <list styleCode="Boxed" listType="unordered">
+                  <item>Text</item>
+                </list>
+                <paragraph styleCode="Boxed">"For the following indication(s) [Brand name] has been approved without conditions. This means it has passed Health Canada’s review and can be bought and sold in Canada."</paragraph>
+                <list styleCode="Boxed Last" listType="unordered">
+                  <item>Text</item>
+                </list>
+                <paragraph>
+                  <content styleCode="bold italics">What is a Notice of Compliance with Conditions (NOC/c)?</content>
+                </paragraph>
+                <paragraph>
+                  <content styleCode="italics">A Notice of Compliance with Conditions (NOC/c) is a type of approval to sell a drug in Canada.</content>
+                </paragraph>
+                <paragraph>
+                  <content styleCode="italics">Health Canada only gives an NOC/c to a drug that treats, prevents, or helps identify a serious or life-threatening illness. The drug must show promising proof that it works well, is of high quality, and is reasonably safe. Also, the drug must either respond to a serious medical need in Canada, or be much safer than existing treatments.</content>
+                </paragraph>
+                <paragraph>
+                  <content styleCode="italics">Drug makers must agree in writing to clearly state on the label that the drug was given an NOC/c, to complete more testing to make sure the drug works the way it should, to actively monitor the drug’s performance after it has been sold, and to report their findings to Health Canada.</content>
+                </paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="bca4d498-0gc3-4e44-bcb6-550140d4de5d">
+              <id root="be74b6e6-c431-4adf-a18e-ed321b381456"/>
+              <code code="pmi03" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="How does [Brand name] work?"/>
+              <title>How does Brand name work?</title>
+              <text>
+                <paragraph>Text</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="bca4d498-0gc3-4e44-bcb6-55013024de5d">
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b381756"/>
+              <code code="pmi04" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="What are the ingredients in [Brand name]?"/>
+              <title>What are the ingredients in Brand name?</title>
+              <text>
+                <paragraph>Medicinal ingredients: ingredient, ingredient, ingredient</paragraph>
+				<paragraph>Non-medicinal ingredients: ingredient, ingredient, ingredient</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="bca4d498-0gc3-4e54-bcb6-550130d4de5d">
+              <id root="be74b6e6-c431-4a5f-a18e-ed3a1b381456"/>
+              <code code="pmi05" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="[Brand name] comes in the following dosage forms:"/>
+              <title>Brand name comes in the following dosage forms:</title>
+              <text>
+                <paragraph>Dosage form(s) and strength(s)</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="bca4c498-00c3-4e44-bcb6-550134d4de5d">
+              <id root="be74b6e6-cd31-4a5f-a18e-ed321b381456"/>
+              <code code="pmi06" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Do not use [Brand name] if:"/>
+              <title>Do not use Brand name if:</title>
+              <text>
+                <list>
+                  <item>Text</item>
+                  <item>Text</item>
+                </list>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="b6b37351-bbc9-46d9-b148-27ba3cb0a75e">
+              <id root="be74b6e6-c431-4a5f-a18e-ed32cc381456"/>
+              <code code="pmi07" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="To help avoid side effects and ensure proper use, talk to your healthcare professional before you take [Brand name]. Talk about any health conditions or problems you may have, including if you:"/>
+              <title>To help avoid side effects and ensure proper use, talk to your healthcare professional before you take Brand name. Talk about any health conditions or problems you may have, including if you:</title>
+              <text>
+                <list>
+                  <item>Text</item>
+                  <item>Text</item>
+                </list>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="edac0d6f-3c91-48b5-99c0-e0f940925d37">
+              <id root="be74bbe6-c431-4a5f-a18e-ed321b381456"/>
+              <code code="pmi08" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Other warnings you should know about:"/>
+              <title>Other warnings you should know about:</title>
+              <text>
+                <paragraph>Text</paragraph>
+                <paragraph>
+                  <content styleCode="bold">Tell your healthcare professional about all the medicines you take, including any drugs, vitamins, minerals, natural supplements or alternative medicines.</content>
+                </paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="bca4c498-0ac3-4e44-bcb6-550134d4de5d">
+              <id root="be74b6e6-c431-4a5f-a18e-ed321ab81456"/>
+              <code code="pmi09" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="The following may interact with [Brand name]:"/>
+              <title>The following may interact with Brand name:</title>
+              <text>
+                <list>
+                  <item>Text</item>
+                </list>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="e23321cd-5111-4aa3-b650-74f93bcda261">
+              <id root="be74b6e6-c431-4a5f-a18e-ed3212281456"/>
+              <code code="pmi10" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="How to take [Brand name]:"/>
+              <title>How to take Brand name:</title>
+              <text>
+                <list>
+                  <item>Text</item>
+                </list>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="cd0892a2-0e32-4fb7-9cc9-1bbfff60dee7">
+              <id root="be74b6e6-c431-4a5f-a18e-11321b381456"/>
+              <code code="pmi11" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Usual dose:"/>
+              <title>Usual dose:</title>
+              <text>
+                <paragraph>Text</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="beaaa5b8-6693-4d4c-a897-fa5c9562b1be">
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b311456"/>
+              <code code="pmi12" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Overdose:"/>
+              <title>Overdose:</title>
+              <text>
+                <paragraph>Text</paragraph>
+                <paragraph styleCode="Boxed First Last">If you think you, or a person you are caring for, have taken too much Brand name, contact a healthcare professional, hospital emergency department, or regional poison control centre immediately, even if there are no symptoms.</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="ffd59b8d-fe66-4d86-a54f-0613d4168199">
+              <id root="be74b6e6-c431-4a5f-a18e-ed321e381456"/>
+              <code code="pmi13" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Missed Dose:"/>
+              <title>Missed dose:</title>
+              <text>
+                <paragraph>Text</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="cb61f530-b95a-4047-b8ea-861c5a7a05e8">
+              <id root="be74b6e6-c431-4a5f-a98e-ed321b381456"/>
+              <code code="pmi14" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="What are possible side effects from using [Brand name]?"/>
+              <title>What are possible side effects from using Brand name?</title>
+              <text>
+                <paragraph>These are not all the possible side effects you may feel when taking Brand name. If you experience any side effects not listed here, tell your healthcare professional.</paragraph>
+                <paragraph>Text</paragraph>
+                <table ID="TablePMI1" rules="all" frame="border" >
+				  <caption>Serious side effects and what to do about them</caption>
+                  <thead>
+                    <tr align="center">
+                      <th rowspan="2">Symptom / effect</th>
+                      <th colspan="2">Talk to your healthcare professional</th>
+                      <th rowspan="2">Stop taking drug and get immediate medical help</th>
+                    </tr>
+                    <tr align="center">
+                      <th>Only if severe</th>
+                      <th>In all cases</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><content styleCode="bold">VERY COMMON</content></td>
+                      <td/>
+                      <td/>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td>Condition: symptom / effect</td>
+                      <td/>
+					  <td>✓</td>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td>Condition: symptom / effect</td>
+                      <td/>
+					  <td/>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td><content styleCode="bold">COMMON</content></td>
+                      <td/>
+                      <td/>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td>Condition: symptom / effect</td>
+                      <td>✓</td>
+                      <td/>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td>Condition: symptom / effect</td>
+                      <td/>
+                      <td/>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td><content styleCode="bold">RARE</content></td>
+                      <td/>
+                      <td/>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td>Condition: symptom / effect</td>
+                      <td/>
+                      <td/>
+                      <td/>
+                    </tr>
+                    <tr>
+                      <td>Condition: symptom / effect</td>
+                      <td/>
+                      <td/>
+                      <td/>
+                    </tr>
+                  </tbody>
+                </table>
+                <paragraph>If you have a troublesome symptom or side effect that is not listed here or becomes bad enough to interfere with your daily activities, tell your healthcare professional.</paragraph>
+                <paragraph styleCode="Boxed First">
+                  <content styleCode="bold">Reporting Side Effects</content>
+                </paragraph>
+                <paragraph styleCode="Boxed">You can report any suspected side effects associated with the use of health products to Health Canada by:</paragraph>
+                <list styleCode="Boxed unordered">
+                  <item>Visiting the Web page on <linkHtml href="https://www.canada.ca/en/health-canada/services/drugs-health-products/medeffect-canada/adverse-reaction-reporting.html"> Adverse Reaction Reporting </linkHtml>for information on how to report online, by mail or by fax; or</item>
+                  <item>Calling toll-free at 1-866-234-2345.</item>
+                </list>
+                <paragraph styleCode="Boxed Last">
+                  <content styleCode="italics">NOTE: Contact your health professional if you need information about how to manage your side effects. The Canada Vigilance Program does not provide medical advice.</content>
+                </paragraph>
+                <paragraph styleCode="Boxed First">
+                  <content styleCode="bold">Reporting Suspected Side Effects for Vaccines</content>
+                  <br></br>
+                  <content styleCode="bold">For the general public: </content>Should you experience a side effect following immunization, please report it to your healthcare professional.</paragraph>
+                <paragraph styleCode="Boxed">Should you require information related to the management of the side effect, please contact your healthcare professional. The Public Health Agency of Canada, Health Canada and [Sponsor Name] cannot provide medical advice.</paragraph>
+                <paragraph styleCode="Boxed Last">
+                  <content styleCode="bold">For healthcare professionals: </content>If a patient experiences a side effect following immunization, please complete the <linkHtml href="http://www.phac-aspc.gc.ca/im/aefi-essi-form-eng.php">Adverse Events Following Immunization (AEFI) Form</linkHtml> appropriate for your province/territory and send it to your local Health Unit.</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="c9d75711-2ce9-451e-aa51-91026ec1555e">
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b081456"/>
+              <code code="pmi15" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="Storage:"/>
+              <title>Storage:</title>
+              <text>
+                <paragraph>Text</paragraph>
+                <paragraph>Keep out of reach and sight of children.</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="f6693e7a-21c9-492f-833b-4e8f3911d3a5">
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b381446"/>
+              <code code="pmi16" codeSystem="2.16.840.1.113883.2.20.6.63" displayName="If you want more information about [Brand name]:"/>
+              <title>If you want more information about Brand name:</title>
+              <text>
+                <list listType="unordered">
+                  <item>Talk to your healthcare professional</item>
+                  <item>Find the full product monograph that is prepared for healthcare professionals and includes this Patient Medication Information by visiting the <linkHtml href="https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database.html">Health Canada website</linkHtml>, the <linkHtml href="https://www.yourwebsite.com">manufacturer's website</linkHtml>, or by calling 1-800-555-5555.</item>
+                </list>
+                <paragraph>This leaflet was prepared by Sponsor Name.</paragraph>
+                <paragraph>Last Revised MON DD, YYYY</paragraph>
+              </text>
+              <effectiveTime value="20210101"/>
+            </section>
+          </component>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</document>
