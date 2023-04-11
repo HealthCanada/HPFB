@@ -46,6 +46,7 @@ Additional stylesheets for Consumer and Product Monograph views support renderin
 2022-06-17 - [#124, #138] Packaging description changes, including "See Below" and label changes for Multipart, stop relying on CV code C43197, swap Product Status and Packaging Status  
 2022-09-21 - [#134, #136] left justify title page footer, added support for Date First Authorized for Current Owner, with conditional extra padding
 2022-11-03 - [#140, #141] remove bolding from active/inactive ingredient names; left align table captions
+2023-04-07 - [#158, #162] French language label changes for "#" etc; allow multiple occurences of Size Characteristic  
  
 ## 3. This should be the only processing instruction referenced in the XML PM:
 

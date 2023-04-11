@@ -473,8 +473,10 @@
 				<xsl:value-of select="$label"/>
 			</th>
 			<td class="formItem">
-				<xsl:value-of select="$path/v3:value/@value"/>
-				<xsl:value-of select="$path/v3:value/@unit"/>
+				<xsl:for-each select="$path/v3:value">
+					<xsl:if test="position() > 1">&#160;x&#160;</xsl:if>
+					<xsl:value-of select="@value"/>&#160;<xsl:value-of select="@unit"/>
+				</xsl:for-each>
 			</td>
 		</tr>
 	</xsl:template>
@@ -596,7 +598,7 @@
 							<span class="contentTableReg"> (<xsl:value-of select="$labels/packagingCaveat[@lang = $lang]"/>) </span>
 						</caption>
 						<tr>
-							<th scope="col" width="1" class="formTitle">#</th>
+							<th scope="col" width="1" class="formTitle"><xsl:value-of select="$labels/numConnective[@lang = $lang]"/></th>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/itemCode[@lang = $lang]"/></th>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/packageDescription[@lang = $lang]"/></th>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/packageApprovalDate[@lang = $lang]"/></th>
@@ -959,7 +961,7 @@
 									<div class="card mb-2" id="{$unique-section-id}">
 										<header class="card-header bg-aurora-accent1 text-white font-weight-bold">
 											<xsl:value-of select="v3:title"/>
-caveat										</header>
+										</header>
 										<div class="spl recent-changes">
 											<xsl:apply-templates select="."/>
 										</div>
