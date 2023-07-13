@@ -16,11 +16,8 @@
 	<xsl:param name="show-data" select="/.."/>
 	<!-- Whether to show section numbers, set to 1 to enable and "/.." to turn off -->
 	<xsl:param name="show-section-numbers" select="/.."/>
-	<!-- Whether to show print table of contents, set to 1 to enable and "/.." to turn off -->
-	<xsl:param name="show-print-toc" select="/.."/>
-	<!-- Whether to show jump to top button, set to 1 to enable and "/.." to turn off -->
-	<xsl:param name="show-jump-to-top" select="/.."/>
-	<xsl:param name="show-review-section" select="/.."/>
+	<!-- Whether to show a special view for a section or for review, set to "/.." to turn off -->
+	<xsl:param name="show-section" select="/.."/>
 	<!-- This is the CSS link put into the output -->
 	<xsl:param name="css">https://health-products.canada.ca/product-monograph/style-sheet/v_1_0/spl_canada.css</xsl:param>
 	<!-- This is the HTML Document Title -->
@@ -248,9 +245,10 @@
 				<xsl:call-template name="string-lowercase">
 					<xsl:with-param name="text" select="$genMedName"/>
 				</xsl:call-template>
-				<!-- [pmh #124] removed all references to FDA formCode for KIT, C43197 -->
+				<!-- [pmh #124] removed all references to FDA formCode for KIT, C43197 
+					 [pmh #172] added extra comma to French medicine name -->
 				<xsl:if test="not(v3:part)">
-					<xsl:text> </xsl:text>
+					<xsl:value-of select="$labels/medNameConnective[@lang = $lang]"/>						
 					<xsl:call-template name="string-lowercase">
 						<xsl:with-param name="text" select="v3:formCode/@displayName"/>
 					</xsl:call-template>
@@ -421,7 +419,8 @@
 					</td>
 				</xsl:for-each>
 				<td class="formItem">
-					<xsl:value-of select="v3:quantity/v3:numerator/@value"/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:numerator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:numerator/@unit"/></xsl:if>
+					<!-- [pmh #171] Use French decimal as comma for inactive ingredients -->
+					<xsl:apply-templates mode="format-physical-quantity" select="v3:quantity/v3:numerator/@value"/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:numerator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:numerator/@unit"/></xsl:if>
 					<xsl:if test="v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@unit)!='1'"> <xsl:value-of select="$labels/inConnective[@lang = $lang]"/><xsl:value-of select="v3:quantity/v3:denominator/@value"
 					/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/>
 						</xsl:if></xsl:if>
@@ -598,7 +597,7 @@
 							<span class="contentTableReg"> (<xsl:value-of select="$labels/packagingCaveat[@lang = $lang]"/>) </span>
 						</caption>
 						<tr>
-							<th scope="col" width="1" class="formTitle"><xsl:value-of select="$labels/numConnective[@lang = $lang]"/></th>
+							<th scope="col" width="1" class="formTitle"><xsl:value-of select="$labels/numberSign[@lang = $lang]"/></th>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/itemCode[@lang = $lang]"/></th>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/packageDescription[@lang = $lang]"/></th>
 							<th scope="col" class="formTitle"><xsl:value-of select="$labels/packageApprovalDate[@lang = $lang]"/></th>
@@ -850,37 +849,63 @@
 		<xsl:variable name="sectionNumberSequence">
 			<xsl:apply-templates mode="sectionNumber" select="ancestor-or-self::v3:section"/>
 		</xsl:variable>
-		<div class="Section">
-			<xsl:for-each select="v3:code">
-				<xsl:attribute name="data-sectionCode"><xsl:value-of select="@code"/></xsl:attribute>
-			</xsl:for-each>
+		<xsl:choose>
 
-			<!-- [pmh] switch @ID for v3:id/@root which is guaranteed to be a GUID to simplify section model in future -->
-			<xsl:for-each select="v3:id/@root">
-				<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
-			</xsl:for-each>
+			<xsl:when test="v3:code/@code='pmi00' and $show-section='#pmi00'">
+				<xsl:variable name="product-description">
+					<xsl:apply-templates mode="product-description" select="v3:component/v3:section[v3:code/@code='pmi01']/v3:text/v3:paragraph"/>
+				</xsl:variable>
+				<xsl:variable name="product-name" select="substring-before(substring-after($product-description, ' - '), ' - ')"/>
+				<section>
+					<h4>
+						<xsl:choose>
+							<xsl:when test="normalize-space($product-name)=''">-</xsl:when>
+							<xsl:otherwise><xsl:value-of select="$product-name"/></xsl:otherwise>
+						</xsl:choose>
+					</h4>
+					<a name="pmi00{position()}"/>
+					<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='pmi01']" mode="boilerplate">
+						<xsl:with-param name="product-name" select="$product-name"/>
+					</xsl:apply-templates>
+					<xsl:apply-templates select="v3:component/v3:section[not(v3:code/@code='pmi01')]" mode="accordion-div"/>
+				</section>
+			</xsl:when>
 			
-			<xsl:call-template name="styleCodeAttr">
-				<xsl:with-param name="styleCode" select="@styleCode"/>
-				<xsl:with-param name="additionalStyleCode" select="'Section'"/>
-			</xsl:call-template>
+			<xsl:otherwise>
+				<div class="Section">
+					<xsl:for-each select="v3:code">
+						<xsl:attribute name="data-sectionCode"><xsl:value-of select="@code"/></xsl:attribute>
+					</xsl:for-each>
+					
+					<!-- [pmh] switch @ID for v3:id/@root which is guaranteed to be a GUID to simplify section model in future -->
+					<xsl:for-each select="v3:id/@root">
+						<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
+					</xsl:for-each>
+					
+					<xsl:call-template name="styleCodeAttr">
+						<xsl:with-param name="styleCode" select="@styleCode"/>
+						<xsl:with-param name="additionalStyleCode" select="'Section'"/>
+					</xsl:call-template>
+					
+					<!-- [pmh] @ID is still used for internal links, so it needs to be supported -->
+					<xsl:for-each select="@ID">
+						<a name="{.}"><xsl:text> </xsl:text></a>
+					</xsl:for-each>
+					<a name="section-{substring($sectionNumberSequence,2)}"><xsl:text> </xsl:text></a>
+					
+					<xsl:apply-templates select="v3:title">
+						<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
+						<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
+					</xsl:apply-templates>
+					<xsl:if test="boolean($show-data)">
+						<xsl:apply-templates mode="data" select="."/>
+					</xsl:if>
+					<xsl:apply-templates select="@*|node()[not(self::v3:title)]"/>
+					<xsl:call-template name="flushSectionTitleFootnotes"/>
+				</div>
+			</xsl:otherwise>			
 			
-			<!-- [pmh] @ID is still used for internal links, so it needs to be supported -->
-			<xsl:for-each select="@ID">
-				<a name="{.}"><xsl:text> </xsl:text></a>
-			</xsl:for-each>
-			<a name="section-{substring($sectionNumberSequence,2)}"><xsl:text> </xsl:text></a>
-			
-			<xsl:apply-templates select="v3:title">
-				<xsl:with-param name="sectionLevel" select="$sectionLevel"/>
-				<xsl:with-param name="sectionNumber" select="substring($sectionNumberSequence,2)"/>
-			</xsl:apply-templates>
-			<xsl:if test="boolean($show-data)">
-				<xsl:apply-templates mode="data" select="."/>
-			</xsl:if>
-			<xsl:apply-templates select="@*|node()[not(self::v3:title)]"/>
-			<xsl:call-template name="flushSectionTitleFootnotes"/>
-		</div>
+		</xsl:choose>		
 	</xsl:template>
 		
 	<!-- this template was used on the Title Page to show Control Number on a single line - currently unused -->
@@ -970,7 +995,7 @@
 									<!-- Withhold the optional Biosimilar Biologic Drug and prepend to Part I after TOC -->
 								<xsl:when test="v3:code[@code='0BBD']"></xsl:when>									
 								<xsl:when test="v3:code[@code='pi00']">
-									<!-- TABLE OF CONTENTS IMMEDIATELY PRECEDES PART I IN PRINT VERSION - WITHHOLD ACTUAL TOC FOR NOW -->
+									<!-- [pmh refactor] TABLE OF CONTENTS IMMEDIATELY PRECEDES PART I IN PRINT VERSION - WITHHOLD ACTUAL TOC FOR NOW - ->
 									<xsl:choose>
 										<xsl:when test="$show-print-toc">
 											<xsl:call-template name="render-toc"/>
@@ -978,7 +1003,7 @@
 										<xsl:otherwise>
 											<div class="hide-in-screen force-page-break-after">This is wher the TOC would be</div>
 										</xsl:otherwise>
-									</xsl:choose>
+									</xsl:choose> -->
 									<!-- Optional BIOSIMILAR BIOLOGIC DRUG, prepended to Part I if present -->
 									<xsl:apply-templates mode="main-document" select="../../v3:component/v3:section[v3:code/@code='0BBD']"/>
 									<!-- PART I HEALTH PROFESSIONAL INFORMATION requires page break after -->								
@@ -1009,7 +1034,7 @@
 							</div>
 						</xsl:for-each>
 						<!-- SCREEN VERSION OF EXTRA SECTION FOR REVIEW ONLY -->
-						<xsl:if test="$show-review-section">
+						<xsl:if test="$show-section='review'">
 							<div class="card mb-2 hide-in-print" id="review-section">
 								<header class="card-header bg-success text-white font-weight-bold">REVIEW IMAGE ALT TEXT</header>
 								<div class="px-2 pt-2">This section is used to review the Alt Text associated with image(s) within a Product Monograph.</div>
@@ -1081,7 +1106,7 @@
 				<xsl:value-of select="v3:title"/>
 			</a> 
 		</li>
-		<xsl:if test="self::node()[not(v3:code/@code='0TP')]/v3:component/v3:section and not($show-print-toc = 1)">
+		<xsl:if test="self::node()[not(v3:code/@code='0TP')]/v3:component/v3:section"> <!-- [pmh refactor] and not($show-print-toc = 1)"> -->
 			<ul class="toc">
 				<xsl:apply-templates mode="toc" select="v3:component/v3:section"/>
 			</ul>
@@ -1375,36 +1400,107 @@
 			</xsl:choose>
 		</xsl:for-each>
 	</xsl:template>
+
+	<!-- SECTION VIEW: PMI VIEW WITH ACCORDIONS -->
 	
-	<!-- MAIN HTML PAGE TEMPLATING -->
-	<xsl:template match="/v3:document" priority="1">
-		<html>
-			<xsl:apply-templates select="." mode="html-head"/>
-			<body data-spy="scroll" data-target="#navigation-sidebar" data-offset="1">
-				<!-- [pmh] WS_PM-032/033 - this is a placeholder for sponsors. -->
-				<a class="skip-main" href="#main"><xsl:value-of select="$labels/skipToMainContent[@lang = $lang]"/></a>				
-					
-				<header class="bg-aurora-accent1 hide-in-print mb-2" id="banner">
-					<div class="text-white text-center p-2 font-weight-bold"><xsl:copy-of select="v3:title/node()"/></div>
-				</header>
-				<div class="container-fluid position-relative" id="content">
-					<div class="row h-100">
-						<xsl:apply-templates select="v3:component/v3:structuredBody" mode="sidebar-navigation"/>
-						<xsl:apply-templates select="v3:component/v3:structuredBody" mode="main-document"/>
-					</div>					
+	<xsl:template match="v3:structuredBody" mode="pmi-view">
+		<xsl:if test="count(v3:component/v3:section[v3:code/@code='pmi00']) &gt; 1">
+			<xsl:for-each select="v3:component/v3:section[v3:code/@code='pmi00']">
+				<xsl:variable name="product-description">
+					<xsl:apply-templates mode="product-description" select="v3:component/v3:section[v3:code/@code='pmi01']/v3:text/v3:paragraph"/>
+				</xsl:variable>
+				<xsl:variable name="product-rest">
+					<xsl:value-of select="substring-after(substring-after($product-description, ' - '), ' - ')"/>
+				</xsl:variable>
+				<div>
+					<a href="#pmi00{position()}"><xsl:value-of select="$product-rest"/></a>
 				</div>
-				<!-- Withhold the jump to top button on the print version -->
-				<xsl:if test="$show-jump-to-top">
-					<div id="btnTopDiv" class="hide-in-print">
-						<a id="btnTop" href="#"
-							class="btn btn-warning btn-circle btn-md text-white" role="button">
-							<i class="fa fa-arrow-up fa-3x"></i>
-						</a>					
-					</div>					
-				</xsl:if>
-				<xsl:call-template name="canada-screen-body-scripts"/>
-			</body>
-		</html>
+			</xsl:for-each>
+		</xsl:if>
+		<xsl:apply-templates select="v3:component/v3:section[v3:code/@code='pmi00']"/>            
+	</xsl:template>
+		
+	<!-- SECTION VIEW - filter out anything from the first section that we do not want in the mini-TOC -->
+	<!-- filter out bracketed stuff for PENTASA, etc, where the intended route is in the description -->
+	<xsl:template mode="product-description" match="v3:paragraph">
+		<xsl:choose>
+			<xsl:when test="normalize-space(.)=''"/>
+			<xsl:when test="substring(normalize-space(.), 1, 1)='(' and substring(normalize-space(.), string-length(normalize-space(.)), 1)=')'"/>
+			<xsl:when test="normalize-space(.)='CONSOMMATEUR' or normalize-space(.)='CONSOMMATRICE'"/>
+			<xsl:when test="contains(., 'leaflet') or contains(., 'présent dépliant') or contains(., 'feuillet') or contains(., 'attentivement')"/>
+			<xsl:when test="preceding-sibling::v3:paragraph[contains(., 'leaflet') or contains(., 'présent dépliant') or contains(., 'feuillet') or contains(., 'attentivement')]"/>
+			<xsl:otherwise> - <xsl:value-of select="normalize-space(.)"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+		
+	<!-- SECTION VIEW - omit empty paragraphs wherever they occur -->
+	<xsl:template match="v3:section" mode="boilerplate">
+		<xsl:param name="product-name"/>
+		<xsl:apply-templates select="v3:text/v3:*[not(normalize-space(.)=$product-name)]"/>
 	</xsl:template>
 	
+	<!-- SECTION VIEW - render accordions -->
+	<xsl:template match="v3:section" mode="accordion-div">
+		<div>
+			<details class="span-8">
+				<summary class="background-accent" tab-index="0">
+					<!-- [pmh] this renders h2, which is incorrect <xsl:apply-templates select="v3:title"/> -->
+					<xsl:value-of select="v3:title"/>
+				</summary>
+				<div class="spl details-wrapper">
+					<xsl:apply-templates select="v3:text/v3:*"/>
+				</div>
+			</details>
+		</div>								
+	</xsl:template>	
+
+	<!-- MAIN HTML PAGE TEMPLATING -->
+	<xsl:template match="/v3:document" priority="1">
+		<xsl:choose>
+			<xsl:when test="$show-section='basic'">
+				<html>
+					<xsl:apply-templates select="." mode="html-head"/>
+					<body>						
+						<header class="bg-aurora-accent1 hide-in-print mb-2" id="banner">
+							<div class="text-white text-center p-2 font-weight-bold"><xsl:copy-of select="v3:title/node()"/></div>
+						</header>
+						<xsl:apply-templates select="v3:component/v3:structuredBody" mode="main-document"/>
+					</body>
+				</html>
+			</xsl:when>
+			<xsl:when test="starts-with($show-section, '#pmi00')">
+				<section>
+					<xsl:variable name="pmi-slug">
+						<xsl:choose>
+							<xsl:when test="$lang=1">Patient Medication Information</xsl:when>
+							<xsl:when test="$lang=2">Renseignements pour le patient sur le médicament</xsl:when>
+						</xsl:choose>
+					</xsl:variable>
+					<h3><xsl:value-of select="$pmi-slug"/></h3>
+					<xsl:apply-templates select="v3:component/v3:structuredBody" mode="pmi-view"/>
+				</section>
+			</xsl:when>
+			<xsl:otherwise>
+				<html>
+					<xsl:apply-templates select="." mode="html-head"/>
+					<body data-spy="scroll" data-target="#navigation-sidebar" data-offset="1">
+						<!-- [pmh] WS_PM-032/033 - this is a placeholder for sponsors. -->
+						<a class="skip-main" href="#main"><xsl:value-of select="$labels/skipToMainContent[@lang = $lang]"/></a>				
+						
+						<header class="bg-aurora-accent1 hide-in-print mb-2" id="banner">
+							<div class="text-white text-center p-2 font-weight-bold"><xsl:copy-of select="v3:title/node()"/></div>
+						</header>
+						<div class="container-fluid position-relative" id="content">
+							<div class="row h-100">
+								<xsl:apply-templates select="v3:component/v3:structuredBody" mode="sidebar-navigation"/>
+								<xsl:apply-templates select="v3:component/v3:structuredBody" mode="main-document"/>
+							</div>					
+						</div>
+						<xsl:call-template name="canada-screen-body-scripts"/>
+					</body>
+				</html>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
 </xsl:transform>

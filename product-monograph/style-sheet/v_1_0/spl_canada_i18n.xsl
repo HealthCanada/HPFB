@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
 	xmlns:my="my:my" exclude-result-prefixes="my">
-	<my:texts>
+	<my:texts>		
 		<!-- English Labels -->
 		<tableOfContents lang="en">TABLE OF CONTENTS</tableOfContents>
 		<tocBoilerplate lang="en">Sections or subsections that are not applicable at the time of authorization are not listed.</tocBoilerplate>
@@ -60,11 +60,13 @@
 		<multiPartProduct lang="en">Multi-part product</multiPartProduct>
 		<pkgQuantity lang="en">Package Quantity</pkgQuantity>
 		<ttlProdQty lang="en">Total Product Quantity</ttlProdQty>
-		<numConnective lang="en">#</numConnective>
+		<numberSign lang="en">#</numberSign>
+		<numConnective lang="en">&#160;#</numConnective>
 		<inConnective lang="en">&#160;in&#160;</inConnective>
 		<andConnective lang="en">&#160;and&#160;</andConnective>
 		<ofConnective lang="en">&#160;of&#160;</ofConnective>
 		<toConnective lang="en">&#160;-&#160;</toConnective>
+		<medNameConnective lang="en">&#160;</medNameConnective>
 		<skipToMainContent lang="en">Skip to main content</skipToMainContent>
 		<patientMedicationInformation lang="en">Patient Medication Information</patientMedicationInformation>
 		<company lang="en">Company</company>
@@ -127,11 +129,13 @@
 		<multiPartProduct lang="fr">Produit en plusieurs éléments</multiPartProduct>
 		<pkgQuantity lang="fr">Nombre de chaque type de conditionnement</pkgQuantity>
 		<ttlProdQty lang="fr">Quantité de produit totale</ttlProdQty>
-		<numConnective lang="fr">N&#176;</numConnective>
+		<numberSign lang="fr">N&#176;</numberSign>
+		<numConnective lang="fr">&#160;n&#176;&#160;</numConnective>
 		<inConnective lang="fr">&#160;dans&#160;</inConnective>
 		<andConnective lang="fr">&#160;et&#160;</andConnective>
 		<ofConnective lang="fr">&#160;de&#160;</ofConnective>
 		<toConnective lang="fr">&#160;-&#160;</toConnective>
+		<medNameConnective lang="fr">,&#160;</medNameConnective>
 		<skipToMainContent lang="fr">Passer au contenu principal</skipToMainContent>
 		<patientMedicationInformation lang="fr">Renseignements à l'intention des consommateurs</patientMedicationInformation>
 		<company lang="fr">Entreprise</company>

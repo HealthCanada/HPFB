@@ -47,7 +47,9 @@ Additional stylesheets for Consumer and Product Monograph views support renderin
 2022-09-21 - [#134, #136] left justify title page footer, added support for Date First Authorized for Current Owner, with conditional extra padding
 2022-11-03 - [#140, #141] remove bolding from active/inactive ingredient names; left align table captions
 2023-04-07 - [#158, #162] French language label changes for "#" etc; allow multiple occurences of Size Characteristic  
- 
+2023-06-26 - [#158] Additional French language label changes for "#"  
+2023-07-13 - Refactoring to remove Jump to Top, and simplify section-view parameters as described below
+
 ## 3. This should be the only processing instruction referenced in the XML PM:
 
     <?xml-stylesheet type="text/xsl" href="https://health-products.canada.ca/product-monograph/stylesheet/v_1_0/spl_canada.xsl"?>
@@ -64,8 +66,12 @@ Bootstrap Scrollspy is a library which synchronizes scrolling and navigation. Th
 
 Internationalization and local date formatting maintained in the spl_canada_i18n.xsl transform file. Where it is possible, Display Names should be used. Where static labels are required, these need to be internationalized. These are necessary for any fields that are Required but not Mandatory.
 
-## 6. Key Links
+## 6. Key Links and Views
 
 XSL: https://health-products.canada.ca/product-monograph/style-sheet/v_1_0/spl_canada.xsl  
 CSS: https://health-products.canada.ca/product-monograph/style-sheet/v_1_0/spl_canada.css  
 XSD: https://health-products.canada.ca/product-monograph/schema/SPL.xsd  
+
+The following parameterized views are supported:
+- $show-section='#pmi00' - return just a WET-BOEW compliant HTML section for Patient Medication Information
+- $show-section='review' - return the full product monograph with additional review information

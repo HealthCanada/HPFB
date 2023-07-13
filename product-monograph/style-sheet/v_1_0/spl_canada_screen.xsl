@@ -15,7 +15,6 @@
 				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-company-details" 
 				aria-expanded="true" aria-controls="collapse-company-details">
-<!-- [pmh] problems in IE <i class="fa fa-chevron-down" style="color:grey"></i><xsl:text> </xsl:text> -->
 					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>						
 				</button>
 			</header>
@@ -34,7 +33,6 @@
 				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-{$unique-product-id}" 
 				aria-expanded="true" aria-controls="collapse-{$unique-product-id}">
-<!-- [pmh] problems in IE <i class="fa fa-chevron-down" style="color:grey"></i><xsl:text> </xsl:text> -->
 					<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
 						<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
 					</xsl:apply-templates>						
@@ -48,7 +46,7 @@
 	
 	<xsl:template mode="generateUniqueLabel" match="v3:manufacturedProduct">
 		<xsl:param name="position"/>
-		<xsl:value-of select="$labels/product[@lang = $lang]"/> #<xsl:value-of select="$position"/><xsl:text> </xsl:text><xsl:value-of select="v3:name"/> 
+		<xsl:value-of select="$labels/product[@lang = $lang]"/><xsl:value-of select="$labels/numConnective[@lang = $lang]"/><xsl:value-of select="$position"/><xsl:text> </xsl:text><xsl:value-of select="v3:name"/> 
 		(<xsl:value-of select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name"/>)<xsl:if test="not(v3:part)">, 		
 			<!-- Withhold the display name and the comma when the form code indicates that this is a 'kit', ie product is multi-part [pmh #124]-->
 			<xsl:for-each select="v3:ingredient[starts-with(@classCode,'ACTI')]">
@@ -131,7 +129,7 @@
 								</li>						
 							</xsl:for-each>
 							<!-- Navigation section for Review only, which links to a new section in the content -->
-							<xsl:if test="$show-review-section">
+							<xsl:if test="$show-section='review'">
 								<li class="nav-item">
 									<div class="card mr-2 mt-2">
 										<header class="card-header bg-success text-white font-weight-bold">
@@ -253,15 +251,6 @@
 			} catch (e) {
 			  console.log(e)
 			}		
-			
-			/* jump to top of form unscrolls left and right side and then scrolls the header into view */
-			$(document).ready(function(){
-				$("#btnTop").on("click", function(){
-					document.getElementById('content').scrollIntoView(true);
-					document.getElementById('navigation-scrollbar').scrollTop=0;
-					document.getElementById('header').scrollIntoView(true);
-					});
-			});			
 			
 			// Mitigate IE/Edge bug showing bullets on lists which are hidden when loading the page
 			$(document).ready(function(){
