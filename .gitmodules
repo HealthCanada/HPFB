@@ -1,0 +1,3 @@
+[submodule "product-monograph"]
+	path = product-monograph
+	url = git@github.com:hpfb-dgpsa/XML-PM.git
